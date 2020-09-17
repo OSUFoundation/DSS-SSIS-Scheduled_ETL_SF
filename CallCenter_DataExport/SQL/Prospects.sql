@@ -11,7 +11,7 @@ CREATE OR REPLACE TABLE "DNRCNCT_Prospects"
  ;
 
 INSERT INTO "DNRCNCT_Prospects"
-SELECT TOP 100
+SELECT
     c.ConstituentID
     ,c.FIRSTNAME
     ,c.SURNAME
@@ -28,13 +28,12 @@ FROM
                 FROM
                     "OSUADV_PROD"."RE"."CONSTITUENT_DTL_SALUTATIONS"
                 WHERE
-                IsPrimarySalutation = 'Yes'
+                    SalutationType = 'Primary Salutation - Single'
+                --IsPrimarySalutation = 'Yes'
             ) s ON c.ConstituentSystemID = s.ConstituentSystemID
 WHERE
     c.KEYINDICATOR = 'I'
     AND COALESCE(c.ConstituentID, '') <> ''
 
-ORDER BY
-    c.ConstituentID
 ;    
  

@@ -1145,7 +1145,8 @@ WHERE
     ConstituentID NOT IN (
                             SELECT C.ConstituentID
                             FROM OSUADV_PROD.RE.Constituent C
-                                    INNER JOIN "DNRCNCT_InclLst_minus_ExclLst" IME ON C.CONSTITUENTSYSTEMID = IME.CONSTITUENTSYSTEMID
+                                    --INNER JOIN "DNRCNCT_InclLst_minus_ExclLst" IME ON C.CONSTITUENTSYSTEMID = IME.CONSTITUENTSYSTEMID
+									INNER JOIN "DNRCNCT_Household" h ON h.PRIMARYPROSPECTID = c.CONSTITUENTID
                             
                             );
                             
