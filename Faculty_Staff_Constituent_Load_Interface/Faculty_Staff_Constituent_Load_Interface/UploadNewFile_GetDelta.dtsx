@@ -11,11 +11,28 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="UploadNewFile_GetDelta"
   DTS:PackageType="5"
-  DTS:VersionBuild="105"
-  DTS:VersionGUID="{E5BFB1DD-5093-48F5-A1C3-083EF70CA64D}">
+  DTS:VersionBuild="108"
+  DTS:VersionGUID="{388AB352-AE42-4D3E-8C75-87E6417DD3A7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Devart SF  - ascend QA]"
+      DTS:CreationName="DevartSalesforce"
+      DTS:DTSID="{ED15A485-4104-4881-AD13-5CEE78DDB776}"
+      DTS:ObjectName="Devart SF  - ascend QA">
+      <DTS:ObjectData>
+        <SalesforceConnectionManager>
+          <ConnectionString>User Id=ccameron@osugiving.com.qa;Host=test.salesforce.com</ConnectionString>
+          <Password
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACVBNWekFaEmhaFBbwzRY8wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAClRpfkEUqCO4IbwBbLA6a9AAAAAASAAACgAAAAEAAAAMV+MQrE2jE9zKrDnOrZ9X0oAAAAd7bcqNwKnG8FZVB1E+++vtacl+DU8g7lGfHrUY5q/mqBjgY1LhpvwxQAAADFlVAbugb4b9axOqT+NiFKxpyY7w</Password>
+          <SecurityToken
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACVBNWekFaEmhaFBbwzRY8wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADbuWVki3BGdwcVF1/OqbJCAAAAAASAAACgAAAAEAAAAB4Vdtp6iWevh4GbHu+8Mk44AAAAXaVLUEed2xDKQb6eQ6HqmQPRJwm9OjeFpe5vNXpaamfPOylSFFECVnZGMlttSLuKtvG0FQDlygUUAAAA7PSzAI4p1H5kULkjPwnjfpQCROE</SecurityToken>
+        </SalesforceConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DW2.OSUF_Secure]"
       DTS:CreationName="OLEDB"
@@ -388,6 +405,7 @@
           DTS:refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Export FS File to csv"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
+          DTS:Disabled="True"
           DTS:DTSID="{6845FB90-CD18-457A-92BE-E9FA1C6D983A}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
@@ -1520,6 +1538,722 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
+          DTS:refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{337b1545-d62e-4ca7-9b85-4ad2b9f5f8bf}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Data Flow Task - Load Delta to Interim (QA)"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source"
+                  componentClassID="Attunity.SSISODBCSrc"
+                  contactInfo="ODBC Source;Connector for Open Database Connectivity (ODBC) by Attunity; Attunity Ltd.; All Rights Reserved; http://www.attunity.com;7"
+                  description="ODBC Source"
+                  name="ODBC Source"
+                  usesDispositions="true"
+                  version="6">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The name of the table to be fetched."
+                      expressionType="Notify"
+                      name="TableName"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      expressionType="Notify"
+                      name="SqlCommand">Select * From "FS_Delta";</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the number of rows fetched per batch."
+                      expressionType="Notify"
+                      name="BatchSize">1000</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Determines the chunk size allocation for LOB columns"
+                      expressionType="Notify"
+                      name="LobChunkSize">32768</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines how the component exposes CHAR columns. If False, CHAR columns are exposed as (multi-)byte strings (DT_STR), if True, CHAR columns are exposed as wide strings (DT_WSTR)"
+                      expressionType="Notify"
+                      name="ExposeCharColumnsAsUnicode">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                      expressionType="Notify"
+                      name="StatementTimeout">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The code page to use when code page information is unavailable from the data source."
+                      expressionType="Notify"
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The method used for fetching data."
+                      expressionType="Notify"
+                      name="FetchMethod"
+                      typeConverter="FetchMethod">1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The ODBC C data type for binding numeric data."
+                      expressionType="Notify"
+                      name="BindNumericAs"
+                      typeConverter="BindNumericAs">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                      expressionType="Notify"
+                      name="BindCharColumnsAs"
+                      typeConverter="BindCharColumnsAs">0</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Connections[ODBCConnection]"
+                      connectionManagerID="Package.ConnectionManagers[OSUF_INTERFACES_FACULTY_STAFF]"
+                      connectionManagerRefId="Package.ConnectionManagers[OSUF_INTERFACES_FACULTY_STAFF]"
+                      description="The ODBC runtime connection"
+                      name="ODBCConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output]"
+                      errorRowDisposition="FailComponent"
+                      name="ODBC Source Output"
+                      truncationRowDisposition="FailComponent">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[CWID]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[CWID]"
+                          length="10"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[CWID]"
+                          name="CWID" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[Preferred_FName]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Preferred_FName]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[Preferred_FName]"
+                          name="Preferred_FName" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[FirstName]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[FirstName]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[FirstName]"
+                          name="FirstName" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[MiddleName]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[MiddleName]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[MiddleName]"
+                          name="MiddleName" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[LastName]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[LastName]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[LastName]"
+                          name="LastName" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[Suffix]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Suffix]"
+                          length="10"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[Suffix]"
+                          name="Suffix" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[Gender]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Gender]"
+                          length="25"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[Gender]"
+                          name="Gender" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[OrganizationName]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[OrganizationName]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[OrganizationName]"
+                          name="OrganizationName" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[AddressLine1]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[AddressLine1]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[AddressLine1]"
+                          name="AddressLine1" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[AddressLine2]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[AddressLine2]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[AddressLine2]"
+                          name="AddressLine2" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[AddressLine3]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[AddressLine3]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[AddressLine3]"
+                          name="AddressLine3" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[AddressLine4]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[AddressLine4]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[AddressLine4]"
+                          name="AddressLine4" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[Timesheet_Organization]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Timesheet_Organization]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[Timesheet_Organization]"
+                          name="Timesheet_Organization" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[PrimaryBusinessCity]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PrimaryBusinessCity]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[PrimaryBusinessCity]"
+                          name="PrimaryBusinessCity" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[PrimaryBusinessSttate]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PrimaryBusinessSttate]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[PrimaryBusinessSttate]"
+                          name="PrimaryBusinessSttate" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[PrimaryBusinessZip]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PrimaryBusinessZip]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[PrimaryBusinessZip]"
+                          name="PrimaryBusinessZip" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[PrimaryBusinessPosition]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PrimaryBusinessPosition]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[PrimaryBusinessPosition]"
+                          name="PrimaryBusinessPosition" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[PrimaryBusinessEmailType1]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PrimaryBusinessEmailType1]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[PrimaryBusinessEmailType1]"
+                          name="PrimaryBusinessEmailType1" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[PrimaryBusinessEmailAddress1]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PrimaryBusinessEmailAddress1]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[PrimaryBusinessEmailAddress1]"
+                          name="PrimaryBusinessEmailAddress1" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[StudentEmployee?]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[StudentEmployee?]"
+                          length="3"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[StudentEmployee?]"
+                          name="StudentEmployee?" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[EmployeeStatus]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[EmployeeStatus]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[EmployeeStatus]"
+                          name="EmployeeStatus" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[Job Type]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Job Type]"
+                          length="50"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[Job Type]"
+                          name="Job Type" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[OSU Grad Self Rpt]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[OSU Grad Self Rpt]"
+                          length="3"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[OSU Grad Self Rpt]"
+                          name="OSU Grad Self Rpt" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[Retiree]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Retiree]"
+                          length="3"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[Retiree]"
+                          name="Retiree" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[Separated]"
+                          dataType="dbDate"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Separated]"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[Separated]"
+                          name="Separated" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[Organization Role]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Organization Role]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[Organization Role]"
+                          name="Organization Role" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[AffiliationStatus]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[AffiliationStatus]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[AffiliationStatus]"
+                          name="AffiliationStatus" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[CWID]"
+                          codePage="1252"
+                          dataType="str"
+                          length="10"
+                          name="CWID" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Preferred_FName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="Preferred_FName" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[FirstName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="FirstName" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[MiddleName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="MiddleName" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[LastName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="LastName" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Suffix]"
+                          codePage="1252"
+                          dataType="str"
+                          length="10"
+                          name="Suffix" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Gender]"
+                          codePage="1252"
+                          dataType="str"
+                          length="25"
+                          name="Gender" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[OrganizationName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="OrganizationName" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[AddressLine1]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="AddressLine1" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[AddressLine2]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="AddressLine2" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[AddressLine3]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="AddressLine3" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[AddressLine4]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="AddressLine4" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Timesheet_Organization]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="Timesheet_Organization" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PrimaryBusinessCity]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="PrimaryBusinessCity" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PrimaryBusinessSttate]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="PrimaryBusinessSttate" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PrimaryBusinessZip]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="PrimaryBusinessZip" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PrimaryBusinessPosition]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="PrimaryBusinessPosition" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PrimaryBusinessEmailType1]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="PrimaryBusinessEmailType1" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PrimaryBusinessEmailAddress1]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="PrimaryBusinessEmailAddress1" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[StudentEmployee?]"
+                          codePage="1252"
+                          dataType="str"
+                          length="3"
+                          name="StudentEmployee?" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[EmployeeStatus]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="EmployeeStatus" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Job Type]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Job Type" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[OSU Grad Self Rpt]"
+                          codePage="1252"
+                          dataType="str"
+                          length="3"
+                          name="OSU Grad Self Rpt" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Retiree]"
+                          codePage="1252"
+                          dataType="str"
+                          length="3"
+                          name="Retiree" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Separated]"
+                          dataType="dbDate"
+                          name="Separated" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Organization Role]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="Organization Role" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[AffiliationStatus]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="AffiliationStatus" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output]"
+                      isErrorOut="true"
+                      name="ODBC Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[CWID]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[CWID]"
+                          length="10"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[CWID]"
+                          name="CWID" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[Preferred_FName]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Preferred_FName]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[Preferred_FName]"
+                          name="Preferred_FName" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[FirstName]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[FirstName]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[FirstName]"
+                          name="FirstName" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[MiddleName]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[MiddleName]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[MiddleName]"
+                          name="MiddleName" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[LastName]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[LastName]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[LastName]"
+                          name="LastName" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[Suffix]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Suffix]"
+                          length="10"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[Suffix]"
+                          name="Suffix" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[Gender]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Gender]"
+                          length="25"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[Gender]"
+                          name="Gender" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[OrganizationName]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[OrganizationName]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[OrganizationName]"
+                          name="OrganizationName" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[AddressLine1]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[AddressLine1]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[AddressLine1]"
+                          name="AddressLine1" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[AddressLine2]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[AddressLine2]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[AddressLine2]"
+                          name="AddressLine2" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[AddressLine3]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[AddressLine3]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[AddressLine3]"
+                          name="AddressLine3" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[AddressLine4]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[AddressLine4]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[AddressLine4]"
+                          name="AddressLine4" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[Timesheet_Organization]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Timesheet_Organization]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[Timesheet_Organization]"
+                          name="Timesheet_Organization" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[PrimaryBusinessCity]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PrimaryBusinessCity]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[PrimaryBusinessCity]"
+                          name="PrimaryBusinessCity" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[PrimaryBusinessSttate]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PrimaryBusinessSttate]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[PrimaryBusinessSttate]"
+                          name="PrimaryBusinessSttate" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[PrimaryBusinessZip]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PrimaryBusinessZip]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[PrimaryBusinessZip]"
+                          name="PrimaryBusinessZip" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[PrimaryBusinessPosition]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PrimaryBusinessPosition]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[PrimaryBusinessPosition]"
+                          name="PrimaryBusinessPosition" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[PrimaryBusinessEmailType1]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PrimaryBusinessEmailType1]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[PrimaryBusinessEmailType1]"
+                          name="PrimaryBusinessEmailType1" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[PrimaryBusinessEmailAddress1]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PrimaryBusinessEmailAddress1]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[PrimaryBusinessEmailAddress1]"
+                          name="PrimaryBusinessEmailAddress1" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[StudentEmployee?]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[StudentEmployee?]"
+                          length="3"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[StudentEmployee?]"
+                          name="StudentEmployee?" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[EmployeeStatus]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[EmployeeStatus]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[EmployeeStatus]"
+                          name="EmployeeStatus" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[Job Type]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Job Type]"
+                          length="50"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[Job Type]"
+                          name="Job Type" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[OSU Grad Self Rpt]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[OSU Grad Self Rpt]"
+                          length="3"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[OSU Grad Self Rpt]"
+                          name="OSU Grad Self Rpt" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[Retiree]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Retiree]"
+                          length="3"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[Retiree]"
+                          name="Retiree" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[Separated]"
+                          dataType="dbDate"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Separated]"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[Separated]"
+                          name="Separated" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[Organization Role]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Organization Role]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[Organization Role]"
+                          name="Organization Role" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[AffiliationStatus]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[AffiliationStatus]"
+                          length="150"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[AffiliationStatus]"
+                          name="AffiliationStatus" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
           DTS:refId="Package\Sequence Container - Upload Raw Data to Snowflake\Execute Process Task - Copy Raw Data From Stage"
           DTS:CreationName="Microsoft.ExecuteProcess"
           DTS:Description="Execute Process Task"
@@ -1688,6 +2422,113 @@
   </ProjectExtensions>
 </Project>]]></ProjectItem>
               <ProjectItem
+                Name="My Project\AssemblyInfo.vb"
+                Encoding="UTF8"><![CDATA[Imports System
+Imports System.Reflection
+Imports System.Runtime.InteropServices
+
+' General Information about an assembly is controlled through the following 
+' set of attributes. Change these attribute values to modify the information
+' associated with an assembly.
+
+' Review the values of the assembly attributes
+
+<Assembly: AssemblyTitle("ST_59dfa5ba43f3469c98bb340dfe7b3e72")> 
+<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyCompany("")> 
+<Assembly: AssemblyProduct("ST_59dfa5ba43f3469c98bb340dfe7b3e72")> 
+<Assembly: AssemblyCopyright("Copyright @  2019")> 
+<Assembly: AssemblyTrademark("")> 
+<Assembly: CLSCompliant(True)> 
+
+<Assembly: ComVisible(False)> 
+
+'The following GUID is for the ID of the typelib if this project is exposed to COM
+<Assembly: Guid("beb26878-c19a-453a-aa5e-45b9049c46a9")> 
+
+' Version information for an assembly consists of the following four values:
+'
+'      Major Version
+'      Minor Version 
+'      Build Number
+'      Revision
+'
+' You can specify all the values or you can default the Build and Revision Numbers 
+' by using the '*' as shown below:
+' <Assembly: AssemblyVersion("1.0.*")>
+
+<Assembly: AssemblyVersion("1.0.0.0")> 
+<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.Designer.vb"
+                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
+' <autogenerated>
+'     This code was generated by a tool.
+'
+'     Changes to this file may cause incorrect behavior and will be lost if
+'     the code is regenerated.
+' </autogenerated>
+'------------------------------------------------------------------------------
+
+Option Strict Off
+Option Explicit On
+
+
+
+Partial Friend NotInheritable Class MySettings
+    Inherits System.Configuration.ApplicationSettingsBase
+
+    Private Shared m_Value As MySettings
+
+    Private Shared m_SyncObject As Object = New Object
+
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Public Shared ReadOnly Property Value() As MySettings
+        Get
+            If (MySettings.m_Value Is Nothing) Then
+                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
+                If (MySettings.m_Value Is Nothing) Then
+                    Try
+                        MySettings.m_Value = New MySettings
+                    Finally
+                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
+                    End Try
+                End If
+            End If
+            Return MySettings.m_Value
+        End Get
+    End Property
+End Class]]></ProjectItem>
+              <ProjectItem
+                Name="Project"
+                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:Language>msBuild</msb:Language>
+		<msb:CodeName>ST_33a1c02acc474d3a8e2d05d13f7f1666</msb:CodeName>
+		<msb:DisplayName>ST_33a1c02acc474d3a8e2d05d13f7f1666</msb:DisplayName>
+		<msb:ProjectId>{214D04AC-05BD-4214-9272-9C0BE323C171}</msb:ProjectId>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:Project Include="ST_33a1c02acc474d3a8e2d05d13f7f1666.vbproj"/>
+		<msb:File Include="My Project\AssemblyInfo.vb"/>
+		<msb:File Include="My Project\Resources.resx"/>
+		<msb:File Include="ScriptMain.vb"/>
+		<msb:File Include="My Project\Resources.Designer.vb"/>
+		<msb:File Include="My Project\Settings.settings"/>
+		<msb:File Include="My Project\Settings.Designer.vb"/>
+	</msb:ItemGroup>
+</c:Project>]]></ProjectItem>
+              <ProjectItem
                 Name="ScriptMain.vb"
                 Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
 'The Script Task allows you to perform virtually any operation that can be accomplished in
@@ -1809,113 +2650,6 @@ Partial Public Class ScriptMain
 #End Region
 
 End Class]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\AssemblyInfo.vb"
-                Encoding="UTF8"><![CDATA[Imports System
-Imports System.Reflection
-Imports System.Runtime.InteropServices
-
-' General Information about an assembly is controlled through the following 
-' set of attributes. Change these attribute values to modify the information
-' associated with an assembly.
-
-' Review the values of the assembly attributes
-
-<Assembly: AssemblyTitle("ST_59dfa5ba43f3469c98bb340dfe7b3e72")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("ST_59dfa5ba43f3469c98bb340dfe7b3e72")> 
-<Assembly: AssemblyCopyright("Copyright @  2019")> 
-<Assembly: AssemblyTrademark("")> 
-<Assembly: CLSCompliant(True)> 
-
-<Assembly: ComVisible(False)> 
-
-'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("beb26878-c19a-453a-aa5e-45b9049c46a9")> 
-
-' Version information for an assembly consists of the following four values:
-'
-'      Major Version
-'      Minor Version 
-'      Build Number
-'      Revision
-'
-' You can specify all the values or you can default the Build and Revision Numbers 
-' by using the '*' as shown below:
-' <Assembly: AssemblyVersion("1.0.*")>
-
-<Assembly: AssemblyVersion("1.0.0.0")> 
-<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\Settings.Designer.vb"
-                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
-' <autogenerated>
-'     This code was generated by a tool.
-'
-'     Changes to this file may cause incorrect behavior and will be lost if
-'     the code is regenerated.
-' </autogenerated>
-'------------------------------------------------------------------------------
-
-Option Strict Off
-Option Explicit On
-
-
-
-Partial Friend NotInheritable Class MySettings
-    Inherits System.Configuration.ApplicationSettingsBase
-
-    Private Shared m_Value As MySettings
-
-    Private Shared m_SyncObject As Object = New Object
-
-    <System.Diagnostics.DebuggerNonUserCode()> _
-    Public Shared ReadOnly Property Value() As MySettings
-        Get
-            If (MySettings.m_Value Is Nothing) Then
-                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
-                If (MySettings.m_Value Is Nothing) Then
-                    Try
-                        MySettings.m_Value = New MySettings
-                    Finally
-                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
-                    End Try
-                End If
-            End If
-            Return MySettings.m_Value
-        End Get
-    End Property
-End Class]]></ProjectItem>
-              <ProjectItem
-                Name="Project"
-                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
-	<msb:PropertyGroup>
-		<msb:Language>msBuild</msb:Language>
-		<msb:CodeName>ST_33a1c02acc474d3a8e2d05d13f7f1666</msb:CodeName>
-		<msb:DisplayName>ST_33a1c02acc474d3a8e2d05d13f7f1666</msb:DisplayName>
-		<msb:ProjectId>{214D04AC-05BD-4214-9272-9C0BE323C171}</msb:ProjectId>
-	</msb:PropertyGroup>
-	<msb:ItemGroup>
-		<msb:Project Include="ST_33a1c02acc474d3a8e2d05d13f7f1666.vbproj"/>
-		<msb:File Include="My Project\AssemblyInfo.vb"/>
-		<msb:File Include="My Project\Resources.resx"/>
-		<msb:File Include="ScriptMain.vb"/>
-		<msb:File Include="My Project\Resources.Designer.vb"/>
-		<msb:File Include="My Project\Settings.settings"/>
-		<msb:File Include="My Project\Settings.Designer.vb"/>
-	</msb:ItemGroup>
-</c:Project>]]></ProjectItem>
               <ProjectItem
                 Name="My Project\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -2291,6 +3025,44 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               Language="VisualBasic"
               ReadOnlyVariables="User::SnowSQLConfigDir">
               <ProjectItem
+                Name="My Project\AssemblyInfo.vb"
+                Encoding="UTF8"><![CDATA[Imports System
+Imports System.Reflection
+Imports System.Runtime.InteropServices
+
+' General Information about an assembly is controlled through the following 
+' set of attributes. Change these attribute values to modify the information
+' associated with an assembly.
+
+' Review the values of the assembly attributes
+
+<Assembly: AssemblyTitle("ST_59dfa5ba43f3469c98bb340dfe7b3e72")> 
+<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyCompany("")> 
+<Assembly: AssemblyProduct("ST_59dfa5ba43f3469c98bb340dfe7b3e72")> 
+<Assembly: AssemblyCopyright("Copyright @  2019")> 
+<Assembly: AssemblyTrademark("")> 
+<Assembly: CLSCompliant(True)> 
+
+<Assembly: ComVisible(False)> 
+
+'The following GUID is for the ID of the typelib if this project is exposed to COM
+<Assembly: Guid("beb26878-c19a-453a-aa5e-45b9049c46a9")> 
+
+' Version information for an assembly consists of the following four values:
+'
+'      Major Version
+'      Minor Version 
+'      Build Number
+'      Revision
+'
+' You can specify all the values or you can default the Build and Revision Numbers 
+' by using the '*' as shown below:
+' <Assembly: AssemblyVersion("1.0.*")>
+
+<Assembly: AssemblyVersion("1.0.0.0")> 
+<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
+              <ProjectItem
                 Name="ScriptMain.vb"
                 Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
 'The Script Task allows you to perform virtually any operation that can be accomplished in
@@ -2421,44 +3193,6 @@ End Class]]></ProjectItem>
   <Settings />
 </SettingsFile>]]></ProjectItem>
               <ProjectItem
-                Name="My Project\AssemblyInfo.vb"
-                Encoding="UTF8"><![CDATA[Imports System
-Imports System.Reflection
-Imports System.Runtime.InteropServices
-
-' General Information about an assembly is controlled through the following 
-' set of attributes. Change these attribute values to modify the information
-' associated with an assembly.
-
-' Review the values of the assembly attributes
-
-<Assembly: AssemblyTitle("ST_59dfa5ba43f3469c98bb340dfe7b3e72")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("ST_59dfa5ba43f3469c98bb340dfe7b3e72")> 
-<Assembly: AssemblyCopyright("Copyright @  2019")> 
-<Assembly: AssemblyTrademark("")> 
-<Assembly: CLSCompliant(True)> 
-
-<Assembly: ComVisible(False)> 
-
-'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("beb26878-c19a-453a-aa5e-45b9049c46a9")> 
-
-' Version information for an assembly consists of the following four values:
-'
-'      Major Version
-'      Minor Version 
-'      Build Number
-'      Revision
-'
-' You can specify all the values or you can default the Build and Revision Numbers 
-' by using the '*' as shown below:
-' <Assembly: AssemblyVersion("1.0.*")>
-
-<Assembly: AssemblyVersion("1.0.0.0")> 
-<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
-              <ProjectItem
                 Name="My Project\Settings.Designer.vb"
                 Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
 ' <autogenerated>
@@ -2498,6 +3232,114 @@ Partial Friend NotInheritable Class MySettings
         End Get
     End Property
 End Class]]></ProjectItem>
+              <ProjectItem
+                Name="ST_59dfa5ba43f3469c98bb340dfe7b3e72.vbproj"
+                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{57a75d8d-6672-4a03-add0-5cf31ef77178}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>My Project</AppDesignerFolder>
+    <RootNamespace>ST_59dfa5ba43f3469c98bb340dfe7b3e72</RootNamespace>
+    <AssemblyName>ST_59dfa5ba43f3469c98bb340dfe7b3e72</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AppDesigner Include="My Project\" />
+    <Compile Include="My Project\AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ScriptMain.vb">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <!-- Include the build rules for a VB project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
+
+        <Host Name="ScriptTask" IconIndex="">
+        </Host>
+        <ProjectClient>
+          <HostIdentifier>SSIS_ST130</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></ProjectItem>
               <ProjectItem
                 Name="Project"
                 Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
@@ -2700,114 +3542,6 @@ Namespace My.Resources
         End Property
     End Class
 End Namespace]]></ProjectItem>
-              <ProjectItem
-                Name="ST_59dfa5ba43f3469c98bb340dfe7b3e72.vbproj"
-                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{57a75d8d-6672-4a03-add0-5cf31ef77178}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>My Project</AppDesignerFolder>
-    <RootNamespace>ST_59dfa5ba43f3469c98bb340dfe7b3e72</RootNamespace>
-    <AssemblyName>ST_59dfa5ba43f3469c98bb340dfe7b3e72</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
-  </PropertyGroup>
-
-  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>.\bin\Debug\</OutputPath>
-    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
-    <DefineDebug>true</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <DebugSymbols>false</DebugSymbols>
-    <Optimize>true</Optimize>
-    <OutputPath>.\bin\Release\</OutputPath>
-    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
-    <DefineDebug>false</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Import Include="Microsoft.VisualBasic" />
-    <Import Include="System" />
-    <Import Include="System.Collections" />
-    <Import Include="System.Data" />
-    <Import Include="System.Diagnostics" />
-    <Import Include="System.Windows.Forms" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <AppDesigner Include="My Project\" />
-    <Compile Include="My Project\AssemblyInfo.vb">
-      <SubType>Code</SubType>
-    </Compile>
-    <EmbeddedResource Include="My Project\Resources.resx">
-      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
-      <CustomToolNamespace>My.Resources</CustomToolNamespace>
-    </EmbeddedResource>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <None Include="My Project\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
-    </None>
-    <Compile Include="My Project\Settings.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ScriptMain.vb">
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
-
-  <!-- Include the build rules for a VB project.-->
-  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
-
-  <ProjectExtensions>
-    <VisualStudio>
-      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
-        <ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
-
-        <Host Name="ScriptTask" IconIndex="">
-        </Host>
-        <ProjectClient>
-          <HostIdentifier>SSIS_ST130</HostIdentifier>
-        </ProjectClient>
-      </FlavorProperties>
-    </VisualStudio>
-  </ProjectExtensions>
-</Project>]]></ProjectItem>
               <BinaryItem
                 Name="ST_59dfa5ba43f3469c98bb340dfe7b3e72.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
@@ -2983,7 +3717,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           DTS:ExecutableType="Microsoft.ScriptTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Script Task - Delete snowsql folder"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <ScriptProject
@@ -2992,6 +3726,44 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
               VSTAMinorVersion="0"
               Language="VisualBasic"
               ReadOnlyVariables="User::SnowSQLConfigDir">
+              <ProjectItem
+                Name="My Project\AssemblyInfo.vb"
+                Encoding="UTF8"><![CDATA[Imports System
+Imports System.Reflection
+Imports System.Runtime.InteropServices
+
+' General Information about an assembly is controlled through the following 
+' set of attributes. Change these attribute values to modify the information
+' associated with an assembly.
+
+' Review the values of the assembly attributes
+
+<Assembly: AssemblyTitle("ST_59dfa5ba43f3469c98bb340dfe7b3e72")> 
+<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyCompany("")> 
+<Assembly: AssemblyProduct("ST_59dfa5ba43f3469c98bb340dfe7b3e72")> 
+<Assembly: AssemblyCopyright("Copyright @  2019")> 
+<Assembly: AssemblyTrademark("")> 
+<Assembly: CLSCompliant(True)> 
+
+<Assembly: ComVisible(False)> 
+
+'The following GUID is for the ID of the typelib if this project is exposed to COM
+<Assembly: Guid("beb26878-c19a-453a-aa5e-45b9049c46a9")> 
+
+' Version information for an assembly consists of the following four values:
+'
+'      Major Version
+'      Minor Version 
+'      Build Number
+'      Revision
+'
+' You can specify all the values or you can default the Build and Revision Numbers 
+' by using the '*' as shown below:
+' <Assembly: AssemblyVersion("1.0.*")>
+
+<Assembly: AssemblyVersion("1.0.0.0")> 
+<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
               <ProjectItem
                 Name="ScriptMain.vb"
                 Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
@@ -3117,44 +3889,6 @@ End Class]]></ProjectItem>
   </Profiles>
   <Settings />
 </SettingsFile>]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\AssemblyInfo.vb"
-                Encoding="UTF8"><![CDATA[Imports System
-Imports System.Reflection
-Imports System.Runtime.InteropServices
-
-' General Information about an assembly is controlled through the following 
-' set of attributes. Change these attribute values to modify the information
-' associated with an assembly.
-
-' Review the values of the assembly attributes
-
-<Assembly: AssemblyTitle("ST_59dfa5ba43f3469c98bb340dfe7b3e72")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("ST_59dfa5ba43f3469c98bb340dfe7b3e72")> 
-<Assembly: AssemblyCopyright("Copyright @  2019")> 
-<Assembly: AssemblyTrademark("")> 
-<Assembly: CLSCompliant(True)> 
-
-<Assembly: ComVisible(False)> 
-
-'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("beb26878-c19a-453a-aa5e-45b9049c46a9")> 
-
-' Version information for an assembly consists of the following four values:
-'
-'      Major Version
-'      Minor Version 
-'      Build Number
-'      Revision
-'
-' You can specify all the values or you can default the Build and Revision Numbers 
-' by using the '*' as shown below:
-' <Assembly: AssemblyVersion("1.0.*")>
-
-<Assembly: AssemblyVersion("1.0.0.0")> 
-<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
               <ProjectItem
                 Name="My Project\Settings.Designer.vb"
                 Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
@@ -3701,11 +4435,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Sequence Container - Upload Raw Data to Snowflake.PrecedenceConstraints[Constraint 4]"
           DTS:CreationName=""
-          DTS:DTSID="{C9828218-BB83-4890-8AB0-190C0135CDD0}"
+          DTS:DTSID="{31F420DA-8E6E-463E-B5C3-EB3F978B5B12}"
           DTS:From="Package\Sequence Container - Upload Raw Data to Snowflake\Execute Process Task - save changes to FS_Delta table"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 4"
-          DTS:To="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Export FS File to csv" />
+          DTS:To="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)" />
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Sequence Container - Upload Raw Data to Snowflake.PrecedenceConstraints[Constraint 5]"
           DTS:CreationName=""
@@ -3751,9 +4485,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Id="Package\Sequence Container"
           TopLeft="305.333333333333,16.25" />
         <NodeLayout
+          Size="318,42"
+          Id="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Export FS File to csv"
+          TopLeft="46,391" />
+        <NodeLayout
           Size="354,42"
           Id="Package\Sequence Container - Upload Raw Data to Snowflake\Execute Process Task - Copy Raw Data From Stage"
           TopLeft="37.75,242.25" />
+        <NodeLayout
+          Size="347,42"
+          Id="Package\Sequence Container - Upload Raw Data to Snowflake\Execute Process Task - save changes to FS_Delta table"
+          TopLeft="40.5411255411245,316.81240981241" />
         <NodeLayout
           Size="354,42"
           Id="Package\Sequence Container - Upload Raw Data to Snowflake\Execute Process Task - Upload New Faculty Staff Data File"
@@ -3766,6 +4508,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Size="268,42"
           Id="Package\Sequence Container - Upload Raw Data to Snowflake\Script Task - Create the snowsql folder"
           TopLeft="45,8" />
+        <NodeLayout
+          Size="326,49"
+          Id="Package\Sequence Container - Upload Raw Data to Snowflake\Script Task - Delete snowsql folder"
+          TopLeft="44.5,464.75" />
         <EdgeLayout
           Id="Package\Sequence Container - Upload Raw Data to Snowflake.PrecedenceConstraints[Constraint]"
           TopLeft="181.75,50">
@@ -3844,24 +4590,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <AnnotationLayout
-          Text="Run command file to Put File&#xA;into Snowflake @STAGE"
-          ParentId="Package\Sequence Container - Upload Raw Data to Snowflake"
-          FontInfo="{assembly:Null}"
-          Size="182,56"
-          Id="81d404ae-405b-4daa-b617-f5e4e1c28a90"
-          TopLeft="408.75,161" />
-        <AnnotationLayout
-          Text="Also deletes file(s) from @STAGE"
-          ParentId="Package\Sequence Container - Upload Raw Data to Snowflake"
-          FontInfo="{assembly:Null}"
-          Size="201,40"
-          Id="db8a864f-23bf-4e8d-8879-ade913774e9e"
-          TopLeft="407.5,236" />
-        <NodeLayout
-          Size="347,42"
-          Id="Package\Sequence Container - Upload Raw Data to Snowflake\Execute Process Task - save changes to FS_Delta table"
-          TopLeft="40.5411255411245,316.81240981241" />
         <EdgeLayout
           Id="Package\Sequence Container - Upload Raw Data to Snowflake.PrecedenceConstraints[Constraint 3]"
           TopLeft="214.395562770562,284.25">
@@ -3876,55 +4604,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,25.06240981241" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="326,49"
-          Id="Package\Sequence Container - Upload Raw Data to Snowflake\Script Task - Delete snowsql folder"
-          TopLeft="44.5,464.75" />
-        <AnnotationLayout
-          Text="Also adds the new records to the 02_HistData table"
-          ParentId="Package\Sequence Container - Upload Raw Data to Snowflake"
-          FontInfo="{assembly:Null}"
-          Size="266,60"
-          Id="35096829-0f67-495d-948c-cec4a2166726"
-          TopLeft="415,307" />
-        <NodeLayout
-          Size="318,42"
-          Id="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Export FS File to csv"
-          TopLeft="46,391" />
-        <EdgeLayout
-          Id="Package\Sequence Container - Upload Raw Data to Snowflake.PrecedenceConstraints[Constraint 4]"
-          TopLeft="214.041125541125,358.81240981241">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-9.04112554112453,32.18759018759"
-              Start="0,0"
-              End="-9.04112554112453,24.68759018759">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,12.093795093795" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.093795093795"
-                    Point2="0,16.093795093795"
-                    Point3="-4,16.093795093795" />
-                  <mssgle:LineSegment
-                    End="-5.04112554112453,16.093795093795" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-5.04112554112453,16.093795093795"
-                    Point2="-9.04112554112453,16.093795093795"
-                    Point3="-9.04112554112453,20.093795093795" />
-                  <mssgle:LineSegment
-                    End="-9.04112554112453,24.68759018759" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3955,11 +4634,70 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <AnnotationLayout
+          Text="Run command file to Put File&#xA;into Snowflake @STAGE"
+          ParentId="Package\Sequence Container - Upload Raw Data to Snowflake"
+          FontInfo="{assembly:Null}"
+          Size="182,56"
+          Id="81d404ae-405b-4daa-b617-f5e4e1c28a90"
+          TopLeft="408.75,161" />
+        <AnnotationLayout
+          Text="Also deletes file(s) from @STAGE"
+          ParentId="Package\Sequence Container - Upload Raw Data to Snowflake"
+          FontInfo="{assembly:Null}"
+          Size="201,40"
+          Id="db8a864f-23bf-4e8d-8879-ade913774e9e"
+          TopLeft="407.5,236" />
+        <AnnotationLayout
+          Text="Also adds the new records to the 02_HistData table   (but currently commented out for testing 10122020)"
+          ParentId="Package\Sequence Container - Upload Raw Data to Snowflake"
+          FontInfo="{assembly:Null}"
+          Size="312,56"
+          Id="35096829-0f67-495d-948c-cec4a2166726"
+          TopLeft="415,307" />
+        <NodeLayout
+          Size="288,42"
+          Id="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)"
+          TopLeft="425,390" />
+        <EdgeLayout
+          Id="Package\Sequence Container - Upload Raw Data to Snowflake.PrecedenceConstraints[Constraint 4]"
+          TopLeft="214.041125541125,358.81240981241">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="354.958874458875,31.18759018759"
+              Start="0,0"
+              End="354.958874458875,23.68759018759">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.593795093795" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.593795093795"
+                    Point2="0,15.593795093795"
+                    Point3="4,15.593795093795" />
+                  <mssgle:LineSegment
+                    End="350.958874458875,15.593795093795" />
+                  <mssgle:CubicBezierSegment
+                    Point1="350.958874458875,15.593795093795"
+                    Point2="354.958874458875,15.593795093795"
+                    Point3="354.958874458875,19.593795093795" />
+                  <mssgle:LineSegment
+                    End="354.958874458875,23.68759018759" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="780,596"
-          Size="780,639"
+          PanelSize="1005,596"
+          Size="1005,639"
           Id="Package\Sequence Container - Upload Raw Data to Snowflake"
           TopLeft="305.33333333333,315.75" />
         <EdgeLayout
@@ -3968,9 +4706,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="48.999999999997,74.5"
+              EndConnector="161.499999999997,74.5"
               Start="0,0"
-              End="48.999999999997,67">
+              End="161.499999999997,67">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -3981,13 +4719,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                     Point2="0,37.25"
                     Point3="4,37.25" />
                   <mssgle:LineSegment
-                    End="44.999999999997,37.25" />
+                    End="157.499999999997,37.25" />
                   <mssgle:CubicBezierSegment
-                    Point1="44.999999999997,37.25"
-                    Point2="48.999999999997,37.25"
-                    Point3="48.999999999997,41.25" />
+                    Point1="157.499999999997,37.25"
+                    Point2="161.499999999997,37.25"
+                    Point3="161.499999999997,41.25" />
                   <mssgle:LineSegment
-                    End="48.999999999997,67" />
+                    End="161.499999999997,67" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4046,6 +4784,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source"
+          TopLeft="123,49" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>

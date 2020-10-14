@@ -283,12 +283,13 @@ FROM (
        WHERE N.CWID Is NULL
      );
                
-
+/*
 Insert Into "OSUF_INTERFACES"."FACULTY_STAFF"."02_HistData"
 Select
   *
 , Cast(GetDate() AS Date) AS "UpdateDate"
 From "OSUF_INTERFACES"."FACULTY_STAFF"."01_NewData";
+*/
 
                
 DROP TABLE "OSUF_INTERFACES"."FACULTY_STAFF"."tmpNewData";
