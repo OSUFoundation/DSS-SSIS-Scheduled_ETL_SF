@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Faculty_Staff_Constituent_Load_Interface</Name>
-    <LastWriteTime>2020-09-22T21:10:49.9068273Z</LastWriteTime>
+    <LastWriteTime>2020-10-16T21:53:47.9929927Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>UploadNewFile_GetDelta.dtsx</Name>
-      <LastWriteTime>2020-10-14T00:06:40.8734013Z</LastWriteTime>
+      <LastWriteTime>2020-10-16T21:58:24.6097101Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

@@ -78,6 +78,7 @@ CREATE OR REPLACE TABLE "OSUF_INTERFACES"."FACULTY_STAFF"."FS_Delta" (   "CWID" 
                                                                        , "Suffix"                       varchar(10)
                                                                        , "Gender"                       varchar(25)
 																	   , "OrganizationName"             varchar(150)
+																	   , "PrimaryBusinessAddressType"   varchar(150)
 																	   , "AddressLine1"                 varchar(150)
 																	   , "AddressLine2"                 varchar(150)
 																	   , "AddressLine3"                 varchar(150)
@@ -117,10 +118,11 @@ FROM (
                    WHEN 'CENTER FOR HEALTH SCIENCES' THEN 'Oklahoma State University - Center for Health Sciences'
                    ELSE 'Oklahoma State University'
               END AS "OrganizationName"
+	   , 'Business' AS "PrimaryBusinessAddressType"
        , N."Campus" AS "AddressLine1"
        , N."PrimaryBusinessOrgName" AS "AddressLine2"
        , CASE WHEN Extension."CWID" Is Not Null THEN Extension."ADDRESSLINE1"
-              WHEN SortBinID."CWID" Is Not Null THEN SortBinID."Board Coordinate" 
+              //WHEN SortBinID."CWID" Is Not Null THEN SortBinID."Board Coordinate" 
               ELSE N."PrimaryBusinessAddress"
          END AS "AddressLine3"
         
@@ -132,7 +134,7 @@ FROM (
        , 'OK' AS "PrimaryBusinessState"
        , N."PrimaryBusinessZip"
        , N."PrimaryBusinessPosition"        
-       , 'FacultyStaff Load Email' AS "PrimaryBusinessEmailType1"
+       , 'Business' AS "PrimaryBusinessEmailType1"
        , N."EMAIL_PREFERRED_ADDRESS" AS "PrimaryBusinessEmailAddress1"
        , N."StudentEmployee?"
        , CASE WHEN N."Separated" Is Not Null                            THEN 'Separated'        ELSE N."EmployeeStatus" END AS "EmployeeStatus"
@@ -145,7 +147,7 @@ FROM (
              
        FROM "OSUF_INTERFACES"."FACULTY_STAFF"."tmpNewData" N 
             
-            
+            /*
                                                               LEFT JOIN (
                                                                           SELECT Distinct
                                                                           FS."CWID"
@@ -155,7 +157,7 @@ FROM (
                                                                             AND Coalesce(SB."OSUF_Usage",'')<>'Unused to prevent dupe recs'
                                                                         ) SortBinID ON N."CWID"=SortBinID."CWID"
        
-       
+             */
        
                                                               LEFT JOIN (
                                                                           SELECT Distinct
