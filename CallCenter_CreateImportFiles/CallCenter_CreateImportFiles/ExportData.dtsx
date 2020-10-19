@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="ExportData"
   DTS:PackageType="5"
-  DTS:VersionBuild="180"
-  DTS:VersionGUID="{0B3B3459-E4AD-47E7-8C7E-AF04463CBEE0}">
+  DTS:VersionBuild="182"
+  DTS:VersionGUID="{55516B2C-5A08-4650-9D00-2D3C86D86119}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -32,7 +32,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\02_Add - All_2020-10-19_122728.csv">
+          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\02_Add - All_2020-10-19_171201.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -90,7 +90,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\01_Add - New_2020-10-19_122728.csv">
+          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\01_Add - New_2020-10-19_171201.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -148,7 +148,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\Address_2020-10-19_122728.csv">
+          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\Address_2020-10-19_171201.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -233,7 +233,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\AgeName_2020-10-19_122728.csv">
+          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\AgeName_2020-10-19_171201.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -273,7 +273,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\AlumniMembership_2020-10-19_122728.csv">
+          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\AlumniMembership_2020-10-19_171201.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -323,7 +323,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\CampaignID--_2020-10-19_122728.csv">
+          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\CampaignID--_2020-10-19_171201.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -354,7 +354,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\Children_2020-10-19_122728.csv">
+          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\Children_2020-10-19_171201.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -394,7 +394,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\ConstituentCodes_2020-10-19_122728.csv">
+          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\ConstituentCodes_2020-10-19_171201.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -434,7 +434,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\12_Delete - All_2020-10-19_122728.csv">
+          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\12_Delete - All_2020-10-19_171201.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -492,7 +492,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\11_Delete - New_2020-10-19_122728.csv">
+          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\11_Delete - New_2020-10-19_171201.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -550,7 +550,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\Emails_2020-10-19_122728.csv">
+          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\Emails_2020-10-19_171201.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -590,7 +590,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\Gifts_2020-10-19_122728.csv">
+          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\Gifts_2020-10-19_171201.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -666,7 +666,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\GradYear_2020-10-19_122728.csv">
+          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\GradYear_2020-10-19_171201.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -715,7 +715,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\GreekLife_2020-10-19_122728.csv">
+          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\GreekLife_2020-10-19_171201.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -755,7 +755,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\Household_2020-10-19_122728.csv">
+          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\Household_2020-10-19_171201.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -804,7 +804,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\JobTitleEmployer_2020-10-19_122728.csv">
+          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\JobTitleEmployer_2020-10-19_171201.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -853,7 +853,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\LoyaltyGiving_2020-10-19_122728.csv">
+          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\LoyaltyGiving_2020-10-19_171201.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -893,7 +893,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\Manager_2020-10-19_122728.csv">
+          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\Manager_2020-10-19_171201.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -955,7 +955,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\Phones_2020-10-19_122728.csv">
+          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\Phones_2020-10-19_171201.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1022,7 +1022,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\Names_2020-10-19_122728.csv">
+          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\Names_2020-10-19_171201.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1089,7 +1089,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\22_Reactivate - All_2020-10-19_122728.csv">
+          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\22_Reactivate - All_2020-10-19_171201.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1147,7 +1147,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\21_Reactivate - New_2020-10-19_122728.csv">
+          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\21_Reactivate - New_2020-10-19_171201.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1205,7 +1205,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\Segments--_2020-10-19_122728.csv">
+          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\Segments--_2020-10-19_171201.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1245,7 +1245,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\StudentAthlete_2020-10-19_122728.csv">
+          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\StudentAthlete_2020-10-19_171201.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1285,7 +1285,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\StudentBand_2020-10-19_122728.csv">
+          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\StudentBand_2020-10-19_171201.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1325,7 +1325,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\StudentLeader_2020-10-19_122728.csv">
+          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\StudentLeader_2020-10-19_171201.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1365,7 +1365,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\StudentOrgs_2020-10-19_122728.csv">
+          DTS:ConnectionString="\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\StudentOrgs_2020-10-19_171201.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1457,7 +1457,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="FileDateTimeStamp">
       <DTS:VariableValue
-        DTS:DataType="8">2020-10-19_122728</DTS:VariableValue>
+        DTS:DataType="8">2020-10-19_171201</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1694,7 +1694,7 @@
           <DTS:ObjectData>
             <ExecuteProcessData
               Executable="E:\BI\Executables\7za920\7za.exe"
-              Arguments=" a &quot;\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\BioData2020-10-19_122728&quot;.zip &quot;\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\&quot;" />
+              Arguments=" a &quot;\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\BioData2020-10-19_171201&quot;.zip &quot;\\buss\group\TMKTG\Cowboy Callers Program\DonorConnect\&quot;" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -8115,39 +8115,39 @@ FROM "DNRCNCT_StudentOrgs";</property>
                   startId="Package\Create Files\Create Single Files\Children.Outputs[ODBC Source Output]" />
                 <path
                   refId="Package\Create Files\Create Single Files.Paths[ODBC Source Output15]"
-                  endId="Package\Create Files\Create Single Files\Gifts File.Inputs[Flat File Destination Input]"
+                  endId="Package\Create Files\Create Single Files\StudentAthlete File.Inputs[Flat File Destination Input]"
                   name="ODBC Source Output"
-                  startId="Package\Create Files\Create Single Files\Gifts.Outputs[ODBC Source Output]" />
+                  startId="Package\Create Files\Create Single Files\StudentAthlete.Outputs[ODBC Source Output]" />
                 <path
                   refId="Package\Create Files\Create Single Files.Paths[ODBC Source Output14]"
-                  endId="Package\Create Files\Create Single Files\JobTitleEmployer File.Inputs[Flat File Destination Input]"
+                  endId="Package\Create Files\Create Single Files\GreekLife File.Inputs[Flat File Destination Input]"
                   name="ODBC Source Output"
-                  startId="Package\Create Files\Create Single Files\JobTitleEmployer.Outputs[ODBC Source Output]" />
+                  startId="Package\Create Files\Create Single Files\GreekLife.Outputs[ODBC Source Output]" />
                 <path
                   refId="Package\Create Files\Create Single Files.Paths[ODBC Source Output13]"
-                  endId="Package\Create Files\Create Single Files\LoyaltyGiving File.Inputs[Flat File Destination Input]"
+                  endId="Package\Create Files\Create Single Files\StudentOrgs File.Inputs[Flat File Destination Input]"
                   name="ODBC Source Output"
-                  startId="Package\Create Files\Create Single Files\LoyaltyGiving.Outputs[ODBC Source Output]" />
+                  startId="Package\Create Files\Create Single Files\StudentOrgs.Outputs[ODBC Source Output]" />
                 <path
                   refId="Package\Create Files\Create Single Files.Paths[ODBC Source Output12]"
-                  endId="Package\Create Files\Create Single Files\Manager File.Inputs[Flat File Destination Input]"
+                  endId="Package\Create Files\Create Single Files\Emails File.Inputs[Flat File Destination Input]"
                   name="ODBC Source Output"
-                  startId="Package\Create Files\Create Single Files\Manager.Outputs[ODBC Source Output]" />
+                  startId="Package\Create Files\Create Single Files\Emails.Outputs[ODBC Source Output]" />
                 <path
                   refId="Package\Create Files\Create Single Files.Paths[ODBC Source Output11]"
-                  endId="Package\Create Files\Create Single Files\Phones File.Inputs[Flat File Destination Input]"
+                  endId="Package\Create Files\Create Single Files\Address File.Inputs[Flat File Destination Input]"
                   name="ODBC Source Output"
-                  startId="Package\Create Files\Create Single Files\Phones.Outputs[ODBC Source Output]" />
+                  startId="Package\Create Files\Create Single Files\Address.Outputs[ODBC Source Output]" />
                 <path
                   refId="Package\Create Files\Create Single Files.Paths[ODBC Source Output10]"
-                  endId="Package\Create Files\Create Single Files\Prospects File.Inputs[Flat File Destination Input]"
+                  endId="Package\Create Files\Create Single Files\Household File.Inputs[Flat File Destination Input]"
                   name="ODBC Source Output"
-                  startId="Package\Create Files\Create Single Files\Prospects.Outputs[ODBC Source Output]" />
+                  startId="Package\Create Files\Create Single Files\Household.Outputs[ODBC Source Output]" />
                 <path
                   refId="Package\Create Files\Create Single Files.Paths[ODBC Source Output9]"
-                  endId="Package\Create Files\Create Single Files\GradYear File.Inputs[Flat File Destination Input]"
+                  endId="Package\Create Files\Create Single Files\ConstituentCodes File.Inputs[Flat File Destination Input]"
                   name="ODBC Source Output"
-                  startId="Package\Create Files\Create Single Files\GradYear.Outputs[ODBC Source Output]" />
+                  startId="Package\Create Files\Create Single Files\ConstituentCodes.Outputs[ODBC Source Output]" />
                 <path
                   refId="Package\Create Files\Create Single Files.Paths[ODBC Source Output8]"
                   endId="Package\Create Files\Create Single Files\AlumniMembership File.Inputs[Flat File Destination Input]"
@@ -8155,39 +8155,39 @@ FROM "DNRCNCT_StudentOrgs";</property>
                   startId="Package\Create Files\Create Single Files\AlumniMembership.Outputs[ODBC Source Output]" />
                 <path
                   refId="Package\Create Files\Create Single Files.Paths[ODBC Source Output7]"
-                  endId="Package\Create Files\Create Single Files\ConstituentCodes File.Inputs[Flat File Destination Input]"
+                  endId="Package\Create Files\Create Single Files\GradYear File.Inputs[Flat File Destination Input]"
                   name="ODBC Source Output"
-                  startId="Package\Create Files\Create Single Files\ConstituentCodes.Outputs[ODBC Source Output]" />
+                  startId="Package\Create Files\Create Single Files\GradYear.Outputs[ODBC Source Output]" />
                 <path
                   refId="Package\Create Files\Create Single Files.Paths[ODBC Source Output6]"
-                  endId="Package\Create Files\Create Single Files\Household File.Inputs[Flat File Destination Input]"
+                  endId="Package\Create Files\Create Single Files\Prospects File.Inputs[Flat File Destination Input]"
                   name="ODBC Source Output"
-                  startId="Package\Create Files\Create Single Files\Household.Outputs[ODBC Source Output]" />
+                  startId="Package\Create Files\Create Single Files\Prospects.Outputs[ODBC Source Output]" />
                 <path
                   refId="Package\Create Files\Create Single Files.Paths[ODBC Source Output5]"
-                  endId="Package\Create Files\Create Single Files\Address File.Inputs[Flat File Destination Input]"
+                  endId="Package\Create Files\Create Single Files\Phones File.Inputs[Flat File Destination Input]"
                   name="ODBC Source Output"
-                  startId="Package\Create Files\Create Single Files\Address.Outputs[ODBC Source Output]" />
+                  startId="Package\Create Files\Create Single Files\Phones.Outputs[ODBC Source Output]" />
                 <path
                   refId="Package\Create Files\Create Single Files.Paths[ODBC Source Output4]"
-                  endId="Package\Create Files\Create Single Files\Emails File.Inputs[Flat File Destination Input]"
+                  endId="Package\Create Files\Create Single Files\Manager File.Inputs[Flat File Destination Input]"
                   name="ODBC Source Output"
-                  startId="Package\Create Files\Create Single Files\Emails.Outputs[ODBC Source Output]" />
+                  startId="Package\Create Files\Create Single Files\Manager.Outputs[ODBC Source Output]" />
                 <path
                   refId="Package\Create Files\Create Single Files.Paths[ODBC Source Output3]"
-                  endId="Package\Create Files\Create Single Files\StudentOrgs File.Inputs[Flat File Destination Input]"
+                  endId="Package\Create Files\Create Single Files\LoyaltyGiving File.Inputs[Flat File Destination Input]"
                   name="ODBC Source Output"
-                  startId="Package\Create Files\Create Single Files\StudentOrgs.Outputs[ODBC Source Output]" />
+                  startId="Package\Create Files\Create Single Files\LoyaltyGiving.Outputs[ODBC Source Output]" />
                 <path
                   refId="Package\Create Files\Create Single Files.Paths[ODBC Source Output2]"
-                  endId="Package\Create Files\Create Single Files\GreekLife File.Inputs[Flat File Destination Input]"
+                  endId="Package\Create Files\Create Single Files\JobTitleEmployer File.Inputs[Flat File Destination Input]"
                   name="ODBC Source Output"
-                  startId="Package\Create Files\Create Single Files\GreekLife.Outputs[ODBC Source Output]" />
+                  startId="Package\Create Files\Create Single Files\JobTitleEmployer.Outputs[ODBC Source Output]" />
                 <path
                   refId="Package\Create Files\Create Single Files.Paths[ODBC Source Output1]"
-                  endId="Package\Create Files\Create Single Files\StudentAthlete File.Inputs[Flat File Destination Input]"
+                  endId="Package\Create Files\Create Single Files\Gifts File.Inputs[Flat File Destination Input]"
                   name="ODBC Source Output"
-                  startId="Package\Create Files\Create Single Files\StudentAthlete.Outputs[ODBC Source Output]" />
+                  startId="Package\Create Files\Create Single Files\Gifts.Outputs[ODBC Source Output]" />
                 <path
                   refId="Package\Create Files\Create Single Files.Paths[ODBC Source Output16]"
                   endId="Package\Create Files\Create Single Files\StudentBand File.Inputs[Flat File Destination Input]"
@@ -8948,11 +8948,11 @@ FROM "OSUADV_PROD"."BI"."DNRCNCT_Segments";</property>
               version="1">
               <components>
                 <component
-                  refId="Package\Create Files\Test\StudentAthlete"
+                  refId="Package\Create Files\Test\AlumniMembership"
                   componentClassID="Attunity.SSISODBCSrc"
                   contactInfo="ODBC Source;Connector for Open Database Connectivity (ODBC) by Attunity; Attunity Ltd.; All Rights Reserved; http://www.attunity.com;6"
                   description="ODBC Source"
-                  name="StudentAthlete"
+                  name="AlumniMembership"
                   usesDispositions="true"
                   version="6">
                   <properties>
@@ -8965,10 +8965,8 @@ FROM "OSUADV_PROD"."BI"."DNRCNCT_Segments";</property>
                       dataType="System.String"
                       description="The SQL command to be executed."
                       expressionType="Notify"
-                      name="SqlCommand">SELECT  DISTINCT
-ProspectID
-,Value
-FROM "DNRCNCT_StudentAthlete";</property>
+                      name="SqlCommand">SELECT * 
+FROM "DNRCNCT_AlumniMembership";</property>
                     <property
                       dataType="System.Int32"
                       description="Specify the number of rows fetched per batch."
@@ -9020,7 +9018,7 @@ FROM "DNRCNCT_StudentAthlete";</property>
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\Create Files\Test\StudentAthlete.Connections[ODBCConnection]"
+                      refId="Package\Create Files\Test\AlumniMembership.Connections[ODBCConnection]"
                       connectionManagerID="Package.ConnectionManagers[OSUADV_PROD__BI]"
                       connectionManagerRefId="Package.ConnectionManagers[OSUADV_PROD__BI]"
                       description="The ODBC runtime connection"
@@ -9028,75 +9026,72 @@ FROM "DNRCNCT_StudentAthlete";</property>
                   </connections>
                   <outputs>
                     <output
-                      refId="Package\Create Files\Test\StudentAthlete.Outputs[ODBC Source Output]"
+                      refId="Package\Create Files\Test\AlumniMembership.Outputs[ODBC Source Output]"
                       errorRowDisposition="FailComponent"
                       name="ODBC Source Output"
                       truncationRowDisposition="FailComponent">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Create Files\Test\StudentAthlete.Outputs[ODBC Source Output].Columns[PROSPECTID]"
-                          codePage="1252"
-                          dataType="str"
-                          externalMetadataColumnId="Package\Create Files\Test\StudentAthlete.Outputs[ODBC Source Output].ExternalColumns[PROSPECTID]"
-                          length="20"
-                          lineageId="Package\Create Files\Test\StudentAthlete.Outputs[ODBC Source Output].Columns[PROSPECTID]"
-                          name="PROSPECTID" />
+                          refId="Package\Create Files\Test\AlumniMembership.Outputs[ODBC Source Output].Columns[PROSPECTID]"
+                          dataType="numeric"
+                          externalMetadataColumnId="Package\Create Files\Test\AlumniMembership.Outputs[ODBC Source Output].ExternalColumns[PROSPECTID]"
+                          lineageId="Package\Create Files\Test\AlumniMembership.Outputs[ODBC Source Output].Columns[PROSPECTID]"
+                          name="PROSPECTID"
+                          precision="38" />
                         <outputColumn
-                          refId="Package\Create Files\Test\StudentAthlete.Outputs[ODBC Source Output].Columns[VALUE]"
+                          refId="Package\Create Files\Test\AlumniMembership.Outputs[ODBC Source Output].Columns[VALUE]"
                           codePage="1252"
                           dataType="str"
-                          externalMetadataColumnId="Package\Create Files\Test\StudentAthlete.Outputs[ODBC Source Output].ExternalColumns[VALUE]"
-                          length="1000"
-                          lineageId="Package\Create Files\Test\StudentAthlete.Outputs[ODBC Source Output].Columns[VALUE]"
+                          externalMetadataColumnId="Package\Create Files\Test\AlumniMembership.Outputs[ODBC Source Output].ExternalColumns[VALUE]"
+                          length="100"
+                          lineageId="Package\Create Files\Test\AlumniMembership.Outputs[ODBC Source Output].Columns[VALUE]"
                           name="VALUE" />
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Create Files\Test\StudentAthlete.Outputs[ODBC Source Output].ExternalColumns[PROSPECTID]"
-                          codePage="1252"
-                          dataType="str"
-                          length="20"
-                          name="PROSPECTID" />
+                          refId="Package\Create Files\Test\AlumniMembership.Outputs[ODBC Source Output].ExternalColumns[PROSPECTID]"
+                          dataType="numeric"
+                          name="PROSPECTID"
+                          precision="38" />
                         <externalMetadataColumn
-                          refId="Package\Create Files\Test\StudentAthlete.Outputs[ODBC Source Output].ExternalColumns[VALUE]"
+                          refId="Package\Create Files\Test\AlumniMembership.Outputs[ODBC Source Output].ExternalColumns[VALUE]"
                           codePage="1252"
                           dataType="str"
-                          length="1000"
+                          length="100"
                           name="VALUE" />
                       </externalMetadataColumns>
                     </output>
                     <output
-                      refId="Package\Create Files\Test\StudentAthlete.Outputs[ODBC Source Error Output]"
+                      refId="Package\Create Files\Test\AlumniMembership.Outputs[ODBC Source Error Output]"
                       isErrorOut="true"
                       name="ODBC Source Error Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Create Files\Test\StudentAthlete.Outputs[ODBC Source Error Output].Columns[PROSPECTID]"
-                          codePage="1252"
-                          dataType="str"
-                          externalMetadataColumnId="Package\Create Files\Test\StudentAthlete.Outputs[ODBC Source Output].ExternalColumns[PROSPECTID]"
-                          length="20"
-                          lineageId="Package\Create Files\Test\StudentAthlete.Outputs[ODBC Source Error Output].Columns[PROSPECTID]"
-                          name="PROSPECTID" />
+                          refId="Package\Create Files\Test\AlumniMembership.Outputs[ODBC Source Error Output].Columns[PROSPECTID]"
+                          dataType="numeric"
+                          externalMetadataColumnId="Package\Create Files\Test\AlumniMembership.Outputs[ODBC Source Output].ExternalColumns[PROSPECTID]"
+                          lineageId="Package\Create Files\Test\AlumniMembership.Outputs[ODBC Source Error Output].Columns[PROSPECTID]"
+                          name="PROSPECTID"
+                          precision="38" />
                         <outputColumn
-                          refId="Package\Create Files\Test\StudentAthlete.Outputs[ODBC Source Error Output].Columns[VALUE]"
+                          refId="Package\Create Files\Test\AlumniMembership.Outputs[ODBC Source Error Output].Columns[VALUE]"
                           codePage="1252"
                           dataType="str"
-                          externalMetadataColumnId="Package\Create Files\Test\StudentAthlete.Outputs[ODBC Source Output].ExternalColumns[VALUE]"
-                          length="1000"
-                          lineageId="Package\Create Files\Test\StudentAthlete.Outputs[ODBC Source Error Output].Columns[VALUE]"
+                          externalMetadataColumnId="Package\Create Files\Test\AlumniMembership.Outputs[ODBC Source Output].ExternalColumns[VALUE]"
+                          length="100"
+                          lineageId="Package\Create Files\Test\AlumniMembership.Outputs[ODBC Source Error Output].Columns[VALUE]"
                           name="VALUE" />
                         <outputColumn
-                          refId="Package\Create Files\Test\StudentAthlete.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                          refId="Package\Create Files\Test\AlumniMembership.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\Create Files\Test\StudentAthlete.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                          lineageId="Package\Create Files\Test\AlumniMembership.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\Create Files\Test\StudentAthlete.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                          refId="Package\Create Files\Test\AlumniMembership.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\Create Files\Test\StudentAthlete.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\Create Files\Test\AlumniMembership.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -9105,12 +9100,12 @@ FROM "DNRCNCT_StudentAthlete";</property>
                   </outputs>
                 </component>
                 <component
-                  refId="Package\Create Files\Test\StudentAthlete File"
+                  refId="Package\Create Files\Test\AlumniMembership File"
                   componentClassID="Microsoft.FlatFileDestination"
                   contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
                   description="Flat File Destination"
                   localeId="1033"
-                  name="StudentAthlete File">
+                  name="AlumniMembership File">
                   <properties>
                     <property
                       dataType="System.Boolean"
@@ -9124,267 +9119,43 @@ FROM "DNRCNCT_StudentAthlete";</property>
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\Create Files\Test\StudentAthlete File.Connections[FlatFileConnection]"
-                      connectionManagerID="Package.ConnectionManagers[StudentAthlete]"
-                      connectionManagerRefId="Package.ConnectionManagers[StudentAthlete]"
+                      refId="Package\Create Files\Test\AlumniMembership File.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[AlumniMembership]"
+                      connectionManagerRefId="Package.ConnectionManagers[AlumniMembership]"
                       name="FlatFileConnection" />
                   </connections>
                   <inputs>
                     <input
-                      refId="Package\Create Files\Test\StudentAthlete File.Inputs[Flat File Destination Input]"
+                      refId="Package\Create Files\Test\AlumniMembership File.Inputs[Flat File Destination Input]"
                       hasSideEffects="true"
                       name="Flat File Destination Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Create Files\Test\StudentAthlete File.Inputs[Flat File Destination Input].Columns[PROSPECTID]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="20"
+                          refId="Package\Create Files\Test\AlumniMembership File.Inputs[Flat File Destination Input].Columns[PROSPECTID]"
+                          cachedDataType="numeric"
                           cachedName="PROSPECTID"
-                          externalMetadataColumnId="Package\Create Files\Test\StudentAthlete File.Inputs[Flat File Destination Input].ExternalColumns[prospectID]"
-                          lineageId="Package\Create Files\Test\StudentAthlete.Outputs[ODBC Source Output].Columns[PROSPECTID]" />
+                          cachedPrecision="38"
+                          externalMetadataColumnId="Package\Create Files\Test\AlumniMembership File.Inputs[Flat File Destination Input].ExternalColumns[prospectID]"
+                          lineageId="Package\Create Files\Test\AlumniMembership.Outputs[ODBC Source Output].Columns[PROSPECTID]" />
                         <inputColumn
-                          refId="Package\Create Files\Test\StudentAthlete File.Inputs[Flat File Destination Input].Columns[VALUE]"
+                          refId="Package\Create Files\Test\AlumniMembership File.Inputs[Flat File Destination Input].Columns[VALUE]"
                           cachedCodepage="1252"
                           cachedDataType="str"
-                          cachedLength="1000"
+                          cachedLength="100"
                           cachedName="VALUE"
-                          externalMetadataColumnId="Package\Create Files\Test\StudentAthlete File.Inputs[Flat File Destination Input].ExternalColumns[value]"
-                          lineageId="Package\Create Files\Test\StudentAthlete.Outputs[ODBC Source Output].Columns[VALUE]" />
+                          externalMetadataColumnId="Package\Create Files\Test\AlumniMembership File.Inputs[Flat File Destination Input].ExternalColumns[value]"
+                          lineageId="Package\Create Files\Test\AlumniMembership.Outputs[ODBC Source Output].Columns[VALUE]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Create Files\Test\StudentAthlete File.Inputs[Flat File Destination Input].ExternalColumns[prospectID]"
+                          refId="Package\Create Files\Test\AlumniMembership File.Inputs[Flat File Destination Input].ExternalColumns[prospectID]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="prospectID" />
                         <externalMetadataColumn
-                          refId="Package\Create Files\Test\StudentAthlete File.Inputs[Flat File Destination Input].ExternalColumns[value]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
-                          name="value" />
-                      </externalMetadataColumns>
-                    </input>
-                  </inputs>
-                </component>
-                <component
-                  refId="Package\Create Files\Test\StudentBand"
-                  componentClassID="Attunity.SSISODBCSrc"
-                  contactInfo="ODBC Source;Connector for Open Database Connectivity (ODBC) by Attunity; Attunity Ltd.; All Rights Reserved; http://www.attunity.com;6"
-                  description="ODBC Source"
-                  name="StudentBand"
-                  usesDispositions="true"
-                  version="6">
-                  <properties>
-                    <property
-                      dataType="System.String"
-                      description="The name of the table to be fetched."
-                      expressionType="Notify"
-                      name="TableName"></property>
-                    <property
-                      dataType="System.String"
-                      description="The SQL command to be executed."
-                      expressionType="Notify"
-                      name="SqlCommand">SELECT  DISTINCT
-ProspectID
-,Value
-FROM "DNRCNCT_StudentBand";</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specify the number of rows fetched per batch."
-                      expressionType="Notify"
-                      name="BatchSize">1000</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Determines the chunk size allocation for LOB columns"
-                      expressionType="Notify"
-                      name="LobChunkSize">32768</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Determines how the component exposes CHAR columns. If False, CHAR columns are exposed as (multi-)byte strings (DT_STR), if True, CHAR columns are exposed as wide strings (DT_WSTR)"
-                      expressionType="Notify"
-                      name="ExposeCharColumnsAsUnicode">false</property>
-                    <property
-                      dataType="System.Int32"
-                      description="The number of seconds to wait for an SQL statement to execute before returning to the application."
-                      expressionType="Notify"
-                      name="StatementTimeout">0</property>
-                    <property
-                      dataType="System.Int32"
-                      description="The code page to use when code page information is unavailable from the data source."
-                      expressionType="Notify"
-                      name="DefaultCodePage">1252</property>
-                    <property
-                      dataType="System.Int32"
-                      description="The mode used to access the database."
-                      name="AccessMode"
-                      typeConverter="AccessMode">1</property>
-                    <property
-                      dataType="System.Int32"
-                      description="The method used for fetching data."
-                      expressionType="Notify"
-                      name="FetchMethod"
-                      typeConverter="FetchMethod">1</property>
-                    <property
-                      dataType="System.Int32"
-                      description="The ODBC C data type for binding numeric data."
-                      expressionType="Notify"
-                      name="BindNumericAs"
-                      typeConverter="BindNumericAs">0</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
-                      expressionType="Notify"
-                      name="BindCharColumnsAs"
-                      typeConverter="BindCharColumnsAs">0</property>
-                  </properties>
-                  <connections>
-                    <connection
-                      refId="Package\Create Files\Test\StudentBand.Connections[ODBCConnection]"
-                      connectionManagerID="Package.ConnectionManagers[OSUADV_PROD__BI]"
-                      connectionManagerRefId="Package.ConnectionManagers[OSUADV_PROD__BI]"
-                      description="The ODBC runtime connection"
-                      name="ODBCConnection" />
-                  </connections>
-                  <outputs>
-                    <output
-                      refId="Package\Create Files\Test\StudentBand.Outputs[ODBC Source Output]"
-                      errorRowDisposition="FailComponent"
-                      name="ODBC Source Output"
-                      truncationRowDisposition="FailComponent">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\Create Files\Test\StudentBand.Outputs[ODBC Source Output].Columns[PROSPECTID]"
-                          codePage="1252"
-                          dataType="str"
-                          externalMetadataColumnId="Package\Create Files\Test\StudentBand.Outputs[ODBC Source Output].ExternalColumns[PROSPECTID]"
-                          length="20"
-                          lineageId="Package\Create Files\Test\StudentBand.Outputs[ODBC Source Output].Columns[PROSPECTID]"
-                          name="PROSPECTID" />
-                        <outputColumn
-                          refId="Package\Create Files\Test\StudentBand.Outputs[ODBC Source Output].Columns[VALUE]"
-                          codePage="1252"
-                          dataType="str"
-                          externalMetadataColumnId="Package\Create Files\Test\StudentBand.Outputs[ODBC Source Output].ExternalColumns[VALUE]"
-                          length="1000"
-                          lineageId="Package\Create Files\Test\StudentBand.Outputs[ODBC Source Output].Columns[VALUE]"
-                          name="VALUE" />
-                      </outputColumns>
-                      <externalMetadataColumns
-                        isUsed="True">
-                        <externalMetadataColumn
-                          refId="Package\Create Files\Test\StudentBand.Outputs[ODBC Source Output].ExternalColumns[PROSPECTID]"
-                          codePage="1252"
-                          dataType="str"
-                          length="20"
-                          name="PROSPECTID" />
-                        <externalMetadataColumn
-                          refId="Package\Create Files\Test\StudentBand.Outputs[ODBC Source Output].ExternalColumns[VALUE]"
-                          codePage="1252"
-                          dataType="str"
-                          length="1000"
-                          name="VALUE" />
-                      </externalMetadataColumns>
-                    </output>
-                    <output
-                      refId="Package\Create Files\Test\StudentBand.Outputs[ODBC Source Error Output]"
-                      isErrorOut="true"
-                      name="ODBC Source Error Output">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\Create Files\Test\StudentBand.Outputs[ODBC Source Error Output].Columns[PROSPECTID]"
-                          codePage="1252"
-                          dataType="str"
-                          externalMetadataColumnId="Package\Create Files\Test\StudentBand.Outputs[ODBC Source Output].ExternalColumns[PROSPECTID]"
-                          length="20"
-                          lineageId="Package\Create Files\Test\StudentBand.Outputs[ODBC Source Error Output].Columns[PROSPECTID]"
-                          name="PROSPECTID" />
-                        <outputColumn
-                          refId="Package\Create Files\Test\StudentBand.Outputs[ODBC Source Error Output].Columns[VALUE]"
-                          codePage="1252"
-                          dataType="str"
-                          externalMetadataColumnId="Package\Create Files\Test\StudentBand.Outputs[ODBC Source Output].ExternalColumns[VALUE]"
-                          length="1000"
-                          lineageId="Package\Create Files\Test\StudentBand.Outputs[ODBC Source Error Output].Columns[VALUE]"
-                          name="VALUE" />
-                        <outputColumn
-                          refId="Package\Create Files\Test\StudentBand.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
-                          dataType="i4"
-                          lineageId="Package\Create Files\Test\StudentBand.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
-                          name="ErrorCode"
-                          specialFlags="1" />
-                        <outputColumn
-                          refId="Package\Create Files\Test\StudentBand.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
-                          dataType="i4"
-                          lineageId="Package\Create Files\Test\StudentBand.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
-                          name="ErrorColumn"
-                          specialFlags="2" />
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                  </outputs>
-                </component>
-                <component
-                  refId="Package\Create Files\Test\StudentBand File"
-                  componentClassID="Microsoft.FlatFileDestination"
-                  contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-                  description="Flat File Destination"
-                  localeId="1033"
-                  name="StudentBand File">
-                  <properties>
-                    <property
-                      dataType="System.Boolean"
-                      description="Specifies whether the data will overwrite or append to the destination file."
-                      name="Overwrite">true</property>
-                    <property
-                      dataType="System.Null"
-                      description="Specifies the text to write to the destination file before any data is written."
-                      expressionType="Notify"
-                      name="Header" />
-                  </properties>
-                  <connections>
-                    <connection
-                      refId="Package\Create Files\Test\StudentBand File.Connections[FlatFileConnection]"
-                      connectionManagerID="Package.ConnectionManagers[StudentBand]"
-                      connectionManagerRefId="Package.ConnectionManagers[StudentBand]"
-                      name="FlatFileConnection" />
-                  </connections>
-                  <inputs>
-                    <input
-                      refId="Package\Create Files\Test\StudentBand File.Inputs[Flat File Destination Input]"
-                      hasSideEffects="true"
-                      name="Flat File Destination Input">
-                      <inputColumns>
-                        <inputColumn
-                          refId="Package\Create Files\Test\StudentBand File.Inputs[Flat File Destination Input].Columns[PROSPECTID]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="20"
-                          cachedName="PROSPECTID"
-                          externalMetadataColumnId="Package\Create Files\Test\StudentBand File.Inputs[Flat File Destination Input].ExternalColumns[prospectID]"
-                          lineageId="Package\Create Files\Test\StudentBand.Outputs[ODBC Source Output].Columns[PROSPECTID]" />
-                        <inputColumn
-                          refId="Package\Create Files\Test\StudentBand File.Inputs[Flat File Destination Input].Columns[VALUE]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="1000"
-                          cachedName="VALUE"
-                          externalMetadataColumnId="Package\Create Files\Test\StudentBand File.Inputs[Flat File Destination Input].ExternalColumns[value]"
-                          lineageId="Package\Create Files\Test\StudentBand.Outputs[ODBC Source Output].Columns[VALUE]" />
-                      </inputColumns>
-                      <externalMetadataColumns
-                        isUsed="True">
-                        <externalMetadataColumn
-                          refId="Package\Create Files\Test\StudentBand File.Inputs[Flat File Destination Input].ExternalColumns[prospectID]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
-                          name="prospectID" />
-                        <externalMetadataColumn
-                          refId="Package\Create Files\Test\StudentBand File.Inputs[Flat File Destination Input].ExternalColumns[value]"
+                          refId="Package\Create Files\Test\AlumniMembership File.Inputs[Flat File Destination Input].ExternalColumns[value]"
                           codePage="1252"
                           dataType="str"
                           length="50"
@@ -9397,14 +9168,9 @@ FROM "DNRCNCT_StudentBand";</property>
               <paths>
                 <path
                   refId="Package\Create Files\Test.Paths[ODBC Source Output]"
-                  endId="Package\Create Files\Test\StudentAthlete File.Inputs[Flat File Destination Input]"
+                  endId="Package\Create Files\Test\AlumniMembership File.Inputs[Flat File Destination Input]"
                   name="ODBC Source Output"
-                  startId="Package\Create Files\Test\StudentAthlete.Outputs[ODBC Source Output]" />
-                <path
-                  refId="Package\Create Files\Test.Paths[ODBC Source Output1]"
-                  endId="Package\Create Files\Test\StudentBand File.Inputs[Flat File Destination Input]"
-                  name="ODBC Source Output"
-                  startId="Package\Create Files\Test\StudentBand.Outputs[ODBC Source Output]" />
+                  startId="Package\Create Files\Test\AlumniMembership.Outputs[ODBC Source Output]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -11369,7 +11135,7 @@ ORDER BY CAST(FileNumber AS INT);</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output15]"
+          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output1]"
           TopLeft="682.5,94">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11391,7 +11157,7 @@ ORDER BY CAST(FileNumber AS INT);</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output14]"
+          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output2]"
           TopLeft="133.25,285">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11413,7 +11179,7 @@ ORDER BY CAST(FileNumber AS INT);</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output13]"
+          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output3]"
           TopLeft="337.75,286">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11435,7 +11201,7 @@ ORDER BY CAST(FileNumber AS INT);</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output12]"
+          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output4]"
           TopLeft="517.25,288">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11457,7 +11223,7 @@ ORDER BY CAST(FileNumber AS INT);</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output11]"
+          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output5]"
           TopLeft="689.75,288">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11479,7 +11245,7 @@ ORDER BY CAST(FileNumber AS INT);</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output10]"
+          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output6]"
           TopLeft="119.75,92">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11501,7 +11267,7 @@ ORDER BY CAST(FileNumber AS INT);</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output9]"
+          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output7]"
           TopLeft="875.5,281">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11545,7 +11311,7 @@ ORDER BY CAST(FileNumber AS INT);</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output7]"
+          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output9]"
           TopLeft="1099.75,277">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11567,7 +11333,7 @@ ORDER BY CAST(FileNumber AS INT);</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output6]"
+          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output10]"
           TopLeft="116.5,480">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11589,7 +11355,7 @@ ORDER BY CAST(FileNumber AS INT);</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output5]"
+          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output11]"
           TopLeft="870.25,97">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11611,7 +11377,7 @@ ORDER BY CAST(FileNumber AS INT);</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output4]"
+          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output12]"
           TopLeft="497.25,92">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11633,7 +11399,7 @@ ORDER BY CAST(FileNumber AS INT);</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output3]"
+          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output13]"
           TopLeft="316.25,479">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11655,7 +11421,7 @@ ORDER BY CAST(FileNumber AS INT);</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output2]"
+          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output14]"
           TopLeft="514.75,478">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11677,7 +11443,7 @@ ORDER BY CAST(FileNumber AS INT);</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output1]"
+          Id="Package\Create Files\Create Single Files.Paths[ODBC Source Output15]"
           TopLeft="722.75,476">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11915,59 +11681,29 @@ ORDER BY CAST(FileNumber AS INT);</property>
     design-time-name="Package\Create Files\Test">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="163,42"
-          Id="Package\Create Files\Test\StudentBand File"
-          TopLeft="254,323" />
+          Size="194,42"
+          Id="Package\Create Files\Test\AlumniMembership File"
+          TopLeft="60,132" />
         <NodeLayout
-          Size="172,42"
-          Id="Package\Create Files\Test\StudentAthlete File"
-          TopLeft="60,320" />
-        <NodeLayout
-          Size="143,42"
-          Id="Package\Create Files\Test\StudentBand"
-          TopLeft="264,245" />
-        <NodeLayout
-          Size="151,42"
-          Id="Package\Create Files\Test\StudentAthlete"
-          TopLeft="72,242" />
+          Size="173,42"
+          Id="Package\Create Files\Test\AlumniMembership"
+          TopLeft="67,60" />
         <EdgeLayout
           Id="Package\Create Files\Test.Paths[ODBC Source Output]"
-          TopLeft="146.75,284">
+          TopLeft="155.25,102">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,36"
+              EndConnector="0,30"
               Start="0,0"
-              End="0,28.5">
+              End="0,22.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Create Files\Test.Paths[ODBC Source Output1]"
-          TopLeft="335.5,287">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,36"
-              Start="0,0"
-              End="0,28.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.5" />
+                    End="0,22.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

@@ -12,8 +12,8 @@
   DTS:MaxConcurrentExecutables="20"
   DTS:ObjectName="CreateTables"
   DTS:PackageType="5"
-  DTS:VersionBuild="108"
-  DTS:VersionGUID="{9840D019-BDDD-43B6-B4E9-072BF8327489}">
+  DTS:VersionBuild="110"
+  DTS:VersionGUID="{96400793-951A-4C62-92BE-A74A0079A72B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>

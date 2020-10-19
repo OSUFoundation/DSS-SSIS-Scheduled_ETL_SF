@@ -12,8 +12,12 @@ INSERT INTO "OSUADV_PROD"."BI"."DNRCNCT_AlumniMembership"
 
 SELECT
     c.ConstituentID AS prospectID
-    ,CONCAT(t.ProgramName, '-',CASE WHEN t.Type != 'Dropped' THEN 'Active' ELSE 'Lapsed' END, '-', COALESCE(CAST(t.ExpiresOn AS varchar(20)), '')) AS value  
-    --,ROW_NUMBER() OVER(PARTITION BY t.ConstituentSystemID ORDER BY CASE WHEN t.PROGRAMNAME = 'Life Membership Plus' THEN 1 ELSE 2 END, t.ActivityDate DESC) AS Seq
+    ,CONCAT(t.ProgramName, '-'
+                    ,CASE 
+                        WHEN t.Type = 'Dropped' THEN 'Lapsed' 
+                        WHEN ExpiresOn < CURRENT_DATE() THEN 'Lapsed'
+                        ELSE 'Active' END
+                    , '-', COALESCE(CAST(t.ExpiresOn AS varchar(20)), '')) AS value 
 
 FROM
     "OSUADV_PROD"."RE"."MEMBERSHIP_DTL_MEMBERSHIPTRANSACTIONS" t
