@@ -24,6 +24,7 @@
             , "Retiree"                      varchar(3)
             , "Separated"                    date 
             , "LastUpdateDate"               date
+			, "FileDate"                     date
             );
             INSERT INTO "OSUF_INTERFACES"."FACULTY_STAFF"."tmpNewData"
             SELECT * 
@@ -98,6 +99,7 @@ CREATE OR REPLACE TABLE "OSUF_INTERFACES"."FACULTY_STAFF"."FS_Delta" (   "CWID" 
 																	   , "Separated"                    DATE
 																	   , "Organization Role"            varchar(150)
 																	   , "AffiliationStatus"            varchar(150)
+																	   , "FileDate"                     date
 																	  );
                                                                         
 INSERT INTO "OSUF_INTERFACES"."FACULTY_STAFF"."FS_Delta"
@@ -144,6 +146,7 @@ FROM (
        , N."Separated"
        , CASE WHEN N."Separated" Is Not Null AND N."Job Type"='Retiree' THEN 'Retiree Employer' ELSE 'Employer'         END AS "Organization Role"
        , CASE WHEN N."Separated" Is Not NULL OR  N."Job Type"='Retiree' THEN 'Former'           ELSE 'Current'          END AS "AffiliationStatus"
+	   , N."FileDate"
              
        FROM "OSUF_INTERFACES"."FACULTY_STAFF"."tmpNewData" N 
             
@@ -212,25 +215,26 @@ FROM (
        
        /* Records coded as OSU Employee, but not in FS data file */
        /* Need to continue thinking about this.  And probably ask Charlie P, what he'd need in the data.*/
-       
+ /*      
        UNION
        
        SELECT
          H."CWID"
-       , ''
-       , ''
-       , ''
-       , ''
-       , ''
-       , ''
+       , '' AS "Preferred Name"
+       , '' AS "FirstName"
+       , '' AS "MiddleName"
+       , '' AS "LastName"
+       , '' AS "Suffix"
+       , '' AS "Gender"
        , CASE A.FullName
                    WHEN 'OSU/OKC' THEN 'Oklahoma State University - Oklahoma City'
                    WHEN 'OSU/IT' THEN 'Oklahoma State University - Institute of Technology'
                    WHEN 'OSU/CHS' THEN 'Oklahoma State University - Center for Health Sciences'
                    ELSE 'Oklahoma State University'
               END AS "OrganizationName"
-       , ''
-       , ''
+       , '' AS "PrimaryBusinessAddressType"
+       , '' AS "AddressLine1"
+	   , ''
        , ''
        , ''
        , ''
@@ -248,7 +252,8 @@ FROM (
        , Cast(GetDate() AS Date) AS "Separated"
        , '' AS "Organization Role"
        , 'Former' AS "AffiliationStatus"
-             
+	   , Null AS "FileDate"
+	   
        FROM  "OSUF_INTERFACES"."FACULTY_STAFF"."tmpHistData" H LEFT OUTER JOIN "OSUF_INTERFACES"."FACULTY_STAFF"."tmpNewData" N ON H.CWID=N.CWID
                                                                INNER JOIN ( //Currently coded as OSU employee in database
                                                                             SELECT Distinct
@@ -283,6 +288,8 @@ FROM (
                                                                                              )
        		                                                           ) A ON H.CWID=A.CWID
        WHERE N.CWID Is NULL
+	   
+*/
      );
                
 /*
