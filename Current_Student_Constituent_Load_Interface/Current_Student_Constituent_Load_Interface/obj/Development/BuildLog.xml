@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
-    <Name>Faculty_Staff_Constituent_Load_Interface</Name>
-    <LastWriteTime>2020-10-16T21:53:47.9929927Z</LastWriteTime>
+    <Name>Current_Student_Constituent_Load_Interface</Name>
+    <LastWriteTime>2020-11-05T03:48:57.7635364Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
-      <Name>UploadNewFile_GetDelta.dtsx</Name>
-      <LastWriteTime>2020-10-22T19:03:55.2491999Z</LastWriteTime>
+      <Name>Package.dtsx</Name>
+      <LastWriteTime>2020-11-05T04:06:19.0885409Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
