@@ -1,1 +1,0 @@
-SELECT CONCAT(current_date(), '_', REPLACE(current_time(),':','.')) AS Result
