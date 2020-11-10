@@ -1,0 +1,3 @@
+drop table OSUF_INTERFACES.FACULTY_STAFF."GradLoad_OKM";
+
+
