@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{A8B9C870-0040-4D0B-B3C8-CB4F0832E5C3}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{933972D8-B56C-4276-A9B2-C0D5A7545B7B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -26,10 +26,10 @@
           <ConnectionString>User Id=ccameron@osugiving.com.qa;Host=test.salesforce.com;Batch Size=1000</ConnectionString>
           <Password
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACVBNWekFaEmhaFBbwzRY8wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACZJGpXPa408JRgWzDiGPcqAAAAAASAAACgAAAAEAAAAB8/frbpuIpLrrS+0ywc6KkoAAAAsitbpR8Sf1GVWw/K/Y7p7iz+F1MiXV+F4Pt4uEVrS1b4Mbdh7OLGTxQAAACLOCzcbDL1ZdvZLgMGrr96Sh/HWw</Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACVBNWekFaEmhaFBbwzRY8wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAD0eBntiVYrtTuf3ArWAhRfAAAAAASAAACgAAAAEAAAACBXBjG0XBToK2kIl7mBOrIoAAAAmgMvarFvopdiQYl3IezzTycNpsj142ftV16qBxhipZKYXMhKv2lL2hQAAABlz+4Q/MWBQQuyJTLiX4EbbCo4Ow</Password>
           <SecurityToken
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACVBNWekFaEmhaFBbwzRY8wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACepWgzQ8BXfMQSnM/lApX8AAAAAASAAACgAAAAEAAAAKSXCffgZHfn7wIkUaMcafM4AAAAuDHKk7zEaQYL2vtRteLEpo8CqEY4iHt6M3jzClc6WdBhgklqkvW6FSx+hLHtLk6rTuAiq50LkWUUAAAAELHbdVfSbYrCmWya3JtHcVjv/as</SecurityToken>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACVBNWekFaEmhaFBbwzRY8wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAqisXugJcjFjJeX0SV76ZeAAAAAASAAACgAAAAEAAAAD6tBCQUPnckcJYl717nrpo4AAAA86t7u/KarQ/Y2KoVXytfq3aGfvuxqzWVmd59kPn2AGD4xj6mXIRVhSgHS3yPOBdC6dxERDUFrqcUAAAAW5dNDuCY1HmJCZIsdxsAe58rsp0</SecurityToken>
         </SalesforceConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -55,7 +55,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Campus_ID"
-              DTS:DTSID="{1F3654FF-E3B4-400B-8112-5C3381343C31}"
+              DTS:DTSID="{BB749905-6ABB-498F-9F32-80CA6BE975C1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -64,7 +64,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Full Name"
-              DTS:DTSID="{60470B59-27DD-42C4-A93D-BC2C911D05CE}"
+              DTS:DTSID="{0F9DD494-7897-4FAC-A3CC-C4D96032EE51}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -73,7 +73,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ucinn_ascendv2__First_Name"
-              DTS:DTSID="{C1515CD6-4AD6-4D2D-AE08-7D211183A707}"
+              DTS:DTSID="{53B9FD3E-1493-432A-A3E5-8E3C9CEF9F7F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -82,7 +82,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ucinn_ascendv2__Middle_Name"
-              DTS:DTSID="{21858BE4-567F-4B0B-B52C-21F7EF4FDBEC}"
+              DTS:DTSID="{C7AC665B-EA09-4AE6-B618-48D425FF0901}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -91,7 +91,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ucinn_ascendv2__Last_Name"
-              DTS:DTSID="{EA754139-C809-48C0-AA8C-6C00F1F1DE93}"
+              DTS:DTSID="{50865011-25A7-4C01-98CE-D193366F82E8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -100,7 +100,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Derived Student Type"
-              DTS:DTSID="{37DB4A8D-B53A-44B8-873E-EB0CDFB7BE6E}"
+              DTS:DTSID="{77F5CC2E-49B5-41FF-946A-06E591EB589B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -109,7 +109,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Admit Type"
-              DTS:DTSID="{30848843-A142-44FD-99EA-3EF66E6C7823}"
+              DTS:DTSID="{E4A90858-7D04-4A3F-B0A4-AB178AD62DFC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -118,7 +118,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Admit Type Desc"
-              DTS:DTSID="{12714C02-04AC-4FC5-9D43-F41B2526D7FD}"
+              DTS:DTSID="{B8E72EEB-82C9-413E-A1F5-3F3330F557F4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -127,7 +127,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Student Type"
-              DTS:DTSID="{1AF274CA-FF76-4934-89F0-E3576AE96B27}"
+              DTS:DTSID="{BD9E8638-33CE-41BC-8052-78E5E5822638}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -136,7 +136,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Student Type Desc"
-              DTS:DTSID="{256C2F8A-AEBA-4655-9D52-0FB7318F58EB}"
+              DTS:DTSID="{09C33CB5-E792-49B3-9DFE-2CEDE6683A9F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -145,7 +145,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Enrolled"
-              DTS:DTSID="{C246E8D9-EEEC-463A-96A3-57257FCD8A69}"
+              DTS:DTSID="{3C6B3DCE-D723-462D-A97A-A4999A28A4AF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -154,7 +154,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ucinn_ascendv2__Admit_Term"
-              DTS:DTSID="{B6EB9E48-EC80-4B08-B880-21C440CE1BDA}"
+              DTS:DTSID="{99213FC6-4B4B-4B81-B7F1-925B1CD26C26}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -163,7 +163,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Decision"
-              DTS:DTSID="{E73B3F23-6D2F-4DA4-A9FC-79F09DCD9C87}"
+              DTS:DTSID="{90525408-0220-4FC0-A64C-1DC3C081E7EE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -172,7 +172,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Decision Desc"
-              DTS:DTSID="{649FFC40-EF87-454F-A993-A678856C1ECA}"
+              DTS:DTSID="{75C41BE7-A828-43A2-8AE7-64A1F7712DF4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -181,7 +181,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="App Status"
-              DTS:DTSID="{05BDADBB-452D-42E5-91C2-8E639C22C282}"
+              DTS:DTSID="{498D2B86-9FB2-45A0-A587-49D5DB9564AF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -190,7 +190,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ucinn_ascendv2__Gender"
-              DTS:DTSID="{6A01B743-AB14-4A0D-A7F3-B8715996057E}"
+              DTS:DTSID="{0BB758FB-F69B-41E3-8D41-8997A9D9EC1E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -199,7 +199,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ucinn_ascendv2__Ethnicity"
-              DTS:DTSID="{93ECE740-5AD4-491E-918F-CA87C1EB13C1}"
+              DTS:DTSID="{D4CF37AB-EF0C-49DA-A45C-E156D6600191}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -208,7 +208,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Birth Date"
-              DTS:DTSID="{1860ABC1-E4C4-480E-8C9A-86649D772237}"
+              DTS:DTSID="{BA284FCA-78ED-412F-AEA0-09F99B4B1436}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -217,7 +217,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Residency"
-              DTS:DTSID="{643D2CEE-2ABA-44F5-889D-3CD0E7E088FD}"
+              DTS:DTSID="{F7D0D797-A639-40D6-B9CE-5A088A09F403}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -226,7 +226,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Level"
-              DTS:DTSID="{C0D1F315-9E75-4101-B74E-AA01AF2E0A44}"
+              DTS:DTSID="{4075F28D-707F-4742-88CD-C6D634FB76BD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -235,7 +235,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Class"
-              DTS:DTSID="{064AA839-20C8-435A-AAB4-D54DED49DE7C}"
+              DTS:DTSID="{8A133DEA-984F-4592-846D-8C3C02D494CF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -244,7 +244,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="College"
-              DTS:DTSID="{63F3C35D-0E2B-40F9-A578-C3E1FC116E3E}"
+              DTS:DTSID="{DF324B79-B825-40E4-BDB7-13FE4530A653}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -253,7 +253,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Degree_Code"
-              DTS:DTSID="{7C14CCAD-9C18-433E-B732-21C64D124C93}"
+              DTS:DTSID="{C54903B1-66FD-4AF2-87BB-D75BBF5857CC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -262,7 +262,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Degree_Code_Desc"
-              DTS:DTSID="{E6AB7CD5-B76C-49AB-9209-3A07F0B04799}"
+              DTS:DTSID="{6E1DF082-1ACE-4402-AB4C-604AC29BCA16}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -271,7 +271,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Major_1"
-              DTS:DTSID="{FFAD7B69-2428-4754-992E-4E75C2B2A5A0}"
+              DTS:DTSID="{C2DB39B1-2B11-472E-912D-033E49998BAB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -280,7 +280,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Major_1_Desc"
-              DTS:DTSID="{F3D21EE1-0F0B-482C-8CAF-9892D9D08D8A}"
+              DTS:DTSID="{42539133-3D3C-4BFB-9954-3A1027B607F4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -289,7 +289,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ucinn_ascendv2__Address_1_Line_1"
-              DTS:DTSID="{1BA11F6C-636B-4EC0-9E38-386ACA8E85AB}"
+              DTS:DTSID="{CE9E59D1-98AA-4AD8-83AD-B42BCD46F703}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -298,7 +298,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ucinn_ascendv2__Address_1_Line_2"
-              DTS:DTSID="{4783F807-A72F-4C5A-9D9A-DDA4782D502F}"
+              DTS:DTSID="{07ED4A9A-7217-4AAB-9870-CD886D1FC997}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -307,7 +307,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ucinn_ascendv2__City_1"
-              DTS:DTSID="{89A8C650-BC70-4BAB-86A7-28671DECDC4E}"
+              DTS:DTSID="{4D79E968-7C02-43C0-B1C0-40FEE70024E3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -316,7 +316,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ucinn_ascendv2__State_1"
-              DTS:DTSID="{3C128F7B-35E6-46C8-A398-EDF4AEEDA15F}"
+              DTS:DTSID="{6F4687AF-31F2-45B5-B8F6-0F01A03524DA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -325,7 +325,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ucinn_ascendv2__Postal_Code_1"
-              DTS:DTSID="{768DC338-49B6-4BF1-8ECE-8B53C13E79ED}"
+              DTS:DTSID="{84EEA8F0-D6C4-4817-96D7-C6831DB5EE7D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -334,7 +334,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="US Citizen"
-              DTS:DTSID="{82D062BA-F190-45F9-A6D6-52A3AE5C3D19}"
+              DTS:DTSID="{A3341752-FA65-4D86-886C-9BB4728331BD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -343,7 +343,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ucinn_ascendv2__Phone_1"
-              DTS:DTSID="{4ECEE4B5-E72D-43CF-B1F0-C50D7EC16FBC}"
+              DTS:DTSID="{3FE0EEAF-A97B-432E-B0BE-946CF2551ECC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -352,7 +352,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ucinn_ascendv2__Phone_2"
-              DTS:DTSID="{B1B85DC5-291B-4E32-8E36-C841C66F7859}"
+              DTS:DTSID="{70ABE49A-5CC0-41EF-9EE3-C4E7938BF726}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -361,7 +361,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ucinn_ascendv2__Email_1"
-              DTS:DTSID="{ADBA25FF-531C-4194-9ACB-8C49D85998E5}"
+              DTS:DTSID="{26625D10-44AB-4719-A0F7-0DA3E4E080A8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -370,7 +370,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="High School (HS) Name"
-              DTS:DTSID="{25AF4A5B-53F3-48BF-A11F-40D53717F33F}"
+              DTS:DTSID="{395F7ADC-09E5-473B-89F6-16F9A41CCB3F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -379,7 +379,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Legacy"
-              DTS:DTSID="{6A485E26-4375-49CF-A4E5-7F006E8D89D6}"
+              DTS:DTSID="{00A8EA1D-CADD-4229-B704-6C7219585642}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -388,7 +388,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Buckley"
-              DTS:DTSID="{71702355-1F9B-4ED4-B13C-F76E30DE6D46}"
+              DTS:DTSID="{982A2E69-35C3-4527-AC00-07D7AB07634A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -397,7 +397,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Deceased"
-              DTS:DTSID="{D1545D9F-117A-4E8B-B689-21C6B7F212EB}"
+              DTS:DTSID="{1C38FF20-4C41-43C7-B9E3-78C5891EFFBB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -406,7 +406,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="NOK1 Last Name"
-              DTS:DTSID="{25F8F32D-1A7D-45C9-8347-6403A110E568}"
+              DTS:DTSID="{E2C269E6-0405-41B2-A96E-65497A92802D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -415,7 +415,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="NOK1 First Name"
-              DTS:DTSID="{F1742845-E39D-48D8-91AB-F3C7FDE95FB3}"
+              DTS:DTSID="{AA551770-94EC-4236-A032-15F40738207D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -424,7 +424,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="NOK1 MI"
-              DTS:DTSID="{79C602B4-05E7-499E-9086-6D0E9E8FF19D}"
+              DTS:DTSID="{A1C56BE4-A6E8-4A2C-A431-29FC09BD0D2C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -433,7 +433,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="NOK1 Relation"
-              DTS:DTSID="{D13BF3B7-61BD-4658-824D-46138E79D20D}"
+              DTS:DTSID="{77882CBA-08D4-43CB-8F53-7F13AB3EC0BD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -442,7 +442,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="NOK1 City"
-              DTS:DTSID="{8D414DAF-22D2-4FEE-832F-5A8A0C5E9630}"
+              DTS:DTSID="{66003B1F-B757-4EAD-8ED5-B98E65E395B7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -451,7 +451,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="NOK1 State"
-              DTS:DTSID="{5C421050-09EC-4BE6-8237-ABBA41755E4F}"
+              DTS:DTSID="{37647428-86E6-4E0F-BB34-09098C225084}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -460,7 +460,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="NOK2 Last Name"
-              DTS:DTSID="{DB068BC2-7C3B-4C70-A7C0-EEAC7B6A50DF}"
+              DTS:DTSID="{24D6D33B-0B5C-465C-BBC1-6D4DBF4A9052}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -469,7 +469,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="NOK2 First Name"
-              DTS:DTSID="{087CCFA7-3AB3-4016-AFA6-234CBF0C40A1}"
+              DTS:DTSID="{376C9F88-BECB-4D8F-8FD8-5337BC0E8566}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -478,7 +478,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="NOK2 MI"
-              DTS:DTSID="{4C5D082B-E5EE-49BC-85D7-1007BDA1A111}"
+              DTS:DTSID="{9B14A121-83B8-4912-8390-7D245165D022}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -487,7 +487,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="NOK2 Relation"
-              DTS:DTSID="{09B5C317-B337-43FD-8AE4-EF60E520678A}"
+              DTS:DTSID="{AB6215C5-7E59-44DB-9B26-8E80BBEA9824}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -496,7 +496,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="NOK2 City"
-              DTS:DTSID="{14271ED3-00EE-4F4E-93E4-C7AE064BCECF}"
+              DTS:DTSID="{FD0055CE-6211-4077-82FB-482CC349551F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -505,7 +505,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="NOK2 State"
-              DTS:DTSID="{0730F498-C075-454F-86A9-F2F38CE76656}"
+              DTS:DTSID="{FEB2EE80-0C76-485D-9806-C6E5441DAB60}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -514,7 +514,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ucinn_ascendv2__Enrolled_Term"
-              DTS:DTSID="{343B320E-246F-4A53-AB4A-EFA31DF26F65}"
+              DTS:DTSID="{F7F44D34-FCFE-4948-87BD-634046253654}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -523,97 +523,97 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Future Admit Term Parm"
-              DTS:DTSID="{271ABFBD-065D-4841-99BB-B3347448A0BF}"
+              DTS:DTSID="{293F7772-2BFD-4692-8D1F-D7D743E71E01}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="250"
-              DTS:DataType="129"
+              DTS:MaximumWidth="25"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Campus"
-              DTS:DTSID="{9F69A15C-903A-43E7-A9FF-332159F8C7EC}"
+              DTS:DTSID="{E91CFBA8-9EC9-4589-8744-585CD2524B41}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="250"
-              DTS:DataType="129"
+              DTS:MaximumWidth="18"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="RecordTypeID"
-              DTS:DTSID="{5B99385E-EB96-4581-BA07-051EDA4250E5}"
+              DTS:DTSID="{A2751007-51C2-4370-93DD-0B9A0F5BDB28}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="250"
-              DTS:DataType="129"
+              DTS:MaximumWidth="8"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ucinn_ascendv2__Email_1_Type"
-              DTS:DTSID="{213E4AF4-67AC-41ED-9434-0F75D4D12BFE}"
+              DTS:DTSID="{D52A5407-3D94-4626-A864-A764CCE2D8B4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="250"
-              DTS:DataType="129"
+              DTS:MaximumWidth="14"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ucinn_ascendv2__Phone_1_Type"
-              DTS:DTSID="{E15D87F2-B627-41C3-A70A-28E851091237}"
+              DTS:DTSID="{4D26280B-720F-49EA-8B25-C0CFC9DE4EC9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="250"
-              DTS:DataType="129"
+              DTS:MaximumWidth="6"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ucinn_ascendv2__Phone_2_Type"
-              DTS:DTSID="{790E2224-C536-4FDA-B06F-C0FC0E2DBFD9}"
+              DTS:DTSID="{0793289F-7B3F-4816-B8EF-58196A18D830}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="250"
-              DTS:DataType="129"
+              DTS:MaximumWidth="3"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="BD_MonthName"
-              DTS:DTSID="{B836B914-E8E9-4396-A370-D7C47A3E30EF}"
+              DTS:DTSID="{5C107101-A5B6-46AD-BD89-06846E9F4745}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="250"
-              DTS:DataType="129"
+              DTS:MaximumWidth="246"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="BD_Day"
-              DTS:DTSID="{B0DF1ED8-4FB0-4CC3-A4CC-6EC9C2C8ACA8}"
+              DTS:DTSID="{51E7CECD-E4EE-482A-B050-3E502DD46F14}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="250"
-              DTS:DataType="129"
+              DTS:MaximumWidth="4"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="BD_Year"
-              DTS:DTSID="{8B890019-DE8B-48C2-8FFA-18715908575A}"
+              DTS:DTSID="{42AD4776-3259-41C1-BF09-338A95475522}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="250"
-              DTS:DataType="129"
+              DTS:MaximumWidth="2"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="BD_Month"
-              DTS:DTSID="{5C618DF0-0CE7-4F8A-AEE3-CD70D6C3A560}"
+              DTS:DTSID="{BA37A78D-8323-40A2-98C0-CA63E1124112}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="250"
-              DTS:DataType="129"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ucinn_ascendv2__Birthdate"
-              DTS:DTSID="{C1DC5E9B-DF51-4197-8EED-F60FB53C17E5}"
+              DTS:DTSID="{C71A32B9-7EF7-4D36-B3FC-26FA0395FBC3}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1157,7 +1157,7 @@
             <FEFEProperty
               Folder="\\buss\import\import data\ParentStudentData\StudentData\00-FileToUpload-ascend" />
             <FEFEProperty
-              FileSpec="*.csv" />
+              FileSpec="StudentData_*.csv" />
             <FEFEProperty
               FileNameRetrievalType="0" />
             <FEFEProperty
@@ -1182,20 +1182,20 @@
               version="1">
               <components>
                 <component
-                  refId="Package\Foreach Loop Container\Data Flow Task\Conditional Split"
+                  refId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Birthday Populated?"
                   componentClassID="Microsoft.ConditionalSplit"
                   contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
                   description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
-                  name="Conditional Split"
+                  name="Conditional Split - Birthday Populated?"
                   usesDispositions="true">
                   <inputs>
                     <input
-                      refId="Package\Foreach Loop Container\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+                      refId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Birthday Populated?.Inputs[Conditional Split Input]"
                       description="Input to the Conditional Split Transformation"
                       name="Conditional Split Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[Birth Date]"
+                          refId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Birthday Populated?.Inputs[Conditional Split Input].Columns[Birth Date]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="250"
@@ -1207,13 +1207,13 @@
                   </inputs>
                   <outputs>
                     <output
-                      refId="Package\Foreach Loop Container\Data Flow Task\Conditional Split.Outputs[With Birthday]"
+                      refId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Birthday Populated?.Outputs[With Birthday]"
                       description="Output 1 of the Conditional Split Transformation"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       exclusionGroup="1"
                       name="With Birthday"
-                      synchronousInputId="Package\Foreach Loop Container\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+                      synchronousInputId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Birthday Populated?.Inputs[Conditional Split Input]"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1235,13 +1235,13 @@
                       <externalMetadataColumns />
                     </output>
                     <output
-                      refId="Package\Foreach Loop Container\Data Flow Task\Conditional Split.Outputs[Without Birthday]"
+                      refId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Birthday Populated?.Outputs[Without Birthday]"
                       description="Output 2 of the Conditional Split Transformation"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       exclusionGroup="1"
                       name="Without Birthday"
-                      synchronousInputId="Package\Foreach Loop Container\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+                      synchronousInputId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Birthday Populated?.Inputs[Conditional Split Input]"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1263,11 +1263,11 @@
                       <externalMetadataColumns />
                     </output>
                     <output
-                      refId="Package\Foreach Loop Container\Data Flow Task\Conditional Split.Outputs[Conditional Split Default Output]"
+                      refId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Birthday Populated?.Outputs[Conditional Split Default Output]"
                       description="Default Output of the Conditional Split Transformation"
                       exclusionGroup="1"
                       name="Conditional Split Default Output"
-                      synchronousInputId="Package\Foreach Loop Container\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]">
+                      synchronousInputId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Birthday Populated?.Inputs[Conditional Split Input]">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -1276,23 +1276,114 @@
                       <externalMetadataColumns />
                     </output>
                     <output
-                      refId="Package\Foreach Loop Container\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output]"
+                      refId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Birthday Populated?.Outputs[Conditional Split Error Output]"
                       description="Error Output of the Conditional Split Transformation"
                       exclusionGroup="1"
                       isErrorOut="true"
                       name="Conditional Split Error Output"
-                      synchronousInputId="Package\Foreach Loop Container\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]">
+                      synchronousInputId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Birthday Populated?.Inputs[Conditional Split Input]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                          refId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Birthday Populated?.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\Foreach Loop Container\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Birthday Populated?.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                          refId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Birthday Populated?.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\Foreach Loop Container\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Birthday Populated?.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Status"
+                  componentClassID="Microsoft.ConditionalSplit"
+                  contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+                  name="Conditional Split - Status"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Status.Inputs[Conditional Split Input]"
+                      description="Input to the Conditional Split Transformation"
+                      name="Conditional Split Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Status.Inputs[Conditional Split Input].Columns[App Status]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="250"
+                          cachedName="App Status"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[App Status]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Status.Outputs[Admitted]"
+                      description="Output 1 of the Conditional Split Transformation"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      exclusionGroup="1"
+                      name="Admitted"
+                      synchronousInputId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Status.Inputs[Conditional Split Input]"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                          name="Expression">[LEFT](#{Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[App Status]},8) == "Admitted"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Specifies the friendly version of the expression. This expression version uses column names."
+                          expressionType="Notify"
+                          name="FriendlyExpression">LEFT([App Status],8) == "Admitted"</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                          name="EvaluationOrder">0</property>
+                      </properties>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Status.Outputs[Conditional Split Default Output]"
+                      description="Default Output of the Conditional Split Transformation"
+                      exclusionGroup="1"
+                      name="Conditional Split Default Output"
+                      synchronousInputId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Status.Inputs[Conditional Split Input]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          name="IsDefaultOut">true</property>
+                      </properties>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Status.Outputs[Conditional Split Error Output]"
+                      description="Error Output of the Conditional Split Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Conditional Split Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Status.Inputs[Conditional Split Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Status.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Status.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Status.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Status.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -2045,6 +2136,14 @@
                           externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Full Name]"
                           lineageId="Package\Foreach Loop Container\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Full Name]" />
                         <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[ucinn_ascendv2__First_Name]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="250"
+                          cachedName="ucinn_ascendv2__First_Name"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__First_Name]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[ucinn_ascendv2__First_Name]" />
+                        <inputColumn
                           refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[ucinn_ascendv2__Middle_Name]"
                           cachedCodepage="1252"
                           cachedDataType="str"
@@ -2501,36 +2600,52 @@
                           externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BD_Year]"
                           lineageId="Package\Foreach Loop Container\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[BD_Year]" />
                         <inputColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[ucinn_ascendv2__Birthdate]"
-                          cachedDataType="wstr"
-                          cachedLength="10"
-                          cachedName="ucinn_ascendv2__Birthdate"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Birthdate]"
-                          lineageId="Package\Foreach Loop Container\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[ucinn_ascendv2__Birthdate]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[ucinn_ascendv2__First_Name]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="250"
-                          cachedName="ucinn_ascendv2__First_Name"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__First_Name]"
-                          lineageId="Package\Foreach Loop Container\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[ucinn_ascendv2__First_Name]" />
-                        <inputColumn
                           refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[BD_Month]"
                           cachedDataType="wstr"
                           cachedLength="2"
                           cachedName="BD_Month"
                           externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BD_Month]"
                           lineageId="Package\Foreach Loop Container\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[BD_Month]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[ucinn_ascendv2__Birthdate]"
+                          cachedDataType="wstr"
+                          cachedLength="10"
+                          cachedName="ucinn_ascendv2__Birthdate"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Birthdate]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[ucinn_ascendv2__Birthdate]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Campus_ID]"
+                          codePage="1252"
+                          dataType="str"
+                          length="250"
+                          name="Campus_ID" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Full Name]"
                           codePage="1252"
                           dataType="str"
                           length="250"
                           name="Full Name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__First_Name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="250"
+                          name="ucinn_ascendv2__First_Name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Middle_Name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="250"
+                          name="ucinn_ascendv2__Middle_Name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Last_Name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="250"
+                          name="ucinn_ascendv2__Last_Name" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Derived Student Type]"
                           codePage="1252"
@@ -2568,6 +2683,12 @@
                           length="250"
                           name="Enrolled" />
                         <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Admit_Term]"
+                          codePage="1252"
+                          dataType="str"
+                          length="250"
+                          name="ucinn_ascendv2__Admit_Term" />
+                        <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Decision]"
                           codePage="1252"
                           dataType="str"
@@ -2585,6 +2706,18 @@
                           dataType="str"
                           length="250"
                           name="App Status" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Gender]"
+                          codePage="1252"
+                          dataType="str"
+                          length="250"
+                          name="ucinn_ascendv2__Gender" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Ethnicity]"
+                          codePage="1252"
+                          dataType="str"
+                          length="250"
+                          name="ucinn_ascendv2__Ethnicity" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Birth Date]"
                           codePage="1252"
@@ -2616,11 +2749,83 @@
                           length="250"
                           name="College" />
                         <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Degree_Code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="250"
+                          name="Degree_Code" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Degree_Code_Desc]"
+                          codePage="1252"
+                          dataType="str"
+                          length="250"
+                          name="Degree_Code_Desc" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Major_1]"
+                          codePage="1252"
+                          dataType="str"
+                          length="250"
+                          name="Major_1" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Major_1_Desc]"
+                          codePage="1252"
+                          dataType="str"
+                          length="250"
+                          name="Major_1_Desc" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Address_1_Line_1]"
+                          codePage="1252"
+                          dataType="str"
+                          length="250"
+                          name="ucinn_ascendv2__Address_1_Line_1" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Address_1_Line_2]"
+                          codePage="1252"
+                          dataType="str"
+                          length="250"
+                          name="ucinn_ascendv2__Address_1_Line_2" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__City_1]"
+                          codePage="1252"
+                          dataType="str"
+                          length="250"
+                          name="ucinn_ascendv2__City_1" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__State_1]"
+                          codePage="1252"
+                          dataType="str"
+                          length="250"
+                          name="ucinn_ascendv2__State_1" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Postal_Code_1]"
+                          codePage="1252"
+                          dataType="str"
+                          length="250"
+                          name="ucinn_ascendv2__Postal_Code_1" />
+                        <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[US Citizen]"
                           codePage="1252"
                           dataType="str"
                           length="250"
                           name="US Citizen" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Phone_1]"
+                          codePage="1252"
+                          dataType="str"
+                          length="250"
+                          name="ucinn_ascendv2__Phone_1" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Phone_2]"
+                          codePage="1252"
+                          dataType="str"
+                          length="250"
+                          name="ucinn_ascendv2__Phone_2" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Email_1]"
+                          codePage="1252"
+                          dataType="str"
+                          length="250"
+                          name="ucinn_ascendv2__Email_1" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[High School (HS) Name]"
                           codePage="1252"
@@ -2718,6 +2923,12 @@
                           length="250"
                           name="NOK2 State" />
                         <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Enrolled_Term]"
+                          codePage="1252"
+                          dataType="str"
+                          length="250"
+                          name="ucinn_ascendv2__Enrolled_Term" />
+                        <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Future Admit Term Parm]"
                           codePage="1252"
                           dataType="str"
@@ -2725,184 +2936,54 @@
                           name="Future Admit Term Parm" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Campus]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
+                          dataType="wstr"
+                          length="25"
                           name="Campus" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[RecordTypeID]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
+                          dataType="wstr"
+                          length="18"
                           name="RecordTypeID" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Email_1_Type]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
+                          dataType="wstr"
+                          length="8"
                           name="ucinn_ascendv2__Email_1_Type" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Phone_1_Type]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
+                          dataType="wstr"
+                          length="14"
                           name="ucinn_ascendv2__Phone_1_Type" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Phone_2_Type]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
+                          dataType="wstr"
+                          length="6"
                           name="ucinn_ascendv2__Phone_2_Type" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BD_MonthName]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
+                          dataType="wstr"
+                          length="3"
                           name="BD_MonthName" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BD_Day]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
+                          dataType="wstr"
+                          length="246"
                           name="BD_Day" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BD_Year]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
+                          dataType="wstr"
+                          length="4"
                           name="BD_Year" />
                         <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Birthdate]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
-                          name="ucinn_ascendv2__Birthdate" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Campus_ID]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
-                          name="Campus_ID" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__First_Name]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
-                          name="ucinn_ascendv2__First_Name" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Middle_Name]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
-                          name="ucinn_ascendv2__Middle_Name" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Last_Name]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
-                          name="ucinn_ascendv2__Last_Name" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Admit_Term]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
-                          name="ucinn_ascendv2__Admit_Term" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Gender]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
-                          name="ucinn_ascendv2__Gender" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Ethnicity]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
-                          name="ucinn_ascendv2__Ethnicity" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Degree_Code]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
-                          name="Degree_Code" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Degree_Code_Desc]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
-                          name="Degree_Code_Desc" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Major_1]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
-                          name="Major_1" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Major_1_Desc]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
-                          name="Major_1_Desc" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Address_1_Line_1]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
-                          name="ucinn_ascendv2__Address_1_Line_1" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Address_1_Line_2]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
-                          name="ucinn_ascendv2__Address_1_Line_2" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__City_1]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
-                          name="ucinn_ascendv2__City_1" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__State_1]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
-                          name="ucinn_ascendv2__State_1" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Postal_Code_1]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
-                          name="ucinn_ascendv2__Postal_Code_1" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Phone_1]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
-                          name="ucinn_ascendv2__Phone_1" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Phone_2]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
-                          name="ucinn_ascendv2__Phone_2" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Email_1]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
-                          name="ucinn_ascendv2__Email_1" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Enrolled_Term]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
-                          name="ucinn_ascendv2__Enrolled_Term" />
-                        <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BD_Month]"
-                          codePage="1252"
-                          dataType="str"
-                          length="250"
+                          dataType="wstr"
+                          length="2"
                           name="BD_Month" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ucinn_ascendv2__Birthdate]"
+                          dataType="wstr"
+                          length="10"
+                          name="ucinn_ascendv2__Birthdate" />
                       </externalMetadataColumns>
                     </input>
                   </inputs>
@@ -10975,8 +11056,105 @@
                     </output>
                   </outputs>
                 </component>
+                <component
+                  refId="Package\Foreach Loop Container\Data Flow Task\Split - Test Records"
+                  componentClassID="Microsoft.ConditionalSplit"
+                  contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+                  name="Split - Test Records"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Data Flow Task\Split - Test Records.Inputs[Conditional Split Input]"
+                      description="Input to the Conditional Split Transformation"
+                      name="Conditional Split Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Split - Test Records.Inputs[Conditional Split Input].Columns[Campus_ID]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="250"
+                          cachedName="Campus_ID"
+                          cachedSortKeyPosition="1"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Campus_ID]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Data Flow Task\Split - Test Records.Outputs[Test Records]"
+                      description="Output 1 of the Conditional Split Transformation"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      exclusionGroup="1"
+                      name="Test Records"
+                      synchronousInputId="Package\Foreach Loop Container\Data Flow Task\Split - Test Records.Inputs[Conditional Split Input]"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                          name="Expression">#{Package\Foreach Loop Container\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Campus_ID]} == "A10000084"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Specifies the friendly version of the expression. This expression version uses column names."
+                          expressionType="Notify"
+                          name="FriendlyExpression">Campus_ID == "A10000084"</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                          name="EvaluationOrder">0</property>
+                      </properties>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Data Flow Task\Split - Test Records.Outputs[Conditional Split Default Output]"
+                      description="Default Output of the Conditional Split Transformation"
+                      exclusionGroup="1"
+                      name="Conditional Split Default Output"
+                      synchronousInputId="Package\Foreach Loop Container\Data Flow Task\Split - Test Records.Inputs[Conditional Split Input]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          name="IsDefaultOut">true</property>
+                      </properties>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Data Flow Task\Split - Test Records.Outputs[Conditional Split Error Output]"
+                      description="Error Output of the Conditional Split Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Conditional Split Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Data Flow Task\Split - Test Records.Inputs[Conditional Split Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Split - Test Records.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Split - Test Records.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Split - Test Records.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Split - Test Records.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
               </components>
               <paths>
+                <path
+                  refId="Package\Foreach Loop Container\Data Flow Task.Paths[Admitted]"
+                  endId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Birthday Populated?.Inputs[Conditional Split Input]"
+                  name="Admitted"
+                  startId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Status.Outputs[Admitted]" />
                 <path
                   refId="Package\Foreach Loop Container\Data Flow Task.Paths[Derived Column Output]"
                   endId="Package\Foreach Loop Container\Data Flow Task\Derived Column - Birthday Month Number.Inputs[Derived Column Input]"
@@ -10999,12 +11177,12 @@
                   startId="Package\Foreach Loop Container\Data Flow Task\Derived Columns - Record and Field Types and Birthday Fields.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\Foreach Loop Container\Data Flow Task.Paths[Flat File Source Output]"
-                  endId="Package\Foreach Loop Container\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+                  endId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Status.Inputs[Conditional Split Input]"
                   name="Flat File Source Output"
                   startId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
                 <path
                   refId="Package\Foreach Loop Container\Data Flow Task.Paths[Merge Output 1]"
-                  endId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
+                  endId="Package\Foreach Loop Container\Data Flow Task\Split - Test Records.Inputs[Conditional Split Input]"
                   name="Merge Output 1"
                   startId="Package\Foreach Loop Container\Data Flow Task\Merge.Outputs[Merge Output 1]" />
                 <path
@@ -11018,15 +11196,20 @@
                   name="Sort Output"
                   startId="Package\Foreach Loop Container\Data Flow Task\Sort 1.Outputs[Sort Output]" />
                 <path
+                  refId="Package\Foreach Loop Container\Data Flow Task.Paths[Test Records]"
+                  endId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
+                  name="Test Records"
+                  startId="Package\Foreach Loop Container\Data Flow Task\Split - Test Records.Outputs[Test Records]" />
+                <path
                   refId="Package\Foreach Loop Container\Data Flow Task.Paths[With Birthday]"
                   endId="Package\Foreach Loop Container\Data Flow Task\Derived Columns - Record and Field Types and Birthday Parse.Inputs[Derived Column Input]"
                   name="With Birthday"
-                  startId="Package\Foreach Loop Container\Data Flow Task\Conditional Split.Outputs[With Birthday]" />
+                  startId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Birthday Populated?.Outputs[With Birthday]" />
                 <path
                   refId="Package\Foreach Loop Container\Data Flow Task.Paths[Without Birthday]"
                   endId="Package\Foreach Loop Container\Data Flow Task\Derived Columns - Record and Field Types and Birthday Fields.Inputs[Derived Column Input]"
                   name="Without Birthday"
-                  startId="Package\Foreach Loop Container\Data Flow Task\Conditional Split.Outputs[Without Birthday]" />
+                  startId="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Birthday Populated?.Outputs[Without Birthday]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -11035,8 +11218,8 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{E992595A-C180-4EF6-BDC2-7F327EEF247F}"
-          DTS:ObjectName="{E992595A-C180-4EF6-BDC2-7F327EEF247F}"
+          DTS:DTSID="{03B1C92E-8B56-46B8-B8E2-4C163174B8E5}"
+          DTS:ObjectName="{03B1C92E-8B56-46B8-B8E2-4C163174B8E5}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::DataFile" />
       </DTS:ForEachVariableMappings>
@@ -11064,7 +11247,7 @@
           PanelSize="362,127"
           Size="362,170"
           Id="Package\Foreach Loop Container"
-          TopLeft="206,193" />
+          TopLeft="136,93" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -11074,276 +11257,120 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="151,42"
-          Id="Package\Foreach Loop Container\Data Flow Task\Flat File Source"
-          TopLeft="675,36" />
-        <NodeLayout
-          Size="371,42"
-          Id="Package\Foreach Loop Container\Data Flow Task\Derived Columns - Record and Field Types and Birthday Parse"
-          TopLeft="342,238" />
+          Size="108,42"
+          Id="Package\Foreach Loop Container\Data Flow Task\Merge"
+          TopLeft="918,542" />
         <NodeLayout
           Size="368,42"
           Id="Package\Foreach Loop Container\Data Flow Task\Derived Column - Birthday Month Number"
-          TopLeft="343,306" />
-        <EdgeLayout
-          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="527.25,280">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,26"
-              Start="0,0"
-              End="0,18.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="476,306" />
         <NodeLayout
-          Size="172,42"
-          Id="Package\Foreach Loop Container\Data Flow Task\Flat File Destination"
-          TopLeft="700,610" />
+          Size="151,42"
+          Id="Package\Foreach Loop Container\Data Flow Task\Flat File Source"
+          TopLeft="440,36" />
+        <NodeLayout
+          Size="372,42"
+          Id="Package\Foreach Loop Container\Data Flow Task\Derived Columns - Record and Field Types and Birthday Fields"
+          TopLeft="895,239" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Foreach Loop Container\Data Flow Task\Sort"
+          TopLeft="711,470" />
         <NodeLayout
           Size="362,42"
           Id="Package\Foreach Loop Container\Data Flow Task\Derived Column - Formatted Birthday"
-          TopLeft="346,386" />
-        <EdgeLayout
-          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Derived Column Output1]"
-          TopLeft="527,348">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38"
-              Start="0,0"
-              End="0,30.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="479,386" />
         <NodeLayout
-          Size="155,42"
-          Id="Package\Foreach Loop Container\Data Flow Task\Conditional Split"
-          TopLeft="679,128" />
+          Size="107,42"
+          Id="Package\Foreach Loop Container\Data Flow Task\Sort 1"
+          TopLeft="1021,468" />
+        <NodeLayout
+          Size="371,42"
+          Id="Package\Foreach Loop Container\Data Flow Task\Derived Columns - Record and Field Types and Birthday Parse"
+          TopLeft="475,238" />
+        <NodeLayout
+          Size="349,42"
+          Id="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Birthday Populated?"
+          TopLeft="714,128" />
+        <NodeLayout
+          Size="216,42"
+          Id="Package\Foreach Loop Container\Data Flow Task\Conditional Split - Status"
+          TopLeft="782,40" />
         <EdgeLayout
-          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="753.5,78">
+          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Without Birthday]"
+          TopLeft="945.333333333333,170">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,50"
+              EndConnector="135.666666666667,69"
               Start="0,0"
-              End="0,42.5">
+              End="135.666666666667,61.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,42.5" />
+                    End="0,23.7889332572733" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.7889332572733"
+                    Point2="0,27.7889332572733"
+                    Point3="4,27.7889332572733" />
+                  <mssgle:LineSegment
+                    End="131.666666666667,27.7889332572733" />
+                  <mssgle:CubicBezierSegment
+                    Point1="131.666666666667,27.7889332572733"
+                    Point2="135.666666666667,27.7889332572733"
+                    Point3="135.666666666667,31.7889332572733" />
+                  <mssgle:LineSegment
+                    End="135.666666666667,61.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="29.8262239583334,32.7889332572733,76.01421875,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Loop Container\Data Flow Task.Paths[With Birthday]"
-          TopLeft="756.5,170">
+          TopLeft="831.666666666667,170">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-229,68"
+              EndConnector="-171.166666666667,68"
               Start="0,0"
-              End="-229,60.5">
+              End="-171.166666666667,60.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30" />
+                    End="0,23.3861950941244" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,30"
-                    Point2="0,34"
-                    Point3="-4,34" />
+                    Point1="0,23.3861950941244"
+                    Point2="0,27.3861950941244"
+                    Point3="-4,27.3861950941244" />
                   <mssgle:LineSegment
-                    End="-225,34" />
+                    End="-167.166666666667,27.3861950941244" />
                   <mssgle:CubicBezierSegment
-                    Point1="-225,34"
-                    Point2="-229,34"
-                    Point3="-229,38" />
+                    Point1="-167.166666666667,27.3861950941244"
+                    Point2="-171.166666666667,27.3861950941244"
+                    Point3="-171.166666666667,31.3861950941244" />
                   <mssgle:LineSegment
-                    End="-229,60.5" />
+                    End="-171.166666666667,60.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-145.332109375,39,61.66421875,11.609375"
+              BoundingBox="-116.415442708333,32.3861950941244,61.66421875,11.609375"
               RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="372,42"
-          Id="Package\Foreach Loop Container\Data Flow Task\Derived Columns - Record and Field Types and Birthday Fields"
-          TopLeft="762,239" />
-        <EdgeLayout
-          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Without Birthday]"
-          TopLeft="781,170">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="167,69"
-              Start="0,0"
-              End="167,61.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.0229885057471" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24.0229885057471"
-                    Point2="0,28.0229885057471"
-                    Point3="4,28.0229885057471" />
-                  <mssgle:LineSegment
-                    End="163,28.0229885057471" />
-                  <mssgle:CubicBezierSegment
-                    Point1="163,28.0229885057471"
-                    Point2="167,28.0229885057471"
-                    Point3="167,32.0229885057471" />
-                  <mssgle:LineSegment
-                    End="167,61.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="45.492890625,33.0229885057471,76.01421875,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="98,42"
-          Id="Package\Foreach Loop Container\Data Flow Task\Sort"
-          TopLeft="578,470" />
-        <EdgeLayout
-          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Derived Column Output2]"
-          TopLeft="527,428">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="100,42"
-              Start="0,0"
-              End="100,34.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17"
-                    Point2="0,21"
-                    Point3="4,21" />
-                  <mssgle:LineSegment
-                    End="96,21" />
-                  <mssgle:CubicBezierSegment
-                    Point1="96,21"
-                    Point2="100,21"
-                    Point3="100,25" />
-                  <mssgle:LineSegment
-                    End="100,34.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="107,42"
-          Id="Package\Foreach Loop Container\Data Flow Task\Sort 1"
-          TopLeft="888,468" />
-        <EdgeLayout
-          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Derived Column Output3]"
-          TopLeft="944.75,281">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,187"
-              Start="0,0"
-              End="0,179.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,179.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="108,42"
-          Id="Package\Foreach Loop Container\Data Flow Task\Merge"
-          TopLeft="785,542" />
-        <EdgeLayout
-          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Sort Output]"
-          TopLeft="627,512">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="212,30"
-              Start="0,0"
-              End="212,22.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,11" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11"
-                    Point2="0,15"
-                    Point3="4,15" />
-                  <mssgle:LineSegment
-                    End="208,15" />
-                  <mssgle:CubicBezierSegment
-                    Point1="208,15"
-                    Point2="212,15"
-                    Point3="212,19" />
-                  <mssgle:LineSegment
-                    End="212,22.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Loop Container\Data Flow Task.Paths[Sort Output1]"
-          TopLeft="941.5,510">
+          TopLeft="1074.5,510">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -11376,37 +11403,256 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Merge Output 1]"
-          TopLeft="839,584">
+          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Sort Output]"
+          TopLeft="760,512">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-53,26"
+              EndConnector="212,30"
               Start="0,0"
-              End="-53,18.5">
+              End="212,22.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,9" />
+                    End="0,11" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,9"
-                    Point2="0,13"
-                    Point3="-4,13" />
+                    Point1="0,11"
+                    Point2="0,15"
+                    Point3="4,15" />
                   <mssgle:LineSegment
-                    End="-49,13" />
+                    End="208,15" />
                   <mssgle:CubicBezierSegment
-                    Point1="-49,13"
-                    Point2="-53,13"
-                    Point3="-53,17" />
+                    Point1="208,15"
+                    Point2="212,15"
+                    Point3="212,19" />
                   <mssgle:LineSegment
-                    End="-53,18.5" />
+                    End="212,22.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="591,59">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="191,0"
+              Start="0,0"
+              End="183.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="183.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Derived Column Output3]"
+          TopLeft="1077.75,281">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,187"
+              Start="0,0"
+              End="0,179.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,179.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Derived Column Output2]"
+          TopLeft="660,428">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="100,42"
+              Start="0,0"
+              End="100,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17"
+                    Point2="0,21"
+                    Point3="4,21" />
+                  <mssgle:LineSegment
+                    End="96,21" />
+                  <mssgle:CubicBezierSegment
+                    Point1="96,21"
+                    Point2="100,21"
+                    Point3="100,25" />
+                  <mssgle:LineSegment
+                    End="100,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Derived Column Output1]"
+          TopLeft="660,348">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38"
+              Start="0,0"
+              End="0,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="660.25,280">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26"
+              Start="0,0"
+              End="0,18.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Admitted]"
+          TopLeft="889.25,82">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-20.5360546875,14.37548828125,41.072109375,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="RecordTypeID values have to be update in BOTH derived Column steps at this level:"
+          ParentId="Package\Foreach Loop Container\Data Flow Task"
+          FontInfo="{assembly:Null}"
+          Size="346,56"
+          Id="eefcf025-eca8-49d1-936c-be0073f6b5d2"
+          TopLeft="123,230" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Foreach Loop Container\Data Flow Task\Flat File Destination"
+          TopLeft="901,721" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Foreach Loop Container\Data Flow Task\Split - Test Records"
+          TopLeft="897,633" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Merge Output 1]"
+          TopLeft="972,584">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.5,49"
+              Start="0,0"
+              End="10.5,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.5"
+                    Point2="0,24.5"
+                    Point3="4,24.5" />
+                  <mssgle:LineSegment
+                    End="6.5,24.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.5,24.5"
+                    Point2="10.5,24.5"
+                    Point3="10.5,28.5" />
+                  <mssgle:LineSegment
+                    End="10.5,41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Test Records]"
+          TopLeft="984.75,675">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-29.473671875,14.37548828125,58.94734375,9.7490234375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
