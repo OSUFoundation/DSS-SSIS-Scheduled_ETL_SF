@@ -24,3 +24,5 @@ UpgradeLog*.htm
 
 #Disabled Rules
 #OSUF_DW_REDESIGN_TEST/OSUF_DW_REDESIGN_TEST.dtproj   *.dtproj file contains information about project configurations and items such as packages.
+*.csv
+*.xlsx
