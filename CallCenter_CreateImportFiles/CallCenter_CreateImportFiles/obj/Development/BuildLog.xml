@@ -2,28 +2,28 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>CallCenter_CreateImportFiles</Name>
-    <LastWriteTime>2020-10-19T17:21:05.7901017Z</LastWriteTime>
+    <LastWriteTime>2020-12-01T21:46:59.621347Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>CreateTables.dtsx</Name>
-      <LastWriteTime>2020-10-19T21:35:33.0349983Z</LastWriteTime>
+      <LastWriteTime>2020-11-23T14:17:08.323526Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>ExportData.dtsx</Name>
-      <LastWriteTime>2020-10-19T21:37:28.2159268Z</LastWriteTime>
+      <LastWriteTime>2020-12-01T21:46:59.5744859Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Master Package.dtsx</Name>
-      <LastWriteTime>2020-10-19T17:21:05.5260942Z</LastWriteTime>
+      <LastWriteTime>2020-12-01T19:31:34.1750418Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>VerifyTableData.dtsx</Name>
-      <LastWriteTime>2020-10-19T20:52:58.326087Z</LastWriteTime>
+      <LastWriteTime>2020-11-30T15:33:00.3657281Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

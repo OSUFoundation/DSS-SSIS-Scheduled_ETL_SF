@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="VerifyTableData"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{BDD3E37E-DCBD-4DD4-AA76-C21EDAEEAD9A}">
+  DTS:VersionBuild="26"
+  DTS:VersionGUID="{5779ED44-5C79-4557-9247-CF91F2CDB139}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -99,10 +99,30 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
+      DTS:DTSID="{21808483-6DF3-4892-AD85-228194F5C86A}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="BCCList_OK">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
       DTS:DTSID="{EE4011F4-A4DE-4E83-B510-3406B3E4C6D8}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="CCList">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{47984BB8-58D6-4DBD-8222-3156CA1F0021}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="CCList_OK">
       <DTS:VariableValue
         DTS:DataType="8"
         xml:space="preserve"></DTS:VariableValue>
@@ -123,6 +143,16 @@
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="ToList">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C2359C65-80F9-491F-8F9D-0886F4360834}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ToList_OK">
       <DTS:VariableValue
         DTS:DataType="8"
         xml:space="preserve"></DTS:VariableValue>
@@ -157,6 +187,12 @@
                   name="Conditional Split Input">
                   <inputColumns>
                     <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[RECORDCOUNT]"
+                      cachedDataType="numeric"
+                      cachedName="RECORDCOUNT"
+                      cachedPrecision="18"
+                      lineageId="Package\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].Columns[RECORDCOUNT]" />
+                    <inputColumn
                       refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[TABLENAME]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -169,12 +205,40 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Conditional Split.Outputs[NULL]"
+                  refId="Package\Data Flow Task\Conditional Split.Outputs[Issue]"
                   description="Output 1 of the Conditional Split Transformation"
                   errorOrTruncationOperation="Computation"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
-                  name="NULL"
+                  name="Issue"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].Columns[RECORDCOUNT]} &lt; 1</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">RECORDCOUNT &lt; 1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split.Outputs[No Issue]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="No Issue"
                   synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
                   truncationRowDisposition="FailComponent">
                   <properties>
@@ -192,15 +256,15 @@
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">0</property>
+                      name="EvaluationOrder">1</property>
                   </properties>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Conditional Split.Outputs[Low Record Count]"
+                  refId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Default Output]"
                   description="Default Output of the Conditional Split Transformation"
                   exclusionGroup="1"
-                  name="Low Record Count"
+                  name="Conditional Split Default Output"
                   synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]">
                   <properties>
                     <property
@@ -519,11 +583,11 @@ WHERE
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Script Component - Send Email"
+              refId="Package\Data Flow Task\Script Component - Send Email if there is a low table record count"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;10"
               description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
-              name="Script Component - Send Email"
+              name="Script Component - Send Email if there is a low table record count"
               version="10">
               <properties>
                 <property
@@ -1593,19 +1657,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               </properties>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Script Component - Send Email.Inputs[Input 0]"
+                  refId="Package\Data Flow Task\Script Component - Send Email if there is a low table record count.Inputs[Input 0]"
                   hasSideEffects="true"
                   name="Input 0">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Script Component - Send Email.Inputs[Input 0].Columns[TABLENAME]"
+                      refId="Package\Data Flow Task\Script Component - Send Email if there is a low table record count.Inputs[Input 0].Columns[TABLENAME]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="29"
                       cachedName="TABLENAME"
                       lineageId="Package\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].Columns[TABLENAME]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Script Component - Send Email.Inputs[Input 0].Columns[RECORDCOUNT]"
+                      refId="Package\Data Flow Task\Script Component - Send Email if there is a low table record count.Inputs[Input 0].Columns[RECORDCOUNT]"
                       cachedDataType="numeric"
                       cachedName="RECORDCOUNT"
                       cachedPrecision="18"
@@ -1616,9 +1680,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Script Component - Send Email.Outputs[Output 0]"
+                  refId="Package\Data Flow Task\Script Component - Send Email if there is a low table record count.Outputs[Output 0]"
                   name="Output 0"
-                  synchronousInputId="Package\Data Flow Task\Script Component - Send Email.Inputs[Input 0]">
+                  synchronousInputId="Package\Data Flow Task\Script Component - Send Email if there is a low table record count.Inputs[Input 0]">
                   <externalMetadataColumns />
                 </output>
               </outputs>
@@ -1626,10 +1690,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task.Paths[Low Record Count]"
-              endId="Package\Data Flow Task\Script Component - Send Email.Inputs[Input 0]"
-              name="Low Record Count"
-              startId="Package\Data Flow Task\Conditional Split.Outputs[Low Record Count]" />
+              refId="Package\Data Flow Task.Paths[Issue]"
+              endId="Package\Data Flow Task\Script Component - Send Email if there is a low table record count.Inputs[Input 0]"
+              name="Issue"
+              startId="Package\Data Flow Task\Conditional Split.Outputs[Issue]" />
             <path
               refId="Package\Data Flow Task.Paths[ODBC Source Output]"
               endId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
@@ -1653,7 +1717,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{4AA90ACE-DA27-4DF4-827D-5C64DD93A824}"
-          SQLTask:SqlStatementSource="SELECT &#xA;  COALESCE([ToList] , '') AS ToList&#xA;, COALESCE([CCList] , '') AS CCList&#xA;, COALESCE([BCCList], '') AS BCCList&#xA;&#xA;&#xA;FROM &#xA;  [OSUF_Static_Data].dbo.OSUF_SSISEmailNotification&#xA;&#xA;WHERE &#xA;    EmailNotificationName = 'Donor Connect Table Audit'"
+          SQLTask:SqlStatementSource="SELECT &#xA;  COALESCE([ToList] , '') AS ToList&#xA;, COALESCE([CCList] , '') AS CCList&#xA;, COALESCE([BCCList], '') AS BCCList&#xA;&#xA;&#xA;FROM &#xA;  [OSUF_Static_Data].dbo.OSUF_SSISEmailNotification&#xA;&#xA;WHERE &#xA;    EmailNotificationName = 'Donor Connect Table Audit - Issue'"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
             SQLTask:ResultName="ToList"
@@ -1664,6 +1728,34 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           <SQLTask:ResultBinding
             SQLTask:ResultName="BCCList"
             SQLTask:DtsVariableName="User::BCCList" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task - Assign values to email distribution list varables 1"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{82c7b576-3996-4221-b146-819498d36cf6}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task - Assign values to email distribution list varables 1"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4AA90ACE-DA27-4DF4-827D-5C64DD93A824}"
+          SQLTask:SqlStatementSource="SELECT &#xA;  COALESCE([ToList] , '') AS ToList&#xA;, COALESCE([CCList] , '') AS CCList&#xA;, COALESCE([BCCList], '') AS BCCList&#xA;&#xA;&#xA;FROM &#xA;  [OSUF_Static_Data].dbo.OSUF_SSISEmailNotification&#xA;&#xA;WHERE &#xA;    EmailNotificationName = 'Donor Connect Table Audit - No Issue'"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="ToList"
+            SQLTask:DtsVariableName="User::ToList_OK" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="CCList"
+            SQLTask:DtsVariableName="User::CCList_OK" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="BCCList"
+            SQLTask:DtsVariableName="User::BCCList_OK" />
         </SQLTask:SqlTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -1702,11 +1794,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{18F6AA2B-24B6-4473-BD04-45075282DC34}"
-      DTS:From="Package\Execute SQL Task - Assign values to email distribution list varables"
+      DTS:DTSID="{F275C025-9637-4491-B187-7BBC25906E5F}"
+      DTS:From="Package\Execute SQL Task - Assign values to email distribution list varables 1"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
       DTS:To="Package\Data Flow Task" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{1C626B44-B7DE-4126-84EA-A02412989448}"
+      DTS:From="Package\Execute SQL Task - Assign values to email distribution list varables"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Execute SQL Task - Assign values to email distribution list varables 1" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -1723,29 +1823,33 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
         <NodeLayout
           Size="155,42"
           Id="Package\Data Flow Task"
-          TopLeft="204,296" />
+          TopLeft="207,385" />
         <NodeLayout
           Size="407,42"
           Id="Package\Execute SQL Task - Assign values to email distribution list varables"
           TopLeft="75,205" />
         <NodeLayout
+          Size="416,42"
+          Id="Package\Execute SQL Task - Assign values to email distribution list varables 1"
+          TopLeft="76,295" />
+        <NodeLayout
           Size="322,42"
           Id="Package\Execute SQL Task - Get Email Account Password"
-          TopLeft="125,130" />
+          TopLeft="125,126" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="282.25,172">
+          TopLeft="282.25,168">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,33"
+              EndConnector="0,37"
               Start="0,0"
-              End="0,25.5">
+              End="0,29.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.5" />
+                    End="0,29.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1756,18 +1860,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="280,247">
+          TopLeft="284.25,337">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,49"
+              EndConnector="0,48"
               Start="0,0"
-              End="0,41.5">
+              End="0,40.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.5" />
+                    End="0,40.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="281.25,247">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48"
+              Start="0,0"
+              End="0,40.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1785,31 +1911,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="159,42"
-          Id="Package\Data Flow Task\Conditional Split"
-          TopLeft="372,170" />
-        <NodeLayout
-          Size="233,42"
-          Id="Package\Data Flow Task\Script Component - Send Email"
-          TopLeft="332,277" />
-        <NodeLayout
           Size="149,42"
           Id="Package\Data Flow Task\ODBC Source"
-          TopLeft="377,83" />
+          TopLeft="394,93" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Data Flow Task\Conditional Split"
+          TopLeft="389,188" />
+        <NodeLayout
+          Size="264,61"
+          Id="Package\Data Flow Task\Script Component - Send Email if there is a low table record count"
+          TopLeft="341,296" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[ODBC Source Output]"
-          TopLeft="451.5,125">
+          TopLeft="468.5,135">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,45"
+              EndConnector="0,53"
               Start="0,0"
-              End="0,37.5">
+              End="0,45.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.5" />
+                    End="0,45.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1819,26 +1945,26 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Low Record Count]"
-          TopLeft="450,212">
+          Id="Package\Data Flow Task.Paths[Issue]"
+          TopLeft="470.75,230">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,65"
+              EndConnector="0,66"
               Start="0,0"
-              End="0,57.5">
+              End="0,58.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,57.5" />
+                    End="0,58.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-40.96138671875,23.87548828125,81.9227734375,9.7490234375"
+              BoundingBox="-12.38794921875,24.5390625,24.7758984375,9.421875"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
