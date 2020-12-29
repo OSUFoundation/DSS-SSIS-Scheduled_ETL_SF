@@ -2,53 +2,28 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>GradLoad</Name>
-    <LastWriteTime>2020-11-20T22:42:37.0627874Z</LastWriteTime>
+    <LastWriteTime>2020-12-29T21:53:12.5316306Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>GradLoad_OKC.dtsx</Name>
-      <LastWriteTime>2020-11-16T23:53:18.7657289Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>GradLoad_OKM_CSV.dtsx</Name>
-      <LastWriteTime>2020-11-09T17:35:36.5006865Z</LastWriteTime>
+      <LastWriteTime>2020-12-29T22:00:05.8572671Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>GradLoad_OKM.dtsx</Name>
-      <LastWriteTime>2020-11-16T23:53:18.7813584Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>GradLoad_OKC_CSV.dtsx</Name>
-      <LastWriteTime>2020-11-10T20:18:15.2304259Z</LastWriteTime>
+      <LastWriteTime>2020-12-29T22:00:56.5531761Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>GradLoad_STW.dtsx</Name>
-      <LastWriteTime>2020-11-20T22:42:37.0159093Z</LastWriteTime>
+      <LastWriteTime>2020-12-29T22:01:16.340317Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>GradLoad_STW_Temp.dtsx</Name>
-      <LastWriteTime>2020-11-19T20:17:12.5143332Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>GradLoad_STW_DW.dtsx</Name>
-      <LastWriteTime>2020-11-19T19:20:33.5766426Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>_Test_GradLoad_STW_DW.dtsx</Name>
-      <LastWriteTime>2020-11-19T19:46:17.9484374Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>_Test_GradLoad_STW_Temp.dtsx</Name>
-      <LastWriteTime>2020-11-19T20:16:46.0146147Z</LastWriteTime>
+      <Name>Master Package.dtsx</Name>
+      <LastWriteTime>2020-12-29T21:58:07.7197369Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
