@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Master Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{DC9A73F5-697A-491D-9439-7B996E594A7E}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{9476E830-6569-406A-826C-600A1B1E7E5C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1993,7 +1993,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           DTS:CreationName="Microsoft.ExecutePackageTask"
           DTS:DelayValidation="True"
           DTS:Description="Execute Package Task"
-          DTS:Disabled="True"
           DTS:DTSID="{c73d395c-69ba-4282-816f-d571b6a281d8}"
           DTS:ExecutableType="Microsoft.ExecutePackageTask"
           DTS:LocaleID="-1"
