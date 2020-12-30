@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="GradLoad_STW"
   DTS:PackageType="5"
-  DTS:VersionBuild="117"
-  DTS:VersionGUID="{AF8A84FA-A7EA-4746-910E-4079E46127AB}">
+  DTS:VersionBuild="127"
+  DTS:VersionGUID="{052419C1-F7ED-4B74-9A13-6C27CFB98315}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -36,10 +36,10 @@
           <ConnectionString>User Id=dfair@osugiving.com.qa;Host=test.salesforce.com;Batch Size=2000</ConnectionString>
           <Password
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFqrWiIFRkkijtNi+VLs0vQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABHxVgzrMnDwT1UC2P8iEctAAAAAASAAACgAAAAEAAAAHHJwvGKvAYPCItHdqViGawYAAAAGvuj0+afDGGE4fy3OgOruLolp0k4Y2xnFAAAAGndgY+X4XRVLYF3u61lWAL2HrXc</Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFqrWiIFRkkijtNi+VLs0vQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADk0pWcLKDbO5cTvQ0hOP2GAAAAAASAAACgAAAAEAAAAI7Nbv4PnH/JCtFfbi7vURgYAAAAcFUa3H7+NH3SCb3stS1tzwpV3zcC9BzUFAAAAE4OCKZ1tDba6OHGgGAS63zRrJ1r</Password>
           <SecurityToken
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFqrWiIFRkkijtNi+VLs0vQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADnnqn43XsGH7NhxfHbnbhpAAAAAASAAACgAAAAEAAAACFFvPBvHFJRORDJs2QlAi44AAAA52eXA2mXr2jOICHxrS3+JP4I0/5vL7UIQQoWuBNvc6PAkZCKMQqABG2IpwXNyhNITJymwW+aJb0UAAAAsnmmxMyZu6qo6gcRF+9RxdxTaWQ</SecurityToken>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFqrWiIFRkkijtNi+VLs0vQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABL+xEo/bpIvzURTOeKGBt0AAAAAASAAACgAAAAEAAAAL5Pn5rZX9BbPbu5skYeDK04AAAAhZ/ON3MD5ut0m6FM4EyKreWrkrqiRiLIQ/MaVYL7X/Mr/EsQSjZZxxhRHUpTJaT/xE6E7m9Mo/4UAAAAQ3KxUYdALg9kw2czyUfi6PR1GZ0</SecurityToken>
         </SalesforceConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1490,7 +1490,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\import\import data\ascend_GradLoad\OSU Stillwater\">
+          DTS:ConnectionString="E:\BI\Scheduled_ETL_SF\GradLoad\FilesForImport\OSU_Stillwater\">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1998,7 +1998,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\buss\import\import data\ascend_GradLoad\OSU Stillwater\Archive\_">
+          DTS:ConnectionString="E:\BI\Scheduled_ETL_SF\GradLoad\FilesForImport\OSU_Stillwater\Archive\_">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2559,7 +2559,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="FilePath_Archive">
       <DTS:VariableValue
-        DTS:DataType="8">\\buss\import\import data\ascend_GradLoad\OSU Stillwater\Archive\</DTS:VariableValue>
+        DTS:DataType="8">E:\BI\Scheduled_ETL_SF\GradLoad\FilesForImport\OSU_Stillwater\Archive\</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -2568,7 +2568,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="FilePath_DataFile">
       <DTS:VariableValue
-        DTS:DataType="8">\\buss\import\import data\ascend_GradLoad\OSU Stillwater\</DTS:VariableValue>
+        DTS:DataType="8">E:\BI\Scheduled_ETL_SF\GradLoad\FilesForImport\OSU_Stillwater\</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -2616,7 +2616,16 @@
       DTS:Namespace="User"
       DTS:ObjectName="SQLQuery">
       <DTS:VariableValue
-        DTS:DataType="8">SET NOCOUNT ON SELECT * FROM OPENROWSET('Microsoft.ACE.OLEDB.12.0','EXCEL 8.0;DataBase=\\buss\import\import data\ascend_GradLoad\OSU Stillwater\;Extended Properties=""EXCEL 8.0 Xml;HDR=YES', [page$])</DTS:VariableValue>
+        DTS:DataType="8">SET NOCOUNT ON SELECT * FROM OPENROWSET('Microsoft.ACE.OLEDB.12.0','EXCEL 8.0;DataBase=E:\BI\Scheduled_ETL_SF\GradLoad\FilesForImport\OSU_Stillwater\;Extended Properties=""EXCEL 8.0 Xml;HDR=YES', [page$])</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3A9BF2A4-FFBA-4B9C-8D46-AA21113666DB}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Test">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -3168,7 +3177,6 @@ WHERE ucinn_ascendv2__Type = 'Department'
       DTS:CreationName="Microsoft.ExecuteProcess"
       DTS:DelayValidation="True"
       DTS:Description="Execute Process Task"
-      DTS:Disabled="True"
       DTS:DTSID="{217650BE-251F-4C3D-A25D-0AEC3B5BB5A7}"
       DTS:ExecutableType="Microsoft.ExecuteProcess"
       DTS:LocaleID="-1"
@@ -3187,7 +3195,6 @@ WHERE ucinn_ascendv2__Type = 'Department'
       DTS:CreationName="Microsoft.Pipeline"
       DTS:DelayValidation="True"
       DTS:Description="Data Flow Task"
-      DTS:Disabled="True"
       DTS:DTSID="{3DB0CBB8-B800-40BD-96EB-7C580CBDAFB4}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -5685,7 +5692,7 @@ WHERE ucinn_ascendv2__Type = 'Department'
 	,'Oklahoma State University'										AS Campus
 
 FROM
-	"OSUF_INTERFACES"."FACULTY_STAFF"."GradLoad_STW" t
+	"OSUF_INTERFACES"."GRADLOAD"."GradLoad_STW" t
 		LEFT OUTER JOIN
 			(
 				SELECT DISTINCT
@@ -10354,75 +10361,6 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyVersion("1.0.0.0")> 
 <Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
           <ProjectItem
-            Name="My Project\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
-          <ProjectItem
-            Name="My Project\Settings.Designer.vb"
-            Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
-' <autogenerated>
-'     This code was generated by a tool.
-'
-'     Changes to this file may cause incorrect behavior and will be lost if
-'     the code is regenerated.
-' </autogenerated>
-'------------------------------------------------------------------------------
-
-Option Strict Off
-Option Explicit On
-
-
-
-Partial Friend NotInheritable Class MySettings
-    Inherits System.Configuration.ApplicationSettingsBase
-
-    Private Shared m_Value As MySettings
-
-    Private Shared m_SyncObject As Object = New Object
-
-    <System.Diagnostics.DebuggerNonUserCode()> _
-    Public Shared ReadOnly Property Value() As MySettings
-        Get
-            If (MySettings.m_Value Is Nothing) Then
-                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
-                If (MySettings.m_Value Is Nothing) Then
-                    Try
-                        MySettings.m_Value = New MySettings
-                    Finally
-                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
-                    End Try
-                End If
-            End If
-            Return MySettings.m_Value
-        End Get
-    End Property
-End Class]]></ProjectItem>
-          <ProjectItem
-            Name="Project"
-            Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
-	<msb:PropertyGroup>
-		<msb:Language>msBuild</msb:Language>
-		<msb:CodeName>ST_8372eb6a67b043a186920fe8814100cb</msb:CodeName>
-		<msb:DisplayName>ST_8372eb6a67b043a186920fe8814100cb</msb:DisplayName>
-		<msb:ProjectId>{C9B0523C-6F95-47C1-9864-541F7FE16167}</msb:ProjectId>
-	</msb:PropertyGroup>
-	<msb:ItemGroup>
-		<msb:Project Include="ST_8fd227110c974af79a04d101fa996d74.vbproj"/>
-		<msb:File Include="My Project\AssemblyInfo.vb"/>
-		<msb:File Include="My Project\Resources.Designer.vb"/>
-		<msb:File Include="My Project\Settings.Designer.vb"/>
-		<msb:File Include="ScriptMain.vb"/>
-		<msb:File Include="My Project\Resources.resx"/>
-		<msb:File Include="My Project\Settings.settings"/>
-	</msb:ItemGroup>
-</c:Project>]]></ProjectItem>
-          <ProjectItem
             Name="ScriptMain.vb"
             Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
 'The Script Task allows you to perform virtually any operation that can be accomplished in
@@ -10556,6 +10494,75 @@ Partial Public Class ScriptMain
 #End Region
 
 End Class]]></ProjectItem>
+          <ProjectItem
+            Name="My Project\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+          <ProjectItem
+            Name="My Project\Settings.Designer.vb"
+            Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
+' <autogenerated>
+'     This code was generated by a tool.
+'
+'     Changes to this file may cause incorrect behavior and will be lost if
+'     the code is regenerated.
+' </autogenerated>
+'------------------------------------------------------------------------------
+
+Option Strict Off
+Option Explicit On
+
+
+
+Partial Friend NotInheritable Class MySettings
+    Inherits System.Configuration.ApplicationSettingsBase
+
+    Private Shared m_Value As MySettings
+
+    Private Shared m_SyncObject As Object = New Object
+
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Public Shared ReadOnly Property Value() As MySettings
+        Get
+            If (MySettings.m_Value Is Nothing) Then
+                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
+                If (MySettings.m_Value Is Nothing) Then
+                    Try
+                        MySettings.m_Value = New MySettings
+                    Finally
+                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
+                    End Try
+                End If
+            End If
+            Return MySettings.m_Value
+        End Get
+    End Property
+End Class]]></ProjectItem>
+          <ProjectItem
+            Name="Project"
+            Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:Language>msBuild</msb:Language>
+		<msb:CodeName>ST_8372eb6a67b043a186920fe8814100cb</msb:CodeName>
+		<msb:DisplayName>ST_8372eb6a67b043a186920fe8814100cb</msb:DisplayName>
+		<msb:ProjectId>{C9B0523C-6F95-47C1-9864-541F7FE16167}</msb:ProjectId>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:Project Include="ST_8fd227110c974af79a04d101fa996d74.vbproj"/>
+		<msb:File Include="My Project\AssemblyInfo.vb"/>
+		<msb:File Include="My Project\Resources.Designer.vb"/>
+		<msb:File Include="My Project\Settings.Designer.vb"/>
+		<msb:File Include="ScriptMain.vb"/>
+		<msb:File Include="My Project\Resources.resx"/>
+		<msb:File Include="My Project\Settings.settings"/>
+	</msb:ItemGroup>
+</c:Project>]]></ProjectItem>
           <ProjectItem
             Name="My Project\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -10910,6 +10917,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
       DTS:DTSID="{A2E93F9A-0C74-4FD4-B8C1-B864224557A0}"
+      DTS:EvalOp="3"
+      DTS:Expression="@FileExists_Data == &quot;Yes&quot;"
       DTS:From="Package\Script Task - Check for Data File"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -10982,7 +10991,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="311,42"
           Id="Package\Create CSV of Academic Orgs from SalesForce"
@@ -11004,6 +11013,95 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Id="Package\Export to Interim"
           TopLeft="750,438" />
         <NodeLayout
+          Size="160,42"
+          Id="Package\Foreach Loop Container\Archive XLS File"
+          TopLeft="70,192" />
+        <NodeLayout
+          Size="194,42"
+          Id="Package\Foreach Loop Container\Create CSV from XLSX"
+          TopLeft="54,29" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Foreach Loop Container\Delete XLS File"
+          TopLeft="74,272" />
+        <NodeLayout
+          Size="252,42"
+          Id="Package\Foreach Loop Container\Variable for XLS Archive File Name"
+          TopLeft="28,111" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint]"
+          TopLeft="152.5,71">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40"
+              Start="0,0"
+              End="0,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 1]"
+          TopLeft="150.75,234">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38"
+              Start="0,0"
+              End="0,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 4]"
+          TopLeft="152,153">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39"
+              Start="0,0"
+              End="0,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="297,365"
+          Size="297,408"
+          Id="Package\Foreach Loop Container"
+          TopLeft="319,40" />
+        <NodeLayout
           Size="198,42"
           Id="Package\Populate AcademicOrgs"
           TopLeft="735,370" />
@@ -11011,6 +11109,46 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Size="205,42"
           Id="Package\Populate GradLoad_STW"
           TopLeft="723,126" />
+        <NodeLayout
+          Size="237,42"
+          Id="Package\Script Task - Check for Data File"
+          TopLeft="30,40" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="267,61">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="52,183"
+              Start="0,0"
+              End="44.5,183">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="22,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22,0"
+                    Point2="26,0"
+                    Point3="26,4" />
+                  <mssgle:LineSegment
+                    End="26,179" />
+                  <mssgle:CubicBezierSegment
+                    Point1="26,179"
+                    Point2="26,183"
+                    Point3="30,183" />
+                  <mssgle:LineSegment
+                    End="44.5,183" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="18,-22,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="828.5,168">
@@ -11069,6 +11207,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="616,244">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="99,-181"
+              Start="0,0"
+              End="91.5,-181">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="45.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="45.5,0"
+                    Point2="49.5,0"
+                    Point3="49.5,-4" />
+                  <mssgle:LineSegment
+                    End="49.5,-177" />
+                  <mssgle:CubicBezierSegment
+                    Point1="49.5,-177"
+                    Point2="49.5,-181"
+                    Point3="53.5,-181" />
+                  <mssgle:LineSegment
+                    End="91.5,-181" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11143,213 +11315,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="237,42"
-          Id="Package\Script Task - Check for Data File"
-          TopLeft="30,39" />
-        <NodeLayout
-          Size="160,42"
-          Id="Package\Foreach Loop Container\Archive XLS File"
-          TopLeft="70,192" />
-        <NodeLayout
-          Size="155,42"
-          Id="Package\Foreach Loop Container\Delete XLS File"
-          TopLeft="74,272" />
-        <NodeLayout
-          Size="252,42"
-          Id="Package\Foreach Loop Container\Variable for XLS Archive File Name"
-          TopLeft="28,111" />
-        <EdgeLayout
-          Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 4]"
-          TopLeft="152,153">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,39"
-              Start="0,0"
-              End="0,31.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 1]"
-          TopLeft="150.75,234">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38"
-              Start="0,0"
-              End="0,30.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="194,42"
-          Id="Package\Foreach Loop Container\Create CSV from XLSX"
-          TopLeft="54,29" />
-        <EdgeLayout
-          Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint]"
-          TopLeft="152.5,71">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,40"
-              Start="0,0"
-              End="0,32.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="297,365"
-          Size="297,408"
-          Id="Package\Foreach Loop Container"
-          TopLeft="319,40" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="267,60">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="52,184"
-              Start="0,0"
-              End="44.5,184">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="22,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="22,0"
-                    Point2="26,0"
-                    Point3="26,4" />
-                  <mssgle:LineSegment
-                    End="26,180" />
-                  <mssgle:CubicBezierSegment
-                    Point1="26,180"
-                    Point2="26,184"
-                    Point3="30,184" />
-                  <mssgle:LineSegment
-                    End="44.5,184" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="616,244">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="99,-181"
-              Start="0,0"
-              End="91.5,-181">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="45.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="45.5,0"
-                    Point2="49.5,0"
-                    Point3="49.5,-4" />
-                  <mssgle:LineSegment
-                    End="49.5,-177" />
-                  <mssgle:CubicBezierSegment
-                    Point1="49.5,-177"
-                    Point2="49.5,-181"
-                    Point3="53.5,-181" />
-                  <mssgle:LineSegment
-                    End="91.5,-181" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Foreach Loop Container\Create CSV from XLSX">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="144,42"
-          Id="Package\Foreach Loop Container\Create CSV from XLSX\Save as CSV"
-          TopLeft="420,215" />
-        <NodeLayout
-          Size="157,42"
-          Id="Package\Foreach Loop Container\Create CSV from XLSX\OLE DB Source"
-          TopLeft="410,129" />
-        <EdgeLayout
-          Id="Package\Foreach Loop Container\Create CSV from XLSX.Paths[OLE DB Source Output]"
-          TopLeft="490.25,171">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,44"
-              Start="0,0"
-              End="0,36.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
     design-time-name="Package\Create CSV of Academic Orgs from SalesForce">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="204,42"
           Id="Package\Create CSV of Academic Orgs from SalesForce\Devart Salesforce Source"
@@ -11377,9 +11350,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -11389,7 +11360,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package\Export to Interim">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="233,42"
           Id="Package\Export to Interim\Pull Data from Snowflake Table"
@@ -11417,18 +11388,56 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <AnnotationLayout
           Text="Go Live -- Remove &quot;Top 5&quot; from query"
           ParentId="Package\Export to Interim"
           FontInfo="{assembly:Null}"
-          Size="232,NaN"
+          Size="232,40"
           Id="91313b55-260e-411e-8f6a-03e64d1e3077"
           TopLeft="167,76" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Foreach Loop Container\Create CSV from XLSX">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Foreach Loop Container\Create CSV from XLSX\Save as CSV"
+          TopLeft="420,215" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Foreach Loop Container\Create CSV from XLSX\OLE DB Source"
+          TopLeft="410,129" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Create CSV from XLSX.Paths[OLE DB Source Output]"
+          TopLeft="490.25,171">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44"
+              Start="0,0"
+              End="0,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
