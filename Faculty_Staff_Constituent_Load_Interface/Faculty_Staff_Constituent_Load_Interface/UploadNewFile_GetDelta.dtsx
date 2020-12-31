@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="UploadNewFile_GetDelta"
   DTS:PackageType="5"
-  DTS:VersionBuild="168"
-  DTS:VersionGUID="{266647AB-D965-4DF6-B8C4-F32A2EA58917}">
+  DTS:VersionBuild="183"
+  DTS:VersionGUID="{CFCE7168-455F-411F-AD85-87E768B30C9F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -26,10 +26,10 @@
           <ConnectionString>User Id=ccameron@osugiving.com.qa;Host=test.salesforce.com;Batch Size=2000</ConnectionString>
           <Password
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJd+wGmzMVEeY1/dSBm3ITQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADMYifFVLnmSLAAHK/A3RN0AAAAAASAAACgAAAAEAAAACIQ61T3t9pJy9+0jTpS/J4oAAAALD/FenTh/WrnoYhb3F7Q97DtnNZr5RDx0E+h6EcT4k8UmHr+ItjahBQAAADm6Ip6AVF6lj9gkrz4amOEfg0TYA</Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJd+wGmzMVEeY1/dSBm3ITQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADVqY8UQEQNGsSIAIWXbhfdAAAAAASAAACgAAAAEAAAACqT705GYeH5jXh0JT29ADIoAAAA6qiGRhLAe4s8vPIXpza2ClGM/sW7LT61MXHuV3VbUGSK/FYIOuaSLBQAAADMT9PYItz4csNoYQKLj5M4vouNmA</Password>
           <SecurityToken
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJd+wGmzMVEeY1/dSBm3ITQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAD/1bDNYn8XKi3YG2bJga0AAAAAAASAAACgAAAAEAAAADMkgkOsagmy42bh38q2yU44AAAAdjaHlgdkWLPjlNq/ym2deY9YZyVUSZPwuJ+cI3tniEjU4spO7/2poZxXjfzN4RaXU61xXSzjuxUUAAAA2FTlksSOJK0EDYyXx4ASGV6X6SE</SecurityToken>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJd+wGmzMVEeY1/dSBm3ITQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADarGjEU9qSoBQmRz9celG8AAAAAASAAACgAAAAEAAAAJkOcVDyQroRvviMUcSWPIk4AAAA5yCSItyMUw0Ee8MSN1kk9fO17nZcR/vdVTLEeq7IUMz+L3G2YUtuBkSVxDWCGxqW6SZYykhPp+sUAAAAAka6WQAyGaKsLEwoTJBieJRewtg</SecurityToken>
         </SalesforceConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -324,16 +324,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="DataDir">
       <DTS:VariableValue
-        DTS:DataType="8">L:\import data/ascend_FacultyStaff/</DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{C309B577-24A6-4480-A491-00A8A7528673}"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="DataDir_UNC">
-      <DTS:VariableValue
-        DTS:DataType="8">\\buss\import\import data\ascend_FacultyStaff\</DTS:VariableValue>
+        DTS:DataType="8">E:\BI/Scheduled_ETL_SF/Faculty_Staff_Constituent_Load_Interface/FilesForImport/</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -380,7 +371,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="FacultyStaffForSnowflake_dir">
       <DTS:VariableValue
-        DTS:DataType="8">\\buss\Import\import data\ascend_FacultyStaff\</DTS:VariableValue>
+        DTS:DataType="8">E:\BI\Scheduled_ETL_SF\Faculty_Staff_Constituent_Load_Interface\FilesForImport\</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -389,18 +380,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="FileDate">
       <DTS:VariableValue
-        DTS:DataType="8"
-        xml:space="preserve"></DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{679F79B5-9B2E-4A6C-A68A-4F81D7EF7A92}"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="FileName">
-      <DTS:VariableValue
-        DTS:DataType="8"
-        xml:space="preserve"></DTS:VariableValue>
+        DTS:DataType="8">2020-12-02</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -446,6 +426,7 @@
       DTS:refId="Package\Foreach Loop Container - Get file from SFTP Server"
       DTS:CreationName="STOCK:FOREACHLOOP"
       DTS:Description="Foreach Loop Container"
+      DTS:Disabled="True"
       DTS:DTSID="{70963a5b-c349-4120-b2b2-21f1dc8dfbd6}"
       DTS:ExecutableType="STOCK:FOREACHLOOP"
       DTS:LocaleID="-1"
@@ -498,7 +479,13 @@
           DTS:ObjectName="Script Task - Build Zip command"
           DTS:ThreadHint="0">
           <DTS:Variables />
-          <DTS:ObjectData />
+          <DTS:ObjectData>
+            <ScriptProject
+              Name="ST_abeed045a3184ddfb2985c82af6648e8"
+              VSTAMajorVersion="14"
+              VSTAMinorVersion="0"
+              Language="VisualBasic" />
+          </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
           DTS:refId="Package\Foreach Loop Container - Get file from SFTP Server\Script Task - Delete the file that was zipped up"
@@ -511,7 +498,13 @@
           DTS:ObjectName="Script Task - Delete the file that was zipped up"
           DTS:ThreadHint="0">
           <DTS:Variables />
-          <DTS:ObjectData />
+          <DTS:ObjectData>
+            <ScriptProject
+              Name="ST_ff1292cec72e43c8b31e1be30e72a11c"
+              VSTAMajorVersion="14"
+              VSTAMinorVersion="0"
+              Language="VisualBasic" />
+          </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
           DTS:refId="Package\Foreach Loop Container - Get file from SFTP Server\Script Task - Move file from FTP to ascend_FacultyStaff"
@@ -531,6 +524,44 @@
               Language="VisualBasic"
               ReadOnlyVariables="User::FacultyStaffData_SFTPdir,User::FacultyStaffDataArchive_dir,User::FacultyStaffDataFileName,User::FacultyStaffForSnowflake_dir,User::GenericFileName"
               ReadWriteVariables="User::FileDate">
+              <ProjectItem
+                Name="My Project\AssemblyInfo.vb"
+                Encoding="UTF8"><![CDATA[Imports System
+Imports System.Reflection
+Imports System.Runtime.InteropServices
+
+' General Information about an assembly is controlled through the following 
+' set of attributes. Change these attribute values to modify the information
+' associated with an assembly.
+
+' Review the values of the assembly attributes
+
+<Assembly: AssemblyTitle("ST_6bed00700fe5457ea173e3f7990ac555")> 
+<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyCompany("")> 
+<Assembly: AssemblyProduct("ST_6bed00700fe5457ea173e3f7990ac555")> 
+<Assembly: AssemblyCopyright("Copyright @  2020")> 
+<Assembly: AssemblyTrademark("")> 
+<Assembly: CLSCompliant(True)> 
+
+<Assembly: ComVisible(False)> 
+
+'The following GUID is for the ID of the typelib if this project is exposed to COM
+<Assembly: Guid("5fbd7bea-4a76-4b90-8703-ebba7dda298e")> 
+
+' Version information for an assembly consists of the following four values:
+'
+'      Major Version
+'      Minor Version 
+'      Build Number
+'      Revision
+'
+' You can specify all the values or you can default the Build and Revision Numbers 
+' by using the '*' as shown below:
+' <Assembly: AssemblyVersion("1.0.*")>
+
+<Assembly: AssemblyVersion("1.0.0.0")> 
+<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
               <ProjectItem
                 Name="ScriptMain.vb"
                 Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
@@ -774,44 +805,6 @@ End Class]]></ProjectItem>
   </Profiles>
   <Settings />
 </SettingsFile>]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\AssemblyInfo.vb"
-                Encoding="UTF8"><![CDATA[Imports System
-Imports System.Reflection
-Imports System.Runtime.InteropServices
-
-' General Information about an assembly is controlled through the following 
-' set of attributes. Change these attribute values to modify the information
-' associated with an assembly.
-
-' Review the values of the assembly attributes
-
-<Assembly: AssemblyTitle("ST_6bed00700fe5457ea173e3f7990ac555")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("ST_6bed00700fe5457ea173e3f7990ac555")> 
-<Assembly: AssemblyCopyright("Copyright @  2020")> 
-<Assembly: AssemblyTrademark("")> 
-<Assembly: CLSCompliant(True)> 
-
-<Assembly: ComVisible(False)> 
-
-'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("5fbd7bea-4a76-4b90-8703-ebba7dda298e")> 
-
-' Version information for an assembly consists of the following four values:
-'
-'      Major Version
-'      Minor Version 
-'      Build Number
-'      Revision
-'
-' You can specify all the values or you can default the Build and Revision Numbers 
-' by using the '*' as shown below:
-' <Assembly: AssemblyVersion("1.0.*")>
-
-<Assembly: AssemblyVersion("1.0.0.0")> 
-<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
               <ProjectItem
                 Name="My Project\Settings.Designer.vb"
                 Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
@@ -2613,14 +2606,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                       </properties>
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].Columns[CWID]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="10"
-                          cachedName="CWID"
-                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[CWID]"
-                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[CWID]" />
-                        <inputColumn
                           refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].Columns[Preferred_FName]"
                           cachedCodepage="1252"
                           cachedDataType="str"
@@ -2725,14 +2710,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                           externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[ucinn_ascendv2__City_1]"
                           lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[PrimaryBusinessCity]" />
                         <inputColumn
-                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].Columns[PrimaryBusinessSttate]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="150"
-                          cachedName="PrimaryBusinessSttate"
-                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[ucinn_ascendv2__State_1]"
-                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[PrimaryBusinessSttate]" />
-                        <inputColumn
                           refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].Columns[PrimaryBusinessZip]"
                           cachedCodepage="1252"
                           cachedDataType="str"
@@ -2815,6 +2792,22 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                           cachedName="PrimaryBusinessAddressType"
                           externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[ucinn_ascendv2__Address_1_Type]"
                           lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[PrimaryBusinessAddressType]" />
+                        <inputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].Columns[CWID]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="10"
+                          cachedName="CWID"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[Campus_ID]"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[CWID]" />
+                        <inputColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].Columns[PrimaryBusinessState]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="150"
+                          cachedName="PrimaryBusinessState"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[ucinn_ascendv2__State_1]"
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[PrimaryBusinessState]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -2829,6 +2822,44 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                           length="18"
                           name="OwnerId">
                           <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">Group</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">Group</property>
                             <property
                               dataType="System.Int32"
                               description="Determines the way to insert related objects - use an external id field or use cached IDs."
@@ -2884,6 +2915,44 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                               dataType="System.String"
                               description="Name of Referenced Object"
                               name="ReferencedObject">RecordType</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">RecordType</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">RecordType</property>
                           </properties>
                         </externalMetadataColumn>
                         <externalMetadataColumn
@@ -2904,6 +2973,44 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                           length="18"
                           name="ucinn_ascendv2__Account">
                           <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">Account</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">Account</property>
                             <property
                               dataType="System.Int32"
                               description="Determines the way to insert related objects - use an external id field or use cached IDs."
@@ -3093,6 +3200,44 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                               dataType="System.String"
                               description="Name of Referenced Object"
                               name="ReferencedObject">Contact</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">Contact</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">Contact</property>
                           </properties>
                         </externalMetadataColumn>
                         <externalMetadataColumn
@@ -3170,6 +3315,44 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                           length="18"
                           name="ucinn_ascendv2__Duplicate_Most_Recent_Interim">
                           <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">ucinn_ascendv2__Interim</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">ucinn_ascendv2__Interim</property>
                             <property
                               dataType="System.Int32"
                               description="Determines the way to insert related objects - use an external id field or use cached IDs."
@@ -3291,6 +3474,44 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                           length="18"
                           name="ucinn_ascendv2__Employer_Account">
                           <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">Account</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">Account</property>
                             <property
                               dataType="System.Int32"
                               description="Determines the way to insert related objects - use an external id field or use cached IDs."
@@ -3604,6 +3825,44 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                           length="18"
                           name="ucinn_ascendv2__Master_Interim">
                           <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">ucinn_ascendv2__Interim</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">ucinn_ascendv2__Interim</property>
                             <property
                               dataType="System.Int32"
                               description="Determines the way to insert related objects - use an external id field or use cached IDs."
@@ -4020,6 +4279,44 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                               dataType="System.String"
                               description="Name of Referenced Object"
                               name="ReferencedObject">Contact</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">Contact</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">Contact</property>
                           </properties>
                         </externalMetadataColumn>
                         <externalMetadataColumn
@@ -4040,11 +4337,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                           dataType="dbDate"
                           name="Affiliation_Start_Date" />
                         <externalMetadataColumn
-                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[CWID]"
-                          dataType="wstr"
-                          length="255"
-                          name="CWID" />
-                        <externalMetadataColumn
                           refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[Nickname]"
                           dataType="wstr"
                           length="255"
@@ -4064,6 +4356,44 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                           length="18"
                           name="Home_Department_Lookup">
                           <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">ucinn_ascendv2__Home_Department</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">ucinn_ascendv2__Home_Department</property>
                             <property
                               dataType="System.Int32"
                               description="Determines the way to insert related objects - use an external id field or use cached IDs."
@@ -4175,6 +4505,44 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                               dataType="System.String"
                               description="Name of Referenced Object"
                               name="ReferencedObject">ucinn_ascendv2__Post_Code</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">ucinn_ascendv2__Post_Code</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">ucinn_ascendv2__Post_Code</property>
                           </properties>
                         </externalMetadataColumn>
                         <externalMetadataColumn
@@ -4183,6 +4551,44 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                           length="18"
                           name="Major_2_Lookup">
                           <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">ucinn_ascendv2__Post_Code</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">ucinn_ascendv2__Post_Code</property>
                             <property
                               dataType="System.Int32"
                               description="Determines the way to insert related objects - use an external id field or use cached IDs."
@@ -4212,6 +4618,141 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                           refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[Grad_Date]"
                           dataType="dbDate"
                           name="Grad_Date" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[Campus_Lookup]"
+                          dataType="wstr"
+                          length="18"
+                          name="Campus_Lookup">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">Account</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">Account</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[Campus]"
+                          dataType="wstr"
+                          length="150"
+                          name="Campus" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[Degree_Honor]"
+                          dataType="wstr"
+                          length="150"
+                          name="Degree_Honor" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[Department_1_Desc]"
+                          dataType="wstr"
+                          length="150"
+                          name="Department_1_Desc" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[Department_1]"
+                          dataType="wstr"
+                          length="50"
+                          name="Department_1" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[Department_2_Desc]"
+                          dataType="wstr"
+                          length="150"
+                          name="Department_2_Desc" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[Department_2]"
+                          dataType="wstr"
+                          length="50"
+                          name="Department_2" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[Honors_College_Degree_Type]"
+                          dataType="wstr"
+                          length="150"
+                          name="Honors_College_Degree_Type" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[Major_Concentration_1_Desc]"
+                          dataType="wstr"
+                          length="150"
+                          name="Major_Concentration_1_Desc" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[Major_Concentration_1]"
+                          dataType="wstr"
+                          length="50"
+                          name="Major_Concentration_1" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[Major_Concentration_2_Desc]"
+                          dataType="wstr"
+                          length="150"
+                          name="Major_Concentration_2_Desc" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[Major_Concentration_2]"
+                          dataType="wstr"
+                          length="50"
+                          name="Major_Concentration_2" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[Minor_2_Desc]"
+                          dataType="wstr"
+                          length="150"
+                          name="Minor_2_Desc" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[Minor_2]"
+                          dataType="wstr"
+                          length="50"
+                          name="Minor_2" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[Postal_Code_1_2]"
+                          dataType="wstr"
+                          length="40"
+                          name="Postal_Code_1_2" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[Postal_Code_2_2]"
+                          dataType="wstr"
+                          length="40"
+                          name="Postal_Code_2_2" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[Postal_Code_3_2]"
+                          dataType="wstr"
+                          length="40"
+                          name="Postal_Code_3_2" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[Campus_ID]"
+                          dataType="wstr"
+                          length="50"
+                          name="Campus_ID" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[Tulsa_Hours]"
+                          dataType="r8"
+                          name="Tulsa_Hours" />
                         <externalMetadataColumn
                           refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination.Inputs[input].ExternalColumns[Grad_Term]"
                           dataType="wstr"
@@ -4290,7 +4831,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                       dataType="System.String"
                       description="The SQL command to be executed."
                       expressionType="Notify"
-                      name="SqlCommand">Select  * From "FS_Delta";</property>
+                      name="SqlCommand">Select  Top 3 * From "FS_Delta"
+Where CWID Between 'A20139878' AND 'A20335326';</property>
                     <property
                       dataType="System.Int32"
                       description="Specify the number of rows fetched per batch."
@@ -4476,13 +5018,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                           lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[PrimaryBusinessCity]"
                           name="PrimaryBusinessCity" />
                         <outputColumn
-                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[PrimaryBusinessSttate]"
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[PrimaryBusinessState]"
                           codePage="1252"
                           dataType="str"
-                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PrimaryBusinessSttate]"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PrimaryBusinessState]"
                           length="150"
-                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[PrimaryBusinessSttate]"
-                          name="PrimaryBusinessSttate" />
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[PrimaryBusinessState]"
+                          name="PrimaryBusinessState" />
                         <outputColumn
                           refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].Columns[PrimaryBusinessZip]"
                           codePage="1252"
@@ -4677,11 +5219,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                           length="150"
                           name="PrimaryBusinessCity" />
                         <externalMetadataColumn
-                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PrimaryBusinessSttate]"
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PrimaryBusinessState]"
                           codePage="1252"
                           dataType="str"
                           length="150"
-                          name="PrimaryBusinessSttate" />
+                          name="PrimaryBusinessState" />
                         <externalMetadataColumn
                           refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PrimaryBusinessZip]"
                           codePage="1252"
@@ -4884,13 +5426,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                           lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[PrimaryBusinessCity]"
                           name="PrimaryBusinessCity" />
                         <outputColumn
-                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[PrimaryBusinessSttate]"
+                          refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[PrimaryBusinessState]"
                           codePage="1252"
                           dataType="str"
-                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PrimaryBusinessSttate]"
+                          externalMetadataColumnId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PrimaryBusinessState]"
                           length="150"
-                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[PrimaryBusinessSttate]"
-                          name="PrimaryBusinessSttate" />
+                          lineageId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[PrimaryBusinessState]"
+                          name="PrimaryBusinessState" />
                         <outputColumn
                           refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Outputs[ODBC Source Error Output].Columns[PrimaryBusinessZip]"
                           codePage="1252"
@@ -5093,6 +5635,709 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
+          DTS:refId="Package\Sequence Container - Upload Raw Data to Snowflake\Script Task - create filedate sql"
+          DTS:CreationName="Microsoft.ScriptTask"
+          DTS:Description="Script Task"
+          DTS:DTSID="{E7C1361D-BBAA-41AA-8D8D-9F382BCBE2C0}"
+          DTS:ExecutableType="Microsoft.ScriptTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Script Task - create filedate sql"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ScriptProject
+              Name="ST_f1f91cc5e8084e3dbe9bc05161c3f8b5"
+              VSTAMajorVersion="14"
+              VSTAMinorVersion="0"
+              Language="VisualBasic"
+              ReadOnlyVariables="User::FacultyStaffForSnowflake_dir,User::FileDate,User::SnowSQLConfigDir">
+              <ProjectItem
+                Name="ScriptMain.vb"
+                Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
+'The Script Task allows you to perform virtually any operation that can be accomplished in
+'a .Net application within the context of an Integration Services control flow. 
+
+'Expand the other regions which have "Help" prefixes for examples of specific ways to use
+'Integration Services features within this script task.
+#End Region
+
+
+#Region "Imports"
+Imports System
+Imports System.Data
+Imports System.Math
+Imports Microsoft.SqlServer.Dts.Runtime
+Imports System.IO
+Imports System.Text
+#End Region
+
+'ScriptMain is the entry point class of the script.  Do not change the name, attributes,
+'or parent of this class.
+<Microsoft.SqlServer.Dts.Tasks.ScriptTask.SSISScriptTaskEntryPointAttribute()> _
+<System.CLSCompliantAttribute(False)> _
+Partial Public Class ScriptMain
+    Inherits Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTARTScriptObjectModelBase
+
+#Region "Help:  Using Integration Services variables and parameters in a script"
+    'To use a variable in this script, first ensure that the variable has been added to 
+    'either the list contained in the ReadOnlyVariables property or the list contained in 
+    'the ReadWriteVariables property of this script task, according to whether or not your
+    'code needs to write to the variable.  To add the variable, save this script, close this instance of
+    'Visual Studio, and update the ReadOnlyVariables and 
+    'ReadWriteVariables properties in the Script Transformation Editor window.
+    'To use a parameter in this script, follow the same steps. Parameters are always read-only.
+
+    'Example of reading from a variable:
+    ' startTime = Dts.Variables("System::StartTime").Value
+
+    'Example of writing to a variable:
+    ' Dts.Variables("User::myStringVariable").Value = "new value"
+
+    'Example of reading from a package parameter:
+    ' batchId = Dts.Variables("$Package::batchId").Value
+
+    'Example of reading from a project parameter:
+    ' batchId = Dts.Variables("$Project::batchId").Value
+
+    'Example of reading from a sensitive project parameter:
+    ' batchId = Dts.Variables("$Project::batchId").GetSensitiveValue()
+#End Region
+
+#Region "Help:  Firing Integration Services events from a script"
+    'This script task can fire events for logging purposes.
+
+    'Example of firing an error event:
+    ' Dts.Events.FireError(18, "Process Values", "Bad value", "", 0)
+
+    'Example of firing an information event:
+    ' Dts.Events.FireInformation(3, "Process Values", "Processing has started", "", 0, fireAgain)
+
+    'Example of firing a warning event:
+    ' Dts.Events.FireWarning(14, "Process Values", "No values received for input", "", 0)
+#End Region
+
+#Region "Help:  Using Integration Services connection managers in a script"
+    'Some types of connection managers can be used in this script task.  See the topic 
+    '"Working with Connection Managers Programatically" for details.
+
+    'Example of using an ADO.Net connection manager:
+    ' Dim rawConnection As Object = Dts.Connections("Sales DB").AcquireConnection(Dts.Transaction)
+    ' Dim myADONETConnection As SqlConnection = CType(rawConnection, SqlConnection)
+    ' <Use the connection in some code here, then release the connection>
+    ' Dts.Connections("Sales DB").ReleaseConnection(rawConnection)
+
+    'Example of using a File connection manager
+    ' Dim rawConnection As Object = Dts.Connections("Prices.zip").AcquireConnection(Dts.Transaction)
+    ' Dim filePath As String = CType(rawConnection, String)
+    ' <Use the connection in some code here, then release the connection>
+    ' Dts.Connections("Prices.zip").ReleaseConnection(rawConnection)
+#End Region
+
+    'This method is called when this script task executes in the control flow.
+    'Before returning from this method, set the value of Dts.TaskResult to indicate success or failure.
+    'To open Help, press F1.
+
+    Public Sub Main()
+        '
+        ' Add your code here
+        '
+        Dim FileDate As String = Dts.Variables("FileDate").Value.ToString
+        Dim SnowSQLConfigDir As String = Dts.Variables("SnowSQLConfigDir").Value.ToString
+
+
+        'Create filedate.sql to append the file date to the New Data table
+
+        If System.IO.File.Exists(SnowSQLConfigDir + "filedate.sql") Then
+            System.IO.File.Delete(SnowSQLConfigDir + "filedate.sql")
+        End If
+
+        Dim f As System.IO.StreamWriter
+        f = My.Computer.FileSystem.OpenTextFileWriter(SnowSQLConfigDir + "filedate.sql", True, Encoding.ASCII)
+        f.WriteLine("Alter Table ""OSUF_INTERFACES"".""FACULTY_STAFF"".""01_NewData"" Add Column ""FileDate"" Date;")
+        f.WriteLine("Update ""OSUF_INTERFACES"".""FACULTY_STAFF"".""01_NewData""")
+        f.WriteLine("   Set ""FileDate""='" + FileDate + "';")
+        f.Close()
+
+        Dts.TaskResult = ScriptResults.Success
+    End Sub
+
+#Region "ScriptResults declaration"
+    'This enum provides a convenient shorthand within the scope of this class for setting the
+    'result of the script.
+
+    'This code was generated automatically.
+    Enum ScriptResults
+        Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success
+        Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
+    End Enum
+
+#End Region
+
+End Class]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\AssemblyInfo.vb"
+                Encoding="UTF8"><![CDATA[Imports System
+Imports System.Reflection
+Imports System.Runtime.InteropServices
+
+' General Information about an assembly is controlled through the following 
+' set of attributes. Change these attribute values to modify the information
+' associated with an assembly.
+
+' Review the values of the assembly attributes
+
+<Assembly: AssemblyTitle("ST_f1f91cc5e8084e3dbe9bc05161c3f8b5")> 
+<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyCompany("")> 
+<Assembly: AssemblyProduct("ST_f1f91cc5e8084e3dbe9bc05161c3f8b5")> 
+<Assembly: AssemblyCopyright("Copyright @  2020")> 
+<Assembly: AssemblyTrademark("")> 
+<Assembly: CLSCompliant(True)> 
+
+<Assembly: ComVisible(False)> 
+
+'The following GUID is for the ID of the typelib if this project is exposed to COM
+<Assembly: Guid("fe60a3f6-b35b-40b0-a230-9d447675af03")> 
+
+' Version information for an assembly consists of the following four values:
+'
+'      Major Version
+'      Minor Version 
+'      Build Number
+'      Revision
+'
+' You can specify all the values or you can default the Build and Revision Numbers 
+' by using the '*' as shown below:
+' <Assembly: AssemblyVersion("1.0.*")>
+
+<Assembly: AssemblyVersion("1.0.0.0")> 
+<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.Designer.vb"
+                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
+' <autogenerated>
+'     This code was generated by a tool.
+'
+'     Changes to this file may cause incorrect behavior and will be lost if
+'     the code is regenerated.
+' </autogenerated>
+'------------------------------------------------------------------------------
+
+Option Strict Off
+Option Explicit On
+
+
+
+Partial Friend NotInheritable Class MySettings
+    Inherits System.Configuration.ApplicationSettingsBase
+
+    Private Shared m_Value As MySettings
+
+    Private Shared m_SyncObject As Object = New Object
+
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Public Shared ReadOnly Property Value() As MySettings
+        Get
+            If (MySettings.m_Value Is Nothing) Then
+                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
+                If (MySettings.m_Value Is Nothing) Then
+                    Try
+                        MySettings.m_Value = New MySettings
+                    Finally
+                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
+                    End Try
+                End If
+            End If
+            Return MySettings.m_Value
+        End Get
+    End Property
+End Class]]></ProjectItem>
+              <ProjectItem
+                Name="ST_f1f91cc5e8084e3dbe9bc05161c3f8b5.vbproj"
+                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C9293FD3-F1AE-4460-9B37-DC4EDD15E74C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>My Project</AppDesignerFolder>
+    <RootNamespace>ST_f1f91cc5e8084e3dbe9bc05161c3f8b5</RootNamespace>
+    <AssemblyName>ST_f1f91cc5e8084e3dbe9bc05161c3f8b5</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="My Project\" />
+    <Compile Include="My Project\AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ScriptMain.vb">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a VB project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" />
+        <Host Name="ScriptTask" />
+        <ProjectClient>
+          <HostIdentifier>SSIS_ST130</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></ProjectItem>
+              <ProjectItem
+                Name="Project"
+                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:Language>msBuild</msb:Language>
+		<msb:CodeName>ST_f1f91cc5e8084e3dbe9bc05161c3f8b5</msb:CodeName>
+		<msb:DisplayName>ST_f1f91cc5e8084e3dbe9bc05161c3f8b5</msb:DisplayName>
+		<msb:ProjectId>{A71A8218-B2C7-45AA-891F-6250DF64A8BA}</msb:ProjectId>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:Project Include="ST_f1f91cc5e8084e3dbe9bc05161c3f8b5.vbproj"/>
+		<msb:File Include="My Project\AssemblyInfo.vb"/>
+		<msb:File Include="ScriptMain.vb"/>
+		<msb:File Include="My Project\Resources.resx"/>
+		<msb:File Include="My Project\Resources.Designer.vb"/>
+		<msb:File Include="My Project\Settings.settings"/>
+		<msb:File Include="My Project\Settings.Designer.vb"/>
+	</msb:ItemGroup>
+</c:Project>]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Resources.resx"
+                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Resources.Designer.vb"
+                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
+' <autogenerated>
+'     This code was generated by a tool.
+'
+'     Changes to this file may cause incorrect behavior and will be lost if
+'     the code is regenerated.
+' </autogenerated>
+'------------------------------------------------------------------------------
+
+Option Strict Off
+Option Explicit On
+
+
+Namespace My.Resources
+    
+    '''<summary>
+    '''   A strongly-typed resource class, for looking up localized strings, etc.
+    '''</summary>
+    'This class was auto-generated by the Strongly Typed Resource Builder
+    'class via a tool like ResGen or Visual Studio.NET.
+    'To add or remove a member, edit your .ResX file then rerun ResGen
+    'with the /str option, or rebuild your VS project.
+    Class MyResources
+        
+        Private Shared _resMgr As System.Resources.ResourceManager
+        
+        Private Shared _resCulture As System.Globalization.CultureInfo
+        
+        Friend Sub New()
+            MyBase.New
+        End Sub
+        
+        '''<summary>
+        '''   Returns the cached ResourceManager instance used by this class.
+        '''</summary>
+        <System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)>  _
+        Public Shared ReadOnly Property ResourceManager() As System.Resources.ResourceManager
+            Get
+                If (_resMgr Is Nothing) Then
+                    Dim temp As System.Resources.ResourceManager = New System.Resources.ResourceManager("My.Resources.MyResources", GetType(MyResources).Assembly)
+                    _resMgr = temp
+                End If
+                Return _resMgr
+            End Get
+        End Property
+        
+        '''<summary>
+        '''   Overrides the current thread's CurrentUICulture property for all
+        '''   resource lookups using this strongly typed resource class.
+        '''</summary>
+        <System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)>  _
+        Public Shared Property Culture() As System.Globalization.CultureInfo
+            Get
+                Return _resCulture
+            End Get
+            Set
+                _resCulture = value
+            End Set
+        End Property
+    End Class
+End Namespace]]></ProjectItem>
+              <BinaryItem
+                Name="ST_f1f91cc5e8084e3dbe9bc05161c3f8b5.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDACMU7V8AAAAAAAAAAOAAIiALAVAAABwAAAAIAAAAAAAAgjsA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAADA7AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAiBsAAAAgAAAAHAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAeAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAJAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAABk
+OwAAAAAAAEgAAAACAAUA6CIAAJAXAAABAAAAAAAAAHg6AAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBgAAAoqHgIoGQAACiqmcxoAAAqAAQAABHMbAAAKgAIA
+AARzHAAACoADAAAEcx0AAAqABAAABCoufgEAAARvHgAACioufgIAAARvHwAACioufgMAAARvIAAA
+CioufgQAAARvIQAACioeAigiAAAKKq5+BQAABC0ecgEAAHDQBQAAAigjAAAKbyQAAApzJQAACoAF
+AAAEfgUAAAQqGn4GAAAEKh4CgAYAAAQqQnMiAAAKKCYAAAqACAAABCoeAignAAAKKgAAGzABAD8A
+AAAAAAAAfgcAAAQtMn4IAAAEKCYAAAooKAAACn4HAAAELRxzDQAABoAHAAAE3hB+CAAABCgmAAAK
+KCkAAArcfgcAAAQqAAEQAAACAB0ADCkAEAAAAAAeAigqAAAKKhMwBQDAAAAAAQAAEQIoKwAACm8s
+AAAKcjMAAHBvLQAACm8uAAAKby8AAAoKAigrAAAKbywAAApyRQAAcG8tAAAKby4AAApvLwAACgsH
+cmcAAHAoMAAACigxAAAKLBAHcmcAAHAoMAAACigyAAAKKAQAAAZvMwAACgdyZwAAcCgwAAAKFyg0
+AAAKbzUAAAolcoEAAHBvNgAACiVyMAEAcG82AAAKJXKcAQBwBnLEAQBwKDcAAApvNgAACm84AAAK
+AigrAAAKFm85AAAKKjYCAygmAAAKKDoAAAoqHgIoOwAACiou0AgAAAIoIwAACioeAigvAAAKKgAA
+EzABABQAAAACAAARAowFAAAbLQgoAQAAKworAgIKBioiA/4VBQAAGyoAAAATMAIAKAAAAAMAABEC
+ez0AAApvPgAACgoGjAgAABstEigCAAArCgJ7PQAACgZvPwAACgYqSgIoIgAACgJzQAAACn09AAAK
+KgBCU0pCAQABAAAAAAAMAAAAdjQuMC4zMDMxOQAAAAAFAGwAAAAMCAAAI34AAHgIAACsCQAAI1N0
+cmluZ3MAAAAAJBIAAMwBAAAjVVMA8BMAABAAAAAjR1VJRAAAAAAUAACQAwAAI0Jsb2IAAAAAAAAA
+AgAAAVcdogkJDwAAAPoBMwAWAAABAAAANAAAAAoAAAAMAAAAGQAAAAQAAABAAAAAAgAAADcAAAAD
+AAAABAAAAAgAAAAJAAAACAAAAAEAAAAFAAAAAQAAAAMAAAADAAAAAgAAAAAATwUBAAAAAAAGAIUD
+9QcGACoE9QcGAFwCNgcPALwIAAAGAJ0CBAYGAGgDBAYGABEEBAYGAKUDBAYGAL4DBAYGAOQCBAYG
+ANkDiAUGAIkCrwcGAAUCrwcGADADBAYGAP8CjQQKACgClgYKAOkBOQUKAHACOQUOALsBhQcOAAYH
+SQcGABgDNgcOALQCzgcOAMwCxQAGACwJiAUOALIGhQcOAE0DxQAGAG4BiAUOAAEA/QQKABMClAUG
+AIYGNggGABYG7wUKAMsB2gUGAD8CNgcSAO8D1AQSAJ8B1AQGALAEiAUGAI8FiAUGABgBiAUGAJIJ
+BAYGAOsI9QcGAC4HcwQSACcF1AQWAM8IQQEWAA8BQQEGAKkEiAUGADwBYgAOAPUGSQcOAJsJFQgG
+AIQEUQkGAMoGYgAGANcGYgAGABcHiAUAAAAATwAAAAAAAQABAAAAAADMBWcJTQABAAEAAAAAAAQH
+ZwlRAAEAAgAAARAAMwlnCWEAAQADAAAAAAB4CEcIYQAFAAgAAAEQANkIKwCBAAcADAABAAAAsQUr
+AI0ACQAPAAUBAAB3BwAAYQAJABEABQEAABAAAABhAAkAGAACAQAACgkAAJUACgAaADEASwYnATEA
+IgYvATEANgY3ATEAZAY/AREADwdHAREAkwFLAREASARPAREAJglTASEAXQnlAAYGtABWAVaA+ghZ
+AVaAcwFZAVAgAAAAAAYYIQcGAAEAWCAAAAAABhghBwYAAQBgIAAAAAARGCcHXQEBAIogAAAAABMI
+6AZhAQEAliAAAAAAEwi8BWYBAQCiIAAAAAATCK4GawEBAK4gAAAAABMIZwdwAQEAuiAAAAAAAxgh
+BwYAAQDCIAAAAAAWCIIGdQEBAO4gAAAAABYIewF6AQEA9SAAAAAAFgiHAX8BAQD9IAAAAAARGCcH
+XQECAA4hAAAAAAYYIQcGAAIAGCEAAAAAFghQBIUBAgB0IQAAAAAGGCEHBgACAHwhAAAAAAYAtwUG
+AAIASCIAAAAAxgLkCL0AAgBWIgAAAADGAgMBwgADAF4iAAAAAIMAawGKAQMAaiIAAAAAxgKnBIsA
+AwB0IgAAAAARAKEAjwEDAJQiAAAAAAEAjQCXAQQAuiAAAAAABhghBwYABQCgIgAAAAADCOoASgAF
+ANQiAAAAAAYYIQcGAAUAAAABAG0EAAABACAGAAABAPoAAAABAPoACQAhBwEAEQAhBwYAGQAhBwoA
+KQAhBxAAMQAhBxAAOQAhBxAAQQAhBxAASQAhBxAAUQAhBxAAWQAhBxUAYQAhBxUAaQAhBxAAcQAh
+BxAAeQAhBxAAgQAhBxoAkQAhByAAqQAhBwYAsQAhBwYAuQAhBwYA0QAhByYA6QAhBxAACQEhBwYA
+EQEhBwYAmQAhBwYAoQAhBwYADAAhBwYAFAAhBwYAHAAhBwYAJAAhBwYADADqAEoAFADqAEoAHADq
+AEoAJADqAEoAwQAhBwYA2QAqAU8A2QCOCVcA8QAhB10AQQFkBGUAAQEhBwYASQHiBmoASQE9CWoA
+GQEhBwYAGQECCXQAUQHLCHoAWQF3BYAAYQFQBIcAwQCnBIsAaQEfCY8AcQEYCZUAcQH+AZoAeQGA
+BZ8AiQFYAKUAgQG3BqsAmQFhARAAaQEfCbYAkQHjAQYAUQFCCQEAwQDkCL0AwQADAcIAoQHbAM4A
+NABdCeUAPABQBEoAPABaBPwAPAAhBwYACAAsAB0BCAAwACIBKQCrAEkDLgALAMcBLgATANABLgAb
+AO8BLgAjAPgBLgArACECLgAzACECLgA7APgBLgBDACcCLgBLACECLgBTAD4CLgBbACECLgBjAEQC
+LgBrAG4CLgBzAHsCQACLACIBQACDAMUCQwB7AM4CQwCDAMUCSQCrAFoDYwB7AM4CYwCDAMUCaQCr
+AG4DgACLACIBgwCTACIBgwCbACIBgwB7AM4CiQCrAHsDoACLACIBqQCDAO8BwACLACIByQCDAO8B
+4ACLACIB4wC7ACIB4wBTACEC6QCzACIBAwGDAMUCAwGjAOcCIwGDAMUCIwFbACECIAKDAMUCIAKL
+ACIBQAKDAMUCQAKLACIBYAKDAMUCYAKLACIBgAKDAMUCgAKLACIBoAKLACIBwAKLACIB4AKLACIB
+4AKDAMUCAAOLACIBIAOLACIBIAODAMUCbwDGANkABAABAAUABQAGAAcACQAIAAAABgefAQAAzgWk
+AQAAsgapAQAAeQeuAQAAhgazAQAAlwG4AQAAbQS9AQAA7gDCAQIABAADAAIABQAFAAIABgAHAAIA
+BwAJAAIACQALAAIACgANAAEACwANAAIADgAPAAIAGAARAC4ANQA8AEMAywDeAO0A9AAEgAAAAQAA
+AAAAAAAAAAAAAAArAAAABAAAAAAAAAAAAAAAAgG8AAAAAAAEAAAAAAAAAAAAAAACAYgFAAAAAAoA
+AAAAAAAAAAAAAAsBxQAAAAAADQAAAAAAAAAAAAAAFAG1BAAAAAANAAAAAAAAAAAAAAAUAWwAAAAA
+AAAAAAABAAAAhAgAAAgABAAJAAQACgAHAAAAEAASAIsAAAAQACsAiwAAAAAALQCLAHkA1AB5APcA
+AAAAAABDb250ZXh0VmFsdWVgMQBUaHJlYWRTYWZlT2JqZWN0UHJvdmlkZXJgMQBTVF9mMWY5MWNj
+NWU4MDg0ZTNkYmU5YmMwNTE2MWMzZjhiNQA8TW9kdWxlPgBnZXRfQVNDSUkAU3lzdGVtLklPAE1p
+Y3Jvc29mdC5TcWxTZXJ2ZXIuTWFuYWdlZERUUwBUAERpc3Bvc2VfX0luc3RhbmNlX18AQ3JlYXRl
+X19JbnN0YW5jZV9fAHZhbHVlX18AbXNjb3JsaWIATWljcm9zb2Z0LlZpc3VhbEJhc2ljAENyZWF0
+ZUluc3RhbmNlAGdldF9HZXRJbnN0YW5jZQBpbnN0YW5jZQBHZXRIYXNoQ29kZQBWYXJpYWJsZQBS
+dW50aW1lVHlwZUhhbmRsZQBHZXRUeXBlRnJvbUhhbmRsZQBGaWxlAE1pY3Jvc29mdC5TcWxTZXJ2
+ZXIuRHRzLlJ1bnRpbWUAV3JpdGVMaW5lAEdldFR5cGUARmFpbHVyZQBnZXRfQ3VsdHVyZQBzZXRf
+Q3VsdHVyZQBfcmVzQ3VsdHVyZQBWU1RBUlRTY3JpcHRPYmplY3RNb2RlbEJhc2UAQXBwbGljYXRp
+b25CYXNlAEFwcGxpY2F0aW9uU2V0dGluZ3NCYXNlAENsb3NlAEVkaXRvckJyb3dzYWJsZVN0YXRl
+AERlbGV0ZQBHdWlkQXR0cmlidXRlAEhlbHBLZXl3b3JkQXR0cmlidXRlAEdlbmVyYXRlZENvZGVB
+dHRyaWJ1dGUARGVidWdnZXJOb25Vc2VyQ29kZUF0dHJpYnV0ZQBEZWJ1Z2dhYmxlQXR0cmlidXRl
+AEVkaXRvckJyb3dzYWJsZUF0dHJpYnV0ZQBDb21WaXNpYmxlQXR0cmlidXRlAEFzc2VtYmx5VGl0
+bGVBdHRyaWJ1dGUAU3RhbmRhcmRNb2R1bGVBdHRyaWJ1dGUASGlkZU1vZHVsZU5hbWVBdHRyaWJ1
+dGUAQXNzZW1ibHlUcmFkZW1hcmtBdHRyaWJ1dGUAVGFyZ2V0RnJhbWV3b3JrQXR0cmlidXRlAERl
+YnVnZ2VySGlkZGVuQXR0cmlidXRlAEFzc2VtYmx5RmlsZVZlcnNpb25BdHRyaWJ1dGUATXlHcm91
+cENvbGxlY3Rpb25BdHRyaWJ1dGUAQXNzZW1ibHlEZXNjcmlwdGlvbkF0dHJpYnV0ZQBDb21waWxh
+dGlvblJlbGF4YXRpb25zQXR0cmlidXRlAEFzc2VtYmx5UHJvZHVjdEF0dHJpYnV0ZQBBc3NlbWJs
+eUNvcHlyaWdodEF0dHJpYnV0ZQBDTFNDb21wbGlhbnRBdHRyaWJ1dGUAU1NJU1NjcmlwdFRhc2tF
+bnRyeVBvaW50QXR0cmlidXRlAEFzc2VtYmx5Q29tcGFueUF0dHJpYnV0ZQBSdW50aW1lQ29tcGF0
+aWJpbGl0eUF0dHJpYnV0ZQBtX1ZhbHVlAGdldF9WYWx1ZQBzZXRfVmFsdWUAR2V0T2JqZWN0VmFs
+dWUAU3lzdGVtLlRocmVhZGluZwBFbmNvZGluZwBTeXN0ZW0uUnVudGltZS5WZXJzaW9uaW5nAFRv
+U3RyaW5nAE1hdGgATWljcm9zb2Z0LlNxbFNlcnZlci5TY3JpcHRUYXNrAE1pY3Jvc29mdC5TcWxT
+ZXJ2ZXIuRHRzLlRhc2tzLlNjcmlwdFRhc2sATWljcm9zb2Z0LlZpc3VhbEJhc2ljLk15U2Vydmlj
+ZXMuSW50ZXJuYWwAU2NyaXB0T2JqZWN0TW9kZWwAU3lzdGVtLkNvbXBvbmVudE1vZGVsAFNUX2Yx
+ZjkxY2M1ZTgwODRlM2RiZTliYzA1MTYxYzNmOGI1LmRsbABnZXRfSXRlbQBnZXRfRmlsZVN5c3Rl
+bQBFbnVtAFN5c3RlbS5Db21wb25lbnRNb2RlbC5EZXNpZ24AU2NyaXB0TWFpbgBnZXRfQXBwbGlj
+YXRpb24ATXlBcHBsaWNhdGlvbgBTeXN0ZW0uQ29uZmlndXJhdGlvbgBTeXN0ZW0uR2xvYmFsaXph
+dGlvbgBTeXN0ZW0uUmVmbGVjdGlvbgBDdWx0dXJlSW5mbwBtX0FwcE9iamVjdFByb3ZpZGVyAG1f
+VXNlck9iamVjdFByb3ZpZGVyAG1fQ29tcHV0ZXJPYmplY3RQcm92aWRlcgBtX015V2ViU2Vydmlj
+ZXNPYmplY3RQcm92aWRlcgBnZXRfUmVzb3VyY2VNYW5hZ2VyAFN5c3RlbS5Db2RlRG9tLkNvbXBp
+bGVyAGdldF9Vc2VyAE9wZW5UZXh0RmlsZVdyaXRlcgBTdHJlYW1Xcml0ZXIAVGV4dFdyaXRlcgBF
+bnRlcgBnZXRfQ29tcHV0ZXIAU2VydmVyQ29tcHV0ZXIATXlDb21wdXRlcgBfcmVzTWdyAEFjdGl2
+YXRvcgAuY3RvcgAuY2N0b3IATW9uaXRvcgBTeXN0ZW0uRGlhZ25vc3RpY3MATWljcm9zb2Z0LlZp
+c3VhbEJhc2ljLkRldmljZXMAZ2V0X1dlYlNlcnZpY2VzAE15V2ViU2VydmljZXMATWljcm9zb2Z0
+LlZpc3VhbEJhc2ljLkFwcGxpY2F0aW9uU2VydmljZXMAU3lzdGVtLlJ1bnRpbWUuSW50ZXJvcFNl
+cnZpY2VzAE1pY3Jvc29mdC5WaXN1YWxCYXNpYy5Db21waWxlclNlcnZpY2VzAFN5c3RlbS5SdW50
+aW1lLkNvbXBpbGVyU2VydmljZXMATWljcm9zb2Z0LlZpc3VhbEJhc2ljLk15U2VydmljZXMAU3lz
+dGVtLlJlc291cmNlcwBTVF9mMWY5MWNjNWU4MDg0ZTNkYmU5YmMwNTE2MWMzZjhiNS5NeS5SZXNv
+dXJjZXMATXlSZXNvdXJjZXMAU1RfZjFmOTFjYzVlODA4NGUzZGJlOWJjMDUxNjFjM2Y4YjUuUmVz
+b3VyY2VzLnJlc291cmNlcwBEZWJ1Z2dpbmdNb2RlcwBnZXRfVmFyaWFibGVzAE15U2V0dGluZ3MA
+RXF1YWxzAFJ1bnRpbWVIZWxwZXJzAFN1Y2Nlc3MAZ2V0X0R0cwBTY3JpcHRSZXN1bHRzAEV4aXN0
+cwBDb25jYXQAbV9TeW5jT2JqZWN0AE15UHJvamVjdABFeGl0AHNldF9UYXNrUmVzdWx0AFN5c3Rl
+bS5UZXh0AG1fQ29udGV4dABTVF9mMWY5MWNjNWU4MDg0ZTNkYmU5YmMwNTE2MWMzZjhiNS5NeQBn
+ZXRfQXNzZW1ibHkARmlsZVN5c3RlbVByb3h5AAAAMU0AeQAuAFIAZQBzAG8AdQByAGMAZQBzAC4A
+TQB5AFIAZQBzAG8AdQByAGMAZQBzAAARRgBpAGwAZQBEAGEAdABlAAAhUwBuAG8AdwBTAFEATABD
+AG8AbgBmAGkAZwBEAGkAcgAAGWYAaQBsAGUAZABhAHQAZQAuAHMAcQBsAACArUEAbAB0AGUAcgAg
+AFQAYQBiAGwAZQAgACIATwBTAFUARgBfAEkATgBUAEUAUgBGAEEAQwBFAFMAIgAuACIARgBBAEMA
+VQBMAFQAWQBfAFMAVABBAEYARgAiAC4AIgAwADEAXwBOAGUAdwBEAGEAdABhACIAIABBAGQAZAAg
+AEMAbwBsAHUAbQBuACAAIgBGAGkAbABlAEQAYQB0AGUAIgAgAEQAYQB0AGUAOwAAa1UAcABkAGEA
+dABlACAAIgBPAFMAVQBGAF8ASQBOAFQARQBSAEYAQQBDAEUAUwAiAC4AIgBGAEEAQwBVAEwAVABZ
+AF8AUwBUAEEARgBGACIALgAiADAAMQBfAE4AZQB3AEQAYQB0AGEAIgAAJyAAIAAgAFMAZQB0ACAA
+IgBGAGkAbABlAEQAYQB0AGUAIgA9ACcAAQUnADsAAQAAj7eFUSW9WUOp/Y4mBb1dPgAEIAEBCAMg
+AAEFIAEBEREEIAEBDgQgAQECBSACAQ4OBSABARFFByAEAQ4ODg4GFRIkARIMBhUSJAESCAYVEiQB
+EmUGFRIkARIgBCAAEwAHAAESbRGAmQUgABKAnQcgAgEOEoCdBAABHBwEAAEBHAQHAg4OBSAAEoCp
+BSAAEoCtBiABEoCxHAMgABwDIAAOBQACDg4OBAABAg4EAAEBDgUgABKAwQUAABKAxQogAxKAyQ4C
+EoDFBgADDg4ODgQgAQIcAyAACAQHAR4AAh4ABRABAB4ABAoBHgAEBwETAAYVEiQBEwAHBhUScQET
+AAYVEnEBEwACEwAECgETAAUgAQETAAi3elxWGTTgiQiwP19/EdUKOgiJhF3NgIDMkQQAAAAABAEA
+AAAHBhUSJAESDAcGFRIkARIIBwYVEiQBEmUHBhUSJAESIAMGEnkDBhJ9AwYSGAIGHAIGCAMGESgD
+AAABBAAAEgwEAAASCAQAABJlBAAAEiAEAAASeQQAABJ9BQABARJ9BAAAEhgEIAASbQcQAQEeAB4A
+BzABAQEQHgAECAASDAQIABIIBAgAEmUECAASIAQIABJ5BAgAEn0ECAASGAQoABMACAEACAAAAAAA
+HgEAAQBUAhZXcmFwTm9uRXhjZXB0aW9uVGhyb3dzAQgBAAIAAAAAACgBACNTVF9mMWY5MWNjNWU4
+MDg0ZTNkYmU5YmMwNTE2MWMzZjhiNQAABQEAAAAAFgEAEUNvcHlyaWdodCBAICAyMDIwAAAFAQAB
+AAApAQAkZmU2MGEzZjYtYjM1Yi00MGIwLWEyMzAtOWQ0NDc2NzVhZjAzAAAMAQAHMS4wLjAuMAAA
+SQEAGi5ORVRGcmFtZXdvcmssVmVyc2lvbj12NC41AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIu
+TkVUIEZyYW1ld29yayA0LjUIAQABAAAAAAAYAQAKTXlUZW1wbGF0ZQgxMS4wLjAuMAAAYQEANFN5
+c3RlbS5XZWIuU2VydmljZXMuUHJvdG9jb2xzLlNvYXBIdHRwQ2xpZW50UHJvdG9jb2wSQ3JlYXRl
+X19JbnN0YW5jZV9fE0Rpc3Bvc2VfX0luc3RhbmNlX18AAAAQAQALTXkuQ29tcHV0ZXIAABMBAA5N
+eS5BcHBsaWNhdGlvbgAADAEAB015LlVzZXIAABMBAA5NeS5XZWJTZXJ2aWNlcwAAALQAAADOyu++
+AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNvdXJjZVJlYWRlciwgbXNjb3JsaWIsIFZlcnNp
+b249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRl
+MDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJlc291cmNlU2V0AgAAAAAAAAAAAAAAUEFEUEFE
+ULQAAABYOwAAAAAAAAAAAAByOwAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAZDsAAAAAAAAAAAAA
+AABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB
+ABAAAAAYAACAAAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAAAABIAAAA
+WEAAAOwDAAAAAAAAAAAAAOwDNAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBPAAAAAAC9
+BO/+AAABAAAAAQAAAAAAAAABAAAAAAA/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAARAAAAAEA
+VgBhAHIARgBpAGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMAbABhAHQAaQBvAG4AAAAA
+AAAAsARMAwAAAQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAAAoAwAAAQAwADAAMAAwADAA
+NABiADAAAAAaAAEAAQBDAG8AbQBtAGUAbgB0AHMAAAAAAAAAIgABAAEAQwBvAG0AcABhAG4AeQBO
+AGEAbQBlAAAAAAAAAAAAcAAkAAEARgBpAGwAZQBEAGUAcwBjAHIAaQBwAHQAaQBvAG4AAAAAAFMA
+VABfAGYAMQBmADkAMQBjAGMANQBlADgAMAA4ADQAZQAzAGQAYgBlADkAYgBjADAANQAxADYAMQBj
+ADMAZgA4AGIANQAAADAACAABAEYAaQBsAGUAVgBlAHIAcwBpAG8AbgAAAAAAMQAuADAALgAwAC4A
+MAAAAHAAKAABAEkAbgB0AGUAcgBuAGEAbABOAGEAbQBlAAAAUwBUAF8AZgAxAGYAOQAxAGMAYwA1
+AGUAOAAwADgANABlADMAZABiAGUAOQBiAGMAMAA1ADEANgAxAGMAMwBmADgAYgA1AC4AZABsAGwA
+AABIABIAAQBMAGUAZwBhAGwAQwBvAHAAeQByAGkAZwBoAHQAAABDAG8AcAB5AHIAaQBnAGgAdAAg
+AEAAIAAgADIAMAAyADAAAAAqAAEAAQBMAGUAZwBhAGwAVAByAGEAZABlAG0AYQByAGsAcwAAAAAA
+AAAAAHgAKAABAE8AcgBpAGcAaQBuAGEAbABGAGkAbABlAG4AYQBtAGUAAABTAFQAXwBmADEAZgA5
+ADEAYwBjADUAZQA4ADAAOAA0AGUAMwBkAGIAZQA5AGIAYwAwADUAMQA2ADEAYwAzAGYAOABiADUA
+LgBkAGwAbAAAAGgAJAABAFAAcgBvAGQAdQBjAHQATgBhAG0AZQAAAAAAUwBUAF8AZgAxAGYAOQAx
+AGMAYwA1AGUAOAAwADgANABlADMAZABiAGUAOQBiAGMAMAA1ADEANgAxAGMAMwBmADgAYgA1AAAA
+NAAIAAEAUAByAG8AZAB1AGMAdABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAADgACAAB
+AEEAcwBzAGUAbQBiAGwAeQAgAFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAwAAACEOwAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
+            </ScriptProject>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
           DTS:refId="Package\Sequence Container - Upload Raw Data to Snowflake\Script Task - Create the snowsql config file"
           DTS:CreationName="Microsoft.ScriptTask"
           DTS:Description="Script Task"
@@ -5248,6 +6493,75 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyVersion("1.0.0.0")> 
 <Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
               <ProjectItem
+                Name="My Project\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.Designer.vb"
+                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
+' <autogenerated>
+'     This code was generated by a tool.
+'
+'     Changes to this file may cause incorrect behavior and will be lost if
+'     the code is regenerated.
+' </autogenerated>
+'------------------------------------------------------------------------------
+
+Option Strict Off
+Option Explicit On
+
+
+
+Partial Friend NotInheritable Class MySettings
+    Inherits System.Configuration.ApplicationSettingsBase
+
+    Private Shared m_Value As MySettings
+
+    Private Shared m_SyncObject As Object = New Object
+
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Public Shared ReadOnly Property Value() As MySettings
+        Get
+            If (MySettings.m_Value Is Nothing) Then
+                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
+                If (MySettings.m_Value Is Nothing) Then
+                    Try
+                        MySettings.m_Value = New MySettings
+                    Finally
+                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
+                    End Try
+                End If
+            End If
+            Return MySettings.m_Value
+        End Get
+    End Property
+End Class]]></ProjectItem>
+              <ProjectItem
+                Name="Project"
+                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:Language>msBuild</msb:Language>
+		<msb:CodeName>ST_33a1c02acc474d3a8e2d05d13f7f1666</msb:CodeName>
+		<msb:DisplayName>ST_33a1c02acc474d3a8e2d05d13f7f1666</msb:DisplayName>
+		<msb:ProjectId>{214D04AC-05BD-4214-9272-9C0BE323C171}</msb:ProjectId>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:Project Include="ST_33a1c02acc474d3a8e2d05d13f7f1666.vbproj"/>
+		<msb:File Include="My Project\AssemblyInfo.vb"/>
+		<msb:File Include="My Project\Resources.resx"/>
+		<msb:File Include="ScriptMain.vb"/>
+		<msb:File Include="My Project\Resources.Designer.vb"/>
+		<msb:File Include="My Project\Settings.settings"/>
+		<msb:File Include="My Project\Settings.Designer.vb"/>
+	</msb:ItemGroup>
+</c:Project>]]></ProjectItem>
+              <ProjectItem
                 Name="ScriptMain.vb"
                 Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
 'The Script Task allows you to perform virtually any operation that can be accomplished in
@@ -5369,75 +6683,6 @@ Partial Public Class ScriptMain
 #End Region
 
 End Class]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\Settings.Designer.vb"
-                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
-' <autogenerated>
-'     This code was generated by a tool.
-'
-'     Changes to this file may cause incorrect behavior and will be lost if
-'     the code is regenerated.
-' </autogenerated>
-'------------------------------------------------------------------------------
-
-Option Strict Off
-Option Explicit On
-
-
-
-Partial Friend NotInheritable Class MySettings
-    Inherits System.Configuration.ApplicationSettingsBase
-
-    Private Shared m_Value As MySettings
-
-    Private Shared m_SyncObject As Object = New Object
-
-    <System.Diagnostics.DebuggerNonUserCode()> _
-    Public Shared ReadOnly Property Value() As MySettings
-        Get
-            If (MySettings.m_Value Is Nothing) Then
-                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
-                If (MySettings.m_Value Is Nothing) Then
-                    Try
-                        MySettings.m_Value = New MySettings
-                    Finally
-                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
-                    End Try
-                End If
-            End If
-            Return MySettings.m_Value
-        End Get
-    End Property
-End Class]]></ProjectItem>
-              <ProjectItem
-                Name="Project"
-                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
-	<msb:PropertyGroup>
-		<msb:Language>msBuild</msb:Language>
-		<msb:CodeName>ST_33a1c02acc474d3a8e2d05d13f7f1666</msb:CodeName>
-		<msb:DisplayName>ST_33a1c02acc474d3a8e2d05d13f7f1666</msb:DisplayName>
-		<msb:ProjectId>{214D04AC-05BD-4214-9272-9C0BE323C171}</msb:ProjectId>
-	</msb:PropertyGroup>
-	<msb:ItemGroup>
-		<msb:Project Include="ST_33a1c02acc474d3a8e2d05d13f7f1666.vbproj"/>
-		<msb:File Include="My Project\AssemblyInfo.vb"/>
-		<msb:File Include="My Project\Resources.resx"/>
-		<msb:File Include="ScriptMain.vb"/>
-		<msb:File Include="My Project\Resources.Designer.vb"/>
-		<msb:File Include="My Project\Settings.settings"/>
-		<msb:File Include="My Project\Settings.Designer.vb"/>
-	</msb:ItemGroup>
-</c:Project>]]></ProjectItem>
               <ProjectItem
                 Name="My Project\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -7185,744 +8430,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </ScriptProject>
           </DTS:ObjectData>
         </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Sequence Container - Upload Raw Data to Snowflake\Script Task - Get FileDate and Update FoundationFacultyStaffFile csv and create filedate sql"
-          DTS:CreationName="Microsoft.ScriptTask"
-          DTS:Description="Script Task"
-          DTS:DTSID="{E7C1361D-BBAA-41AA-8D8D-9F382BCBE2C0}"
-          DTS:ExecutableType="Microsoft.ScriptTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Script Task - Get FileDate and Update FoundationFacultyStaffFile csv and create filedate sql"
-          DTS:ThreadHint="0">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <ScriptProject
-              Name="ST_f1f91cc5e8084e3dbe9bc05161c3f8b5"
-              VSTAMajorVersion="14"
-              VSTAMinorVersion="0"
-              Language="VisualBasic"
-              ReadOnlyVariables="User::DataDir_UNC,User::FileName,User::SnowSQLConfigDir">
-              <ProjectItem
-                Name="My Project\AssemblyInfo.vb"
-                Encoding="UTF8"><![CDATA[Imports System
-Imports System.Reflection
-Imports System.Runtime.InteropServices
-
-' General Information about an assembly is controlled through the following 
-' set of attributes. Change these attribute values to modify the information
-' associated with an assembly.
-
-' Review the values of the assembly attributes
-
-<Assembly: AssemblyTitle("ST_f1f91cc5e8084e3dbe9bc05161c3f8b5")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("ST_f1f91cc5e8084e3dbe9bc05161c3f8b5")> 
-<Assembly: AssemblyCopyright("Copyright @  2020")> 
-<Assembly: AssemblyTrademark("")> 
-<Assembly: CLSCompliant(True)> 
-
-<Assembly: ComVisible(False)> 
-
-'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("fe60a3f6-b35b-40b0-a230-9d447675af03")> 
-
-' Version information for an assembly consists of the following four values:
-'
-'      Major Version
-'      Minor Version 
-'      Build Number
-'      Revision
-'
-' You can specify all the values or you can default the Build and Revision Numbers 
-' by using the '*' as shown below:
-' <Assembly: AssemblyVersion("1.0.*")>
-
-<Assembly: AssemblyVersion("1.0.0.0")> 
-<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
-              <ProjectItem
-                Name="Project"
-                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
-	<msb:PropertyGroup>
-		<msb:Language>msBuild</msb:Language>
-		<msb:CodeName>ST_f1f91cc5e8084e3dbe9bc05161c3f8b5</msb:CodeName>
-		<msb:DisplayName>ST_f1f91cc5e8084e3dbe9bc05161c3f8b5</msb:DisplayName>
-		<msb:ProjectId>{A71A8218-B2C7-45AA-891F-6250DF64A8BA}</msb:ProjectId>
-	</msb:PropertyGroup>
-	<msb:ItemGroup>
-		<msb:Project Include="ST_f1f91cc5e8084e3dbe9bc05161c3f8b5.vbproj"/>
-		<msb:File Include="My Project\AssemblyInfo.vb"/>
-		<msb:File Include="ScriptMain.vb"/>
-		<msb:File Include="My Project\Resources.resx"/>
-		<msb:File Include="My Project\Resources.Designer.vb"/>
-		<msb:File Include="My Project\Settings.settings"/>
-		<msb:File Include="My Project\Settings.Designer.vb"/>
-	</msb:ItemGroup>
-</c:Project>]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\Settings.Designer.vb"
-                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
-' <autogenerated>
-'     This code was generated by a tool.
-'
-'     Changes to this file may cause incorrect behavior and will be lost if
-'     the code is regenerated.
-' </autogenerated>
-'------------------------------------------------------------------------------
-
-Option Strict Off
-Option Explicit On
-
-
-
-Partial Friend NotInheritable Class MySettings
-    Inherits System.Configuration.ApplicationSettingsBase
-
-    Private Shared m_Value As MySettings
-
-    Private Shared m_SyncObject As Object = New Object
-
-    <System.Diagnostics.DebuggerNonUserCode()> _
-    Public Shared ReadOnly Property Value() As MySettings
-        Get
-            If (MySettings.m_Value Is Nothing) Then
-                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
-                If (MySettings.m_Value Is Nothing) Then
-                    Try
-                        MySettings.m_Value = New MySettings
-                    Finally
-                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
-                    End Try
-                End If
-            End If
-            Return MySettings.m_Value
-        End Get
-    End Property
-End Class]]></ProjectItem>
-              <ProjectItem
-                Name="ST_f1f91cc5e8084e3dbe9bc05161c3f8b5.vbproj"
-                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C9293FD3-F1AE-4460-9B37-DC4EDD15E74C}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>My Project</AppDesignerFolder>
-    <RootNamespace>ST_f1f91cc5e8084e3dbe9bc05161c3f8b5</RootNamespace>
-    <AssemblyName>ST_f1f91cc5e8084e3dbe9bc05161c3f8b5</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>.\bin\Debug\</OutputPath>
-    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
-    <DefineDebug>true</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <DebugSymbols>false</DebugSymbols>
-    <Optimize>true</Optimize>
-    <OutputPath>.\bin\Release\</OutputPath>
-    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
-    <DefineDebug>false</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
-  </ItemGroup>
-  <ItemGroup>
-    <Import Include="Microsoft.VisualBasic" />
-    <Import Include="System" />
-    <Import Include="System.Collections" />
-    <Import Include="System.Data" />
-    <Import Include="System.Diagnostics" />
-    <Import Include="System.Windows.Forms" />
-  </ItemGroup>
-  <ItemGroup>
-    <AppDesigner Include="My Project\" />
-    <Compile Include="My Project\AssemblyInfo.vb">
-      <SubType>Code</SubType>
-    </Compile>
-    <EmbeddedResource Include="My Project\Resources.resx">
-      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
-      <CustomToolNamespace>My.Resources</CustomToolNamespace>
-    </EmbeddedResource>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <None Include="My Project\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
-    </None>
-    <Compile Include="My Project\Settings.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ScriptMain.vb">
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
-  <!-- Include the build rules for a VB project.-->
-  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
-  <ProjectExtensions>
-    <VisualStudio>
-      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
-        <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" />
-        <Host Name="ScriptTask" />
-        <ProjectClient>
-          <HostIdentifier>SSIS_ST130</HostIdentifier>
-        </ProjectClient>
-      </FlavorProperties>
-    </VisualStudio>
-  </ProjectExtensions>
-</Project>]]></ProjectItem>
-              <ProjectItem
-                Name="ScriptMain.vb"
-                Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
-'The Script Task allows you to perform virtually any operation that can be accomplished in
-'a .Net application within the context of an Integration Services control flow. 
-
-'Expand the other regions which have "Help" prefixes for examples of specific ways to use
-'Integration Services features within this script task.
-#End Region
-
-
-#Region "Imports"
-Imports System
-Imports System.Data
-Imports System.Math
-Imports Microsoft.SqlServer.Dts.Runtime
-Imports System.IO
-Imports System.Text
-#End Region
-
-'ScriptMain is the entry point class of the script.  Do not change the name, attributes,
-'or parent of this class.
-<Microsoft.SqlServer.Dts.Tasks.ScriptTask.SSISScriptTaskEntryPointAttribute()> _
-<System.CLSCompliantAttribute(False)> _
-Partial Public Class ScriptMain
-    Inherits Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTARTScriptObjectModelBase
-
-#Region "Help:  Using Integration Services variables and parameters in a script"
-    'To use a variable in this script, first ensure that the variable has been added to 
-    'either the list contained in the ReadOnlyVariables property or the list contained in 
-    'the ReadWriteVariables property of this script task, according to whether or not your
-    'code needs to write to the variable.  To add the variable, save this script, close this instance of
-    'Visual Studio, and update the ReadOnlyVariables and 
-    'ReadWriteVariables properties in the Script Transformation Editor window.
-    'To use a parameter in this script, follow the same steps. Parameters are always read-only.
-
-    'Example of reading from a variable:
-    ' startTime = Dts.Variables("System::StartTime").Value
-
-    'Example of writing to a variable:
-    ' Dts.Variables("User::myStringVariable").Value = "new value"
-
-    'Example of reading from a package parameter:
-    ' batchId = Dts.Variables("$Package::batchId").Value
-
-    'Example of reading from a project parameter:
-    ' batchId = Dts.Variables("$Project::batchId").Value
-
-    'Example of reading from a sensitive project parameter:
-    ' batchId = Dts.Variables("$Project::batchId").GetSensitiveValue()
-#End Region
-
-#Region "Help:  Firing Integration Services events from a script"
-    'This script task can fire events for logging purposes.
-
-    'Example of firing an error event:
-    ' Dts.Events.FireError(18, "Process Values", "Bad value", "", 0)
-
-    'Example of firing an information event:
-    ' Dts.Events.FireInformation(3, "Process Values", "Processing has started", "", 0, fireAgain)
-
-    'Example of firing a warning event:
-    ' Dts.Events.FireWarning(14, "Process Values", "No values received for input", "", 0)
-#End Region
-
-#Region "Help:  Using Integration Services connection managers in a script"
-    'Some types of connection managers can be used in this script task.  See the topic 
-    '"Working with Connection Managers Programatically" for details.
-
-    'Example of using an ADO.Net connection manager:
-    ' Dim rawConnection As Object = Dts.Connections("Sales DB").AcquireConnection(Dts.Transaction)
-    ' Dim myADONETConnection As SqlConnection = CType(rawConnection, SqlConnection)
-    ' <Use the connection in some code here, then release the connection>
-    ' Dts.Connections("Sales DB").ReleaseConnection(rawConnection)
-
-    'Example of using a File connection manager
-    ' Dim rawConnection As Object = Dts.Connections("Prices.zip").AcquireConnection(Dts.Transaction)
-    ' Dim filePath As String = CType(rawConnection, String)
-    ' <Use the connection in some code here, then release the connection>
-    ' Dts.Connections("Prices.zip").ReleaseConnection(rawConnection)
-#End Region
-
-    'This method is called when this script task executes in the control flow.
-    'Before returning from this method, set the value of Dts.TaskResult to indicate success or failure.
-    'To open Help, press F1.
-
-    Public Sub Main()
-        '
-        ' Add your code here
-        '
-        Dim FSdir As String = Dts.Variables("DataDir_UNC").Value.ToString
-        Dim FileName1 As String = ""
-        Dim FileName2 As String = ""
-        Dim DateString1 As String = ""
-        Dim DateString2 As String = ""
-        Dim SourceDir As New DirectoryInfo(FSdir) 'Ex: C:\SomeFolder
-        Dim FileDate As String = ""
-        Dim SnowSQLConfigDir As String = Dts.Variables("SnowSQLConfigDir").Value.ToString
-
-
-        For Each ff As FileInfo In SourceDir.GetFiles("Foundation Faculty Staff File *.csv")
-            FileName1 = ff.Name
-            DateString1 = Left(Right(FileName1, 12), 8)
-            If DateString2 = "" Or DateString2 < DateString1 Then
-                DateString2 = DateString1
-                FileName2 = FileName1
-            End If
-        Next
-
-        If System.IO.File.Exists(FSdir + "FoundationFacultyStaffFile.csv") Then
-            System.IO.File.Delete(FSdir + "FoundationFacultyStaffFile.csv")
-        End If
-
-        System.IO.File.Copy(FSdir + FileName2, FSdir + "FoundationFacultyStaffFile.csv")
-
-        FileDate = Left(DateString2, 4) + "-" + Left(Right(DateString2, 4), 2) + "-" + Right(DateString2, 2)
-
-
-
-
-        'Create filedate.sql to append the file date to the New Data table
-
-        If System.IO.File.Exists(SnowSQLConfigDir + "filedate.sql") Then
-            System.IO.File.Delete(SnowSQLConfigDir + "filedate.sql")
-        End If
-
-        Dim f As System.IO.StreamWriter
-        f = My.Computer.FileSystem.OpenTextFileWriter(SnowSQLConfigDir + "filedate.sql", True, Encoding.ASCII)
-        f.WriteLine("Alter Table ""OSUF_INTERFACES"".""FACULTY_STAFF"".""01_NewData"" Add Column ""FileDate"" Date;")
-        f.WriteLine("Update ""OSUF_INTERFACES"".""FACULTY_STAFF"".""01_NewData""")
-        f.WriteLine("   Set ""FileDate""='" + FileDate + "';")
-        f.Close()
-
-        Dts.TaskResult = ScriptResults.Success
-    End Sub
-
-#Region "ScriptResults declaration"
-    'This enum provides a convenient shorthand within the scope of this class for setting the
-    'result of the script.
-
-    'This code was generated automatically.
-    Enum ScriptResults
-        Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success
-        Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
-    End Enum
-
-#End Region
-
-End Class]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\Resources.resx"
-                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
-<root>
-  <!-- 
-    Microsoft ResX Schema 
-    
-    Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
-    associated with the data types.
-    
-    Example:
-    
-    ... ado.net/XML headers & schema ...
-    <resheader name="resmimetype">text/microsoft-resx</resheader>
-    <resheader name="version">2.0</resheader>
-    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
-        <value>[base64 mime encoded serialized .NET Framework object]</value>
-    </data>
-    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
-        <comment>This is a comment</comment>
-    </data>
-                
-    There are any number of "resheader" rows that contain simple 
-    name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
-    mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
-    extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
-    read any of the formats listed below.
-    
-    mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
-            : and then encoded with base64 encoding.
-    
-    mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-            : and then encoded with base64 encoding.
-
-    mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
-            : using a System.ComponentModel.TypeConverter
-            : and then encoded with base64 encoding.
-    -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
-  <resheader name="resmimetype">
-    <value>text/microsoft-resx</value>
-  </resheader>
-  <resheader name="version">
-    <value>2.0</value>
-  </resheader>
-  <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-</root>]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\Resources.Designer.vb"
-                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
-' <autogenerated>
-'     This code was generated by a tool.
-'
-'     Changes to this file may cause incorrect behavior and will be lost if
-'     the code is regenerated.
-' </autogenerated>
-'------------------------------------------------------------------------------
-
-Option Strict Off
-Option Explicit On
-
-
-Namespace My.Resources
-    
-    '''<summary>
-    '''   A strongly-typed resource class, for looking up localized strings, etc.
-    '''</summary>
-    'This class was auto-generated by the Strongly Typed Resource Builder
-    'class via a tool like ResGen or Visual Studio.NET.
-    'To add or remove a member, edit your .ResX file then rerun ResGen
-    'with the /str option, or rebuild your VS project.
-    Class MyResources
-        
-        Private Shared _resMgr As System.Resources.ResourceManager
-        
-        Private Shared _resCulture As System.Globalization.CultureInfo
-        
-        Friend Sub New()
-            MyBase.New
-        End Sub
-        
-        '''<summary>
-        '''   Returns the cached ResourceManager instance used by this class.
-        '''</summary>
-        <System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)>  _
-        Public Shared ReadOnly Property ResourceManager() As System.Resources.ResourceManager
-            Get
-                If (_resMgr Is Nothing) Then
-                    Dim temp As System.Resources.ResourceManager = New System.Resources.ResourceManager("My.Resources.MyResources", GetType(MyResources).Assembly)
-                    _resMgr = temp
-                End If
-                Return _resMgr
-            End Get
-        End Property
-        
-        '''<summary>
-        '''   Overrides the current thread's CurrentUICulture property for all
-        '''   resource lookups using this strongly typed resource class.
-        '''</summary>
-        <System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)>  _
-        Public Shared Property Culture() As System.Globalization.CultureInfo
-            Get
-                Return _resCulture
-            End Get
-            Set
-                _resCulture = value
-            End Set
-        End Property
-    End Class
-End Namespace]]></ProjectItem>
-              <BinaryItem
-                Name="ST_f1f91cc5e8084e3dbe9bc05161c3f8b5.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAGMRjl8AAAAAAAAAAOAAIiALAVAAAB4AAAAIAAAAAAAA4j0A
-AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
-ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAJA9AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
-AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAA6B0AAAAgAAAAHgAAAAIA
-AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAgAAAAAAAAAAAAAAAAAABAAABA
-LnJlbG9jAAAMAAAAAGAAAAACAAAAJgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAADE
-PQAAAAAAAEgAAAACAAUA7CMAAOwYAAABAAAAAAAAANg8AAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBgAAAoqHgIoGQAACiqmcxoAAAqAAQAABHMbAAAKgAIA
-AARzHAAACoADAAAEcx0AAAqABAAABCoufgEAAARvHgAACioufgIAAARvHwAACioufgMAAARvIAAA
-CioufgQAAARvIQAACioeAigiAAAKKq5+BQAABC0ecgEAAHDQBQAAAigjAAAKbyQAAApzJQAACoAF
-AAAEfgUAAAQqGn4GAAAEKh4CgAYAAAQqQnMiAAAKKCYAAAqACAAABCoeAignAAAKKgAAGzABAD8A
-AAAAAAAAfgcAAAQtMn4IAAAEKCYAAAooKAAACn4HAAAELRxzDQAABoAHAAAE3hB+CAAABCgmAAAK
-KCkAAArcfgcAAAQqAAEQAAACAB0ADCkAEAAAAAAeAigqAAAKKhMwBQDFAQAAAQAAEQIoKwAACm8s
-AAAKcjMAAHBvLQAACm8uAAAKby8AAAoKcksAAHALcksAAHAMcksAAHANcksAAHATBAZzMAAACnJL
-AABwEwUCKCsAAApvLAAACnJNAABwby0AAApvLgAACm8vAAAKEwZybwAAcG8xAAAKEwcWEwgrRBEH
-EQiabzIAAAoLBx8MKDMAAAoeKDQAAAoNEQRySwAAcBYoNQAAChb+AREECRYoNQAAChb+BGAsBQkT
-BAcMEQgX1hMIEQgRB45pMrQGcrcAAHAoNgAACig3AAAKLBAGcrcAAHAoNgAACig4AAAKBggoNgAA
-CgZytwAAcCg2AAAKKDkAAAobjTEAAAElFhEEGig0AAAKoiUXcvUAAHCiJRgRBBooMwAAChgoNAAA
-CqIlGXL1AABwoiUaEQQYKDMAAAqiKDoAAAoTBREGcvkAAHAoNgAACig3AAAKLBERBnL5AABwKDYA
-AAooOAAACigEAAAGbzsAAAoRBnL5AABwKDYAAAoXKDwAAApvPQAACiVyEwEAcG8+AAAKJXLCAQBw
-bz4AAAolci4CAHARBXJWAgBwKD8AAApvPgAACm9AAAAKAigrAAAKFm9BAAAKKjYCAygmAAAKKEIA
-AAoqHgIoQwAACiou0AgAAAIoIwAACioeAigvAAAKKgATMAEAFAAAAAIAABECjAUAABstCCgBAAAr
-CisCAgoGKiID/hUFAAAbKgAAABMwAgAoAAAAAwAAEQJ7RQAACm9GAAAKCgaMCAAAGy0SKAIAACsK
-AntFAAAKBm9HAAAKBipKAigiAAAKAnNIAAAKfUUAAAoqAEJTSkIBAAEAAAAAAAwAAAB2NC4wLjMw
-MzE5AAAAAAUAbAAAAFQIAAAjfgAAwAgAAAQKAAAjU3RyaW5ncwAAAADEEgAAXAIAACNVUwAgFQAA
-EAAAACNHVUlEAAAAMBUAALwDAAAjQmxvYgAAAAAAAAACAAABVx2iCQkPAAAA+gEzABYAAAEAAAA4
-AAAACgAAAAwAAAAZAAAABAAAAEgAAAACAAAANwAAAAMAAAAEAAAACAAAAAkAAAAIAAAAAQAAAAUA
-AAABAAAAAwAAAAMAAAACAAAAAABmBQEAAAAAAAYAjgMjCAYAMwQjCAYAZQJkBw8A6ggAAAYApgIb
-BgYAcQMbBgYAGgQbBgYArgMbBgYAxwMbBgYA7QIbBgYA4gOfBQYAkgLdBwYADgLdBwYAOQMbBgYA
-CAOWBAoAMQLEBgoA8gFQBQoAeQJQBQ4AxAGzBw4ANAd3BwYAIQNkBw4AvQL8Bw4A1QLFAAYAdQmf
-BQ4A4AazBw4AVgPFAAYAdwGfBQ4AAQAUBQoAHAKrBQYAtAZkCAYANgYGBgoA1AHxBQYASAJkBxIA
-+APrBBIAqAHrBAYAxwSfBQYALQZiAAYApgWfBQYAGAGfBQYA5gkbBgYAKgkjCAYAXAd8BBIAPgXr
-BBYA/QhKARYADwFKAQYAQgZiAA4AEAnFAA4AOQn8BwYAwASfBQYAPAFiAA4AIwd3Bw4A9AlDCAYA
-jQSlCQYA+AZiAAYABQdiAAYARQefBQAAAABPAAAAAAABAAEAAAAAAOMFuwlNAAEAAQAAAAAAMge7
-CVEAAQACAAABEAB8CbsJYQABAAMAAAAAAKYIdQhhAAUACAAAARAAGAkrAIEABwAMAAEAAADIBSsA
-jQAJAA8ABQEAAKUHAABhAAkAEQAFAQAAEAAAAGEACQAYAAIBAABTCQAAmQAKABoAMQB5BlIBMQBQ
-BloBMQBkBmIBMQCSBmoBEQA9B3IBEQCcAXYBEQBRBHoBEQBvCX4BIQCxCRABBga0AIEBVoBDCYQB
-VoB8AYQBUCAAAAAABhhPBwYAAQBYIAAAAAAGGE8HBgABAGAgAAAAABEYVQeIAQEAiiAAAAAAEwgW
-B4wBAQCWIAAAAAATCNMFkQEBAKIgAAAAABMI3AaWAQEAriAAAAAAEwiVB5sBAQC6IAAAAAADGE8H
-BgABAMIgAAAAABYIsAagAQEA7iAAAAAAFgiEAaUBAQD1IAAAAAAWCJABqgEBAP0gAAAAABEYVQeI
-AQIADiEAAAAABhhPBwYAAgAYIQAAAAAWCFkEsAECAHQhAAAAAAYYTwcGAAIAfCEAAAAABgDOBQYA
-AgBNIwAAAADGAiMJ6AACAFsjAAAAAMYCAwHtAAMAYyMAAAAAgwB0AbUBAwBvIwAAAADGAr4ElQAD
-AHgjAAAAABEAoQC6AQMAmCMAAAAAAQCNAMIBBAC6IAAAAAAGGE8HBgAFAKQjAAAAAAMI6gBKAAUA
-2CMAAAAABhhPBwYABQAAAAEAdgQAAAEATgYAAAEA+gAAAAEA+gAJAE8HAQARAE8HBgAZAE8HCgAp
-AE8HEAAxAE8HEAA5AE8HEABBAE8HEABJAE8HEABRAE8HEABZAE8HFQBhAE8HFQBpAE8HEABxAE8H
-EAB5AE8HEACBAE8HGgCRAE8HIACpAE8HBgCxAE8HBgC5AE8HBgDRAE8HJgDpAE8HEAAJAU8HBgAR
-AU8HBgCZAE8HBgChAE8HBgAMAE8HBgAUAE8HBgAcAE8HBgAkAE8HBgAMAOoASgAUAOoASgAcAOoA
-SgAkAOoASgDBAE8HBgDZACoBTwDZAOIJVwDxAE8HXQBJAW0EZQABAU8HBgBRARAHagBRAZEJagAZ
-AU8HBgAZAUsJfgBZAfkIhABhAY4FigBpAVkEkQDBAL4ElQBxAU8HEABxAQcJmQApAUEBlQB5AYsJ
-oQB5AYYJoQCBAbAEpwCJAWgJrgCRAWEJtACRAQcCuQCRAe8JvgCJAWgJxACZAZcFygCpAVgA0ACh
-AeUG1gC5AWoBEACJAWgJ4QCxAewBBgBZAZYJAQDBACMJ6ADBAAMB7QDBAdsA+QA0ALEJEAE8AFkE
-SgA8AGMEJwE8AE8HBgAIACwASAEIADAATQEpAKsAdAMuAAsA8gEuABMA+wEuABsAGgIuACMAIwIu
-ACsATAIuADMATAIuADsAIwIuAEMAUgIuAEsATAIuAFMAaQIuAFsATAIuAGMAbwIuAGsAmQIuAHMA
-pgJAAIsATQFAAIMA8AJDAHsA+QJDAIMA8AJJAKsAhQNjAHsA+QJjAIMA8AJpAKsAmQOAAIsATQGD
-AJMATQGDAJsATQGDAHsA+QKJAKsApgOgAIsATQGpAIMAGgLAAIsATQHJAIMAGgLgAIsATQHjALsA
-TQHjAFMATALpALMATQEDAYMA8AIDAaMAEgMjAYMA8AIjAVsATAIgAoMA8AIgAosATQFAAoMA8AJA
-AosATQFgAoMA8AJgAosATQGAAoMA8AKAAosATQGgAosATQHAAosATQHgAosATQHgAoMA8AIAA4sA
-TQEgA4sATQEgA4MA8AJvAPEABAEEAAEABQAFAAYABwAJAAgAAAA0B8oBAADlBc8BAADgBtQBAACn
-B9kBAAC0Bt4BAACgAeMBAAB2BOgBAADuAO0BAgAEAAMAAgAFAAUAAgAGAAcAAgAHAAkAAgAJAAsA
-AgAKAA0AAQALAA0AAgAOAA8AAgAYABEALgA1ADwAQwD2AAkBGAEfAQSAAAABAAAAAAAAAAAAAAAA
-ACsAAAAEAAAAAAAAAAAAAAAtAbwAAAAAAAQAAAAAAAAAAAAAAC0BnwUAAAAACgAAAAAAAAAAAAAA
-NgHFAAAAAAANAAAAAAAAAAAAAAA/AcwEAAAAAA0AAAAAAAAAAAAAAD8BbAAAAAAAAAAAAAEAAACy
-CAAACAAEAAkABAAKAAcAAAAQABIAiwAAABAAKwCLAAAAAAAtAIsAiQD/AIkAIgEAAAAAAENvbnRl
-eHRWYWx1ZWAxAFRocmVhZFNhZmVPYmplY3RQcm92aWRlcmAxAFNUX2YxZjkxY2M1ZTgwODRlM2Ri
-ZTliYzA1MTYxYzNmOGI1ADxNb2R1bGU+AGdldF9BU0NJSQBTeXN0ZW0uSU8ATWljcm9zb2Z0LlNx
-bFNlcnZlci5NYW5hZ2VkRFRTAFQARGlzcG9zZV9fSW5zdGFuY2VfXwBDcmVhdGVfX0luc3RhbmNl
-X18AdmFsdWVfXwBtc2NvcmxpYgBNaWNyb3NvZnQuVmlzdWFsQmFzaWMAQ3JlYXRlSW5zdGFuY2UA
-Z2V0X0dldEluc3RhbmNlAGluc3RhbmNlAEdldEhhc2hDb2RlAFZhcmlhYmxlAFJ1bnRpbWVUeXBl
-SGFuZGxlAEdldFR5cGVGcm9tSGFuZGxlAEZpbGUAZ2V0X05hbWUATWljcm9zb2Z0LlNxbFNlcnZl
-ci5EdHMuUnVudGltZQBXcml0ZUxpbmUAR2V0VHlwZQBGYWlsdXJlAGdldF9DdWx0dXJlAHNldF9D
-dWx0dXJlAF9yZXNDdWx0dXJlAFZTVEFSVFNjcmlwdE9iamVjdE1vZGVsQmFzZQBBcHBsaWNhdGlv
-bkJhc2UAQXBwbGljYXRpb25TZXR0aW5nc0Jhc2UAQ2xvc2UARWRpdG9yQnJvd3NhYmxlU3RhdGUA
-RGVsZXRlAEd1aWRBdHRyaWJ1dGUASGVscEtleXdvcmRBdHRyaWJ1dGUAR2VuZXJhdGVkQ29kZUF0
-dHJpYnV0ZQBEZWJ1Z2dlck5vblVzZXJDb2RlQXR0cmlidXRlAERlYnVnZ2FibGVBdHRyaWJ1dGUA
-RWRpdG9yQnJvd3NhYmxlQXR0cmlidXRlAENvbVZpc2libGVBdHRyaWJ1dGUAQXNzZW1ibHlUaXRs
-ZUF0dHJpYnV0ZQBTdGFuZGFyZE1vZHVsZUF0dHJpYnV0ZQBIaWRlTW9kdWxlTmFtZUF0dHJpYnV0
-ZQBBc3NlbWJseVRyYWRlbWFya0F0dHJpYnV0ZQBUYXJnZXRGcmFtZXdvcmtBdHRyaWJ1dGUARGVi
-dWdnZXJIaWRkZW5BdHRyaWJ1dGUAQXNzZW1ibHlGaWxlVmVyc2lvbkF0dHJpYnV0ZQBNeUdyb3Vw
-Q29sbGVjdGlvbkF0dHJpYnV0ZQBBc3NlbWJseURlc2NyaXB0aW9uQXR0cmlidXRlAENvbXBpbGF0
-aW9uUmVsYXhhdGlvbnNBdHRyaWJ1dGUAQXNzZW1ibHlQcm9kdWN0QXR0cmlidXRlAEFzc2VtYmx5
-Q29weXJpZ2h0QXR0cmlidXRlAENMU0NvbXBsaWFudEF0dHJpYnV0ZQBTU0lTU2NyaXB0VGFza0Vu
-dHJ5UG9pbnRBdHRyaWJ1dGUAQXNzZW1ibHlDb21wYW55QXR0cmlidXRlAFJ1bnRpbWVDb21wYXRp
-YmlsaXR5QXR0cmlidXRlAG1fVmFsdWUAZ2V0X1ZhbHVlAHNldF9WYWx1ZQBHZXRPYmplY3RWYWx1
-ZQBTeXN0ZW0uVGhyZWFkaW5nAEVuY29kaW5nAFN5c3RlbS5SdW50aW1lLlZlcnNpb25pbmcAQ29t
-cGFyZVN0cmluZwBUb1N0cmluZwBNYXRoAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuU2NyaXB0VGFzawBN
-aWNyb3NvZnQuU3FsU2VydmVyLkR0cy5UYXNrcy5TY3JpcHRUYXNrAE1pY3Jvc29mdC5WaXN1YWxC
-YXNpYy5NeVNlcnZpY2VzLkludGVybmFsAFNjcmlwdE9iamVjdE1vZGVsAFN5c3RlbS5Db21wb25l
-bnRNb2RlbABTVF9mMWY5MWNjNWU4MDg0ZTNkYmU5YmMwNTE2MWMzZjhiNS5kbGwAZ2V0X0l0ZW0A
-Z2V0X0ZpbGVTeXN0ZW0ARW51bQBTeXN0ZW0uQ29tcG9uZW50TW9kZWwuRGVzaWduAFNjcmlwdE1h
-aW4AZ2V0X0FwcGxpY2F0aW9uAE15QXBwbGljYXRpb24AU3lzdGVtLkNvbmZpZ3VyYXRpb24AU3lz
-dGVtLkdsb2JhbGl6YXRpb24AU3lzdGVtLlJlZmxlY3Rpb24ARmlsZUluZm8AQ3VsdHVyZUluZm8A
-RGlyZWN0b3J5SW5mbwBtX0FwcE9iamVjdFByb3ZpZGVyAG1fVXNlck9iamVjdFByb3ZpZGVyAG1f
-Q29tcHV0ZXJPYmplY3RQcm92aWRlcgBtX015V2ViU2VydmljZXNPYmplY3RQcm92aWRlcgBnZXRf
-UmVzb3VyY2VNYW5hZ2VyAFN5c3RlbS5Db2RlRG9tLkNvbXBpbGVyAGdldF9Vc2VyAE9wZW5UZXh0
-RmlsZVdyaXRlcgBTdHJlYW1Xcml0ZXIAVGV4dFdyaXRlcgBFbnRlcgBnZXRfQ29tcHV0ZXIAU2Vy
-dmVyQ29tcHV0ZXIATXlDb21wdXRlcgBfcmVzTWdyAEFjdGl2YXRvcgAuY3RvcgAuY2N0b3IATW9u
-aXRvcgBTeXN0ZW0uRGlhZ25vc3RpY3MATWljcm9zb2Z0LlZpc3VhbEJhc2ljLkRldmljZXMAZ2V0
-X1dlYlNlcnZpY2VzAE15V2ViU2VydmljZXMATWljcm9zb2Z0LlZpc3VhbEJhc2ljLkFwcGxpY2F0
-aW9uU2VydmljZXMAU3lzdGVtLlJ1bnRpbWUuSW50ZXJvcFNlcnZpY2VzAE1pY3Jvc29mdC5WaXN1
-YWxCYXNpYy5Db21waWxlclNlcnZpY2VzAFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMA
-TWljcm9zb2Z0LlZpc3VhbEJhc2ljLk15U2VydmljZXMAU3lzdGVtLlJlc291cmNlcwBTVF9mMWY5
-MWNjNWU4MDg0ZTNkYmU5YmMwNTE2MWMzZjhiNS5NeS5SZXNvdXJjZXMATXlSZXNvdXJjZXMAU1Rf
-ZjFmOTFjYzVlODA4NGUzZGJlOWJjMDUxNjFjM2Y4YjUuUmVzb3VyY2VzLnJlc291cmNlcwBEZWJ1
-Z2dpbmdNb2RlcwBnZXRfVmFyaWFibGVzAEdldEZpbGVzAFN0cmluZ3MATXlTZXR0aW5ncwBFcXVh
-bHMAUnVudGltZUhlbHBlcnMAT3BlcmF0b3JzAFN1Y2Nlc3MAZ2V0X0R0cwBTY3JpcHRSZXN1bHRz
-AEV4aXN0cwBDb25jYXQAbV9TeW5jT2JqZWN0AE15UHJvamVjdABMZWZ0AFJpZ2h0AEV4aXQAc2V0
-X1Rhc2tSZXN1bHQAU3lzdGVtLlRleHQAbV9Db250ZXh0AFNUX2YxZjkxY2M1ZTgwODRlM2RiZTli
-YzA1MTYxYzNmOGI1Lk15AGdldF9Bc3NlbWJseQBDb3B5AEZpbGVTeXN0ZW1Qcm94eQAAMU0AeQAu
-AFIAZQBzAG8AdQByAGMAZQBzAC4ATQB5AFIAZQBzAG8AdQByAGMAZQBzAAAXRABhAHQAYQBEAGkA
-cgBfAFUATgBDAAABACFTAG4AbwB3AFMAUQBMAEMAbwBuAGYAaQBnAEQAaQByAABHRgBvAHUAbgBk
-AGEAdABpAG8AbgAgAEYAYQBjAHUAbAB0AHkAIABTAHQAYQBmAGYAIABGAGkAbABlACAAKgAuAGMA
-cwB2AAA9RgBvAHUAbgBkAGEAdABpAG8AbgBGAGEAYwB1AGwAdAB5AFMAdABhAGYAZgBGAGkAbABl
-AC4AYwBzAHYAAAMtAAEZZgBpAGwAZQBkAGEAdABlAC4AcwBxAGwAAICtQQBsAHQAZQByACAAVABh
-AGIAbABlACAAIgBPAFMAVQBGAF8ASQBOAFQARQBSAEYAQQBDAEUAUwAiAC4AIgBGAEEAQwBVAEwA
-VABZAF8AUwBUAEEARgBGACIALgAiADAAMQBfAE4AZQB3AEQAYQB0AGEAIgAgAEEAZABkACAAQwBv
-AGwAdQBtAG4AIAAiAEYAaQBsAGUARABhAHQAZQAiACAARABhAHQAZQA7AABrVQBwAGQAYQB0AGUA
-IAAiAE8AUwBVAEYAXwBJAE4AVABFAFIARgBBAEMARQBTACIALgAiAEYAQQBDAFUATABUAFkAXwBT
-AFQAQQBGAEYAIgAuACIAMAAxAF8ATgBlAHcARABhAHQAYQAiAAAnIAAgACAAUwBlAHQAIAAiAEYA
-aQBsAGUARABhAHQAZQAiAD0AJwABBScAOwABSCyYDmmTjECvycY1wEyclQAEIAEBCAMgAAEFIAEB
-EREEIAEBDgQgAQECBSACAQ4OBSABARFFByAEAQ4ODg4GFRIkARIMBhUSJAESCAYVEiQBEmUGFRIk
-ARIgBCAAEwAHAAESbRGAnQUgABKAoQcgAgEOEoChBAABHBwEAAEBHA4HCQ4ODg4ODg4dEoCVCAUg
-ABKArQUgABKAsQYgARKAtRwDIAAcAyAADgcgAR0SgJUOBQACDg4IBgADCA4OAgUAAg4ODgQAAQIO
-BAABAQ4FAAIBDg4FAAEOHQ4FIAASgNEFAAASgNUKIAMSgNkOAhKA1QYAAw4ODg4EIAECHAMgAAgE
-BwEeAAIeAAUQAQAeAAQKAR4ABAcBEwAGFRIkARMABwYVEnEBEwAGFRJxARMAAhMABAoBEwAFIAEB
-EwAIt3pcVhk04IkIsD9ffxHVCjoIiYRdzYCAzJEEAAAAAAQBAAAABwYVEiQBEgwHBhUSJAESCAcG
-FRIkARJlBwYVEiQBEiADBhJ5AwYSfQMGEhgCBhwCBggDBhEoAwAAAQQAABIMBAAAEggEAAASZQQA
-ABIgBAAAEnkEAAASfQUAAQESfQQAABIYBCAAEm0HEAEBHgAeAAcwAQEBEB4ABAgAEgwECAASCAQI
-ABJlBAgAEiAECAASeQQIABJ9BAgAEhgEKAATAAgBAAgAAAAAAB4BAAEAVAIWV3JhcE5vbkV4Y2Vw
-dGlvblRocm93cwEIAQACAAAAAAAoAQAjU1RfZjFmOTFjYzVlODA4NGUzZGJlOWJjMDUxNjFjM2Y4
-YjUAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAyMAAABQEAAQAAKQEAJGZlNjBhM2Y2LWIzNWIt
-NDBiMC1hMjMwLTlkNDQ3Njc1YWYwMwAADAEABzEuMC4wLjAAAEkBABouTkVURnJhbWV3b3JrLFZl
-cnNpb249djQuNQEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC41CAEA
-AQAAAAAAGAEACk15VGVtcGxhdGUIMTEuMC4wLjAAAGEBADRTeXN0ZW0uV2ViLlNlcnZpY2VzLlBy
-b3RvY29scy5Tb2FwSHR0cENsaWVudFByb3RvY29sEkNyZWF0ZV9fSW5zdGFuY2VfXxNEaXNwb3Nl
-X19JbnN0YW5jZV9fAAAAEAEAC015LkNvbXB1dGVyAAATAQAOTXkuQXBwbGljYXRpb24AAAwBAAdN
-eS5Vc2VyAAATAQAOTXkuV2ViU2VydmljZXMAAAAAtAAAAM7K774BAAAAkQAAAGxTeXN0ZW0uUmVz
-b3VyY2VzLlJlc291cmNlUmVhZGVyLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJl
-PW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkjU3lzdGVtLlJlc291cmNl
-cy5SdW50aW1lUmVzb3VyY2VTZXQCAAAAAAAAAAAAAABQQURQQURQtAAAALg9AAAAAAAAAAAAANI9
-AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAADEPQAAAAAAAAAAAAAAAF9Db3JEbGxNYWluAG1zY29y
-ZWUuZGxsAAAAAAD/JQAgABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA
-EAAAABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAEgAAABY
-QAAA7AMAAAAAAAAAAAAA7AM0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8AAAAAAL0E
-7/4AAAEAAAABAAAAAAAAAAEAAAAAAD8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABEAAAAAQBW
-AGEAcgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8AbgAAAAAA
-AACwBEwDAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAACgDAAABADAAMAAwADAAMAA0
-AGIAMAAAABoAAQABAEMAbwBtAG0AZQBuAHQAcwAAAAAAAAAiAAEAAQBDAG8AbQBwAGEAbgB5AE4A
-YQBtAGUAAAAAAAAAAABwACQAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAAAAAAUwBU
-AF8AZgAxAGYAOQAxAGMAYwA1AGUAOAAwADgANABlADMAZABiAGUAOQBiAGMAMAA1ADEANgAxAGMA
-MwBmADgAYgA1AAAAMAAIAAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAuADAALgAw
-AAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABTAFQAXwBmADEAZgA5ADEAYwBjADUA
-ZQA4ADAAOAA0AGUAMwBkAGIAZQA5AGIAYwAwADUAMQA2ADEAYwAzAGYAOABiADUALgBkAGwAbAAA
-AEgAEgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAAAEMAbwBwAHkAcgBpAGcAaAB0ACAA
-QAAgACAAMgAwADIAMAAAACoAAQABAEwAZQBnAGEAbABUAHIAYQBkAGUAbQBhAHIAawBzAAAAAAAA
-AAAAeAAoAAEATwByAGkAZwBpAG4AYQBsAEYAaQBsAGUAbgBhAG0AZQAAAFMAVABfAGYAMQBmADkA
-MQBjAGMANQBlADgAMAA4ADQAZQAzAGQAYgBlADkAYgBjADAANQAxADYAMQBjADMAZgA4AGIANQAu
-AGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABOAGEAbQBlAAAAAABTAFQAXwBmADEAZgA5ADEA
-YwBjADUAZQA4ADAAOAA0AGUAMwBkAGIAZQA5AGIAYwAwADUAMQA2ADEAYwAzAGYAOABiADUAAAA0
-AAgAAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAAOAAIAAEA
-QQBzAHMAZQBtAGIAbAB5ACAAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAADAAAAOQ9AAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
-            </ScriptProject>
-          </DTS:ObjectData>
-        </DTS:Executable>
       </DTS:Executables>
       <DTS:PrecedenceConstraints>
         <DTS:PrecedenceConstraint
@@ -7940,7 +8447,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           DTS:From="Package\Sequence Container - Upload Raw Data to Snowflake\Script Task - Create the snowsql config file"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 1"
-          DTS:To="Package\Sequence Container - Upload Raw Data to Snowflake\Script Task - Get FileDate and Update FoundationFacultyStaffFile csv and create filedate sql" />
+          DTS:To="Package\Sequence Container - Upload Raw Data to Snowflake\Script Task - create filedate sql" />
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Sequence Container - Upload Raw Data to Snowflake.PrecedenceConstraints[Constraint 2]"
           DTS:CreationName=""
@@ -7977,7 +8484,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           DTS:refId="Package\Sequence Container - Upload Raw Data to Snowflake.PrecedenceConstraints[Constraint 6]"
           DTS:CreationName=""
           DTS:DTSID="{1AB628CE-1868-4AB1-B482-3107F458E482}"
-          DTS:From="Package\Sequence Container - Upload Raw Data to Snowflake\Script Task - Get FileDate and Update FoundationFacultyStaffFile csv and create filedate sql"
+          DTS:From="Package\Sequence Container - Upload Raw Data to Snowflake\Script Task - create filedate sql"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 6"
           DTS:To="Package\Sequence Container - Upload Raw Data to Snowflake\Execute Process Task - Upload New Faculty Staff Data File" />
@@ -8034,6 +8541,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           Size="302,42"
           Id="Package\Foreach Loop Container - Get file from SFTP Server\Script Task - Delete the file that was zipped up"
           TopLeft="447.75,323.75" />
+        <NodeLayout
+          Size="340,42"
+          Id="Package\Foreach Loop Container - Get file from SFTP Server\Script Task - Move file from FTP to ascend_FacultyStaff"
+          TopLeft="291,38" />
         <EdgeLayout
           Id="Package\Foreach Loop Container - Get file from SFTP Server.PrecedenceConstraints[Constraint]"
           TopLeft="561.119047619048,204.666666666667">
@@ -8102,24 +8613,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <AnnotationLayout
-          Text="Move file to ascend_FacultyStaff directory.&#xA;Archive and Rename to Generic filename"
-          ParentId="Package\Foreach Loop Container - Get file from SFTP Server"
-          FontInfo="{assembly:Null}"
-          Size="251,56"
-          Id="7702a7c5-7f72-409b-a959-b89179813f03"
-          TopLeft="16,29" />
-        <AnnotationLayout
-          Text="Zip the Archived file"
-          ParentId="Package\Foreach Loop Container - Get file from SFTP Server"
-          FontInfo="{assembly:Null}"
-          Size="135,40"
-          Id="16686612-e94c-4681-94c3-98b162dbf4be"
-          TopLeft="296,191.75" />
-        <NodeLayout
-          Size="340,42"
-          Id="Package\Foreach Loop Container - Get file from SFTP Server\Script Task - Move file from FTP to ascend_FacultyStaff"
-          TopLeft="291,38" />
         <EdgeLayout
           Id="Package\Foreach Loop Container - Get file from SFTP Server.PrecedenceConstraints[Constraint 2]"
           TopLeft="461,80">
@@ -8154,13 +8647,27 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <AnnotationLayout
+          Text="Move file to ascend_FacultyStaff directory.&#xA;Archive and Rename to Generic filename"
+          ParentId="Package\Foreach Loop Container - Get file from SFTP Server"
+          FontInfo="{assembly:Null}"
+          Size="251,56"
+          Id="7702a7c5-7f72-409b-a959-b89179813f03"
+          TopLeft="16,29" />
+        <AnnotationLayout
+          Text="Zip the Archived file"
+          ParentId="Package\Foreach Loop Container - Get file from SFTP Server"
+          FontInfo="{assembly:Null}"
+          Size="135,40"
+          Id="16686612-e94c-4681-94c3-98b162dbf4be"
+          TopLeft="294,159.75" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="967,425"
           Size="967,468"
           Id="Package\Foreach Loop Container - Get file from SFTP Server"
-          TopLeft="33,31" />
+          TopLeft="90,33" />
         <NodeLayout
           Size="330,42"
           Id="Package\Sequence Container\Execute SQL Task - Populate Varable SFPassword"
@@ -8171,7 +8678,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           PanelSize="779,127"
           Size="779,170"
           Id="Package\Sequence Container"
-          TopLeft="425.333333333333,680.25" />
+          TopLeft="92.333333333333,645.25" />
         <NodeLayout
           Size="318,42"
           Id="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Export FS File to csv"
@@ -8197,6 +8704,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           Id="Package\Sequence Container - Upload Raw Data to Snowflake\Execute Process Task - Upload New Faculty Staff Data File"
           TopLeft="36.071428571428,163.289682539683" />
         <NodeLayout
+          Size="225,42"
+          Id="Package\Sequence Container - Upload Raw Data to Snowflake\Script Task - create filedate sql"
+          TopLeft="415,86" />
+        <NodeLayout
           Size="287,42"
           Id="Package\Sequence Container - Upload Raw Data to Snowflake\Script Task - Create the snowsql config file"
           TopLeft="41,90" />
@@ -8208,10 +8719,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           Size="326,49"
           Id="Package\Sequence Container - Upload Raw Data to Snowflake\Script Task - Delete snowsql folder"
           TopLeft="44.5,464.75" />
-        <NodeLayout
-          Size="529,42"
-          Id="Package\Sequence Container - Upload Raw Data to Snowflake\Script Task - Get FileDate and Update FoundationFacultyStaffFile csv and create filedate sql"
-          TopLeft="416,87" />
         <EdgeLayout
           Id="Package\Sequence Container - Upload Raw Data to Snowflake.PrecedenceConstraints[Constraint]"
           TopLeft="181.75,50">
@@ -8236,18 +8743,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container - Upload Raw Data to Snowflake.PrecedenceConstraints[Constraint 1]"
-          TopLeft="328,109.5">
+          TopLeft="328,109">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="88,0"
+              EndConnector="87,0"
               Start="0,0"
-              End="80.5,0">
+              End="79.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="80.5,0" />
+                    End="79.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8370,30 +8877,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container - Upload Raw Data to Snowflake.PrecedenceConstraints[Constraint 6]"
-          TopLeft="680.5,129">
+          TopLeft="527.5,128">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-467.428571428572,34.289682539683"
+              EndConnector="-314.428571428572,35.289682539683"
               Start="0,0"
-              End="-467.428571428572,26.789682539683">
+              End="-314.428571428572,27.789682539683">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,13.1448412698415" />
+                    End="0,13.6448412698415" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,13.1448412698415"
-                    Point2="0,17.1448412698415"
-                    Point3="-4,17.1448412698415" />
+                    Point1="0,13.6448412698415"
+                    Point2="0,17.6448412698415"
+                    Point3="-4,17.6448412698415" />
                   <mssgle:LineSegment
-                    End="-463.428571428572,17.1448412698415" />
+                    End="-310.428571428572,17.6448412698415" />
                   <mssgle:CubicBezierSegment
-                    Point1="-463.428571428572,17.1448412698415"
-                    Point2="-467.428571428572,17.1448412698415"
-                    Point3="-467.428571428572,21.1448412698415" />
+                    Point1="-310.428571428572,17.6448412698415"
+                    Point2="-314.428571428572,17.6448412698415"
+                    Point3="-314.428571428572,21.6448412698415" />
                   <mssgle:LineSegment
-                    End="-467.428571428572,26.789682539683" />
+                    End="-314.428571428572,27.789682539683" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8463,33 +8970,33 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           PanelSize="1005,596"
           Size="1005,639"
           Id="Package\Sequence Container - Upload Raw Data to Snowflake"
-          TopLeft="385.33333333333,1019.75" />
+          TopLeft="82.33333333333,923.75" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="814.833333333333,850.25">
+          TopLeft="481.833333333333,815.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="72.9999999999969,169.5"
+              EndConnector="102.999999999997,108.5"
               Start="0,0"
-              End="72.9999999999969,162">
+              End="102.999999999997,101">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,80.75" />
+                    End="0,50.25" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,80.75"
-                    Point2="0,84.75"
-                    Point3="4,84.75" />
+                    Point1="0,50.25"
+                    Point2="0,54.25"
+                    Point3="4,54.25" />
                   <mssgle:LineSegment
-                    End="68.9999999999969,84.75" />
+                    End="98.9999999999969,54.25" />
                   <mssgle:CubicBezierSegment
-                    Point1="68.9999999999969,84.75"
-                    Point2="72.9999999999969,84.75"
-                    Point3="72.9999999999969,88.75" />
+                    Point1="98.9999999999969,54.25"
+                    Point2="102.999999999997,54.25"
+                    Point3="102.999999999997,58.25" />
                   <mssgle:LineSegment
-                    End="72.9999999999969,162" />
+                    End="102.999999999997,101" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8500,30 +9007,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="516.5,499">
+          TopLeft="573.5,501">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="298.333333333333,181.25"
+              EndConnector="-91.666666666667,144.25"
               Start="0,0"
-              End="298.333333333333,173.75">
+              End="-91.666666666667,136.75">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,86.625" />
+                    End="0,68.125" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,86.625"
-                    Point2="0,90.625"
-                    Point3="4,90.625" />
+                    Point1="0,68.125"
+                    Point2="0,72.125"
+                    Point3="-4,72.125" />
                   <mssgle:LineSegment
-                    End="294.333333333333,90.625" />
+                    End="-87.666666666667,72.125" />
                   <mssgle:CubicBezierSegment
-                    Point1="294.333333333333,90.625"
-                    Point2="298.333333333333,90.625"
-                    Point3="298.333333333333,94.625" />
+                    Point1="-87.666666666667,72.125"
+                    Point2="-91.666666666667,72.125"
+                    Point3="-91.666666666667,76.125" />
                   <mssgle:LineSegment
-                    End="298.333333333333,173.75" />
+                    End="-91.666666666667,136.75" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8591,11 +9098,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
     design-time-name="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="142,42"
-          Id="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source"
-          TopLeft="228,39" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="218,42"
           Id="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination"
@@ -8604,6 +9107,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           Size="249,42"
           Id="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Add RecordType ID for Faculty Staff"
           TopLeft="189,159" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source"
+          TopLeft="228,39" />
         <EdgeLayout
           Id="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA).Paths[ODBC Source Output]"
           TopLeft="299,81">
@@ -8635,9 +9142,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8671,18 +9176,23 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <AnnotationLayout
           Text="Currently using the QA id for Faculty Staff 10/14/2020 - CEC"
           ParentId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)"
           FontInfo="{assembly:Null}"
-          Size="345,NaN"
+          Size="345,40"
           Id="40512869-e6c0-4987-9552-6621b2389e07"
           TopLeft="453,157" />
+        <AnnotationLayout
+          Text="Limited Records For Testing 12/30/2020 - CEC"
+          ParentId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)"
+          FontInfo="{assembly:Null}"
+          Size="271,40"
+          Id="1e45afe6-3bbf-45f5-b6a7-e3cd96951463"
+          TopLeft="416,34" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>

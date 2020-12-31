@@ -1,1 +1,1 @@
-put 'file://L:\import data/OSU Faculty and Staff/98 - Snowflake/FoundationFacultyStaffFile.csv' @STAGE   OVERWRITE = TRUE  ;
+put 'file://E:\BI/Scheduled_ETL_SF/Faculty_Staff_Constituent_Load_Interface/FilesForImport/FoundationFacultyStaffFile.csv' @STAGE   OVERWRITE = TRUE  ;

@@ -14,6 +14,7 @@ CREATE OR REPLACE TABLE "01_NewData"
 , "HIRING_LOCATION"              varchar(150)
 , "HIRING_LOCATION_DESC"         varchar(150)
 , "PrimaryBusinessCity"          varchar(150)
+, "PrimaryBusinessState"         varchar(10)
 , "PrimaryBusinessZip"           varchar(10)
 , "EMAIL_PREFERRED_ADDRESS"      varchar(150)
 , "StudentEmployee?"             varchar(3)
