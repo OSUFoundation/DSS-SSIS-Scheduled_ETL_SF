@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Current_Student_Constituent_Load_Interface</Name>
-    <LastWriteTime>2020-11-18T00:00:58.3159771Z</LastWriteTime>
+    <LastWriteTime>2021-01-07T20:27:54.4873709Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Package.dtsx</Name>
-      <LastWriteTime>2020-11-19T19:55:20.6330564Z</LastWriteTime>
+      <LastWriteTime>2021-01-07T20:39:15.5328652Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
