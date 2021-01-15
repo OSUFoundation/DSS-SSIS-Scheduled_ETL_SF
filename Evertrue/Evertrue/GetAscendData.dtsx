@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="GetAscendData"
   DTS:PackageType="5"
-  DTS:VersionBuild="51"
-  DTS:VersionGUID="{C5AF356E-716C-4C11-91B9-4FAC3E3B7872}">
+  DTS:VersionBuild="52"
+  DTS:VersionGUID="{5EF25AFA-2263-4D17-B0B3-93DA50476195}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -5221,10 +5221,10 @@
           <ConnectionString>User Id=dfair@osugiving.com.qa;Host=test.salesforce.com;Batch Size=2000</ConnectionString>
           <Password
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFqrWiIFRkkijtNi+VLs0vQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACrUqQ8DyLDBC4AYGoeVkieAAAAAASAAACgAAAAEAAAAOK/HZg05XnjWZiO5Fy9PuEYAAAA42RvcjGYvojAx33N+wRVLjWY2U6KL0D4FAAAAJ8iXAoIarx3J/PSC60zI+H0TQBT</Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFqrWiIFRkkijtNi+VLs0vQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAdMWwuOY2onoomXgrQEPYOAAAAAASAAACgAAAAEAAAAGu3FhhtFOz8bk+oJks2V4gYAAAAeYtvoW5AcuU7S5OPnoCYUX05TZnr9vwUFAAAAKXboEkmmSQr2CbUjve1Oxy5WKVk</Password>
           <SecurityToken
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFqrWiIFRkkijtNi+VLs0vQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABtApS6Q5loFPQfqSn3adkKAAAAAASAAACgAAAAEAAAAEAiU391va9fgpLLBi+rmMk4AAAAcsCrFE5PzGbTSIVwXmL0tTyhiWKLVxInz6zN0tII6ghwVbqOqdB5tP/jRXk/xASmxwHdVsxrix4UAAAAGbFB5n3FBCPb8JpJBgZZiDmFweg</SecurityToken>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFqrWiIFRkkijtNi+VLs0vQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADboinM+UhkyypsaUdRS4GjAAAAAASAAACgAAAAEAAAAPo8SkAzCNML/gNaxr+MinQ4AAAALZZBhiLWmhK3D4QkN0o2IOs2/jHGjOenHuZYJNBabiAJbSiVFVkaQqZfpKBPi4P9cdxtutl76LAUAAAAL8YQdYFcgHDHTBX4/LPJWixKHYY</SecurityToken>
         </SalesforceConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -9407,7 +9407,7 @@ FROM ucinn_ascendv2__Address
           DTS:LocaleID="-1"
           DTS:ObjectName="Create Snowflake Table"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
@@ -9425,7 +9425,7 @@ FROM ucinn_ascendv2__Address
           DTS:LocaleID="-1"
           DTS:ObjectName="Insert Data"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
@@ -10699,7 +10699,7 @@ FROM ucinn_ascendv2__Address_Relation
           DTS:LocaleID="-1"
           DTS:ObjectName="Create Snowflake Table"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
@@ -10717,7 +10717,7 @@ FROM ucinn_ascendv2__Address_Relation
           DTS:LocaleID="-1"
           DTS:ObjectName="Insert Data"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
@@ -12262,7 +12262,7 @@ FROM ucinn_ascendv2__Affiliation
           DTS:LocaleID="-1"
           DTS:ObjectName="Create Snowflake Table"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
@@ -12280,7 +12280,7 @@ FROM ucinn_ascendv2__Affiliation
           DTS:LocaleID="-1"
           DTS:ObjectName="Insert Data"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
@@ -21584,7 +21584,7 @@ FROM Contact
           DTS:LocaleID="-1"
           DTS:ObjectName="Create Snowflake Table"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
@@ -21602,7 +21602,7 @@ FROM Contact
           DTS:LocaleID="-1"
           DTS:ObjectName="Insert Data"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
@@ -23706,7 +23706,7 @@ FROM ucinn_ascendv2__Degree_Information
           DTS:LocaleID="-1"
           DTS:ObjectName="Create Snowflake Table"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="8">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
@@ -23724,7 +23724,7 @@ FROM ucinn_ascendv2__Degree_Information
           DTS:LocaleID="-1"
           DTS:ObjectName="Insert Data"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="8">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
@@ -24139,7 +24139,7 @@ FROM ucinn_ascendv2__Degree_Code
           DTS:LocaleID="-1"
           DTS:ObjectName="Create Snowflake Table"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="10">
+          DTS:ThreadHint="8">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
@@ -24157,7 +24157,7 @@ FROM ucinn_ascendv2__Degree_Code
           DTS:LocaleID="-1"
           DTS:ObjectName="Insert Data"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="10">
+          DTS:ThreadHint="8">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
@@ -24196,7 +24196,7 @@ FROM ucinn_ascendv2__Degree_Code
       DTS:LocaleID="-1"
       DTS:ObjectName="Drop Snowflake Tables"
       DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <ExecuteProcessData
@@ -25020,7 +25020,7 @@ FROM ucinn_ascendv2__Email
           DTS:LocaleID="-1"
           DTS:ObjectName="Create Snowflake Table"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="7">
+          DTS:ThreadHint="9">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
@@ -25038,7 +25038,7 @@ FROM ucinn_ascendv2__Email
           DTS:LocaleID="-1"
           DTS:ObjectName="Insert Data"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="7">
+          DTS:ThreadHint="9">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
@@ -30751,7 +30751,7 @@ FROM Account
           DTS:LocaleID="-1"
           DTS:ObjectName="Create Snowflake Table"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="9">
+          DTS:ThreadHint="10">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
@@ -30769,7 +30769,7 @@ FROM Account
           DTS:LocaleID="-1"
           DTS:ObjectName="Insert Data"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="9">
+          DTS:ThreadHint="10">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
@@ -31617,7 +31617,7 @@ FROM ucinn_ascendv2__Phone
           DTS:LocaleID="-1"
           DTS:ObjectName="Create Snowflake Table"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
@@ -31635,7 +31635,7 @@ FROM ucinn_ascendv2__Phone
           DTS:LocaleID="-1"
           DTS:ObjectName="Insert Data"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
@@ -32708,7 +32708,7 @@ FROM ucinn_ascendv2__Relationship
           DTS:LocaleID="-1"
           DTS:ObjectName="Create Snowflake Table"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
@@ -32726,7 +32726,7 @@ FROM ucinn_ascendv2__Relationship
           DTS:LocaleID="-1"
           DTS:ObjectName="Insert Data"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
@@ -32829,7 +32829,7 @@ FROM ucinn_ascendv2__Relationship
           PanelSize="295,326"
           Size="295,369"
           Id="Package\Address"
-          TopLeft="441,504" />
+          TopLeft="393,503" />
         <NodeLayout
           Size="202,42"
           Id="Package\Address Relation\Create CSV from Ascend"
@@ -32892,7 +32892,7 @@ FROM ucinn_ascendv2__Relationship
           PanelSize="274,316"
           Size="274,359"
           Id="Package\Address Relation"
-          TopLeft="812,510" />
+          TopLeft="751,509" />
         <NodeLayout
           Size="202,42"
           Id="Package\Affiliation\Create CSV from Ascend"
@@ -33024,6 +33024,132 @@ FROM ucinn_ascendv2__Relationship
           Id="Package\Data Flow Task"
           TopLeft="1119,424" />
         <NodeLayout
+          Size="202,42"
+          Id="Package\Degree\Create CSV from Ascend"
+          TopLeft="27,20" />
+        <NodeLayout
+          Size="196,42"
+          Id="Package\Degree\Create Snowflake Table"
+          TopLeft="36,101" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Degree\Insert Data"
+          TopLeft="70,195" />
+        <EdgeLayout
+          Id="Package\Degree.PrecedenceConstraints[Constraint]"
+          TopLeft="131,62">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39"
+              Start="0,0"
+              End="0,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Degree.PrecedenceConstraints[Constraint 1]"
+          TopLeft="135.25,143">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52"
+              Start="0,0"
+              End="0,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="274,316"
+          Size="274,359"
+          Id="Package\Degree"
+          TopLeft="449,940" />
+        <NodeLayout
+          Size="202,42"
+          Id="Package\Degree Code\Create CSV from Ascend"
+          TopLeft="27,20" />
+        <NodeLayout
+          Size="196,42"
+          Id="Package\Degree Code\Create Snowflake Table"
+          TopLeft="36,101" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Degree Code\Insert Data"
+          TopLeft="70,195" />
+        <EdgeLayout
+          Id="Package\Degree Code.PrecedenceConstraints[Constraint]"
+          TopLeft="131,62">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39"
+              Start="0,0"
+              End="0,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Degree Code.PrecedenceConstraints[Constraint 1]"
+          TopLeft="135.25,143">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52"
+              Start="0,0"
+              End="0,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="274,316"
+          Size="274,359"
+          Id="Package\Degree Code"
+          TopLeft="72,1363" />
+        <NodeLayout
           Size="193,42"
           Id="Package\Drop Snowflake Tables"
           TopLeft="1100,357" />
@@ -33089,7 +33215,70 @@ FROM ucinn_ascendv2__Relationship
           PanelSize="295,326"
           Size="295,369"
           Id="Package\Email"
-          TopLeft="59,504" />
+          TopLeft="51,502" />
+        <NodeLayout
+          Size="202,42"
+          Id="Package\Organization\Create CSV from Ascend"
+          TopLeft="27,20" />
+        <NodeLayout
+          Size="196,42"
+          Id="Package\Organization\Create Snowflake Table"
+          TopLeft="36,101" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Organization\Insert Data"
+          TopLeft="70,195" />
+        <EdgeLayout
+          Id="Package\Organization.PrecedenceConstraints[Constraint]"
+          TopLeft="131,62">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39"
+              Start="0,0"
+              End="0,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Organization.PrecedenceConstraints[Constraint 1]"
+          TopLeft="135.25,143">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52"
+              Start="0,0"
+              End="0,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="274,316"
+          Size="274,359"
+          Id="Package\Organization"
+          TopLeft="819,938" />
         <NodeLayout
           Size="202,42"
           Id="Package\Phones\Create CSV from Ascend"
@@ -33216,195 +33405,6 @@ FROM ucinn_ascendv2__Relationship
           Size="286,369"
           Id="Package\Relationships"
           TopLeft="394,66" />
-        <NodeLayout
-          Size="202,42"
-          Id="Package\Degree\Create CSV from Ascend"
-          TopLeft="27,20" />
-        <NodeLayout
-          Size="196,42"
-          Id="Package\Degree\Create Snowflake Table"
-          TopLeft="36,101" />
-        <NodeLayout
-          Size="133,42"
-          Id="Package\Degree\Insert Data"
-          TopLeft="70,195" />
-        <EdgeLayout
-          Id="Package\Degree.PrecedenceConstraints[Constraint]"
-          TopLeft="131,62">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,39"
-              Start="0,0"
-              End="0,31.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Degree.PrecedenceConstraints[Constraint 1]"
-          TopLeft="135.25,143">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,52"
-              Start="0,0"
-              End="0,44.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="274,316"
-          Size="274,359"
-          Id="Package\Degree"
-          TopLeft="449,940" />
-        <NodeLayout
-          Size="202,42"
-          Id="Package\Organization\Create CSV from Ascend"
-          TopLeft="27,20" />
-        <NodeLayout
-          Size="196,42"
-          Id="Package\Organization\Create Snowflake Table"
-          TopLeft="36,101" />
-        <NodeLayout
-          Size="133,42"
-          Id="Package\Organization\Insert Data"
-          TopLeft="70,195" />
-        <EdgeLayout
-          Id="Package\Organization.PrecedenceConstraints[Constraint]"
-          TopLeft="131,62">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,39"
-              Start="0,0"
-              End="0,31.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Organization.PrecedenceConstraints[Constraint 1]"
-          TopLeft="135.25,143">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,52"
-              Start="0,0"
-              End="0,44.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="274,316"
-          Size="274,359"
-          Id="Package\Organization"
-          TopLeft="819,938" />
-        <NodeLayout
-          Size="202,42"
-          Id="Package\Degree Code\Create CSV from Ascend"
-          TopLeft="27,20" />
-        <NodeLayout
-          Size="196,42"
-          Id="Package\Degree Code\Create Snowflake Table"
-          TopLeft="36,101" />
-        <NodeLayout
-          Size="133,42"
-          Id="Package\Degree Code\Insert Data"
-          TopLeft="70,195" />
-        <EdgeLayout
-          Id="Package\Degree Code.PrecedenceConstraints[Constraint]"
-          TopLeft="131,62">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,39"
-              Start="0,0"
-              End="0,31.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Degree Code.PrecedenceConstraints[Constraint 1]"
-          TopLeft="135.25,143">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,52"
-              Start="0,0"
-              End="0,44.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="274,316"
-          Size="274,359"
-          Id="Package\Degree Code"
-          TopLeft="72,1363" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -33731,6 +33731,82 @@ FROM ucinn_ascendv2__Relationship
     </LayoutInfo>
   </TaskHost>
   <TaskHost
+    design-time-name="Package\Degree\Create CSV from Ascend">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="204,42"
+          Id="Package\Degree\Create CSV from Ascend\Devart Salesforce Source"
+          TopLeft="309,82" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Degree\Create CSV from Ascend\Flat File Destination"
+          TopLeft="330,198" />
+        <EdgeLayout
+          Id="Package\Degree\Create CSV from Ascend.Paths[Source Output]"
+          TopLeft="414.5,124">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,74"
+              Start="0,0"
+              End="0,66.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,66.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Degree Code\Create CSV from Ascend">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="204,42"
+          Id="Package\Degree Code\Create CSV from Ascend\Devart Salesforce Source"
+          TopLeft="309,82" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Degree Code\Create CSV from Ascend\Flat File Destination"
+          TopLeft="326,203" />
+        <EdgeLayout
+          Id="Package\Degree Code\Create CSV from Ascend.Paths[Source Output]"
+          TopLeft="412.5,124">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,79"
+              Start="0,0"
+              End="0,71.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,71.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
     design-time-name="Package\Email\Create CSV from Ascend">
     <LayoutInfo>
       <GraphLayout
@@ -33793,6 +33869,70 @@ FROM ucinn_ascendv2__Relationship
             <mssgm:EdgeLabel
               BoundingBox="0,0,0,0"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Organization\Create CSV from Ascend">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="204,42"
+          Id="Package\Organization\Create CSV from Ascend\Devart Salesforce Source"
+          TopLeft="309,82" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Organization\Create CSV from Ascend\Flat File Destination"
+          TopLeft="324,246" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Organization\Create CSV from Ascend\Data Conversion"
+          TopLeft="337,166" />
+        <EdgeLayout
+          Id="Package\Organization\Create CSV from Ascend.Paths[Source Output]"
+          TopLeft="414.25,124">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Organization\Create CSV from Ascend.Paths[Data Conversion Output]"
+          TopLeft="414.75,208">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38"
+              Start="0,0"
+              End="0,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -33929,146 +34069,6 @@ FROM ucinn_ascendv2__Relationship
             <mssgm:EdgeLabel
               BoundingBox="0,0,0,0"
               RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Degree\Create CSV from Ascend">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="204,42"
-          Id="Package\Degree\Create CSV from Ascend\Devart Salesforce Source"
-          TopLeft="309,82" />
-        <NodeLayout
-          Size="176,42"
-          Id="Package\Degree\Create CSV from Ascend\Flat File Destination"
-          TopLeft="330,198" />
-        <EdgeLayout
-          Id="Package\Degree\Create CSV from Ascend.Paths[Source Output]"
-          TopLeft="414.5,124">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,74"
-              Start="0,0"
-              End="0,66.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,66.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Organization\Create CSV from Ascend">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="204,42"
-          Id="Package\Organization\Create CSV from Ascend\Devart Salesforce Source"
-          TopLeft="309,82" />
-        <NodeLayout
-          Size="176,42"
-          Id="Package\Organization\Create CSV from Ascend\Flat File Destination"
-          TopLeft="324,246" />
-        <NodeLayout
-          Size="161,42"
-          Id="Package\Organization\Create CSV from Ascend\Data Conversion"
-          TopLeft="337,166" />
-        <EdgeLayout
-          Id="Package\Organization\Create CSV from Ascend.Paths[Source Output]"
-          TopLeft="414.25,124">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,42"
-              Start="0,0"
-              End="0,34.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Organization\Create CSV from Ascend.Paths[Data Conversion Output]"
-          TopLeft="414.75,208">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38"
-              Start="0,0"
-              End="0,30.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Degree Code\Create CSV from Ascend">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="204,42"
-          Id="Package\Degree Code\Create CSV from Ascend\Devart Salesforce Source"
-          TopLeft="309,82" />
-        <NodeLayout
-          Size="176,42"
-          Id="Package\Degree Code\Create CSV from Ascend\Flat File Destination"
-          TopLeft="326,203" />
-        <EdgeLayout
-          Id="Package\Degree Code\Create CSV from Ascend.Paths[Source Output]"
-          TopLeft="412.5,124">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,79"
-              Start="0,0"
-              End="0,71.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,71.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
