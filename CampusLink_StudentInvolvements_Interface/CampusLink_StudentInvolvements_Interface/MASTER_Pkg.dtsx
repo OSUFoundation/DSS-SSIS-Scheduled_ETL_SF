@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="MASTER_Pkg"
   DTS:PackageType="5"
-  DTS:VersionBuild="67"
-  DTS:VersionGUID="{357504AA-3021-4DBA-839C-2608ADEFB186}">
+  DTS:VersionBuild="68"
+  DTS:VersionGUID="{8362E5E5-5D7F-42EB-B8D2-9EAF246EAEB0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,13 +23,13 @@
       DTS:ObjectName="ascend QA Environment Connection">
       <DTS:ObjectData>
         <SalesforceConnectionManager>
-          <ConnectionString>User Id=ccameron@osugiving.com.qa;Host=test.salesforce.com;Batch Size=2000</ConnectionString>
+          <ConnectionString>User Id=ccameron@osugiving.com.qa;Host=test.salesforce.com;System Objects=True;Refresh Metadata=False;Batch Size=2000</ConnectionString>
           <Password
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJd+wGmzMVEeY1/dSBm3ITQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAQgaVmRd3HNMzp7HsJOHZMAAAAAASAAACgAAAAEAAAAN0KBV47rifWovu3HCZ0h0koAAAArps3AhK1tw7n+wFCohaPJogF8uNNvzr+XSdA+KV2+jf1kmGZnT78+BQAAABdt0xaNm8U7vJedvQjznG2EYmovw</Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJd+wGmzMVEeY1/dSBm3ITQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACZhsh9+0beZWEgTehK5iOwAAAAAASAAACgAAAAEAAAAAp4bkzYTovqAYvZ3RaDMMsoAAAAauLlJ91X/XthUR04fbOcitn8fWztO+f8QimgyFBsrE71IksXVo9bNhQAAAD4RAun0iMnjzEkRex4fFUv+8Fxvw</Password>
           <SecurityToken
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJd+wGmzMVEeY1/dSBm3ITQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABkC+yOxmekepXr+MCyWV4hAAAAAASAAACgAAAAEAAAAISmOQVjuKtL66FIN5t4L5Q4AAAA8fmSfIvv3e/fprHIsJYhwdTDdLQ6fYkOTHYS/Wi9vboHwS0vZVEtyNKxK8UKIG/qIUCD/Nn2JMMUAAAApzxQ1JKoOuSwtvyXj1h39IZ8C4Q</SecurityToken>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJd+wGmzMVEeY1/dSBm3ITQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACN0MTcoVlVsqOSkbWsS1LPAAAAAASAAACgAAAAEAAAABz5phIlWpfcW89C8ob8vDE4AAAAy+92h9SRe01ISVRZMi1wGyCLU/dGJPot1SVa4bgw2B1DrGmYfwh+EZQRIwjsXT+fTQmzsbea3tUUAAAA61BWtsdhLWh3xCm/UIqAVmycvbQ</SecurityToken>
         </SalesforceConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1555,6 +1555,115 @@
             <pipeline
               version="1">
               <components>
+                <component
+                  refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Add Seq Sorting Fields"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Add Seq Sorting Fields"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Add Seq Sorting Fields.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Add Seq Sorting Fields.Inputs[Derived Column Input].Columns[Name]"
+                          cachedDataType="wstr"
+                          cachedLength="80"
+                          cachedName="Name"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[Name]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Add Seq Sorting Fields.Inputs[Derived Column Input].Columns[ucinn_ascendv2__Type]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="ucinn_ascendv2__Type"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[ucinn_ascendv2__Type]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Add Seq Sorting Fields.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Add Seq Sorting Fields.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Add Seq Sorting Fields.Outputs[Derived Column Output].Columns[SortValue_Type]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Add Seq Sorting Fields.Outputs[Derived Column Output].Columns[SortValue_Type]"
+                          name="SortValue_Type"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">#{Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[ucinn_ascendv2__Type]} == "Department" ? 1 : 2</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">ucinn_ascendv2__Type == "Department" ? 1 : 2</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Add Seq Sorting Fields.Outputs[Derived Column Output].Columns[SortValue_ParentRecord]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Add Seq Sorting Fields.Outputs[Derived Column Output].Columns[SortValue_ParentRecord]"
+                          name="SortValue_ParentRecord"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[LEFT](#{Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[Name]},4) == "(GR)" ? 1 : 2</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">LEFT(Name,4) == "(GR)" ? 1 : 2</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Add Seq Sorting Fields.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Add Seq Sorting Fields.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Add Seq Sorting Fields.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Add Seq Sorting Fields.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Add Seq Sorting Fields.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Add Seq Sorting Fields.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
                 <component
                   refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Add ucinn_ascendv2__Code__c to CL Orgs"
                   componentClassID="Microsoft.DerivedColumn"
@@ -6712,6 +6821,115 @@ From "STATIC_DATA"."STATIC"."CampusLink_OrgsToExcludeFromCRM"</property>
                   </outputs>
                 </component>
                 <component
+                  refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Script Component"
+                  componentClassID="Microsoft.ManagedComponentHost"
+                  contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;11"
+                  description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
+                  name="Script Component"
+                  version="11">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Stores the source code of the component"
+                      isArray="true"
+                      name="SourceCode"
+                      state="cdata">
+                      <arrayElements
+                        arrayElementCount="0" />
+                    </property>
+                    <property
+                      dataType="System.String"
+                      description="Stores the binary representation of the component"
+                      isArray="true"
+                      name="BinaryCode"
+                      state="cdata">
+                      <arrayElements
+                        arrayElementCount="0" />
+                    </property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                      name="VSTAProjectName"
+                      typeConverter="NOTBROWSABLE">SC_065f17332407462aa25c8a22c3d3a76d</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the programming language used by the script."
+                      name="ScriptLanguage"
+                      typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">CSharp</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies a comma-separated list of read-only variables."
+                      name="ReadOnlyVariables"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg"></property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies a comma-separated list of read/write variables."
+                      name="ReadWriteVariables"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
+                    <property
+                      dataType="System.String"
+                      description="List of breakpoints present on the script."
+                      isArray="true"
+                      name="BreakpointCollection"
+                      typeConverter="NOTBROWSABLE">
+                      <arrayElements
+                        arrayElementCount="0" />
+                    </property>
+                    <property
+                      dataType="System.String"
+                      description="Checksum to match component metedata against compiled codes."
+                      name="MetadataChecksum140"
+                      typeConverter="NOTBROWSABLE"></property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Script Component.Inputs[Input 0]"
+                      hasSideEffects="true"
+                      name="Input 0">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Script Component.Inputs[Input 0].Columns[ucinn_ascendv2__Code]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="ucinn_ascendv2__Code"
+                          cachedSortKeyPosition="1"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[ucinn_ascendv2__Code]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Script Component.Inputs[Input 0].Columns[SortValue_Type]"
+                          cachedDataType="i4"
+                          cachedName="SortValue_Type"
+                          cachedSortKeyPosition="2"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[SortValue_Type]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Script Component.Inputs[Input 0].Columns[SortValue_ParentRecord]"
+                          cachedDataType="i4"
+                          cachedName="SortValue_ParentRecord"
+                          cachedSortKeyPosition="3"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[SortValue_ParentRecord]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Script Component.Outputs[Output 0]"
+                      name="Output 0"
+                      synchronousInputId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Script Component.Inputs[Input 0]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Script Component.Outputs[Output 0].Columns[Seq]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Script Component.Outputs[Output 0].Columns[Seq]"
+                          name="Seq" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
                   refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Script Component - Get Banner Dept OrganizationID with RegEx"
                   componentClassID="Microsoft.ManagedComponentHost"
                   contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;11"
@@ -10160,6 +10378,618 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   </outputs>
                 </component>
                 <component
+                  refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing"
+                  componentClassID="Microsoft.Sort"
+                  contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+                  name="Sort for Sequencing"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                      name="EliminateDuplicates">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the maximum number of threads to use for sorting."
+                      expressionType="Notify"
+                      name="MaximumThreads">-1</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Inputs[Sort Input]"
+                      name="Sort Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Inputs[Sort Input].Columns[End_Date]"
+                          cachedDataType="dbDate"
+                          cachedName="End_Date"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[End_Date]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Inputs[Sort Input].Columns[Id]"
+                          cachedDataType="wstr"
+                          cachedLength="18"
+                          cachedName="Id"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[Id]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Inputs[Sort Input].Columns[IsDeleted]"
+                          cachedDataType="bool"
+                          cachedName="IsDeleted"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[IsDeleted]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Inputs[Sort Input].Columns[Is_Degree_granting_Unit]"
+                          cachedDataType="bool"
+                          cachedName="Is_Degree_granting_Unit"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[Is_Degree_granting_Unit]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Inputs[Sort Input].Columns[LastReferencedDate]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="LastReferencedDate"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[LastReferencedDate]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Inputs[Sort Input].Columns[LastViewedDate]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="LastViewedDate"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[LastViewedDate]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Inputs[Sort Input].Columns[Location]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Location"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[Location]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Inputs[Sort Input].Columns[Name]"
+                          cachedDataType="wstr"
+                          cachedLength="80"
+                          cachedName="Name"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[Name]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Inputs[Sort Input].Columns[OwnerId]"
+                          cachedDataType="wstr"
+                          cachedLength="18"
+                          cachedName="OwnerId"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[OwnerId]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Inputs[Sort Input].Columns[ucinn_ascendv2__Code]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="ucinn_ascendv2__Code"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[ucinn_ascendv2__Code]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">1</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Inputs[Sort Input].Columns[ucinn_ascendv2__Description_Long]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="ucinn_ascendv2__Description_Long"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[ucinn_ascendv2__Description_Long]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Inputs[Sort Input].Columns[ucinn_ascendv2__Description_Short]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="ucinn_ascendv2__Description_Short"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[ucinn_ascendv2__Description_Short]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Inputs[Sort Input].Columns[ucinn_ascendv2__Effective_Date]"
+                          cachedDataType="dbDate"
+                          cachedName="ucinn_ascendv2__Effective_Date"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[ucinn_ascendv2__Effective_Date]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Inputs[Sort Input].Columns[ucinn_ascendv2__External_System_ID]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="ucinn_ascendv2__External_System_ID"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[ucinn_ascendv2__External_System_ID]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Inputs[Sort Input].Columns[ucinn_ascendv2__Is_Fundraiser_Unit]"
+                          cachedDataType="bool"
+                          cachedName="ucinn_ascendv2__Is_Fundraiser_Unit"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[ucinn_ascendv2__Is_Fundraiser_Unit]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Inputs[Sort Input].Columns[ucinn_ascendv2__Parent_Academic_Organization]"
+                          cachedDataType="wstr"
+                          cachedLength="18"
+                          cachedName="ucinn_ascendv2__Parent_Academic_Organization"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[ucinn_ascendv2__Parent_Academic_Organization]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Inputs[Sort Input].Columns[ucinn_ascendv2__Type]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="ucinn_ascendv2__Type"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[ucinn_ascendv2__Type]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Inputs[Sort Input].Columns[SortValue_Type]"
+                          cachedDataType="i4"
+                          cachedName="SortValue_Type"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Add Seq Sorting Fields.Outputs[Derived Column Output].Columns[SortValue_Type]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">2</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Inputs[Sort Input].Columns[SortValue_ParentRecord]"
+                          cachedDataType="i4"
+                          cachedName="SortValue_ParentRecord"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Add Seq Sorting Fields.Outputs[Derived Column Output].Columns[SortValue_ParentRecord]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">3</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output]"
+                      isSorted="true"
+                      name="Sort Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[End_Date]"
+                          dataType="dbDate"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[End_Date]"
+                          name="End_Date">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[End_Date]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[Id]"
+                          dataType="wstr"
+                          length="18"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[Id]"
+                          name="Id">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[Id]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[IsDeleted]"
+                          dataType="bool"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[IsDeleted]"
+                          name="IsDeleted">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[IsDeleted]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[Is_Degree_granting_Unit]"
+                          dataType="bool"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[Is_Degree_granting_Unit]"
+                          name="Is_Degree_granting_Unit">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[Is_Degree_granting_Unit]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[LastReferencedDate]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[LastReferencedDate]"
+                          name="LastReferencedDate">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[LastReferencedDate]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[LastViewedDate]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[LastViewedDate]"
+                          name="LastViewedDate">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[LastViewedDate]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[Location]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[Location]"
+                          name="Location">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[Location]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[Name]"
+                          dataType="wstr"
+                          length="80"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[Name]"
+                          name="Name">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[Name]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[OwnerId]"
+                          dataType="wstr"
+                          length="18"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[OwnerId]"
+                          name="OwnerId">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[OwnerId]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[ucinn_ascendv2__Code]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[ucinn_ascendv2__Code]"
+                          name="ucinn_ascendv2__Code"
+                          sortKeyPosition="1">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[ucinn_ascendv2__Code]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[ucinn_ascendv2__Description_Long]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[ucinn_ascendv2__Description_Long]"
+                          name="ucinn_ascendv2__Description_Long">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[ucinn_ascendv2__Description_Long]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[ucinn_ascendv2__Description_Short]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[ucinn_ascendv2__Description_Short]"
+                          name="ucinn_ascendv2__Description_Short">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[ucinn_ascendv2__Description_Short]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[ucinn_ascendv2__Effective_Date]"
+                          dataType="dbDate"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[ucinn_ascendv2__Effective_Date]"
+                          name="ucinn_ascendv2__Effective_Date">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[ucinn_ascendv2__Effective_Date]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[ucinn_ascendv2__External_System_ID]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[ucinn_ascendv2__External_System_ID]"
+                          name="ucinn_ascendv2__External_System_ID">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[ucinn_ascendv2__External_System_ID]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[ucinn_ascendv2__Is_Fundraiser_Unit]"
+                          dataType="bool"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[ucinn_ascendv2__Is_Fundraiser_Unit]"
+                          name="ucinn_ascendv2__Is_Fundraiser_Unit">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[ucinn_ascendv2__Is_Fundraiser_Unit]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[ucinn_ascendv2__Parent_Academic_Organization]"
+                          dataType="wstr"
+                          length="18"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[ucinn_ascendv2__Parent_Academic_Organization]"
+                          name="ucinn_ascendv2__Parent_Academic_Organization">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[ucinn_ascendv2__Parent_Academic_Organization]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[ucinn_ascendv2__Type]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[ucinn_ascendv2__Type]"
+                          name="ucinn_ascendv2__Type">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output].Columns[ucinn_ascendv2__Type]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[SortValue_Type]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[SortValue_Type]"
+                          name="SortValue_Type"
+                          sortKeyPosition="2">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Add Seq Sorting Fields.Outputs[Derived Column Output].Columns[SortValue_Type]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[SortValue_ParentRecord]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output].Columns[SortValue_ParentRecord]"
+                          name="SortValue_ParentRecord"
+                          sortKeyPosition="3">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Add Seq Sorting Fields.Outputs[Derived Column Output].Columns[SortValue_ParentRecord]}</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
                   refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort Missing Orgs by CL OrgID"
                   componentClassID="Microsoft.Sort"
                   contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -10538,15 +11368,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   name="Data Conversion Output"
                   startId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Convert OrgID to Sortable StringType.Outputs[Data Conversion Output]" />
                 <path
-                  refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values.Paths[Derived Column Output]"
-                  endId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Devart Salesforce Destination.Inputs[input]"
-                  name="Derived Column Output"
-                  startId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Derived Column.Outputs[Derived Column Output]" />
-                <path
                   refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values.Paths[Derived Column Output1]"
                   endId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get Distinct CampusLinks Orgs with needed Fields.Inputs[Sort Input]"
                   name="Derived Column Output"
                   startId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Add ucinn_ascendv2__Code__c to CL Orgs.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values.Paths[Derived Column Output2]"
+                  endId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Inputs[Sort Input]"
+                  name="Derived Column Output"
+                  startId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Add Seq Sorting Fields.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values.Paths[Derived Column Output]"
+                  endId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Devart Salesforce Destination.Inputs[input]"
+                  name="Derived Column Output"
+                  startId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Derived Column.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values.Paths[Flat File Source Output]"
                   endId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Add ucinn_ascendv2__Code__c to CL Orgs.Inputs[Derived Column Input]"
@@ -10673,15 +11508,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   name="Sort Output"
                   startId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort Org IDs to Exclude.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values.Paths[Source Output]"
-                  endId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Multicast Academic Org Data.Inputs[Multicast Input 1]"
-                  name="Source Output"
-                  startId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output]" />
+                  refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values.Paths[Sort Output10]"
+                  endId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Script Component.Inputs[Input 0]"
+                  name="Sort Output"
+                  startId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values.Paths[Source Output1]"
+                  refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values.Paths[Source Output]"
                   endId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort by Academic Org.Inputs[Sort Input]"
                   name="Source Output"
                   startId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend CL student orgs.Outputs[Source Output]" />
+                <path
+                  refId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values.Paths[Source Output1]"
+                  endId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Add Seq Sorting Fields.Inputs[Derived Column Input]"
+                  name="Source Output"
+                  startId="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs.Outputs[Source Output]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -25013,59 +25853,59 @@ FROM ucinn_ascendv2__Involvement
                   startId="Package\Sequence Container\Update Student Involvements\Multicast.Outputs[Multicast Output 3]" />
                 <path
                   refId="Package\Sequence Container\Update Student Involvements.Paths[Sort Output7]"
-                  endId="Package\Sequence Container\Update Student Involvements\Left Join src recs to ascend recs.Inputs[Merge Join Left Input]"
-                  name="Sort Output"
-                  startId="Package\Sequence Container\Update Student Involvements\Sort src recs by Constituent Rec ID and Involvement Value Code.Outputs[Sort Output]" />
-                <path
-                  refId="Package\Sequence Container\Update Student Involvements.Paths[Sort Output6]"
-                  endId="Package\Sequence Container\Update Student Involvements\Left Join src recs to ascend Constitutents.Inputs[Merge Join Right Input]"
-                  name="Sort Output"
-                  startId="Package\Sequence Container\Update Student Involvements\Sort ascend Recs by CWID.Outputs[Sort Output]" />
-                <path
-                  refId="Package\Sequence Container\Update Student Involvements.Paths[Sort Output5]"
-                  endId="Package\Sequence Container\Update Student Involvements\Merge Join.Inputs[Merge Join Right Input]"
-                  name="Sort Output"
-                  startId="Package\Sequence Container\Update Student Involvements\Sort 1.Outputs[Sort Output]" />
-                <path
-                  refId="Package\Sequence Container\Update Student Involvements.Paths[Sort Output4]"
-                  endId="Package\Sequence Container\Update Student Involvements\Left Join src recs to ascend Constitutents.Inputs[Merge Join Left Input]"
-                  name="Sort Output"
-                  startId="Package\Sequence Container\Update Student Involvements\Sort Source Recs by CWID.Outputs[Sort Output]" />
-                <path
-                  refId="Package\Sequence Container\Update Student Involvements.Paths[Sort Output]"
-                  endId="Package\Sequence Container\Update Student Involvements\Merge Join.Inputs[Merge Join Left Input]"
-                  name="Sort Output"
-                  startId="Package\Sequence Container\Update Student Involvements\Sort.Outputs[Sort Output]" />
-                <path
-                  refId="Package\Sequence Container\Update Student Involvements.Paths[Sort Output2]"
-                  endId="Package\Sequence Container\Update Student Involvements\Merge Join 1.Inputs[Merge Join Right Input]"
-                  name="Sort Output"
-                  startId="Package\Sequence Container\Update Student Involvements\Sort Involvement Values.Outputs[Sort Output]" />
-                <path
-                  refId="Package\Sequence Container\Update Student Involvements.Paths[Sort Output1]"
-                  endId="Package\Sequence Container\Update Student Involvements\Merge Join 1.Inputs[Merge Join Left Input]"
-                  name="Sort Output"
-                  startId="Package\Sequence Container\Update Student Involvements\Sort by Involvement Value.Outputs[Sort Output]" />
-                <path
-                  refId="Package\Sequence Container\Update Student Involvements.Paths[Sort Output3]"
                   endId="Package\Sequence Container\Update Student Involvements\Left Join src recs to ascend recs.Inputs[Merge Join Right Input]"
                   name="Sort Output"
                   startId="Package\Sequence Container\Update Student Involvements\Sort ascend recs by Contact and Involvement Value Code.Outputs[Sort Output]" />
                 <path
+                  refId="Package\Sequence Container\Update Student Involvements.Paths[Sort Output6]"
+                  endId="Package\Sequence Container\Update Student Involvements\Merge Join 1.Inputs[Merge Join Left Input]"
+                  name="Sort Output"
+                  startId="Package\Sequence Container\Update Student Involvements\Sort by Involvement Value.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Sequence Container\Update Student Involvements.Paths[Sort Output5]"
+                  endId="Package\Sequence Container\Update Student Involvements\Merge Join 1.Inputs[Merge Join Right Input]"
+                  name="Sort Output"
+                  startId="Package\Sequence Container\Update Student Involvements\Sort Involvement Values.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Sequence Container\Update Student Involvements.Paths[Sort Output4]"
+                  endId="Package\Sequence Container\Update Student Involvements\Merge Join.Inputs[Merge Join Left Input]"
+                  name="Sort Output"
+                  startId="Package\Sequence Container\Update Student Involvements\Sort.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Sequence Container\Update Student Involvements.Paths[Sort Output]"
+                  endId="Package\Sequence Container\Update Student Involvements\Left Join src recs to ascend recs.Inputs[Merge Join Left Input]"
+                  name="Sort Output"
+                  startId="Package\Sequence Container\Update Student Involvements\Sort src recs by Constituent Rec ID and Involvement Value Code.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Sequence Container\Update Student Involvements.Paths[Sort Output2]"
+                  endId="Package\Sequence Container\Update Student Involvements\Merge Join.Inputs[Merge Join Right Input]"
+                  name="Sort Output"
+                  startId="Package\Sequence Container\Update Student Involvements\Sort 1.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Sequence Container\Update Student Involvements.Paths[Sort Output1]"
+                  endId="Package\Sequence Container\Update Student Involvements\Left Join src recs to ascend Constitutents.Inputs[Merge Join Right Input]"
+                  name="Sort Output"
+                  startId="Package\Sequence Container\Update Student Involvements\Sort ascend Recs by CWID.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Sequence Container\Update Student Involvements.Paths[Sort Output3]"
+                  endId="Package\Sequence Container\Update Student Involvements\Left Join src recs to ascend Constitutents.Inputs[Merge Join Left Input]"
+                  name="Sort Output"
+                  startId="Package\Sequence Container\Update Student Involvements\Sort Source Recs by CWID.Outputs[Sort Output]" />
+                <path
                   refId="Package\Sequence Container\Update Student Involvements.Paths[Source Output2]"
+                  endId="Package\Sequence Container\Update Student Involvements\Multicast.Inputs[Multicast Input 1]"
+                  name="Source Output"
+                  startId="Package\Sequence Container\Update Student Involvements\Get ascend Involvement Values.Outputs[Source Output]" />
+                <path
+                  refId="Package\Sequence Container\Update Student Involvements.Paths[Source Output]"
                   endId="Package\Sequence Container\Update Student Involvements\Sort by Involvement Value.Inputs[Sort Input]"
                   name="Source Output"
                   startId="Package\Sequence Container\Update Student Involvements\Get ascend Student Involvements.Outputs[Source Output]" />
                 <path
-                  refId="Package\Sequence Container\Update Student Involvements.Paths[Source Output]"
+                  refId="Package\Sequence Container\Update Student Involvements.Paths[Source Output1]"
                   endId="Package\Sequence Container\Update Student Involvements\Sort ascend Recs by CWID.Inputs[Sort Input]"
                   name="Source Output"
                   startId="Package\Sequence Container\Update Student Involvements\Get ascend Constituents with CWID.Outputs[Source Output]" />
-                <path
-                  refId="Package\Sequence Container\Update Student Involvements.Paths[Source Output1]"
-                  endId="Package\Sequence Container\Update Student Involvements\Multicast.Inputs[Multicast Input 1]"
-                  name="Source Output"
-                  startId="Package\Sequence Container\Update Student Involvements\Get ascend Involvement Values.Outputs[Source Output]" />
                 <path
                   refId="Package\Sequence Container\Update Student Involvements.Paths[student record in ascend]"
                   endId="Package\Sequence Container\Update Student Involvements\Sort src recs by Constituent Rec ID and Involvement Value Code.Inputs[Sort Input]"
@@ -25133,8 +25973,8 @@ FROM ucinn_ascendv2__Involvement
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="558,322"
-          Size="558,365"
+          PanelSize="558,359"
+          Size="558,402"
           Id="Package\Sequence Container"
           TopLeft="120,156" />
       </GraphLayout>
@@ -25144,7 +25984,7 @@ FROM ucinn_ascendv2__Involvement
     design-time-name="Package\Sequence Container\Add Missing Student Orgs to Involvement Values">
     <LayoutInfo>
       <GraphLayout
-        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="128" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="299,42"
           Id="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Is Org Already in ascend as Involvement Value"
@@ -25168,7 +26008,7 @@ FROM ucinn_ascendv2__Involvement
         <NodeLayout
           Size="330,42"
           Id="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get CampusLink Orgs to Exclude from Snowflake DW"
-          TopLeft="1016,288" />
+          TopLeft="1029,299" />
         <NodeLayout
           Size="256,42"
           Id="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort Academic Orgs by Dep Org Code"
@@ -25176,7 +26016,7 @@ FROM ucinn_ascendv2__Involvement
         <NodeLayout
           Size="172,42"
           Id="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort Academic Orgs"
-          TopLeft="696,511" />
+          TopLeft="703,532" />
         <NodeLayout
           Size="249,42"
           Id="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Left Join to AcOrgs to get DeptCode"
@@ -25194,7 +26034,7 @@ FROM ucinn_ascendv2__Involvement
           Id="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort by ucinn_ascendv2__Code__c"
           TopLeft="103,694" />
         <NodeLayout
-          Size="251,42"
+          Size="218,42"
           Id="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Devart Salesforce Destination"
           TopLeft="129,1226" />
         <NodeLayout
@@ -25204,7 +26044,7 @@ FROM ucinn_ascendv2__Involvement
         <NodeLayout
           Size="214,42"
           Id="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Multicast Academic Org Data"
-          TopLeft="756,429" />
+          TopLeft="808,450" />
         <NodeLayout
           Size="154,42"
           Id="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Derived Column"
@@ -25224,7 +26064,7 @@ FROM ucinn_ascendv2__Involvement
         <NodeLayout
           Size="205,42"
           Id="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Get ascend Academic Orgs"
-          TopLeft="754,290" />
+          TopLeft="751,67" />
         <NodeLayout
           Size="256,42"
           Id="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Convert OrgID to Sortable StringType"
@@ -25425,18 +26265,30 @@ FROM ucinn_ascendv2__Involvement
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Add Missing Student Orgs to Involvement Values.Paths[Sort Output]"
-          TopLeft="696,531">
+          TopLeft="703,553">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-32,0"
+              EndConnector="-39,-23"
               Start="0,0"
-              End="-24.5,0">
+              End="-31.5,-23">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-24.5,0" />
+                    End="-15.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-15.5,0"
+                    Point2="-19.5,0"
+                    Point3="-19.5,-4" />
+                  <mssgle:LineSegment
+                    End="-19.5,-19" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-19.5,-19"
+                    Point2="-19.5,-23"
+                    Point3="-23.5,-23" />
+                  <mssgle:LineSegment
+                    End="-31.5,-23" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -25481,30 +26333,30 @@ FROM ucinn_ascendv2__Involvement
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Add Missing Student Orgs to Involvement Values.Paths[ODBC Source Output]"
-          TopLeft="1181,330">
+          TopLeft="1194,341">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="168,695"
+              EndConnector="155,684"
               Start="0,0"
-              End="168,687.5">
+              End="155,676.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,343.5" />
+                    End="0,338" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,343.5"
-                    Point2="0,347.5"
-                    Point3="4,347.5" />
+                    Point1="0,338"
+                    Point2="0,342"
+                    Point3="4,342" />
                   <mssgle:LineSegment
-                    End="164,347.5" />
+                    End="151,342" />
                   <mssgle:CubicBezierSegment
-                    Point1="164,347.5"
-                    Point2="168,347.5"
-                    Point3="168,351.5" />
+                    Point1="151,342"
+                    Point2="155,342"
+                    Point3="155,346" />
                   <mssgle:LineSegment
-                    End="168,687.5" />
+                    End="155,676.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -25615,70 +26467,74 @@ FROM ucinn_ascendv2__Involvement
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Add Missing Student Orgs to Involvement Values.Paths[Multicast Output 2]"
-          TopLeft="897.333333333333,471">
+          TopLeft="949.333333333333,492">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-44.3333333333333,450"
+              EndConnector="-96.3333333333333,429"
               Start="0,0"
-              End="-44.3333333333333,442.5">
+              End="-96.3333333333333,421.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,178.003710575139" />
+                    End="0,169.510204081633" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,178.003710575139"
-                    Point2="0,182.003710575139"
-                    Point3="-4,182.003710575139" />
+                    Point1="0,169.510204081633"
+                    Point2="0,173.510204081633"
+                    Point3="-4,173.510204081633" />
                   <mssgle:LineSegment
-                    End="-40.3333333333333,182.003710575139" />
+                    End="-92.3333333333333,173.510204081633" />
                   <mssgle:CubicBezierSegment
-                    Point1="-40.3333333333333,182.003710575139"
-                    Point2="-44.3333333333333,182.003710575139"
-                    Point3="-44.3333333333333,186.003710575139" />
+                    Point1="-92.3333333333333,173.510204081633"
+                    Point2="-96.3333333333333,173.510204081633"
+                    Point3="-96.3333333333333,177.510204081633" />
                   <mssgle:LineSegment
-                    End="-44.3333333333333,442.5" />
+                    End="-96.3333333333333,421.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-56.1666666666666,178.510204081633,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Add Missing Student Orgs to Involvement Values.Paths[Multicast Output 11]"
-          TopLeft="863,471">
+          TopLeft="880.666666666667,492">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-81,40"
+              EndConnector="-91.6666666666666,40"
               Start="0,0"
-              End="-81,32.5">
+              End="-91.6666666666666,32.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16" />
+                    End="0,12.178107606679" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,16"
-                    Point2="0,20"
-                    Point3="-4,20" />
+                    Point1="0,12.178107606679"
+                    Point2="0,16.178107606679"
+                    Point3="-4,16.178107606679" />
                   <mssgle:LineSegment
-                    End="-77,20" />
+                    End="-87.6666666666666,16.178107606679" />
                   <mssgle:CubicBezierSegment
-                    Point1="-77,20"
-                    Point2="-81,20"
-                    Point3="-81,24" />
+                    Point1="-87.6666666666666,16.178107606679"
+                    Point2="-91.6666666666666,16.178107606679"
+                    Point3="-91.6666666666666,20.178107606679" />
                   <mssgle:LineSegment
-                    End="-81,32.5" />
+                    End="-91.6666666666666,32.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-53.8333333333333,21.178107606679,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -25947,26 +26803,26 @@ FROM ucinn_ascendv2__Involvement
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-69,8"
+              EndConnector="-102,8"
               Start="0,0"
-              End="-61.5,8">
+              End="-94.5,8">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-30.5,0" />
+                    End="-47,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-30.5,0"
-                    Point2="-34.5,0"
-                    Point3="-34.5,4" />
+                    Point1="-47,0"
+                    Point2="-51,0"
+                    Point3="-51,4" />
                   <mssgle:LineSegment
-                    End="-34.5,4" />
+                    End="-51,4" />
                   <mssgle:CubicBezierSegment
-                    Point1="-34.5,4"
-                    Point2="-34.5,8"
-                    Point3="-38.5,8" />
+                    Point1="-51,4"
+                    Point2="-51,8"
+                    Point3="-55,8" />
                   <mssgle:LineSegment
-                    End="-61.5,8" />
+                    End="-94.5,8" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -26032,7 +26888,7 @@ FROM ucinn_ascendv2__Involvement
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container\Add Missing Student Orgs to Involvement Values.Paths[Source Output1]"
+          Id="Package\Sequence Container\Add Missing Student Orgs to Involvement Values.Paths[Source Output]"
           TopLeft="551.5,339">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26045,28 +26901,6 @@ FROM ucinn_ascendv2__Involvement
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,80.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Add Missing Student Orgs to Involvement Values.Paths[Source Output]"
-          TopLeft="859.75,332">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,97"
-              Start="0,0"
-              End="0,89.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,89.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -26199,6 +27033,84 @@ FROM ucinn_ascendv2__Involvement
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="201,42"
+          Id="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Sort for Sequencing"
+          TopLeft="759,218" />
+        <NodeLayout
+          Size="197,42"
+          Id="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Add Seq Sorting Fields"
+          TopLeft="759,139" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Add Missing Student Orgs to Involvement Values.Paths[Source Output1]"
+          TopLeft="855.5,109">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30"
+              Start="0,0"
+              End="0,22.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Add Missing Student Orgs to Involvement Values.Paths[Derived Column Output2]"
+          TopLeft="858.5,181">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="198,42"
+          Id="Package\Sequence Container\Add Missing Student Orgs to Involvement Values\Script Component"
+          TopLeft="764,299" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Add Missing Student Orgs to Involvement Values.Paths[Sort Output10]"
+          TopLeft="861.25,260">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39"
+              Start="0,0"
+              End="0,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -26321,28 +27233,6 @@ FROM ucinn_ascendv2__Involvement
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Update Student Involvements.Paths[Source Output2]"
-          TopLeft="948.5,59">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,50"
-              Start="0,0"
-              End="0,42.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,42.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Update Student Involvements.Paths[Source Output1]"
           TopLeft="1314.5,58">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26376,7 +27266,7 @@ FROM ucinn_ascendv2__Involvement
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container\Update Student Involvements.Paths[Source Output]"
+          Id="Package\Sequence Container\Update Student Involvements.Paths[Source Output1]"
           TopLeft="607.5,62">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26398,143 +27288,29 @@ FROM ucinn_ascendv2__Involvement
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Sequence Container\Update Student Involvements.Paths[Source Output]"
+          TopLeft="948.5,59">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50"
+              Start="0,0"
+              End="0,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Sequence Container\Update Student Involvements.Paths[Sort Output7]"
-          TopLeft="613.5,499">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="84.8333333333334,107"
-              Start="0,0"
-              End="84.8333333333334,99.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,59.9336099585062" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,59.9336099585062"
-                    Point2="0,63.9336099585062"
-                    Point3="4,63.9336099585062" />
-                  <mssgle:LineSegment
-                    End="80.8333333333334,63.9336099585062" />
-                  <mssgle:CubicBezierSegment
-                    Point1="80.8333333333334,63.9336099585062"
-                    Point2="84.8333333333334,63.9336099585062"
-                    Point3="84.8333333333334,67.9336099585062" />
-                  <mssgle:LineSegment
-                    End="84.8333333333334,99.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Update Student Involvements.Paths[Sort Output6]"
-          TopLeft="609.5,219">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="49.5,52"
-              Start="0,0"
-              End="49.5,44.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.0175438596491" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,27.0175438596491"
-                    Point2="0,31.0175438596491"
-                    Point3="4,31.0175438596491" />
-                  <mssgle:LineSegment
-                    End="45.5,31.0175438596491" />
-                  <mssgle:CubicBezierSegment
-                    Point1="45.5,31.0175438596491"
-                    Point2="49.5,31.0175438596491"
-                    Point3="49.5,35.0175438596491" />
-                  <mssgle:LineSegment
-                    End="49.5,44.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Update Student Involvements.Paths[Sort Output5]"
-          TopLeft="1338.5,733">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-38.1666666666667,80"
-              Start="0,0"
-              End="-38.1666666666667,72.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,43.4164133738602" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,43.4164133738602"
-                    Point2="0,47.4164133738602"
-                    Point3="-4,47.4164133738602" />
-                  <mssgle:LineSegment
-                    End="-34.1666666666667,47.4164133738602" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-34.1666666666667,47.4164133738602"
-                    Point2="-38.1666666666667,47.4164133738602"
-                    Point3="-38.1666666666667,51.4164133738602" />
-                  <mssgle:LineSegment
-                    End="-38.1666666666667,72.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Update Student Involvements.Paths[Sort Output4]"
-          TopLeft="240,222">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="331,49"
-              Start="0,0"
-              End="331,41.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.2280701754386" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.2280701754386"
-                    Point2="0,29.2280701754386"
-                    Point3="4,29.2280701754386" />
-                  <mssgle:LineSegment
-                    End="327,29.2280701754386" />
-                  <mssgle:CubicBezierSegment
-                    Point1="327,29.2280701754386"
-                    Point2="331,29.2280701754386"
-                    Point3="331,33.2280701754386" />
-                  <mssgle:LineSegment
-                    End="331,41.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Update Student Involvements.Paths[Sort Output3]"
           TopLeft="967.5,320">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26568,29 +27344,7 @@ FROM ucinn_ascendv2__Involvement
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container\Update Student Involvements.Paths[Sort Output2]"
-          TopLeft="1073,218">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-40,0"
-              Start="0,0"
-              End="-32.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-32.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Update Student Involvements.Paths[Sort Output1]"
+          Id="Package\Sequence Container\Update Student Involvements.Paths[Sort Output6]"
           TopLeft="943.333333333333,151">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26612,7 +27366,29 @@ FROM ucinn_ascendv2__Involvement
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container\Update Student Involvements.Paths[Sort Output]"
+          Id="Package\Sequence Container\Update Student Involvements.Paths[Sort Output5]"
+          TopLeft="1073,218">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-40,0"
+              Start="0,0"
+              End="-32.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-32.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Update Student Involvements.Paths[Sort Output4]"
           TopLeft="1102,741">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26637,6 +27413,142 @@ FROM ucinn_ascendv2__Involvement
                     Point3="178,40" />
                   <mssgle:LineSegment
                     End="178,64.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Update Student Involvements.Paths[Sort Output3]"
+          TopLeft="240,222">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="331,49"
+              Start="0,0"
+              End="331,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.2280701754386" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.2280701754386"
+                    Point2="0,29.2280701754386"
+                    Point3="4,29.2280701754386" />
+                  <mssgle:LineSegment
+                    End="327,29.2280701754386" />
+                  <mssgle:CubicBezierSegment
+                    Point1="327,29.2280701754386"
+                    Point2="331,29.2280701754386"
+                    Point3="331,33.2280701754386" />
+                  <mssgle:LineSegment
+                    End="331,41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Update Student Involvements.Paths[Sort Output2]"
+          TopLeft="1338.5,733">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-38.1666666666667,80"
+              Start="0,0"
+              End="-38.1666666666667,72.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.4164133738602" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,43.4164133738602"
+                    Point2="0,47.4164133738602"
+                    Point3="-4,47.4164133738602" />
+                  <mssgle:LineSegment
+                    End="-34.1666666666667,47.4164133738602" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-34.1666666666667,47.4164133738602"
+                    Point2="-38.1666666666667,47.4164133738602"
+                    Point3="-38.1666666666667,51.4164133738602" />
+                  <mssgle:LineSegment
+                    End="-38.1666666666667,72.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Update Student Involvements.Paths[Sort Output1]"
+          TopLeft="609.5,219">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="49.5,52"
+              Start="0,0"
+              End="49.5,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.0175438596491" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.0175438596491"
+                    Point2="0,31.0175438596491"
+                    Point3="4,31.0175438596491" />
+                  <mssgle:LineSegment
+                    End="45.5,31.0175438596491" />
+                  <mssgle:CubicBezierSegment
+                    Point1="45.5,31.0175438596491"
+                    Point2="49.5,31.0175438596491"
+                    Point3="49.5,35.0175438596491" />
+                  <mssgle:LineSegment
+                    End="49.5,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Update Student Involvements.Paths[Sort Output]"
+          TopLeft="613.5,499">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="84.8333333333334,107"
+              Start="0,0"
+              End="84.8333333333334,99.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,59.9336099585062" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,59.9336099585062"
+                    Point2="0,63.9336099585062"
+                    Point3="4,63.9336099585062" />
+                  <mssgle:LineSegment
+                    End="80.8333333333334,63.9336099585062" />
+                  <mssgle:CubicBezierSegment
+                    Point1="80.8333333333334,63.9336099585062"
+                    Point2="84.8333333333334,63.9336099585062"
+                    Point3="84.8333333333334,67.9336099585062" />
+                  <mssgle:LineSegment
+                    End="84.8333333333334,99.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
