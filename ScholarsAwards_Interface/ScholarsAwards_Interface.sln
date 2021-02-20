@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "ScholarsAwards_Interface", "ScholarsAwards_Interface\ScholarsAwards_Interface.dtproj", "{CB3AAA63-91E7-45AC-965B-452384FFD945}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB3AAA63-91E7-45AC-965B-452384FFD945}.Development|Default.ActiveCfg = Development
+		{CB3AAA63-91E7-45AC-965B-452384FFD945}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CD849D1E-1532-47A1-9EAA-1BCD41044ACF}
+	EndGlobalSection
+EndGlobal
