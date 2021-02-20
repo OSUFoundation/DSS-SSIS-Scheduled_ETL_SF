@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="MASTER_Pkg"
   DTS:PackageType="5"
-  DTS:VersionBuild="121"
-  DTS:VersionGUID="{486026E7-0D1C-460B-8E24-EBDEA5E494B3}">
+  DTS:VersionBuild="122"
+  DTS:VersionGUID="{C4B58CA2-0B7B-4780-B55A-25371F133B97}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,10 +27,10 @@
           <ConnectionString>User Id=ccameron@osugiving.com.qa;Host=test.salesforce.com;System Objects=True;Refresh Metadata=False;Batch Size=2000</ConnectionString>
           <Password
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJd+wGmzMVEeY1/dSBm3ITQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACK7UgmAu7nqHNK+4F1vcuoAAAAAASAAACgAAAAEAAAAIl3yQgdEMFBJML37mInraEoAAAAdYCfsIbTKW+C3y+EyU8mj6wH9h1xt7QbEDq3vGzV1FmFAxZOY6KuoRQAAABcI1Ot/MD+6skKiwZQ35BY3KKbQg</Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJd+wGmzMVEeY1/dSBm3ITQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAB9ijuzyJ+TO7SJN2s9ZonxAAAAAASAAACgAAAAEAAAADhM0S17xC9mCp0+4wl6ghsoAAAA6yOvfL3r6lGJnBwhPK7gWGyWZk/c3R3y8ydbxBiTr92XwsibHR6hLRQAAADv9N15d/HFOpm7XvE6/q/C0Of/mg</Password>
           <SecurityToken
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJd+wGmzMVEeY1/dSBm3ITQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAFNfmmMf7XiFrqTgKDD0c2AAAAAASAAACgAAAAEAAAAKI1Sm/dttNnoaSR6ZFHXEI4AAAAU6mt3oTeRJ6R0DoCaQ/TnKRYd6IvBq4M9lUAEHY4oLeFEZ/1w/Adv5FgVHX8ST0Yg9papgihSsIUAAAAbOqqlXsZK/a5gXBTM4/3IO8arac</SecurityToken>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJd+wGmzMVEeY1/dSBm3ITQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADZtWR8QTESqdcfUUmpGFflAAAAAASAAACgAAAAEAAAAKi4JuWgFC0VvZCbloLnPCs4AAAAv+wmpDE/m39XGPjQ2zdF8gvpChtzyn2Z9bBLx3QxQTh2vLG7AtQPj8RZgT7LpUtcVcH6ErI+k+MUAAAATYySWiNX9Z92BA9U87zGc6DUWvg</SecurityToken>
         </SalesforceConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1924,6 +1924,113 @@
                 Name="ST_555134523fad480d88f32ff14509c31e.vbproj"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{57A75D8D-6672-4A03-ADD0-5CF31EF77178}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>My Project</AppDesignerFolder><RootNamespace>ST_59dfa5ba43f3469c98bb340dfe7b3e72</RootNamespace><AssemblyName>ST_555134523fad480d88f32ff14509c31e</AssemblyName><TargetFrameworkVersion>v4.5</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch><TargetFrameworkProfile></TargetFrameworkProfile></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineDebug>true</DefineDebug><DefineTrace>true</DefineTrace><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineDebug>false</DefineDebug><DefineTrace>true</DefineTrace><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.ManagedDTS, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.ScriptTask, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" /></ItemGroup><ItemGroup><Import Include="Microsoft.VisualBasic" /><Import Include="System" /><Import Include="System.Collections" /><Import Include="System.Data" /><Import Include="System.Diagnostics" /><Import Include="System.Windows.Forms" /></ItemGroup><ItemGroup><AppDesigner Include="My Project\" /><Compile Include="My Project\AssemblyInfo.vb"><SubType>Code</SubType></Compile><EmbeddedResource Include="My Project\Resources.resx"><Generator>VbMyResourcesResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.vb</LastGenOutput><CustomToolNamespace>My.Resources</CustomToolNamespace></EmbeddedResource><Compile Include="My Project\Resources.Designer.vb"><AutoGen>True</AutoGen><DesignTime>True</DesignTime><DependentUpon>Resources.resx</DependentUpon><SubType>Code</SubType></Compile><None Include="My Project\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.vb</LastGenOutput></None><Compile Include="My Project\Settings.Designer.vb"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon><SubType>Code</SubType></Compile><Compile Include="ScriptMain.vb"><SubType>Code</SubType></Compile></ItemGroup><!-- Include the build rules for a VB project.--><Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" /><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" /><Host Name="ScriptTask" /><ProjectClient><HostIdentifier>SSIS_ST130</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></ProjectItem>
               <ProjectItem
+                Name="My Project\AssemblyInfo.vb"
+                Encoding="UTF8"><![CDATA[Imports System
+Imports System.Reflection
+Imports System.Runtime.InteropServices
+
+' General Information about an assembly is controlled through the following 
+' set of attributes. Change these attribute values to modify the information
+' associated with an assembly.
+
+' Review the values of the assembly attributes
+
+<Assembly: AssemblyTitle("ST_59dfa5ba43f3469c98bb340dfe7b3e72")> 
+<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyCompany("")> 
+<Assembly: AssemblyProduct("ST_59dfa5ba43f3469c98bb340dfe7b3e72")> 
+<Assembly: AssemblyCopyright("Copyright @  2019")> 
+<Assembly: AssemblyTrademark("")> 
+<Assembly: CLSCompliant(True)> 
+
+<Assembly: ComVisible(False)> 
+
+'The following GUID is for the ID of the typelib if this project is exposed to COM
+<Assembly: Guid("beb26878-c19a-453a-aa5e-45b9049c46a9")> 
+
+' Version information for an assembly consists of the following four values:
+'
+'      Major Version
+'      Minor Version 
+'      Build Number
+'      Revision
+'
+' You can specify all the values or you can default the Build and Revision Numbers 
+' by using the '*' as shown below:
+' <Assembly: AssemblyVersion("1.0.*")>
+
+<Assembly: AssemblyVersion("1.0.0.0")> 
+<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.Designer.vb"
+                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
+' <autogenerated>
+'     This code was generated by a tool.
+'
+'     Changes to this file may cause incorrect behavior and will be lost if
+'     the code is regenerated.
+' </autogenerated>
+'------------------------------------------------------------------------------
+
+Option Strict Off
+Option Explicit On
+
+
+
+Partial Friend NotInheritable Class MySettings
+    Inherits System.Configuration.ApplicationSettingsBase
+
+    Private Shared m_Value As MySettings
+
+    Private Shared m_SyncObject As Object = New Object
+
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Public Shared ReadOnly Property Value() As MySettings
+        Get
+            If (MySettings.m_Value Is Nothing) Then
+                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
+                If (MySettings.m_Value Is Nothing) Then
+                    Try
+                        MySettings.m_Value = New MySettings
+                    Finally
+                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
+                    End Try
+                End If
+            End If
+            Return MySettings.m_Value
+        End Get
+    End Property
+End Class]]></ProjectItem>
+              <ProjectItem
+                Name="Project"
+                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:CodeName>ST_07cce78d56364c5ba3b27922643aef77</msb:CodeName>
+		<msb:Language>msBuild</msb:Language>
+		<msb:DisplayName>ST_07cce78d56364c5ba3b27922643aef77</msb:DisplayName>
+		<msb:ProjectId>{A50714DB-92D1-486C-B01C-2155F4624280}</msb:ProjectId>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:Project Include="ST_555134523fad480d88f32ff14509c31e.vbproj"/>
+		<msb:File Include="My Project\AssemblyInfo.vb"/>
+		<msb:File Include="ScriptMain.vb"/>
+		<msb:File Include="My Project\Resources.resx"/>
+		<msb:File Include="My Project\Resources.Designer.vb"/>
+		<msb:File Include="My Project\Settings.settings"/>
+		<msb:File Include="My Project\Settings.Designer.vb"/>
+	</msb:ItemGroup>
+</c:Project>]]></ProjectItem>
+              <ProjectItem
                 Name="ScriptMain.vb"
                 Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
 'The Script Task allows you to perform virtually any operation that can be accomplished in
@@ -2039,113 +2146,6 @@ Partial Public Class ScriptMain
 #End Region
 
 End Class]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\AssemblyInfo.vb"
-                Encoding="UTF8"><![CDATA[Imports System
-Imports System.Reflection
-Imports System.Runtime.InteropServices
-
-' General Information about an assembly is controlled through the following 
-' set of attributes. Change these attribute values to modify the information
-' associated with an assembly.
-
-' Review the values of the assembly attributes
-
-<Assembly: AssemblyTitle("ST_59dfa5ba43f3469c98bb340dfe7b3e72")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("ST_59dfa5ba43f3469c98bb340dfe7b3e72")> 
-<Assembly: AssemblyCopyright("Copyright @  2019")> 
-<Assembly: AssemblyTrademark("")> 
-<Assembly: CLSCompliant(True)> 
-
-<Assembly: ComVisible(False)> 
-
-'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("beb26878-c19a-453a-aa5e-45b9049c46a9")> 
-
-' Version information for an assembly consists of the following four values:
-'
-'      Major Version
-'      Minor Version 
-'      Build Number
-'      Revision
-'
-' You can specify all the values or you can default the Build and Revision Numbers 
-' by using the '*' as shown below:
-' <Assembly: AssemblyVersion("1.0.*")>
-
-<Assembly: AssemblyVersion("1.0.0.0")> 
-<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\Settings.Designer.vb"
-                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
-' <autogenerated>
-'     This code was generated by a tool.
-'
-'     Changes to this file may cause incorrect behavior and will be lost if
-'     the code is regenerated.
-' </autogenerated>
-'------------------------------------------------------------------------------
-
-Option Strict Off
-Option Explicit On
-
-
-
-Partial Friend NotInheritable Class MySettings
-    Inherits System.Configuration.ApplicationSettingsBase
-
-    Private Shared m_Value As MySettings
-
-    Private Shared m_SyncObject As Object = New Object
-
-    <System.Diagnostics.DebuggerNonUserCode()> _
-    Public Shared ReadOnly Property Value() As MySettings
-        Get
-            If (MySettings.m_Value Is Nothing) Then
-                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
-                If (MySettings.m_Value Is Nothing) Then
-                    Try
-                        MySettings.m_Value = New MySettings
-                    Finally
-                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
-                    End Try
-                End If
-            End If
-            Return MySettings.m_Value
-        End Get
-    End Property
-End Class]]></ProjectItem>
-              <ProjectItem
-                Name="Project"
-                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
-	<msb:PropertyGroup>
-		<msb:CodeName>ST_07cce78d56364c5ba3b27922643aef77</msb:CodeName>
-		<msb:Language>msBuild</msb:Language>
-		<msb:DisplayName>ST_07cce78d56364c5ba3b27922643aef77</msb:DisplayName>
-		<msb:ProjectId>{A50714DB-92D1-486C-B01C-2155F4624280}</msb:ProjectId>
-	</msb:PropertyGroup>
-	<msb:ItemGroup>
-		<msb:Project Include="ST_555134523fad480d88f32ff14509c31e.vbproj"/>
-		<msb:File Include="My Project\AssemblyInfo.vb"/>
-		<msb:File Include="ScriptMain.vb"/>
-		<msb:File Include="My Project\Resources.resx"/>
-		<msb:File Include="My Project\Resources.Designer.vb"/>
-		<msb:File Include="My Project\Settings.settings"/>
-		<msb:File Include="My Project\Settings.Designer.vb"/>
-	</msb:ItemGroup>
-</c:Project>]]></ProjectItem>
               <ProjectItem
                 Name="My Project\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -14240,22 +14240,22 @@ From "OSUF_INTERFACES"."STUDENT_INVOLVEMENTS"."SI_Delta"</property>
                   name="involvement not in ascend"
                   startId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Involvement Record Exists?.Outputs[involvement not in ascend]" />
                 <path
-                  refId="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Merge Join Output2]"
+                  refId="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Merge Join Output]"
                   endId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Sort ascend recs by Contact and Involvement Value Code.Inputs[Sort Input]"
                   name="Merge Join Output"
                   startId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Merge Join 1.Outputs[Merge Join Output]" />
                 <path
-                  refId="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Merge Join Output3]"
+                  refId="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Merge Join Output1]"
                   endId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Are src rec students in ascend?.Inputs[Conditional Split Input]"
                   name="Merge Join Output"
                   startId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Left Join src recs to ascend Constitutents.Outputs[Merge Join Output]" />
                 <path
-                  refId="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Merge Join Output]"
+                  refId="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Merge Join Output2]"
                   endId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Involvement Record Exists?.Inputs[Conditional Split Input]"
                   name="Merge Join Output"
                   startId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Left Join src recs to ascend recs.Outputs[Merge Join Output]" />
                 <path
-                  refId="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Merge Join Output1]"
+                  refId="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Merge Join Output3]"
                   endId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Derived Column.Inputs[Derived Column Input]"
                   name="Merge Join Output"
                   startId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Merge Join.Outputs[Merge Join Output]" />
@@ -14281,44 +14281,49 @@ From "OSUF_INTERFACES"."STUDENT_INVOLVEMENTS"."SI_Delta"</property>
                   startId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Are src rec students in ascend?.Outputs[record not in ascend]" />
                 <path
                   refId="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Sort Output7]"
+                  endId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Merge Join.Inputs[Merge Join Left Input]"
+                  name="Sort Output"
+                  startId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Sort.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Sort Output6]"
+                  endId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Merge Join 1.Inputs[Merge Join Left Input]"
+                  name="Sort Output"
+                  startId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Sort by Involvement Value.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Sort Output5]"
+                  endId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Merge Join 1.Inputs[Merge Join Right Input]"
+                  name="Sort Output"
+                  startId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Sort Involvement Values.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Sort Output4]"
+                  endId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Left Join src recs to ascend Constitutents.Inputs[Merge Join Right Input]"
+                  name="Sort Output"
+                  startId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Sort ascend Recs by CWID.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Sort Output]"
                   endId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Left Join src recs to ascend Constitutents.Inputs[Merge Join Left Input]"
                   name="Sort Output"
                   startId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Sort Source Recs by CWID.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Sort Output6]"
-                  endId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Left Join src recs to ascend recs.Inputs[Merge Join Right Input]"
-                  name="Sort Output"
-                  startId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Sort ascend recs by Contact and Involvement Value Code.Outputs[Sort Output]" />
-                <path
-                  refId="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Sort Output5]"
+                  refId="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Sort Output2]"
                   endId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Left Join src recs to ascend recs.Inputs[Merge Join Left Input]"
                   name="Sort Output"
                   startId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Sort src recs by Constituent Rec ID and Involvement Value Code.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Sort Output1]"
+                  endId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Left Join src recs to ascend recs.Inputs[Merge Join Right Input]"
+                  name="Sort Output"
+                  startId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Sort ascend recs by Contact and Involvement Value Code.Outputs[Sort Output]" />
                 <path
                   refId="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Sort Output3]"
                   endId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Merge Join.Inputs[Merge Join Right Input]"
                   name="Sort Output"
                   startId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Sort 1.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Sort Output2]"
-                  endId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Left Join src recs to ascend Constitutents.Inputs[Merge Join Right Input]"
-                  name="Sort Output"
-                  startId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Sort ascend Recs by CWID.Outputs[Sort Output]" />
-                <path
-                  refId="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Sort Output1]"
-                  endId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Merge Join 1.Inputs[Merge Join Right Input]"
-                  name="Sort Output"
-                  startId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Sort Involvement Values.Outputs[Sort Output]" />
-                <path
-                  refId="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Sort Output]"
-                  endId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Merge Join 1.Inputs[Merge Join Left Input]"
-                  name="Sort Output"
-                  startId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Sort by Involvement Value.Outputs[Sort Output]" />
-                <path
-                  refId="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Sort Output4]"
-                  endId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Merge Join.Inputs[Merge Join Left Input]"
-                  name="Sort Output"
-                  startId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Sort.Outputs[Sort Output]" />
+                  refId="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Source Output2]"
+                  endId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Sort ascend Recs by CWID.Inputs[Sort Input]"
+                  name="Source Output"
+                  startId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Get ascend Constituents with CWID.Outputs[Source Output]" />
                 <path
                   refId="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Source Output]"
                   endId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Sort by Involvement Value.Inputs[Sort Input]"
@@ -14329,11 +14334,6 @@ From "OSUF_INTERFACES"."STUDENT_INVOLVEMENTS"."SI_Delta"</property>
                   endId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Multicast.Inputs[Multicast Input 1]"
                   name="Source Output"
                   startId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Get ascend Involvement Values.Outputs[Source Output]" />
-                <path
-                  refId="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Source Output2]"
-                  endId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Sort ascend Recs by CWID.Inputs[Sort Input]"
-                  name="Source Output"
-                  startId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Get ascend Constituents with CWID.Outputs[Source Output]" />
                 <path
                   refId="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[student record in ascend]"
                   endId="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Sort src recs by Constituent Rec ID and Involvement Value Code.Inputs[Sort Input]"
@@ -25439,24 +25439,24 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Get CampusLink Org Directory.Outputs[Flat File Source Output]" />
                 <path
                   refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Merge Join Output3]"
-                  endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Is Org Already in ascend as Involvement Value.Inputs[Conditional Split Input]"
+                  endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Get Distinct Student Org Name and Code.Inputs[Sort Input]"
                   name="Merge Join Output"
-                  startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Merge Join.Outputs[Merge Join Output]" />
+                  startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Left Join to AcOrgs to get DeptCode.Outputs[Merge Join Output]" />
                 <path
                   refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Merge Join Output2]"
-                  endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Is OrgID in List to Exclude.Inputs[Conditional Split Input]"
-                  name="Merge Join Output"
-                  startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Left Join to Orgs to Exclude.Outputs[Merge Join Output]" />
-                <path
-                  refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Merge Join Output]"
                   endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Convert OrgID to Sortable StringType.Inputs[Data Conversion Input]"
                   name="Merge Join Output"
                   startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Left Join to Academic Orgs.Outputs[Merge Join Output]" />
                 <path
-                  refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Merge Join Output1]"
-                  endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Get Distinct Student Org Name and Code.Inputs[Sort Input]"
+                  refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Merge Join Output]"
+                  endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Is Org Already in ascend as Involvement Value.Inputs[Conditional Split Input]"
                   name="Merge Join Output"
-                  startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Left Join to AcOrgs to get DeptCode.Outputs[Merge Join Output]" />
+                  startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Merge Join.Outputs[Merge Join Output]" />
+                <path
+                  refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Merge Join Output1]"
+                  endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Is OrgID in List to Exclude.Inputs[Conditional Split Input]"
+                  name="Merge Join Output"
+                  startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Left Join to Orgs to Exclude.Outputs[Merge Join Output]" />
                 <path
                   refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Merge Output 1]"
                   endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Left Join to Academic Orgs.Inputs[Merge Join Left Input]"
@@ -25519,59 +25519,59 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Select Records with Seq Equal to 1.Outputs[Seq Equals 1]" />
                 <path
                   refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output10]"
-                  endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Left Join to AcOrgs to get DeptCode.Inputs[Merge Join Left Input]"
+                  endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Left Join to Academic Orgs.Inputs[Merge Join Right Input]"
                   name="Sort Output"
-                  startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Sort by Academic Org.Outputs[Sort Output]" />
+                  startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Sort Academic Orgs by Dep Org Code.Outputs[Sort Output]" />
                 <path
                   refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output9]"
-                  endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Script Component - Get Banner Dept OrganizationID with RegEx.Inputs[Input 0]"
-                  name="Sort Output"
-                  startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Get Distinct CampusLinks Orgs with needed Fields.Outputs[Sort Output]" />
-                <path
-                  refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output8]"
-                  endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Left Join to AcOrgs to get DeptCode.Inputs[Merge Join Right Input]"
-                  name="Sort Output"
-                  startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Sort Academic Orgs.Outputs[Sort Output]" />
-                <path
-                  refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output7]"
-                  endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Add Seq field.Inputs[Input 0]"
-                  name="Sort Output"
-                  startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output]" />
-                <path
-                  refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output6]"
-                  endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Left Join to Orgs to Exclude.Inputs[Merge Join Right Input]"
-                  name="Sort Output"
-                  startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Sort Org IDs to Exclude.Outputs[Sort Output]" />
-                <path
-                  refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output3]"
-                  endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Merge New and Updated Records.Inputs[Merge Input 2]"
-                  name="Sort Output"
-                  startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Sort CampusLink Orgs by Dep Org Code (b).Outputs[Sort Output]" />
-                <path
-                  refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output4]"
-                  endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Merge Join.Inputs[Merge Join Right Input]"
-                  name="Sort Output"
-                  startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Get Distinct Student Org Name and Code.Outputs[Sort Output]" />
-                <path
-                  refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output2]"
-                  endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Merge New and Updated Records.Inputs[Merge Input 1]"
-                  name="Sort Output"
-                  startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Sort CampusLink Orgs by Dep Org Code (a).Outputs[Sort Output]" />
-                <path
-                  refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output1]"
-                  endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Left Join to Orgs to Exclude.Inputs[Merge Join Left Input]"
-                  name="Sort Output"
-                  startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Sort Missing Orgs by CL OrgID.Outputs[Sort Output]" />
-                <path
-                  refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output]"
                   endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Merge Join.Inputs[Merge Join Left Input]"
                   name="Sort Output"
                   startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Sort by ucinn_ascendv2__Code__c.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output5]"
-                  endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Left Join to Academic Orgs.Inputs[Merge Join Right Input]"
+                  refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output8]"
+                  endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Left Join to Orgs to Exclude.Inputs[Merge Join Left Input]"
                   name="Sort Output"
-                  startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Sort Academic Orgs by Dep Org Code.Outputs[Sort Output]" />
+                  startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Sort Missing Orgs by CL OrgID.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output7]"
+                  endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Merge New and Updated Records.Inputs[Merge Input 1]"
+                  name="Sort Output"
+                  startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Sort CampusLink Orgs by Dep Org Code (a).Outputs[Sort Output]" />
+                <path
+                  refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output6]"
+                  endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Merge Join.Inputs[Merge Join Right Input]"
+                  name="Sort Output"
+                  startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Get Distinct Student Org Name and Code.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output3]"
+                  endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Add Seq field.Inputs[Input 0]"
+                  name="Sort Output"
+                  startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Sort for Sequencing.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output4]"
+                  endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Left Join to Orgs to Exclude.Inputs[Merge Join Right Input]"
+                  name="Sort Output"
+                  startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Sort Org IDs to Exclude.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output2]"
+                  endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Left Join to AcOrgs to get DeptCode.Inputs[Merge Join Right Input]"
+                  name="Sort Output"
+                  startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Sort Academic Orgs.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output1]"
+                  endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Script Component - Get Banner Dept OrganizationID with RegEx.Inputs[Input 0]"
+                  name="Sort Output"
+                  startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Get Distinct CampusLinks Orgs with needed Fields.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output]"
+                  endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Left Join to AcOrgs to get DeptCode.Inputs[Merge Join Left Input]"
+                  name="Sort Output"
+                  startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Sort by Academic Org.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output5]"
+                  endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Merge New and Updated Records.Inputs[Merge Input 2]"
+                  name="Sort Output"
+                  startId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Sort CampusLink Orgs by Dep Org Code (b).Outputs[Sort Output]" />
                 <path
                   refId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Source Output]"
                   endId="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Add Seq Sorting Fields.Inputs[Derived Column Input]"
@@ -25652,6 +25652,116 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               VSTAMinorVersion="0"
               Language="VisualBasic"
               ReadOnlyVariables="User::SFPassword,User::SnowSQLConfigDir">
+              <ProjectItem
+                Name="My Project\AssemblyInfo.vb"
+                Encoding="UTF8"><![CDATA[Imports System
+Imports System.Reflection
+Imports System.Runtime.InteropServices
+
+' General Information about an assembly is controlled through the following 
+' set of attributes. Change these attribute values to modify the information
+' associated with an assembly.
+
+' Review the values of the assembly attributes
+
+<Assembly: AssemblyTitle("ST_e7b0c7ca59e54170856a99374faf9dc2")> 
+<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyCompany("")> 
+<Assembly: AssemblyProduct("ST_e7b0c7ca59e54170856a99374faf9dc2")> 
+<Assembly: AssemblyCopyright("Copyright @  2021")> 
+<Assembly: AssemblyTrademark("")> 
+<Assembly: CLSCompliant(True)> 
+
+<Assembly: ComVisible(False)> 
+
+'The following GUID is for the ID of the typelib if this project is exposed to COM
+<Assembly: Guid("a7a44013-9c43-43fe-ac7d-fea8ade993f4")> 
+
+' Version information for an assembly consists of the following four values:
+'
+'      Major Version
+'      Minor Version 
+'      Build Number
+'      Revision
+'
+' You can specify all the values or you can default the Build and Revision Numbers 
+' by using the '*' as shown below:
+' <Assembly: AssemblyVersion("1.0.*")>
+
+<Assembly: AssemblyVersion("1.0.0.0")> 
+<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+              <ProjectItem
+                Name="Project"
+                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:Language>msBuild</msb:Language>
+		<msb:CodeName>ST_e7b0c7ca59e54170856a99374faf9dc2</msb:CodeName>
+		<msb:DisplayName>ST_e7b0c7ca59e54170856a99374faf9dc2</msb:DisplayName>
+		<msb:ProjectId>{C915865D-BC6F-4391-8884-1DE37B202DC1}</msb:ProjectId>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:Project Include="ST_be1a79c0db4f4bbea6fca586a68515dc.vbproj"/>
+		<msb:File Include="My Project\AssemblyInfo.vb"/>
+		<msb:File Include="ScriptMain.vb"/>
+		<msb:File Include="My Project\Resources.resx"/>
+		<msb:File Include="My Project\Resources.Designer.vb"/>
+		<msb:File Include="My Project\Settings.settings"/>
+		<msb:File Include="My Project\Settings.Designer.vb"/>
+	</msb:ItemGroup>
+</c:Project>]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.Designer.vb"
+                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
+' <autogenerated>
+'     This code was generated by a tool.
+'
+'     Changes to this file may cause incorrect behavior and will be lost if
+'     the code is regenerated.
+' </autogenerated>
+'------------------------------------------------------------------------------
+
+Option Strict Off
+Option Explicit On
+
+
+
+Partial Friend NotInheritable Class MySettings
+    Inherits System.Configuration.ApplicationSettingsBase
+
+    Private Shared m_Value As MySettings
+
+    Private Shared m_SyncObject As Object = New Object
+
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Public Shared ReadOnly Property Value() As MySettings
+        Get
+            If (MySettings.m_Value Is Nothing) Then
+                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
+                If (MySettings.m_Value Is Nothing) Then
+                    Try
+                        MySettings.m_Value = New MySettings
+                    Finally
+                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
+                    End Try
+                End If
+            End If
+            Return MySettings.m_Value
+        End Get
+    End Property
+End Class]]></ProjectItem>
+              <ProjectItem
+                Name="ST_be1a79c0db4f4bbea6fca586a68515dc.vbproj"
+                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{09e5daa4-750f-4c55-80f8-029fe3204374}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>My Project</AppDesignerFolder><RootNamespace>ST_e7b0c7ca59e54170856a99374faf9dc2</RootNamespace><AssemblyName>ST_be1a79c0db4f4bbea6fca586a68515dc</AssemblyName><TargetFrameworkVersion>v4.5</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineDebug>true</DefineDebug><DefineTrace>true</DefineTrace><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineDebug>false</DefineDebug><DefineTrace>true</DefineTrace><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.ManagedDTS, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.ScriptTask, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /></ItemGroup><ItemGroup><Import Include="Microsoft.VisualBasic" /><Import Include="System" /><Import Include="System.Collections" /><Import Include="System.Data" /><Import Include="System.Diagnostics" /><Import Include="System.Windows.Forms" /></ItemGroup><ItemGroup><AppDesigner Include="My Project\" /><Compile Include="My Project\AssemblyInfo.vb"><SubType>Code</SubType></Compile><EmbeddedResource Include="My Project\Resources.resx"><Generator>VbMyResourcesResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.vb</LastGenOutput><CustomToolNamespace>My.Resources</CustomToolNamespace></EmbeddedResource><Compile Include="My Project\Resources.Designer.vb"><AutoGen>True</AutoGen><DesignTime>True</DesignTime><DependentUpon>Resources.resx</DependentUpon><SubType>Code</SubType></Compile><None Include="My Project\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.vb</LastGenOutput></None><Compile Include="My Project\Settings.Designer.vb"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon><SubType>Code</SubType></Compile><Compile Include="ScriptMain.vb"><SubType>Code</SubType></Compile></ItemGroup><!-- Include the build rules for a VB project.--><Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" /><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" /><Host Name="ScriptTask" IconIndex=""></Host><ProjectClient><HostIdentifier>SSIS_ST130</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></ProjectItem>
               <ProjectItem
                 Name="ScriptMain.vb"
                 Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
@@ -25774,116 +25884,6 @@ Partial Public Class ScriptMain
 #End Region
 
 End Class]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\AssemblyInfo.vb"
-                Encoding="UTF8"><![CDATA[Imports System
-Imports System.Reflection
-Imports System.Runtime.InteropServices
-
-' General Information about an assembly is controlled through the following 
-' set of attributes. Change these attribute values to modify the information
-' associated with an assembly.
-
-' Review the values of the assembly attributes
-
-<Assembly: AssemblyTitle("ST_e7b0c7ca59e54170856a99374faf9dc2")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("ST_e7b0c7ca59e54170856a99374faf9dc2")> 
-<Assembly: AssemblyCopyright("Copyright @  2021")> 
-<Assembly: AssemblyTrademark("")> 
-<Assembly: CLSCompliant(True)> 
-
-<Assembly: ComVisible(False)> 
-
-'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("a7a44013-9c43-43fe-ac7d-fea8ade993f4")> 
-
-' Version information for an assembly consists of the following four values:
-'
-'      Major Version
-'      Minor Version 
-'      Build Number
-'      Revision
-'
-' You can specify all the values or you can default the Build and Revision Numbers 
-' by using the '*' as shown below:
-' <Assembly: AssemblyVersion("1.0.*")>
-
-<Assembly: AssemblyVersion("1.0.0.0")> 
-<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\Settings.Designer.vb"
-                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
-' <autogenerated>
-'     This code was generated by a tool.
-'
-'     Changes to this file may cause incorrect behavior and will be lost if
-'     the code is regenerated.
-' </autogenerated>
-'------------------------------------------------------------------------------
-
-Option Strict Off
-Option Explicit On
-
-
-
-Partial Friend NotInheritable Class MySettings
-    Inherits System.Configuration.ApplicationSettingsBase
-
-    Private Shared m_Value As MySettings
-
-    Private Shared m_SyncObject As Object = New Object
-
-    <System.Diagnostics.DebuggerNonUserCode()> _
-    Public Shared ReadOnly Property Value() As MySettings
-        Get
-            If (MySettings.m_Value Is Nothing) Then
-                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
-                If (MySettings.m_Value Is Nothing) Then
-                    Try
-                        MySettings.m_Value = New MySettings
-                    Finally
-                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
-                    End Try
-                End If
-            End If
-            Return MySettings.m_Value
-        End Get
-    End Property
-End Class]]></ProjectItem>
-              <ProjectItem
-                Name="ST_be1a79c0db4f4bbea6fca586a68515dc.vbproj"
-                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{09e5daa4-750f-4c55-80f8-029fe3204374}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>My Project</AppDesignerFolder><RootNamespace>ST_e7b0c7ca59e54170856a99374faf9dc2</RootNamespace><AssemblyName>ST_be1a79c0db4f4bbea6fca586a68515dc</AssemblyName><TargetFrameworkVersion>v4.5</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineDebug>true</DefineDebug><DefineTrace>true</DefineTrace><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineDebug>false</DefineDebug><DefineTrace>true</DefineTrace><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.ManagedDTS, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.ScriptTask, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /></ItemGroup><ItemGroup><Import Include="Microsoft.VisualBasic" /><Import Include="System" /><Import Include="System.Collections" /><Import Include="System.Data" /><Import Include="System.Diagnostics" /><Import Include="System.Windows.Forms" /></ItemGroup><ItemGroup><AppDesigner Include="My Project\" /><Compile Include="My Project\AssemblyInfo.vb"><SubType>Code</SubType></Compile><EmbeddedResource Include="My Project\Resources.resx"><Generator>VbMyResourcesResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.vb</LastGenOutput><CustomToolNamespace>My.Resources</CustomToolNamespace></EmbeddedResource><Compile Include="My Project\Resources.Designer.vb"><AutoGen>True</AutoGen><DesignTime>True</DesignTime><DependentUpon>Resources.resx</DependentUpon><SubType>Code</SubType></Compile><None Include="My Project\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.vb</LastGenOutput></None><Compile Include="My Project\Settings.Designer.vb"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon><SubType>Code</SubType></Compile><Compile Include="ScriptMain.vb"><SubType>Code</SubType></Compile></ItemGroup><!-- Include the build rules for a VB project.--><Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" /><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" /><Host Name="ScriptTask" IconIndex=""></Host><ProjectClient><HostIdentifier>SSIS_ST130</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></ProjectItem>
-              <ProjectItem
-                Name="Project"
-                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
-	<msb:PropertyGroup>
-		<msb:Language>msBuild</msb:Language>
-		<msb:CodeName>ST_e7b0c7ca59e54170856a99374faf9dc2</msb:CodeName>
-		<msb:DisplayName>ST_e7b0c7ca59e54170856a99374faf9dc2</msb:DisplayName>
-		<msb:ProjectId>{C915865D-BC6F-4391-8884-1DE37B202DC1}</msb:ProjectId>
-	</msb:PropertyGroup>
-	<msb:ItemGroup>
-		<msb:Project Include="ST_be1a79c0db4f4bbea6fca586a68515dc.vbproj"/>
-		<msb:File Include="My Project\AssemblyInfo.vb"/>
-		<msb:File Include="ScriptMain.vb"/>
-		<msb:File Include="My Project\Resources.resx"/>
-		<msb:File Include="My Project\Resources.Designer.vb"/>
-		<msb:File Include="My Project\Settings.settings"/>
-		<msb:File Include="My Project\Settings.Designer.vb"/>
-	</msb:ItemGroup>
-</c:Project>]]></ProjectItem>
               <ProjectItem
                 Name="My Project\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -26297,6 +26297,78 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyVersion("1.0.0.0")> 
 <Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
               <ProjectItem
+                Name="My Project\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+              <ProjectItem
+                Name="ST_a08da73f5d684ba087b36582a974b2c4.vbproj"
+                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{f4ab2b02-560a-4893-9235-8db24cf29306}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>My Project</AppDesignerFolder><RootNamespace>ST_0c197f166e5c4e3baf67b1eb4ddd116b</RootNamespace><AssemblyName>ST_a08da73f5d684ba087b36582a974b2c4</AssemblyName><TargetFrameworkVersion>v4.5</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineDebug>true</DefineDebug><DefineTrace>true</DefineTrace><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineDebug>false</DefineDebug><DefineTrace>true</DefineTrace><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.ManagedDTS, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.ScriptTask, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /></ItemGroup><ItemGroup><Import Include="Microsoft.VisualBasic" /><Import Include="System" /><Import Include="System.Collections" /><Import Include="System.Data" /><Import Include="System.Diagnostics" /><Import Include="System.Windows.Forms" /></ItemGroup><ItemGroup><AppDesigner Include="My Project\" /><Compile Include="My Project\AssemblyInfo.vb"><SubType>Code</SubType></Compile><EmbeddedResource Include="My Project\Resources.resx"><Generator>VbMyResourcesResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.vb</LastGenOutput><CustomToolNamespace>My.Resources</CustomToolNamespace></EmbeddedResource><Compile Include="My Project\Resources.Designer.vb"><AutoGen>True</AutoGen><DesignTime>True</DesignTime><DependentUpon>Resources.resx</DependentUpon><SubType>Code</SubType></Compile><None Include="My Project\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.vb</LastGenOutput></None><Compile Include="My Project\Settings.Designer.vb"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon><SubType>Code</SubType></Compile><Compile Include="ScriptMain.vb"><SubType>Code</SubType></Compile></ItemGroup><!-- Include the build rules for a VB project.--><Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" /><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" /><Host Name="ScriptTask" IconIndex=""></Host><ProjectClient><HostIdentifier>SSIS_ST130</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.Designer.vb"
+                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
+' <autogenerated>
+'     This code was generated by a tool.
+'
+'     Changes to this file may cause incorrect behavior and will be lost if
+'     the code is regenerated.
+' </autogenerated>
+'------------------------------------------------------------------------------
+
+Option Strict Off
+Option Explicit On
+
+
+
+Partial Friend NotInheritable Class MySettings
+    Inherits System.Configuration.ApplicationSettingsBase
+
+    Private Shared m_Value As MySettings
+
+    Private Shared m_SyncObject As Object = New Object
+
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Public Shared ReadOnly Property Value() As MySettings
+        Get
+            If (MySettings.m_Value Is Nothing) Then
+                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
+                If (MySettings.m_Value Is Nothing) Then
+                    Try
+                        MySettings.m_Value = New MySettings
+                    Finally
+                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
+                    End Try
+                End If
+            End If
+            Return MySettings.m_Value
+        End Get
+    End Property
+End Class]]></ProjectItem>
+              <ProjectItem
+                Name="Project"
+                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:Language>msBuild</msb:Language>
+		<msb:CodeName>ST_0c197f166e5c4e3baf67b1eb4ddd116b</msb:CodeName>
+		<msb:DisplayName>ST_0c197f166e5c4e3baf67b1eb4ddd116b</msb:DisplayName>
+		<msb:ProjectId>{7198820A-9692-4235-87CE-2A970474A164}</msb:ProjectId>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:Project Include="ST_a08da73f5d684ba087b36582a974b2c4.vbproj"/>
+		<msb:File Include="My Project\AssemblyInfo.vb"/>
+		<msb:File Include="ScriptMain.vb"/>
+		<msb:File Include="My Project\Resources.resx"/>
+		<msb:File Include="My Project\Resources.Designer.vb"/>
+		<msb:File Include="My Project\Settings.settings"/>
+		<msb:File Include="My Project\Settings.Designer.vb"/>
+	</msb:ItemGroup>
+</c:Project>]]></ProjectItem>
+              <ProjectItem
                 Name="ScriptMain.vb"
                 Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
 'The Script Task allows you to perform virtually any operation that can be accomplished in
@@ -26417,78 +26489,6 @@ Partial Public Class ScriptMain
 #End Region
 
 End Class]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
-              <ProjectItem
-                Name="ST_a08da73f5d684ba087b36582a974b2c4.vbproj"
-                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{f4ab2b02-560a-4893-9235-8db24cf29306}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>My Project</AppDesignerFolder><RootNamespace>ST_0c197f166e5c4e3baf67b1eb4ddd116b</RootNamespace><AssemblyName>ST_a08da73f5d684ba087b36582a974b2c4</AssemblyName><TargetFrameworkVersion>v4.5</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineDebug>true</DefineDebug><DefineTrace>true</DefineTrace><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineDebug>false</DefineDebug><DefineTrace>true</DefineTrace><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.ManagedDTS, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.ScriptTask, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /></ItemGroup><ItemGroup><Import Include="Microsoft.VisualBasic" /><Import Include="System" /><Import Include="System.Collections" /><Import Include="System.Data" /><Import Include="System.Diagnostics" /><Import Include="System.Windows.Forms" /></ItemGroup><ItemGroup><AppDesigner Include="My Project\" /><Compile Include="My Project\AssemblyInfo.vb"><SubType>Code</SubType></Compile><EmbeddedResource Include="My Project\Resources.resx"><Generator>VbMyResourcesResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.vb</LastGenOutput><CustomToolNamespace>My.Resources</CustomToolNamespace></EmbeddedResource><Compile Include="My Project\Resources.Designer.vb"><AutoGen>True</AutoGen><DesignTime>True</DesignTime><DependentUpon>Resources.resx</DependentUpon><SubType>Code</SubType></Compile><None Include="My Project\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.vb</LastGenOutput></None><Compile Include="My Project\Settings.Designer.vb"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon><SubType>Code</SubType></Compile><Compile Include="ScriptMain.vb"><SubType>Code</SubType></Compile></ItemGroup><!-- Include the build rules for a VB project.--><Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" /><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" /><Host Name="ScriptTask" IconIndex=""></Host><ProjectClient><HostIdentifier>SSIS_ST130</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\Settings.Designer.vb"
-                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
-' <autogenerated>
-'     This code was generated by a tool.
-'
-'     Changes to this file may cause incorrect behavior and will be lost if
-'     the code is regenerated.
-' </autogenerated>
-'------------------------------------------------------------------------------
-
-Option Strict Off
-Option Explicit On
-
-
-
-Partial Friend NotInheritable Class MySettings
-    Inherits System.Configuration.ApplicationSettingsBase
-
-    Private Shared m_Value As MySettings
-
-    Private Shared m_SyncObject As Object = New Object
-
-    <System.Diagnostics.DebuggerNonUserCode()> _
-    Public Shared ReadOnly Property Value() As MySettings
-        Get
-            If (MySettings.m_Value Is Nothing) Then
-                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
-                If (MySettings.m_Value Is Nothing) Then
-                    Try
-                        MySettings.m_Value = New MySettings
-                    Finally
-                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
-                    End Try
-                End If
-            End If
-            Return MySettings.m_Value
-        End Get
-    End Property
-End Class]]></ProjectItem>
-              <ProjectItem
-                Name="Project"
-                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
-	<msb:PropertyGroup>
-		<msb:Language>msBuild</msb:Language>
-		<msb:CodeName>ST_0c197f166e5c4e3baf67b1eb4ddd116b</msb:CodeName>
-		<msb:DisplayName>ST_0c197f166e5c4e3baf67b1eb4ddd116b</msb:DisplayName>
-		<msb:ProjectId>{7198820A-9692-4235-87CE-2A970474A164}</msb:ProjectId>
-	</msb:PropertyGroup>
-	<msb:ItemGroup>
-		<msb:Project Include="ST_a08da73f5d684ba087b36582a974b2c4.vbproj"/>
-		<msb:File Include="My Project\AssemblyInfo.vb"/>
-		<msb:File Include="ScriptMain.vb"/>
-		<msb:File Include="My Project\Resources.resx"/>
-		<msb:File Include="My Project\Resources.Designer.vb"/>
-		<msb:File Include="My Project\Settings.settings"/>
-		<msb:File Include="My Project\Settings.Designer.vb"/>
-	</msb:ItemGroup>
-</c:Project>]]></ProjectItem>
               <ProjectItem
                 Name="My Project\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -26919,9 +26919,25 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Id="Package\Foreach Involvement file - Update ascend\Copy Involvements File to Snowflake Upload File"
           TopLeft="49,24" />
         <NodeLayout
+          Size="265,42"
+          Id="Package\Foreach Involvement file - Update ascend\Delete Uploaded File from ETL Server"
+          TopLeft="40,337" />
+        <NodeLayout
+          Size="354,42"
+          Id="Package\Foreach Involvement file - Update ascend\Execute Process Task - Copy Raw Data From Stage"
+          TopLeft="31,163" />
+        <NodeLayout
+          Size="313,42"
+          Id="Package\Foreach Involvement file - Update ascend\Execute Process Task - Populate SI_Delta table"
+          TopLeft="28,242" />
+        <NodeLayout
           Size="383,42"
           Id="Package\Foreach Involvement file - Update ascend\Execute Process Task - Upload New Student Involvements file"
           TopLeft="24,95" />
+        <NodeLayout
+          Size="326,49"
+          Id="Package\Foreach Involvement file - Update ascend\Script Task - Delete snowsql folder"
+          TopLeft="27,603" />
         <NodeLayout
           Size="217,42"
           Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments"
@@ -26940,6 +26956,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Involvement file - Update ascend.PrecedenceConstraints[Constraint 1]"
+          TopLeft="172.5,379">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="17,42"
+              Start="0,0"
+              End="17,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17"
+                    Point2="0,21"
+                    Point3="4,21" />
+                  <mssgle:LineSegment
+                    End="13,21" />
+                  <mssgle:CubicBezierSegment
+                    Point1="13,21"
+                    Point2="17,21"
+                    Point3="17,25" />
+                  <mssgle:LineSegment
+                    End="17,34.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -26970,10 +27020,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="354,42"
-          Id="Package\Foreach Involvement file - Update ascend\Execute Process Task - Copy Raw Data From Stage"
-          TopLeft="31,163" />
         <EdgeLayout
           Id="Package\Foreach Involvement file - Update ascend.PrecedenceConstraints[Constraint 3]"
           TopLeft="211.75,137">
@@ -26996,40 +27042,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="265,42"
-          Id="Package\Foreach Involvement file - Update ascend\Delete Uploaded File from ETL Server"
-          TopLeft="40,337" />
-        <NodeLayout
-          Size="326,49"
-          Id="Package\Foreach Involvement file - Update ascend\Script Task - Delete snowsql folder"
-          TopLeft="27,603" />
-        <EdgeLayout
-          Id="Package\Foreach Involvement file - Update ascend.PrecedenceConstraints[Constraint 5]"
-          TopLeft="190.75,543">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="313,42"
-          Id="Package\Foreach Involvement file - Update ascend\Execute Process Task - Populate SI_Delta table"
-          TopLeft="28,242" />
         <EdgeLayout
           Id="Package\Foreach Involvement file - Update ascend.PrecedenceConstraints[Constraint 4]"
           TopLeft="208,205">
@@ -27065,6 +27077,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Foreach Involvement file - Update ascend.PrecedenceConstraints[Constraint 5]"
+          TopLeft="190.75,543">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Foreach Involvement file - Update ascend.PrecedenceConstraints[Constraint 7]"
           TopLeft="184.5,284">
           <EdgeLayout.Curve>
@@ -27090,40 +27124,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                     Point3="-12,30.5" />
                   <mssgle:LineSegment
                     End="-12,45.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach Involvement file - Update ascend.PrecedenceConstraints[Constraint 1]"
-          TopLeft="172.5,379">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="17,42"
-              Start="0,0"
-              End="17,34.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17"
-                    Point2="0,21"
-                    Point3="4,21" />
-                  <mssgle:LineSegment
-                    End="13,21" />
-                  <mssgle:CubicBezierSegment
-                    Point1="13,21"
-                    Point2="17,21"
-                    Point3="17,25" />
-                  <mssgle:LineSegment
-                    End="17,34.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -27304,13 +27304,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="139,42"
-          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Merge Join 1"
-          TopLeft="851,244" />
-        <NodeLayout
-          Size="155,42"
-          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Multicast"
-          TopLeft="1244,154" />
+          Size="349,42"
+          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Sort ascend recs by Contact and Involvement Value Code"
+          TopLeft="750,324" />
         <NodeLayout
           Size="154,42"
           Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Derived Column"
@@ -27320,14 +27316,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Export Exceptions of Records not in ascend"
           TopLeft="28,400" />
         <NodeLayout
-          Size="234,42"
-          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Get ascend Involvement Values"
-          TopLeft="1243,48" />
-        <NodeLayout
-          Size="224,42"
-          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Devart Salesforce Destination"
-          TopLeft="840,956" />
-        <NodeLayout
           Size="279,42"
           Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Left Join src recs to ascend Constitutents"
           TopLeft="436,317" />
@@ -27336,41 +27324,53 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Sort Source Recs by CWID"
           TopLeft="95,226" />
         <NodeLayout
-          Size="204,42"
-          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Sort by Involvement Value"
-          TopLeft="800,155" />
-        <NodeLayout
-          Size="254,42"
-          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Get ascend Constituents with CWID"
-          TopLeft="454,120" />
+          Size="224,42"
+          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Devart Salesforce Destination"
+          TopLeft="840,956" />
         <NodeLayout
           Size="384,42"
           Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Left Join src recs to ascend recs"
           TopLeft="526,652" />
         <NodeLayout
-          Size="349,42"
-          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Sort ascend recs by Contact and Involvement Value Code"
-          TopLeft="750,324" />
+          Size="234,42"
+          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Get Student Involvements Delta"
+          TopLeft="88,54" />
         <NodeLayout
           Size="107,42"
           Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Sort 1"
           TopLeft="1242,737" />
         <NodeLayout
-          Size="226,42"
-          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Are src rec students in ascend?"
-          TopLeft="463,402" />
+          Size="254,42"
+          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Get ascend Constituents with CWID"
+          TopLeft="454,120" />
         <NodeLayout
           Size="98,42"
           Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Sort"
           TopLeft="1010,745" />
         <NodeLayout
+          Size="155,42"
+          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Multicast"
+          TopLeft="1244,154" />
+        <NodeLayout
           Size="383,42"
           Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Sort src recs by Constituent Rec ID and Involvement Value Code"
           TopLeft="379,503" />
         <NodeLayout
+          Size="226,42"
+          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Are src rec students in ascend?"
+          TopLeft="463,402" />
+        <NodeLayout
           Size="209,42"
           Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Involvement Record Exists?"
           TopLeft="608,736" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Merge Join 1"
+          TopLeft="851,244" />
+        <NodeLayout
+          Size="234,42"
+          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Get ascend Involvement Values"
+          TopLeft="1243,48" />
         <NodeLayout
           Size="130,42"
           Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Merge Join"
@@ -27388,9 +27388,37 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Add ucinn_ascendv2__Code__c"
           TopLeft="60,146" />
         <NodeLayout
+          Size="204,42"
+          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Sort by Involvement Value"
+          TopLeft="800,155" />
+        <NodeLayout
           Size="244,42"
           Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Get ascend Student Involvements"
           TopLeft="785,51" />
+        <EdgeLayout
+          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[student record in ascend]"
+          TopLeft="573.25,444">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59"
+              Start="0,0"
+              End="0,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.03806640625,20.87548828125,110.0761328125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Source Output2]"
           TopLeft="581,162">
@@ -27482,75 +27510,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Sort Output6]"
-          TopLeft="924.5,366">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-143.833333333333,286"
-              Start="0,0"
-              End="-143.833333333333,278.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,166.887966804979" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,166.887966804979"
-                    Point2="0,170.887966804979"
-                    Point3="-4,170.887966804979" />
-                  <mssgle:LineSegment
-                    End="-139.833333333333,170.887966804979" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-139.833333333333,170.887966804979"
-                    Point2="-143.833333333333,170.887966804979"
-                    Point3="-143.833333333333,174.887966804979" />
-                  <mssgle:LineSegment
-                    End="-143.833333333333,278.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Sort Output5]"
-          TopLeft="570.5,545">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="84.8333333333334,107"
-              Start="0,0"
-              End="84.8333333333334,99.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,59.9336099585062" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,59.9336099585062"
-                    Point2="0,63.9336099585062"
-                    Point3="4,63.9336099585062" />
-                  <mssgle:LineSegment
-                    End="80.8333333333334,63.9336099585062" />
-                  <mssgle:CubicBezierSegment
-                    Point1="80.8333333333334,63.9336099585062"
-                    Point2="84.8333333333334,63.9336099585062"
-                    Point3="84.8333333333334,67.9336099585062" />
-                  <mssgle:LineSegment
-                    End="84.8333333333334,99.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Sort Output4]"
+          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Sort Output7]"
           TopLeft="1059,787">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27575,6 +27535,84 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                     Point3="178,40" />
                   <mssgle:LineSegment
                     End="178,64.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Sort Output6]"
+          TopLeft="900.333333333333,197">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47"
+              Start="0,0"
+              End="0,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Sort Output5]"
+          TopLeft="1030,264">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-40,0"
+              Start="0,0"
+              End="-32.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-32.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Sort Output4]"
+          TopLeft="566.5,265">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="54.1666666666666,52"
+              Start="0,0"
+              End="54.1666666666666,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.0220955096222" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.0220955096222"
+                    Point2="0,31.0220955096222"
+                    Point3="4,31.0220955096222" />
+                  <mssgle:LineSegment
+                    End="50.1666666666666,31.0220955096222" />
+                  <mssgle:CubicBezierSegment
+                    Point1="50.1666666666666,31.0220955096222"
+                    Point2="54.1666666666666,31.0220955096222"
+                    Point3="54.1666666666666,35.0220955096222" />
+                  <mssgle:LineSegment
+                    End="54.1666666666666,44.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -27619,30 +27657,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Sort Output2]"
-          TopLeft="566.5,265">
+          TopLeft="570.5,545">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="54.1666666666666,52"
+              EndConnector="84.8333333333334,107"
               Start="0,0"
-              End="54.1666666666666,44.5">
+              End="84.8333333333334,99.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.0220955096222" />
+                    End="0,59.9336099585062" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,27.0220955096222"
-                    Point2="0,31.0220955096222"
-                    Point3="4,31.0220955096222" />
+                    Point1="0,59.9336099585062"
+                    Point2="0,63.9336099585062"
+                    Point3="4,63.9336099585062" />
                   <mssgle:LineSegment
-                    End="50.1666666666666,31.0220955096222" />
+                    End="80.8333333333334,63.9336099585062" />
                   <mssgle:CubicBezierSegment
-                    Point1="50.1666666666666,31.0220955096222"
-                    Point2="54.1666666666666,31.0220955096222"
-                    Point3="54.1666666666666,35.0220955096222" />
+                    Point1="80.8333333333334,63.9336099585062"
+                    Point2="84.8333333333334,63.9336099585062"
+                    Point3="84.8333333333334,67.9336099585062" />
                   <mssgle:LineSegment
-                    End="54.1666666666666,44.5" />
+                    End="84.8333333333334,99.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -27653,18 +27691,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Sort Output1]"
-          TopLeft="1030,264">
+          TopLeft="924.5,366">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-40,0"
+              EndConnector="-143.833333333333,286"
               Start="0,0"
-              End="-32.5,0">
+              End="-143.833333333333,278.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-32.5,0" />
+                    End="0,166.887966804979" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,166.887966804979"
+                    Point2="0,170.887966804979"
+                    Point3="-4,170.887966804979" />
+                  <mssgle:LineSegment
+                    End="-139.833333333333,170.887966804979" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-139.833333333333,170.887966804979"
+                    Point2="-143.833333333333,170.887966804979"
+                    Point3="-143.833333333333,174.887966804979" />
+                  <mssgle:LineSegment
+                    End="-143.833333333333,278.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -27675,18 +27725,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Sort Output]"
-          TopLeft="900.333333333333,197">
+          TopLeft="197,268">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,47"
+              EndConnector="333.333333333333,49"
               Start="0,0"
-              End="0,39.5">
+              End="333.333333333333,41.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,39.5" />
+                    End="0,25.232359230221" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.232359230221"
+                    Point2="0,29.232359230221"
+                    Point3="4,29.232359230221" />
+                  <mssgle:LineSegment
+                    End="329.333333333333,29.232359230221" />
+                  <mssgle:CubicBezierSegment
+                    Point1="329.333333333333,29.232359230221"
+                    Point2="333.333333333333,29.232359230221"
+                    Point3="333.333333333333,33.232359230221" />
+                  <mssgle:LineSegment
+                    End="333.333333333333,41.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -27717,6 +27779,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <mssgm:EdgeLabel
               BoundingBox="-113.249609375,5,90.99921875,9.7490234375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[ODBC Source Output]"
+          TopLeft="203.25,96">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50"
+              Start="0,0"
+              End="0,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -27788,29 +27872,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Merge Join Output2]"
-          TopLeft="922.5,286">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38"
-              Start="0,0"
-              End="0,30.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Merge Join Output1]"
+          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Merge Join Output3]"
           TopLeft="1238.5,901">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27832,7 +27894,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Merge Join Output]"
+          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Merge Join Output2]"
           TopLeft="715.25,694">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27854,118 +27916,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Derived Column Output]"
-          TopLeft="1163,976.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-99,0"
-              Start="0,0"
-              End="-91.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-91.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <AnnotationLayout
-          Text="HERE: Export records not in ascend to flat file."
-          ParentId="Package\Foreach Involvement file - Update ascend\Update Student Involvments"
-          FontInfo="{assembly:Null}"
-          Size="270,40"
-          Id="7c53f1c9-c5ef-4a3b-8b49-60d757efb69c"
-          TopLeft="19,367" />
-        <NodeLayout
-          Size="234,42"
-          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments\Get Student Involvements Delta"
-          TopLeft="88,54" />
-        <EdgeLayout
-          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[ODBC Source Output]"
-          TopLeft="203.25,96">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,50"
-              Start="0,0"
-              End="0,42.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,42.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Derived Column Output1]"
-          TopLeft="199.25,188">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38"
-              Start="0,0"
-              End="0,30.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Sort Output7]"
-          TopLeft="197,268">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="333.333333333333,49"
-              Start="0,0"
-              End="333.333333333333,41.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.232359230221" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.232359230221"
-                    Point2="0,29.232359230221"
-                    Point3="4,29.232359230221" />
-                  <mssgle:LineSegment
-                    End="329.333333333333,29.232359230221" />
-                  <mssgle:CubicBezierSegment
-                    Point1="329.333333333333,29.232359230221"
-                    Point2="333.333333333333,29.232359230221"
-                    Point3="333.333333333333,33.232359230221" />
-                  <mssgle:LineSegment
-                    End="333.333333333333,41.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Merge Join Output3]"
+          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Merge Join Output1]"
           TopLeft="575.75,359">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27987,27 +27938,25 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[student record in ascend]"
-          TopLeft="573.25,444">
+          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Merge Join Output]"
+          TopLeft="922.5,286">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59"
+              EndConnector="0,38"
               Start="0,0"
-              End="0,51.5">
+              End="0,30.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,51.5" />
+                    End="0,30.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.03806640625,20.87548828125,110.0761328125,9.7490234375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28046,6 +27995,57 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Derived Column Output1]"
+          TopLeft="199.25,188">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38"
+              Start="0,0"
+              End="0,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Involvement file - Update ascend\Update Student Involvments.Paths[Derived Column Output]"
+          TopLeft="1163,976.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-99,0"
+              Start="0,0"
+              End="-91.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-91.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="HERE: Export records not in ascend to flat file."
+          ParentId="Package\Foreach Involvement file - Update ascend\Update Student Involvments"
+          FontInfo="{assembly:Null}"
+          Size="270,40"
+          Id="7c53f1c9-c5ef-4a3b-8b49-60d757efb69c"
+          TopLeft="19,367" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -28085,7 +28085,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <NodeLayout
           Size="229,42"
           Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Get CampusLink Org Directory"
-          TopLeft="143,154" />
+          TopLeft="159,8" />
         <NodeLayout
           Size="190,42"
           Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Sort Org IDs to Exclude"
@@ -28149,7 +28149,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <NodeLayout
           Size="217,42"
           Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Get ascend CL Student orgs"
-          TopLeft="478,239" />
+          TopLeft="440,9" />
         <NodeLayout
           Size="223,42"
           Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Sort Missing Orgs by CL OrgID"
@@ -28161,7 +28161,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <NodeLayout
           Size="330,42"
           Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Get CampusLink Orgs to Exclude from Snowflake DW"
-          TopLeft="1054,240" />
+          TopLeft="1154,7" />
         <NodeLayout
           Size="382,42"
           Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values\Script Component - Get Banner Dept OrganizationID with RegEx"
@@ -28253,73 +28253,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Merge Join Output3]"
-          TopLeft="562,676">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-196.5,72"
-              Start="0,0"
-              End="-196.5,64.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32"
-                    Point2="0,36"
-                    Point3="-4,36" />
-                  <mssgle:LineSegment
-                    End="-192.5,36" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-192.5,36"
-                    Point2="-196.5,36"
-                    Point3="-196.5,40" />
-                  <mssgle:LineSegment
-                    End="-196.5,64.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Merge Join Output2]"
-          TopLeft="1172,1169.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-70,0"
-              Start="0,0"
-              End="-62.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-62.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Merge Join Output1]"
           TopLeft="564.5,492">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -28349,13 +28287,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Merge Join Output]"
+          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Merge Join Output2]"
           TopLeft="852,984.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -28373,33 +28309,97 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Flat File Source Output]"
-          TopLeft="259.25,196">
+          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Merge Join Output1]"
+          TopLeft="1172,1169.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,37"
+              EndConnector="-70,0"
               Start="0,0"
-              End="0,29.5">
+              End="-62.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.5" />
+                    End="-62.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Merge Join Output]"
+          TopLeft="562,676">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-196.5,72"
+              Start="0,0"
+              End="-196.5,64.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32"
+                    Point2="0,36"
+                    Point3="-4,36" />
+                  <mssgle:LineSegment
+                    End="-192.5,36" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-192.5,36"
+                    Point2="-196.5,36"
+                    Point3="-196.5,40" />
+                  <mssgle:LineSegment
+                    End="-196.5,64.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Flat File Source Output]"
+          TopLeft="273.5,50">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-12.5,183"
+              Start="0,0"
+              End="-12.5,175.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,87.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,87.5"
+                    Point2="0,91.5"
+                    Point3="-4,91.5" />
+                  <mssgle:LineSegment
+                    End="-8.5,91.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-8.5,91.5"
+                    Point2="-12.5,91.5"
+                    Point3="-12.5,95.5" />
+                  <mssgle:LineSegment
+                    End="-12.5,175.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28421,9 +28421,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28445,9 +28443,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28481,9 +28477,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28517,9 +28511,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28541,9 +28533,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28565,9 +28555,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28601,45 +28589,41 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Source Output1]"
-          TopLeft="586.5,281">
+          TopLeft="548.5,51">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-10,87"
+              EndConnector="28,317"
               Start="0,0"
-              End="-10,79.5">
+              End="28,309.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,39.5" />
+                    End="0,154.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,39.5"
-                    Point2="0,43.5"
-                    Point3="-4,43.5" />
+                    Point1="0,154.5"
+                    Point2="0,158.5"
+                    Point3="4,158.5" />
                   <mssgle:LineSegment
-                    End="-6,43.5" />
+                    End="24,158.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-6,43.5"
-                    Point2="-10,43.5"
-                    Point3="-10,47.5" />
+                    Point1="24,158.5"
+                    Point2="28,158.5"
+                    Point3="28,162.5" />
                   <mssgle:LineSegment
-                    End="-10,79.5" />
+                    End="28,309.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28661,169 +28645,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output10]"
-          TopLeft="576.5,410">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-12,40"
-              Start="0,0"
-              End="-12,32.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16"
-                    Point2="0,20"
-                    Point3="-4,20" />
-                  <mssgle:LineSegment
-                    End="-8,20" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-8,20"
-                    Point2="-12,20"
-                    Point3="-12,24" />
-                  <mssgle:LineSegment
-                    End="-12,32.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output9]"
-          TopLeft="276.5,513">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,35"
-              Start="0,0"
-              End="0,27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output8]"
-          TopLeft="728,494">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-39,-23"
-              Start="0,0"
-              End="-31.5,-23">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-15.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-15.5,0"
-                    Point2="-19.5,0"
-                    Point3="-19.5,-4" />
-                  <mssgle:LineSegment
-                    End="-19.5,-19" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-19.5,-19"
-                    Point2="-19.5,-23"
-                    Point3="-23.5,-23" />
-                  <mssgle:LineSegment
-                    End="-31.5,-23" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output7]"
-          TopLeft="866.5,196">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,42"
-              Start="0,0"
-              End="0,34.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output6]"
-          TopLeft="1404,1091">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-94,58"
-              Start="0,0"
-              End="-94,50.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.5356125356125" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,30.5356125356125"
-                    Point2="0,34.5356125356125"
-                    Point3="-4,34.5356125356125" />
-                  <mssgle:LineSegment
-                    End="-90,34.5356125356125" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-90,34.5356125356125"
-                    Point2="-94,34.5356125356125"
-                    Point3="-94,38.5356125356125" />
-                  <mssgle:LineSegment
-                    End="-94,50.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output5]"
           TopLeft="878,904">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -28853,121 +28679,33 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output4]"
-          TopLeft="643,591">
+          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output9]"
+          TopLeft="371,655.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-81,43"
+              EndConnector="126,0"
               Start="0,0"
-              End="-81,35.5">
+              End="118.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.5"
-                    Point2="0,21.5"
-                    Point3="-4,21.5" />
-                  <mssgle:LineSegment
-                    End="-77,21.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-77,21.5"
-                    Point2="-81,21.5"
-                    Point3="-81,25.5" />
-                  <mssgle:LineSegment
-                    End="-81,35.5" />
+                    End="118.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output3]"
-          TopLeft="504.5,907">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-189.833333333333,55"
-              Start="0,0"
-              End="-189.833333333333,47.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.7787091366303" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,28.7787091366303"
-                    Point2="0,32.7787091366303"
-                    Point3="-4,32.7787091366303" />
-                  <mssgle:LineSegment
-                    End="-185.833333333333,32.7787091366303" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-185.833333333333,32.7787091366303"
-                    Point2="-189.833333333333,32.7787091366303"
-                    Point3="-189.833333333333,36.7787091366303" />
-                  <mssgle:LineSegment
-                    End="-189.833333333333,47.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output2]"
-          TopLeft="202.5,904">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="35.8333333333333,58"
-              Start="0,0"
-              End="35.8333333333333,50.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.5666387259011" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,30.5666387259011"
-                    Point2="0,34.5666387259011"
-                    Point3="4,34.5666387259011" />
-                  <mssgle:LineSegment
-                    End="31.8333333333333,34.5666387259011" />
-                  <mssgle:CubicBezierSegment
-                    Point1="31.8333333333333,34.5666387259011"
-                    Point2="35.8333333333333,34.5666387259011"
-                    Point3="35.8333333333333,38.5666387259011" />
-                  <mssgle:LineSegment
-                    End="35.8333333333333,50.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output1]"
+          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output8]"
           TopLeft="1068.5,1091">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -28997,33 +28735,255 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output]"
-          TopLeft="371,655.5">
+          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output7]"
+          TopLeft="202.5,904">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="126,0"
+              EndConnector="35.8333333333333,58"
               Start="0,0"
-              End="118.5,0">
+              End="35.8333333333333,50.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="118.5,0" />
+                    End="0,30.5666387259011" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.5666387259011"
+                    Point2="0,34.5666387259011"
+                    Point3="4,34.5666387259011" />
+                  <mssgle:LineSegment
+                    End="31.8333333333333,34.5666387259011" />
+                  <mssgle:CubicBezierSegment
+                    Point1="31.8333333333333,34.5666387259011"
+                    Point2="35.8333333333333,34.5666387259011"
+                    Point3="35.8333333333333,38.5666387259011" />
+                  <mssgle:LineSegment
+                    End="35.8333333333333,50.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output6]"
+          TopLeft="643,591">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-81,43"
+              Start="0,0"
+              End="-81,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.5"
+                    Point2="0,21.5"
+                    Point3="-4,21.5" />
+                  <mssgle:LineSegment
+                    End="-77,21.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-77,21.5"
+                    Point2="-81,21.5"
+                    Point3="-81,25.5" />
+                  <mssgle:LineSegment
+                    End="-81,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output5]"
+          TopLeft="504.5,907">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-189.833333333333,55"
+              Start="0,0"
+              End="-189.833333333333,47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.7787091366303" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.7787091366303"
+                    Point2="0,32.7787091366303"
+                    Point3="-4,32.7787091366303" />
+                  <mssgle:LineSegment
+                    End="-185.833333333333,32.7787091366303" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-185.833333333333,32.7787091366303"
+                    Point2="-189.833333333333,32.7787091366303"
+                    Point3="-189.833333333333,36.7787091366303" />
+                  <mssgle:LineSegment
+                    End="-189.833333333333,47.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output4]"
+          TopLeft="1404,1091">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-94,58"
+              Start="0,0"
+              End="-94,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5356125356125" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.5356125356125"
+                    Point2="0,34.5356125356125"
+                    Point3="-4,34.5356125356125" />
+                  <mssgle:LineSegment
+                    End="-90,34.5356125356125" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-90,34.5356125356125"
+                    Point2="-94,34.5356125356125"
+                    Point3="-94,38.5356125356125" />
+                  <mssgle:LineSegment
+                    End="-94,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output3]"
+          TopLeft="866.5,196">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output2]"
+          TopLeft="728,494">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-39,-23"
+              Start="0,0"
+              End="-31.5,-23">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-15.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-15.5,0"
+                    Point2="-19.5,0"
+                    Point3="-19.5,-4" />
+                  <mssgle:LineSegment
+                    End="-19.5,-19" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-19.5,-19"
+                    Point2="-19.5,-23"
+                    Point3="-23.5,-23" />
+                  <mssgle:LineSegment
+                    End="-31.5,-23" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output1]"
+          TopLeft="276.5,513">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[Sort Output]"
+          TopLeft="576.5,410">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-12,40"
+              Start="0,0"
+              End="-12,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16"
+                    Point2="0,20"
+                    Point3="-4,20" />
+                  <mssgle:LineSegment
+                    End="-8,20" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-8,20"
+                    Point2="-12,20"
+                    Point3="-12,24" />
+                  <mssgle:LineSegment
+                    End="-12,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -29081,9 +29041,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -29117,45 +29075,41 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Student Org File - Upsert Involvement Value Changes\Add Missing Student Orgs to Involvement Values.Paths[ODBC Source Output]"
-          TopLeft="1219,282">
+          TopLeft="1319,49">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="155,684"
+              EndConnector="55,917"
               Start="0,0"
-              End="155,676.5">
+              End="55,909.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,338" />
+                    End="0,454.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,338"
-                    Point2="0,342"
-                    Point3="4,342" />
+                    Point1="0,454.5"
+                    Point2="0,458.5"
+                    Point3="4,458.5" />
                   <mssgle:LineSegment
-                    End="151,342" />
+                    End="51,458.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="151,342"
-                    Point2="155,342"
-                    Point3="155,346" />
+                    Point1="51,458.5"
+                    Point2="55,458.5"
+                    Point3="55,462.5" />
                   <mssgle:LineSegment
-                    End="155,676.5" />
+                    End="55,909.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -29255,9 +29209,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -29291,9 +29243,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -29327,9 +29277,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -29363,9 +29311,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
