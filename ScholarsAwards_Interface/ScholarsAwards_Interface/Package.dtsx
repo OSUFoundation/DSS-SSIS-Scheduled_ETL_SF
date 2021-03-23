@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="47"
-  DTS:VersionGUID="{86460B61-3060-4700-BB63-9F46A3612A2B}">
+  DTS:VersionBuild="59"
+  DTS:VersionGUID="{B9DB3BD8-4FF9-46A3-ACB1-211BAE2C0F8A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,10 +27,10 @@
           <ConnectionString>User Id=ssisapi@osugiving.com.qa;Host=test.salesforce.com;Batch Size=2000</ConnectionString>
           <Password
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAaC7XnUQ25UedPjKIqAYR+wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABbW1OuQuE7lXxwzhEgEC2/AAAAAASAAACgAAAAEAAAAEjCIj1qt8MIRhmV/zxH1O4wAAAAXBpCS8YYgdTH2Tdm38pVTTcyooxV2+6G0g72IdRj94lFuB6k/l9eI9BJgbGaSVrBFAAAAD8H6RsDFNH/cLMsgZ3Oylj2Nq4v</Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAaC7XnUQ25UedPjKIqAYR+wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAgQd799hVRbUsoltASgLUDAAAAAASAAACgAAAAEAAAACBFlEcXdxVfS3ptzg+/BAEwAAAAAKC6WQA0iFtf1JrfM8wDd7e8Fy5iYSwRf8Nay0/hlRkwhbt8lboY+/aYBNso8WvaFAAAAN9KmnSZkpHsIDXG/YwePGEMEAmr</Password>
           <SecurityToken
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAaC7XnUQ25UedPjKIqAYR+wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAB0K07Jq81KhSLi5Bs14vlVAAAAAASAAACgAAAAEAAAAGCVE/cy3yhZxk/kdGqVE8I4AAAAytGGci+LxosNQP6M2KjamZf14Tej6lxcjVJyW6wOwocVIh6RELTDdld8rShyXPT2M03n8YCvrKEUAAAADUdgspIYCMI7Bp70nom/vdNJrmM</SecurityToken>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAaC7XnUQ25UedPjKIqAYR+wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAB7xC6SK3NovwSG1Wr0otYCAAAAAASAAACgAAAAEAAAAGSv6OItHgzeWQvLDlXuO5k4AAAARe/eaFqI11ZXHdToBZ4PlqltRTDemXphkIfAUSJCwjQQTYnRLYRAX9qa0tujvxw2jyadlBefGW8UAAAAVpd0AJtk01kEyGkwuF+dQ7zlEjg</SecurityToken>
         </SalesforceConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -11124,44 +11124,44 @@
                   startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\Check for CampusName match with AwardRecipien Campus.Outputs[CampusName No match]" />
                 <path
                   refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output6]"
-                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\Set CampusName Value for Stillwater.Inputs[Derived Column Input]"
-                  name="Derived Column Output"
-                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\format Designation ID and FiscalYear.Outputs[Derived Column Output]" />
-                <path
-                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output5]"
-                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\Union - AwardRecipient Exceptions.Inputs[Union All Input 1]"
-                  name="Derived Column Output"
-                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\Exception Reason - No CWID Match.Outputs[Derived Column Output]" />
-                <path
-                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output4]"
-                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\Union All.Inputs[Union All Input 2]"
-                  name="Derived Column Output"
-                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\Set InerfaceTask to Insert 2.Outputs[Derived Column Output]" />
-                <path
-                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output7]"
-                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\Union All.Inputs[Union All Input 1]"
-                  name="Derived Column Output"
-                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\Set InterfaceTask to Insert.Outputs[Derived Column Output]" />
-                <path
-                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output2]"
-                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\Union - AwardRecipient Exceptions.Inputs[Union All Input 2]"
-                  name="Derived Column Output"
-                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\Exception Reason - No Designation Match.Outputs[Derived Column Output]" />
-                <path
-                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output1]"
-                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\Lookup - ascend Constituents by CWID.Inputs[Lookup Input]"
-                  name="Derived Column Output"
-                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\Set CampusName Value for CHS.Outputs[Derived Column Output]" />
-                <path
-                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output]"
                   endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\Set CampusName Value for CHS.Inputs[Derived Column Input]"
                   name="Derived Column Output"
                   startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\Set CampusName Value for Tulsa as Stillwater Campus.Outputs[Derived Column Output]" />
                 <path
-                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output3]"
+                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output5]"
+                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\Lookup - ascend Constituents by CWID.Inputs[Lookup Input]"
+                  name="Derived Column Output"
+                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\Set CampusName Value for CHS.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output4]"
+                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\Union - AwardRecipient Exceptions.Inputs[Union All Input 2]"
+                  name="Derived Column Output"
+                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\Exception Reason - No Designation Match.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output7]"
                   endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\Set CampusName Value for Tulsa as Stillwater Campus.Inputs[Derived Column Input]"
                   name="Derived Column Output"
                   startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\Set CampusName Value for Stillwater.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output2]"
+                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\Union All.Inputs[Union All Input 2]"
+                  name="Derived Column Output"
+                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\Set InerfaceTask to Insert 2.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output1]"
+                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\Union - AwardRecipient Exceptions.Inputs[Union All Input 1]"
+                  name="Derived Column Output"
+                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\Exception Reason - No CWID Match.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output]"
+                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\Set CampusName Value for Stillwater.Inputs[Derived Column Input]"
+                  name="Derived Column Output"
+                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\format Designation ID and FiscalYear.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output3]"
+                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\Union All.Inputs[Union All Input 1]"
+                  name="Derived Column Output"
+                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\Set InterfaceTask to Insert.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Flat File Source Output]"
                   endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information\format Designation ID and FiscalYear.Inputs[Derived Column Input]"
@@ -27625,19 +27625,19 @@ FROM ucinn_ascendv2__Designation
                   startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1\Lookup - ascend Award Recipients.Outputs[Lookup No Match Output]" />
                 <path
                   refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1.Paths[Merge Join Output2]"
+                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1\Sort by Designation ID.Inputs[Sort Input]"
+                  name="Merge Join Output"
+                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1\Left Join on Banner ID to Campus ID.Outputs[Merge Join Output]" />
+                <path
+                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1.Paths[Merge Join Output]"
                   endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1\Check for missing ascend Connt-Design-Coll.Inputs[Conditional Split Input]"
                   name="Merge Join Output"
                   startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1\Left Join CampusName to Academic Org Name.Outputs[Merge Join Output]" />
                 <path
-                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1.Paths[Merge Join Output]"
+                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1.Paths[Merge Join Output1]"
                   endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1\Sory by Campus Name.Inputs[Sort Input]"
                   name="Merge Join Output"
                   startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1\Left Join on DesignationID to ExternalSystemID.Outputs[Merge Join Output]" />
-                <path
-                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1.Paths[Merge Join Output1]"
-                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1\Sort by Designation ID.Inputs[Sort Input]"
-                  name="Merge Join Output"
-                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1\Left Join on Banner ID to Campus ID.Outputs[Merge Join Output]" />
                 <path
                   refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1.Paths[Missing required recs in ascend]"
                   endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1\Exception Reason - No CWID Match.Inputs[Derived Column Input]"
@@ -27680,19 +27680,19 @@ FROM ucinn_ascendv2__Designation
                   startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1\Sort by Designation ID.Outputs[Sort Output]" />
                 <path
                   refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1.Paths[Source Output2]"
+                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1\Sort by Campus ID.Inputs[Sort Input]"
+                  name="Source Output"
+                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1\Get ascend Constituents with CWID.Outputs[Source Output]" />
+                <path
+                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1.Paths[Source Output]"
                   endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1\Sort by Academic Org Name.Inputs[Sort Input]"
                   name="Source Output"
                   startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1\Get ascend Colleges.Outputs[Source Output]" />
                 <path
-                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1.Paths[Source Output]"
+                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1.Paths[Source Output1]"
                   endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1\Sort by External ID.Inputs[Sort Input]"
                   name="Source Output"
                   startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1\Get ascend Designations.Outputs[Source Output]" />
-                <path
-                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1.Paths[Source Output1]"
-                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1\Sort by Campus ID.Inputs[Sort Input]"
-                  name="Source Output"
-                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1\Get ascend Constituents with CWID.Outputs[Source Output]" />
                 <path
                   refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1.Paths[Union All Output 1]"
                   endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1\AwardRecipient_Tasks.Inputs[Flat File Destination Input]"
@@ -27717,32 +27717,32 @@ FROM ucinn_ascendv2__Designation
               version="1">
               <components>
                 <component
-                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Connt-Design-Coll"
+                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Const-Design-Coll"
                   componentClassID="Microsoft.ConditionalSplit"
                   contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
                   description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
-                  name="Check for missing ascend Connt-Design-Coll"
+                  name="Check for missing ascend Const-Design-Coll"
                   usesDispositions="true">
                   <inputs>
                     <input
-                      refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Connt-Design-Coll.Inputs[Conditional Split Input]"
+                      refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Const-Design-Coll.Inputs[Conditional Split Input]"
                       description="Input to the Conditional Split Transformation"
                       name="Conditional Split Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Connt-Design-Coll.Inputs[Conditional Split Input].Columns[ConstituentRecordID]"
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Const-Design-Coll.Inputs[Conditional Split Input].Columns[ConstituentRecordID]"
                           cachedDataType="wstr"
                           cachedLength="18"
                           cachedName="ConstituentRecordID"
                           lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name.Outputs[Merge Join Output].Columns[ConstituentRecordID]" />
                         <inputColumn
-                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Connt-Design-Coll.Inputs[Conditional Split Input].Columns[DesignationRecordExtSysID]"
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Const-Design-Coll.Inputs[Conditional Split Input].Columns[DesignationRecordExtSysID]"
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="DesignationRecordExtSysID"
                           lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name.Outputs[Merge Join Output].Columns[DesignationRecordExtSysID]" />
                         <inputColumn
-                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Connt-Design-Coll.Inputs[Conditional Split Input].Columns[AcademicOrgCampusName]"
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Const-Design-Coll.Inputs[Conditional Split Input].Columns[AcademicOrgCampusName]"
                           cachedDataType="wstr"
                           cachedLength="80"
                           cachedName="AcademicOrgCampusName"
@@ -27753,13 +27753,13 @@ FROM ucinn_ascendv2__Designation
                   </inputs>
                   <outputs>
                     <output
-                      refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Connt-Design-Coll.Outputs[Missing required recs in ascend]"
+                      refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Const-Design-Coll.Outputs[Missing required recs in ascend]"
                       description="Output 1 of the Conditional Split Transformation"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       exclusionGroup="1"
                       name="Missing required recs in ascend"
-                      synchronousInputId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Connt-Design-Coll.Inputs[Conditional Split Input]"
+                      synchronousInputId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Const-Design-Coll.Inputs[Conditional Split Input]"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -27781,13 +27781,13 @@ FROM ucinn_ascendv2__Designation
                       <externalMetadataColumns />
                     </output>
                     <output
-                      refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Connt-Design-Coll.Outputs[Required records found in ascend]"
+                      refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Const-Design-Coll.Outputs[Required records found in ascend]"
                       description="Output 2 of the Conditional Split Transformation"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       exclusionGroup="1"
                       name="Required records found in ascend"
-                      synchronousInputId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Connt-Design-Coll.Inputs[Conditional Split Input]"
+                      synchronousInputId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Const-Design-Coll.Inputs[Conditional Split Input]"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -27809,11 +27809,11 @@ FROM ucinn_ascendv2__Designation
                       <externalMetadataColumns />
                     </output>
                     <output
-                      refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Connt-Design-Coll.Outputs[Conditional Split Default Output]"
+                      refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Const-Design-Coll.Outputs[Conditional Split Default Output]"
                       description="Default Output of the Conditional Split Transformation"
                       exclusionGroup="1"
                       name="Conditional Split Default Output"
-                      synchronousInputId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Connt-Design-Coll.Inputs[Conditional Split Input]">
+                      synchronousInputId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Const-Design-Coll.Inputs[Conditional Split Input]">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -27822,25 +27822,349 @@ FROM ucinn_ascendv2__Designation
                       <externalMetadataColumns />
                     </output>
                     <output
-                      refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Connt-Design-Coll.Outputs[Conditional Split Error Output]"
+                      refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Const-Design-Coll.Outputs[Conditional Split Error Output]"
                       description="Error Output of the Conditional Split Transformation"
                       exclusionGroup="1"
                       isErrorOut="true"
                       name="Conditional Split Error Output"
-                      synchronousInputId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Connt-Design-Coll.Inputs[Conditional Split Input]">
+                      synchronousInputId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Const-Design-Coll.Inputs[Conditional Split Input]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Connt-Design-Coll.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Const-Design-Coll.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Connt-Design-Coll.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Const-Design-Coll.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Connt-Design-Coll.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Const-Design-Coll.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Connt-Design-Coll.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Const-Design-Coll.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records"
+                  componentClassID="Microsoft.Sort"
+                  contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+                  name="Dedupe Award Recipient Records"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                      name="EliminateDuplicates">true</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the maximum number of threads to use for sorting."
+                      expressionType="Notify"
+                      name="MaximumThreads">-1</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Inputs[Sort Input]"
+                      name="Sort Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Inputs[Sort Input].Columns[Year]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="4"
+                          cachedName="Year"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name.Outputs[Merge Join Output].Columns[Year]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Inputs[Sort Input].Columns[DesignationID]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="10"
+                          cachedName="DesignationID"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name.Outputs[Merge Join Output].Columns[DesignationID]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Inputs[Sort Input].Columns[Banner ID]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Banner ID"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name.Outputs[Merge Join Output].Columns[Banner ID]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Inputs[Sort Input].Columns[ConstituentRecordID]"
+                          cachedDataType="wstr"
+                          cachedLength="18"
+                          cachedName="ConstituentRecordID"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name.Outputs[Merge Join Output].Columns[ConstituentRecordID]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Inputs[Sort Input].Columns[AcademicOrgCampusName]"
+                          cachedDataType="wstr"
+                          cachedLength="80"
+                          cachedName="AcademicOrgCampusName"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name.Outputs[Merge Join Output].Columns[AcademicOrgCampusName]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Inputs[Sort Input].Columns[DesignationRecordId]"
+                          cachedDataType="wstr"
+                          cachedLength="18"
+                          cachedName="DesignationRecordId"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name.Outputs[Merge Join Output].Columns[DesignationRecordId]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Inputs[Sort Input].Columns[AwardRecipient_ExternalSystemID]"
+                          cachedDataType="wstr"
+                          cachedLength="311"
+                          cachedName="AwardRecipient_ExternalSystemID"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Set AwardRecipient ExternalSystemID and RecordType.Outputs[Derived Column Output].Columns[AwardRecipient_ExternalSystemID]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">1</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Inputs[Sort Input].Columns[AwardRecipient_RecordTypeID]"
+                          cachedDataType="wstr"
+                          cachedLength="18"
+                          cachedName="AwardRecipient_RecordTypeID"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Set AwardRecipient ExternalSystemID and RecordType.Outputs[Derived Column Output].Columns[AwardRecipient_RecordTypeID]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Inputs[Sort Input].Columns[FiscalYear]"
+                          cachedDataType="wstr"
+                          cachedLength="4"
+                          cachedName="FiscalYear"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name.Outputs[Merge Join Output].Columns[FiscalYear]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Outputs[Sort Output]"
+                      isSorted="true"
+                      name="Sort Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Outputs[Sort Output].Columns[Year]"
+                          codePage="1252"
+                          dataType="str"
+                          length="4"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Outputs[Sort Output].Columns[Year]"
+                          name="Year">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name.Outputs[Merge Join Output].Columns[Year]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Outputs[Sort Output].Columns[DesignationID]"
+                          codePage="1252"
+                          dataType="str"
+                          length="10"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Outputs[Sort Output].Columns[DesignationID]"
+                          name="DesignationID">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name.Outputs[Merge Join Output].Columns[DesignationID]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Outputs[Sort Output].Columns[Banner ID]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Outputs[Sort Output].Columns[Banner ID]"
+                          name="Banner ID">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name.Outputs[Merge Join Output].Columns[Banner ID]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Outputs[Sort Output].Columns[ConstituentRecordID]"
+                          dataType="wstr"
+                          length="18"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Outputs[Sort Output].Columns[ConstituentRecordID]"
+                          name="ConstituentRecordID">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name.Outputs[Merge Join Output].Columns[ConstituentRecordID]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Outputs[Sort Output].Columns[AcademicOrgCampusName]"
+                          dataType="wstr"
+                          length="80"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Outputs[Sort Output].Columns[AcademicOrgCampusName]"
+                          name="AcademicOrgCampusName">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name.Outputs[Merge Join Output].Columns[AcademicOrgCampusName]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Outputs[Sort Output].Columns[DesignationRecordId]"
+                          dataType="wstr"
+                          length="18"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Outputs[Sort Output].Columns[DesignationRecordId]"
+                          name="DesignationRecordId">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name.Outputs[Merge Join Output].Columns[DesignationRecordId]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Outputs[Sort Output].Columns[AwardRecipient_ExternalSystemID]"
+                          dataType="wstr"
+                          length="311"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Outputs[Sort Output].Columns[AwardRecipient_ExternalSystemID]"
+                          name="AwardRecipient_ExternalSystemID"
+                          sortKeyPosition="1">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Set AwardRecipient ExternalSystemID and RecordType.Outputs[Derived Column Output].Columns[AwardRecipient_ExternalSystemID]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Outputs[Sort Output].Columns[AwardRecipient_RecordTypeID]"
+                          dataType="wstr"
+                          length="18"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Outputs[Sort Output].Columns[AwardRecipient_RecordTypeID]"
+                          name="AwardRecipient_RecordTypeID">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Set AwardRecipient ExternalSystemID and RecordType.Outputs[Derived Column Output].Columns[AwardRecipient_RecordTypeID]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Outputs[Sort Output].Columns[FiscalYear]"
+                          dataType="wstr"
+                          length="4"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Outputs[Sort Output].Columns[FiscalYear]"
+                          name="FiscalYear">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name.Outputs[Merge Join Output].Columns[FiscalYear]}</property>
+                          </properties>
+                        </outputColumn>
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
@@ -30782,6 +31106,12 @@ FROM ucinn_ascendv2__Designation
                           cachedLength="18"
                           cachedName="DesignationCollegeRecordID"
                           lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sory by Campus Name.Outputs[Sort Output].Columns[DesignationCollegeRecordID]" />
+                        <inputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name.Inputs[Merge Join Left Input].Columns[DesignationRecordId]"
+                          cachedDataType="wstr"
+                          cachedLength="18"
+                          cachedName="DesignationRecordId"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sory by Campus Name.Outputs[Sort Output].Columns[DesignationRecordId]" />
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -31588,6 +31918,20 @@ FROM ucinn_ascendv2__Designation
                               dataType="System.Int32"
                               description="The input column associated with this output column"
                               name="InputColumnID">#{Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name.Inputs[Merge Join Right Input].Columns[ucinn_ascendv2__External_System_ID]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name.Outputs[Merge Join Output].Columns[DesignationRecordId]"
+                          dataType="wstr"
+                          length="18"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name.Outputs[Merge Join Output].Columns[DesignationRecordId]"
+                          name="DesignationRecordId">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name.Inputs[Merge Join Left Input].Columns[DesignationRecordId]}</property>
                           </properties>
                         </outputColumn>
                       </outputColumns>
@@ -33089,6 +33433,12 @@ FROM ucinn_ascendv2__Designation
                           cachedLength="18"
                           cachedName="College_Unit_1"
                           lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sort by External ID.Outputs[Sort Output].Columns[College_Unit_1]" />
+                        <inputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join on DesignationID to ExternalSystemID.Inputs[Merge Join Right Input].Columns[Id]"
+                          cachedDataType="wstr"
+                          cachedLength="18"
+                          cachedName="Id"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sort by External ID.Outputs[Sort Output].Columns[Id]" />
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -33848,7 +34198,52 @@ FROM ucinn_ascendv2__Designation
                               name="InputColumnID">#{Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join on DesignationID to ExternalSystemID.Inputs[Merge Join Right Input].Columns[College_Unit_1]}</property>
                           </properties>
                         </outputColumn>
+                        <outputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join on DesignationID to ExternalSystemID.Outputs[Merge Join Output].Columns[DesignationRecordId]"
+                          dataType="wstr"
+                          length="18"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join on DesignationID to ExternalSystemID.Outputs[Merge Join Output].Columns[DesignationRecordId]"
+                          name="DesignationRecordId">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join on DesignationID to ExternalSystemID.Inputs[Merge Join Right Input].Columns[Id]}</property>
+                          </properties>
+                        </outputColumn>
                       </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Multicast"
+                  componentClassID="Microsoft.Multicast"
+                  contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+                  name="Multicast">
+                  <inputs>
+                    <input
+                      refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Multicast.Inputs[Multicast Input 1]"
+                      name="Multicast Input 1">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Multicast.Outputs[Multicast Output 1]"
+                      deleteOutputOnPathDetached="true"
+                      name="Multicast Output 1"
+                      synchronousInputId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Multicast.Inputs[Multicast Input 1]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Multicast.Outputs[Multicast Output 2]"
+                      dangling="true"
+                      deleteOutputOnPathDetached="true"
+                      name="Multicast Output 2"
+                      synchronousInputId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Multicast.Inputs[Multicast Input 1]">
                       <externalMetadataColumns />
                     </output>
                   </outputs>
@@ -38993,6 +39388,23 @@ FROM ucinn_ascendv2__Designation
                               name="NewSortKeyPosition">0</property>
                           </properties>
                         </inputColumn>
+                        <inputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sory by Campus Name.Inputs[Sort Input].Columns[DesignationRecordId]"
+                          cachedDataType="wstr"
+                          cachedLength="18"
+                          cachedName="DesignationRecordId"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join on DesignationID to ExternalSystemID.Outputs[Merge Join Output].Columns[DesignationRecordId]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -39752,6 +40164,526 @@ FROM ucinn_ascendv2__Designation
                               name="SortColumnId">#{Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join on DesignationID to ExternalSystemID.Outputs[Merge Join Output].Columns[DesignationCollegeRecordID]}</property>
                           </properties>
                         </outputColumn>
+                        <outputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sory by Campus Name.Outputs[Sort Output].Columns[DesignationRecordId]"
+                          dataType="wstr"
+                          length="18"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sory by Campus Name.Outputs[Sort Output].Columns[DesignationRecordId]"
+                          name="DesignationRecordId">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join on DesignationID to ExternalSystemID.Outputs[Merge Join Output].Columns[DesignationRecordId]}</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients"
+                  componentClassID="Microsoft.ManagedComponentHost"
+                  description="Loads or modifies data into an object of the Salesforce.com(or Database.com) cloud database."
+                  name="Upsert Award Recipients"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Null"
+                      name="DesignObject"
+                      typeConverter="NOTBROWSABLE" />
+                    <property
+                      dataType="System.String"
+                      description="The name of the Salesforce Object to load or update data."
+                      name="Salesforce Object"
+                      typeConverter="Devart.SSIS.Salesforce.Design.DestinationSelectStatementsListConverter, Devart.SSIS.Salesforce.150, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">Award_Recipient</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the number of rows to be sent as a batch to the server."
+                      name="BatchSize">5000</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the max size of local buffer."
+                      name="BufferSize">10485760</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies destination action type."
+                      name="Action"
+                      typeConverter="Devart.SSIS.Salesforce.DestinationAction, Devart.SSIS.Salesforce.150, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">3</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies external identifier field."
+                      expressionType="Notify"
+                      name="ExternalId"
+                      typeConverter="Devart.SSIS.Salesforce.Design.ExternalIdsList, Devart.SSIS.Salesforce.150, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">AR_External_ID</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Cached id in the local storage."
+                      name="CacheId">false</property>
+                    <property
+                      dataType="System.Null"
+                      description="The unique column in the source table that should be associate to the Salesforce ID."
+                      name="SourceKey"
+                      typeConverter="NOTBROWSABLE" />
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether multiple batches associated with a bulk load operation are processed by Salesforce in parallel or one at a time. The default is true."
+                      name="ParallelBatchProcessing">true</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the ID of a specific assignment rule to run for the Case or Lead."
+                      name="Assignment Rule Id" />
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Devart.SSIS.Salesforce.SalesforceDestination, Devart.SSIS.Salesforce.150, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Connections[Devart Salesforce]"
+                      connectionManagerID="Package.ConnectionManagers[Devart ascend Source Connection]"
+                      connectionManagerRefId="Package.ConnectionManagers[Devart ascend Source Connection]"
+                      description="Devart Salesforce Connection Manager"
+                      name="Devart Salesforce" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input]"
+                      errorOrTruncationOperation="Insert operation"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="input">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Redirect only error rows to error output."
+                          name="RedirectErrorsOnly">false</property>
+                      </properties>
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].Columns[AwardRecipient_ExternalSystemID]"
+                          cachedDataType="wstr"
+                          cachedLength="311"
+                          cachedName="AwardRecipient_ExternalSystemID"
+                          cachedSortKeyPosition="1"
+                          externalMetadataColumnId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[AR_External_ID]"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Outputs[Sort Output].Columns[AwardRecipient_ExternalSystemID]" />
+                        <inputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].Columns[ConstituentRecordID]"
+                          cachedDataType="wstr"
+                          cachedLength="18"
+                          cachedName="ConstituentRecordID"
+                          externalMetadataColumnId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Constituent]"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Outputs[Sort Output].Columns[ConstituentRecordID]" />
+                        <inputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].Columns[FiscalYear]"
+                          cachedDataType="wstr"
+                          cachedLength="4"
+                          cachedName="FiscalYear"
+                          externalMetadataColumnId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Fiscal_Year]"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Outputs[Sort Output].Columns[FiscalYear]" />
+                        <inputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].Columns[DesignationRecordId]"
+                          cachedDataType="wstr"
+                          cachedLength="18"
+                          cachedName="DesignationRecordId"
+                          externalMetadataColumnId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Designation]"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Outputs[Sort Output].Columns[DesignationRecordId]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Id]"
+                          dataType="wstr"
+                          length="18"
+                          name="Id" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[OwnerId]"
+                          dataType="wstr"
+                          length="18"
+                          name="OwnerId">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.150, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">Group</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[IsDeleted]"
+                          dataType="bool"
+                          name="IsDeleted" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Name]"
+                          dataType="wstr"
+                          length="80"
+                          name="Name" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[RecordTypeId]"
+                          dataType="wstr"
+                          length="18"
+                          name="RecordTypeId">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.150, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">RecordType</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[LastViewedDate]"
+                          dataType="dbTimeStamp"
+                          name="LastViewedDate" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[LastReferencedDate]"
+                          dataType="dbTimeStamp"
+                          name="LastReferencedDate" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[AR_External_ID]"
+                          dataType="wstr"
+                          length="150"
+                          name="AR_External_ID" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Answer_1]"
+                          dataType="nText"
+                          name="Answer_1" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Answer_2]"
+                          dataType="nText"
+                          name="Answer_2" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Answer_3]"
+                          dataType="nText"
+                          name="Answer_3" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Answer_4]"
+                          dataType="nText"
+                          name="Answer_4" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Appointment_Date_Submitted]"
+                          dataType="dbDate"
+                          name="Appointment_Date_Submitted" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[CWID_Submitted]"
+                          dataType="wstr"
+                          length="30"
+                          name="CWID_Submitted" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Campus]"
+                          dataType="wstr"
+                          length="18"
+                          name="Campus">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.150, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">ucinn_ascendv2__Academic_Organization</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Class_Year]"
+                          dataType="wstr"
+                          length="30"
+                          name="Class_Year" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Comments]"
+                          dataType="nText"
+                          name="Comments" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Constituent]"
+                          dataType="wstr"
+                          length="18"
+                          name="Constituent">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.150, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">Contact</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Country]"
+                          dataType="wstr"
+                          length="100"
+                          name="Country" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Designation]"
+                          dataType="wstr"
+                          length="18"
+                          name="Designation">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.150, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">ucinn_ascendv2__Designation</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Edited_Approved_By_Datetime]"
+                          dataType="dbTimeStamp"
+                          name="Edited_Approved_By_Datetime" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Edited_Approved_By]"
+                          dataType="wstr"
+                          length="18"
+                          name="Edited_Approved_By">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                              name="RelationshipUpdateMode"
+                              typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.150, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies external identifier field."
+                              name="ExternalId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.Null"
+                              description="Cached id in the local storage."
+                              name="CachedId"
+                              typeConverter="NOTBROWSABLE" />
+                            <property
+                              dataType="System.String"
+                              description="Name of Referenced Object"
+                              name="ReferencedObject">User</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Edited_Approved]"
+                          dataType="bool"
+                          name="Edited_Approved" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[First_Name_Submitted]"
+                          dataType="wstr"
+                          length="100"
+                          name="First_Name_Submitted" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Fiscal_Year]"
+                          dataType="wstr"
+                          length="255"
+                          name="Fiscal_Year" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Hometown]"
+                          dataType="wstr"
+                          length="100"
+                          name="Hometown" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Image_URL]"
+                          dataType="wstr"
+                          length="255"
+                          name="Image_URL" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Is_Vacant]"
+                          dataType="bool"
+                          name="Is_Vacant" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Last_Name_Submitted]"
+                          dataType="wstr"
+                          length="100"
+                          name="Last_Name_Submitted" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Major]"
+                          dataType="wstr"
+                          length="100"
+                          name="Major" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Most_Recent_Appointment_Date]"
+                          dataType="dbDate"
+                          name="Most_Recent_Appointment_Date" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Original_Appointment_Date]"
+                          dataType="dbDate"
+                          name="Original_Appointment_Date" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Profile_Report_Status]"
+                          dataType="wstr"
+                          length="255"
+                          name="Profile_Report_Status" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Question_1]"
+                          dataType="wstr"
+                          length="255"
+                          name="Question_1" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Question_2]"
+                          dataType="wstr"
+                          length="255"
+                          name="Question_2" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Question_3]"
+                          dataType="wstr"
+                          length="255"
+                          name="Question_3" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Question_4]"
+                          dataType="wstr"
+                          length="255"
+                          name="Question_4" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[State]"
+                          dataType="wstr"
+                          length="100"
+                          name="State" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Submission_Date]"
+                          dataType="dbDate"
+                          name="Submission_Date" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Submission_ID]"
+                          dataType="wstr"
+                          length="30"
+                          name="Submission_ID" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Thank_You_Statement]"
+                          dataType="nText"
+                          name="Thank_You_Statement" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Title]"
+                          dataType="wstr"
+                          length="100"
+                          name="Title" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Vacant_Answer]"
+                          dataType="nText"
+                          name="Vacant_Answer" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Vacant_Question]"
+                          dataType="wstr"
+                          length="255"
+                          name="Vacant_Question" />
+                        <externalMetadataColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input].ExternalColumns[Consent]"
+                          dataType="wstr"
+                          length="255"
+                          name="Consent" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Outputs[Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Error Output"
+                      synchronousInputId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Outputs[Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Outputs[Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Outputs[Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Outputs[Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                        <outputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Outputs[Error Output].Columns[Id]"
+                          dataType="wstr"
+                          length="18"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Outputs[Error Output].Columns[Id]"
+                          name="Id" />
+                        <outputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Outputs[Error Output].Columns[ErrorDescription]"
+                          dataType="wstr"
+                          length="1024"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Outputs[Error Output].Columns[ErrorDescription]"
+                          name="ErrorDescription" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Outputs[RecordId Output]"
+                      exclusionGroup="1"
+                      name="RecordId Output"
+                      synchronousInputId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Outputs[RecordId Output].Columns[Id]"
+                          dataType="wstr"
+                          length="18"
+                          lineageId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Outputs[RecordId Output].Columns[Id]"
+                          name="Id" />
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
@@ -39785,6 +40717,11 @@ FROM ucinn_ascendv2__Designation
                   name="Derived Column Output"
                   startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Exception Reason.Outputs[Derived Column Output]" />
                 <path
+                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Derived Column Output5]"
+                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Multicast.Inputs[Multicast Input 1]"
+                  name="Derived Column Output"
+                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Set AwardRecipient ExternalSystemID and RecordType.Outputs[Derived Column Output]" />
+                <path
                   refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Flat File Source Output]"
                   endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\format Designation ID and FiscalYear.Inputs[Derived Column Input]"
                   name="Flat File Source Output"
@@ -39801,49 +40738,59 @@ FROM ucinn_ascendv2__Designation
                   startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join on Banner ID to Campus ID.Outputs[Merge Join Output]" />
                 <path
                   refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Merge Join Output2]"
-                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Connt-Design-Coll.Inputs[Conditional Split Input]"
+                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Const-Design-Coll.Inputs[Conditional Split Input]"
                   name="Merge Join Output"
                   startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name.Outputs[Merge Join Output]" />
                 <path
                   refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Missing required recs in ascend]"
                   endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Exception Reason.Inputs[Derived Column Input]"
                   name="Missing required recs in ascend"
-                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Connt-Design-Coll.Outputs[Missing required recs in ascend]" />
+                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Const-Design-Coll.Outputs[Missing required recs in ascend]" />
+                <path
+                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Multicast Output 1]"
+                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Inputs[Sort Input]"
+                  name="Multicast Output 1"
+                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Multicast.Outputs[Multicast Output 1]" />
                 <path
                   refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Required records found in ascend]"
                   endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Set AwardRecipient ExternalSystemID and RecordType.Inputs[Derived Column Input]"
                   name="Required records found in ascend"
-                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Connt-Design-Coll.Outputs[Required records found in ascend]" />
+                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Const-Design-Coll.Outputs[Required records found in ascend]" />
                 <path
-                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Sort Output]"
-                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join on DesignationID to ExternalSystemID.Inputs[Merge Join Right Input]"
+                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Sort Output5]"
+                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join on DesignationID to ExternalSystemID.Inputs[Merge Join Left Input]"
                   name="Sort Output"
-                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sort by External ID.Outputs[Sort Output]" />
-                <path
-                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Sort Output1]"
-                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name.Inputs[Merge Join Left Input]"
-                  name="Sort Output"
-                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sory by Campus Name.Outputs[Sort Output]" />
-                <path
-                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Sort Output2]"
-                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name.Inputs[Merge Join Right Input]"
-                  name="Sort Output"
-                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sort by Academic Org Name.Outputs[Sort Output]" />
-                <path
-                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Sort Output3]"
-                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join on Banner ID to Campus ID.Inputs[Merge Join Right Input]"
-                  name="Sort Output"
-                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sort by Campus ID.Outputs[Sort Output]" />
+                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sort by Designation ID.Outputs[Sort Output]" />
                 <path
                   refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Sort Output4]"
                   endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join on Banner ID to Campus ID.Inputs[Merge Join Left Input]"
                   name="Sort Output"
                   startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sort by Banner ID.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Sort Output5]"
-                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join on DesignationID to ExternalSystemID.Inputs[Merge Join Left Input]"
+                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Sort Output]"
+                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join on DesignationID to ExternalSystemID.Inputs[Merge Join Right Input]"
                   name="Sort Output"
-                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sort by Designation ID.Outputs[Sort Output]" />
+                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sort by External ID.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Sort Output2]"
+                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name.Inputs[Merge Join Right Input]"
+                  name="Sort Output"
+                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sort by Academic Org Name.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Sort Output1]"
+                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name.Inputs[Merge Join Left Input]"
+                  name="Sort Output"
+                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sory by Campus Name.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Sort Output3]"
+                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join on Banner ID to Campus ID.Inputs[Merge Join Right Input]"
+                  name="Sort Output"
+                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sort by Campus ID.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Sort Output6]"
+                  endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients.Inputs[input]"
+                  name="Sort Output"
+                  startId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records.Outputs[Sort Output]" />
                 <path
                   refId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Source Output]"
                   endId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sort by External ID.Inputs[Sort Input]"
@@ -39897,7 +40844,7 @@ FROM ucinn_ascendv2__Designation
         <NodeLayout
           Size="340,42"
           Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1"
-          TopLeft="42,241" />
+          TopLeft="41,241" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
@@ -39991,46 +40938,62 @@ FROM ucinn_ascendv2__Designation
           TopLeft="289,329" />
         <EdgeLayout
           Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output1]"
-          TopLeft="409.75,371">
+          TopLeft="909.5,465">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52"
+              EndConnector="410,42"
               Start="0,0"
-              End="0,44.5">
+              End="410,34.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,44.5" />
+                    End="0,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17"
+                    Point2="0,21"
+                    Point3="4,21" />
+                  <mssgle:LineSegment
+                    End="406,21" />
+                  <mssgle:CubicBezierSegment
+                    Point1="406,21"
+                    Point2="410,21"
+                    Point3="410,25" />
+                  <mssgle:LineSegment
+                    End="410,34.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output]"
-          TopLeft="407.5,304">
+          TopLeft="408.25,144">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,25"
+              EndConnector="0,51"
               Start="0,0"
-              End="0,17.5">
+              End="0,43.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.5" />
+                    End="0,43.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -40100,7 +41063,9 @@ FROM ucinn_ascendv2__Designation
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -40122,7 +41087,9 @@ FROM ucinn_ascendv2__Designation
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -40312,111 +41279,13 @@ FROM ucinn_ascendv2__Designation
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output7]"
-          TopLeft="1080.75,662">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,159"
-              Start="0,0"
-              End="0,151.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,151.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output6]"
-          TopLeft="408.25,144">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,51"
-              Start="0,0"
-              End="0,43.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,43.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output5]"
-          TopLeft="909.5,465">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="410,42"
-              Start="0,0"
-              End="410,34.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17"
-                    Point2="0,21"
-                    Point3="4,21" />
-                  <mssgle:LineSegment
-                    End="406,21" />
-                  <mssgle:CubicBezierSegment
-                    Point1="406,21"
-                    Point2="410,21"
-                    Point3="410,25" />
-                  <mssgle:LineSegment
-                    End="410,34.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output4]"
-          TopLeft="939,843">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="84,0"
-              Start="0,0"
-              End="76.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="76.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output3]"
           TopLeft="405.75,237">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -40434,11 +41303,61 @@ FROM ucinn_ascendv2__Designation
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output2]"
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output6]"
+          TopLeft="407.5,304">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,25"
+              Start="0,0"
+              End="0,17.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output5]"
+          TopLeft="409.75,371">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52"
+              Start="0,0"
+              End="0,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output4]"
           TopLeft="1036,529">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -40456,14 +41375,64 @@ FROM ucinn_ascendv2__Designation
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output3]"
+          TopLeft="1080.75,662">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,159"
+              Start="0,0"
+              End="0,151.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,151.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information.Paths[Derived Column Output2]"
+          TopLeft="939,843">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="84,0"
+              Start="0,0"
+              End="76.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="76.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <AnnotationLayout
           Text="Match FODADAT to AwardRecipient&#xA;on CWID/FiscalYear"
           ParentId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information"
           FontInfo="{assembly:Null}"
-          Size="217,56"
+          Size="217,NaN"
           Id="75423665-6558-4731-9a40-47aba3ab8b13"
           TopLeft="35,618" />
       </GraphLayout>
@@ -40610,28 +41579,6 @@ FROM ucinn_ascendv2__Designation
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1.Paths[Source Output2]"
-          TopLeft="1550,49.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,25.5"
-              Start="0,0"
-              End="0,18">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1.Paths[Source Output1]"
           TopLeft="753.25,48.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -40653,7 +41600,7 @@ FROM ucinn_ascendv2__Designation
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1.Paths[Source Output]"
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1.Paths[Source Output1]"
           TopLeft="1163.25,48.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -40666,6 +41613,28 @@ FROM ucinn_ascendv2__Designation
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,21.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1.Paths[Source Output]"
+          TopLeft="1550,49.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,25.5"
+              Start="0,0"
+              End="0,18">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -40856,28 +41825,6 @@ FROM ucinn_ascendv2__Designation
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1.Paths[Merge Join Output2]"
-          TopLeft="1558.23611111111,679.777777777778">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,63.3611111111113"
-              Start="0,0"
-              End="0,55.8611111111113">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,55.8611111111113" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1.Paths[Merge Join Output1]"
           TopLeft="753.875,498.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -40899,7 +41846,7 @@ FROM ucinn_ascendv2__Designation
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1.Paths[Merge Join Output]"
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1.Paths[Merge Join Output1]"
           TopLeft="1156.79166666667,597">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -40912,6 +41859,28 @@ FROM ucinn_ascendv2__Designation
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,39.5277777777778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1.Paths[Merge Join Output]"
+          TopLeft="1558.23611111111,679.777777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63.3611111111113"
+              Start="0,0"
+              End="0,55.8611111111113">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.8611111111113" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -41244,65 +42213,37 @@ FROM ucinn_ascendv2__Designation
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="166,42"
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sort by Banner ID"
-          TopLeft="240.75,454.5" />
-        <NodeLayout
-          Size="189,42"
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sort by Designation ID"
-          TopLeft="656.25,555" />
-        <NodeLayout
-          Size="169,42"
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Get FODADAT file"
-          TopLeft="235.5,3.75000000000006" />
-        <NodeLayout
-          Size="311,42"
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join on DesignationID to ExternalSystemID"
-          TopLeft="1005,555" />
-        <NodeLayout
-          Size="172,42"
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sort by Campus ID"
-          TopLeft="666.75,77.5" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sort by External ID"
-          TopLeft="1075,77.5" />
-        <NodeLayout
-          Size="298,42"
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Connt-Design-Coll"
-          TopLeft="1408.63888888889,743.138888888889" />
-        <NodeLayout
-          Size="202,42"
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Get ascend Designations"
-          TopLeft="1065,6.25" />
-        <NodeLayout
-          Size="254,42"
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Get ascend Constituents with CWID"
-          TopLeft="626.75,6.5" />
-        <NodeLayout
-          Size="219,42"
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sort by Academic Org Name"
-          TopLeft="1442.5,75" />
-        <NodeLayout
-          Size="242,42"
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Set CampusName Value for CHS"
-          TopLeft="201.5,298.75" />
+          Size="192,42"
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sory by Campus Name"
+          TopLeft="1057.08333333333,644.027777777778" />
         <NodeLayout
           Size="181,42"
           Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Get ascend Colleges"
           TopLeft="1457.5,7.5" />
         <NodeLayout
-          Size="352,42"
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Set CampusName Value for Tulsa as Stillwater Campus"
-          TopLeft="141.5,231.75" />
+          Size="254,42"
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Get ascend Constituents with CWID"
+          TopLeft="626.75,6.5" />
         <NodeLayout
-          Size="258,42"
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join on Banner ID to Campus ID"
-          TopLeft="628,456.25" />
+          Size="154,42"
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Exceptions File"
+          TopLeft="133.333333333333,741.412698412699" />
         <NodeLayout
-          Size="192,42"
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sory by Campus Name"
-          TopLeft="1057.08333333333,644.027777777778" />
+          Size="202,42"
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Get ascend Designations"
+          TopLeft="1064,5.25" />
+        <NodeLayout
+          Size="189,42"
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sort by Designation ID"
+          TopLeft="656.25,555" />
+        <NodeLayout
+          Size="351,42"
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Set AwardRecipient ExternalSystemID and RecordType"
+          TopLeft="1386,914" />
+        <NodeLayout
+          Size="311,42"
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name"
+          TopLeft="1403.33333333333,637.777777777778" />
         <NodeLayout
           Size="262,42"
           Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\format Designation ID and FiscalYear"
@@ -41312,17 +42253,71 @@ FROM ucinn_ascendv2__Designation
           Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Exception Reason"
           TopLeft="446.527777777778,745.857142857143" />
         <NodeLayout
+          Size="352,42"
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Set CampusName Value for Tulsa as Stillwater Campus"
+          TopLeft="141.5,231.75" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sort by Campus ID"
+          TopLeft="666.75,77.5" />
+        <NodeLayout
+          Size="169,42"
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Get FODADAT file"
+          TopLeft="235.5,3.75000000000006" />
+        <NodeLayout
+          Size="311,42"
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join on DesignationID to ExternalSystemID"
+          TopLeft="1005,555" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sort by External ID"
+          TopLeft="1075,77.5" />
+        <NodeLayout
           Size="263,42"
           Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Set CampusName Value for Stillwater"
           TopLeft="187.5,164.75" />
         <NodeLayout
-          Size="311,42"
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join CampusName to Academic Org Name"
-          TopLeft="1403.33333333333,637.777777777778" />
+          Size="258,42"
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Left Join on Banner ID to Campus ID"
+          TopLeft="628,456.25" />
         <NodeLayout
-          Size="154,42"
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Exceptions File"
-          TopLeft="133.333333333333,741.412698412699" />
+          Size="242,42"
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Set CampusName Value for CHS"
+          TopLeft="201.5,298.75" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sort by Banner ID"
+          TopLeft="240.75,454.5" />
+        <NodeLayout
+          Size="297,42"
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Check for missing ascend Const-Design-Coll"
+          TopLeft="1408.63888888889,743.138888888889" />
+        <NodeLayout
+          Size="219,42"
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Sort by Academic Org Name"
+          TopLeft="1442.5,75" />
+        <EdgeLayout
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Derived Column Output]"
+          TopLeft="321.25,129.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.9999999999999"
+              Start="0,0"
+              End="0,27.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Source Output2]"
           TopLeft="1550,49.5">
@@ -41369,18 +42364,18 @@ FROM ucinn_ascendv2__Designation
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Source Output]"
-          TopLeft="1163.25,48.25">
+          TopLeft="1162.75,47.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,29.25"
+              EndConnector="0,30.25"
               Start="0,0"
-              End="0,21.75">
+              End="0,22.75">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.75" />
+                    End="0,22.75" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -41522,6 +42517,30 @@ FROM ucinn_ascendv2__Designation
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Required records found in ascend]"
+          TopLeft="1559.31944444445,785.138888888889">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,128.861111111111"
+              Start="0,0"
+              End="0,121.361111111111">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,121.361111111111" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-74.36298828125,54.8514539930555,148.7259765625,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Missing required recs in ascend]"
           TopLeft="1408.63888888889,765.498015873016">
           <EdgeLayout.Curve>
@@ -41547,18 +42566,18 @@ FROM ucinn_ascendv2__Designation
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Merge Join Output2]"
-          TopLeft="1558.23611111111,679.777777777778">
+          TopLeft="1557.98611111111,679.777777777778">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,63.3611111111113"
+              EndConnector="0,63.361111111111"
               Start="0,0"
-              End="0,55.8611111111113">
+              End="0,55.861111111111">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,55.8611111111113" />
+                    End="0,55.861111111111" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -41721,20 +42740,46 @@ FROM ucinn_ascendv2__Designation
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <AnnotationLayout
+          Text="Record Type = &quot;Scholar&quot;&#xA;Must be Updated from QA to Production for Go-Live&#xA;"
+          ParentId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1"
+          FontInfo="{assembly:Null}"
+          Size="308,72"
+          Id="d99e36fc-759e-46d2-8997-9f98ec9021ab"
+          TopLeft="1752,909" />
+        <AnnotationLayout
+          Text="Need to Add Award Record and Upsert records into QA&#xA;"
+          ParentId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1"
+          FontInfo="{assembly:Null}"
+          Size="322,56"
+          Id="216d10a7-a58c-42fa-a4e9-4b1c81652d5f"
+          TopLeft="1329,1054" />
+        <NodeLayout
+          Size="200,42"
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Upsert Award Recipients"
+          TopLeft="459,982" />
+        <NodeLayout
+          Size="244,42"
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Dedupe Award Recipient Records"
+          TopLeft="1073,980" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Multicast"
+          TopLeft="1495,986" />
         <EdgeLayout
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Derived Column Output]"
-          TopLeft="321.25,129.75">
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Derived Column Output5]"
+          TopLeft="1559,956">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,34.9999999999999"
+              EndConnector="0,30"
               Start="0,0"
-              End="0,27.4999999999999">
+              End="0,22.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.4999999999999" />
+                    End="0,22.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -41743,48 +42788,50 @@ FROM ucinn_ascendv2__Designation
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="351,42"
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1\Set AwardRecipient ExternalSystemID and RecordType"
-          TopLeft="1387,914" />
         <EdgeLayout
-          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Required records found in ascend]"
-          TopLeft="1560.06944444445,785.138888888889">
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Multicast Output 1]"
+          TopLeft="1495,1004">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,128.861111111111"
+              EndConnector="-178,0"
               Start="0,0"
-              End="0,121.361111111111">
+              End="-170.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,121.361111111111" />
+                    End="-170.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-74.36298828125,54.8514539930555,148.7259765625,11.658203125"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <AnnotationLayout
-          Text="Record Type = &quot;Scholar&quot;&#xD;&#xA;Must be Updated from QA to Production for Go-Live&#xD;&#xA;"
-          ParentId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1"
-          FontInfo="{assembly:Null}"
-          Size="308,72"
-          Id="d99e36fc-759e-46d2-8997-9f98ec9021ab"
-          TopLeft="1752,909" />
-        <AnnotationLayout
-          Text="Need to Add Award Record and Upsert records into QA&#xD;&#xA;"
-          ParentId="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1"
-          FontInfo="{assembly:Null}"
-          Size="322,60"
-          Id="216d10a7-a58c-42fa-a4e9-4b1c81652d5f"
-          TopLeft="1398,1000" />
+        <EdgeLayout
+          Id="Package\Check for new FODADAT File - Specify file location with SourcePath variable\Update ascend with New ScholarsAwards information 1 1.Paths[Sort Output6]"
+          TopLeft="1073,1002">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-414,0"
+              Start="0,0"
+              End="-406.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-406.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
