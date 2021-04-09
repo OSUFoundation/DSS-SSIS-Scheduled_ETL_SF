@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<!-- ADD THIS XML TO A FILE CALLED ETLConfig.xml AND PLACE IN THE PROJECT FOLDER -->
+
+<DTSConfiguration>
+
+	   <Configuration ConfiguredType="Property" Path="\Package.Connections[ETL_DB_CONN_DW].Properties[ConnectionString]" ValueType="String">
+
+            <ConfiguredValue>Data Source=DW2;Initial Catalog=OSUF_FE_DW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</ConfiguredValue>
+
+      </Configuration>
+
+      <Configuration ConfiguredType="Property" Path="\Package.Connections[ETL_DB_CONN_FE].Properties[ConnectionString]" ValueType="String">
+
+            <ConfiguredValue>Data Source=DW2;Initial Catalog=OSUF_FE_PROD;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</ConfiguredValue>
+
+      </Configuration>
+
+
+
+      <Configuration ConfiguredType="Property" Path="\Package.Connections[ETL_DB_CONN_RE].Properties[ConnectionString]" ValueType="String">
+
+            <ConfiguredValue>Data Source=RE-DB;Initial Catalog=RE7prod;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</ConfiguredValue>
+
+      </Configuration>
+
+
+
+
+	<Configuration ConfiguredType="Property" Path="\Package.Variables[User::ETLDeploymentFolder].Properties[Value]" ValueType="String">
+
+		<ConfiguredValue>E:\BI\FE_DW\ETL\FE\</ConfiguredValue>
+
+	</Configuration>
+
+	
+</DTSConfiguration>

@@ -1,0 +1,1860 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/15/2007"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ALANEAR51"
+  DTS:CreatorName="BBNT\AlanEa"
+  DTS:DTSID="{FEC2706E-5CB1-46D2-BC37-D367D8BD96B6}"
+  DTS:EnableConfig="True"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="13.0.4001.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="DIM_SOURCE_LOAD"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="895"
+  DTS:VersionGUID="{73693704-9032-414D-8B5A-F27D02F76E7F}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ETL_DB_CONN_DW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{560A99D6-B5CB-4ED3-9312-05117103DB68}"
+      DTS:ObjectName="ETL_DB_CONN_DW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DW2;Initial Catalog=OSUF_FE_DW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ETL_DB_CONN_FE]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A591A0C5-4C6E-424A-9F01-238B56EFB2F1}"
+      DTS:ObjectName="ETL_DB_CONN_FE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DW2;Initial Catalog=OSUF_FE_PROD;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ETL_DB_CONN_RE]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{5AFA8054-53CE-4A83-AC23-B236D899D893}"
+      DTS:ObjectName="ETL_DB_CONN_RE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Retain="True"
+          DTS:ConnectionString="Data Source=RE-DB;Initial Catalog=RE7prod;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Configurations>
+    <DTS:Configuration
+      DTS:ConfigurationString="FIDW_ETLCONFIG_OSUF"
+      DTS:ConfigurationType="5"
+      DTS:CreationName=""
+      DTS:DTSID="{5DF53F0E-AF60-4F71-9C6E-2CA82598BE34}"
+      DTS:ObjectName="ConfigFile" />
+  </DTS:Configurations>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{13496EDB-0099-41BC-B0ED-44230779E97B}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="DataWindowClose">
+      <DTS:VariableValue
+        DTS:DataType="7">12/1/2006</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{92EC719E-4BAE-430C-AD49-3ABAC9825020}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="DataWindowOpen">
+      <DTS:VariableValue
+        DTS:DataType="7">12/1/1900</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3CD61628-8B8A-4783-8D1A-938740EC9246}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ETLControlID">
+      <DTS:VariableValue
+        DTS:DataType="3">2</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F97A3B4E-9499-4FBE-955E-57E2B49CCA08}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ETLDeploymentFolder">
+      <DTS:VariableValue
+        DTS:DataType="8">E:\BI\FE_DW\ETL\FE\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A16AE89E-FA78-4CC0-BA65-1A1D24EC4984}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="MaxDimensionKey">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2E481E9E-46E8-487A-B3E0-509A11E55FD6}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceID">
+      <DTS:VariableValue
+        DTS:DataType="3">1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F4D403C6-17B4-418D-923E-94C7619A6656}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceLoadID">
+      <DTS:VariableValue
+        DTS:DataType="3">1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C6535C18-AECA-4CDE-B1D9-D8776211DCD1}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="TruncateTables">
+      <DTS:VariableValue
+        DTS:DataType="11">-1</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Source Dimension"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{481B7AC3-E8F3-45DF-AB4C-E74B750CD1D0}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Source Dimension">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Source Dimension\Get SourceDimID Max"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{d7845239-8180-4c90-bc93-01f13d74589f}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Get SourceDimID Max"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{560A99D6-B5CB-4ED3-9312-05117103DB68}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="SELECT &#xA;COALESCE(MAX(SourceDimID), 0) AS MaxDimKey&#xA;FROM dbo.DIM_Source"
+              SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="MaxDimKey"
+                SQLTask:DtsVariableName="User::MaxDimensionKey" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Source Dimension\Load Source Data"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{521D94D4-65A4-4105-8DFC-E96E0B5401B8}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Load Source Data"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server v9; (C) 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              BLOBTempStoragePath=""
+              bufferTempStoragePath=""
+              engineThreads="5"
+              version="1">
+              <components>
+                <component
+                  refId="Package\Source Dimension\Load Source Data\Lookup Fiscal Year Start &amp; End from DIM_Date"
+                  componentClassID="Microsoft.Lookup"
+                  contactInfo="Lookup;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="Looks up values in a reference dataset by using exact matching."
+                  name="Lookup Fiscal Year Start &amp; End from DIM_Date"
+                  usesDispositions="true"
+                  version="6">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement that generates the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT
+DateDimID,
+ActualDate,
+FiscalYearStartDate,
+FiscalYearEndDate,
+FiscalQuarterStartDate,
+FiscalQuarterEndDate,
+DATEADD(q, -1, FiscalQuarterStartDate) AS LastFiscalQuarterStart,
+DATEADD(q, -1, FiscalQuarterEndDate) AS LastFiscalQuarterEnd
+
+FROM
+DIM_Date</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommandParam"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the cache type of the lookup table."
+                      name="CacheType"
+                      typeConverter="CacheType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                      name="MaxMemoryUsage">25</property>
+                    <property
+                      dataType="System.Int64"
+                      description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                      name="MaxMemoryUsage64">25</property>
+                    <property
+                      dataType="System.String"
+                      description="Indicates whether to reference metadata in an XML format."
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="DateDimID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ActualDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FiscalYearStartDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FiscalYearEndDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FiscalQuarterStartDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FiscalQuarterEndDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LastFiscalQuarterStart" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LastFiscalQuarterEnd" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                      name="ParameterMap">#{Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[CurrentDateDimID]};</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the type of connection used to access the reference dataset."
+                      name="ConnectionType"
+                      typeConverter="LookupConnectionType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                      name="NoMatchBehavior"
+                      typeConverter="LookupNoMatchBehavior">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                      name="NoMatchCachePercentage">0</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Source Dimension\Load Source Data\Lookup Fiscal Year Start &amp; End from DIM_Date.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[ETL_DB_CONN_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[ETL_DB_CONN_DW]"
+                      description="Connection manager used to access lookup data."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Source Dimension\Load Source Data\Lookup Fiscal Year Start &amp; End from DIM_Date.Inputs[Lookup Input]"
+                      name="Lookup Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Source Dimension\Load Source Data\Lookup Fiscal Year Start &amp; End from DIM_Date.Inputs[Lookup Input].Columns[CurrentDateDimID]"
+                          cachedDataType="i4"
+                          cachedName="CurrentDateDimID"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[CurrentDateDimID]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table that a column joins."
+                              name="JoinToReferenceColumn">DateDimID</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Source Dimension\Load Source Data\Lookup Fiscal Year Start &amp; End from DIM_Date.Outputs[Lookup Match Output]"
+                      errorOrTruncationOperation="Lookup"
+                      errorRowDisposition="FailComponent"
+                      exclusionGroup="1"
+                      name="Lookup Match Output"
+                      synchronousInputId="Package\Source Dimension\Load Source Data\Lookup Fiscal Year Start &amp; End from DIM_Date.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Lookup Fiscal Year Start &amp; End from DIM_Date.Outputs[Lookup Match Output].Columns[LastFiscalQuarterStart]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Copy Column"
+                          lineageId="Package\Source Dimension\Load Source Data\Lookup Fiscal Year Start &amp; End from DIM_Date.Outputs[Lookup Match Output].Columns[LastFiscalQuarterStart]"
+                          name="LastFiscalQuarterStart"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn">LastFiscalQuarterStart</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Lookup Fiscal Year Start &amp; End from DIM_Date.Outputs[Lookup Match Output].Columns[LastFiscalQuarterEnd]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Copy Column"
+                          lineageId="Package\Source Dimension\Load Source Data\Lookup Fiscal Year Start &amp; End from DIM_Date.Outputs[Lookup Match Output].Columns[LastFiscalQuarterEnd]"
+                          name="LastFiscalQuarterEnd"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn">LastFiscalQuarterEnd</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Source Dimension\Load Source Data\Lookup Fiscal Year Start &amp; End from DIM_Date.Outputs[Lookup No Match Output]"
+                      description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                      exclusionGroup="1"
+                      name="Lookup No Match Output"
+                      synchronousInputId="Package\Source Dimension\Load Source Data\Lookup Fiscal Year Start &amp; End from DIM_Date.Inputs[Lookup Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Source Dimension\Load Source Data\Lookup Fiscal Year Start &amp; End from DIM_Date.Outputs[Lookup Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Lookup Error Output"
+                      synchronousInputId="Package\Source Dimension\Load Source Data\Lookup Fiscal Year Start &amp; End from DIM_Date.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Lookup Fiscal Year Start &amp; End from DIM_Date.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Source Dimension\Load Source Data\Lookup Fiscal Year Start &amp; End from DIM_Date.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Lookup Fiscal Year Start &amp; End from DIM_Date.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Source Dimension\Load Source Data\Lookup Fiscal Year Start &amp; End from DIM_Date.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Source Dimension\Load Source Data\Populate Source Dimension"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Populate Source Dimension"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[DIM_Source]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destinaton. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">0</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[ETL_DB_CONN_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[ETL_DB_CONN_DW]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].Columns[FiscalMonthStart]"
+                          cachedDataType="i2"
+                          cachedName="FiscalMonthStart"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[FiscalMonthStart]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[FiscalMonthStart]" />
+                        <inputColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].Columns[FiscalYearStart]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="10"
+                          cachedName="FiscalYearStart"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[FiscalYearStart]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[FiscalYearStart]" />
+                        <inputColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].Columns[ClosedYearEndDate]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="ClosedYearEndDate"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[ClosedYearEndDate]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[ClosedYearEndDate]" />
+                        <inputColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].Columns[OpenYearStartDate]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="OpenYearStartDate"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[OpenYearStartDate]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[OpenYearStartDate]" />
+                        <inputColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].Columns[OpenYearFirstPeriodEndDate]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="OpenYearFirstPeriodEndDate"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[OpenYearFirstPeriodEndDate]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[OpenYearFirstPeriodEndDate]" />
+                        <inputColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].Columns[FiscalYearEnd]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="5"
+                          cachedName="FiscalYearEnd"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[FiscalYearEnd]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[FiscalYearEnd]" />
+                        <inputColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].Columns[NoSPPeriods]"
+                          cachedDataType="i2"
+                          cachedName="NoSPPeriods"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[NoSPPeriods]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[NoSPPeriods]" />
+                        <inputColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].Columns[FirstPostDate]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="FirstPostDate"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[FirstPostDate]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[FirstPostDate]" />
+                        <inputColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].Columns[LastPostDate]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="LastPostDate"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[LastPostDate]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[LastPostDate]" />
+                        <inputColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].Columns[OrganizationName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="OrganizationName"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[OrganizationName]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[OrganizationName]" />
+                        <inputColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].Columns[CurrentDate]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="CurrentDate"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[RefreshDate]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[CurrentDate]" />
+                        <inputColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].Columns[FirstFiscalYearEnd]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="FirstFiscalYearEnd"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[FirstFiscalEndDate]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[FirstFiscalYearEnd]" />
+                        <inputColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].Columns[LastFiscalYearEnd]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="LastFiscalYearEnd"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[LastFiscalEndDate]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[LastFiscalYearEnd]" />
+                        <inputColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].Columns[NewSurrogateKey]"
+                          cachedDataType="i4"
+                          cachedName="NewSurrogateKey"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[SourceDimID]"
+                          lineageId="Package\Source Dimension\Load Source Data\Script Surrogate Dimension Key.Outputs[Output 0].Columns[NewSurrogateKey]" />
+                        <inputColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].Columns[LastPeriodBeginDate]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="LastPeriodBeginDate"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[LastPeriodStartDate]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[LastPeriodBeginDate]" />
+                        <inputColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].Columns[LastPeriodEndDate]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="LastPeriodEndDate"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[LastPeriodEndDate]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[LastPeriodEndDate]" />
+                        <inputColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].Columns[LastFiscalQuarterStart]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="LastFiscalQuarterStart"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[LastQtrStartDate]"
+                          lineageId="Package\Source Dimension\Load Source Data\Lookup Fiscal Year Start &amp; End from DIM_Date.Outputs[Lookup Match Output].Columns[LastFiscalQuarterStart]" />
+                        <inputColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].Columns[CurrentDateDimID]"
+                          cachedDataType="i4"
+                          cachedName="CurrentDateDimID"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[CurrentDateDimID]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[CurrentDateDimID]" />
+                        <inputColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].Columns[LastFiscalQuarterEnd]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="LastFiscalQuarterEnd"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[LastQtrEndDate]"
+                          lineageId="Package\Source Dimension\Load Source Data\Lookup Fiscal Year Start &amp; End from DIM_Date.Outputs[Lookup Match Output].Columns[LastFiscalQuarterEnd]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[SourceDimID]"
+                          dataType="i4"
+                          name="SourceDimID" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[OrganizationName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="OrganizationName" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[FirstFiscalEndDate]"
+                          dataType="dbTimeStamp"
+                          name="FirstFiscalEndDate" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[LastFiscalEndDate]"
+                          dataType="dbTimeStamp"
+                          name="LastFiscalEndDate" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[FiscalYearStart]"
+                          codePage="1252"
+                          dataType="str"
+                          length="10"
+                          name="FiscalYearStart" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[FiscalYearEnd]"
+                          codePage="1252"
+                          dataType="str"
+                          length="10"
+                          name="FiscalYearEnd" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[FiscalMonthStart]"
+                          dataType="ui1"
+                          name="FiscalMonthStart" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[RefreshDate]"
+                          dataType="dbTimeStamp"
+                          name="RefreshDate" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[LastQtrStartDate]"
+                          dataType="dbTimeStamp"
+                          name="LastQtrStartDate" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[SPBalanceStartDate]"
+                          dataType="dbTimeStamp"
+                          name="SPBalanceStartDate" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[SPBalanceEndDate]"
+                          dataType="dbTimeStamp"
+                          name="SPBalanceEndDate" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[NoSPPeriods]"
+                          dataType="i2"
+                          name="NoSPPeriods" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[CurrentFiscalStartDate]"
+                          dataType="dbTimeStamp"
+                          name="CurrentFiscalStartDate" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[CurrentFiscalEndDate]"
+                          dataType="dbTimeStamp"
+                          name="CurrentFiscalEndDate" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[FirstPostDate]"
+                          dataType="dbTimeStamp"
+                          name="FirstPostDate" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[LastPostDate]"
+                          dataType="dbTimeStamp"
+                          name="LastPostDate" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[ClosedYearEndDate]"
+                          dataType="dbTimeStamp"
+                          name="ClosedYearEndDate" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[OpenYearStartDate]"
+                          dataType="dbTimeStamp"
+                          name="OpenYearStartDate" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[OpenYearFirstPeriodEndDate]"
+                          dataType="dbTimeStamp"
+                          name="OpenYearFirstPeriodEndDate" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[LastPeriodStartDate]"
+                          dataType="dbTimeStamp"
+                          name="LastPeriodStartDate" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[LastPeriodEndDate]"
+                          dataType="dbTimeStamp"
+                          name="LastPeriodEndDate" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[CurrentDateDimID]"
+                          dataType="i4"
+                          name="CurrentDateDimID" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input].ExternalColumns[LastQtrEndDate]"
+                          dataType="dbTimeStamp"
+                          name="LastQtrEndDate" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Source Dimension\Load Source Data\Script Surrogate Dimension Key"
+                  componentClassID="Microsoft.ManagedComponentHost"
+                  contactInfo="Executes a custom script.;Microsoft Corporation;Microsoft SqlServer v9; © 2004 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Executes a custom script."
+                  localeId="1033"
+                  name="Script Surrogate Dimension Key"
+                  version="10">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Stores the source code of the component"
+                      isArray="true"
+                      name="SourceCode"
+                      state="cdata">
+                      <arrayElements
+                        arrayElementCount="15">
+                        <arrayElement
+                          dataType="System.String"><![CDATA[ScriptMain.vb]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[' Microsoft SQL Server Integration Services user script component
+' This is your new script component in Microsoft Visual Basic .NET
+' ScriptMain is the entrypoint class for script components
+
+Imports System
+Imports System.Data
+Imports System.Math
+Imports Microsoft.SqlServer.Dts.Pipeline.Wrapper
+Imports Microsoft.SqlServer.Dts.Runtime.Wrapper
+
+<Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute> _
+<CLSCompliant(False)> _
+Public Class ScriptMain
+    Inherits UserComponent
+
+
+    Dim ProjectDimKey As Int32
+
+    Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)
+        '
+        ' 
+        ProjectDimKey = ProjectDimKey + 1
+
+        Row.NewSurrogateKey = ProjectDimKey
+
+    End Sub
+
+    Public Overrides Sub PreExecute()
+        MyBase.PreExecute()
+
+        ProjectDimKey = Variables.MaxDimensionKey
+    End Sub
+
+End Class
+
+]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[BufferWrapper.vb]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[' THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+' Microsoft SQL Server Integration Services buffer wrappers
+' This module defines classes for accessing data flow buffers
+' THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+
+
+Option Strict Off   ' This allows usage of PipelineBuffer typed accessors.
+
+Imports System
+Imports System.Data
+Imports Microsoft.SqlServer.Dts.Pipeline
+Imports Microsoft.SqlServer.Dts.Pipeline.Wrapper
+
+<CLSCompliant(False)> _
+Public Class Input0Buffer
+    Inherits ScriptBuffer
+
+    Public Sub New(ByVal Buffer As PipelineBuffer, ByVal BufferColumnIndexes As Integer(), ByVal OutputMap As OutputNameMap)
+        MyBase.New(Buffer, BufferColumnIndexes, OutputMap)
+    End Sub
+
+    Public WriteOnly Property [NewSurrogateKey]() As Int32
+        Set
+            Me(0) = Value
+        End Set
+    End Property
+    Public WriteOnly Property [NewSurrogateKey_IsNull] As Boolean
+        Set
+            If (value)
+                SetNull(0)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public Overloads Function NextRow() As Boolean
+        NextRow = MyBase.NextRow()
+    End Function
+
+    Public Overloads Function EndOfRowset() As Boolean
+        EndOfRowset = MyBase.EndOfRowset
+    End Function
+
+End Class
+]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[ScriptComponent_b5e6dd3289254a1285a5e3081de4b667.vbproj]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2a3e7a5b-8859-449d-b7a9-32360aba75f8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>My Project</AppDesignerFolder>
+    <RootNamespace>ScriptComponent_b5e6dd3289254a1285a5e3081de4b667</RootNamespace>
+    <AssemblyName>ScriptComponent_b5e6dd3289254a1285a5e3081de4b667</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- This sections specifies references for the project. -->
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <!-- Visual Basic supports Importing namespaces (equivalent to using statements in C#).-->
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="My Project\" />
+  </ItemGroup>
+  <!-- Include the build rules for a VB project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="SSIS_SC110" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
+        <Host Name="SSIS_SC110" IconIndex=""></Host>
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC130</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <ItemGroup>
+    <Compile Include="ScriptMain.vb" />
+    <Compile Include="BufferWrapper.vb" />
+    <Compile Include="ComponentWrapper.vb" />
+  </ItemGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+</Project>]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[ComponentWrapper.vb]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[' THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+' Microsoft SQL Server Integration Services component wrapper
+' This module defines the base class for your component
+' THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+
+Imports System
+Imports System.Data
+Imports Microsoft.SqlServer.Dts.Pipeline
+Imports Microsoft.SqlServer.Dts.Pipeline.Wrapper
+Imports Microsoft.SqlServer.Dts.Runtime.Wrapper
+
+<CLSCompliant(False)> _
+Public Class UserComponent
+    Inherits ScriptComponent
+
+    Public Connections As New Connections(Me)
+    Public Variables As New Variables(Me)
+
+    Public Overrides Sub ProcessInput(ByVal InputID As Integer, ByVal InputName As String, ByVal Buffer As PipelineBuffer, ByVal OutputMap As OutputNameMap)
+
+        If InputName.Equals("Input 0", StringComparison.Ordinal) Then
+            Input0_ProcessInput(New Input0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap))
+        End If
+
+    End Sub
+
+    Public Overridable Sub Input0_ProcessInput(ByVal Buffer As Input0Buffer)
+
+        While Buffer.NextRow()
+            Input0_ProcessInputRow(Buffer)
+        End While
+
+    End Sub
+
+    Public Overridable Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)
+
+    End Sub
+
+End Class
+
+<CLSCompliant(False)> _
+Public Class Connections
+
+    Dim ParentComponent As ScriptComponent
+
+    <CLSCompliant(False)> _
+    Public Sub New(ByVal Component As ScriptComponent)
+        ParentComponent = Component
+    End Sub
+
+End Class
+
+<CLSCompliant(False)> _
+Public Class Variables
+
+    Dim ParentComponent As ScriptComponent
+
+    <CLSCompliant(False)> _
+    Public Sub New(ByVal Component As ScriptComponent)
+        ParentComponent = Component
+    End Sub
+
+    Public ReadOnly Property [MaxDimensionKey]() As Int32
+        Get
+            Return CType(ParentComponent.ReadOnlyVariables("MaxDimensionKey").GetValueWithContext(ScriptComponent.EvaluatorContext), Int32)
+        End Get
+    End Property
+
+End Class
+]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[Project]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:ProjectId>{CA72DC96-D5FF-44EF-A6BE-0395184E9FBE}</msb:ProjectId>
+		<msb:NoContent>Reference;Import;Folder</msb:NoContent>
+		<msb:Language>msBuild</msb:Language>
+		<msb:CodeName>ScriptComponent_b5e6dd3289254a1285a5e3081de4b667</msb:CodeName>
+		<msb:DisplayName>ScriptComponent_b5e6dd3289254a1285a5e3081de4b667</msb:DisplayName>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:File Include="ScriptMain.vb"/>
+		<msb:File Include="ComponentWrapper.vb"/>
+		<msb:File Include="BufferWrapper.vb"/>
+		<msb:Project Include="ScriptComponent_b5e6dd3289254a1285a5e3081de4b667.vbproj"/>
+	</msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                      </arrayElements>
+                    </property>
+                    <property
+                      dataType="System.String"
+                      description="Stores the binary representation of the component"
+                      isArray="true"
+                      name="BinaryCode"
+                      state="cdata">
+                      <arrayElements
+                        arrayElementCount="2">
+                        <arrayElement
+                          dataType="System.String"><![CDATA[ScriptComponent_b5e6dd3289254a1285a5e3081de4b667.dll]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAPY/G1kAAAAAAAAAAOAAIiALAVAAABgAAAAGAAAAAAAAgjcA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAEAAAAAAAAAACAAAAAAgAAAAAAAAMAQIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAADA3AABPAAAAAEAAAEgDAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAiBcAAAAgAAAAGAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgDAAAAQAAAAAQAAAAaAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAHgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAABk
+NwAAAAAAAEgAAAACAAUAnCIAAJQUAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKA8AAAoqHgIoEAAACiqmcxEAAAqAAQAABHMSAAAKgAIA
+AARzEwAACoADAAAEcxQAAAqABAAABCoufgEAAARvFQAACioufgIAAARvFgAACioufgMAAARvFwAA
+CioufgQAAARvGAAACioeAigQAAAGKm4CAnsFAAAEF9Z9BQAABAMCewUAAARvDAAABipiAigZAAAK
+AgJ7BwAABG8WAAAGfQUAAAQqKgIDBAUoGgAACio6AhYDjBwAAAEoGwAACipaAywIAhYoHAAACipy
+AQAAcHMdAAAKehMwAQAJAAAAAQAAEQIoHgAACgoGKgAAABMwAQAJAAAAAQAAEQIoHwAACgoGKn4C
+KCAAAAoCAnMUAAAGfQYAAAQCAnMVAAAGfQcAAAQqkgRyngAAcBpvIQAACiwVAgUCAygiAAAKDgRz
+CwAABm8SAAAGKkorBwIDbxMAAAYDbw4AAAYt8SoGKjoCKCMAAAoCA30IAAAEKjoCKCMAAAoCA30J
+AAAEKpYCewkAAARvJAAACnKuAABwbyUAAAooJgAACm8nAAAKKCgAAAoqNgIDKCkAAAooKgAACioe
+AigrAAAKKi7QCgAAAigsAAAKKh4CKC0AAAoqAAAAEzABABQAAAACAAARAowFAAAbLQgoAQAAKwor
+AgIKBioiA/4VBQAAGyoeAigjAAAKKgAAABMwAgAoAAAAAwAAEQJ7LwAACm8wAAAKCgaMCAAAGy0S
+KAIAACsKAnsvAAAKBm8xAAAKBipKAigjAAAKAnMyAAAKfS8AAAoqAEJTSkIBAAEAAAAAAAwAAAB2
+NC4wLjMwMzE5AAAAAAUAbAAAAMwHAAAjfgAAOAgAAJQIAAAjU3RyaW5ncwAAAADMEAAA0AAAACNV
+UwCcEQAAEAAAACNHVUlEAAAArBEAAOgCAAAjQmxvYgAAAAAAAAACAAABVxWiCQkOAAAA+gEzABYA
+AAEAAAAnAAAACwAAAAoAAAAfAAAAEQAAADIAAAAwAAAAAwAAAAQAAAAIAAAACAAAAAgAAAABAAAA
+BgAAAAIAAAADAAAAAgAAAAAAngMBAAAAAAAGAI0ChwYGAOoChwYGANAByAUPAKcGAAAGAEECNgMK
+ALkBUAUKAI8BiAMKAOQBiAMOAH8BFwYOAKgF2wUGAFoCyAUOABECYAYOACkC3gAGAB8HCAQOAJQF
+FwYOAHIC3gAGAHoBCAQGAP0BQQYOADoAXgMKAKQBDwQSAMMCVgEGAK0CCAQGAFkDCAQSADkFVgEW
+ACoFVgESAIIEVgESAFoHVgEGAGQACAQGAFUECAQGAFIDCAQGAG8ECAQaABEAaAUaAAEAaAVvANoH
+AAAaACIAaAUOAPgGYAYGABAHhwYGACgBCAQGALEFCAQAAAAAmwAAAAAAAQABAAAAAABHBCkIJQAB
+AAEAAAAAAKYFKQgpAAEAAgAAARAAJgcpCDkAAQADAAEAAAAsBGoAHAAFAAgAAQAAAB0FagBhAAYA
+CwABAAAAPAdqAG0ABgAQAAEAAAAEB2oAOQAIABQAAQAAAMIGagA5AAkAFQAFAQAACQYAADkACgAX
+AAUBAABJAAAAOQAKAB4AMQDmBAQBMQC9BAwBMQDRBBQBMQD/BBwBAQBxCCQBBgAEBycBBgDCBisB
+AQBKBy8BAQBKBy8BIQC8B8wAUCAAAAAABhi7BQYAAQBYIAAAAAAGGLsFBgABAGAgAAAAABEYwQUz
+AQEAiiAAAAAAEwiZBTcBAQCWIAAAAAATCDcEPAEBAKIgAAAAABMIkAVBAQEAriAAAAAAEwj5BUYB
+AQC6IAAAAAAGGLsFBgABAMIgAAAAAMYCCghLAQEA3iAAAAAAxgIIAwYAAgD3IAAAAAAGGLsFTwAC
+AAIhAAAAAAYIXQgBAAUAESEAAAAABgjTAykABgAoIQAAAACGACEIYwAHAEAhAAAAAIYAMAdjAAcA
+VSEAAAAABhi7BQYABwB1IQAAAADGAq8HUQEHAJohAAAAAEYDqAdLAQsArSEAAAAARgMKCEsBDACv
+IQAAAAAGGLsFWwENAL4hAAAAAAYYuwVbAQ4AzSEAAAAABgh/CJ0ADwDzIQAAAADGAvEGmAAPAAEi
+AAAAAMYCHAGdABAACSIAAAAAgwB3AWEBEAAVIgAAAADGAlADqQAQACAiAAAAABEAwgBmARAAQCIA
+AAAAAQCuAG4BEQBJIgAAAAAGGLsFBgASAFQiAAAAAAMIAwFKABIAiCIAAAAABhi7BQYAEgAAAAEA
+JQgAAAEAPwUAAAIAzAYAAAMAkAQAAAEAMAMAAAEAMAMAAAEApAAAAAIATAEAAAMAPwUAAAQAkAQA
+AAEAPwUAAAEAJQgAAAEAYAcAAAEAYAcAAAEAgAQAAAEAEwEAAAEAEwEJALsFAQARALsFBgAZALsF
+CgApALsFEAAxALsFFQBBALsFGwBZALsFBgBhALsFBgBpALsFBgCBALsFIQCRALsFKQChALsFEACp
+ALsFBgCxALsFKQBJALsFBgBRALsFBgAMALsFBgAUALsFBgAcALsFBgAkALsFBgAMAAMBSgAUAAMB
+SgAcAAMBSgAkAAMBSgDZAAgDBgDBALsFTwDBAP8DWQDBAO4DAQDpALsFEADBACEIYwDBADAHYwDZ
+ALsFBgDxAPEGZwDZAOAGbgBxALsFBgDZALYGdAABAfYDegDZAPUHgQAJAcYHhwAhAUYFjgApAScD
+kwBxAPEGmABxABwBnQCJADoBoQBxAFADqQA5AfQAtQA0ALwHzAA8ABMDSgA8AB0D4wA8ALsFBgAp
+AGMAnwIuAAsAlwEuABMAoAEuABsAvwEuACMAyAFAADsAEAJAADMAFQJDACsAJAJDADMAFQJJAGMA
+sAJjACsAJAJjADMAFQJpAGMAxAKAADsAEAKDAEMAEAKDAEsAEAKDACsAJAKJAGMA0QKgADsAEAKj
+AGsAEAKjAHMAHgLAADsAEALDAHMAHgLgADsAEALjAHMAHgIDAXMAHgIjAXMAHgJDATMAFQJDAVMA
+PQJjATMAFQJjAVsAHgKAAnMAHgKgAnMAHgLgAjMAFQLgAjsAEAIAAzMAFQIAAzsAEAIgAzMAFQIg
+AzsAEAJAAzMAFQJAAzsAEAJgAzsAEAKAAzsAEAKgAzsAEAKgAzMAFQLAAzsAEALgAzsAEALgAzMA
+FQJfAK0AwAAEAAEABgAFAAkABwALAAgAAACoBXYBAABJBHsBAACUBYABAAALBoUBAABhCIoBAADX
+A44BAACDCIoBAAAHAZIBAgAEAAMAAgAFAAUAAgAGAAcAAgAHAAkAAQAMAAsAAQANAA0AAgAWAA8A
+AgAeABEALgA1ADwAQwCyAMUA1ADbAASAAAAAAAAAAAAAAAAAAAAAAGoAAAAEAAAAAAAAAAAAAADp
+ANUAAAAAAAQAAAAAAAAAAAAAAOkACAQAAAAACgAAAAAAAAAAAAAA8gDeAAAAAAANAAAAAAAAAAAA
+AAD7AGoHAAAAAA0AAAAAAAAAAAAAAPsAhwcAAAAADQAAAAAAAAAAAAAA+wCaBAAAAAAKAAQACwAE
+AAAAEAAWAKwAAAAQADcArAAAAAAAOQCsAF0AuwBdAN4AAAAASURUU1ZhcmlhYmxlMTAwAElEVFNW
+YXJpYWJsZXMxMDAASURUU0V2YWx1YXRvckNvbnRleHQxMDAAQ29udGV4dFZhbHVlYDEAVGhyZWFk
+U2FmZU9iamVjdFByb3ZpZGVyYDEASW50MzIAU2NyaXB0Q29tcG9uZW50X2I1ZTZkZDMyODkyNTRh
+MTI4NWE1ZTMwODFkZTRiNjY3ADxNb2R1bGU+AElucHV0SUQAVABEaXNwb3NlX19JbnN0YW5jZV9f
+AENyZWF0ZV9fSW5zdGFuY2VfXwBtc2NvcmxpYgBNaWNyb3NvZnQuVmlzdWFsQmFzaWMAQ3JlYXRl
+SW5zdGFuY2UAZ2V0X0dldEluc3RhbmNlAGluc3RhbmNlAEdldEhhc2hDb2RlAFJ1bnRpbWVUeXBl
+SGFuZGxlAEdldFR5cGVGcm9tSGFuZGxlAElucHV0TmFtZQBNaWNyb3NvZnQuU3FsU2VydmVyLkR0
+cy5QaXBlbGluZQBHZXRUeXBlAEFwcGxpY2F0aW9uQmFzZQBFZGl0b3JCcm93c2FibGVTdGF0ZQBI
+ZWxwS2V5d29yZEF0dHJpYnV0ZQBHZW5lcmF0ZWRDb2RlQXR0cmlidXRlAERlYnVnZ2FibGVBdHRy
+aWJ1dGUARWRpdG9yQnJvd3NhYmxlQXR0cmlidXRlAENvbVZpc2libGVBdHRyaWJ1dGUAU3RhbmRh
+cmRNb2R1bGVBdHRyaWJ1dGUASGlkZU1vZHVsZU5hbWVBdHRyaWJ1dGUAVGFyZ2V0RnJhbWV3b3Jr
+QXR0cmlidXRlAERlYnVnZ2VySGlkZGVuQXR0cmlidXRlAE15R3JvdXBDb2xsZWN0aW9uQXR0cmli
+dXRlAENvbXBpbGF0aW9uUmVsYXhhdGlvbnNBdHRyaWJ1dGUAQ0xTQ29tcGxpYW50QXR0cmlidXRl
+AFNTSVNTY3JpcHRDb21wb25lbnRFbnRyeVBvaW50QXR0cmlidXRlAFJ1bnRpbWVDb21wYXRpYmls
+aXR5QXR0cmlidXRlAFByZUV4ZWN1dGUAZ2V0X1ZhbHVlAHNldF9WYWx1ZQBHZXRPYmplY3RWYWx1
+ZQBTeXN0ZW0uUnVudGltZS5WZXJzaW9uaW5nAFRvU3RyaW5nAE1hdGgATWljcm9zb2Z0LlZpc3Vh
+bEJhc2ljLk15U2VydmljZXMuSW50ZXJuYWwAU3lzdGVtLkNvbXBvbmVudE1vZGVsAFNjcmlwdENv
+bXBvbmVudF9iNWU2ZGQzMjg5MjU0YTEyODVhNWUzMDgxZGU0YjY2Ny5kbGwAc2V0X05ld1N1cnJv
+Z2F0ZUtleV9Jc051bGwAU2V0TnVsbABnZXRfSXRlbQBzZXRfSXRlbQBTeXN0ZW0AU3lzdGVtLkNv
+bXBvbmVudE1vZGVsLkRlc2lnbgBTY3JpcHRNYWluAGdldF9BcHBsaWNhdGlvbgBNeUFwcGxpY2F0
+aW9uAEludmFsaWRPcGVyYXRpb25FeGNlcHRpb24AU3RyaW5nQ29tcGFyaXNvbgBvAE91dHB1dE5h
+bWVNYXAAT3V0cHV0TWFwAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRFRTUnVudGltZVdyYXAAbV9BcHBP
+YmplY3RQcm92aWRlcgBtX1VzZXJPYmplY3RQcm92aWRlcgBtX0NvbXB1dGVyT2JqZWN0UHJvdmlk
+ZXIAbV9NeVdlYlNlcnZpY2VzT2JqZWN0UHJvdmlkZXIASW5wdXQwQnVmZmVyAFBpcGVsaW5lQnVm
+ZmVyAFNjcmlwdEJ1ZmZlcgBUb0ludGVnZXIAU3lzdGVtLkNvZGVEb20uQ29tcGlsZXIATWljcm9z
+b2Z0LlNxbFNlcnZlci5EdHMuUnVudGltZS5XcmFwcGVyAGdldF9Vc2VyAGdldF9Db21wdXRlcgBN
+eUNvbXB1dGVyAEFjdGl2YXRvcgAuY3RvcgAuY2N0b3IAU3lzdGVtLkRpYWdub3N0aWNzAE1pY3Jv
+c29mdC5WaXN1YWxCYXNpYy5EZXZpY2VzAGdldF9XZWJTZXJ2aWNlcwBNeVdlYlNlcnZpY2VzAE1p
+Y3Jvc29mdC5WaXN1YWxCYXNpYy5BcHBsaWNhdGlvblNlcnZpY2VzAFN5c3RlbS5SdW50aW1lLklu
+dGVyb3BTZXJ2aWNlcwBNaWNyb3NvZnQuVmlzdWFsQmFzaWMuQ29tcGlsZXJTZXJ2aWNlcwBTeXN0
+ZW0uUnVudGltZS5Db21waWxlclNlcnZpY2VzAERlYnVnZ2luZ01vZGVzAGdldF9SZWFkT25seVZh
+cmlhYmxlcwBCdWZmZXJDb2x1bW5JbmRleGVzAEdldENvbHVtbkluZGV4ZXMARXF1YWxzAENvbnZl
+cnNpb25zAENvbm5lY3Rpb25zAFJ1bnRpbWVIZWxwZXJzAE9iamVjdABNeVByb2plY3QARW5kT2ZS
+b3dzZXQAVXNlckNvbXBvbmVudABQYXJlbnRDb21wb25lbnQAU2NyaXB0Q29tcG9uZW50AE1pY3Jv
+c29mdC5TcWxTZXJ2ZXIuVHhTY3JpcHQATWljcm9zb2Z0LlNxbFNlcnZlci5QaXBlbGluZUhvc3QA
+SW5wdXQwX1Byb2Nlc3NJbnB1dABtX0NvbnRleHQAR2V0VmFsdWVXaXRoQ29udGV4dABTY3JpcHRD
+b21wb25lbnRFdmFsQ29udGV4dABnZXRfRXZhbHVhdG9yQ29udGV4dABJbnB1dDBfUHJvY2Vzc0lu
+cHV0Um93AE5leHRSb3cAU2NyaXB0Q29tcG9uZW50X2I1ZTZkZDMyODkyNTRhMTI4NWE1ZTMwODFk
+ZTRiNjY3Lk15AHNldF9OZXdTdXJyb2dhdGVLZXkAUHJvamVjdERpbUtleQBnZXRfTWF4RGltZW5z
+aW9uS2V5AAAAgJtJAHMATgB1AGwAbAAgAHAAcgBvAHAAZQByAHQAeQAgAGMAYQBuAG4AbwB0ACAA
+YgBlACAAcwBlAHQAIAB0AG8AIABGAGEAbABzAGUALgAgAEEAcwBzAGkAZwBuACAAYQAgAHYAYQBs
+AHUAZQAgAHQAbwAgAHQAaABlACAAYwBvAGwAdQBtAG4AIABpAG4AcwB0AGUAYQBkAC4AAA9JAG4A
+cAB1AHQAIAAwAAAfTQBhAHgARABpAG0AZQBuAHMAaQBvAG4ASwBlAHkAAAAAl7oDgc0Rn0SCbbAJ
+kqcGEQAEIAEBCAMgAAEFIAEBEREEIAEBDgUgAgEODgUgAQERHQcgBAEODg4OBCABAQIGFRIsARIM
+BhUSLAESCAYVEiwBEj0GFRIsARIoBCAAEwAJIAMBEmUdCBJpBSACAQgcAwcBAgMgAAIGIAICDhF9
+BSABHQgIBSAAEoCBBiABEoCFHAUAABKAiQYgARwSgI0EAAEIHAQAARwcBCABAhwDIAAIBwABEkUR
+gJkDIAAOBAcBHgACHgAFEAEAHgAECgEeAAQHARMABhUSLAETAAcGFRJNARMABhUSTQETAAITAAQK
+ARMABSABARMACLd6XFYZNOCJCLA/X38R1Qo6CImEXc2AgMyRBwYVEiwBEgwHBhUSLAESCAcGFRIs
+ARI9BwYVEiwBEigCBggDBhIgAwYSJAMGEm0DAAABBAAAEgwEAAASCAQAABI9BAAAEigFIAEBEhgJ
+IAQBCA4SZRJpBSABARJtBCAAEkUHEAEBHgAeAAcwAQEBEB4ABAgAEgwECAASCAQIABI9BAgAEigD
+KAAIAygAAgQoABMACAEACAAAAAAAHgEAAQBUAhZXcmFwTm9uRXhjZXB0aW9uVGhyb3dzAQgBAAIA
+AAAAAEcBABouTkVURnJhbWV3b3JrLFZlcnNpb249djQuMAEAVA4URnJhbWV3b3JrRGlzcGxheU5h
+bWUQLk5FVCBGcmFtZXdvcmsgNAQBAAAACAEAAQAAAAAABQEAAAAAGAEACk15VGVtcGxhdGUIMTEu
+MC4wLjAAAGEBADRTeXN0ZW0uV2ViLlNlcnZpY2VzLlByb3RvY29scy5Tb2FwSHR0cENsaWVudFBy
+b3RvY29sEkNyZWF0ZV9fSW5zdGFuY2VfXxNEaXNwb3NlX19JbnN0YW5jZV9fAAAAEAEAC015LkNv
+bXB1dGVyAAATAQAOTXkuQXBwbGljYXRpb24AAAwBAAdNeS5Vc2VyAAATAQAOTXkuV2ViU2Vydmlj
+ZXMAAAAAAFg3AAAAAAAAAAAAAHI3AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAABkNwAAAAAAAAAA
+AAAAAF9Db3JEbGxNYWluAG1zY29yZWUuZGxsAAAAAAD/JQAgABAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAEAEAAAABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAEgA
+AABYQAAA7AIAAAAAAAAAAAAA7AI0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8AAAAA
+AL0E7/4AAAEAAAAAAAAAAAAAAAAAAAAAAD8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABEAAAA
+AQBWAGEAcgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8AbgAA
+AAAAAACwBEwCAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAACgCAAABADAAMAAwADAA
+MAA0AGIAMAAAACwAAgABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAAAAAgAAAAMAAI
+AAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAwAC4AMAAuADAALgAwAAAAigA1AAEASQBuAHQA
+ZQByAG4AYQBsAE4AYQBtAGUAAABTAGMAcgBpAHAAdABDAG8AbQBwAG8AbgBlAG4AdABfAGIANQBl
+ADYAZABkADMAMgA4ADkAMgA1ADQAYQAxADIAOAA1AGEANQBlADMAMAA4ADEAZABlADQAYgA2ADYA
+NwAuAGQAbABsAAAAAAAoAAIAAQBMAGUAZwBhAGwAQwBvAHAAeQByAGkAZwBoAHQAAAAgAAAAkgA1
+AAEATwByAGkAZwBpAG4AYQBsAEYAaQBsAGUAbgBhAG0AZQAAAFMAYwByAGkAcAB0AEMAbwBtAHAA
+bwBuAGUAbgB0AF8AYgA1AGUANgBkAGQAMwAyADgAOQAyADUANABhADEAMgA4ADUAYQA1AGUAMwAw
+ADgAMQBkAGUANABiADYANgA3AC4AZABsAGwAAAAAADQACAABAFAAcgBvAGQAdQBjAHQAVgBlAHIA
+cwBpAG8AbgAAADAALgAwAC4AMAAuADAAAAA4AAgAAQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBz
+AGkAbwBuAAAAMAAuADAALgAwAC4AMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAwAAACENwAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
+                      </arrayElements>
+                    </property>
+                    <property
+                      dataType="System.String"
+                      description="Comma separated list of variables to be made available for read access"
+                      name="ReadOnlyVariables"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg">MaxDimensionKey</property>
+                    <property
+                      dataType="System.String"
+                      description="Comma separated list of variables to be made available for read and write access"
+                      name="ReadWriteVariables"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
+                    <property
+                      dataType="System.String"
+                      description="List of breakpoints present on the script."
+                      isArray="true"
+                      name="BreakpointCollection"
+                      typeConverter="NOTBROWSABLE">
+                      <arrayElements
+                        arrayElementCount="0" />
+                    </property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                      name="VSTAProjectName"
+                      typeConverter="NOTBROWSABLE">ScriptComponent_b5e6dd3289254a1285a5e3081de4b667</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the programming language used by the script."
+                      name="ScriptLanguage"
+                      typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">VisualBasic</property>
+                    <property
+                      dataType="System.String"
+                      description="Checksum to match component metedata against compiled codes."
+                      name="MetadataChecksum"
+                      typeConverter="NOTBROWSABLE">39a8eb9f82205b8b5a495818096eebbf</property>
+                    <property
+                      dataType="System.String"
+                      description="Checksum to match component metedata against compiled codes."
+                      name="MetadataShaChecksum"
+                      typeConverter="NOTBROWSABLE">5a3e3bb30d37b1d2275d9e1a5e9f5d0ef09d1e94</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Source Dimension\Load Source Data\Script Surrogate Dimension Key.Inputs[Input 0]"
+                      hasSideEffects="true"
+                      name="Input 0">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Source Dimension\Load Source Data\Script Surrogate Dimension Key.Outputs[Output 0]"
+                      name="Output 0"
+                      synchronousInputId="Package\Source Dimension\Load Source Data\Script Surrogate Dimension Key.Inputs[Input 0]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Script Surrogate Dimension Key.Outputs[Output 0].Columns[NewSurrogateKey]"
+                          dataType="i4"
+                          lineageId="Package\Source Dimension\Load Source Data\Script Surrogate Dimension Key.Outputs[Output 0].Columns[NewSurrogateKey]"
+                          name="NewSurrogateKey" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="OLE DB Source"
+                  name="Source Fiscal Info from FE"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset"></property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DECLARE @NoSPPeriods AS SmallInt
+DECLARE @CurrentDate DateTime
+DECLARE @FiscalYearStart Varchar(10)
+DECLARE @LatestFiscalDate DateTime
+DECLARE @FiscalMonthStart SmallInt
+DECLARE @ClosedYearEndDate DateTime
+DECLARE @OpenYearStartDate DateTime
+DECLARE @OpenYearFirstPeriodEndDate DateTime
+DECLARE @FirstPostDate DateTime
+DECLARE @LastPostDate DateTime
+DECLARE @OrgName Varchar(100)
+DECLARE @LastBeginPeriod DateTime
+DECLARE @LastEndPeriod DateTime
+DECLARE @CurrentDateDimID Int
+
+SET @NoSPPeriods = 12
+
+SET @OrgName = (SELECT TOP 1 ORGANIZATIONNAME FROM GENERALINFO7)
+SET @CurrentDate=GetDate()
+SET @CurrentDateDimID = 	(YEAR(@CurrentDate) * 10000) + (Month(@CurrentDate) * 100) + (Day(@CurrentDate))
+SET @LatestFiscalDate = (SELECT MAX(STARTDATE) FROM GL7FISCALPERIODS WHERE Sequence = 1)
+SET @FiscalMonthStart = Month(@LatestFiscalDate)
+SET @FiscalYearStart = Convert(Varchar(5), @LatestFiscalDate, 101)
+SET @LastBeginPeriod = DateAdd(mm, -1, Convert(DateTime, Convert(Varchar(4), Year(@CurrentDate)) + '-' + Convert(Varchar(2), Month(@CurrentDate)) + '-01', 101))
+-- Last Date for Last Closed Fiscal Year
+SET @ClosedYearEndDate = 
+(
+SELECT MAX(FP.ENDDATE) AS ClosedYearEndDate
+FROM   GL7FISCALYEARS FY INNER JOIN
+       GL7FISCALPERIODS FP ON FY.GL7FISCALYEARSID = FP.GL7FISCALYEARSID
+WHERE  (FY.STATUS &lt;&gt; 1)
+)
+-- First Date of First Open Fiscal Year
+SET @OpenYearStartDate = 
+(
+SELECT MIN(FP.STARTDATE) AS OpenYearStartDate
+FROM   GL7FISCALYEARS FY INNER JOIN
+       GL7FISCALPERIODS FP ON FY.GL7FISCALYEARSID = FP.GL7FISCALYEARSID
+WHERE  (FY.STATUS = 1)
+)
+-- Date of the End of the First Period of the First Open Fiscal Year
+SET @OpenYearFirstPeriodEndDate = 
+(
+SELECT MAX(FP.ENDDATE) AS OpenYearFirstPeriodEndDate 
+FROM   GL7FISCALYEARS FY INNER JOIN
+       GL7FISCALPERIODS FP ON FY.GL7FISCALYEARSID = FP.GL7FISCALYEARSID
+WHERE  (FY.STATUS = 1)
+)
+SET @FirstPostDate = (SELECT MIN(POSTDATE) FROM GL7TRANSACTIONS)
+SET @LastPostDate = (SELECT MAX(POSTDATE) FROM GL7TRANSACTIONS)
+
+
+SELECT 
+@OrgName AS OrganizationName,
+@LatestFiscalDate AS LatestFiscalDate,
+@FiscalMonthStart AS FiscalMonthStart,
+LEFT(CONVERT(Varchar(10), MAX(ENDDATE) + 1,101), 5) AS FiscalYearStart, 
+LEFT(CONVERT(Varchar(10), MAX(ENDDATE), 101), 5) AS FiscalYearEnd,
+@ClosedYearEndDate AS ClosedYearEndDate,
+@OpenYearStartDate AS OpenYearStartDate,
+@OpenYearFirstPeriodEndDate AS OpenYearFirstPeriodEndDate,
+@NoSPPeriods AS NoSPPeriods,
+MIN(ENDDATE) AS FirstFiscalYearEnd, 
+MAX(ENDDATE) AS LastFiscalYearEnd,
+@FirstPostDate AS FirstPostDate,
+@LastPostDate AS LastPostDate,
+@LastBeginPeriod AS LastPeriodBeginDate,
+DATEADD(mm, 1, @LastBeginPeriod) - 1 AS LastPeriodEndDate,
+@CurrentDate AS CurrentDate,
+@CurrentDateDimID AS CurrentDateDimID
+FROM 
+GL7FISCALPERIODS</property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">2</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping">"Parameter0",{92EC719E-4BAE-430C-AD49-3ABAC9825020};"Parameter1",{13496EDB-0099-41BC-B0ED-44230779E97B};</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[ETL_DB_CONN_FE]"
+                      connectionManagerRefId="Package.ConnectionManagers[ETL_DB_CONN_FE]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output]"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[LatestFiscalDate]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[LatestFiscalDate]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[LatestFiscalDate]"
+                          name="LatestFiscalDate"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[FiscalMonthStart]"
+                          dataType="i2"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[FiscalMonthStart]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[FiscalMonthStart]"
+                          name="FiscalMonthStart"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[FiscalYearStart]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[FiscalYearStart]"
+                          length="10"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[FiscalYearStart]"
+                          name="FiscalYearStart"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[ClosedYearEndDate]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[ClosedYearEndDate]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[ClosedYearEndDate]"
+                          name="ClosedYearEndDate"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[OpenYearStartDate]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[OpenYearStartDate]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[OpenYearStartDate]"
+                          name="OpenYearStartDate"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[OpenYearFirstPeriodEndDate]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[OpenYearFirstPeriodEndDate]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[OpenYearFirstPeriodEndDate]"
+                          name="OpenYearFirstPeriodEndDate"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[FirstFiscalYearEnd]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[FirstFiscalYearEnd]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[FirstFiscalYearEnd]"
+                          name="FirstFiscalYearEnd"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[LastFiscalYearEnd]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[LastFiscalYearEnd]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[LastFiscalYearEnd]"
+                          name="LastFiscalYearEnd"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[FiscalYearEnd]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[FiscalYearEnd]"
+                          length="5"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[FiscalYearEnd]"
+                          name="FiscalYearEnd"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[NoSPPeriods]"
+                          dataType="i2"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[NoSPPeriods]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[NoSPPeriods]"
+                          name="NoSPPeriods"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[FirstPostDate]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[FirstPostDate]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[FirstPostDate]"
+                          name="FirstPostDate"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[LastPostDate]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[LastPostDate]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[LastPostDate]"
+                          name="LastPostDate"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[CurrentDate]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[CurrentDate]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[CurrentDate]"
+                          name="CurrentDate"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[OrganizationName]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[OrganizationName]"
+                          length="100"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[OrganizationName]"
+                          name="OrganizationName"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[LastPeriodBeginDate]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[LastPeriodBeginDate]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[LastPeriodBeginDate]"
+                          name="LastPeriodBeginDate"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[LastPeriodEndDate]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[LastPeriodEndDate]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[LastPeriodEndDate]"
+                          name="LastPeriodEndDate"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[CurrentDateDimID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[CurrentDateDimID]"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].Columns[CurrentDateDimID]"
+                          name="CurrentDateDimID"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[LatestFiscalDate]"
+                          dataType="dbTimeStamp"
+                          name="LatestFiscalDate" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[FiscalMonthStart]"
+                          dataType="i2"
+                          name="FiscalMonthStart" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[FiscalYearStart]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="FiscalYearStart" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[ClosedYearEndDate]"
+                          dataType="dbTimeStamp"
+                          name="ClosedYearEndDate" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[OpenYearStartDate]"
+                          dataType="dbTimeStamp"
+                          name="OpenYearStartDate" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[OpenYearFirstPeriodEndDate]"
+                          dataType="dbTimeStamp"
+                          name="OpenYearFirstPeriodEndDate" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[FirstFiscalYearEnd]"
+                          dataType="dbTimeStamp"
+                          name="FirstFiscalYearEnd" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[LastFiscalYearEnd]"
+                          dataType="dbTimeStamp"
+                          name="LastFiscalYearEnd" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[FiscalYearEnd]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="FiscalYearEnd" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[NoSPPeriods]"
+                          dataType="i2"
+                          name="NoSPPeriods" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[FirstPostDate]"
+                          dataType="dbTimeStamp"
+                          name="FirstPostDate" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[LastPostDate]"
+                          dataType="dbTimeStamp"
+                          name="LastPostDate" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[CurrentDate]"
+                          dataType="dbTimeStamp"
+                          name="CurrentDate" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[OrganizationName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="OrganizationName" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[LastPeriodBeginDate]"
+                          dataType="dbTimeStamp"
+                          name="LastPeriodBeginDate" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[LastPeriodEndDate]"
+                          dataType="dbTimeStamp"
+                          name="LastPeriodEndDate" />
+                        <externalMetadataColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output].ExternalColumns[CurrentDateDimID]"
+                          dataType="i4"
+                          name="CurrentDateDimID" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[OrganizationName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[OrganizationName]"
+                          name="OrganizationName" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[LatestFiscalDate]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[LatestFiscalDate]"
+                          name="LatestFiscalDate" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[FiscalMonthStart]"
+                          dataType="i2"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[FiscalMonthStart]"
+                          name="FiscalMonthStart" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[FiscalYearStart]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[FiscalYearStart]"
+                          name="FiscalYearStart" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[ClosedYearEndDate]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[ClosedYearEndDate]"
+                          name="ClosedYearEndDate" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[OpenYearStartDate]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[OpenYearStartDate]"
+                          name="OpenYearStartDate" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[OpenYearFirstPeriodEndDate]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[OpenYearFirstPeriodEndDate]"
+                          name="OpenYearFirstPeriodEndDate" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[FirstFiscalYearEnd]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[FirstFiscalYearEnd]"
+                          name="FirstFiscalYearEnd" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[NoSPPeriods]"
+                          dataType="i2"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[NoSPPeriods]"
+                          name="NoSPPeriods" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[LastFiscalYearEnd]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[LastFiscalYearEnd]"
+                          name="LastFiscalYearEnd" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[FiscalYearEnd]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[FiscalYearEnd]"
+                          name="FiscalYearEnd" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[FirstPostDate]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[FirstPostDate]"
+                          name="FirstPostDate" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[LastPostDate]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[LastPostDate]"
+                          name="LastPostDate" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[LastPeriodBeginDate]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[LastPeriodBeginDate]"
+                          name="LastPeriodBeginDate" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[LastPeriodEndDate]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[LastPeriodEndDate]"
+                          name="LastPeriodEndDate" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[CurrentDate]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[CurrentDate]"
+                          name="CurrentDate" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[CurrentDateDimID]"
+                          dataType="i4"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[CurrentDateDimID]"
+                          name="CurrentDateDimID" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Source Dimension\Load Source Data.Paths[Lookup Output]"
+                  endId="Package\Source Dimension\Load Source Data\Script Surrogate Dimension Key.Inputs[Input 0]"
+                  name="Lookup Output"
+                  startId="Package\Source Dimension\Load Source Data\Lookup Fiscal Year Start &amp; End from DIM_Date.Outputs[Lookup Match Output]" />
+                <path
+                  refId="Package\Source Dimension\Load Source Data.Paths[OLE DB Source Output]"
+                  endId="Package\Source Dimension\Load Source Data\Lookup Fiscal Year Start &amp; End from DIM_Date.Inputs[Lookup Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Source Dimension\Load Source Data\Source Fiscal Info from FE.Outputs[OLE DB Source Output]" />
+                <path
+                  refId="Package\Source Dimension\Load Source Data.Paths[Output 0]"
+                  endId="Package\Source Dimension\Load Source Data\Populate Source Dimension.Inputs[OLE DB Destination Input]"
+                  name="Output 0"
+                  startId="Package\Source Dimension\Load Source Data\Script Surrogate Dimension Key.Outputs[Output 0]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Source Dimension\Modify Last Qtr Date"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:Disabled="True"
+          DTS:DTSID="{C23CE905-8DF8-4121-95D3-B9BBCF4BECFA}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Modify Last Qtr Date"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{560A99D6-B5CB-4ED3-9312-05117103DB68}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="--- Calculates the Last Whole Quarter from Today's Date&#xA;DECLARE @CurrentDate DateTime&#xA;DECLARE @NoQtrs SmallInt&#xA;DECLARE @FiscalYear As Int&#xA;DECLARE @sCurrentYear AS Varchar(4)&#xA;DECLARE @sFiscalMonthDay Varchar(5)&#xA;DECLARE @FiscalEndDate AS DateTime&#xA;DECLARE @FiscalMonthStart AS SmallInt&#xA;DECLARE @LastQtrStartDate DateTime&#xA;SET @CurrentDate=GetDate()&#xA;SET @NoQtrs = (SELECT TOP 1 NoSPPeriods FROM CTL_Config)&#xA;SET @FiscalMonthStart = (SELECT TOP 1 FiscalMonthStart FROM CTL_Config)&#xA;SET @FiscalYear = dbo.BBBI_ReturnFiscalYear (@CurrentDate, @FiscalMonthStart)  &#xA;SET @sCurrentYear =  CAST(@FiscalYear AS VARCHAR(4))&#xA;SET @sFiscalMonthDay = (SELECT TOP 1 FiscalYearEnd FROM CTL_Config)&#xA;SET @FiscalEndDate = CAST(@sCurrentYear + '/' + @sFiscalMonthDay AS DateTime)&#xA;&#xA;-- This Calculates the start date for the first Whole Quarter&#xA;SET  @LastQtrStartDate = &#xA;DATEADD(q, 0, &#xA;CASE &#xA; WHEN @CurrentDate &lt; DATEADD(q, -3, @FiscalEndDate)&#xA;   THEN DATEADD(q,-4,@FiscalEndDate)&#xA; WHEN @CurrentDate &lt; DATEADD(q, -2, @FiscalEndDate)&#xA;   THEN DATEADD(q,-3,@FiscalEndDate)&#xA; WHEN @CurrentDate &lt; DATEADD(q, -1, @FiscalEndDate)&#xA;   THEN DATEADD(q,-2,@FiscalEndDate)&#xA; WHEN @CurrentDate &lt; DATEADD(q, 0, @FiscalEndDate)&#xA;   THEN DATEADD(q,-1,@FiscalEndDate)&#xA; ELSE&#xA;   DATEADD(q,0,@FiscalEndDate)&#xA;END) &#xA;&#xA;--------------------------------------------------------------------------------------------------------------&#xA;UPDATE&#xA;DIM_Source&#xA;SET LastQtrStartDate = @LastQtrStartDate,&#xA;CurrentFiscalEndDate = @FiscalEndDate,&#xA;CurrentFiscalStartDate = DATEADD(yy, -1, @FiscalEndDate) + 1&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Source Dimension\Truncate DIM_Source Table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{0dfabeff-1c02-4a96-acd2-099f33ab3b64}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Truncate DIM_Source Table"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="Disable">!@[User::TruncateTables]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{560A99D6-B5CB-4ED3-9312-05117103DB68}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="-- Truncate Source Dimension&#xA;&#xA;TRUNCATE TABLE DIM_Source" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Source Dimension.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{A271E6A1-0456-4C00-A516-77E77992E924}"
+          DTS:From="Package\Source Dimension\Truncate DIM_Source Table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Source Dimension\Get SourceDimID Max" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Source Dimension.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{417D9EA9-030D-4F96-BB77-412B6F25767A}"
+          DTS:From="Package\Source Dimension\Load Source Data"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Source Dimension\Modify Last Qtr Date" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Source Dimension.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{EC07AD65-B068-4D39-A7B7-ECBE3250E79A}"
+          DTS:From="Package\Source Dimension\Get SourceDimID Max"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\Source Dimension\Load Source Data" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PackageVariables>
+    <DTS:PackageVariable
+      DTS:CreationName=""
+      DTS:DTSID="{D796A042-379B-4CD0-AB1F-DDFA83BEC69E}"
+      DTS:Namespace="dts-designer-1.0"
+      DTS:ObjectName="{417D9EA9-030D-4F96-BB77-412B6F25767A}">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="PackageVariableValue">&lt;PrecedenceConstraint xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0"&gt;&lt;dwd:EvalOp&gt;Constraint&lt;/dwd:EvalOp&gt;&lt;/PrecedenceConstraint&gt;</DTS:Property>
+    </DTS:PackageVariable>
+    <DTS:PackageVariable
+      DTS:CreationName=""
+      DTS:DTSID="{F821ECE5-FADE-446E-8B61-3AEB0DBB00D7}"
+      DTS:Namespace="dts-designer-1.0"
+      DTS:ObjectName="{521D94D4-65A4-4105-8DFC-E96E0B5401B8}">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="PackageVariableValue">&lt;TaskHost xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0"&gt;&lt;dwd:DtsDataFlowDiagram&gt;&lt;dwd:Layout&gt;&lt;dds&gt;&lt;diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="Microsoft.DataWarehouse.Layout.GraphLayout110" defaultlineroute="Microsoft.DataWarehouse.Layout.GraphLayout110" version="7" nextobject="20" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4930" scrolltop="-1252" gridx="150" gridy="150" marginx="1000" marginy="1000" zoom="100" x="21722" y="11986" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="1" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="0" backpictureclsid="{00000000-0000-0000-0000-000000000000}"&gt;&lt;font&gt;&lt;ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" /&gt;&lt;/font&gt;&lt;mouseicon&gt;&lt;ddsxmlobjectstreamwrapper binary="6c74000000000000" /&gt;&lt;/mouseicon&gt;&lt;/diagram&gt;&lt;layoutmanager&gt;&lt;ddsxmlobj /&gt;&lt;/layoutmanager&gt;&lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="OLE DB Source" left="-3724" top="-252" logicalid="8" controlid="1" masterid="0" hint1="0" hint2="0" width="5185" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobjectstreaminitwrapper binary="00080000411400008c040000" /&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="101" vartype="8" /&gt;&lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;shape groupshapeid="0" groupnode="0" /&gt;&lt;/ddscontrol&gt;&lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="OLE DB Destination" left="-3633" top="6686" logicalid="9" controlid="2" masterid="0" hint1="0" hint2="0" width="4947" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobjectstreaminitwrapper binary="00080000531300008c040000" /&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="29" vartype="8" /&gt;&lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;shape groupshapeid="0" groupnode="0" /&gt;&lt;/ddscontrol&gt;&lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="Executes a custom script." left="-3777" top="4116" logicalid="10" controlid="3" masterid="0" hint1="0" hint2="0" width="5185" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobjectstreaminitwrapper binary="00080000411400008c040000" /&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="88" vartype="8" /&gt;&lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;shape groupshapeid="0" groupnode="0" /&gt;&lt;/ddscontrol&gt;&lt;ddscontrol controlprogid="MSDDS.Polyline" left="-1584" top="4881" logicalid="11" controlid="4" masterid="0" hint1="0" hint2="0" width="824" height="2305" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobj&gt;&lt;polyline endtypedst="3" endtypesrc="1" usercolor="32768" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" /&gt;&lt;/ddsxmlobj&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="169" vartype="8" /&gt;&lt;property name="Virtual" value="0" vartype="11" /&gt;&lt;property name="VisibleAP" value="0" vartype="3" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;connector lineroutestyle="Microsoft.DataWarehouse.Layout.GraphLayout110" sourceid="3" destid="2" sourceattachpoint="9" destattachpoint="8" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="2" relatedid="0" virtual="0"&gt;&lt;point x="-1185" y="5280" /&gt;&lt;point x="-1185" y="5983" /&gt;&lt;point x="-1160" y="5983" /&gt;&lt;point x="-1160" y="6686" /&gt;&lt;/connector&gt;&lt;/ddscontrol&gt;&lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="Looks up values in a reference dataset by using exact matching." left="-3930" top="1870" logicalid="12" controlid="5" masterid="0" hint1="0" hint2="0" width="5503" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobjectstreaminitwrapper binary="000800007f1500008c040000" /&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="2" vartype="8" /&gt;&lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;shape groupshapeid="0" groupnode="0" /&gt;&lt;/ddscontrol&gt;&lt;ddscontrol controlprogid="MSDDS.Polyline" left="-1578" top="513" logicalid="13" controlid="6" masterid="0" hint1="0" hint2="0" width="846" height="1857" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobj&gt;&lt;polyline endtypedst="3" endtypesrc="1" usercolor="32768" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" /&gt;&lt;/ddsxmlobj&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="168" vartype="8" /&gt;&lt;property name="Virtual" value="0" vartype="11" /&gt;&lt;property name="VisibleAP" value="0" vartype="3" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;connector lineroutestyle="Microsoft.DataWarehouse.Layout.GraphLayout110" sourceid="1" destid="5" sourceattachpoint="9" destattachpoint="8" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="2" relatedid="0" virtual="0"&gt;&lt;point x="-1132" y="912" /&gt;&lt;point x="-1132" y="1391" /&gt;&lt;point x="-1179" y="1391" /&gt;&lt;point x="-1179" y="1870" /&gt;&lt;/connector&gt;&lt;/ddscontrol&gt;&lt;ddscontrol controlprogid="MSDDS.Polyline" left="-1584" top="2635" logicalid="14" controlid="7" masterid="0" hint1="0" hint2="0" width="805" height="1981" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobj&gt;&lt;polyline endtypedst="3" endtypesrc="1" usercolor="32768" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" /&gt;&lt;/ddsxmlobj&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="167" vartype="8" /&gt;&lt;property name="Virtual" value="0" vartype="11" /&gt;&lt;property name="VisibleAP" value="0" vartype="3" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;connector lineroutestyle="Microsoft.DataWarehouse.Layout.GraphLayout110" sourceid="5" destid="3" sourceattachpoint="9" destattachpoint="8" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="2" relatedid="0" virtual="0"&gt;&lt;point x="-1179" y="3034" /&gt;&lt;point x="-1179" y="3575" /&gt;&lt;point x="-1185" y="3575" /&gt;&lt;point x="-1185" y="4116" /&gt;&lt;/connector&gt;&lt;/ddscontrol&gt;&lt;/dds&gt;&lt;/dwd:Layout&gt;&lt;dwd:PersistedViewPortLeft&gt;-4930&lt;/dwd:PersistedViewPortLeft&gt;&lt;dwd:PersistedViewPortTop&gt;-1252&lt;/dwd:PersistedViewPortTop&gt;&lt;/dwd:DtsDataFlowDiagram&gt;&lt;dwd:DtsComponentDesignerPropertiesList&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;1018	DataSourceViewID&lt;/dwd:key&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;1377	DataSourceViewID&lt;/dwd:key&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;6076	UsedTableName&lt;/dwd:key&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;109	UsedTableName&lt;/dwd:key&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;109	OverwriteParamsSQLProp&lt;/dwd:key&gt;&lt;dwd:value xsi:type="xsd:boolean"&gt;false&lt;/dwd:value&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;4785	DataSourceViewID&lt;/dwd:key&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;6076	DataSourceViewID&lt;/dwd:key&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;4785	TableInfoObjectType&lt;/dwd:key&gt;&lt;dwd:value xsi:type="xsd:string"&gt;Table&lt;/dwd:value&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;1	DataSourceViewID&lt;/dwd:key&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;1018	TableInfoObjectType&lt;/dwd:key&gt;&lt;dwd:value xsi:type="xsd:string"&gt;Table&lt;/dwd:value&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;5477	TableInfoObjectType&lt;/dwd:key&gt;&lt;dwd:value xsi:type="xsd:string"&gt;Table&lt;/dwd:value&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;1377	TableInfoObjectType&lt;/dwd:key&gt;&lt;dwd:value xsi:type="xsd:string"&gt;Table&lt;/dwd:value&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;5477	DataSourceViewID&lt;/dwd:key&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;6076	OverwriteParamsSQLProp&lt;/dwd:key&gt;&lt;dwd:value xsi:type="xsd:boolean"&gt;false&lt;/dwd:value&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;109	TableInfoObjectType&lt;/dwd:key&gt;&lt;dwd:value xsi:type="xsd:string"&gt;Table&lt;/dwd:value&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;6076	TableInfoObjectType&lt;/dwd:key&gt;&lt;dwd:value xsi:type="xsd:string"&gt;Table&lt;/dwd:value&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;109	DataSourceViewID&lt;/dwd:key&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;/dwd:DtsComponentDesignerPropertiesList&gt;&lt;/TaskHost&gt;</DTS:Property>
+    </DTS:PackageVariable>
+    <DTS:PackageVariable
+      DTS:CreationName=""
+      DTS:DTSID="{2290653E-A7A0-48B9-B742-D7549724BBC9}"
+      DTS:Namespace="dts-designer-1.0"
+      DTS:ObjectName="{521D94D4-65A4-4105-8DFC-E96E0B5401B8}-5662">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="PackageVariableValue">&lt;PipelinePath xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0"&gt;&lt;dwd:SourceName&gt;Output 0&lt;/dwd:SourceName&gt;&lt;dwd:DestinationName&gt;OLE DB Destination Input&lt;/dwd:DestinationName&gt;&lt;/PipelinePath&gt;</DTS:Property>
+    </DTS:PackageVariable>
+    <DTS:PackageVariable
+      DTS:CreationName=""
+      DTS:DTSID="{88F41C90-681C-438D-9607-6E71CBD90863}"
+      DTS:Namespace="dts-designer-1.0"
+      DTS:ObjectName="{521D94D4-65A4-4105-8DFC-E96E0B5401B8}-6091">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="PackageVariableValue">&lt;PipelinePath xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0"&gt;&lt;dwd:SourceName&gt;OLE DB Source Output&lt;/dwd:SourceName&gt;&lt;dwd:DestinationName&gt;Lookup Input&lt;/dwd:DestinationName&gt;&lt;/PipelinePath&gt;</DTS:Property>
+    </DTS:PackageVariable>
+    <DTS:PackageVariable
+      DTS:CreationName=""
+      DTS:DTSID="{A4A34391-075E-4975-BE46-2CDC5EF69F7F}"
+      DTS:Namespace="dts-designer-1.0"
+      DTS:ObjectName="{521D94D4-65A4-4105-8DFC-E96E0B5401B8}-6092">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="PackageVariableValue">&lt;PipelinePath xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0"&gt;&lt;dwd:SourceName&gt;Lookup Output&lt;/dwd:SourceName&gt;&lt;dwd:DestinationName&gt;Input 0&lt;/dwd:DestinationName&gt;&lt;/PipelinePath&gt;</DTS:Property>
+    </DTS:PackageVariable>
+    <DTS:PackageVariable
+      DTS:CreationName=""
+      DTS:DTSID="{1CC18853-3C77-4249-8EDF-F685B763B94B}"
+      DTS:Namespace="dts-designer-1.0"
+      DTS:ObjectName="{A271E6A1-0456-4C00-A516-77E77992E924}">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="PackageVariableValue">&lt;PrecedenceConstraint xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0"&gt;&lt;dwd:EvalOp&gt;Constraint&lt;/dwd:EvalOp&gt;&lt;/PrecedenceConstraint&gt;</DTS:Property>
+    </DTS:PackageVariable>
+    <DTS:PackageVariable
+      DTS:CreationName=""
+      DTS:DTSID="{15C7D3DC-F49E-4BD1-8D87-446398F592DA}"
+      DTS:Namespace="dts-designer-1.0"
+      DTS:ObjectName="{EC07AD65-B068-4D39-A7B7-ECBE3250E79A}">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="PackageVariableValue">&lt;PrecedenceConstraint xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0"&gt;&lt;dwd:EvalOp&gt;Constraint&lt;/dwd:EvalOp&gt;&lt;/PrecedenceConstraint&gt;</DTS:Property>
+    </DTS:PackageVariable>
+    <DTS:PackageVariable
+      DTS:CreationName=""
+      DTS:DTSID="{D6010F36-34CE-4963-867A-056A6C1F8E4C}"
+      DTS:Namespace="dts-designer-1.0"
+      DTS:ObjectName="package-diagram">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="PackageVariableValue">&lt;Package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0"&gt;&lt;dwd:DtsControlFlowDiagram&gt;&lt;dwd:BoundingLeft&gt;-35302&lt;/dwd:BoundingLeft&gt;&lt;dwd:BoundingTop&gt;-12357&lt;/dwd:BoundingTop&gt;&lt;dwd:Layout&gt;&lt;dds&gt;&lt;diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="Microsoft.DataWarehouse.Layout.GraphLayout110" defaultlineroute="Microsoft.DataWarehouse.Layout.GraphLayout110" version="7" nextobject="19" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-7852" scrolltop="-2167" gridx="150" gridy="150" marginx="1000" marginy="1000" zoom="90" x="28654" y="14658" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="1" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}"&gt;&lt;font&gt;&lt;ddsxmlobjectstreamwrapper binary="01010000900180380100065461686f6d61" /&gt;&lt;/font&gt;&lt;mouseicon&gt;&lt;ddsxmlobjectstreamwrapper binary="6c74000000000000" /&gt;&lt;/mouseicon&gt;&lt;/diagram&gt;&lt;layoutmanager&gt;&lt;ddsxmlobj /&gt;&lt;/layoutmanager&gt;&lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="Data Flow Task" left="-32787" top="-5056" logicalid="9" controlid="1" masterid="3" hint1="0" hint2="0" width="4880" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobjectstreaminitwrapper binary="00080000101300008c040000" /&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="Package\Source Dimension\Load Source Data" vartype="8" /&gt;&lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;shape groupshapeid="0" groupnode="0" /&gt;&lt;/ddscontrol&gt;&lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="Execute SQL Task" left="-32776" top="-10476" logicalid="10" controlid="2" masterid="3" hint1="0" hint2="0" width="4910" height="1282" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobjectstreaminitwrapper binary="000800002e13000002050000" /&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="Package\Source Dimension\Truncate DIM_Source Table" vartype="8" /&gt;&lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;shape groupshapeid="0" groupnode="0" /&gt;&lt;/ddscontrol&gt;&lt;ddscontrol controlprogid="DdsShapes.DdsContainerObjectManagedBridge.2" tooltip="Sequence Container" left="-35302" top="-12357" logicalid="11" controlid="3" masterid="0" hint1="0" hint2="0" width="9776" height="12470" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobjectstreaminitwrapper binary="0008000030260000b6300000" /&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="Caption" value="Source Dimension" vartype="8" /&gt;&lt;property name="CaptionHeight" value="1147" vartype="3" /&gt;&lt;property name="Collapsed" value="0" vartype="11" /&gt;&lt;property name="CollapsedWidth" value="12392" vartype="3" /&gt;&lt;property name="LogicalObject" value="Package\Source Dimension" vartype="8" /&gt;&lt;property name="RealHeight" value="0" vartype="3" /&gt;&lt;property name="RealWidth" value="0" vartype="3" /&gt;&lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;shape groupshapeid="0" groupnode="0" /&gt;&lt;/ddscontrol&gt;&lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="Execute SQL Task" left="-32839" top="-2508" logicalid="12" controlid="4" masterid="3" hint1="0" hint2="0" width="5086" height="1163" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobjectstreaminitwrapper binary="00080000de1300008b040000" /&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="Package\Source Dimension\Modify Last Qtr Date" vartype="8" /&gt;&lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;shape groupshapeid="0" groupnode="0" /&gt;&lt;/ddscontrol&gt;&lt;ddscontrol controlprogid="MSDDS.Polyline" left="-30746" top="-4291" logicalid="13" controlid="5" masterid="0" hint1="0" hint2="0" width="850" height="2283" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobj&gt;&lt;polyline endtypedst="3" endtypesrc="1" usercolor="32768" linestyle="0" linerender="2" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" /&gt;&lt;/ddsxmlobj&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="Package\Source Dimension.PrecedenceConstraints[Constraint 1]" vartype="8" /&gt;&lt;property name="Virtual" value="0" vartype="11" /&gt;&lt;property name="VisibleAP" value="0" vartype="3" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;connector lineroutestyle="Microsoft.DataWarehouse.Layout.GraphLayout110" sourceid="1" destid="4" sourceattachpoint="9" destattachpoint="8" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="2" relatedid="0" virtual="0"&gt;&lt;point x="-30347" y="-3892" /&gt;&lt;point x="-30347" y="-3200" /&gt;&lt;point x="-30296" y="-3200" /&gt;&lt;point x="-30296" y="-2508" /&gt;&lt;/connector&gt;&lt;/ddscontrol&gt;&lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="Execute SQL Task" left="-32880" top="-7913" logicalid="14" controlid="6" masterid="3" hint1="0" hint2="0" width="5057" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobjectstreaminitwrapper binary="00080000c11300008c040000" /&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="Package\Source Dimension\Get SourceDimID Max" vartype="8" /&gt;&lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;shape groupshapeid="0" groupnode="0" /&gt;&lt;/ddscontrol&gt;&lt;ddscontrol controlprogid="MSDDS.Polyline" left="-30751" top="-9593" logicalid="15" controlid="7" masterid="0" hint1="0" hint2="0" width="830" height="2180" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobj&gt;&lt;polyline endtypedst="3" endtypesrc="1" usercolor="32768" linestyle="0" linerender="2" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" /&gt;&lt;/ddsxmlobj&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="Package\Source Dimension.PrecedenceConstraints[Constraint]" vartype="8" /&gt;&lt;property name="Virtual" value="0" vartype="11" /&gt;&lt;property name="VisibleAP" value="0" vartype="3" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;connector lineroutestyle="Microsoft.DataWarehouse.Layout.GraphLayout110" sourceid="2" destid="6" sourceattachpoint="9" destattachpoint="8" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="2" relatedid="0" virtual="0"&gt;&lt;point x="-30321" y="-9194" /&gt;&lt;point x="-30321" y="-8553" /&gt;&lt;point x="-30352" y="-8553" /&gt;&lt;point x="-30352" y="-7913" /&gt;&lt;/connector&gt;&lt;/ddscontrol&gt;&lt;ddscontrol controlprogid="MSDDS.Polyline" left="-30751" top="-7148" logicalid="16" controlid="8" masterid="0" hint1="0" hint2="0" width="804" height="2592" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobj&gt;&lt;polyline endtypedst="3" endtypesrc="1" usercolor="32768" linestyle="0" linerender="2" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" /&gt;&lt;/ddsxmlobj&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="Package\Source Dimension.PrecedenceConstraints[Constraint 2]" vartype="8" /&gt;&lt;property name="Virtual" value="0" vartype="11" /&gt;&lt;property name="VisibleAP" value="0" vartype="3" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;connector lineroutestyle="Microsoft.DataWarehouse.Layout.GraphLayout110" sourceid="6" destid="1" sourceattachpoint="9" destattachpoint="8" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="2" relatedid="0" virtual="0"&gt;&lt;point x="-30352" y="-6749" /&gt;&lt;point x="-30352" y="-5902" /&gt;&lt;point x="-30347" y="-5902" /&gt;&lt;point x="-30347" y="-5056" /&gt;&lt;/connector&gt;&lt;/ddscontrol&gt;&lt;/dds&gt;&lt;/dwd:Layout&gt;&lt;dwd:PersistedZoom&gt;90&lt;/dwd:PersistedZoom&gt;&lt;dwd:PersistedViewPortLeft&gt;-7852&lt;/dwd:PersistedViewPortLeft&gt;&lt;dwd:PersistedViewPortTop&gt;-2167&lt;/dwd:PersistedViewPortTop&gt;&lt;/dwd:DtsControlFlowDiagram&gt;&lt;/Package&gt;</DTS:Property>
+    </DTS:PackageVariable>
+  </DTS:PackageVariables>
+</DTS:Executable>

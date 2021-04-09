@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DeploymentModel>Package</DeploymentModel>
+  <ProductVersion>15.0.2000.157</ProductVersion>
+  <SchemaVersion>9.0.1.0</SchemaVersion>
+  <State>$base64$PFNvdXJjZUNvbnRyb2xJbmZvIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOmRkbDI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yIiB4bWxuczpkZGwyXzI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yLzIiIHhtbG5zOmRkbDEwMF8xMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDA4L2VuZ2luZS8xMDAvMTAwIiB4bWxuczpkZGwyMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAiIHhtbG5zOmRkbDIwMF8yMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAvMjAwIiB4bWxuczpkZGwzMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDExL2VuZ2luZS8zMDAiIHhtbG5zOmRkbDMwMF8zMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDExL2VuZ2luZS8zMDAvMzAwIiB4bWxuczpkZGw0MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEyL2VuZ2luZS80MDAiIHhtbG5zOmRkbDQwMF80MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEyL2VuZ2luZS80MDAvNDAwIiB4bWxuczpkZGw1MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEzL2VuZ2luZS81MDAiIHhtbG5zOmRkbDUwMF81MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEzL2VuZ2luZS81MDAvNTAwIiB4bWxuczpkd2Q9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vRGF0YVdhcmVob3VzZS9EZXNpZ25lci8xLjAiPg0KICA8RW5hYmxlZD5mYWxzZTwvRW5hYmxlZD4NCiAgPFByb2plY3ROYW1lPjwvUHJvamVjdE5hbWU+DQogIDxBdXhQYXRoPjwvQXV4UGF0aD4NCiAgPExvY2FsUGF0aD48L0xvY2FsUGF0aD4NCiAgPFByb3ZpZGVyPjwvUHJvdmlkZXI+DQo8L1NvdXJjZUNvbnRyb2xJbmZvPg==</State>
+  <Database>
+    <Name>Finance DW ETL.database</Name>
+    <FullPath>Finance DW ETL.database</FullPath>
+  </Database>
+  <DataSources />
+  <DataSourceViews />
+  <DeploymentModelSpecificContent>
+    <Manifest>
+      <DTSPackages>
+        <DtsPackage FormatVersion="8">
+          <Name>CONTROL_ETL_MASTER.dtsx</Name>
+          <FullPath>CONTROL_ETL_MASTER.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>DIM_ACCOUNT_LOAD.dtsx</Name>
+          <FullPath>DIM_ACCOUNT_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>DIM_ACCOUNT_SEG_LOAD.dtsx</Name>
+          <FullPath>DIM_ACCOUNT_SEG_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>DIM_CLASS_LOAD.dtsx</Name>
+          <FullPath>DIM_CLASS_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>DIM_GLACCOUNTS_LOAD.dtsx</Name>
+          <FullPath>DIM_GLACCOUNTS_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>DIM_GLSOURCETYPE_LOAD.dtsx</Name>
+          <FullPath>DIM_GLSOURCETYPE_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>DIM_JOURNAL_LOAD.dtsx</Name>
+          <FullPath>DIM_JOURNAL_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>DIM_PROJECT_LOAD.dtsx</Name>
+          <FullPath>DIM_PROJECT_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>DIM_PROJECTNotes_LOAD.dtsx</Name>
+          <FullPath>DIM_PROJECTNotes_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>DIM_SCENARIO_LOAD.dtsx</Name>
+          <FullPath>DIM_SCENARIO_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>DIM_SOURCE_LOAD.dtsx</Name>
+          <FullPath>DIM_SOURCE_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>DIM_STATIC_FE_LOAD.dtsx</Name>
+          <FullPath>DIM_STATIC_FE_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>DIM_TRANSACTIONCODE_LOAD.dtsx</Name>
+          <FullPath>DIM_TRANSACTIONCODE_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>DIM_VCO_LOAD.dtsx</Name>
+          <FullPath>DIM_VCO_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>DIM_VENDOR_LOAD.dtsx</Name>
+          <FullPath>DIM_VENDOR_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>EM_DIM_UNIT_VALUE_LOAD.dtsx</Name>
+          <FullPath>EM_DIM_UNIT_VALUE_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>EM_FACT_PROJECT_BOOK_VALUE_BALANCE_LOAD.dtsx</Name>
+          <FullPath>EM_FACT_PROJECT_BOOK_VALUE_BALANCE_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>EM_FACT_TOTAL_UNITS_LOAD.dtsx</Name>
+          <FullPath>EM_FACT_TOTAL_UNITS_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>EM_FACT_UNITIZATION_LOAD.dtsx</Name>
+          <FullPath>EM_FACT_UNITIZATION_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>FACT_ACCOUNTBUDGET_LOAD.dtsx</Name>
+          <FullPath>FACT_ACCOUNTBUDGET_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>FACT_AP_CM_DISTRIBUTION_LOAD.dtsx</Name>
+          <FullPath>FACT_AP_CM_DISTRIBUTION_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>FACT_APCREDITMEMO_LOAD.dtsx</Name>
+          <FullPath>FACT_APCREDITMEMO_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>FACT_APDISTRIBUTION_LOAD.dtsx</Name>
+          <FullPath>FACT_APDISTRIBUTION_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>FACT_CREDIT_DEPOSIT_LOAD.dtsx</Name>
+          <FullPath>FACT_CREDIT_DEPOSIT_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>FACT_CREDITMEMOS_LOAD.dtsx</Name>
+          <FullPath>FACT_CREDITMEMOS_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>FACT_GLDISTRIBUTION_LOAD.dtsx</Name>
+          <FullPath>FACT_GLDISTRIBUTION_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>FACT_HISTORICAL_UNITIZATION_LOAD.dtsx</Name>
+          <FullPath>FACT_HISTORICAL_UNITIZATION_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>FACT_INVOICEPAYMENTS_LOAD.dtsx</Name>
+          <FullPath>FACT_INVOICEPAYMENTS_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>FACT_INVOICES_LOAD.dtsx</Name>
+          <FullPath>FACT_INVOICES_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>FACT_PROJECTACTIVITY_LOAD.dtsx</Name>
+          <FullPath>FACT_PROJECTACTIVITY_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>FACT_PROJECTBALANCE_LOAD.dtsx</Name>
+          <FullPath>FACT_PROJECTBALANCE_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>FACT_PROJECTBUDGET_LOAD.dtsx</Name>
+          <FullPath>FACT_PROJECTBUDGET_LOAD.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+      </DTSPackages>
+    </Manifest>
+  </DeploymentModelSpecificContent>
+  <ControlFlowParts />
+  <Miscellaneous />
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <OutputPath>bin</OutputPath>
+        <ConnectionMappings />
+        <ConnectionProviderMappings />
+        <ConnectionSecurityMappings />
+        <DatabaseStorageLocations />
+        <TargetServerVersion>SQLServer2016</TargetServerVersion>
+        <AzureMode>false</AzureMode>
+        <LinkedAzureTenantId />
+        <LinkedAzureAccountId />
+        <LinkedAzureSSISIR />
+        <LinkedAzureStorage />
+        <RemoteExecutionFolder />
+        <ParameterConfigurationValues />
+      </Options>
+    </Configuration>
+  </Configurations>
+</Project>

@@ -1,0 +1,1371 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/1/2006 5:09:31 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MICHAELBO-T43"
+  DTS:CreatorName="BBNT\MichaelBo"
+  DTS:DTSID="{5425B5F0-EC01-4740-AB9E-428B1EF810B1}"
+  DTS:EnableConfig="True"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="13.0.5337.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="DIM_GLACCOUNTS_LOAD"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="934"
+  DTS:VersionGUID="{C1A4D817-3DCB-424E-B4B1-C767F3F4FC36}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ETL_DB_CONN_DW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{70B04EF8-FF20-4BC2-8608-70C2CEE86EB2}"
+      DTS:ObjectName="ETL_DB_CONN_DW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DW2;Initial Catalog=OSUF_FE_DW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ETL_DB_CONN_FE]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4E80E621-0714-4DB3-AEE8-3D24D71D3ED5}"
+      DTS:ObjectName="ETL_DB_CONN_FE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DW2;Initial Catalog=OSUF_FE_PROD;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ETL_DB_CONN_RE]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{88B9E692-08E7-4DC4-9D95-F23FE7D37760}"
+      DTS:ObjectName="ETL_DB_CONN_RE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Retain="True"
+          DTS:ConnectionString="Data Source=RE-DB;Initial Catalog=RE7prod;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Configurations>
+    <DTS:Configuration
+      DTS:ConfigurationString="FIDW_ETLCONFIG_OSUF"
+      DTS:ConfigurationType="5"
+      DTS:CreationName=""
+      DTS:DTSID="{5A0CF15F-3655-4231-B2CF-3E38173AB2C5}"
+      DTS:ObjectName="ConfigFile" />
+    <DTS:Configuration
+      DTS:ConfigurationString="DataWindowOpen"
+      DTS:ConfigurationVariable="\Package.Variables[User::DataWindowOpen].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{901569C6-6494-4C12-B78F-EEEB56E72FA9}"
+      DTS:ObjectName="DataWindowOpen" />
+    <DTS:Configuration
+      DTS:ConfigurationString="DataWindowClose"
+      DTS:ConfigurationVariable="\Package.Variables[User::DataWindowClose].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{9428444D-7E35-4BA0-8616-89012BD3AA7E}"
+      DTS:ObjectName="DataWindowClose" />
+    <DTS:Configuration
+      DTS:ConfigurationString="ETLControlID"
+      DTS:ConfigurationVariable="\Package.Variables[User::ETLControlID].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{E5D6A5E6-0AF1-4F07-85E8-084583127F48}"
+      DTS:ObjectName="ETLControlID" />
+    <DTS:Configuration
+      DTS:ConfigurationString="SourceLoadID"
+      DTS:ConfigurationVariable="\Package.Variables[User::SourceLoadID].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{282B1DFC-DD40-44D9-AAF8-DF887AC5DA89}"
+      DTS:ObjectName="SourceLoadID" />
+    <DTS:Configuration
+      DTS:ConfigurationString="SourceID"
+      DTS:ConfigurationVariable="\Package.Variables[User::SourceID].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{839C85CE-D083-4985-89BE-10F3E6D715A7}"
+      DTS:ObjectName="SourceID" />
+    <DTS:Configuration
+      DTS:ConfigurationString="TruncateTables"
+      DTS:ConfigurationVariable="\Package.Variables[User::TruncateTables].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{A1FA725B-C91A-4566-B44B-B25EB666F932}"
+      DTS:ObjectName="TruncateTables" />
+    <DTS:Configuration
+      DTS:ConfigurationString="ETLDeploymentFolder"
+      DTS:ConfigurationVariable="\Package.Variables[User::ETLDeploymentFolder].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{B12EACB8-75F2-4E96-8D3B-EE7293CFCB24}"
+      DTS:ObjectName="ETLDeploymentFolder" />
+  </DTS:Configurations>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{279C5F86-948A-47DB-9BFE-AFC82AEE5C24}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="DataWindowClose">
+      <DTS:VariableValue
+        DTS:DataType="7">12/1/2006</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C78A3CB7-B370-48DF-BADA-A4C2669B5B11}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="DataWindowOpen">
+      <DTS:VariableValue
+        DTS:DataType="7">12/1/1900</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F3CD816A-629C-4419-B2FE-AB22B21D2CDE}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ETLControlID">
+      <DTS:VariableValue
+        DTS:DataType="3">1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F4B76A6A-3A5F-49B6-9E88-23F5D03684F9}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ETLDeploymentFolder">
+      <DTS:VariableValue
+        DTS:DataType="8">E:\BI\FE_DW\ETL\FE\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{B7B1AC52-BE12-495B-AA0A-DF498C58A399}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="MaxDimensionKey">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{845E88D2-72BD-4996-9D2F-2D3EA82DDBF5}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceID">
+      <DTS:VariableValue
+        DTS:DataType="3">1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{B698134E-28C6-412E-B868-6F8C3A6148D2}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceLoadID">
+      <DTS:VariableValue
+        DTS:DataType="3">1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BC6D35E9-508F-4FD8-9BDA-452697BE90C1}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="TruncateTables">
+      <DTS:VariableValue
+        DTS:DataType="11">-1</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load GLAccount Dimension"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{111EC84A-2462-44FA-B2BD-028C427C1077}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load GLAccount Dimension">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Load GLAccount Dimension\Load GLAccountDim"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{765C35F7-0ACF-454A-AB3F-B303A723930D}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Load GLAccountDim"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server v9; (C) 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              BLOBTempStoragePath=""
+              bufferTempStoragePath=""
+              engineThreads="5"
+              version="1">
+              <components>
+                <component
+                  refId="Package\Load GLAccount Dimension\Load GLAccountDim\Derived Col ETLControlID"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Updates column values using expressions"
+                  name="Derived Col ETLControlID"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Load GLAccount Dimension\Load GLAccountDim\Derived Col ETLControlID.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load GLAccount Dimension\Load GLAccountDim\Derived Col ETLControlID.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Load GLAccount Dimension\Load GLAccountDim\Derived Col ETLControlID.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Derived Col ETLControlID.Outputs[Derived Column Output].Columns[ETLControlID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Derived Col ETLControlID.Outputs[Derived Column Output].Columns[ETLControlID]"
+                          name="ETLControlID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">@[User::ETLControlID]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">@[User::ETLControlID]</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Derived Col ETLControlID.Outputs[Derived Column Output].Columns[SourceID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Derived Col ETLControlID.Outputs[Derived Column Output].Columns[SourceID]"
+                          name="SourceID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">@[User::SourceID]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">@[User::SourceID]</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Load GLAccount Dimension\Load GLAccountDim\Derived Col ETLControlID.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Load GLAccount Dimension\Load GLAccountDim\Derived Col ETLControlID.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Derived Col ETLControlID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Derived Col ETLControlID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Derived Col ETLControlID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Derived Col ETLControlID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Destination  DIM Account WH"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[DIM_GLAccounts]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destinaton. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS,ROWS_PER_BATCH = 10000</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">0</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[ETL_DB_CONN_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[ETL_DB_CONN_DW]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].Columns[AccountSystemID]"
+                          cachedDataType="i4"
+                          cachedName="AccountSystemID"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[AccountSystemID]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[AccountSystemID]" />
+                        <inputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].Columns[AccountNumber]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="AccountNumber"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[AccountNumber]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[AccountNumber]" />
+                        <inputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].Columns[DateAdded]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="DateAdded"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[DateAdded]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[DateAdded]" />
+                        <inputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].Columns[DateChanged]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="DateChanged"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[DateChanged]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[DateChanged]" />
+                        <inputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].Columns[FundID]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="10"
+                          cachedName="FundID"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[FundID]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[FundID]" />
+                        <inputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].Columns[GLAccountDimID]"
+                          cachedDataType="i4"
+                          cachedName="GLAccountDimID"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[GLAccountDimID]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[GLAccountDimID]" />
+                        <inputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].Columns[GLAccountSystemID]"
+                          cachedDataType="i4"
+                          cachedName="GLAccountSystemID"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[GLAccountSystemID]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[GLAccountSystemID]" />
+                        <inputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].Columns[AccountType]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="7"
+                          cachedName="AccountType"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[AccountType]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[AccountType]" />
+                        <inputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].Columns[Category]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="12"
+                          cachedName="Category"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[Category]" />
+                        <inputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].Columns[Description]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Description"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[Description]" />
+                        <inputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].Columns[FinancialPosition]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="48"
+                          cachedName="FinancialPosition"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[FinancialPosition]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[FinancialPosition]" />
+                        <inputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].Columns[Cashflow]"
+                          cachedDataType="i2"
+                          cachedName="Cashflow"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[Cashflow]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[Cashflow]" />
+                        <inputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].Columns[NetAssetClass]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="24"
+                          cachedName="NetAssetClass"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[NetAssetClass]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[NetAssetClass]" />
+                        <inputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].Columns[IsInactive]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="3"
+                          cachedName="IsInactive"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[IsInactive]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[IsInactive]" />
+                        <inputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].Columns[SubtotalLevel]"
+                          cachedDataType="i2"
+                          cachedName="SubtotalLevel"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[SubtotalLevel]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[SubtotalLevel]" />
+                        <inputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].Columns[Indentation]"
+                          cachedDataType="i2"
+                          cachedName="Indentation"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[Indentation]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[Indentation]" />
+                        <inputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].Columns[SkipLines]"
+                          cachedDataType="i2"
+                          cachedName="SkipLines"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[SkipLines]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[SkipLines]" />
+                        <inputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].Columns[NewPage]"
+                          cachedDataType="i2"
+                          cachedName="NewPage"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[NewPage]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[NewPage]" />
+                        <inputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].Columns[ConsolidationAcct]"
+                          cachedDataType="i2"
+                          cachedName="ConsolidationAcct"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[ConsolidationAcct]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[ConsolidationAcct]" />
+                        <inputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].Columns[ETLControlID]"
+                          cachedDataType="i4"
+                          cachedName="ETLControlID"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[ETLControlID]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Derived Col ETLControlID.Outputs[Derived Column Output].Columns[ETLControlID]" />
+                        <inputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].Columns[SourceID]"
+                          cachedDataType="i4"
+                          cachedName="SourceID"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[SourceID]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Derived Col ETLControlID.Outputs[Derived Column Output].Columns[SourceID]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[AccountSystemID]"
+                          dataType="i4"
+                          name="AccountSystemID" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[AccountNumber]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="AccountNumber" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[DateAdded]"
+                          dataType="dbTimeStamp"
+                          name="DateAdded" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[DateChanged]"
+                          dataType="dbTimeStamp"
+                          name="DateChanged" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[FundID]"
+                          codePage="1252"
+                          dataType="str"
+                          length="10"
+                          name="FundID" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[GLAccountDimID]"
+                          dataType="i4"
+                          name="GLAccountDimID" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[GLAccountSystemID]"
+                          dataType="i4"
+                          name="GLAccountSystemID" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[AccountType]"
+                          codePage="1252"
+                          dataType="str"
+                          length="7"
+                          name="AccountType" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          length="12"
+                          name="Category" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Description" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[FinancialPosition]"
+                          codePage="1252"
+                          dataType="str"
+                          length="48"
+                          name="FinancialPosition" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[Cashflow]"
+                          dataType="i2"
+                          name="Cashflow" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[NetAssetClass]"
+                          codePage="1252"
+                          dataType="str"
+                          length="24"
+                          name="NetAssetClass" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[IsInactive]"
+                          codePage="1252"
+                          dataType="str"
+                          length="3"
+                          name="IsInactive" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[SubtotalLevel]"
+                          dataType="i2"
+                          name="SubtotalLevel" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[Indentation]"
+                          dataType="i2"
+                          name="Indentation" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[SkipLines]"
+                          dataType="i2"
+                          name="SkipLines" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[NewPage]"
+                          dataType="i2"
+                          name="NewPage" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[ConsolidationAcct]"
+                          dataType="i2"
+                          name="ConsolidationAcct" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[ETLControlID]"
+                          dataType="i4"
+                          name="ETLControlID" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input].ExternalColumns[SourceID]"
+                          dataType="i4"
+                          name="SourceID" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="OLE DB Source"
+                  name="Source FE GLAccounts"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset"></property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT 
+  GLA.GLACCOUNTSID  AS GLAccountDimID
+, GLA.GLACCOUNTSID  AS GLAccountSystemID
+, GLA.ACCTNUM       AS AccountNumber
+
+, CASE 
+		WHEN GLA.ACCTTYPE = 'H' THEN 'Heading'
+		WHEN GLA.ACCTTYPE = 'R' THEN 'Regular'
+		WHEN GLA.ACCTTYPE = 'T' THEN 'Total'
+  END AS AccountType
+
+, CASE 
+		WHEN GLA.CATEGORY = 'A' THEN 'Asset'
+		WHEN GLA.CATEGORY = 'L' THEN 'Liability'
+		WHEN GLA.CATEGORY = 'F' THEN 'Fund Balance'
+		WHEN GLA.CATEGORY = 'R' THEN 'Revenue'
+		WHEN GLA.CATEGORY = 'E' THEN 'Expense'
+		WHEN GLA.CATEGORY = 'G' THEN 'Gift'
+		WHEN GLA.CATEGORY = 'T' THEN 'Transfer'
+  END AS Category
+
+, GLA.[DESCRIPTION]  AS [Description]
+
+, CASE 
+		WHEN GLA.FINANCIALPOSITION = '0' THEN 'Not used by this type of Account'
+		WHEN GLA.FINANCIALPOSITION = '1' THEN 'Items requiring no outlay of working capital'
+		WHEN GLA.FINANCIALPOSITION = '2' THEN 'Current Assets'
+		WHEN GLA.FINANCIALPOSITION = '3' THEN 'Current Liabilities'
+		WHEN GLA.FINANCIALPOSITION = '4' THEN 'Non-current Assets, Liabilities and Fund Balance'
+  END AS FinancialPosition
+
+, GLA.CASHFLOW AS Cashflow
+
+, CASE 
+		WHEN GLA.NETASSETCLASS = '0' THEN 'Not used by this Account'
+		WHEN GLA.NETASSETCLASS = '1' THEN 'Unrestricted'
+		WHEN GLA.NETASSETCLASS = '2' THEN 'Temporarily restricted'
+		WHEN GLA.NETASSETCLASS = '3' THEN 'Permanently restricted'
+  END AS NetAssetClass
+
+, CASE 
+		WHEN GLA.INACTIVE = 0 THEN 'No'
+		ELSE 'Yes'
+  END AS IsInactive
+
+, GLA.SUBTOTALLEVEL     AS SubtotalLevel
+, GLA.INDENTATION       AS Indentation
+, GLA.SKIPLINES         AS SkipLines
+, GLA.NEWPAGE           AS NewPage
+, GLA.DATEADDED         AS DateAdded
+, GLA.DATECHANGED       AS DateChanged
+, GLA.CONSOLIDATIONACCT AS ConsolidationAcct
+, F.FundID
+, A.GL7ACCOUNTSID       AS AccountSystemID
+
+FROM 
+  dbo.GLACCOUNTS AS GLA
+							LEFT OUTER JOIN dbo.GL7FUNDS F ON GLA.GLFUNDSID = F.GL7FUNDSID
+							LEFT OUTER JOIN dbo.GL7ACCOUNTS A ON GLA.GL7ACCOUNTSID = A.GL7ACCOUNTSID
+
+ORDER BY 
+  GLA.GLACCOUNTSID</property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">2</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[ETL_DB_CONN_FE]"
+                      connectionManagerRefId="Package.ConnectionManagers[ETL_DB_CONN_FE]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output]"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[GLAccountDimID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[GLAccountDimID]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[GLAccountDimID]"
+                          name="GLAccountDimID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[GLAccountSystemID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[GLAccountSystemID]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[GLAccountSystemID]"
+                          name="GLAccountSystemID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[AccountNumber]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[AccountNumber]"
+                          length="50"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[AccountNumber]"
+                          name="AccountNumber"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[AccountType]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[AccountType]"
+                          length="7"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[AccountType]"
+                          name="AccountType"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[Category]"
+                          length="12"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[Category]"
+                          name="Category"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[Description]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[Description]"
+                          length="50"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[Description]"
+                          name="Description"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[FinancialPosition]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[FinancialPosition]"
+                          length="48"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[FinancialPosition]"
+                          name="FinancialPosition"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[Cashflow]"
+                          dataType="i2"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[Cashflow]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[Cashflow]"
+                          name="Cashflow"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[NetAssetClass]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[NetAssetClass]"
+                          length="24"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[NetAssetClass]"
+                          name="NetAssetClass"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[IsInactive]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[IsInactive]"
+                          length="3"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[IsInactive]"
+                          name="IsInactive"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[SubtotalLevel]"
+                          dataType="i2"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[SubtotalLevel]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[SubtotalLevel]"
+                          name="SubtotalLevel"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[Indentation]"
+                          dataType="i2"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[Indentation]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[Indentation]"
+                          name="Indentation"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[SkipLines]"
+                          dataType="i2"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[SkipLines]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[SkipLines]"
+                          name="SkipLines"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[NewPage]"
+                          dataType="i2"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[NewPage]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[NewPage]"
+                          name="NewPage"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[DateAdded]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[DateAdded]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[DateAdded]"
+                          name="DateAdded"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[DateChanged]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[DateChanged]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[DateChanged]"
+                          name="DateChanged"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[ConsolidationAcct]"
+                          dataType="i2"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[ConsolidationAcct]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[ConsolidationAcct]"
+                          name="ConsolidationAcct"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[FundID]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[FundID]"
+                          length="10"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[FundID]"
+                          name="FundID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[AccountSystemID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[AccountSystemID]"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].Columns[AccountSystemID]"
+                          name="AccountSystemID"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[GLAccountDimID]"
+                          dataType="i4"
+                          name="GLAccountDimID" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[GLAccountSystemID]"
+                          dataType="i4"
+                          name="GLAccountSystemID" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[AccountNumber]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="AccountNumber" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[AccountType]"
+                          codePage="1252"
+                          dataType="str"
+                          length="7"
+                          name="AccountType" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          length="12"
+                          name="Category" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[Description]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Description" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[FinancialPosition]"
+                          codePage="1252"
+                          dataType="str"
+                          length="48"
+                          name="FinancialPosition" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[Cashflow]"
+                          dataType="i2"
+                          name="Cashflow" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[NetAssetClass]"
+                          codePage="1252"
+                          dataType="str"
+                          length="24"
+                          name="NetAssetClass" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[IsInactive]"
+                          codePage="1252"
+                          dataType="str"
+                          length="3"
+                          name="IsInactive" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[SubtotalLevel]"
+                          dataType="i2"
+                          name="SubtotalLevel" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[Indentation]"
+                          dataType="i2"
+                          name="Indentation" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[SkipLines]"
+                          dataType="i2"
+                          name="SkipLines" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[NewPage]"
+                          dataType="i2"
+                          name="NewPage" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[DateAdded]"
+                          dataType="dbTimeStamp"
+                          name="DateAdded" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[DateChanged]"
+                          dataType="dbTimeStamp"
+                          name="DateChanged" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[ConsolidationAcct]"
+                          dataType="i2"
+                          name="ConsolidationAcct" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[FundID]"
+                          codePage="1252"
+                          dataType="str"
+                          length="10"
+                          name="FundID" />
+                        <externalMetadataColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output].ExternalColumns[AccountSystemID]"
+                          dataType="i4"
+                          name="AccountSystemID" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[GLAccountDimID]"
+                          dataType="i4"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[GLAccountDimID]"
+                          name="GLAccountDimID" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[GLAccountSystemID]"
+                          dataType="i4"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[GLAccountSystemID]"
+                          name="GLAccountSystemID" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[AccountNumber]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[AccountNumber]"
+                          name="AccountNumber" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[AccountType]"
+                          codePage="1252"
+                          dataType="str"
+                          length="7"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[AccountType]"
+                          name="AccountType" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          length="12"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[Category]"
+                          name="Category" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[Description]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[Description]"
+                          name="Description" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[FinancialPosition]"
+                          codePage="1252"
+                          dataType="str"
+                          length="48"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[FinancialPosition]"
+                          name="FinancialPosition" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[Cashflow]"
+                          dataType="i2"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[Cashflow]"
+                          name="Cashflow" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[NetAssetClass]"
+                          codePage="1252"
+                          dataType="str"
+                          length="24"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[NetAssetClass]"
+                          name="NetAssetClass" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[IsInactive]"
+                          codePage="1252"
+                          dataType="str"
+                          length="3"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[IsInactive]"
+                          name="IsInactive" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[SubtotalLevel]"
+                          dataType="i2"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[SubtotalLevel]"
+                          name="SubtotalLevel" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[Indentation]"
+                          dataType="i2"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[Indentation]"
+                          name="Indentation" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[SkipLines]"
+                          dataType="i2"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[SkipLines]"
+                          name="SkipLines" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[NewPage]"
+                          dataType="i2"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[NewPage]"
+                          name="NewPage" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[DateAdded]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[DateAdded]"
+                          name="DateAdded" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[DateChanged]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[DateChanged]"
+                          name="DateChanged" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[ConsolidationAcct]"
+                          dataType="i2"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[ConsolidationAcct]"
+                          name="ConsolidationAcct" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[FundID]"
+                          codePage="1252"
+                          dataType="str"
+                          length="10"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[FundID]"
+                          name="FundID" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[AccountSystemID]"
+                          dataType="i4"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[AccountSystemID]"
+                          name="AccountSystemID" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Load GLAccount Dimension\Load GLAccountDim.Paths[Derived Column Output]"
+                  endId="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH.Inputs[OLE DB Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\Load GLAccount Dimension\Load GLAccountDim\Derived Col ETLControlID.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Load GLAccount Dimension\Load GLAccountDim.Paths[OLE DB Source Output]"
+                  endId="Package\Load GLAccount Dimension\Load GLAccountDim\Derived Col ETLControlID.Inputs[Derived Column Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts.Outputs[OLE DB Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Load GLAccount Dimension\Truncate GLAccountDim Table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{F274119E-C47A-4B7D-86F3-90D90602455B}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Truncate GLAccountDim Table"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="Disable">!@[User::TruncateTables]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{70B04EF8-FF20-4BC2-8608-70C2CEE86EB2}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="-- Truncate Account Dim Table&#xA;&#xA;TRUNCATE TABLE dbo.DIM_GLAccounts" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Load GLAccount Dimension.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{5F4A2187-1F33-4FB6-8655-0F471A3FBE3E}"
+          DTS:From="Package\Load GLAccount Dimension\Truncate GLAccountDim Table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Load GLAccount Dimension\Load GLAccountDim" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Load GLAccount Dimension\Load GLAccountDim"
+          TopLeft="83.4716981132074,153.754716981132" />
+        <NodeLayout
+          Size="230,42"
+          Id="Package\Load GLAccount Dimension\Truncate GLAccountDim Table"
+          TopLeft="53.4716981132074,38.2075471698113" />
+        <EdgeLayout
+          Id="Package\Load GLAccount Dimension.PrecedenceConstraints[Constraint]"
+          TopLeft="170.971698113207,80.2075471698113">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,73.5471698113208"
+              Start="0,0"
+              End="0,66.0471698113208">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,66.0471698113208" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43.283018867924525"
+          IsExpanded="True"
+          PanelSize="330,358"
+          Size="330,401"
+          Id="Package\Load GLAccount Dimension"
+          TopLeft="180.575471698113,73.6509433962265" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load GLAccount Dimension\Load GLAccountDim">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="206,42"
+          Id="Package\Load GLAccount Dimension\Load GLAccountDim\Derived Col ETLControlID"
+          TopLeft="221,209.5" />
+        <NodeLayout
+          Size="224,42"
+          Id="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH"
+          TopLeft="215,320.5" />
+        <NodeLayout
+          Size="194,42"
+          Id="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts"
+          TopLeft="223,110" />
+        <EdgeLayout
+          Id="Package\Load GLAccount Dimension\Load GLAccountDim.Paths[OLE DB Source Output]"
+          TopLeft="322,152">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57.5"
+              Start="0,0"
+              End="0,50">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load GLAccount Dimension\Load GLAccountDim.Paths[Derived Column Output]"
+          TopLeft="325.5,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,69"
+              Start="0,0"
+              End="0,61.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,61.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load GLAccount Dimension\Load GLAccountDim\Destination  DIM Account WH">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load GLAccount Dimension\Load GLAccountDim\Source FE GLAccounts">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

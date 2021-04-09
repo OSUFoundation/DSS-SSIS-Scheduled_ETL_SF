@@ -1,0 +1,1025 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/13/2007"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ALANEAR51"
+  DTS:CreatorName="BBNT\AlanEa"
+  DTS:DTSID="{FEC2706E-5CB1-46D2-BC37-D367D8BD96B6}"
+  DTS:EnableConfig="True"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.157"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="DIM_STATIC_FE_LOAD"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="812"
+  DTS:VersionGUID="{C3FD57EA-DE00-4502-993B-562924A3555F}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ETL_DB_CONN_DW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{560A99D6-B5CB-4ED3-9312-05117103DB68}"
+      DTS:ObjectName="ETL_DB_CONN_DW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DW2;Initial Catalog=OSUF_FE_DW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ETL_DB_CONN_FE]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A591A0C5-4C6E-424A-9F01-238B56EFB2F1}"
+      DTS:ObjectName="ETL_DB_CONN_FE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DW2;Initial Catalog=OSUF_FE_PROD;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ETL_DB_CONN_RE]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{285A1C90-23FD-4ACE-924F-B918AF3DEC2B}"
+      DTS:ObjectName="ETL_DB_CONN_RE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=RE-DB;Initial Catalog=RE7prod;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PACKAGE_DIM_DATE_LOAD]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{729158EE-67FD-49A1-9E69-623D36F5D3BF}"
+      DTS:ObjectName="PACKAGE_DIM_DATE_LOAD">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Files\Blackbaud\Business Intelligence\Customers\Sales\National Audubon\FinanAnal2\DIM_DATE_LOAD.dtsx" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PACKAGE_DIM_GLSOURCETYPE_LOAD]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{6FFA67E2-3281-42E4-8EF5-4376447ADAA0}"
+      DTS:ObjectName="PACKAGE_DIM_GLSOURCETYPE_LOAD">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Files\Blackbaud\Business Intelligence\Customers\Sales\National Audubon\FinanAnal2\DIM_GLSOURCETYPE_LOAD.dtsx" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PACKAGE_DIM_POSTSTATUS_LOAD]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{F22FCC32-2482-4FD5-893A-E42EC544E2C6}"
+      DTS:ObjectName="PACKAGE_DIM_POSTSTATUS_LOAD">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Files\Blackbaud\Business Intelligence\Customers\Sales\National Audubon\FinanAnal2\DIM_POSTSTATUS_LOAD.dtsx" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PACKAGE_DIM_SOURCE_LOAD]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{852395FF-A91B-4015-8551-9E6CF43F0BF0}"
+      DTS:ObjectName="PACKAGE_DIM_SOURCE_LOAD">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Files\Blackbaud\Business Intelligence\CoreSolutions\Financial Analytics 2005\DIM_SOURCE_LOAD.dtsx" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PACKAGE_DIM_TRANSACTIONTYPE_LOAD]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{538CCE18-EE9A-4E10-B66E-C0A1D29EDD9A}"
+      DTS:ObjectName="PACKAGE_DIM_TRANSACTIONTYPE_LOAD">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Files\Blackbaud\Business Intelligence\Customers\Sales\National Audubon\FinanAnal2\DIM_TRANSACTIONTYPE_LOAD.dtsx" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Configurations>
+    <DTS:Configuration
+      DTS:ConfigurationString="FIDW_ETLCONFIG_OSUF"
+      DTS:ConfigurationType="5"
+      DTS:CreationName=""
+      DTS:DTSID="{950FC33D-5E15-4DBC-A094-587705FDA240}"
+      DTS:ObjectName="ConfigFile" />
+  </DTS:Configurations>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{13496EDB-0099-41BC-B0ED-44230779E97B}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="DataWindowClose">
+      <DTS:VariableValue
+        DTS:DataType="7">12/1/2005 11:22:15 AM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{92EC719E-4BAE-430C-AD49-3ABAC9825020}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="DataWindowOpen">
+      <DTS:VariableValue
+        DTS:DataType="7">12/1/2005 11:21:28 AM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{EE2992DA-F469-4ACF-8291-1AFCF626B220}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ETLControlID">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A9A95A8E-FF6F-4080-A2C2-8B90B8681284}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ETLDeploymentFolder">
+      <DTS:VariableValue
+        DTS:DataType="8">E:\BI\FE_DW\ETL\FE\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2E481E9E-46E8-487A-B3E0-509A11E55FD6}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceID">
+      <DTS:VariableValue
+        DTS:DataType="3">1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F4D403C6-17B4-418D-923E-94C7619A6656}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceLoadID">
+      <DTS:VariableValue
+        DTS:DataType="3">2</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Add FiscalPeriod Info"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{ED910376-26B3-40DE-A201-5D3CAB541D80}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Add FiscalPeriod Info"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server v9; (C) 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          BLOBTempStoragePath=""
+          bufferTempStoragePath=""
+          engineThreads="5"
+          version="1">
+          <components>
+            <component
+              refId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Add FiscalPeriod records to DIM_GL7FiscalPeriods"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DIM_GL7FISCALPERIOD]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destinaton. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_DB_CONN_DW]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_DB_CONN_DW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Inputs[OLE DB Destination Input].Columns[GL7FISCALPERIODSID]"
+                      cachedDataType="i4"
+                      cachedName="GL7FISCALPERIODSID"
+                      externalMetadataColumnId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Inputs[OLE DB Destination Input].ExternalColumns[GL7FISCALPERIODSID]"
+                      lineageId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].Columns[GL7FISCALPERIODSID]" />
+                    <inputColumn
+                      refId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Inputs[OLE DB Destination Input].Columns[STARTDATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="STARTDATE"
+                      externalMetadataColumnId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Inputs[OLE DB Destination Input].ExternalColumns[STARTDATE]"
+                      lineageId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].Columns[STARTDATE]" />
+                    <inputColumn
+                      refId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Inputs[OLE DB Destination Input].Columns[ENDDATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ENDDATE"
+                      externalMetadataColumnId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Inputs[OLE DB Destination Input].ExternalColumns[ENDDATE]"
+                      lineageId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].Columns[ENDDATE]" />
+                    <inputColumn
+                      refId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Inputs[OLE DB Destination Input].Columns[CLOSED]"
+                      cachedDataType="i2"
+                      cachedName="CLOSED"
+                      externalMetadataColumnId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Inputs[OLE DB Destination Input].ExternalColumns[CLOSED]"
+                      lineageId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].Columns[CLOSED]" />
+                    <inputColumn
+                      refId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Inputs[OLE DB Destination Input].Columns[GL7FISCALYEARSID]"
+                      cachedDataType="i4"
+                      cachedName="GL7FISCALYEARSID"
+                      externalMetadataColumnId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Inputs[OLE DB Destination Input].ExternalColumns[GL7FISCALYEARSID]"
+                      lineageId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].Columns[GL7FISCALYEARSID]" />
+                    <inputColumn
+                      refId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Inputs[OLE DB Destination Input].Columns[SEQUENCE]"
+                      cachedDataType="i2"
+                      cachedName="SEQUENCE"
+                      externalMetadataColumnId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Inputs[OLE DB Destination Input].ExternalColumns[SEQUENCE]"
+                      lineageId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].Columns[SEQUENCE]" />
+                    <inputColumn
+                      refId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Inputs[OLE DB Destination Input].Columns[GL7GENERALINFOID]"
+                      cachedDataType="i4"
+                      cachedName="GL7GENERALINFOID"
+                      externalMetadataColumnId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Inputs[OLE DB Destination Input].ExternalColumns[GL7GENERALINFOID]"
+                      lineageId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].Columns[GL7GENERALINFOID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Inputs[OLE DB Destination Input].ExternalColumns[GL7FISCALPERIODSID]"
+                      dataType="i4"
+                      name="GL7FISCALPERIODSID" />
+                    <externalMetadataColumn
+                      refId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Inputs[OLE DB Destination Input].ExternalColumns[STARTDATE]"
+                      dataType="dbTimeStamp"
+                      name="STARTDATE" />
+                    <externalMetadataColumn
+                      refId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Inputs[OLE DB Destination Input].ExternalColumns[ENDDATE]"
+                      dataType="dbTimeStamp"
+                      name="ENDDATE" />
+                    <externalMetadataColumn
+                      refId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Inputs[OLE DB Destination Input].ExternalColumns[CLOSED]"
+                      dataType="i2"
+                      name="CLOSED" />
+                    <externalMetadataColumn
+                      refId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Inputs[OLE DB Destination Input].ExternalColumns[GL7FISCALYEARSID]"
+                      dataType="i4"
+                      name="GL7FISCALYEARSID" />
+                    <externalMetadataColumn
+                      refId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Inputs[OLE DB Destination Input].ExternalColumns[SEQUENCE]"
+                      dataType="i2"
+                      name="SEQUENCE" />
+                    <externalMetadataColumn
+                      refId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Inputs[OLE DB Destination Input].ExternalColumns[GL7GENERALINFOID]"
+                      dataType="i4"
+                      name="GL7GENERALINFOID" />
+                    <externalMetadataColumn
+                      refId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Inputs[OLE DB Destination Input].ExternalColumns[ADJPERIOD]"
+                      dataType="i4"
+                      name="ADJPERIOD" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Source Fiscal Period from FE"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT     
+GL7FISCALPERIODSID, STARTDATE, ENDDATE, CLOSED, GL7FISCALYEARSID, SEQUENCE, GL7GENERALINFOID
+FROM         GL7FISCALPERIODS</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_DB_CONN_FE]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_DB_CONN_FE]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].Columns[GL7FISCALPERIODSID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].ExternalColumns[GL7FISCALPERIODSID]"
+                      lineageId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].Columns[GL7FISCALPERIODSID]"
+                      name="GL7FISCALPERIODSID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].Columns[STARTDATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].ExternalColumns[STARTDATE]"
+                      lineageId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].Columns[STARTDATE]"
+                      name="STARTDATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].Columns[ENDDATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].ExternalColumns[ENDDATE]"
+                      lineageId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].Columns[ENDDATE]"
+                      name="ENDDATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].Columns[CLOSED]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].ExternalColumns[CLOSED]"
+                      lineageId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].Columns[CLOSED]"
+                      name="CLOSED"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].Columns[GL7FISCALYEARSID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].ExternalColumns[GL7FISCALYEARSID]"
+                      lineageId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].Columns[GL7FISCALYEARSID]"
+                      name="GL7FISCALYEARSID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].Columns[SEQUENCE]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].ExternalColumns[SEQUENCE]"
+                      lineageId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].Columns[SEQUENCE]"
+                      name="SEQUENCE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].Columns[GL7GENERALINFOID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].ExternalColumns[GL7GENERALINFOID]"
+                      lineageId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].Columns[GL7GENERALINFOID]"
+                      name="GL7GENERALINFOID"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].ExternalColumns[GL7FISCALPERIODSID]"
+                      dataType="i4"
+                      name="GL7FISCALPERIODSID" />
+                    <externalMetadataColumn
+                      refId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].ExternalColumns[STARTDATE]"
+                      dataType="dbTimeStamp"
+                      name="STARTDATE" />
+                    <externalMetadataColumn
+                      refId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].ExternalColumns[ENDDATE]"
+                      dataType="dbTimeStamp"
+                      name="ENDDATE" />
+                    <externalMetadataColumn
+                      refId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].ExternalColumns[CLOSED]"
+                      dataType="i2"
+                      name="CLOSED" />
+                    <externalMetadataColumn
+                      refId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].ExternalColumns[GL7FISCALYEARSID]"
+                      dataType="i4"
+                      name="GL7FISCALYEARSID" />
+                    <externalMetadataColumn
+                      refId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].ExternalColumns[SEQUENCE]"
+                      dataType="i2"
+                      name="SEQUENCE" />
+                    <externalMetadataColumn
+                      refId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output].ExternalColumns[GL7GENERALINFOID]"
+                      dataType="i4"
+                      name="GL7GENERALINFOID" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Error Output].Columns[GL7FISCALPERIODSID]"
+                      dataType="i4"
+                      lineageId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Error Output].Columns[GL7FISCALPERIODSID]"
+                      name="GL7FISCALPERIODSID" />
+                    <outputColumn
+                      refId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Error Output].Columns[STARTDATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Error Output].Columns[STARTDATE]"
+                      name="STARTDATE" />
+                    <outputColumn
+                      refId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Error Output].Columns[ENDDATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Error Output].Columns[ENDDATE]"
+                      name="ENDDATE" />
+                    <outputColumn
+                      refId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Error Output].Columns[CLOSED]"
+                      dataType="i2"
+                      lineageId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Error Output].Columns[CLOSED]"
+                      name="CLOSED" />
+                    <outputColumn
+                      refId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Error Output].Columns[GL7FISCALYEARSID]"
+                      dataType="i4"
+                      lineageId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Error Output].Columns[GL7FISCALYEARSID]"
+                      name="GL7FISCALYEARSID" />
+                    <outputColumn
+                      refId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Error Output].Columns[SEQUENCE]"
+                      dataType="i2"
+                      lineageId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Error Output].Columns[SEQUENCE]"
+                      name="SEQUENCE" />
+                    <outputColumn
+                      refId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Error Output].Columns[GL7GENERALINFOID]"
+                      dataType="i4"
+                      lineageId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Error Output].Columns[GL7GENERALINFOID]"
+                      name="GL7GENERALINFOID" />
+                    <outputColumn
+                      refId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Add FiscalPeriod Info.Paths[OLE DB Source Output]"
+              endId="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Add FiscalPeriod Info\Source Fiscal Period from FE.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Date Dim"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{D326593D-B4A8-4AD6-8B5A-5AD90745D66C}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Date Dim"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{560A99D6-B5CB-4ED3-9312-05117103DB68}"
+          SQLTask:SqlStatementSource="DECLARE @FiscalYearMonthStart SmallInt&#xA;SET @FiscalYearMonthStart = 7&#xA;&#xA;IF NOT EXISTS (SELECT * FROM DIM_Date)&#xA;BEGIN&#xA;&#x9;EXEC dbo.BBBI_PopulateDateDim '01/01/1970', '01/01/2020', @FiscalYearMonthStart &#xA;&#x9;EXEC dbo.BBBI_PopulateDateDim '01/01/1900', '01/01/1900', @FiscalYearMonthStart &#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{60C9F261-3874-4204-8DAA-DAD687456C3D}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{560A99D6-B5CB-4ED3-9312-05117103DB68}"
+          SQLTask:SqlStatementSource="Truncate Table dbo.DIM_GL7FISCALPERIOD" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Post Status Dim"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{8F577BDA-9E06-469B-8567-B710572D8B67}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Post Status Dim"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{560A99D6-B5CB-4ED3-9312-05117103DB68}"
+          SQLTask:SqlStatementSource="IF NOT EXISTS (SELECT * FROM DIM_PostStatus)&#xA;BEGIN&#xA;INSERT INTO DIM_PostStatus&#xA;(PostStatusDimID, PostStatusSystemID, PostStatus)&#xA;SELECT&#xA;PostStatusDimID, PostStatusSystemID, PostStatus&#xA;FROM&#xA;(&#xA;SELECT 1 AS PostStatusDimID, 1 AS PostStatusSystemID, 'Not yet Posted' AS PostStatus UNION&#xA;SELECT 2, 2, 'Posted' UNION&#xA;SELECT 3, 3, 'Posted (Historical)' UNION&#xA;SELECT -1, 0, 'No Status'&#xA;) t&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Transaction Type Dim"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{5BCD37EF-A84A-4DCD-9CDC-229AB7CECE37}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Transaction Type Dim"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{560A99D6-B5CB-4ED3-9312-05117103DB68}"
+          SQLTask:SqlStatementSource="IF NOT EXISTS (SELECT * FROM DIM_TransactionType)&#xA;BEGIN&#xA;INSERT INTO DIM_TransactionType&#xA;(TransactionTypeDimID, TransactionTypeSystemID, TransactionType)&#xA;SELECT&#xA;TransactionTypeDimID, TransactionTypeSystemID, TransactionType&#xA;FROM&#xA;(&#xA;SELECT 1 AS TransactionTypeDimID, 1 AS TransactionTypeSystemID, 'Debit' AS TransactionType UNION&#xA;SELECT 2, 2, 'Credit' UNION&#xA;SELECT -1, 0, 'No Type' &#xA;) t&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Tables"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{780F1F03-0312-4B54-A410-6EC320FA7E69}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Tables"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{560A99D6-B5CB-4ED3-9312-05117103DB68}"
+          SQLTask:SqlStatementSource="/*&#xA;TRUNCATE TABLE DIM_PostStatus&#xA;TRUNCATE TABLE DIM_TransactionType&#xA;TRUNCATE TABLE DIM_Date&#xA;&#xA;*/" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update FiscalPeriodsID"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{22572c90-1c33-408c-a0d3-1bf04821a61e}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update FiscalPeriodsID"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{560A99D6-B5CB-4ED3-9312-05117103DB68}"
+          SQLTask:SqlStatementSource="UPDATE DIM_Date&#xA;SET DIM_Date.GL7FiscalPeriodsID = FP.GL7FISCALPERIODSID,&#xA;PERIODENDDATE = FP.ENDDATE&#xA;FROM dbo.DIM_Date DD Inner join DIM_GL7FISCALPERIOD FP on DD.PERIODENDDATE = FP.ENDDATE" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Month and QtrEnds"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{5dd80924-e2d4-4f8b-ac9e-ac879eb8f5cb}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Month and QtrEnds"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{560A99D6-B5CB-4ED3-9312-05117103DB68}"
+          SQLTask:SqlStatementSource="UPDATE DIM_Date&#xA;Set QtrEnd = 1&#xA;FROM DIM_Date&#xA;WHERE &#xA;DatePart(&quot;m&quot;, ActualDate) IN (3, 12) AND DatePart(&quot;d&quot;, ActualDate) = 31 OR&#xA;DatePart(&quot;m&quot;, ActualDate) IN (6, 9) AND DatePart(&quot;d&quot;, ActualDate) = 30&#xA;&#xA;UPDATE DIM_Date&#xA;Set MonthEnd = 1&#xA;FROM DIM_Date&#xA;WHERE &#xA;DatePart(&quot;m&quot;, ActualDate) IN (1, 3, 5, 7, 8, 10, 12) AND DatePart(&quot;d&quot;, ActualDate) = 31&#xA;OR DatePart(&quot;m&quot;, ActualDate) IN (2, 4, 6, 9, 11) AND DatePart(&quot;d&quot;, ActualDate) = 30&#xA;OR (IsLeapYear = 0 AND DatePart(&quot;m&quot;, ActualDate) IN (2) AND DatePart(&quot;d&quot;, ActualDate) = 28)&#xA;OR (IsLeapYear = 1 AND DatePart(&quot;m&quot;, ActualDate) IN (2) AND DatePart(&quot;d&quot;, ActualDate) = 29)&#xA;&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{5291D492-3B23-41FE-98FD-3C37A4ED0C16}"
+      DTS:From="Package\Truncate Tables"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Post Status Dim" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{6D14DEF6-2D87-4CBE-A449-93A188D0E996}"
+      DTS:From="Package\Truncate Tables"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Transaction Type Dim" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{F8AC96DD-073B-4CF6-94D2-BFBD8614F224}"
+      DTS:From="Package\Truncate Tables"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Date Dim" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{E1ABAB45-0F6F-4DAE-90B1-D995D3A9CBC1}"
+      DTS:From="Package\Date Dim"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Execute SQL Task" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{53F6F442-9F3D-493F-A651-40A8932D0E3F}"
+      DTS:From="Package\Update Month and QtrEnds"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Update FiscalPeriodsID" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{01200F31-7004-456A-8E32-97C5DE28D955}"
+      DTS:From="Package\Add FiscalPeriod Info"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\Update Month and QtrEnds" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{290F9D7E-6890-4552-82E9-81A5B45608AD}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 6"
+      DTS:To="Package\Add FiscalPeriod Info" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="203,44"
+          Id="Package\Add FiscalPeriod Info"
+          TopLeft="198.481132075472,372.783018867925" />
+        <NodeLayout
+          Size="203,44"
+          Id="Package\Date Dim"
+          TopLeft="198.481132075472,185.27358490566" />
+        <NodeLayout
+          Size="196,44"
+          Id="Package\Execute SQL Task"
+          TopLeft="201.877358490566,278.292452830189" />
+        <NodeLayout
+          Size="203,44"
+          Id="Package\Post Status Dim"
+          TopLeft="198.481132075472,5.5" />
+        <NodeLayout
+          Size="150,44"
+          Id="Package\Transaction Type Dim"
+          TopLeft="5.5,95.3867924528302" />
+        <NodeLayout
+          Size="203,44"
+          Id="Package\Truncate Tables"
+          TopLeft="198.481132075472,95.3867924528302" />
+        <NodeLayout
+          Size="203,44"
+          Id="Package\Update FiscalPeriodsID"
+          TopLeft="198.481132075472,552.556603773585" />
+        <NodeLayout
+          Size="203,44"
+          Id="Package\Update Month and QtrEnds"
+          TopLeft="198.481132075472,462.669811320755" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="299.990566037736,95.3867924528302">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-46"
+              Start="0,0"
+              End="0,-38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="198.481132075472,117.311320754717">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-43.2075471698115,0"
+              Start="0,0"
+              End="-35.7075471698115,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-35.7075471698115,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="299.990566037736,139.27358490566">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="299.990566037736,229.160377358491">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0.0754716981132333,49.1320754716981"
+              Start="0,0"
+              End="0.0754716981132333,41.6320754716981">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5660377358491" />
+                  <mssgle:LineSegment
+                    End="0.0754716981132333,24.5660377358491" />
+                  <mssgle:LineSegment
+                    End="0.0754716981132333,41.6320754716981" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="299.990566037736,506.556603773585">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="299.990566037736,416.669811320755">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="300.066037735849,322.179245283019">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-0.0754716981132333,50.6037735849057"
+              Start="0,0"
+              End="-0.0754716981132333,43.1037735849057">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.2830188679245" />
+                  <mssgle:LineSegment
+                    End="-0.0754716981132333,25.2830188679245" />
+                  <mssgle:LineSegment
+                    End="-0.0754716981132333,43.1037735849057" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Add FiscalPeriod Info">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="174,44"
+          Id="Package\Add FiscalPeriod Info\Source Fiscal Period from FE"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="226,60"
+          Id="Package\Add FiscalPeriod Info\Add FiscalPeriod records to DIM_GL7FiscalPeriods"
+          TopLeft="5.5,110.330188679245" />
+        <EdgeLayout
+          Id="Package\Add FiscalPeriod Info.Paths[OLE DB Source Output]"
+          TopLeft="92.5,49.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="26,60.830188679245"
+              Start="0,0"
+              End="26,53.330188679245">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.4150943396225" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.4150943396225"
+                    Point2="0,30.4150943396225"
+                    Point3="4,30.4150943396225" />
+                  <mssgle:LineSegment
+                    End="22,30.4150943396225" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22,30.4150943396225"
+                    Point2="26,30.4150943396225"
+                    Point3="26,34.4150943396225" />
+                  <mssgle:LineSegment
+                    End="26,53.330188679245" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

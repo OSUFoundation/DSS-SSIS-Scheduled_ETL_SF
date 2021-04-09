@@ -1,0 +1,1821 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/15/2007"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ALANEAR51"
+  DTS:CreatorName="BBNT\AlanEa"
+  DTS:DTSID="{D55D4DC0-F28F-458B-B1DF-10A86617BEE3}"
+  DTS:EnableConfig="True"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="13.0.4001.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="EM_FACT_UNITIZATION_LOAD"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="284"
+  DTS:VersionGUID="{827012BC-1715-43B9-B1AD-77A979A1B2F8}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ETL_DB_CONN_DW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A218DADF-A0C5-4D8D-B77D-26FF02F87601}"
+      DTS:ObjectName="ETL_DB_CONN_DW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DW2;Initial Catalog=OSUF_FE_DW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ETL_DB_CONN_FE]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{846BF7B7-A44C-4B59-A252-A006B1998F2C}"
+      DTS:ObjectName="ETL_DB_CONN_FE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DW2;Initial Catalog=OSUF_FE_PROD;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ETL_DB_CONN_RE]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6967c46a-5aaf-4bc9-a434-7a2c34e2bdab}"
+      DTS:ObjectName="ETL_DB_CONN_RE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=RE-DB;Initial Catalog=RE7prod;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Configurations>
+    <DTS:Configuration
+      DTS:ConfigurationString="DataWindowOpen"
+      DTS:ConfigurationVariable="\Package.Variables[User::DataWindowOpen].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{6796AE79-8C72-49BA-A1F5-931DA1AFFDA4}"
+      DTS:ObjectName="DataWindowOpen" />
+    <DTS:Configuration
+      DTS:ConfigurationString="DataWindowClose"
+      DTS:ConfigurationVariable="\Package.Variables[User::DataWindowClose].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{4E8E7B80-252E-48FF-84EB-48C69269CCD3}"
+      DTS:ObjectName="DataWindowClose" />
+    <DTS:Configuration
+      DTS:ConfigurationString="ETLControlID"
+      DTS:ConfigurationVariable="\Package.Variables[User::ETLControlID].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{F52E9104-B711-42C0-A016-98B0597C36C6}"
+      DTS:ObjectName="ETLControlID" />
+    <DTS:Configuration
+      DTS:ConfigurationString="SourceID"
+      DTS:ConfigurationVariable="\Package.Variables[User::SourceID].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{B1E34D86-1D55-4D10-96CF-4ED77106FB24}"
+      DTS:ObjectName="SourceID" />
+    <DTS:Configuration
+      DTS:ConfigurationString="FIDW_ETLCONFIG_OSUF"
+      DTS:ConfigurationType="5"
+      DTS:CreationName=""
+      DTS:DTSID="{C7C03A25-802C-481F-800E-1D33A8250A29}"
+      DTS:ObjectName="ConfigFile" />
+    <DTS:Configuration
+      DTS:ConfigurationString="TruncateTables"
+      DTS:ConfigurationVariable="\Package.Variables[User::TruncateTables].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{5FAFD504-6C1D-4B7D-82FF-5AA1334D99D0}"
+      DTS:ObjectName="TruncateTables" />
+  </DTS:Configurations>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{93FCE1A0-686B-4B2E-8390-5AF55EA985D1}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="DataWindowClose">
+      <DTS:VariableValue
+        DTS:DataType="7">12/30/2006</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{FA5112D2-BF15-48ED-B023-D96CD42DA948}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="DataWindowOpen">
+      <DTS:VariableValue
+        DTS:DataType="7">12:00:00 AM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{40818238-6110-4475-9159-B776C6DE4339}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ETLControlID">
+      <DTS:VariableValue
+        DTS:DataType="3">2</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3025DC84-3614-422C-B603-6B3C32593B17}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ETLDeploymentFolder">
+      <DTS:VariableValue
+        DTS:DataType="8">E:\BI\FE_DW\ETL\FE\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{DD8C307A-CDFF-49EE-A6E0-5586C32398DA}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ExistingFactCount">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{192E9B66-1C5F-4358-A878-3C1908A9D053}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="MaxFactKey">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F0875394-9A2D-4991-A717-44E21D731902}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="NewFactCount">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BE59400D-9F2E-4599-9EBF-2755AFC72E08}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceID">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{76EED712-05DA-400F-854A-FC3CC5FF4634}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="TableName">
+      <DTS:VariableValue
+        DTS:DataType="8">FACT_Gift</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{D4BC67C4-4A18-4238-BDCE-DB2DA98A497B}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="TableType">
+      <DTS:VariableValue
+        DTS:DataType="8">Fact</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3A47B875-4D4C-4A8F-8C96-0D9F06F66F5D}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="TruncateTables">
+      <DTS:VariableValue
+        DTS:DataType="11">-1</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:LoggingOptions
+    DTS:FilterKind="0"
+    DTS:LoggingMode="2">
+    <DTS:Property
+      DTS:DataType="8"
+      DTS:Name="EventFilter">5,7,OnError,13,OnInformation,25,OnPipelinePostEndOfRowset,13,OnPostExecute,12,OnPreExecute</DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnError"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnInformation"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPipelinePostEndOfRowset"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPostExecute"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPreExecute"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnProgress"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+  </DTS:LoggingOptions>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load Project Unitization Fact"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{43260940-DC4C-45DC-8CE4-6C02F2FE801B}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Project Unitization Fact">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Load Project Unitization Fact\Execute SQL Get Max Fact ID"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{4da89322-3420-48fd-8df9-096264c3bd6a}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute SQL Get Max Fact ID"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{A218DADF-A0C5-4D8D-B77D-26FF02F87601}"
+              SQLTask:SqlStatementSource="SELECT COALESCE(MAX(UnitizationFactID), 0)&#xA;AS MaxFactKey&#xA;FROM FACT_Unitization"
+              SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="MaxFactKey"
+                SQLTask:DtsVariableName="User::MaxFactKey" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Load Project Unitization Fact\Load Project Unitization Fact"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{CB27E649-200B-4D1A-AEB7-AED7818081C0}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Load Project Unitization Fact"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server v9; (C) 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0"
+            DTS:LoggingMode="2" />
+          <DTS:ObjectData>
+            <pipeline
+              BLOBTempStoragePath=""
+              bufferTempStoragePath=""
+              engineThreads="5"
+              version="1">
+              <components>
+                <component
+                  refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Add ETLControlID, SourceID"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Updates column values using expressions"
+                  localeId="1033"
+                  name="Add ETLControlID, SourceID"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Add ETLControlID, SourceID.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Add ETLControlID, SourceID.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Add ETLControlID, SourceID.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Add ETLControlID, SourceID.Outputs[Derived Column Output].Columns[ETLControlID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Add ETLControlID, SourceID.Outputs[Derived Column Output].Columns[ETLControlID]"
+                          name="ETLControlID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">@[User::ETLControlID]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">@[User::ETLControlID]</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Add ETLControlID, SourceID.Outputs[Derived Column Output].Columns[SourceID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Add ETLControlID, SourceID.Outputs[Derived Column Output].Columns[SourceID]"
+                          name="SourceID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">@[User::SourceID]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">@[User::SourceID]</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Add ETLControlID, SourceID.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Add ETLControlID, SourceID.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Add ETLControlID, SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Add ETLControlID, SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Add ETLControlID, SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Add ETLControlID, SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Generate New Surrogate Fact Keys"
+                  componentClassID="Microsoft.ManagedComponentHost"
+                  contactInfo="Executes a custom script.;Microsoft Corporation;Microsoft SqlServer v9; © 2004 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Executes a custom script."
+                  name="Generate New Surrogate Fact Keys"
+                  version="10">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Stores the source code of the component"
+                      isArray="true"
+                      name="SourceCode"
+                      state="cdata">
+                      <arrayElements
+                        arrayElementCount="15">
+                        <arrayElement
+                          dataType="System.String"><![CDATA[ScriptMain.vb]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[' Microsoft SQL Server Integration Services user script component
+' This is your new script component in Microsoft Visual Basic .NET
+' ScriptMain is the entrypoint class for script components
+
+Imports System
+Imports System.Data
+Imports System.Math
+Imports Microsoft.SqlServer.Dts.Pipeline.Wrapper
+Imports Microsoft.SqlServer.Dts.Runtime.Wrapper
+
+<Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute> _
+<CLSCompliant(False)> _
+Public Class ScriptMain
+    Inherits UserComponent
+
+    Dim Counter As Int32
+
+    Public Overrides Sub PreExecute()
+
+        MyBase.PreExecute()
+
+        Me.Counter = Variables.MaxFactKey
+    End Sub
+
+    Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)
+
+        Me.Counter += 1
+
+        Row.NewSurrogateKey = Me.Counter
+
+    End Sub
+
+End Class
+
+]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[BufferWrapper.vb]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[' THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+' Microsoft SQL Server Integration Services buffer wrappers
+' This module defines classes for accessing data flow buffers
+' THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+
+
+Option Strict Off   ' This allows usage of PipelineBuffer typed accessors.
+
+Imports System
+Imports System.Data
+Imports Microsoft.SqlServer.Dts.Pipeline
+Imports Microsoft.SqlServer.Dts.Pipeline.Wrapper
+
+<CLSCompliant(False)> _
+Public Class Input0Buffer
+    Inherits ScriptBuffer
+
+    Public Sub New(ByVal Buffer As PipelineBuffer, ByVal BufferColumnIndexes As Integer(), ByVal OutputMap As OutputNameMap)
+        MyBase.New(Buffer, BufferColumnIndexes, OutputMap)
+    End Sub
+
+    Public WriteOnly Property [NewSurrogateKey]() As Int32
+        Set
+            Me(0) = Value
+        End Set
+    End Property
+    Public WriteOnly Property [NewSurrogateKey_IsNull] As Boolean
+        Set
+            If (value)
+                SetNull(0)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public Overloads Function NextRow() As Boolean
+        NextRow = MyBase.NextRow()
+    End Function
+
+    Public Overloads Function EndOfRowset() As Boolean
+        EndOfRowset = MyBase.EndOfRowset
+    End Function
+
+End Class
+]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[ScriptComponent_eed19ed9c1b14346a137450d0274ea85.vbproj]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{63785c3e-7407-4b05-b185-9f7d3be9053e}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>My Project</AppDesignerFolder>
+    <RootNamespace>ScriptComponent_eed19ed9c1b14346a137450d0274ea85</RootNamespace>
+    <AssemblyName>ScriptComponent_eed19ed9c1b14346a137450d0274ea85</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- This sections specifies references for the project. -->
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <!-- Visual Basic supports Importing namespaces (equivalent to using statements in C#).-->
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="My Project\" />
+  </ItemGroup>
+  <!-- Include the build rules for a VB project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="SSIS_SC110" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
+        <Host Name="SSIS_SC110" IconIndex=""></Host>
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC130</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <ItemGroup>
+    <Compile Include="ScriptMain.vb" />
+    <Compile Include="BufferWrapper.vb" />
+    <Compile Include="ComponentWrapper.vb" />
+  </ItemGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+</Project>]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[ComponentWrapper.vb]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[' THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+' Microsoft SQL Server Integration Services component wrapper
+' This module defines the base class for your component
+' THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+
+Imports System
+Imports System.Data
+Imports Microsoft.SqlServer.Dts.Pipeline
+Imports Microsoft.SqlServer.Dts.Pipeline.Wrapper
+Imports Microsoft.SqlServer.Dts.Runtime.Wrapper
+
+<CLSCompliant(False)> _
+Public Class UserComponent
+    Inherits ScriptComponent
+
+    Public Connections As New Connections(Me)
+    Public Variables As New Variables(Me)
+
+    Public Overrides Sub ProcessInput(ByVal InputID As Integer, ByVal InputName As String, ByVal Buffer As PipelineBuffer, ByVal OutputMap As OutputNameMap)
+
+        If InputName.Equals("Input 0", StringComparison.Ordinal) Then
+            Input0_ProcessInput(New Input0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap))
+        End If
+
+    End Sub
+
+    Public Overridable Sub Input0_ProcessInput(ByVal Buffer As Input0Buffer)
+
+        While Buffer.NextRow()
+            Input0_ProcessInputRow(Buffer)
+        End While
+
+    End Sub
+
+    Public Overridable Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)
+
+    End Sub
+
+End Class
+
+<CLSCompliant(False)> _
+Public Class Connections
+
+    Dim ParentComponent As ScriptComponent
+
+    <CLSCompliant(False)> _
+    Public Sub New(ByVal Component As ScriptComponent)
+        ParentComponent = Component
+    End Sub
+
+End Class
+
+<CLSCompliant(False)> _
+Public Class Variables
+
+    Dim ParentComponent As ScriptComponent
+
+    <CLSCompliant(False)> _
+    Public Sub New(ByVal Component As ScriptComponent)
+        ParentComponent = Component
+    End Sub
+
+    Public ReadOnly Property [MaxFactKey]() As Int32
+        Get
+            Return CType(ParentComponent.ReadOnlyVariables("MaxFactKey").GetValueWithContext(ScriptComponent.EvaluatorContext), Int32)
+        End Get
+    End Property
+
+End Class
+]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[Project]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:ProjectId>{AC16E1CF-2C70-44F2-9D0C-40579B95F5EE}</msb:ProjectId>
+		<msb:NoContent>Reference;Import;Folder</msb:NoContent>
+		<msb:Language>msBuild</msb:Language>
+		<msb:CodeName>ScriptComponent_eed19ed9c1b14346a137450d0274ea85</msb:CodeName>
+		<msb:DisplayName>ScriptComponent_eed19ed9c1b14346a137450d0274ea85</msb:DisplayName>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:File Include="ScriptMain.vb"/>
+		<msb:File Include="ComponentWrapper.vb"/>
+		<msb:File Include="BufferWrapper.vb"/>
+		<msb:Project Include="ScriptComponent_eed19ed9c1b14346a137450d0274ea85.vbproj"/>
+	</msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                      </arrayElements>
+                    </property>
+                    <property
+                      dataType="System.String"
+                      description="Stores the binary representation of the component"
+                      isArray="true"
+                      name="BinaryCode"
+                      state="cdata">
+                      <arrayElements
+                        arrayElementCount="2">
+                        <arrayElement
+                          dataType="System.String"><![CDATA[ScriptComponent_eed19ed9c1b14346a137450d0274ea85.dll]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAAdAG1kAAAAAAAAAAOAAIiALAVAAABgAAAAGAAAAAAAAfjcA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAEAAAAAAAAAACAAAAAAgAAAAAAAAMAQIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAACw3AABPAAAAAEAAAEgDAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAhBcAAAAgAAAAGAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgDAAAAQAAAAAQAAAAaAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAHgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAABg
+NwAAAAAAAEgAAAACAAUAqCIAAIQUAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKA8AAAoqHgIoEAAACiqmcxEAAAqAAQAABHMSAAAKgAIA
+AARzEwAACoADAAAEcxQAAAqABAAABCoufgEAAARvFQAACioufgIAAARvFgAACioufgMAAARvFwAA
+CioufgQAAARvGAAACioeAigQAAAGKmICKBkAAAoCAnsHAAAEbxYAAAZ9BQAABCoAEzADABoAAAAB
+AAARAnwFAAAEJQoGShfWVAMCewUAAARvDAAABioqAgMEBSgaAAAKKjoCFgOMHAAAASgbAAAKKloD
+LAgCFigcAAAKKnIBAABwcx0AAAp6ABMwAQAJAAAAAgAAEQIoHgAACgoGKgAAABMwAQAJAAAAAgAA
+EQIoHwAACgoGKn4CKCAAAAoCAnMUAAAGfQYAAAQCAnMVAAAGfQcAAAQqkgRyngAAcBpvIQAACiwV
+AgUCAygiAAAKDgRzCwAABm8SAAAGKkorBwIDbxMAAAYDbw4AAAYt8SoGKjoCKCMAAAoCA30IAAAE
+KjoCKCMAAAoCA30JAAAEKpYCewkAAARvJAAACnKuAABwbyUAAAooJgAACm8nAAAKKCgAAAoqNgID
+KCkAAAooKgAACioeAigrAAAKKi7QCgAAAigsAAAKKh4CKC0AAAoqAAAAEzABABQAAAADAAARAowF
+AAAbLQgoAQAAKworAgIKBioiA/4VBQAAGyoeAigjAAAKKgAAABMwAgAoAAAABAAAEQJ7LwAACm8w
+AAAKCgaMCAAAGy0SKAIAACsKAnsvAAAKBm8xAAAKBipKAigjAAAKAnMyAAAKfS8AAAoqAEJTSkIB
+AAEAAAAAAAwAAAB2NC4wLjMwMzE5AAAAAAUAbAAAANAHAAAjfgAAPAgAAIgIAAAjU3RyaW5ncwAA
+AADEEAAAxAAAACNVUwCIEQAAEAAAACNHVUlEAAAAmBEAAOwCAAAjQmxvYgAAAAAAAAACAAABVxWi
+CQkOAAAA+gEzABYAAAEAAAAnAAAACwAAAAoAAAAfAAAAEQAAADIAAAAwAAAABAAAAAQAAAAIAAAA
+CAAAAAgAAAABAAAABgAAAAIAAAADAAAAAgAAAAAAngMBAAAAAAAGAI0CjwYGAOoCjwYGANAB0AUP
+AK8GAAAGAEECNgMKALkBUAUKAI8BiAMKAOQBiAMOAH8BHwYOALAF4wUGAFoC0AUOABECaAYOACkC
+3gAGACcHCAQOAJQFHwYOAHIC3gAGAHoBCAQGAP0BSQYOADoAXgMKAKQBDwQSAMMCVgEGAK0CCAQG
+AFkDCAQSADkFVgEWACoFVgESAIIEVgESAGIHVgEGAGQACAQGAFUECAQGAFIDCAQGAG8ECAQaABEA
+aAUaAAEAaAVvAOIHAAAaACIAaAUOAAAHaAYGABgHjwYGACgBCAQGALkFCAQAAAAAmwAAAAAAAQAB
+AAAAAABHBDEIJQABAAEAAAAAAK4FMQgpAAEAAgAAARAALgcxCDkAAQADAAEAAAAsBGoAHAAFAAgA
+AQAAAB0FagBhAAYACwABAAAARAdqAG0ABgAQAAEAAAAMB2oAOQAIABQAAQAAAMoGagA5AAkAFQAF
+AQAAEQYAADkACgAXAAUBAABJAAAAOQAKAB4AMQDmBAkBMQC9BBEBMQDRBBkBMQD/BCEBAQCZBSkB
+BgAMBywBBgDKBjABAQBSBzQBAQBSBzQBIQDEB9EAUCAAAAAABhjDBQYAAQBYIAAAAAAGGMMFBgAB
+AGAgAAAAABEYyQU4AQEAiiAAAAAAEwihBTwBAQCWIAAAAAATCDcEQQEBAKIgAAAAABMIkAVGAQEA
+riAAAAAAEwgBBksBAQC6IAAAAAAGGMMFBgABAMIgAAAAAMYCCAMGAAEA3CAAAAAAxgISCFABAQAC
+IQAAAAAGGMMFVAACAA0hAAAAAAYIZQgBAAUAHCEAAAAABgjTAykABgA0IQAAAACGACkIaAAHAEwh
+AAAAAIYAOAdoAAcAYSEAAAAABhjDBQYABwCBIQAAAADGArcHVgEHAKYhAAAAAEYDsAdQAQsAuSEA
+AAAARgMSCFABDAC7IQAAAAAGGMMFYAENAMohAAAAAAYYwwVgAQ4A2SEAAAAABgh5CKIADwD/IQAA
+AADGAvkGnQAPAA0iAAAAAMYCHAGiABAAFSIAAAAAgwB3AWYBEAAhIgAAAADGAlADrgAQACwiAAAA
+ABEAwgBrARAATCIAAAAAAQCuAHMBEQBVIgAAAAAGGMMFBgASAGAiAAAAAAMIAwFKABIAlCIAAAAA
+BhjDBQYAEgAAAAEALQgAAAEAPwUAAAIA1AYAAAMAkAQAAAEAMAMAAAEAMAMAAAEApAAAAAIATAEA
+AAMAPwUAAAQAkAQAAAEAPwUAAAEALQgAAAEAaAcAAAEAaAcAAAEAgAQAAAEAEwEAAAEAEwEJAMMF
+AQARAMMFBgAZAMMFCgApAMMFEAAxAMMFFQBBAMMFGwBZAMMFBgBhAMMFBgBpAMMFBgCBAMMFIQCR
+AMMFKQChAMMFEACpAMMFBgCxAMMFKQBJAMMFBgBRAMMFBgAMAMMFBgAUAMMFBgAcAMMFBgAkAMMF
+BgAMAAMBSgAUAAMBSgAcAAMBSgAkAAMBSgDZAAgDBgDBAMMFVADBAP8DXgDBAO4DAQDpAMMFEADB
+ACkIaADBADgHaADZAMMFBgDxAPkGbADZAOgGcwBxAMMFBgDZAL4GeQABAfYDfwDZAP0HhgAJAc4H
+jAAhAUYFkwApAScDmABxAPkGnQBxABwBogCJADoBpgBxAFADrgA5AfQAugA0AMQH0QA8ABMDSgA8
+AB0D6AA8AMMFBgApAGMApAIuAAsAnAEuABMApQEuABsAxAEuACMAzQFAADsAFQJAADMAGgJDACsA
+KQJDADMAGgJJAGMAtQJjACsAKQJjADMAGgJpAGMAyQKAADsAFQKDAEMAFQKDAEsAFQKDACsAKQKJ
+AGMA1gKgADsAFQKjAGsAFQKjAHMAIwLAADsAFQLDAHMAIwLgADsAFQLjAHMAIwIDAXMAIwIjAXMA
+IwJDATMAGgJDAVMAQgJjATMAGgJjAVsAIwKAAnMAIwKgAnMAIwLgAjMAGgLgAjsAFQIAAzMAGgIA
+AzsAFQIgAzMAGgIgAzsAFQJAAzMAGgJAAzsAFQJgAzsAFQKAAzsAFQKgAzsAFQKgAzMAGgLAAzsA
+FQLgAzsAFQLgAzMAGgJPAGQAsgDFAAQAAQAGAAUACQAHAAsACAAAALAFewEAAEkEgAEAAJQFhQEA
+ABMGigEAAGkIjwEAANcDkwEAAH0IjwEAAAcBlwECAAQAAwACAAUABQACAAYABwACAAcACQABAAwA
+CwABAA0ADQACABYADwACAB4AEQAuADUAPABDALcAygDZAOAABIAAAAAAAAAAAAAAAAAAAAAAagAA
+AAQAAAAAAAAAAAAAAO4A1QAAAAAABAAAAAAAAAAAAAAA7gAIBAAAAAAKAAAAAAAAAAAAAAD3AN4A
+AAAAAA0AAAAAAAAAAAAAAAABcgcAAAAADQAAAAAAAAAAAAAAAAGPBwAAAAANAAAAAAAAAAAAAAAA
+AZoEAAAAAAoABAALAAQAAAAQABYArAAAABAANwCsAAAAAAA5AKwAXQDAAF0A4wAAAAAAAElEVFNW
+YXJpYWJsZTEwMABJRFRTVmFyaWFibGVzMTAwAElEVFNFdmFsdWF0b3JDb250ZXh0MTAwAENvbnRl
+eHRWYWx1ZWAxAFRocmVhZFNhZmVPYmplY3RQcm92aWRlcmAxAEludDMyAFNjcmlwdENvbXBvbmVu
+dF9lZWQxOWVkOWMxYjE0MzQ2YTEzNzQ1MGQwMjc0ZWE4NQA8TW9kdWxlPgBJbnB1dElEAFQARGlz
+cG9zZV9fSW5zdGFuY2VfXwBDcmVhdGVfX0luc3RhbmNlX18AbXNjb3JsaWIATWljcm9zb2Z0LlZp
+c3VhbEJhc2ljAENyZWF0ZUluc3RhbmNlAGdldF9HZXRJbnN0YW5jZQBpbnN0YW5jZQBHZXRIYXNo
+Q29kZQBSdW50aW1lVHlwZUhhbmRsZQBHZXRUeXBlRnJvbUhhbmRsZQBJbnB1dE5hbWUATWljcm9z
+b2Z0LlNxbFNlcnZlci5EdHMuUGlwZWxpbmUAR2V0VHlwZQBBcHBsaWNhdGlvbkJhc2UARWRpdG9y
+QnJvd3NhYmxlU3RhdGUASGVscEtleXdvcmRBdHRyaWJ1dGUAR2VuZXJhdGVkQ29kZUF0dHJpYnV0
+ZQBEZWJ1Z2dhYmxlQXR0cmlidXRlAEVkaXRvckJyb3dzYWJsZUF0dHJpYnV0ZQBDb21WaXNpYmxl
+QXR0cmlidXRlAFN0YW5kYXJkTW9kdWxlQXR0cmlidXRlAEhpZGVNb2R1bGVOYW1lQXR0cmlidXRl
+AFRhcmdldEZyYW1ld29ya0F0dHJpYnV0ZQBEZWJ1Z2dlckhpZGRlbkF0dHJpYnV0ZQBNeUdyb3Vw
+Q29sbGVjdGlvbkF0dHJpYnV0ZQBDb21waWxhdGlvblJlbGF4YXRpb25zQXR0cmlidXRlAENMU0Nv
+bXBsaWFudEF0dHJpYnV0ZQBTU0lTU2NyaXB0Q29tcG9uZW50RW50cnlQb2ludEF0dHJpYnV0ZQBS
+dW50aW1lQ29tcGF0aWJpbGl0eUF0dHJpYnV0ZQBQcmVFeGVjdXRlAGdldF9WYWx1ZQBzZXRfVmFs
+dWUAR2V0T2JqZWN0VmFsdWUAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBUb1N0cmluZwBNYXRo
+AE1pY3Jvc29mdC5WaXN1YWxCYXNpYy5NeVNlcnZpY2VzLkludGVybmFsAFN5c3RlbS5Db21wb25l
+bnRNb2RlbABTY3JpcHRDb21wb25lbnRfZWVkMTllZDljMWIxNDM0NmExMzc0NTBkMDI3NGVhODUu
+ZGxsAHNldF9OZXdTdXJyb2dhdGVLZXlfSXNOdWxsAFNldE51bGwAZ2V0X0l0ZW0Ac2V0X0l0ZW0A
+U3lzdGVtAFN5c3RlbS5Db21wb25lbnRNb2RlbC5EZXNpZ24AU2NyaXB0TWFpbgBnZXRfQXBwbGlj
+YXRpb24ATXlBcHBsaWNhdGlvbgBJbnZhbGlkT3BlcmF0aW9uRXhjZXB0aW9uAFN0cmluZ0NvbXBh
+cmlzb24AbwBPdXRwdXROYW1lTWFwAE91dHB1dE1hcABNaWNyb3NvZnQuU3FsU2VydmVyLkRUU1J1
+bnRpbWVXcmFwAG1fQXBwT2JqZWN0UHJvdmlkZXIAbV9Vc2VyT2JqZWN0UHJvdmlkZXIAbV9Db21w
+dXRlck9iamVjdFByb3ZpZGVyAG1fTXlXZWJTZXJ2aWNlc09iamVjdFByb3ZpZGVyAElucHV0MEJ1
+ZmZlcgBQaXBlbGluZUJ1ZmZlcgBTY3JpcHRCdWZmZXIAVG9JbnRlZ2VyAFN5c3RlbS5Db2RlRG9t
+LkNvbXBpbGVyAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlJ1bnRpbWUuV3JhcHBlcgBnZXRfVXNl
+cgBDb3VudGVyAGdldF9Db21wdXRlcgBNeUNvbXB1dGVyAEFjdGl2YXRvcgAuY3RvcgAuY2N0b3IA
+U3lzdGVtLkRpYWdub3N0aWNzAE1pY3Jvc29mdC5WaXN1YWxCYXNpYy5EZXZpY2VzAGdldF9XZWJT
+ZXJ2aWNlcwBNeVdlYlNlcnZpY2VzAE1pY3Jvc29mdC5WaXN1YWxCYXNpYy5BcHBsaWNhdGlvblNl
+cnZpY2VzAFN5c3RlbS5SdW50aW1lLkludGVyb3BTZXJ2aWNlcwBNaWNyb3NvZnQuVmlzdWFsQmFz
+aWMuQ29tcGlsZXJTZXJ2aWNlcwBTeXN0ZW0uUnVudGltZS5Db21waWxlclNlcnZpY2VzAERlYnVn
+Z2luZ01vZGVzAGdldF9SZWFkT25seVZhcmlhYmxlcwBCdWZmZXJDb2x1bW5JbmRleGVzAEdldENv
+bHVtbkluZGV4ZXMARXF1YWxzAENvbnZlcnNpb25zAENvbm5lY3Rpb25zAFJ1bnRpbWVIZWxwZXJz
+AE9iamVjdABNeVByb2plY3QARW5kT2ZSb3dzZXQAVXNlckNvbXBvbmVudABQYXJlbnRDb21wb25l
+bnQAU2NyaXB0Q29tcG9uZW50AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuVHhTY3JpcHQATWljcm9zb2Z0
+LlNxbFNlcnZlci5QaXBlbGluZUhvc3QASW5wdXQwX1Byb2Nlc3NJbnB1dABtX0NvbnRleHQAR2V0
+VmFsdWVXaXRoQ29udGV4dABTY3JpcHRDb21wb25lbnRFdmFsQ29udGV4dABnZXRfRXZhbHVhdG9y
+Q29udGV4dABJbnB1dDBfUHJvY2Vzc0lucHV0Um93AE5leHRSb3cAU2NyaXB0Q29tcG9uZW50X2Vl
+ZDE5ZWQ5YzFiMTQzNDZhMTM3NDUwZDAyNzRlYTg1Lk15AHNldF9OZXdTdXJyb2dhdGVLZXkAZ2V0
+X01heEZhY3RLZXkAAICbSQBzAE4AdQBsAGwAIABwAHIAbwBwAGUAcgB0AHkAIABjAGEAbgBuAG8A
+dAAgAGIAZQAgAHMAZQB0ACAAdABvACAARgBhAGwAcwBlAC4AIABBAHMAcwBpAGcAbgAgAGEAIAB2
+AGEAbAB1AGUAIAB0AG8AIAB0AGgAZQAgAGMAbwBsAHUAbQBuACAAaQBuAHMAdABlAGEAZAAuAAAP
+SQBuAHAAdQB0ACAAMAAAFU0AYQB4AEYAYQBjAHQASwBlAHkAALR92tvkTPBAj8TO/XNEmdoABCAB
+AQgDIAABBSABARERBCABAQ4FIAIBDg4FIAEBER0HIAQBDg4ODgQgAQECBhUSLAESDAYVEiwBEggG
+FRIsARI9BhUSLAESKAQgABMABAcBEAgJIAMBEmUdCBJpBSACAQgcAwcBAgMgAAIGIAICDhF9BSAB
+HQgIBSAAEoCBBiABEoCFHAUAABKAiQYgARwSgI0EAAEIHAQAARwcBCABAhwDIAAIBwABEkURgJkD
+IAAOBAcBHgACHgAFEAEAHgAECgEeAAQHARMABhUSLAETAAcGFRJNARMABhUSTQETAAITAAQKARMA
+BSABARMACLd6XFYZNOCJCLA/X38R1Qo6CImEXc2AgMyRBwYVEiwBEgwHBhUSLAESCAcGFRIsARI9
+BwYVEiwBEigCBggDBhIgAwYSJAMGEm0DAAABBAAAEgwEAAASCAQAABI9BAAAEigFIAEBEhgJIAQB
+CA4SZRJpBSABARJtBCAAEkUHEAEBHgAeAAcwAQEBEB4ABAgAEgwECAASCAQIABI9BAgAEigDKAAI
+AygAAgQoABMACAEACAAAAAAAHgEAAQBUAhZXcmFwTm9uRXhjZXB0aW9uVGhyb3dzAQgBAAIAAAAA
+AEcBABouTkVURnJhbWV3b3JrLFZlcnNpb249djQuMAEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUQ
+Lk5FVCBGcmFtZXdvcmsgNAQBAAAACAEAAQAAAAAABQEAAAAAGAEACk15VGVtcGxhdGUIMTEuMC4w
+LjAAAGEBADRTeXN0ZW0uV2ViLlNlcnZpY2VzLlByb3RvY29scy5Tb2FwSHR0cENsaWVudFByb3Rv
+Y29sEkNyZWF0ZV9fSW5zdGFuY2VfXxNEaXNwb3NlX19JbnN0YW5jZV9fAAAAEAEAC015LkNvbXB1
+dGVyAAATAQAOTXkuQXBwbGljYXRpb24AAAwBAAdNeS5Vc2VyAAATAQAOTXkuV2ViU2VydmljZXMA
+AAAAVDcAAAAAAAAAAAAAbjcAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGA3AAAAAAAAAAAAAAAA
+X0NvckRsbE1haW4AbXNjb3JlZS5kbGwAAAAAAP8lACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAEAEAAAABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAEgA
+AABYQAAA7AIAAAAAAAAAAAAA7AI0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8AAAAA
+AL0E7/4AAAEAAAAAAAAAAAAAAAAAAAAAAD8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABEAAAA
+AQBWAGEAcgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8AbgAA
+AAAAAACwBEwCAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAACgCAAABADAAMAAwADAA
+MAA0AGIAMAAAACwAAgABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAAAAAgAAAAMAAI
+AAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAwAC4AMAAuADAALgAwAAAAigA1AAEASQBuAHQA
+ZQByAG4AYQBsAE4AYQBtAGUAAABTAGMAcgBpAHAAdABDAG8AbQBwAG8AbgBlAG4AdABfAGUAZQBk
+ADEAOQBlAGQAOQBjADEAYgAxADQAMwA0ADYAYQAxADMANwA0ADUAMABkADAAMgA3ADQAZQBhADgA
+NQAuAGQAbABsAAAAAAAoAAIAAQBMAGUAZwBhAGwAQwBvAHAAeQByAGkAZwBoAHQAAAAgAAAAkgA1
+AAEATwByAGkAZwBpAG4AYQBsAEYAaQBsAGUAbgBhAG0AZQAAAFMAYwByAGkAcAB0AEMAbwBtAHAA
+bwBuAGUAbgB0AF8AZQBlAGQAMQA5AGUAZAA5AGMAMQBiADEANAAzADQANgBhADEAMwA3ADQANQAw
+AGQAMAAyADcANABlAGEAOAA1AC4AZABsAGwAAAAAADQACAABAFAAcgBvAGQAdQBjAHQAVgBlAHIA
+cwBpAG8AbgAAADAALgAwAC4AMAAuADAAAAA4AAgAAQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBz
+AGkAbwBuAAAAMAAuADAALgAwAC4AMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAwAAACANwAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
+                      </arrayElements>
+                    </property>
+                    <property
+                      dataType="System.String"
+                      description="Comma separated list of variables to be made available for read access"
+                      name="ReadOnlyVariables"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg">MaxFactKey</property>
+                    <property
+                      dataType="System.String"
+                      description="Comma separated list of variables to be made available for read and write access"
+                      name="ReadWriteVariables"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
+                    <property
+                      dataType="System.String"
+                      description="List of breakpoints present on the script."
+                      isArray="true"
+                      name="BreakpointCollection"
+                      typeConverter="NOTBROWSABLE">
+                      <arrayElements
+                        arrayElementCount="0" />
+                    </property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                      name="VSTAProjectName"
+                      typeConverter="NOTBROWSABLE">ScriptComponent_eed19ed9c1b14346a137450d0274ea85</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the programming language used by the script."
+                      name="ScriptLanguage"
+                      typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">VisualBasic</property>
+                    <property
+                      dataType="System.String"
+                      description="Checksum to match component metedata against compiled codes."
+                      name="MetadataChecksum"
+                      typeConverter="NOTBROWSABLE">e0e18340b6020f0d4a4ddd21402ca50d</property>
+                    <property
+                      dataType="System.String"
+                      description="Checksum to match component metedata against compiled codes."
+                      name="MetadataShaChecksum"
+                      typeConverter="NOTBROWSABLE">bdc6bc9c4e593d8eb39d44f0b4d586695587fc5c</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Generate New Surrogate Fact Keys.Inputs[Input 0]"
+                      hasSideEffects="true"
+                      name="Input 0">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Generate New Surrogate Fact Keys.Outputs[Output 0]"
+                      name="Output 0"
+                      synchronousInputId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Generate New Surrogate Fact Keys.Inputs[Input 0]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Generate New Surrogate Fact Keys.Outputs[Output 0].Columns[NewSurrogateKey]"
+                          dataType="i4"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Generate New Surrogate Fact Keys.Outputs[Output 0].Columns[NewSurrogateKey]"
+                          name="NewSurrogateKey" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Insert Project Unitizations into DW"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[FACT_Unitization]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destinaton. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">0</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[ETL_DB_CONN_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[ETL_DB_CONN_DW]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].Columns[ETLControlID]"
+                          cachedDataType="i4"
+                          cachedName="ETLControlID"
+                          externalMetadataColumnId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].ExternalColumns[ETLControlID]"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Add ETLControlID, SourceID.Outputs[Derived Column Output].Columns[ETLControlID]" />
+                        <inputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].Columns[SourceID]"
+                          cachedDataType="i4"
+                          cachedName="SourceID"
+                          externalMetadataColumnId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].ExternalColumns[SourceID]"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Add ETLControlID, SourceID.Outputs[Derived Column Output].Columns[SourceID]" />
+                        <inputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].Columns[ProjectDimID]"
+                          cachedDataType="i4"
+                          cachedName="ProjectDimID"
+                          externalMetadataColumnId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].ExternalColumns[ProjectDimID]"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].Columns[ProjectDimID]" />
+                        <inputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].Columns[NewSurrogateKey]"
+                          cachedDataType="i4"
+                          cachedName="NewSurrogateKey"
+                          externalMetadataColumnId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].ExternalColumns[UnitizationFactID]"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Generate New Surrogate Fact Keys.Outputs[Output 0].Columns[NewSurrogateKey]" />
+                        <inputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].Columns[ProjectID]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="20"
+                          cachedName="ProjectID"
+                          externalMetadataColumnId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].ExternalColumns[ProjectID]"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].Columns[ProjectID]" />
+                        <inputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].Columns[BalanceDate]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="BalanceDate"
+                          externalMetadataColumnId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].ExternalColumns[BalanceDate]"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].Columns[BalanceDate]" />
+                        <inputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].Columns[GL7FISCALPERIODSID]"
+                          cachedDataType="i4"
+                          cachedName="GL7FISCALPERIODSID"
+                          externalMetadataColumnId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].ExternalColumns[GL7FISCALPERIODSID]"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].Columns[GL7FISCALPERIODSID]" />
+                        <inputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].Columns[Amount]"
+                          cachedDataType="cy"
+                          cachedName="Amount"
+                          externalMetadataColumnId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].ExternalColumns[Amount]"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].Columns[Amount]" />
+                        <inputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].Columns[UnitizationCategory]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="255"
+                          cachedName="UnitizationCategory"
+                          externalMetadataColumnId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].ExternalColumns[UnitizationCategory]"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].Columns[UnitizationCategory]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].ExternalColumns[Amount]"
+                          dataType="cy"
+                          name="Amount" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].ExternalColumns[ETLControlID]"
+                          dataType="i4"
+                          name="ETLControlID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].ExternalColumns[SourceID]"
+                          dataType="i4"
+                          name="SourceID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].ExternalColumns[ProjectDimID]"
+                          dataType="i4"
+                          name="ProjectDimID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].ExternalColumns[UnitizationFactID]"
+                          dataType="i4"
+                          name="UnitizationFactID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].ExternalColumns[ProjectID]"
+                          codePage="1252"
+                          dataType="str"
+                          length="20"
+                          name="ProjectID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].ExternalColumns[UnitizationCategory]"
+                          codePage="1252"
+                          dataType="str"
+                          length="255"
+                          name="UnitizationCategory" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].ExternalColumns[BalanceDate]"
+                          dataType="dbTimeStamp"
+                          name="BalanceDate" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].ExternalColumns[BalanceDateDimID]"
+                          dataType="i4"
+                          name="BalanceDateDimID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].ExternalColumns[GL7FISCALPERIODSID]"
+                          dataType="i4"
+                          name="GL7FISCALPERIODSID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].ExternalColumns[AdjSeq]"
+                          dataType="i4"
+                          name="AdjSeq" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].ExternalColumns[YearID]"
+                          codePage="1252"
+                          dataType="str"
+                          length="4"
+                          name="YearID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input].ExternalColumns[AdjPeriod]"
+                          dataType="i4"
+                          name="AdjPeriod" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="OLE DB Source"
+                  name="Load Project Unitizations"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset"></property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DECLARE @ProjectFilter VarChar(100)
+DECLARE @StartPeriodDate as DateTime
+DECLARE @EndPeriodDate as DateTime
+DECLARE @StartPeriod as Int
+DECLARE @EndPeriod as Int
+SET @StartPeriodDate = '06/30/2008'
+SET @StartPeriod = (Select Max(GL7FiscalPeriodsID) + 1 FROM dbo.DIM_Unit_Value)
+SET @EndPeriod = @StartPeriod + 2
+SET @EndPeriodDate = (SELECT Max(PeriodEndDate) FROM Dim_Date Where GL7FISCALPERIODSID = @EndPeriod)
+SET @ProjectFilter = -1		
+
+--Sums up balances by unitization category by unitized period by project--
+SELECT 
+Sum(NaturalAmount) AS Amount
+, TA.AttributeDescription AS UnitizationCategory
+, DD.GL7FISCALPERIODSID
+, TD.ProjectID
+, TD.ProjectDimID
+, DD.QtrEndDate AS BalanceDate
+
+FROM dbo.FACT_GLTransactionDistribution TD 
+
+--Join to filter for Unitization accounts only--
+	INNER JOIN 
+		(
+		SELECT A.AccountNumber, AA.AccountSystemID, AttributeDescription, AttributeCategory 
+		FROM Dim_AccountAttribute AA INNER JOIN DIM_ACCOUNT A ON A.AccountSystemID = AA.AccountSystemID
+		WHERE AttributeCategory = 'UnitizationClass'
+		) TA
+		ON TD.AccountSystemID = TA.AccountSystemID 
+
+--Join to add date dimension data and filter for quarter ending periods--
+	INNER JOIN 
+		(
+		SELECT GL7FISCALPERIODSID, PeriodEndDate, @EndPeriodDate AS "QtrEndDate" 
+		FROM DIM_Date 
+		WHERE GL7FISCALPERIODSID &gt;= @StartPeriod and GL7FISCALPERIODSID &lt;= @EndPeriod
+		AND MonthEnd = 1
+		) DD 
+		ON TD.FISCALPERIODSSYSTEMID = DD.GL7FISCALPERIODSID
+
+--Join to filter for only projects in the investment pool--
+	INNER JOIN 
+		(
+		SELECT ProjectDimID 
+		FROM DIM_ProjectAttribute 
+		WHERE AttributeCategory = 'IncludeInInvestPool' AND AttributeDescription = @ProjectFilter
+		) PA 
+		ON TD.ProjectDimID = PA.ProjectDimID
+--WHERE TD.FundID = '301'
+
+GROUP BY 
+TA.AttributeDescription
+, DD.GL7FISCALPERIODSID
+, TD.ProjectID
+, TD.ProjectDimID
+, DD.QtrEndDate
+
+
+UNION
+--Join to Add Book Values--
+SELECT 
+Sum(Balance) AS Amount
+, 'Book Value' AS UnitizationCategory
+, BV.GL7FISCALPERIODSID
+, BV.ProjectID
+, BV.ProjectDimID
+, BV.BalanceDate
+
+FROM dbo.FACT_BookValue BV
+
+--Filtering only included projects--
+INNER JOIN 
+(
+SELECT ProjectDimID 
+FROM DIM_ProjectAttribute 
+WHERE  AttributeCategory = 'IncludeInInvestPool' AND AttributeDescription = @ProjectFilter
+) PA 
+ON BV.ProjectDimID = PA.ProjectDimID
+
+WHERE GL7FISCALPERIODSID is not null AND 
+BV.BalanceDate &gt;= @StartPeriodDate
+
+GROUP BY
+BV.GL7FISCALPERIODSID
+, BV.ProjectID
+, BV.ProjectDimID
+, BV.BalanceDate
+
+/***
+UNION
+
+SELECT 
+Sum(Amount)  AS Amount
+, 'Book Value' AS UnitizationCategory
+, PeriodID
+, FE.ProjectID
+, ProjectDimID
+, '2008-06-30' AS BalanceDate
+
+FROM dbo.FACT_Exclude FE INNER JOIN Dim_Project P ON FE.ProjectID = P.ProjectID
+
+GROUP BY 
+ PeriodID
+, FE.ProjectID
+, ProjectDimID
+***/
+
+
+Order by BalanceDate, UnitizationCategory, ProjectID</property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">2</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping">"Parameter0",{FA5112D2-BF15-48ED-B023-D96CD42DA948};"Parameter1",{93FCE1A0-686B-4B2E-8390-5AF55EA985D1};</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[ETL_DB_CONN_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[ETL_DB_CONN_DW]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output]"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].Columns[GL7FISCALPERIODSID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].ExternalColumns[GL7FISCALPERIODSID]"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].Columns[GL7FISCALPERIODSID]"
+                          name="GL7FISCALPERIODSID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].Columns[ProjectID]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].ExternalColumns[ProjectID]"
+                          length="20"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].Columns[ProjectID]"
+                          name="ProjectID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].Columns[ProjectDimID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].ExternalColumns[ProjectDimID]"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].Columns[ProjectDimID]"
+                          name="ProjectDimID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].Columns[BalanceDate]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].ExternalColumns[BalanceDate]"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].Columns[BalanceDate]"
+                          name="BalanceDate"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].Columns[Amount]"
+                          dataType="cy"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].ExternalColumns[Amount]"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].Columns[Amount]"
+                          name="Amount"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].Columns[UnitizationCategory]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].ExternalColumns[UnitizationCategory]"
+                          length="255"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].Columns[UnitizationCategory]"
+                          name="UnitizationCategory"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].ExternalColumns[GL7FISCALPERIODSID]"
+                          dataType="i4"
+                          name="GL7FISCALPERIODSID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].ExternalColumns[ProjectID]"
+                          codePage="1252"
+                          dataType="str"
+                          length="20"
+                          name="ProjectID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].ExternalColumns[ProjectDimID]"
+                          dataType="i4"
+                          name="ProjectDimID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].ExternalColumns[BalanceDate]"
+                          dataType="dbTimeStamp"
+                          name="BalanceDate" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].ExternalColumns[Amount]"
+                          dataType="cy"
+                          name="Amount" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output].ExternalColumns[UnitizationCategory]"
+                          codePage="1252"
+                          dataType="str"
+                          length="255"
+                          name="UnitizationCategory" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Error Output].Columns[Amount]"
+                          dataType="cy"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Error Output].Columns[Amount]"
+                          name="Amount" />
+                        <outputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Error Output].Columns[UnitizationCategory]"
+                          codePage="1252"
+                          dataType="str"
+                          length="255"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Error Output].Columns[UnitizationCategory]"
+                          name="UnitizationCategory" />
+                        <outputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Error Output].Columns[GL7FISCALPERIODSID]"
+                          dataType="i4"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Error Output].Columns[GL7FISCALPERIODSID]"
+                          name="GL7FISCALPERIODSID" />
+                        <outputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Error Output].Columns[ProjectID]"
+                          codePage="1252"
+                          dataType="str"
+                          length="20"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Error Output].Columns[ProjectID]"
+                          name="ProjectID" />
+                        <outputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Error Output].Columns[ProjectDimID]"
+                          dataType="i4"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Error Output].Columns[ProjectDimID]"
+                          name="ProjectDimID" />
+                        <outputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Error Output].Columns[BalanceDate]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Error Output].Columns[BalanceDate]"
+                          name="BalanceDate" />
+                        <outputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Lookup Project Dimension Key"
+                  componentClassID="Microsoft.Lookup"
+                  contactInfo="Lookup;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="Looks up values in a reference dataset by using exact matching."
+                  name="Lookup Project Dimension Key"
+                  usesDispositions="true"
+                  version="6">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement that generates the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT  ProjectDimID,
+	ProjectID, ProjectDescription, SourceID, ETLControlID
+  FROM DIM_Project</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommandParam"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the cache type of the lookup table."
+                      name="CacheType"
+                      typeConverter="CacheType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                      name="MaxMemoryUsage">25</property>
+                    <property
+                      dataType="System.Int64"
+                      description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                      name="MaxMemoryUsage64">25</property>
+                    <property
+                      dataType="System.String"
+                      description="Indicates whether to reference metadata in an XML format."
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ProjectDimID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ProjectID" dataType="DT_STR" length="12" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="ProjectDescription" dataType="DT_STR" length="60" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="SourceID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ETLControlID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                      name="ParameterMap">#{Package\Load Project Unitization Fact\Load Project Unitization Fact\Add ETLControlID, SourceID.Outputs[Derived Column Output].Columns[SourceID]};</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the type of connection used to access the reference dataset."
+                      name="ConnectionType"
+                      typeConverter="LookupConnectionType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                      name="NoMatchBehavior"
+                      typeConverter="LookupNoMatchBehavior">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                      name="NoMatchCachePercentage">0</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Lookup Project Dimension Key.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[ETL_DB_CONN_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[ETL_DB_CONN_DW]"
+                      description="Connection manager used to access lookup data."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Lookup Project Dimension Key.Inputs[Lookup Input]"
+                      name="Lookup Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Lookup Project Dimension Key.Inputs[Lookup Input].Columns[SourceID]"
+                          cachedDataType="i4"
+                          cachedName="SourceID"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Add ETLControlID, SourceID.Outputs[Derived Column Output].Columns[SourceID]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table that a column joins."
+                              name="JoinToReferenceColumn">SourceID</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Lookup Project Dimension Key.Outputs[Lookup Match Output]"
+                      errorOrTruncationOperation="Lookup"
+                      errorRowDisposition="IgnoreFailure"
+                      exclusionGroup="1"
+                      name="Lookup Match Output"
+                      synchronousInputId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Lookup Project Dimension Key.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Lookup Project Dimension Key.Outputs[Lookup Match Output].Columns[ProjectDescription]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Copy Column"
+                          length="60"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Lookup Project Dimension Key.Outputs[Lookup Match Output].Columns[ProjectDescription]"
+                          name="ProjectDescription"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn">ProjectDescription</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Lookup Project Dimension Key.Outputs[Lookup No Match Output]"
+                      description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                      exclusionGroup="1"
+                      name="Lookup No Match Output"
+                      synchronousInputId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Lookup Project Dimension Key.Inputs[Lookup Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Lookup Project Dimension Key.Outputs[Lookup Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Lookup Error Output"
+                      synchronousInputId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Lookup Project Dimension Key.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Lookup Project Dimension Key.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Lookup Project Dimension Key.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Lookup Project Dimension Key.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Lookup Project Dimension Key.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Load Project Unitization Fact\Load Project Unitization Fact.Paths[Derived Column Output]"
+                  endId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Lookup Project Dimension Key.Inputs[Lookup Input]"
+                  name="Derived Column Output"
+                  startId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Add ETLControlID, SourceID.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Load Project Unitization Fact\Load Project Unitization Fact.Paths[Lookup Output]"
+                  endId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Generate New Surrogate Fact Keys.Inputs[Input 0]"
+                  name="Lookup Output"
+                  startId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Lookup Project Dimension Key.Outputs[Lookup Match Output]" />
+                <path
+                  refId="Package\Load Project Unitization Fact\Load Project Unitization Fact.Paths[OLE DB Source Output]"
+                  endId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Add ETLControlID, SourceID.Inputs[Derived Column Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Load Project Unitizations.Outputs[OLE DB Source Output]" />
+                <path
+                  refId="Package\Load Project Unitization Fact\Load Project Unitization Fact.Paths[Output 0]"
+                  endId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Insert Project Unitizations into DW.Inputs[OLE DB Destination Input]"
+                  name="Output 0"
+                  startId="Package\Load Project Unitization Fact\Load Project Unitization Fact\Generate New Surrogate Fact Keys.Outputs[Output 0]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Load Project Unitization Fact\TRUNCATE FACT_ProjectUnitization"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{93E86B8F-CCF1-4447-B72B-9CE1076619B8}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="TRUNCATE FACT_ProjectUnitization"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="Disable">!@[User::TruncateTables]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{A218DADF-A0C5-4D8D-B77D-26FF02F87601}"
+              SQLTask:SqlStatementSource="TRUNCATE TABLE FACT_Unitization" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Load Project Unitization Fact.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{AFF3F708-D480-4DBA-B783-55B1A5EBB4A6}"
+          DTS:From="Package\Load Project Unitization Fact\TRUNCATE FACT_ProjectUnitization"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Load Project Unitization Fact\Execute SQL Get Max Fact ID" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Load Project Unitization Fact.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{21C876C4-C4C8-417E-8CBF-508D743716C1}"
+          DTS:From="Package\Load Project Unitization Fact\Execute SQL Get Max Fact ID"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Load Project Unitization Fact\Load Project Unitization Fact" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="216,44"
+          Id="Package\Load Project Unitization Fact\Execute SQL Get Max Fact ID"
+          TopLeft="97.1320754716981,138.245283018868" />
+        <NodeLayout
+          Size="216,44"
+          Id="Package\Load Project Unitization Fact\Load Project Unitization Fact"
+          TopLeft="97.1320754716981,234.094339622642" />
+        <NodeLayout
+          Size="216,44"
+          Id="Package\Load Project Unitization Fact\TRUNCATE FACT_ProjectUnitization"
+          TopLeft="97.1320754716981,42.3962264150944" />
+        <EdgeLayout
+          Id="Package\Load Project Unitization Fact.PrecedenceConstraints[Constraint]"
+          TopLeft="204.943396226415,86.3207547169812">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51.9245283018868"
+              Start="0,0"
+              End="0,44.4245283018868">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.4245283018868" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Project Unitization Fact.PrecedenceConstraints[Constraint 1]"
+          TopLeft="204.943396226415,182.169811320755">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51.9245283018868"
+              Start="0,0"
+              End="0,44.4245283018868">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.4245283018868" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43.924528301886795"
+          IsExpanded="True"
+          PanelSize="410,326"
+          Size="410,370"
+          Id="Package\Load Project Unitization Fact"
+          TopLeft="5.5,5.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,1382 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/19/2007"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ALANEAR51"
+  DTS:CreatorName="BBNT\AlanEa"
+  DTS:DTSID="{FEC2706E-5CB1-46D2-BC37-D367D8BD96B6}"
+  DTS:EnableConfig="True"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.157"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="DIM_PROJECTNotes_LOAD"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="975"
+  DTS:VersionGUID="{90EFFF8D-9925-4A4F-9B6C-53A1EFDAE405}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[csv_DIM_ProjectNote]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{7553EC41-39B4-49D4-9660-37E8E46DCA8A}"
+      DTS:ObjectName="csv_DIM_ProjectNote">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="E:\BI\Scheduled_ETL_SF\FENXT_DW\Data Files\DIM_ProjectNote.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sequence"
+              DTS:DTSID="{EFBFD323-B76A-487F-948F-D02A19C6C31D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProjectSystemID"
+              DTS:DTSID="{5DC30F44-A1A7-4498-BD6F-81B062A4A0E8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ImportID"
+              DTS:DTSID="{B4E6BFC4-EDA5-42A7-9838-0668F12DA9F4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NotesID"
+              DTS:DTSID="{4C126053-B75D-4DEC-A983-5C91F6BF887A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Description"
+              DTS:DTSID="{47994B0D-B9F4-45FB-A754-A832F8CF7881}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Title"
+              DTS:DTSID="{D5ACB74B-B064-43E0-A134-5687F734C35C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Author"
+              DTS:DTSID="{BAD94FDC-056F-473F-B5E8-50C037ECE74F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ActualNotes"
+              DTS:DTSID="{9AD874A1-5462-4577-BB26-76AB76D54B7B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LastChangedBy"
+              DTS:DTSID="{3AE21D09-2694-4FF8-ACF0-7487F1D75503}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LastChangedByID"
+              DTS:DTSID="{068035A2-BA8B-4180-968B-2B2AA4A41460}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateChanged"
+              DTS:DTSID="{A765168A-BFAA-4485-8BCC-3546076A8079}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="60"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NotepadType"
+              DTS:DTSID="{B2F3CBB9-D183-45B5-9918-61D3648E3862}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NoteDate"
+              DTS:DTSID="{259C45DE-E74E-4865-83FA-13AD15507545}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProjectDimID"
+              DTS:DTSID="{2E786DCD-07AE-4769-8DE7-888330AD435F}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ETL_DB_CONN_DW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{560A99D6-B5CB-4ED3-9312-05117103DB68}"
+      DTS:ObjectName="ETL_DB_CONN_DW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DW2;Initial Catalog=OSUF_FE_DW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ETL_DB_CONN_FE]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A591A0C5-4C6E-424A-9F01-238B56EFB2F1}"
+      DTS:ObjectName="ETL_DB_CONN_FE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DW2;Initial Catalog=OSUF_FE_PROD;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ETL_DB_CONN_RE]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{e059ea23-b09e-4f15-9838-6b1cb59af39b}"
+      DTS:ObjectName="ETL_DB_CONN_RE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=RE-DB;Initial Catalog=RE7prod;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Configurations>
+    <DTS:Configuration
+      DTS:ConfigurationString="FIDW_ETLCONFIG_OSUF"
+      DTS:ConfigurationType="5"
+      DTS:CreationName=""
+      DTS:DTSID="{BCFD8425-3B26-4196-A27C-F46DCC655EEA}"
+      DTS:ObjectName="ConfigFile" />
+    <DTS:Configuration
+      DTS:ConfigurationString="DataWindowOpen"
+      DTS:ConfigurationVariable="\Package.Variables[User::DataWindowOpen].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{97F5443B-D44E-48D2-AE46-2CF1DD1D77FB}"
+      DTS:ObjectName="DataWindowOpen" />
+    <DTS:Configuration
+      DTS:ConfigurationString="DataWindowClose"
+      DTS:ConfigurationVariable="\Package.Variables[User::DataWindowClose].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{8CBE8D36-ADC2-48C2-874D-337E5589B988}"
+      DTS:ObjectName="DataWindowClose" />
+    <DTS:Configuration
+      DTS:ConfigurationString="ETLControlID"
+      DTS:ConfigurationVariable="\Package.Variables[User::ETLControlID].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{01BE67DE-56FB-4882-B104-9465C751070E}"
+      DTS:ObjectName="ETLControlID" />
+    <DTS:Configuration
+      DTS:ConfigurationString="SourceID"
+      DTS:ConfigurationVariable="\Package.Variables[User::SourceID].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{FC176524-3449-493E-9C8F-EBD6FD140BBD}"
+      DTS:ObjectName="SourceID" />
+    <DTS:Configuration
+      DTS:ConfigurationString="SourceLoadID"
+      DTS:ConfigurationVariable="\Package.Variables[User::SourceLoadID].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{F6A2BA8F-2BA4-4F22-B1AC-2D2BD702ACA1}"
+      DTS:ObjectName="SourceLoadID" />
+    <DTS:Configuration
+      DTS:ConfigurationString="TruncateTables"
+      DTS:ConfigurationVariable="\Package.Variables[User::TruncateTables].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{65387F1F-985B-4356-8055-314B0255021E}"
+      DTS:ObjectName="TruncateTables" />
+  </DTS:Configurations>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{13496EDB-0099-41BC-B0ED-44230779E97B}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="DataWindowClose">
+      <DTS:VariableValue
+        DTS:DataType="7">12/1/2006</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{92EC719E-4BAE-430C-AD49-3ABAC9825020}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="DataWindowOpen">
+      <DTS:VariableValue
+        DTS:DataType="7">12/1/1970</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3CD61628-8B8A-4783-8D1A-938740EC9246}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ETLControlID">
+      <DTS:VariableValue
+        DTS:DataType="3">2</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{D429CD52-0647-4811-BAD4-8A3C75D7576C}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ETLDeploymentFolder">
+      <DTS:VariableValue
+        DTS:DataType="8">E:\BI\FE_DW\ETL\FE\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A16AE89E-FA78-4CC0-BA65-1A1D24EC4984}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="MaxDimensionKey">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2E481E9E-46E8-487A-B3E0-509A11E55FD6}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceID">
+      <DTS:VariableValue
+        DTS:DataType="3">1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F4D403C6-17B4-418D-923E-94C7619A6656}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceLoadID">
+      <DTS:VariableValue
+        DTS:DataType="3">2</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{419C97AF-2472-4595-8523-BB7DB31D1F79}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="TruncateTables">
+      <DTS:VariableValue
+        DTS:DataType="11">-1</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load Project Notes"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{C154E47E-31AA-44AF-BD5B-A6FB5F3BAF0D}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Project Notes">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Load Project Notes\Execute SQL Get ProjectNotesDimID Max"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:Disabled="True"
+          DTS:DTSID="{2d2e1b5c-58b4-450a-a36b-6ad5bd83cd7e}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute SQL Get ProjectNotesDimID Max"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{560A99D6-B5CB-4ED3-9312-05117103DB68}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="SELECT &#xA;  COALESCE(MAX(ProjectNoteDimID), 0) AS MaxDimKey&#xA;&#xA;FROM &#xA;  dbo.DIM_ProjectNote"
+              SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="MaxDimKey"
+                SQLTask:DtsVariableName="User::MaxDimensionKey" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Load Project Notes\Load ProjectNotes"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Populate Project Dimension"
+          DTS:DTSID="{a36b1123-7c2f-4665-bba7-58a0dbf2b2f2}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Load ProjectNotes"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server v9; (C) 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              BLOBTempStoragePath=""
+              bufferTempStoragePath=""
+              engineThreads="5"
+              version="1">
+              <components>
+                <component
+                  refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote"
+                  componentClassID="Microsoft.FlatFileDestination"
+                  contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Destination"
+                  localeId="1033"
+                  name="Export to csv_DIM_ProjectNote">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether the data will overwrite or append to the destination file."
+                      name="Overwrite">true</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the text to write to the destination file before any data is written."
+                      expressionType="Notify"
+                      name="Header" />
+                    <property
+                      dataType="System.Boolean"
+                      description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                      name="EscapeQualifier">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[csv_DIM_ProjectNote]"
+                      connectionManagerRefId="Package.ConnectionManagers[csv_DIM_ProjectNote]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input]"
+                      hasSideEffects="true"
+                      name="Flat File Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].Columns[Sequence]"
+                          cachedDataType="i2"
+                          cachedName="Sequence"
+                          externalMetadataColumnId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[Sequence]"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[Sequence]" />
+                        <inputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].Columns[ProjectSystemID]"
+                          cachedDataType="i4"
+                          cachedName="ProjectSystemID"
+                          externalMetadataColumnId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[ProjectSystemID]"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[ProjectSystemID]" />
+                        <inputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].Columns[ImportID]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="ImportID"
+                          externalMetadataColumnId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[ImportID]"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[ImportID]" />
+                        <inputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].Columns[NotesID]"
+                          cachedDataType="i4"
+                          cachedName="NotesID"
+                          externalMetadataColumnId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[NotesID]"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[NotesID]" />
+                        <inputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].Columns[Description]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="255"
+                          cachedName="Description"
+                          externalMetadataColumnId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[Description]"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[Description]" />
+                        <inputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].Columns[Title]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Title"
+                          externalMetadataColumnId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[Title]"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[Title]" />
+                        <inputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].Columns[Author]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Author"
+                          externalMetadataColumnId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[Author]"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[Author]" />
+                        <inputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].Columns[ActualNotes]"
+                          cachedCodepage="1252"
+                          cachedDataType="text"
+                          cachedName="ActualNotes"
+                          externalMetadataColumnId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[ActualNotes]"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[ActualNotes]" />
+                        <inputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].Columns[LastChangedBy]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="LastChangedBy"
+                          externalMetadataColumnId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[LastChangedBy]"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[LastChangedBy]" />
+                        <inputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].Columns[LastChangedByID]"
+                          cachedDataType="i4"
+                          cachedName="LastChangedByID"
+                          externalMetadataColumnId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[LastChangedByID]"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[LastChangedByID]" />
+                        <inputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].Columns[DateChanged]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="DateChanged"
+                          externalMetadataColumnId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[DateChanged]"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[DateChanged]" />
+                        <inputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].Columns[NotepadType]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="60"
+                          cachedName="NotepadType"
+                          externalMetadataColumnId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[NotepadType]"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[NotepadType]" />
+                        <inputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].Columns[NoteDate]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="NoteDate"
+                          externalMetadataColumnId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[NoteDate]"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[NoteDate]" />
+                        <inputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].Columns[ProjectDimID]"
+                          cachedDataType="i4"
+                          cachedName="ProjectDimID"
+                          externalMetadataColumnId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[ProjectDimID]"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Lookup Project Dimension Key.Outputs[Lookup Match Output].Columns[ProjectDimID]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[Sequence]"
+                          dataType="i2"
+                          name="Sequence" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[ProjectSystemID]"
+                          dataType="i4"
+                          name="ProjectSystemID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[ImportID]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="ImportID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[NotesID]"
+                          dataType="i4"
+                          name="NotesID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[Description]"
+                          codePage="1252"
+                          dataType="str"
+                          length="255"
+                          name="Description" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[Title]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Title" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[Author]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Author" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[ActualNotes]"
+                          codePage="1252"
+                          dataType="text"
+                          name="ActualNotes" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[LastChangedBy]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="LastChangedBy" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[LastChangedByID]"
+                          dataType="i4"
+                          name="LastChangedByID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[DateChanged]"
+                          dataType="dbTimeStamp"
+                          name="DateChanged" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[NotepadType]"
+                          codePage="1252"
+                          dataType="str"
+                          length="60"
+                          name="NotepadType" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[NoteDate]"
+                          dataType="dbTimeStamp"
+                          name="NoteDate" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[ProjectDimID]"
+                          dataType="i4"
+                          name="ProjectDimID" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                </component>
+                <component
+                  refId="Package\Load Project Notes\Load ProjectNotes\Lookup Project Dimension Key"
+                  componentClassID="Microsoft.Lookup"
+                  contactInfo="Lookup;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="Looks up values in a reference dataset by using exact matching."
+                  localeId="1033"
+                  name="Lookup Project Dimension Key"
+                  usesDispositions="true"
+                  version="6">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement that generates the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT 
+	P.GL7PROJECTSID AS ProjectSystemID, 
+	P.PROJECTID AS ProjectID, 
+	P.GL7PROJECTSID AS ProjectDimID
+FROM dbo.GL7PROJECTS P</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommandParam">select * from (SELECT 
+	P.GL7PROJECTSID AS ProjectSystemID, 
+	P.PROJECTID AS ProjectID, 
+	P.GL7PROJECTSID AS ProjectDimID
+FROM dbo.GL7PROJECTS P) [refTable]
+where [refTable].[ProjectSystemID] = ?</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the cache type of the lookup table."
+                      name="CacheType"
+                      typeConverter="CacheType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                      name="MaxMemoryUsage">25</property>
+                    <property
+                      dataType="System.Int64"
+                      description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                      name="MaxMemoryUsage64">25</property>
+                    <property
+                      dataType="System.String"
+                      description="Indicates whether to reference metadata in an XML format."
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ProjectSystemID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ProjectID" dataType="DT_STR" length="12" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="ProjectDimID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                      name="ParameterMap">#{Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[ProjectSystemID]};</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the type of connection used to access the reference dataset."
+                      name="ConnectionType"
+                      typeConverter="LookupConnectionType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                      name="NoMatchBehavior"
+                      typeConverter="LookupNoMatchBehavior">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                      name="NoMatchCachePercentage">0</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Load Project Notes\Load ProjectNotes\Lookup Project Dimension Key.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[ETL_DB_CONN_FE]"
+                      connectionManagerRefId="Package.ConnectionManagers[ETL_DB_CONN_FE]"
+                      description="Connection manager used to access lookup data."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Load Project Notes\Load ProjectNotes\Lookup Project Dimension Key.Inputs[Lookup Input]"
+                      name="Lookup Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Lookup Project Dimension Key.Inputs[Lookup Input].Columns[ProjectSystemID]"
+                          cachedDataType="i4"
+                          cachedName="ProjectSystemID"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[ProjectSystemID]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table that a column joins."
+                              name="JoinToReferenceColumn">ProjectSystemID</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load Project Notes\Load ProjectNotes\Lookup Project Dimension Key.Outputs[Lookup Match Output]"
+                      errorOrTruncationOperation="Lookup"
+                      errorRowDisposition="IgnoreFailure"
+                      exclusionGroup="1"
+                      name="Lookup Match Output"
+                      synchronousInputId="Package\Load Project Notes\Load ProjectNotes\Lookup Project Dimension Key.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Lookup Project Dimension Key.Outputs[Lookup Match Output].Columns[ProjectDimID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Copy Column"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Lookup Project Dimension Key.Outputs[Lookup Match Output].Columns[ProjectDimID]"
+                          name="ProjectDimID"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn">ProjectDimID</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Load Project Notes\Load ProjectNotes\Lookup Project Dimension Key.Outputs[Lookup No Match Output]"
+                      description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                      exclusionGroup="1"
+                      name="Lookup No Match Output"
+                      synchronousInputId="Package\Load Project Notes\Load ProjectNotes\Lookup Project Dimension Key.Inputs[Lookup Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Load Project Notes\Load ProjectNotes\Lookup Project Dimension Key.Outputs[Lookup Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Lookup Error Output"
+                      synchronousInputId="Package\Load Project Notes\Load ProjectNotes\Lookup Project Dimension Key.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Lookup Project Dimension Key.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Lookup Project Dimension Key.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Lookup Project Dimension Key.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Lookup Project Dimension Key.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="Get Project Info for Project Dimension"
+                  name="Source FE ProjectNotes"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset"></property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT 
+  PARENTID AS ProjectSystemID
+, NotesID
+
+, (SELECT DESCRIPTION FROM dbo.TABLEENTRIES (NOLOCK) WHERE TABLEENTRIESID = NOTEPADTYPE) AS NotepadType
+
+, Description
+, Title
+, Author
+, ActualNotes 
+, NotepadDate AS NoteDate
+, Sequence
+
+, ImportID
+
+, (SELECT NAME FROM dbo.USERS (NOLOCK) WHERE USERSID = LASTCHANGEDBYID) AS LastChangedBy
+, LastChangedByID
+, DateChanged
+      
+FROM 
+  dbo.GL7PROJECTNOTES (NOLOCK)</property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">2</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping">"Parameter0",{92EC719E-4BAE-430C-AD49-3ABAC9825020};"Parameter1",{13496EDB-0099-41BC-B0ED-44230779E97B};</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[ETL_DB_CONN_FE]"
+                      connectionManagerRefId="Package.ConnectionManagers[ETL_DB_CONN_FE]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output]"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[Sequence]"
+                          dataType="i2"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[Sequence]"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[Sequence]"
+                          name="Sequence"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[ProjectSystemID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[ProjectSystemID]"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[ProjectSystemID]"
+                          name="ProjectSystemID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[ImportID]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[ImportID]"
+                          length="50"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[ImportID]"
+                          name="ImportID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[NotesID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[NotesID]"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[NotesID]"
+                          name="NotesID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[Description]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[Description]"
+                          length="255"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[Description]"
+                          name="Description"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[Title]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[Title]"
+                          length="50"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[Title]"
+                          name="Title"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[Author]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[Author]"
+                          length="50"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[Author]"
+                          name="Author"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[ActualNotes]"
+                          codePage="1252"
+                          dataType="text"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[ActualNotes]"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[ActualNotes]"
+                          name="ActualNotes"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[LastChangedBy]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[LastChangedBy]"
+                          length="100"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[LastChangedBy]"
+                          name="LastChangedBy"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[LastChangedByID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[LastChangedByID]"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[LastChangedByID]"
+                          name="LastChangedByID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[DateChanged]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[DateChanged]"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[DateChanged]"
+                          name="DateChanged"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[NotepadType]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[NotepadType]"
+                          length="60"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[NotepadType]"
+                          name="NotepadType"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[NoteDate]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[NoteDate]"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[NoteDate]"
+                          name="NoteDate"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[Sequence]"
+                          dataType="i4"
+                          name="Sequence" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[ProjectSystemID]"
+                          dataType="i4"
+                          name="ProjectSystemID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[ImportID]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="ImportID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[NotesID]"
+                          dataType="i4"
+                          name="NotesID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[Description]"
+                          codePage="1252"
+                          dataType="str"
+                          length="255"
+                          name="Description" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[Title]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Title" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[Author]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Author" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[ActualNotes]"
+                          codePage="1252"
+                          dataType="text"
+                          name="ActualNotes" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[LastChangedBy]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="LastChangedBy" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[LastChangedByID]"
+                          dataType="i4"
+                          name="LastChangedByID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[DateChanged]"
+                          dataType="dbTimeStamp"
+                          name="DateChanged" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[NotepadType]"
+                          codePage="1252"
+                          dataType="str"
+                          length="60"
+                          name="NotepadType" />
+                        <externalMetadataColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[NoteDate]"
+                          dataType="dbTimeStamp"
+                          name="NoteDate" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[ProjectSystemID]"
+                          dataType="i4"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[ProjectSystemID]"
+                          name="ProjectSystemID" />
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[NotesID]"
+                          dataType="i4"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[NotesID]"
+                          name="NotesID" />
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[NotepadType]"
+                          codePage="1252"
+                          dataType="str"
+                          length="60"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[NotepadType]"
+                          name="NotepadType" />
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[Description]"
+                          codePage="1252"
+                          dataType="str"
+                          length="255"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[Description]"
+                          name="Description" />
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[Title]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[Title]"
+                          name="Title" />
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[Author]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[Author]"
+                          name="Author" />
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[ActualNotes]"
+                          codePage="1252"
+                          dataType="text"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[ActualNotes]"
+                          name="ActualNotes" />
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[NoteDate]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[NoteDate]"
+                          name="NoteDate" />
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[Sequence]"
+                          dataType="i4"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[Sequence]"
+                          name="Sequence" />
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[ImportID]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[ImportID]"
+                          name="ImportID" />
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[LastChangedBy]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[LastChangedBy]"
+                          name="LastChangedBy" />
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[LastChangedByID]"
+                          dataType="i4"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[LastChangedByID]"
+                          name="LastChangedByID" />
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[DateChanged]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[DateChanged]"
+                          name="DateChanged" />
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Load Project Notes\Load ProjectNotes.Paths[Lookup Match Output]"
+                  endId="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Load Project Notes\Load ProjectNotes\Lookup Project Dimension Key.Outputs[Lookup Match Output]" />
+                <path
+                  refId="Package\Load Project Notes\Load ProjectNotes.Paths[OLE DB Source Output]"
+                  endId="Package\Load Project Notes\Load ProjectNotes\Lookup Project Dimension Key.Inputs[Lookup Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Load Project Notes\Truncate ProjectNotes Table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{37dda233-3db2-4c1c-b01a-3a04de709e1f}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Truncate ProjectNotes Table"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="Disable">!@[User::TruncateTables]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{560A99D6-B5CB-4ED3-9312-05117103DB68}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="TRUNCATE TABLE DIM_ProjectNote" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="@ETLControlID"
+                SQLTask:DtsVariableName="User::ETLControlID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="@SourceID"
+                SQLTask:DtsVariableName="User::SourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Load Project Notes.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{DB101260-10EC-45C3-8D69-BB56DCAEDE5F}"
+          DTS:From="Package\Load Project Notes\Truncate ProjectNotes Table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Load Project Notes\Execute SQL Get ProjectNotesDimID Max" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Load Project Notes.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{7C9D61AB-DF29-4E90-9414-0083A4BBA5B1}"
+          DTS:From="Package\Load Project Notes\Execute SQL Get ProjectNotesDimID Max"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Load Project Notes\Load ProjectNotes" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+        <NodeLayout
+          Size="196,44"
+          Id="Package\Load Project Notes\Execute SQL Get ProjectNotesDimID Max"
+          TopLeft="32.3773584905661,118.056603773585" />
+        <NodeLayout
+          Size="196,44"
+          Id="Package\Load Project Notes\Load ProjectNotes"
+          TopLeft="35.6981132075472,206.056603773585" />
+        <NodeLayout
+          Size="196,44"
+          Id="Package\Load Project Notes\Truncate ProjectNotes Table"
+          TopLeft="32.3773584905661,28.1320754716981" />
+        <EdgeLayout
+          Id="Package\Load Project Notes.PrecedenceConstraints[Constraint]"
+          TopLeft="130.566037735849,72.0566037735849">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Project Notes.PrecedenceConstraints[Constraint 1]"
+          TopLeft="130.566037735849,161.981132075472">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="3.32075471698113,44.0754716981132"
+              Start="0,0"
+              End="3.32075471698113,36.5754716981132">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.0377358490566" />
+                  <mssgle:LineSegment
+                    End="3.32075471698113,22.0377358490566" />
+                  <mssgle:LineSegment
+                    End="3.32075471698113,36.5754716981132" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43.283018867924525"
+          IsExpanded="True"
+          PanelSize="266,297"
+          Size="266,340"
+          Id="Package\Load Project Notes"
+          TopLeft="5.5,5.5" />
+        <AnnotationLayout
+          Text="Created on 5-18-2012 by BJ Hoffman"
+          ParentId="Package"
+          Size="226,38"
+          Id="c8096de1-9927-4952-8579-d8d091990755"
+          TopLeft="286.669811320755,17.7264150943396">
+          <AnnotationLayout.FontInfo>
+            <mssge:FontInfo
+              Family="Tahoma"
+              Size="11.25"
+              Color="#FF080000">
+              <mssge:FontInfo.TextDecorations>
+                <av:TextDecorationCollection />
+              </mssge:FontInfo.TextDecorations>
+            </mssge:FontInfo>
+          </AnnotationLayout.FontInfo>
+        </AnnotationLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load Project Notes\Load ProjectNotes">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="197,42"
+          Id="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes"
+          TopLeft="36,5.5" />
+        <NodeLayout
+          Size="229,42"
+          Id="Package\Load Project Notes\Load ProjectNotes\Lookup Project Dimension Key"
+          TopLeft="24,162" />
+        <EdgeLayout
+          Id="Package\Load Project Notes\Load ProjectNotes.Paths[OLE DB Source Output]"
+          TopLeft="136.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,114.5"
+              Start="0,0"
+              End="0,107">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,107" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="232,42"
+          Id="Package\Load Project Notes\Load ProjectNotes\Export to csv_DIM_ProjectNote"
+          TopLeft="29,307" />
+        <EdgeLayout
+          Id="Package\Load Project Notes\Load ProjectNotes.Paths[Lookup Match Output]"
+          TopLeft="141.75,204">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,103"
+              Start="0,0"
+              End="0,95.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,95.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,41.9453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Project Notes\Load ProjectNotes\Source FE ProjectNotes">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Project Notes\Load ProjectNotes\Lookup Project Dimension Key">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

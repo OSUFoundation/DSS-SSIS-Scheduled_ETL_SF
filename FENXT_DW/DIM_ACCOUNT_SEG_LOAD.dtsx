@@ -1,0 +1,1186 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/15/2007"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ALANEAR51"
+  DTS:CreatorName="BBNT\AlanEa"
+  DTS:DTSID="{FEC2706E-5CB1-46D2-BC37-D367D8BD96B6}"
+  DTS:EnableConfig="True"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="13.0.4001.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="DIM_ACCOUNT_SEG_LOAD"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="790"
+  DTS:VersionGUID="{34B2D895-B764-4116-9EF9-50A52E6CBC48}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ETL_DB_CONN_DW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{560A99D6-B5CB-4ED3-9312-05117103DB68}"
+      DTS:ObjectName="ETL_DB_CONN_DW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DW2;Initial Catalog=OSUF_FE_DW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ETL_DB_CONN_FE]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A591A0C5-4C6E-424A-9F01-238B56EFB2F1}"
+      DTS:ObjectName="ETL_DB_CONN_FE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DW2;Initial Catalog=OSUF_FE_PROD;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ETL_DB_CONN_RE]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{5AFA8054-53CE-4A83-AC23-B236D899D893}"
+      DTS:ObjectName="ETL_DB_CONN_RE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Retain="True"
+          DTS:ConnectionString="Data Source=RE-DB;Initial Catalog=RE7prod;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Configurations>
+    <DTS:Configuration
+      DTS:ConfigurationString="FIDW_ETLCONFIG_OSUF"
+      DTS:ConfigurationType="5"
+      DTS:CreationName=""
+      DTS:DTSID="{7BA5138E-E5EE-42F1-9116-2190C47DD521}"
+      DTS:ObjectName="ConfigFile" />
+    <DTS:Configuration
+      DTS:ConfigurationString="ETLControlID"
+      DTS:ConfigurationVariable="\Package.Variables[User::ETLControlID].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{78B567AB-6503-43F3-9085-82DE59BE78DA}"
+      DTS:ObjectName="ETLControlID" />
+    <DTS:Configuration
+      DTS:ConfigurationString="SourceID"
+      DTS:ConfigurationVariable="\Package.Variables[User::SourceID].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{40E04A05-9C30-4455-8DF0-8F0B66154450}"
+      DTS:ObjectName="SourceID" />
+    <DTS:Configuration
+      DTS:ConfigurationString="DataWindowOpen"
+      DTS:ConfigurationVariable="\Package.Variables[User::DataWindowOpen].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{4FE2678A-A662-4B4A-B372-E812D9E55126}"
+      DTS:ObjectName="DataWindowOpen" />
+    <DTS:Configuration
+      DTS:ConfigurationString="DataWindowClose"
+      DTS:ConfigurationVariable="\Package.Variables[User::DataWindowClose].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{706D1C06-E72B-43A1-B879-F81DADC71C93}"
+      DTS:ObjectName="DataWindowClose" />
+  </DTS:Configurations>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{13496EDB-0099-41BC-B0ED-44230779E97B}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="DataWindowClose">
+      <DTS:VariableValue
+        DTS:DataType="7">12/1/2005 11:22:15 AM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{92EC719E-4BAE-430C-AD49-3ABAC9825020}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="DataWindowOpen">
+      <DTS:VariableValue
+        DTS:DataType="7">12/1/2005 11:21:28 AM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{EE2992DA-F469-4ACF-8291-1AFCF626B220}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ETLControlID">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F46E87FE-C2FB-45BB-AAE0-CF90880FBF16}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ETLDeploymentFolder">
+      <DTS:VariableValue
+        DTS:DataType="8">E:\BI\FE_DW\ETL\FE\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2E481E9E-46E8-487A-B3E0-509A11E55FD6}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceID">
+      <DTS:VariableValue
+        DTS:DataType="3">1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F4D403C6-17B4-418D-923E-94C7619A6656}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceLoadID">
+      <DTS:VariableValue
+        DTS:DataType="3">2</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Insert Default CodeTables Member"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{9F3A7EFB-B282-48EE-8805-AEC1171FC780}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Insert Default CodeTables Member"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{560A99D6-B5CB-4ED3-9312-05117103DB68}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource=" -- default t-code member&#xA;&#xA;IF NOT EXISTS(SELECT * FROM TEMP_CodeTables WHERE TableEntrySystemID = -1)&#xA;&#xA;BEGIN&#xA;                INSERT INTO TEMP_CodeTables ( TableEntrySystemID,&#xA;                                                CodeTableSystemID,&#xA;                                                CodeTableName ,&#xA;&#x9;&#x9;&#x9;TableEntryName,&#xA;                                                TableSequence )&#xA;                VALUES (                -1 ,&#xA;&#x9;&#x9;&#x9;-1 ,&#xA;                                                'No Table Entry',&#xA;                                                'No Table Entry',&#xA;                                                -1)&#xA;END&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load TEMP Code Tables - DW"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{74AE574D-0DBC-400A-9EBB-DF702F303EF7}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load TEMP Code Tables - DW"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server v9; (C) 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          BLOBTempStoragePath=""
+          bufferTempStoragePath=""
+          engineThreads="5"
+          version="1">
+          <components>
+            <component
+              refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Destination TEMP Code Tables"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[TEMP_CodeTables]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destinaton. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_DB_CONN_DW]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_DB_CONN_DW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].Columns[SEQUENCE]"
+                      cachedDataType="i2"
+                      cachedName="SEQUENCE"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[Sequence]"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[SEQUENCE]" />
+                    <inputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].Columns[NUMERICVALUE]"
+                      cachedDataType="numeric"
+                      cachedName="NUMERICVALUE"
+                      cachedPrecision="15"
+                      cachedScale="3"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[NumericValue]"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[NUMERICVALUE]" />
+                    <inputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].Columns[SYSTEMENTRY]"
+                      cachedDataType="i2"
+                      cachedName="SYSTEMENTRY"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[SystemEntry]"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[SYSTEMENTRY]" />
+                    <inputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].Columns[SHORTUPPERCASETRANSLATION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="55"
+                      cachedName="SHORTUPPERCASETRANSLATION"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[ShortUpperCaseTranslation]"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[SHORTUPPERCASETRANSLATION]" />
+                    <inputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].Columns[LONGUPPERCASETRANSLATION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="LONGUPPERCASETRANSLATION"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[LongUpperCaseTranslation]"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[LONGUPPERCASETRANSLATION]" />
+                    <inputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].Columns[ACTIVE]"
+                      cachedDataType="i2"
+                      cachedName="ACTIVE"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[Active]"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[ACTIVE]" />
+                    <inputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].Columns[SHORTPROPERCASETRANSLATION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="55"
+                      cachedName="SHORTPROPERCASETRANSLATION"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[ShortProperCaseTranslation]"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[SHORTPROPERCASETRANSLATION]" />
+                    <inputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].Columns[LONGPROPERCASETRANSLATION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="LONGPROPERCASETRANSLATION"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[LongProperCaseTranslation]"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[LONGPROPERCASETRANSLATION]" />
+                    <inputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].Columns[TABLESEQUENCE]"
+                      cachedDataType="i4"
+                      cachedName="TABLESEQUENCE"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[TableSequence]"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[TABLESEQUENCE]" />
+                    <inputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].Columns[TABLEENTRIESID]"
+                      cachedDataType="i4"
+                      cachedName="TABLEENTRIESID"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[TableEntrySystemID]"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[TABLEENTRIESID]" />
+                    <inputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].Columns[CODETABLESID]"
+                      cachedDataType="i4"
+                      cachedName="CODETABLESID"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[CodeTableSystemID]"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[CODETABLESID]" />
+                    <inputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].Columns[NAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="NAME"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[CodeTableName]"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[NAME]" />
+                    <inputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].Columns[ENTRYID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="ENTRYID"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[EntrySystemID]"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[ENTRYID]" />
+                    <inputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].Columns[DESCRIPTION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="DESCRIPTION"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[TableEntryName]"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[DESCRIPTION]" />
+                    <inputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].Columns[PARENTID]"
+                      cachedDataType="i4"
+                      cachedName="PARENTID"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[ParentSystemID]"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[PARENTID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[TableEntrySystemID]"
+                      dataType="i4"
+                      name="TableEntrySystemID" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[CodeTableSystemID]"
+                      dataType="i4"
+                      name="CodeTableSystemID" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[CodeTableName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="CodeTableName" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[Sequence]"
+                      dataType="i2"
+                      name="Sequence" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[EntrySystemID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      name="EntrySystemID" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[TableEntryName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="TableEntryName" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[NumericValue]"
+                      dataType="numeric"
+                      name="NumericValue"
+                      precision="15"
+                      scale="3" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[ParentSystemID]"
+                      dataType="i4"
+                      name="ParentSystemID" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[SystemEntry]"
+                      dataType="i2"
+                      name="SystemEntry" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[ShortUpperCaseTranslation]"
+                      codePage="1252"
+                      dataType="str"
+                      length="55"
+                      name="ShortUpperCaseTranslation" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[LongUpperCaseTranslation]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="LongUpperCaseTranslation" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[Active]"
+                      dataType="i2"
+                      name="Active" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[ShortProperCaseTranslation]"
+                      codePage="1252"
+                      dataType="str"
+                      length="55"
+                      name="ShortProperCaseTranslation" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[LongProperCaseTranslation]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="LongProperCaseTranslation" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input].ExternalColumns[TableSequence]"
+                      dataType="i4"
+                      name="TableSequence" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Source FE Code Tables"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT     
+TE.TABLEENTRIESID, 
+TE.CODETABLESID, 
+CT.[NAME],  
+TE.SEQUENCE, 
+TE.ENTRYID,
+TE.[DESCRIPTION], 
+TE.[NUMERICVALUE], 
+TE.PARENTID, 
+TE.SYSTEMENTRY,  
+TE.SHORTUPPERCASETRANSLATION, 
+TE.LONGUPPERCASETRANSLATION, 
+TE.ACTIVE, 
+TE.SHORTPROPERCASETRANSLATION, 
+TE.LONGPROPERCASETRANSLATION, 
+TE.TABLESEQUENCE
+FROM         
+dbo.CODETABLES CT 
+RIGHT OUTER JOIN
+dbo.TABLEENTRIES TE 
+ON CT.CODETABLESID = TE.CODETABLESID</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_DB_CONN_FE]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_DB_CONN_FE]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[TABLEENTRIESID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[TABLEENTRIESID]"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[TABLEENTRIESID]"
+                      name="TABLEENTRIESID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[CODETABLESID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[CODETABLESID]"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[CODETABLESID]"
+                      name="CODETABLESID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[NAME]"
+                      length="30"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[NAME]"
+                      name="NAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[SEQUENCE]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[SEQUENCE]"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[SEQUENCE]"
+                      name="SEQUENCE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[ENTRYID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[ENTRYID]"
+                      length="6"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[ENTRYID]"
+                      name="ENTRYID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[DESCRIPTION]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[DESCRIPTION]"
+                      length="60"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[DESCRIPTION]"
+                      name="DESCRIPTION"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[NUMERICVALUE]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[NUMERICVALUE]"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[NUMERICVALUE]"
+                      name="NUMERICVALUE"
+                      precision="15"
+                      scale="3"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[PARENTID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[PARENTID]"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[PARENTID]"
+                      name="PARENTID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[SYSTEMENTRY]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[SYSTEMENTRY]"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[SYSTEMENTRY]"
+                      name="SYSTEMENTRY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[SHORTUPPERCASETRANSLATION]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[SHORTUPPERCASETRANSLATION]"
+                      length="55"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[SHORTUPPERCASETRANSLATION]"
+                      name="SHORTUPPERCASETRANSLATION"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[LONGUPPERCASETRANSLATION]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[LONGUPPERCASETRANSLATION]"
+                      length="255"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[LONGUPPERCASETRANSLATION]"
+                      name="LONGUPPERCASETRANSLATION"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[ACTIVE]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[ACTIVE]"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[ACTIVE]"
+                      name="ACTIVE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[SHORTPROPERCASETRANSLATION]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[SHORTPROPERCASETRANSLATION]"
+                      length="55"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[SHORTPROPERCASETRANSLATION]"
+                      name="SHORTPROPERCASETRANSLATION"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[LONGPROPERCASETRANSLATION]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[LONGPROPERCASETRANSLATION]"
+                      length="255"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[LONGPROPERCASETRANSLATION]"
+                      name="LONGPROPERCASETRANSLATION"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[TABLESEQUENCE]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[TABLESEQUENCE]"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].Columns[TABLESEQUENCE]"
+                      name="TABLESEQUENCE"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[TABLEENTRIESID]"
+                      dataType="i4"
+                      name="TABLEENTRIESID" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[CODETABLESID]"
+                      dataType="i4"
+                      name="CODETABLESID" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[SEQUENCE]"
+                      dataType="i2"
+                      name="SEQUENCE" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[ENTRYID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      name="ENTRYID" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[DESCRIPTION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="DESCRIPTION" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[NUMERICVALUE]"
+                      dataType="numeric"
+                      name="NUMERICVALUE"
+                      precision="15"
+                      scale="3" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[PARENTID]"
+                      dataType="i4"
+                      name="PARENTID" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[SYSTEMENTRY]"
+                      dataType="i2"
+                      name="SYSTEMENTRY" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[SHORTUPPERCASETRANSLATION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="55"
+                      name="SHORTUPPERCASETRANSLATION" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[LONGUPPERCASETRANSLATION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="LONGUPPERCASETRANSLATION" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[ACTIVE]"
+                      dataType="i2"
+                      name="ACTIVE" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[SHORTPROPERCASETRANSLATION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="55"
+                      name="SHORTPROPERCASETRANSLATION" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[LONGPROPERCASETRANSLATION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="LONGPROPERCASETRANSLATION" />
+                    <externalMetadataColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output].ExternalColumns[TABLESEQUENCE]"
+                      dataType="i4"
+                      name="TABLESEQUENCE" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[TABLEENTRIESID]"
+                      dataType="i4"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[TABLEENTRIESID]"
+                      name="TABLEENTRIESID" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[CODETABLESID]"
+                      dataType="i4"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[CODETABLESID]"
+                      name="CODETABLESID" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[NAME]"
+                      name="NAME" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[SEQUENCE]"
+                      dataType="i2"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[SEQUENCE]"
+                      name="SEQUENCE" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[ENTRYID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[ENTRYID]"
+                      name="ENTRYID" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[DESCRIPTION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[DESCRIPTION]"
+                      name="DESCRIPTION" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[NUMERICVALUE]"
+                      dataType="numeric"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[NUMERICVALUE]"
+                      name="NUMERICVALUE"
+                      precision="15"
+                      scale="3" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[PARENTID]"
+                      dataType="i4"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[PARENTID]"
+                      name="PARENTID" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[SYSTEMENTRY]"
+                      dataType="i2"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[SYSTEMENTRY]"
+                      name="SYSTEMENTRY" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[SHORTUPPERCASETRANSLATION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="55"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[SHORTUPPERCASETRANSLATION]"
+                      name="SHORTUPPERCASETRANSLATION" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[LONGUPPERCASETRANSLATION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[LONGUPPERCASETRANSLATION]"
+                      name="LONGUPPERCASETRANSLATION" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[ACTIVE]"
+                      dataType="i2"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[ACTIVE]"
+                      name="ACTIVE" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[SHORTPROPERCASETRANSLATION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="55"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[SHORTPROPERCASETRANSLATION]"
+                      name="SHORTPROPERCASETRANSLATION" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[LONGPROPERCASETRANSLATION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[LONGPROPERCASETRANSLATION]"
+                      name="LONGPROPERCASETRANSLATION" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[TABLESEQUENCE]"
+                      dataType="i4"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[TABLESEQUENCE]"
+                      name="TABLESEQUENCE" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load TEMP Code Tables - DW.Paths[OLE DB Source Output]"
+              endId="Package\Load TEMP Code Tables - DW\Destination TEMP Code Tables.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Load TEMP Code Tables - DW\Source FE Code Tables.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Temp Tables"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Truncate TEMP Tables"
+      DTS:DTSID="{A799273F-A8E7-472F-8A9B-4548EF7CFC91}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Temp Tables"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{560A99D6-B5CB-4ED3-9312-05117103DB68}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE TEMP_CodeTables" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Account Dept Segment"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Update AccountDim Table"
+      DTS:Disabled="True"
+      DTS:DTSID="{939cb4c9-93fa-4cfe-9821-e68eec788638}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Account Dept Segment"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{560A99D6-B5CB-4ED3-9312-05117103DB68}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="UPDATE&#xA;DIM_Account&#xA;SET &#xA;SegmentDepartmentName = ct.TableEntryName&#xA;FROM&#xA;TEMP_CodeTables ct&#xA;WHERE &#xA;ct.CodeTableName = 'Department'&#xA;AND ct.EntrySystemID &lt;&gt; ''&#xA;AND ct.EntrySystemID = DIM_Account.SegmentDepartmentCode" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Account Division Segment"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Update AccountDim Table"
+      DTS:Disabled="True"
+      DTS:DTSID="{ed936972-9d27-4400-b6d4-13c781964b87}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Account Division Segment"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{560A99D6-B5CB-4ED3-9312-05117103DB68}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="UPDATE&#xA;DIM_Account&#xA;SET &#xA;SegmentDivisionName = ct.TableEntryName&#xA;FROM&#xA;TEMP_CodeTables ct&#xA;WHERE &#xA;ct.CodeTableName = 'Program'&#xA;AND ct.EntrySystemID &lt;&gt; ''&#xA;AND ct.EntrySystemID = DIM_Account.SegmentDivisionCode" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Account Location Segment"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Update AccountDim Table"
+      DTS:Disabled="True"
+      DTS:DTSID="{88F96D29-4853-43C4-8E40-A709D1A1CA95}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Account Location Segment"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{560A99D6-B5CB-4ED3-9312-05117103DB68}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="UPDATE&#xA;DIM_Account&#xA;SET &#xA;SegmentLocationName = ct.TableEntryName&#xA;FROM&#xA;TEMP_CodeTables ct&#xA;WHERE &#xA;ct.CodeTableName = 'Responsibility Code'&#xA;AND ct.EntrySystemID &lt;&gt; ''&#xA;AND ct.EntrySystemID = DIM_Account.SegmentLocationCode" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{060299A1-FA11-423D-BC7E-94EB118C74C4}"
+      DTS:From="Package\Execute SQL Insert Default CodeTables Member"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Update Account Location Segment" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{3DC6A4D0-E944-40BA-92E9-CBE15CA7C0F1}"
+      DTS:From="Package\Truncate Temp Tables"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Load TEMP Code Tables - DW" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{C805FD39-015A-437C-A26D-CE55F15A5E4A}"
+      DTS:From="Package\Load TEMP Code Tables - DW"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Execute SQL Insert Default CodeTables Member" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{BBC3897F-3B4F-4E5B-9657-B50E2128AAFD}"
+      DTS:From="Package\Update Account Location Segment"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Update Account Dept Segment" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{85DAAE6E-7C5F-4303-8BCB-C2EEA6F745E3}"
+      DTS:From="Package\Update Account Dept Segment"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Update Account Division Segment" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="257,44"
+          Id="Package\Execute SQL Insert Default CodeTables Member"
+          TopLeft="60.1415094339623,147.198113207547" />
+        <NodeLayout
+          Size="266,44"
+          Id="Package\Load TEMP Code Tables - DW"
+          TopLeft="56.7452830188679,78.7830188679245" />
+        <NodeLayout
+          Size="135,44"
+          Id="Package\Truncate Temp Tables"
+          TopLeft="121.122641509434,5.5" />
+        <NodeLayout
+          Size="135,44"
+          Id="Package\Update Account Dept Segment"
+          TopLeft="192.066037735849,266.858490566038" />
+        <NodeLayout
+          Size="188,44"
+          Id="Package\Update Account Division Segment"
+          TopLeft="354.028301886793,303.462264150943" />
+        <NodeLayout
+          Size="159,44"
+          Id="Package\Update Account Location Segment"
+          TopLeft="5.5,227.38679245283" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="188.820754716981,191.084905660377">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-104,36.3018867924528"
+              Start="0,0"
+              End="-104,28.8018867924528">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.1509433962264" />
+                  <mssgle:LineSegment
+                    End="-104,18.1509433962264" />
+                  <mssgle:LineSegment
+                    End="-104,28.8018867924528" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="188.783018867925,49.3867924528302">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="1.09433962264166,29.3962264150943"
+              Start="0,0"
+              End="1.09433962264166,21.8962264150943">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.7169811320755" />
+                  <mssgle:LineSegment
+                    End="1.09433962264166,14.7169811320755" />
+                  <mssgle:LineSegment
+                    End="1.09433962264166,21.8962264150943" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="189.877358490566,122.669811320755">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-1.05660377358504,24.5283018867924"
+              Start="0,0"
+              End="-1.05660377358504,17.0283018867924">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.2641509433962" />
+                  <mssgle:LineSegment
+                    End="-1.05660377358504,12.2641509433962" />
+                  <mssgle:LineSegment
+                    End="-1.05660377358504,17.0283018867924" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="164.179245283019,249.311320754717">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="27.8867924528304,39.4716981132075"
+              Start="0,0"
+              End="20.3867924528304,39.4716981132075">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="13.9622641509434,0" />
+                  <mssgle:LineSegment
+                    End="13.9622641509434,39.4716981132075" />
+                  <mssgle:LineSegment
+                    End="20.3867924528304,39.4716981132075" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="327.424528301887,288.783018867925">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="26.6037735849059,36.6037735849057"
+              Start="0,0"
+              End="19.1037735849059,36.6037735849057">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="13.3207547169811,0" />
+                  <mssgle:LineSegment
+                    End="13.3207547169811,36.6037735849057" />
+                  <mssgle:LineSegment
+                    End="19.1037735849059,36.6037735849057" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

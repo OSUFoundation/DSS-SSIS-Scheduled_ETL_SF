@@ -1,0 +1,1233 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/1/2006 5:09:31 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MICHAELBO-T43"
+  DTS:CreatorName="BBNT\MichaelBo"
+  DTS:DTSID="{FEC2706E-5CB1-46D2-BC37-D367D8BD96B6}"
+  DTS:EnableConfig="True"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="13.0.4001.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="DIM_CLASS_LOAD"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="926"
+  DTS:VersionGUID="{3204F25D-38B1-40C6-84DF-D35E05DD3056}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ETL_DB_CONN_DW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{560A99D6-B5CB-4ED3-9312-05117103DB68}"
+      DTS:ObjectName="ETL_DB_CONN_DW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DW2;Initial Catalog=OSUF_FE_DW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ETL_DB_CONN_FE]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A591A0C5-4C6E-424A-9F01-238B56EFB2F1}"
+      DTS:ObjectName="ETL_DB_CONN_FE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DW2;Initial Catalog=OSUF_FE_PROD;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ETL_DB_CONN_RE]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{5AFA8054-53CE-4A83-AC23-B236D899D893}"
+      DTS:ObjectName="ETL_DB_CONN_RE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Retain="True"
+          DTS:ConnectionString="Data Source=RE-DB;Initial Catalog=RE7prod;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Configurations>
+    <DTS:Configuration
+      DTS:ConfigurationString="FIDW_ETLCONFIG_OSUF"
+      DTS:ConfigurationType="5"
+      DTS:CreationName=""
+      DTS:DTSID="{E2169E9F-3639-4B43-8F50-52BDA31C8F94}"
+      DTS:ObjectName="ConfigFile" />
+    <DTS:Configuration
+      DTS:ConfigurationString="DataWindowOpen"
+      DTS:ConfigurationVariable="\Package.Variables[User::DataWindowOpen].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{61C3DC93-3AE7-4A5A-8439-BAF45484452E}"
+      DTS:ObjectName="DataWindowOpen" />
+    <DTS:Configuration
+      DTS:ConfigurationString="DataWindowClose"
+      DTS:ConfigurationVariable="\Package.Variables[User::DataWindowClose].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{01FAA25B-9678-431C-869D-D752D8ABBADD}"
+      DTS:ObjectName="DataWindowClose" />
+    <DTS:Configuration
+      DTS:ConfigurationString="ETLControlID"
+      DTS:ConfigurationVariable="\Package.Variables[User::ETLControlID].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{5F8ED5DB-4B37-4F33-94FC-A193B999A314}"
+      DTS:ObjectName="ETLControlID" />
+    <DTS:Configuration
+      DTS:ConfigurationString="SourceLoadID"
+      DTS:ConfigurationVariable="\Package.Variables[User::SourceLoadID].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{097D8CD2-AB2F-41CA-BCD8-D10CC2AFC562}"
+      DTS:ObjectName="SourceLoadID" />
+    <DTS:Configuration
+      DTS:ConfigurationString="SourceID"
+      DTS:ConfigurationVariable="\Package.Variables[User::SourceID].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{372E0D09-3B76-4651-8EBD-6666FED36925}"
+      DTS:ObjectName="SourceID" />
+    <DTS:Configuration
+      DTS:ConfigurationString="TruncateTables"
+      DTS:ConfigurationVariable="\Package.Variables[User::TruncateTables].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{897602B2-7779-4A43-B16C-954219525DA8}"
+      DTS:ObjectName="TruncateTables" />
+    <DTS:Configuration
+      DTS:ConfigurationString="ETLDeploymentFolder"
+      DTS:ConfigurationVariable="\Package.Variables[User::ETLDeploymentFolder].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{86BA1571-64FF-44A5-AC25-B7011ED8B248}"
+      DTS:ObjectName="ETLDeploymentFolder" />
+  </DTS:Configurations>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{13496EDB-0099-41BC-B0ED-44230779E97B}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="DataWindowClose">
+      <DTS:VariableValue
+        DTS:DataType="7">12/1/2006</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{92EC719E-4BAE-430C-AD49-3ABAC9825020}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="DataWindowOpen">
+      <DTS:VariableValue
+        DTS:DataType="7">12/1/1900</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3CD61628-8B8A-4783-8D1A-938740EC9246}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ETLControlID">
+      <DTS:VariableValue
+        DTS:DataType="3">1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{46370163-389B-42EC-9AF0-61A768013FE4}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ETLDeploymentFolder">
+      <DTS:VariableValue
+        DTS:DataType="8">E:\BI\FE_DW\ETL\FE\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A16AE89E-FA78-4CC0-BA65-1A1D24EC4984}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="MaxDimensionKey">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2E481E9E-46E8-487A-B3E0-509A11E55FD6}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceID">
+      <DTS:VariableValue
+        DTS:DataType="3">1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F4D403C6-17B4-418D-923E-94C7619A6656}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceLoadID">
+      <DTS:VariableValue
+        DTS:DataType="3">1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8731B074-B82D-42AE-9CFE-EABBF320470F}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="TruncateTables">
+      <DTS:VariableValue
+        DTS:DataType="11">-1</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load Class Dimension"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{481B7AC3-E8F3-45DF-AB4C-E74B750CD1D0}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Class Dimension">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Load Class Dimension\Execute SQL Get ClassDimID Max"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{341f0492-fe56-49f5-8b5a-0930f58e7f8e}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute SQL Get ClassDimID Max"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{560A99D6-B5CB-4ED3-9312-05117103DB68}"
+              SQLTask:SqlStatementSource="SELECT &#xA;COALESCE(MAX(ClassDimID), 0) AS MaxDimKey&#xA;FROM dbo.DIM_Class"
+              SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="MaxDimKey"
+                SQLTask:DtsVariableName="User::MaxDimensionKey" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Load Class Dimension\Load ClassDim"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{521D94D4-65A4-4105-8DFC-E96E0B5401B8}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Load ClassDim"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server v9; (C) 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              BLOBTempStoragePath=""
+              bufferTempStoragePath=""
+              engineThreads="5"
+              version="1">
+              <components>
+                <component
+                  refId="Package\Load Class Dimension\Load ClassDim\Derived Col ETLControlID"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Updates column values using expressions"
+                  name="Derived Col ETLControlID"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Load Class Dimension\Load ClassDim\Derived Col ETLControlID.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load Class Dimension\Load ClassDim\Derived Col ETLControlID.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Load Class Dimension\Load ClassDim\Derived Col ETLControlID.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Derived Col ETLControlID.Outputs[Derived Column Output].Columns[ETLControlID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Load Class Dimension\Load ClassDim\Derived Col ETLControlID.Outputs[Derived Column Output].Columns[ETLControlID]"
+                          name="ETLControlID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">@[User::ETLControlID]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">@[User::ETLControlID]</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Derived Col ETLControlID.Outputs[Derived Column Output].Columns[SourceID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Load Class Dimension\Load ClassDim\Derived Col ETLControlID.Outputs[Derived Column Output].Columns[SourceID]"
+                          name="SourceID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">@[User::SourceID]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">@[User::SourceID]</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Load Class Dimension\Load ClassDim\Derived Col ETLControlID.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Load Class Dimension\Load ClassDim\Derived Col ETLControlID.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Derived Col ETLControlID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load Class Dimension\Load ClassDim\Derived Col ETLControlID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Derived Col ETLControlID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load Class Dimension\Load ClassDim\Derived Col ETLControlID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Destination  DIM Class WH"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[DIM_Class]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destinaton. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS,ROWS_PER_BATCH = 10000</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">0</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[ETL_DB_CONN_DW]"
+                      connectionManagerRefId="Package.ConnectionManagers[ETL_DB_CONN_DW]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Inputs[OLE DB Destination Input].Columns[NewSurrogateKey]"
+                          cachedDataType="i4"
+                          cachedName="NewSurrogateKey"
+                          externalMetadataColumnId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Inputs[OLE DB Destination Input].ExternalColumns[ClassDimID]"
+                          lineageId="Package\Load Class Dimension\Load ClassDim\Generate New Member Surrogate Keys.Outputs[Output 0].Columns[NewSurrogateKey]" />
+                        <inputColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Inputs[OLE DB Destination Input].Columns[ClassName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="60"
+                          cachedName="ClassName"
+                          externalMetadataColumnId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Inputs[OLE DB Destination Input].ExternalColumns[ClassName]"
+                          lineageId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Output].Columns[ClassName]" />
+                        <inputColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Inputs[OLE DB Destination Input].Columns[SourceID]"
+                          cachedDataType="i4"
+                          cachedName="SourceID"
+                          externalMetadataColumnId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Inputs[OLE DB Destination Input].ExternalColumns[SourceID]"
+                          lineageId="Package\Load Class Dimension\Load ClassDim\Derived Col ETLControlID.Outputs[Derived Column Output].Columns[SourceID]" />
+                        <inputColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Inputs[OLE DB Destination Input].Columns[ETLControlID]"
+                          cachedDataType="i4"
+                          cachedName="ETLControlID"
+                          externalMetadataColumnId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Inputs[OLE DB Destination Input].ExternalColumns[ETLControlID]"
+                          lineageId="Package\Load Class Dimension\Load ClassDim\Derived Col ETLControlID.Outputs[Derived Column Output].Columns[ETLControlID]" />
+                        <inputColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Inputs[OLE DB Destination Input].Columns[ClassCode]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="6"
+                          cachedName="ClassCode"
+                          externalMetadataColumnId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Inputs[OLE DB Destination Input].ExternalColumns[ClassCode]"
+                          lineageId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Output].Columns[ClassCode]" />
+                        <inputColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Inputs[OLE DB Destination Input].Columns[Sequence]"
+                          cachedDataType="i2"
+                          cachedName="Sequence"
+                          externalMetadataColumnId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Inputs[OLE DB Destination Input].ExternalColumns[Sequence]"
+                          lineageId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Output].Columns[Sequence]" />
+                        <inputColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Inputs[OLE DB Destination Input].Columns[TableEntriesID]"
+                          cachedDataType="i4"
+                          cachedName="TableEntriesID"
+                          externalMetadataColumnId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Inputs[OLE DB Destination Input].ExternalColumns[ClassSystemID]"
+                          lineageId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Output].Columns[TableEntriesID]" />
+                        <inputColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Inputs[OLE DB Destination Input].Columns[Type]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="30"
+                          cachedName="Type"
+                          externalMetadataColumnId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Inputs[OLE DB Destination Input].ExternalColumns[ClassType]"
+                          lineageId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Output].Columns[Type]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Inputs[OLE DB Destination Input].ExternalColumns[ClassDimID]"
+                          dataType="i4"
+                          name="ClassDimID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Inputs[OLE DB Destination Input].ExternalColumns[ClassName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="60"
+                          name="ClassName" />
+                        <externalMetadataColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Inputs[OLE DB Destination Input].ExternalColumns[SourceID]"
+                          dataType="i4"
+                          name="SourceID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Inputs[OLE DB Destination Input].ExternalColumns[ETLControlID]"
+                          dataType="i4"
+                          name="ETLControlID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Inputs[OLE DB Destination Input].ExternalColumns[ClassCode]"
+                          dataType="i4"
+                          name="ClassCode" />
+                        <externalMetadataColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Inputs[OLE DB Destination Input].ExternalColumns[Sequence]"
+                          dataType="i4"
+                          name="Sequence" />
+                        <externalMetadataColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Inputs[OLE DB Destination Input].ExternalColumns[ClassSystemID]"
+                          dataType="i4"
+                          name="ClassSystemID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Inputs[OLE DB Destination Input].ExternalColumns[ClassType]"
+                          codePage="1252"
+                          dataType="str"
+                          length="60"
+                          name="ClassType" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Load Class Dimension\Load ClassDim\Generate New Member Surrogate Keys"
+                  componentClassID="Microsoft.ManagedComponentHost"
+                  contactInfo="Executes a custom script.;Microsoft Corporation;Microsoft SqlServer v9; © 2004 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Executes a custom script."
+                  localeId="1033"
+                  name="Generate New Member Surrogate Keys"
+                  version="10">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Stores the source code of the component"
+                      isArray="true"
+                      name="SourceCode"
+                      state="cdata">
+                      <arrayElements
+                        arrayElementCount="15">
+                        <arrayElement
+                          dataType="System.String"><![CDATA[ScriptMain.vb]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[' Microsoft SQL Server Integration Services user script component
+' This is your new script component in Microsoft Visual Basic .NET
+' ScriptMain is the entrypoint class for script components
+
+Imports System
+Imports System.Data
+Imports System.Math
+Imports Microsoft.SqlServer.Dts.Pipeline.Wrapper
+Imports Microsoft.SqlServer.Dts.Runtime.Wrapper
+
+<Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute> _
+<CLSCompliant(False)> _
+Public Class ScriptMain
+    Inherits UserComponent
+
+    Dim Counter As Int32
+
+    Public Overrides Sub PreExecute()
+
+        MyBase.PreExecute()
+
+        Me.Counter = Variables.MaxDimensionKey
+
+    End Sub
+
+    Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)
+
+        Me.Counter += 1
+
+        Row.NewSurrogateKey = Me.Counter
+
+    End Sub
+
+End Class
+]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[BufferWrapper.vb]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[' THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+' Microsoft SQL Server Integration Services buffer wrappers
+' This module defines classes for accessing data flow buffers
+' THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+
+
+Option Strict Off   ' This allows usage of PipelineBuffer typed accessors.
+
+Imports System
+Imports System.Data
+Imports Microsoft.SqlServer.Dts.Pipeline
+Imports Microsoft.SqlServer.Dts.Pipeline.Wrapper
+
+<CLSCompliant(False)> _
+Public Class Input0Buffer
+    Inherits ScriptBuffer
+
+    Public Sub New(ByVal Buffer As PipelineBuffer, ByVal BufferColumnIndexes As Integer(), ByVal OutputMap As OutputNameMap)
+        MyBase.New(Buffer, BufferColumnIndexes, OutputMap)
+    End Sub
+
+    Public WriteOnly Property [NewSurrogateKey]() As Int32
+        Set
+            Me(0) = Value
+        End Set
+    End Property
+    Public WriteOnly Property [NewSurrogateKey_IsNull] As Boolean
+        Set
+            If (value)
+                SetNull(0)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public Overloads Function NextRow() As Boolean
+        NextRow = MyBase.NextRow()
+    End Function
+
+    Public Overloads Function EndOfRowset() As Boolean
+        EndOfRowset = MyBase.EndOfRowset
+    End Function
+
+End Class
+]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[ScriptComponent_bc6a62c7f72f40c4954bd9a28a8ce2ef.vbproj]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3ab219c2-4651-4720-9c34-f306a34e7054}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>My Project</AppDesignerFolder>
+    <RootNamespace>ScriptComponent_bc6a62c7f72f40c4954bd9a28a8ce2ef</RootNamespace>
+    <AssemblyName>ScriptComponent_bc6a62c7f72f40c4954bd9a28a8ce2ef</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- This sections specifies references for the project. -->
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <!-- Visual Basic supports Importing namespaces (equivalent to using statements in C#).-->
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="My Project\" />
+  </ItemGroup>
+  <!-- Include the build rules for a VB project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="SSIS_SC110" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
+        <Host Name="SSIS_SC110" IconIndex=""></Host>
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC130</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <ItemGroup>
+    <Compile Include="ScriptMain.vb" />
+    <Compile Include="BufferWrapper.vb" />
+    <Compile Include="ComponentWrapper.vb" />
+  </ItemGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+</Project>]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[ComponentWrapper.vb]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[' THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+' Microsoft SQL Server Integration Services component wrapper
+' This module defines the base class for your component
+' THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+
+Imports System
+Imports System.Data
+Imports Microsoft.SqlServer.Dts.Pipeline
+Imports Microsoft.SqlServer.Dts.Pipeline.Wrapper
+Imports Microsoft.SqlServer.Dts.Runtime.Wrapper
+
+<CLSCompliant(False)> _
+Public Class UserComponent
+    Inherits ScriptComponent
+
+    Public Connections As New Connections(Me)
+    Public Variables As New Variables(Me)
+
+    Public Overrides Sub ProcessInput(ByVal InputID As Integer, ByVal InputName As String, ByVal Buffer As PipelineBuffer, ByVal OutputMap As OutputNameMap)
+
+        If InputName.Equals("Input 0", StringComparison.Ordinal) Then
+            Input0_ProcessInput(New Input0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap))
+        End If
+
+    End Sub
+
+    Public Overridable Sub Input0_ProcessInput(ByVal Buffer As Input0Buffer)
+
+        While Buffer.NextRow()
+            Input0_ProcessInputRow(Buffer)
+        End While
+
+    End Sub
+
+    Public Overridable Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)
+
+    End Sub
+
+End Class
+
+<CLSCompliant(False)> _
+Public Class Connections
+
+    Dim ParentComponent As ScriptComponent
+
+    <CLSCompliant(False)> _
+    Public Sub New(ByVal Component As ScriptComponent)
+        ParentComponent = Component
+    End Sub
+
+End Class
+
+<CLSCompliant(False)> _
+Public Class Variables
+
+    Dim ParentComponent As ScriptComponent
+
+    <CLSCompliant(False)> _
+    Public Sub New(ByVal Component As ScriptComponent)
+        ParentComponent = Component
+    End Sub
+
+    Public ReadOnly Property [MaxDimensionKey]() As Int32
+        Get
+            Return CType(ParentComponent.ReadOnlyVariables("MaxDimensionKey").GetValueWithContext(ScriptComponent.EvaluatorContext), Int32)
+        End Get
+    End Property
+
+End Class
+]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[Project]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:ProjectId>{2FD6D6C8-E1FC-45E6-8D8E-31EAED71988A}</msb:ProjectId>
+		<msb:NoContent>Reference;Import;Folder</msb:NoContent>
+		<msb:Language>msBuild</msb:Language>
+		<msb:CodeName>ScriptComponent_bc6a62c7f72f40c4954bd9a28a8ce2ef</msb:CodeName>
+		<msb:DisplayName>ScriptComponent_bc6a62c7f72f40c4954bd9a28a8ce2ef</msb:DisplayName>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:File Include="ScriptMain.vb"/>
+		<msb:File Include="ComponentWrapper.vb"/>
+		<msb:File Include="BufferWrapper.vb"/>
+		<msb:Project Include="ScriptComponent_bc6a62c7f72f40c4954bd9a28a8ce2ef.vbproj"/>
+	</msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                      </arrayElements>
+                    </property>
+                    <property
+                      dataType="System.String"
+                      description="Stores the binary representation of the component"
+                      isArray="true"
+                      name="BinaryCode"
+                      state="escaped">
+                      <arrayElements
+                        arrayElementCount="2">
+                        <arrayElement
+                          dataType="System.String">ScriptComponent_bc6a62c7f72f40c4954bd9a28a8ce2ef.dll</arrayElement>
+                        <arrayElement
+                          dataType="System.String">TVqQAAMAAAAEAAAA_x002F__x002F_8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA_x000D__x000A_AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v_x000D__x000A_ZGUuDQ0KJAAAAAAAAABQRQAATAEDAPM_x002F_G1kAAAAAAAAAAOAAIiALAVAAABgAAAAGAAAAAAAAkjcA_x000D__x000A_AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAEAAAAAAAAAACAAAAAAgAAAAAAAAMAQIUAABAA_x000D__x000A_ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAEA3AABPAAAAAEAAAEgDAAAAAAAAAAAAAAAAAAAA_x000D__x000A_AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA_x000D__x000A_AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAmBcAAAAgAAAAGAAAAAIA_x000D__x000A_AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgDAAAAQAAAAAQAAAAaAAAAAAAAAAAAAAAAAABAAABA_x000D__x000A_LnJlbG9jAAAMAAAAAGAAAAACAAAAHgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAB0_x000D__x000A_NwAAAAAAAEgAAAACAAUAqCIAAJgUAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA_x000D__x000A_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKA8AAAoqHgIoEAAACiqmcxEAAAqAAQAABHMSAAAKgAIA_x000D__x000A_AARzEwAACoADAAAEcxQAAAqABAAABCoufgEAAARvFQAACioufgIAAARvFgAACioufgMAAARvFwAA_x000D__x000A_CioufgQAAARvGAAACioeAigQAAAGKmICKBkAAAoCAnsHAAAEbxYAAAZ9BQAABCoAEzADABoAAAAB_x000D__x000A_AAARAnwFAAAEJQoGShfWVAMCewUAAARvDAAABioqAgMEBSgaAAAKKjoCFgOMHAAAASgbAAAKKloD_x000D__x000A_LAgCFigcAAAKKnIBAABwcx0AAAp6ABMwAQAJAAAAAgAAEQIoHgAACgoGKgAAABMwAQAJAAAAAgAA_x000D__x000A_EQIoHwAACgoGKn4CKCAAAAoCAnMUAAAGfQYAAAQCAnMVAAAGfQcAAAQqkgRyngAAcBpvIQAACiwV_x000D__x000A_AgUCAygiAAAKDgRzCwAABm8SAAAGKkorBwIDbxMAAAYDbw4AAAYt8SoGKjoCKCMAAAoCA30IAAAE_x000D__x000A_KjoCKCMAAAoCA30JAAAEKpYCewkAAARvJAAACnKuAABwbyUAAAooJgAACm8nAAAKKCgAAAoqNgID_x000D__x000A_KCkAAAooKgAACioeAigrAAAKKi7QCgAAAigsAAAKKh4CKC0AAAoqAAAAEzABABQAAAADAAARAowF_x000D__x000A_AAAbLQgoAQAAKworAgIKBioiA_x002F_4VBQAAGyoeAigjAAAKKgAAABMwAgAoAAAABAAAEQJ7LwAACm8w_x000D__x000A_AAAKCgaMCAAAGy0SKAIAACsKAnsvAAAKBm8xAAAKBipKAigjAAAKAnMyAAAKfS8AAAoqAEJTSkIB_x000D__x000A_AAEAAAAAAAwAAAB2NC4wLjMwMzE5AAAAAAUAbAAAANAHAAAjfgAAPAgAAJAIAAAjU3RyaW5ncwAA_x000D__x000A_AADMEAAA0AAAACNVUwCcEQAAEAAAACNHVUlEAAAArBEAAOwCAAAjQmxvYgAAAAAAAAACAAABVxWi_x000D__x000A_CQkOAAAA_x002B_gEzABYAAAEAAAAnAAAACwAAAAoAAAAfAAAAEQAAADIAAAAwAAAABAAAAAQAAAAIAAAA_x000D__x000A_CAAAAAgAAAABAAAABgAAAAIAAAADAAAAAgAAAAAAngMBAAAAAAAGAFwCjwYGALkCjwYGAJ8B0AUP_x000D__x000A_AK8GAAAGABACNgMKAIgBUAUKAF4BiAMKALMBiAMOAE4BHwYOALAF4wUGACkC0AUOAOABaAYOAPgB_x000D__x000A_rQAGACcHCAQOAJQFHwYOAEECrQAGAEkBCAQGAMwBSQYOADoAXgMKAHMBDwQSAJICJQEGAHwCCAQG_x000D__x000A_AFkDCAQSADkFJQEWACoFJQESAIIEJQESAGIHJQEGAGQACAQGAFUECAQGAFIDCAQGAG8ECAQaABEA_x000D__x000A_aAUaAAEAaAVvAOIHAAAaACIAaAUOAAAHaAYGABgHjwYGAPcACAQGALkFCAQAAAAAagAAAAAAAQAB_x000D__x000A_AAAAAABHBDEIJQABAAEAAAAAAK4FMQgpAAEAAgAAARAALgcxCDkAAQADAAEAAAAsBAUDHAAFAAgA_x000D__x000A_AQAAAB0FBQNhAAYACwABAAAARAcFA20ABgAQAAEAAAAMBwUDOQAIABQAAQAAAMoGBQM5AAkAFQAF_x000D__x000A_AQAAEQYAADkACgAXAAUBAABJAAAAOQAKAB4AMQDmBAkBMQC9BBEBMQDRBBkBMQD_x002F_BCEBAQCZBSkB_x000D__x000A_BgAMBywBBgDKBjABAQBSBzQBAQBSBzQBIQDEB9EAUCAAAAAABhjDBQYAAQBYIAAAAAAGGMMFBgAB_x000D__x000A_AGAgAAAAABEYyQU4AQEAiiAAAAAAEwihBTwBAQCWIAAAAAATCDcEQQEBAKIgAAAAABMIkAVGAQEA_x000D__x000A_riAAAAAAEwgBBksBAQC6IAAAAAAGGMMFBgABAMIgAAAAAMYC1wIGAAEA3CAAAAAAxgISCFABAQAC_x000D__x000A_IQAAAAAGGMMFVAACAA0hAAAAAAYIZQgBAAUAHCEAAAAABgjTAykABgA0IQAAAACGACkIaAAHAEwh_x000D__x000A_AAAAAIYAOAdoAAcAYSEAAAAABhjDBQYABwCBIQAAAADGArcHVgEHAKYhAAAAAEYDsAdQAQsAuSEA_x000D__x000A_AAAARgMSCFABDAC7IQAAAAAGGMMFYAENAMohAAAAAAYYwwVgAQ4A2SEAAAAABgh5CKIADwD_x002F_IQAA_x000D__x000A_AADGAvkGnQAPAA0iAAAAAMYC6wCiABAAFSIAAAAAgwBGAWYBEAAhIgAAAADGAlADrgAQACwiAAAA_x000D__x000A_ABEAkQBrARAATCIAAAAAAQB9AHMBEQBVIgAAAAAGGMMFBgASAGAiAAAAAAMI0gBKABIAlCIAAAAA_x000D__x000A_BhjDBQYAEgAAAAEALQgAAAEAPwUAAAIA1AYAAAMAkAQAAAEA_x002F_wIAAAEA_x002F_wIAAAEAcwAAAAIAGwEA_x000D__x000A_AAMAPwUAAAQAkAQAAAEAPwUAAAEALQgAAAEAaAcAAAEAaAcAAAEAgAQAAAEA4gAAAAEA4gAJAMMF_x000D__x000A_AQARAMMFBgAZAMMFCgApAMMFEAAxAMMFFQBBAMMFGwBZAMMFBgBhAMMFBgBpAMMFBgCBAMMFIQCR_x000D__x000A_AMMFKQChAMMFEACpAMMFBgCxAMMFKQBJAMMFBgBRAMMFBgAMAMMFBgAUAMMFBgAcAMMFBgAkAMMF_x000D__x000A_BgAMANIASgAUANIASgAcANIASgAkANIASgDZANcCBgDBAMMFVADBAP8DXgDBAO4DAQDpAMMFEADB_x000D__x000A_ACkIaADBADgHaADZAMMFBgDxAPkGbADZAOgGcwBxAMMFBgDZAL4GeQABAfYDfwDZAP0HhgAJAc4H_x000D__x000A_jAAhAUYFkwApAfYCmABxAPkGnQBxAOsAogCJAAkBpgBxAFADrgA5AcMAugA0AMQH0QA8AOICSgA8_x000D__x000A_AOwC6AA8AMMFBgApAGMApAIuAAsAnAEuABMApQEuABsAxAEuACMAzQFAADsAFQJAADMAGgJDACsA_x000D__x000A_KQJDADMAGgJJAGMAtQJjACsAKQJjADMAGgJpAGMAyQKAADsAFQKDAEMAFQKDAEsAFQKDACsAKQKJ_x000D__x000A_AGMA1gKgADsAFQKjAGsAFQKjAHMAIwLAADsAFQLDAHMAIwLgADsAFQLjAHMAIwIDAXMAIwIjAXMA_x000D__x000A_IwJDATMAGgJDAVMAQgJjATMAGgJjAVsAIwKAAnMAIwKgAnMAIwLgAjMAGgLgAjsAFQIAAzMAGgIA_x000D__x000A_AzsAFQIgAzMAGgIgAzsAFQJAAzMAGgJAAzsAFQJgAzsAFQKAAzsAFQKgAzsAFQKgAzMAGgLAAzsA_x000D__x000A_FQLgAzsAFQLgAzMAGgJPAGQAsgDFAAQAAQAGAAUACQAHAAsACAAAALAFewEAAEkEgAEAAJQFhQEA_x000D__x000A_ABMGigEAAGkIjwEAANcDkwEAAH0IjwEAANYAlwECAAQAAwACAAUABQACAAYABwACAAcACQABAAwA_x000D__x000A_CwABAA0ADQACABYADwACAB4AEQAuADUAPABDALcAygDZAOAABIAAAAAAAAAAAAAAAAAAAAAABQMA_x000D__x000A_AAQAAAAAAAAAAAAAAO4ApAAAAAAABAAAAAAAAAAAAAAA7gAIBAAAAAAKAAAAAAAAAAAAAAD3AK0A_x000D__x000A_AAAAAA0AAAAAAAAAAAAAAAABcgcAAAAADQAAAAAAAAAAAAAAAAGPBwAAAAANAAAAAAAAAAAAAAAA_x000D__x000A_AZoEAAAAAAoABAALAAQAAAAQABYAewAAABAANwB7AAAAAAA5AHsAXQDAAF0A4wAAAAAAAElEVFNW_x000D__x000A_YXJpYWJsZTEwMABJRFRTVmFyaWFibGVzMTAwAElEVFNFdmFsdWF0b3JDb250ZXh0MTAwAENvbnRl_x000D__x000A_eHRWYWx1ZWAxAFRocmVhZFNhZmVPYmplY3RQcm92aWRlcmAxAEludDMyADxNb2R1bGU_x002B_AElucHV0_x000D__x000A_SUQAVABEaXNwb3NlX19JbnN0YW5jZV9fAENyZWF0ZV9fSW5zdGFuY2VfXwBtc2NvcmxpYgBNaWNy_x000D__x000A_b3NvZnQuVmlzdWFsQmFzaWMAQ3JlYXRlSW5zdGFuY2UAZ2V0X0dldEluc3RhbmNlAGluc3RhbmNl_x000D__x000A_AEdldEhhc2hDb2RlAFJ1bnRpbWVUeXBlSGFuZGxlAEdldFR5cGVGcm9tSGFuZGxlAElucHV0TmFt_x000D__x000A_ZQBNaWNyb3NvZnQuU3FsU2VydmVyLkR0cy5QaXBlbGluZQBHZXRUeXBlAEFwcGxpY2F0aW9uQmFz_x000D__x000A_ZQBFZGl0b3JCcm93c2FibGVTdGF0ZQBIZWxwS2V5d29yZEF0dHJpYnV0ZQBHZW5lcmF0ZWRDb2Rl_x000D__x000A_QXR0cmlidXRlAERlYnVnZ2FibGVBdHRyaWJ1dGUARWRpdG9yQnJvd3NhYmxlQXR0cmlidXRlAENv_x000D__x000A_bVZpc2libGVBdHRyaWJ1dGUAU3RhbmRhcmRNb2R1bGVBdHRyaWJ1dGUASGlkZU1vZHVsZU5hbWVB_x000D__x000A_dHRyaWJ1dGUAVGFyZ2V0RnJhbWV3b3JrQXR0cmlidXRlAERlYnVnZ2VySGlkZGVuQXR0cmlidXRl_x000D__x000A_AE15R3JvdXBDb2xsZWN0aW9uQXR0cmlidXRlAENvbXBpbGF0aW9uUmVsYXhhdGlvbnNBdHRyaWJ1_x000D__x000A_dGUAQ0xTQ29tcGxpYW50QXR0cmlidXRlAFNTSVNTY3JpcHRDb21wb25lbnRFbnRyeVBvaW50QXR0_x000D__x000A_cmlidXRlAFJ1bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAFByZUV4ZWN1dGUAZ2V0X1ZhbHVl_x000D__x000A_AHNldF9WYWx1ZQBHZXRPYmplY3RWYWx1ZQBTY3JpcHRDb21wb25lbnRfYmM2YTYyYzdmNzJmNDBj_x000D__x000A_NDk1NGJkOWEyOGE4Y2UyZWYAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBUb1N0cmluZwBNYXRo_x000D__x000A_AE1pY3Jvc29mdC5WaXN1YWxCYXNpYy5NeVNlcnZpY2VzLkludGVybmFsAFN5c3RlbS5Db21wb25l_x000D__x000A_bnRNb2RlbABTY3JpcHRDb21wb25lbnRfYmM2YTYyYzdmNzJmNDBjNDk1NGJkOWEyOGE4Y2UyZWYu_x000D__x000A_ZGxsAHNldF9OZXdTdXJyb2dhdGVLZXlfSXNOdWxsAFNldE51bGwAZ2V0X0l0ZW0Ac2V0X0l0ZW0A_x000D__x000A_U3lzdGVtAFN5c3RlbS5Db21wb25lbnRNb2RlbC5EZXNpZ24AU2NyaXB0TWFpbgBnZXRfQXBwbGlj_x000D__x000A_YXRpb24ATXlBcHBsaWNhdGlvbgBJbnZhbGlkT3BlcmF0aW9uRXhjZXB0aW9uAFN0cmluZ0NvbXBh_x000D__x000A_cmlzb24AbwBPdXRwdXROYW1lTWFwAE91dHB1dE1hcABNaWNyb3NvZnQuU3FsU2VydmVyLkRUU1J1_x000D__x000A_bnRpbWVXcmFwAG1fQXBwT2JqZWN0UHJvdmlkZXIAbV9Vc2VyT2JqZWN0UHJvdmlkZXIAbV9Db21w_x000D__x000A_dXRlck9iamVjdFByb3ZpZGVyAG1fTXlXZWJTZXJ2aWNlc09iamVjdFByb3ZpZGVyAElucHV0MEJ1_x000D__x000A_ZmZlcgBQaXBlbGluZUJ1ZmZlcgBTY3JpcHRCdWZmZXIAVG9JbnRlZ2VyAFN5c3RlbS5Db2RlRG9t_x000D__x000A_LkNvbXBpbGVyAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlJ1bnRpbWUuV3JhcHBlcgBnZXRfVXNl_x000D__x000A_cgBDb3VudGVyAGdldF9Db21wdXRlcgBNeUNvbXB1dGVyAEFjdGl2YXRvcgAuY3RvcgAuY2N0b3IA_x000D__x000A_U3lzdGVtLkRpYWdub3N0aWNzAE1pY3Jvc29mdC5WaXN1YWxCYXNpYy5EZXZpY2VzAGdldF9XZWJT_x000D__x000A_ZXJ2aWNlcwBNeVdlYlNlcnZpY2VzAE1pY3Jvc29mdC5WaXN1YWxCYXNpYy5BcHBsaWNhdGlvblNl_x000D__x000A_cnZpY2VzAFN5c3RlbS5SdW50aW1lLkludGVyb3BTZXJ2aWNlcwBNaWNyb3NvZnQuVmlzdWFsQmFz_x000D__x000A_aWMuQ29tcGlsZXJTZXJ2aWNlcwBTeXN0ZW0uUnVudGltZS5Db21waWxlclNlcnZpY2VzAERlYnVn_x000D__x000A_Z2luZ01vZGVzAGdldF9SZWFkT25seVZhcmlhYmxlcwBCdWZmZXJDb2x1bW5JbmRleGVzAEdldENv_x000D__x000A_bHVtbkluZGV4ZXMARXF1YWxzAENvbnZlcnNpb25zAENvbm5lY3Rpb25zAFJ1bnRpbWVIZWxwZXJz_x000D__x000A_AE9iamVjdABNeVByb2plY3QARW5kT2ZSb3dzZXQAVXNlckNvbXBvbmVudABQYXJlbnRDb21wb25l_x000D__x000A_bnQAU2NyaXB0Q29tcG9uZW50AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuVHhTY3JpcHQATWljcm9zb2Z0_x000D__x000A_LlNxbFNlcnZlci5QaXBlbGluZUhvc3QASW5wdXQwX1Byb2Nlc3NJbnB1dABtX0NvbnRleHQAR2V0_x000D__x000A_VmFsdWVXaXRoQ29udGV4dABTY3JpcHRDb21wb25lbnRFdmFsQ29udGV4dABnZXRfRXZhbHVhdG9y_x000D__x000A_Q29udGV4dABJbnB1dDBfUHJvY2Vzc0lucHV0Um93AE5leHRSb3cAU2NyaXB0Q29tcG9uZW50X2Jj_x000D__x000A_NmE2MmM3ZjcyZjQwYzQ5NTRiZDlhMjhhOGNlMmVmLk15AHNldF9OZXdTdXJyb2dhdGVLZXkAZ2V0_x000D__x000A_X01heERpbWVuc2lvbktleQAAAAAAgJtJAHMATgB1AGwAbAAgAHAAcgBvAHAAZQByAHQAeQAgAGMA_x000D__x000A_YQBuAG4AbwB0ACAAYgBlACAAcwBlAHQAIAB0AG8AIABGAGEAbABzAGUALgAgAEEAcwBzAGkAZwBu_x000D__x000A_ACAAYQAgAHYAYQBsAHUAZQAgAHQAbwAgAHQAaABlACAAYwBvAGwAdQBtAG4AIABpAG4AcwB0AGUA_x000D__x000A_YQBkAC4AAA9JAG4AcAB1AHQAIAAwAAAfTQBhAHgARABpAG0AZQBuAHMAaQBvAG4ASwBlAHkAAAAA_x000D__x000A_loaT_x002B_iCH6Eyhl8JoYAwQ1AAEIAEBCAMgAAEFIAEBEREEIAEBDgUgAgEODgUgAQERHQcgBAEODg4O_x000D__x000A_BCABAQIGFRIsARIMBhUSLAESCAYVEiwBEj0GFRIsARIoBCAAEwAEBwEQCAkgAwESZR0IEmkFIAIB_x000D__x000A_CBwDBwECAyAAAgYgAgIOEX0FIAEdCAgFIAASgIEGIAESgIUcBQAAEoCJBiABHBKAjQQAAQgcBAAB_x000D__x000A_HBwEIAECHAMgAAgHAAESRRGAmQMgAA4EBwEeAAIeAAUQAQAeAAQKAR4ABAcBEwAGFRIsARMABwYV_x000D__x000A_Ek0BEwAGFRJNARMAAhMABAoBEwAFIAEBEwAIt3pcVhk04IkIsD9ffxHVCjoIiYRdzYCAzJEHBhUS_x000D__x000A_LAESDAcGFRIsARIIBwYVEiwBEj0HBhUSLAESKAIGCAMGEiADBhIkAwYSbQMAAAEEAAASDAQAABII_x000D__x000A_BAAAEj0EAAASKAUgAQESGAkgBAEIDhJlEmkFIAEBEm0EIAASRQcQAQEeAB4ABzABAQEQHgAECAAS_x000D__x000A_DAQIABIIBAgAEj0ECAASKAMoAAgDKAACBCgAEwAIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNl_x000D__x000A_cHRpb25UaHJvd3MBCAEAAgAAAAAARwEAGi5ORVRGcmFtZXdvcmssVmVyc2lvbj12NC4wAQBUDhRG_x000D__x000A_cmFtZXdvcmtEaXNwbGF5TmFtZRAuTkVUIEZyYW1ld29yayA0BAEAAAAIAQABAAAAAAAFAQAAAAAY_x000D__x000A_AQAKTXlUZW1wbGF0ZQgxMS4wLjAuMAAAYQEANFN5c3RlbS5XZWIuU2VydmljZXMuUHJvdG9jb2xz_x000D__x000A_LlNvYXBIdHRwQ2xpZW50UHJvdG9jb2wSQ3JlYXRlX19JbnN0YW5jZV9fE0Rpc3Bvc2VfX0luc3Rh_x000D__x000A_bmNlX18AAAAQAQALTXkuQ29tcHV0ZXIAABMBAA5NeS5BcHBsaWNhdGlvbgAADAEAB015LlVzZXIA_x000D__x000A_ABMBAA5NeS5XZWJTZXJ2aWNlcwAAAABoNwAAAAAAAAAAAACCNwAAACAAAAAAAAAAAAAAAAAAAAAA_x000D__x000A_AAAAAAAAdDcAAAAAAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA_x002F_yUAIAAQAAAA_x000D__x000A_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA_x000D__x000A_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA_x000D__x000A_AAEAEAAAABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAEgA_x000D__x000A_AABYQAAA7AIAAAAAAAAAAAAA7AI0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8AAAAA_x000D__x000A_AL0E7_x002F_4AAAEAAAAAAAAAAAAAAAAAAAAAAD8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABEAAAA_x000D__x000A_AQBWAGEAcgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8AbgAA_x000D__x000A_AAAAAACwBEwCAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAACgCAAABADAAMAAwADAA_x000D__x000A_MAA0AGIAMAAAACwAAgABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAAAAAgAAAAMAAI_x000D__x000A_AAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAwAC4AMAAuADAALgAwAAAAigA1AAEASQBuAHQA_x000D__x000A_ZQByAG4AYQBsAE4AYQBtAGUAAABTAGMAcgBpAHAAdABDAG8AbQBwAG8AbgBlAG4AdABfAGIAYwA2_x000D__x000A_AGEANgAyAGMANwBmADcAMgBmADQAMABjADQAOQA1ADQAYgBkADkAYQAyADgAYQA4AGMAZQAyAGUA_x000D__x000A_ZgAuAGQAbABsAAAAAAAoAAIAAQBMAGUAZwBhAGwAQwBvAHAAeQByAGkAZwBoAHQAAAAgAAAAkgA1_x000D__x000A_AAEATwByAGkAZwBpAG4AYQBsAEYAaQBsAGUAbgBhAG0AZQAAAFMAYwByAGkAcAB0AEMAbwBtAHAA_x000D__x000A_bwBuAGUAbgB0AF8AYgBjADYAYQA2ADIAYwA3AGYANwAyAGYANAAwAGMANAA5ADUANABiAGQAOQBh_x000D__x000A_ADIAOABhADgAYwBlADIAZQBmAC4AZABsAGwAAAAAADQACAABAFAAcgBvAGQAdQBjAHQAVgBlAHIA_x000D__x000A_cwBpAG8AbgAAADAALgAwAC4AMAAuADAAAAA4AAgAAQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBz_x000D__x000A_AGkAbwBuAAAAMAAuADAALgAwAC4AMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA_x000D__x000A_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA_x000D__x000A_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA_x000D__x000A_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAwAAACUNwAAAAAA_x000D__x000A_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA_x000D__x000A_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA_x000D__x000A_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA_x000D__x000A_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA_x000D__x000A_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA_x000D__x000A_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA_x000D__x000A_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA_x000D__x000A_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA_x000D__x000A_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA_x003D_</arrayElement>
+                      </arrayElements>
+                    </property>
+                    <property
+                      dataType="System.String"
+                      description="Comma separated list of variables to be made available for read access"
+                      name="ReadOnlyVariables"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg">MaxDimensionKey</property>
+                    <property
+                      dataType="System.String"
+                      description="Comma separated list of variables to be made available for read and write access"
+                      name="ReadWriteVariables"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
+                    <property
+                      dataType="System.String"
+                      description="List of breakpoints present on the script."
+                      isArray="true"
+                      name="BreakpointCollection"
+                      typeConverter="NOTBROWSABLE">
+                      <arrayElements
+                        arrayElementCount="0" />
+                    </property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                      name="VSTAProjectName"
+                      typeConverter="NOTBROWSABLE">ScriptComponent_bc6a62c7f72f40c4954bd9a28a8ce2ef</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the programming language used by the script."
+                      name="ScriptLanguage"
+                      typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">VisualBasic</property>
+                    <property
+                      dataType="System.String"
+                      description="Checksum to match component metedata against compiled codes."
+                      name="MetadataChecksum"
+                      typeConverter="NOTBROWSABLE">39a8eb9f82205b8b5a495818096eebbf</property>
+                    <property
+                      dataType="System.String"
+                      description="Checksum to match component metedata against compiled codes."
+                      name="MetadataShaChecksum"
+                      typeConverter="NOTBROWSABLE">5a3e3bb30d37b1d2275d9e1a5e9f5d0ef09d1e94</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Load Class Dimension\Load ClassDim\Generate New Member Surrogate Keys.Inputs[Input 0]"
+                      hasSideEffects="true"
+                      name="Input 0">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load Class Dimension\Load ClassDim\Generate New Member Surrogate Keys.Outputs[Output 0]"
+                      name="Output 0"
+                      synchronousInputId="Package\Load Class Dimension\Load ClassDim\Generate New Member Surrogate Keys.Inputs[Input 0]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Generate New Member Surrogate Keys.Outputs[Output 0].Columns[NewSurrogateKey]"
+                          dataType="i4"
+                          lineageId="Package\Load Class Dimension\Load ClassDim\Generate New Member Surrogate Keys.Outputs[Output 0].Columns[NewSurrogateKey]"
+                          name="NewSurrogateKey" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Load Class Dimension\Load ClassDim\Source FE Class"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="OLE DB Source"
+                  name="Source FE Class"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset"></property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT     
+T.TABLEENTRIESID AS TableEntriesID, 
+C.NAME AS Type, 
+T.SEQUENCE AS Sequence, 
+T.ENTRYID AS ClassCode, 
+T.DESCRIPTION AS ClassName
+FROM         
+TABLEENTRIES AS T 
+INNER JOIN CODETABLES AS C ON T.CODETABLESID = C.CODETABLESID
+WHERE
+C.Name = 'Class'
+
+UNION
+SELECT
+-1, 'Class', -1, NULL,'No Class'</property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">2</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping">"Parameter0",{92EC719E-4BAE-430C-AD49-3ABAC9825020};"Parameter1",{13496EDB-0099-41BC-B0ED-44230779E97B};</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[ETL_DB_CONN_FE]"
+                      connectionManagerRefId="Package.ConnectionManagers[ETL_DB_CONN_FE]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Output]"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Output].Columns[TableEntriesID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Output].ExternalColumns[TableEntriesID]"
+                          lineageId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Output].Columns[TableEntriesID]"
+                          name="TableEntriesID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Output].Columns[Type]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Output].ExternalColumns[Type]"
+                          length="30"
+                          lineageId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Output].Columns[Type]"
+                          name="Type"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Output].Columns[ClassCode]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Output].ExternalColumns[ClassCode]"
+                          length="6"
+                          lineageId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Output].Columns[ClassCode]"
+                          name="ClassCode"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Output].Columns[ClassName]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Output].ExternalColumns[ClassName]"
+                          length="60"
+                          lineageId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Output].Columns[ClassName]"
+                          name="ClassName"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Output].Columns[Sequence]"
+                          dataType="i2"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Output].ExternalColumns[Sequence]"
+                          lineageId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Output].Columns[Sequence]"
+                          name="Sequence"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Output].ExternalColumns[TableEntriesID]"
+                          dataType="i4"
+                          name="TableEntriesID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Output].ExternalColumns[Type]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="Type" />
+                        <externalMetadataColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Output].ExternalColumns[ClassCode]"
+                          codePage="1252"
+                          dataType="str"
+                          length="6"
+                          name="ClassCode" />
+                        <externalMetadataColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Output].ExternalColumns[ClassName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="60"
+                          name="ClassName" />
+                        <externalMetadataColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Output].ExternalColumns[Sequence]"
+                          dataType="i4"
+                          name="Sequence" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Error Output].Columns[TableEntriesID]"
+                          dataType="i4"
+                          lineageId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Error Output].Columns[TableEntriesID]"
+                          name="TableEntriesID" />
+                        <outputColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Error Output].Columns[Type]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          lineageId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Error Output].Columns[Type]"
+                          name="Type" />
+                        <outputColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Error Output].Columns[Sequence]"
+                          dataType="i4"
+                          lineageId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Error Output].Columns[Sequence]"
+                          name="Sequence" />
+                        <outputColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Error Output].Columns[ClassCode]"
+                          codePage="1252"
+                          dataType="str"
+                          length="6"
+                          lineageId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Error Output].Columns[ClassCode]"
+                          name="ClassCode" />
+                        <outputColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Error Output].Columns[ClassName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="60"
+                          lineageId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Error Output].Columns[ClassName]"
+                          name="ClassName" />
+                        <outputColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Load Class Dimension\Load ClassDim.Paths[Derived Column Output]"
+                  endId="Package\Load Class Dimension\Load ClassDim\Generate New Member Surrogate Keys.Inputs[Input 0]"
+                  name="Derived Column Output"
+                  startId="Package\Load Class Dimension\Load ClassDim\Derived Col ETLControlID.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Load Class Dimension\Load ClassDim.Paths[OLE DB Source Output]"
+                  endId="Package\Load Class Dimension\Load ClassDim\Derived Col ETLControlID.Inputs[Derived Column Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Load Class Dimension\Load ClassDim\Source FE Class.Outputs[OLE DB Source Output]" />
+                <path
+                  refId="Package\Load Class Dimension\Load ClassDim.Paths[Output 0]"
+                  endId="Package\Load Class Dimension\Load ClassDim\Destination  DIM Class WH.Inputs[OLE DB Destination Input]"
+                  name="Output 0"
+                  startId="Package\Load Class Dimension\Load ClassDim\Generate New Member Surrogate Keys.Outputs[Output 0]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Load Class Dimension\Truncate ClassDim Table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{0dfabeff-1c02-4a96-acd2-099f33ab3b64}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Truncate ClassDim Table"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="Disable">!@[User::TruncateTables]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{560A99D6-B5CB-4ED3-9312-05117103DB68}"
+              SQLTask:SqlStatementSource="-- Truncate Location Dim Table&#xA;&#xA;TRUNCATE TABLE DIM_Class" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Load Class Dimension.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{05B3F57B-C50E-423C-B4AC-E0C435FBF67E}"
+          DTS:From="Package\Load Class Dimension\Truncate ClassDim Table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Load Class Dimension\Execute SQL Get ClassDimID Max" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Load Class Dimension.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{25306318-62CA-4750-ABAA-840FEFE80475}"
+          DTS:From="Package\Load Class Dimension\Execute SQL Get ClassDimID Max"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Load Class Dimension\Load ClassDim" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PackageVariables>
+    <DTS:PackageVariable
+      DTS:CreationName=""
+      DTS:DTSID="{880C608E-3C2E-4430-9A07-04C2CE7A839D}"
+      DTS:Namespace="dts-designer-1.0"
+      DTS:ObjectName="{05B3F57B-C50E-423C-B4AC-E0C435FBF67E}">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="PackageVariableValue">&lt;PrecedenceConstraint xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0"&gt;&lt;dwd:EvalOp&gt;Constraint&lt;/dwd:EvalOp&gt;&lt;/PrecedenceConstraint&gt;</DTS:Property>
+    </DTS:PackageVariable>
+    <DTS:PackageVariable
+      DTS:CreationName=""
+      DTS:DTSID="{533BD328-4348-43C0-88AA-4B878E382276}"
+      DTS:Namespace="dts-designer-1.0"
+      DTS:ObjectName="{25306318-62CA-4750-ABAA-840FEFE80475}">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="PackageVariableValue">&lt;PrecedenceConstraint xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0"&gt;&lt;dwd:EvalOp&gt;Constraint&lt;/dwd:EvalOp&gt;&lt;/PrecedenceConstraint&gt;</DTS:Property>
+    </DTS:PackageVariable>
+    <DTS:PackageVariable
+      DTS:CreationName=""
+      DTS:DTSID="{A84FCE75-6023-4078-AAFC-351E5E994BC1}"
+      DTS:Namespace="dts-designer-1.0"
+      DTS:ObjectName="{521D94D4-65A4-4105-8DFC-E96E0B5401B8}">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="PackageVariableValue">&lt;TaskHost xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0"&gt;&lt;dwd:DtsDataFlowDiagram&gt;&lt;dwd:BoundingLeft&gt;-3930&lt;/dwd:BoundingLeft&gt;&lt;dwd:Layout&gt;&lt;dds&gt;&lt;diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="Microsoft.DataWarehouse.Layout.GraphLayout110" defaultlineroute="Microsoft.DataWarehouse.Layout.GraphLayout110" version="7" nextobject="18" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4930" scrolltop="-1000" gridx="150" gridy="150" marginx="1000" marginy="1000" zoom="100" x="28707" y="13811" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="1" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="0" backpictureclsid="{00000000-0000-0000-0000-000000000000}"&gt;&lt;font&gt;&lt;ddsxmlobjectstreamwrapper binary="01010000900180380100065461686f6d61" /&gt;&lt;/font&gt;&lt;mouseicon&gt;&lt;ddsxmlobjectstreamwrapper binary="6c74000000000000" /&gt;&lt;/mouseicon&gt;&lt;/diagram&gt;&lt;layoutmanager&gt;&lt;ddsxmlobj /&gt;&lt;/layoutmanager&gt;&lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="OLE DB Source" left="1653" top="3016" logicalid="8" controlid="1" masterid="0" hint1="0" hint2="0" width="4737" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobjectstreaminitwrapper binary="00080000811200008c040000" /&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="60" vartype="8" /&gt;&lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;shape groupshapeid="0" groupnode="0" /&gt;&lt;/ddscontrol&gt;&lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="OLE DB Destination" left="1653" top="10237" logicalid="9" controlid="2" masterid="0" hint1="0" hint2="0" width="4737" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobjectstreaminitwrapper binary="00080000811200008c040000" /&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="14" vartype="8" /&gt;&lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;shape groupshapeid="0" groupnode="0" /&gt;&lt;/ddscontrol&gt;&lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="Updates column values using expressions" left="1653" top="5423" logicalid="10" controlid="3" masterid="0" hint1="0" hint2="0" width="4737" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobjectstreaminitwrapper binary="00080000811200008c040000" /&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="2" vartype="8" /&gt;&lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;shape groupshapeid="0" groupnode="0" /&gt;&lt;/ddscontrol&gt;&lt;ddscontrol controlprogid="MSDDS.Polyline" left="3622" top="3781" logicalid="11" controlid="4" masterid="0" hint1="0" hint2="0" width="799" height="2142" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobj&gt;&lt;polyline endtypedst="3" endtypesrc="1" usercolor="32768" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" /&gt;&lt;/ddsxmlobj&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="91" vartype="8" /&gt;&lt;property name="Virtual" value="0" vartype="11" /&gt;&lt;property name="VisibleAP" value="0" vartype="3" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;connector lineroutestyle="Microsoft.DataWarehouse.Layout.GraphLayout110" sourceid="1" destid="3" sourceattachpoint="9" destattachpoint="8" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="2" relatedid="0" virtual="0"&gt;&lt;point x="4021" y="4180" /&gt;&lt;point x="4021" y="5423" /&gt;&lt;/connector&gt;&lt;/ddscontrol&gt;&lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="Precompiled script failed to load. Attempting to recompile. For more information, see the Microsoft ..." left="1653" top="7830" logicalid="12" controlid="5" masterid="0" hint1="0" hint2="0" width="4737" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobjectstreaminitwrapper binary="00080000811200008c040000" /&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="47" vartype="8" /&gt;&lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;shape groupshapeid="0" groupnode="0" /&gt;&lt;/ddscontrol&gt;&lt;ddscontrol controlprogid="MSDDS.Polyline" left="3622" top="6188" logicalid="13" controlid="6" masterid="0" hint1="0" hint2="0" width="799" height="2142" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobj&gt;&lt;polyline endtypedst="3" endtypesrc="1" usercolor="32768" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" /&gt;&lt;/ddsxmlobj&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="90" vartype="8" /&gt;&lt;property name="Virtual" value="0" vartype="11" /&gt;&lt;property name="VisibleAP" value="0" vartype="3" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;connector lineroutestyle="Microsoft.DataWarehouse.Layout.GraphLayout110" sourceid="3" destid="5" sourceattachpoint="9" destattachpoint="8" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="2" relatedid="0" virtual="0"&gt;&lt;point x="4021" y="6587" /&gt;&lt;point x="4021" y="7830" /&gt;&lt;/connector&gt;&lt;/ddscontrol&gt;&lt;ddscontrol controlprogid="MSDDS.Polyline" left="3622" top="8595" logicalid="14" controlid="7" masterid="0" hint1="0" hint2="0" width="799" height="2142" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobj&gt;&lt;polyline endtypedst="3" endtypesrc="1" usercolor="32768" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" /&gt;&lt;/ddsxmlobj&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="92" vartype="8" /&gt;&lt;property name="Virtual" value="0" vartype="11" /&gt;&lt;property name="VisibleAP" value="0" vartype="3" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;connector lineroutestyle="Microsoft.DataWarehouse.Layout.GraphLayout110" sourceid="5" destid="2" sourceattachpoint="9" destattachpoint="8" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="2" relatedid="0" virtual="0"&gt;&lt;point x="4021" y="8994" /&gt;&lt;point x="4021" y="10237" /&gt;&lt;/connector&gt;&lt;/ddscontrol&gt;&lt;/dds&gt;&lt;/dwd:Layout&gt;&lt;dwd:PersistedViewPortLeft&gt;-4930&lt;/dwd:PersistedViewPortLeft&gt;&lt;dwd:PersistedViewPortTop&gt;-1000&lt;/dwd:PersistedViewPortTop&gt;&lt;/dwd:DtsDataFlowDiagram&gt;&lt;dwd:DtsComponentDesignerPropertiesList&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;109	DataSourceViewID&lt;/dwd:key&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;1018	TableInfoObjectType&lt;/dwd:key&gt;&lt;dwd:value xsi:type="xsd:string"&gt;Table&lt;/dwd:value&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;109	UsedTableName&lt;/dwd:key&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;1018	DataSourceViewID&lt;/dwd:key&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;109	OverwriteParamsSQLProp&lt;/dwd:key&gt;&lt;dwd:value xsi:type="xsd:boolean"&gt;false&lt;/dwd:value&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;109	TableInfoObjectType&lt;/dwd:key&gt;&lt;dwd:value xsi:type="xsd:string"&gt;Table&lt;/dwd:value&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;1	DataSourceViewID&lt;/dwd:key&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;1377	TableInfoObjectType&lt;/dwd:key&gt;&lt;dwd:value xsi:type="xsd:string"&gt;Table&lt;/dwd:value&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;1377	DataSourceViewID&lt;/dwd:key&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;/dwd:DtsComponentDesignerPropertiesList&gt;&lt;/TaskHost&gt;</DTS:Property>
+    </DTS:PackageVariable>
+    <DTS:PackageVariable
+      DTS:CreationName=""
+      DTS:DTSID="{C068F8BD-AD48-442B-B39D-4B0AEFB93B5B}"
+      DTS:Namespace="dts-designer-1.0"
+      DTS:ObjectName="{521D94D4-65A4-4105-8DFC-E96E0B5401B8}-2155">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="PackageVariableValue">&lt;PipelinePath xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0"&gt;&lt;dwd:SourceName&gt;OLE DB Source Output&lt;/dwd:SourceName&gt;&lt;dwd:DestinationName&gt;Derived Column Input&lt;/dwd:DestinationName&gt;&lt;/PipelinePath&gt;</DTS:Property>
+    </DTS:PackageVariable>
+    <DTS:PackageVariable
+      DTS:CreationName=""
+      DTS:DTSID="{8456D4D6-0A5F-42B9-87D2-B373E74BEEC8}"
+      DTS:Namespace="dts-designer-1.0"
+      DTS:ObjectName="{521D94D4-65A4-4105-8DFC-E96E0B5401B8}-4427">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="PackageVariableValue">&lt;PipelinePath xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0"&gt;&lt;dwd:SourceName&gt;Derived Column Output&lt;/dwd:SourceName&gt;&lt;dwd:DestinationName&gt;Input 0&lt;/dwd:DestinationName&gt;&lt;/PipelinePath&gt;</DTS:Property>
+    </DTS:PackageVariable>
+    <DTS:PackageVariable
+      DTS:CreationName=""
+      DTS:DTSID="{851675D3-870A-4B3F-A921-0518B79DE0F0}"
+      DTS:Namespace="dts-designer-1.0"
+      DTS:ObjectName="{521D94D4-65A4-4105-8DFC-E96E0B5401B8}-4428">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="PackageVariableValue">&lt;PipelinePath xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0"&gt;&lt;dwd:SourceName&gt;Output 0&lt;/dwd:SourceName&gt;&lt;dwd:DestinationName&gt;OLE DB Destination Input&lt;/dwd:DestinationName&gt;&lt;/PipelinePath&gt;</DTS:Property>
+    </DTS:PackageVariable>
+    <DTS:PackageVariable
+      DTS:CreationName=""
+      DTS:DTSID="{3438074F-6FCE-413C-9B09-1B813E648FE7}"
+      DTS:Namespace="dts-designer-1.0"
+      DTS:ObjectName="package-diagram">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="PackageVariableValue">&lt;Package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0"&gt;&lt;dwd:DtsControlFlowDiagram&gt;&lt;dwd:BoundingLeft&gt;-37583&lt;/dwd:BoundingLeft&gt;&lt;dwd:BoundingTop&gt;-11919&lt;/dwd:BoundingTop&gt;&lt;dwd:Layout&gt;&lt;dds&gt;&lt;diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="Microsoft.DataWarehouse.Layout.GraphLayout110" defaultlineroute="Microsoft.DataWarehouse.Layout.GraphLayout110" version="7" nextobject="17" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-38583" scrolltop="-12919" gridx="150" gridy="150" marginx="1000" marginy="1000" zoom="90" x="28707" y="14737" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="1" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}"&gt;&lt;font&gt;&lt;ddsxmlobjectstreamwrapper binary="01010000900180380100065461686f6d61" /&gt;&lt;/font&gt;&lt;mouseicon&gt;&lt;ddsxmlobjectstreamwrapper binary="6c74000000000000" /&gt;&lt;/mouseicon&gt;&lt;/diagram&gt;&lt;layoutmanager&gt;&lt;ddsxmlobj /&gt;&lt;/layoutmanager&gt;&lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="Execute SQL Task" left="-35312" top="-5892" logicalid="8" controlid="1" masterid="4" hint1="0" hint2="0" width="4381" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobjectstreaminitwrapper binary="000800001d1100008c040000" /&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="Package\Load Class Dimension\Execute SQL Get ClassDimID Max" vartype="8" /&gt;&lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;shape groupshapeid="0" groupnode="0" /&gt;&lt;/ddscontrol&gt;&lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="Validation warnings occurred." left="-35312" top="-3644" logicalid="9" controlid="2" masterid="4" hint1="0" hint2="0" width="4381" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobjectstreaminitwrapper binary="000800001d1100008c040000" /&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="Package\Load Class Dimension\Load ClassDim" vartype="8" /&gt;&lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;shape groupshapeid="0" groupnode="0" /&gt;&lt;/ddscontrol&gt;&lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="Execute SQL Task" left="-35312" top="-8297" logicalid="10" controlid="3" masterid="4" hint1="0" hint2="0" width="4381" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobjectstreaminitwrapper binary="000800001d1100008c040000" /&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="Package\Load Class Dimension\Truncate ClassDim Table" vartype="8" /&gt;&lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;shape groupshapeid="0" groupnode="0" /&gt;&lt;/ddscontrol&gt;&lt;ddscontrol controlprogid="DdsShapes.DdsContainerObjectManagedBridge.2" tooltip="Sequence Container" left="-37526" top="-10449" logicalid="11" controlid="4" masterid="0" hint1="0" hint2="0" width="8737" height="9112" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobjectstreaminitwrapper binary="000800002122000098230000" /&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="Caption" value="Load Class Dimension" vartype="8" /&gt;&lt;property name="CaptionHeight" value="1147" vartype="3" /&gt;&lt;property name="Collapsed" value="0" vartype="11" /&gt;&lt;property name="CollapsedWidth" value="12392" vartype="3" /&gt;&lt;property name="LogicalObject" value="Package\Load Class Dimension" vartype="8" /&gt;&lt;property name="RealHeight" value="0" vartype="3" /&gt;&lt;property name="RealWidth" value="0" vartype="3" /&gt;&lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;shape groupshapeid="0" groupnode="0" /&gt;&lt;/ddscontrol&gt;&lt;ddscontrol controlprogid="MSDDS.Text" left="-37583" top="-11919" logicalid="12" controlid="5" masterid="0" hint1="0" hint2="0" width="7776" height="540" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobjectstreaminitwrapper binary="00020000601e00001c0200000300640000000500008000000000000000002a00010000009001c0d4010005417269616c19004c006f0061006400200043006c006100730073002000460072006f006d00200046004500200053006f00750072006300650000000000" /&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj /&gt;&lt;/layoutobject&gt;&lt;shape groupshapeid="0" groupnode="0" /&gt;&lt;/ddscontrol&gt;&lt;ddscontrol controlprogid="MSDDS.Polyline" left="-33521" top="-7532" logicalid="13" controlid="6" masterid="0" hint1="0" hint2="0" width="799" height="2140" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobj&gt;&lt;polyline endtypedst="3" endtypesrc="1" usercolor="32768" linestyle="0" linerender="2" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" /&gt;&lt;/ddsxmlobj&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="Package\Load Class Dimension.PrecedenceConstraints[Constraint]" vartype="8" /&gt;&lt;property name="Virtual" value="0" vartype="11" /&gt;&lt;property name="VisibleAP" value="0" vartype="3" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;connector lineroutestyle="Microsoft.DataWarehouse.Layout.GraphLayout110" sourceid="3" destid="1" sourceattachpoint="7" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="2" relatedid="0" virtual="0"&gt;&lt;point x="-33122" y="-7133" /&gt;&lt;point x="-33122" y="-5892" /&gt;&lt;/connector&gt;&lt;/ddscontrol&gt;&lt;ddscontrol controlprogid="MSDDS.Polyline" left="-33521" top="-5127" logicalid="14" controlid="7" masterid="0" hint1="0" hint2="0" width="799" height="1983" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobj&gt;&lt;polyline endtypedst="3" endtypesrc="1" usercolor="32768" linestyle="0" linerender="2" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" /&gt;&lt;/ddsxmlobj&gt;&lt;/control&gt;&lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="Package\Load Class Dimension.PrecedenceConstraints[Constraint 1]" vartype="8" /&gt;&lt;property name="Virtual" value="0" vartype="11" /&gt;&lt;property name="VisibleAP" value="0" vartype="3" /&gt;&lt;/ddsxmlobj&gt;&lt;/layoutobject&gt;&lt;connector lineroutestyle="Microsoft.DataWarehouse.Layout.GraphLayout110" sourceid="1" destid="2" sourceattachpoint="7" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="2" relatedid="0" virtual="0"&gt;&lt;point x="-33122" y="-4728" /&gt;&lt;point x="-33122" y="-3644" /&gt;&lt;/connector&gt;&lt;/ddscontrol&gt;&lt;/dds&gt;&lt;/dwd:Layout&gt;&lt;dwd:PersistedZoom&gt;90&lt;/dwd:PersistedZoom&gt;&lt;dwd:PersistedViewPortLeft&gt;-38583&lt;/dwd:PersistedViewPortLeft&gt;&lt;dwd:PersistedViewPortTop&gt;-12919&lt;/dwd:PersistedViewPortTop&gt;&lt;/dwd:DtsControlFlowDiagram&gt;&lt;/Package&gt;</DTS:Property>
+    </DTS:PackageVariable>
+  </DTS:PackageVariables>
+</DTS:Executable>
