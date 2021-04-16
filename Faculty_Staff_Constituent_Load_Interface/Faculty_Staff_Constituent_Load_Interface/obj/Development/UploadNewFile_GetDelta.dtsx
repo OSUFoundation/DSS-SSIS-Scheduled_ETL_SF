@@ -7,12 +7,12 @@
   DTS:CreatorName="FOUNDATION\bhoffman"
   DTS:DTSID="{F1FEEB0D-9DEA-4483-ACE8-BEB9FC057B9C}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="14.0.3026.27"
+  DTS:LastModifiedProductVersion="15.0.2000.157"
   DTS:LocaleID="1033"
   DTS:ObjectName="UploadNewFile_GetDelta"
   DTS:PackageType="5"
-  DTS:VersionBuild="189"
-  DTS:VersionGUID="{E73AC407-7DC1-4265-86B6-9359E3BA0D7E}">
+  DTS:VersionBuild="194"
+  DTS:VersionGUID="{A1F46DF8-D6B3-4B05-B86F-5AA2D20E2E08}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -22,14 +22,15 @@
       DTS:DTSID="{ED15A485-4104-4881-AD13-5CEE78DDB776}"
       DTS:ObjectName="Devart SF  - ascend QA">
       <DTS:ObjectData>
-        <SalesforceConnectionManager>
-          <ConnectionString>User Id=ccameron@osugiving.com.qa;Host=test.salesforce.com;Batch Size=2000</ConnectionString>
+        <SalesforceConnectionManager
+          ConnectByProxy="False">
+          <ConnectionString>User Id=ssisapi@osugiving.com.qa;Host=test.salesforce.com;Batch Size=2000</ConnectionString>
           <Password
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJd+wGmzMVEeY1/dSBm3ITQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACzF/9jNMSlJjoTpmgtm9mNAAAAAASAAACgAAAAEAAAAHR2cNDDEpcDTOCpulofVBsoAAAABZt4ATqNTtxUCCOgjYaxxXA8lhUAxMcxvh4eEE93oq3+1FkWVnEhcxQAAAAeUyDWDSpDIAJrskDPk2y/zTPqeg</Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAaC7XnUQ25UedPjKIqAYR+wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADRYtOt96pnOcZhBH8WKSH0AAAAAASAAACgAAAAEAAAAIuczD6VzJK6UzmfCHPav2IwAAAAMgCABKS5DCSSC19qcF056kgylUonkxH3iG8NB2VfdF8lQP4E5g0DZBqHxOAH9mJKFAAAACJkixHaEjIR7sEF8+kdzyKtYH3t</Password>
           <SecurityToken
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJd+wGmzMVEeY1/dSBm3ITQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAQ4s2eSeP3TSoTNh+xB0r1AAAAAASAAACgAAAAEAAAAJIyQInDCal56BpJRp3hrFs4AAAA/ZXYc8vJe1KEKuKGI+LRrHlxlUsQr1fBHkjQBmsSshYo88ZFSkadRKwLnKWct2JTCpCiPyWnpEgUAAAAqChh/QfDIA1FQV/S/VfkCUow8hw</SecurityToken>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAaC7XnUQ25UedPjKIqAYR+wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACeukDRp9oEru5HIN+0XREDAAAAAASAAACgAAAAEAAAAJCLfDm7bRif3i/J8XeUc7c4AAAAlOqeb+5rcH0kycQEHTCsedeGbr+EN+nxnF15hWGmq3QoGmoOs1IFCG/uPg0+zz9cmjXeAPyjm50UAAAASt6Y/EdUOLP4xpmFkJs9hKWabrs</SecurityToken>
         </SalesforceConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -306,13 +307,18 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[OSUF_INTERFACES_FACULTY_STAFF]"
+      DTS:refId="Package.ConnectionManagers[OSUF_INTERFACES.OSUF_SSIS]"
       DTS:CreationName="ODBC"
-      DTS:DTSID="{06782813-945A-441D-ABB3-D4A2834195C2}"
-      DTS:ObjectName="OSUF_INTERFACES_FACULTY_STAFF">
+      DTS:DTSID="{853387CD-AC16-4D73-A478-3FEE1AFA20D1}"
+      DTS:ObjectName="OSUF_INTERFACES.OSUF_SSIS">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Dsn=OSUF_INTERFACES_FACULTY_STAFF;" />
+          DTS:ConnectionString="uid=OSUF_SSIS;Dsn=OSUF_INTERFACES;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAaC7XnUQ25UedPjKIqAYR+wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACh9He/Ufen+olpwwuIxBP/AAAAAASAAACgAAAAEAAAADexmhOOH2nAhZylh52n9aJAAAAASJSpLgEXdJImMKkKo5nu273jg3DxlXmzaZwkprxNK3C73UjOC8hWozT4jpLNzWAjptRxJaKf0x334xxPJz31FBQAAAAyUq4eWEKbFziMmpQURZBrlbxyHw</DTS:Password>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -1334,6 +1340,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                       description="Specifies the text to write to the destination file before any data is written."
                       expressionType="Notify"
                       name="Header" />
+                    <property
+                      dataType="System.Boolean"
+                      description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                      name="EscapeQualifier">false</property>
                   </properties>
                   <connections>
                     <connection
@@ -1732,7 +1742,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                 <component
                   refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Export FS File to csv\ODBC Source"
                   componentClassID="Attunity.SSISODBCSrc"
-                  contactInfo="ODBC Source;Connector for Open Database Connectivity (ODBC) by Attunity; Attunity Ltd.; All Rights Reserved; http://www.attunity.com;7"
                   description="ODBC Source"
                   name="ODBC Source"
                   usesDispositions="true"
@@ -1800,8 +1809,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                   <connections>
                     <connection
                       refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Export FS File to csv\ODBC Source.Connections[ODBCConnection]"
-                      connectionManagerID="Package.ConnectionManagers[OSUF_INTERFACES_FACULTY_STAFF]"
-                      connectionManagerRefId="Package.ConnectionManagers[OSUF_INTERFACES_FACULTY_STAFF]"
+                      connectionManagerID="{06782813-945A-441D-ABB3-D4A2834195C2}:invalid"
+                      connectionManagerRefId="{06782813-945A-441D-ABB3-D4A2834195C2}:invalid"
                       description="The ODBC runtime connection"
                       name="ODBCConnection" />
                   </connections>
@@ -4854,7 +4863,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                 <component
                   refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source"
                   componentClassID="Attunity.SSISODBCSrc"
-                  contactInfo="ODBC Source;Connector for Open Database Connectivity (ODBC) by Attunity; Attunity Ltd.; All Rights Reserved; http://www.attunity.com;7"
                   description="ODBC Source"
                   name="ODBC Source"
                   usesDispositions="true"
@@ -4869,8 +4877,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                       dataType="System.String"
                       description="The SQL command to be executed."
                       expressionType="Notify"
-                      name="SqlCommand">Select Top 10 * From "FS_Delta"
-Where CWID Between 'A11757319' AND 'A11900000'</property>
+                      name="SqlCommand">Select Top 10 * From "FACULTY_STAFF"."FS_Delta"
+--Where CWID Between 'A11757319' AND 'A11900000'
+Where CWID In('A11796059','A20251081')</property>
                     <property
                       dataType="System.Int32"
                       description="Specify the number of rows fetched per batch."
@@ -4923,8 +4932,8 @@ Where CWID Between 'A11757319' AND 'A11900000'</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source.Connections[ODBCConnection]"
-                      connectionManagerID="Package.ConnectionManagers[OSUF_INTERFACES_FACULTY_STAFF]"
-                      connectionManagerRefId="Package.ConnectionManagers[OSUF_INTERFACES_FACULTY_STAFF]"
+                      connectionManagerID="Package.ConnectionManagers[OSUF_INTERFACES.OSUF_SSIS]"
+                      connectionManagerRefId="Package.ConnectionManagers[OSUF_INTERFACES.OSUF_SSIS]"
                       description="The ODBC runtime connection"
                       name="ODBCConnection" />
                   </connections>
@@ -6493,113 +6502,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
   </ProjectExtensions>
 </Project>]]></ProjectItem>
               <ProjectItem
-                Name="My Project\AssemblyInfo.vb"
-                Encoding="UTF8"><![CDATA[Imports System
-Imports System.Reflection
-Imports System.Runtime.InteropServices
-
-' General Information about an assembly is controlled through the following 
-' set of attributes. Change these attribute values to modify the information
-' associated with an assembly.
-
-' Review the values of the assembly attributes
-
-<Assembly: AssemblyTitle("ST_59dfa5ba43f3469c98bb340dfe7b3e72")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("ST_59dfa5ba43f3469c98bb340dfe7b3e72")> 
-<Assembly: AssemblyCopyright("Copyright @  2019")> 
-<Assembly: AssemblyTrademark("")> 
-<Assembly: CLSCompliant(True)> 
-
-<Assembly: ComVisible(False)> 
-
-'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("beb26878-c19a-453a-aa5e-45b9049c46a9")> 
-
-' Version information for an assembly consists of the following four values:
-'
-'      Major Version
-'      Minor Version 
-'      Build Number
-'      Revision
-'
-' You can specify all the values or you can default the Build and Revision Numbers 
-' by using the '*' as shown below:
-' <Assembly: AssemblyVersion("1.0.*")>
-
-<Assembly: AssemblyVersion("1.0.0.0")> 
-<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\Settings.Designer.vb"
-                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
-' <autogenerated>
-'     This code was generated by a tool.
-'
-'     Changes to this file may cause incorrect behavior and will be lost if
-'     the code is regenerated.
-' </autogenerated>
-'------------------------------------------------------------------------------
-
-Option Strict Off
-Option Explicit On
-
-
-
-Partial Friend NotInheritable Class MySettings
-    Inherits System.Configuration.ApplicationSettingsBase
-
-    Private Shared m_Value As MySettings
-
-    Private Shared m_SyncObject As Object = New Object
-
-    <System.Diagnostics.DebuggerNonUserCode()> _
-    Public Shared ReadOnly Property Value() As MySettings
-        Get
-            If (MySettings.m_Value Is Nothing) Then
-                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
-                If (MySettings.m_Value Is Nothing) Then
-                    Try
-                        MySettings.m_Value = New MySettings
-                    Finally
-                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
-                    End Try
-                End If
-            End If
-            Return MySettings.m_Value
-        End Get
-    End Property
-End Class]]></ProjectItem>
-              <ProjectItem
-                Name="Project"
-                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
-	<msb:PropertyGroup>
-		<msb:Language>msBuild</msb:Language>
-		<msb:CodeName>ST_33a1c02acc474d3a8e2d05d13f7f1666</msb:CodeName>
-		<msb:DisplayName>ST_33a1c02acc474d3a8e2d05d13f7f1666</msb:DisplayName>
-		<msb:ProjectId>{214D04AC-05BD-4214-9272-9C0BE323C171}</msb:ProjectId>
-	</msb:PropertyGroup>
-	<msb:ItemGroup>
-		<msb:Project Include="ST_33a1c02acc474d3a8e2d05d13f7f1666.vbproj"/>
-		<msb:File Include="My Project\AssemblyInfo.vb"/>
-		<msb:File Include="My Project\Resources.resx"/>
-		<msb:File Include="ScriptMain.vb"/>
-		<msb:File Include="My Project\Resources.Designer.vb"/>
-		<msb:File Include="My Project\Settings.settings"/>
-		<msb:File Include="My Project\Settings.Designer.vb"/>
-	</msb:ItemGroup>
-</c:Project>]]></ProjectItem>
-              <ProjectItem
                 Name="ScriptMain.vb"
                 Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
 'The Script Task allows you to perform virtually any operation that can be accomplished in
@@ -6721,6 +6623,113 @@ Partial Public Class ScriptMain
 #End Region
 
 End Class]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\AssemblyInfo.vb"
+                Encoding="UTF8"><![CDATA[Imports System
+Imports System.Reflection
+Imports System.Runtime.InteropServices
+
+' General Information about an assembly is controlled through the following 
+' set of attributes. Change these attribute values to modify the information
+' associated with an assembly.
+
+' Review the values of the assembly attributes
+
+<Assembly: AssemblyTitle("ST_59dfa5ba43f3469c98bb340dfe7b3e72")> 
+<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyCompany("")> 
+<Assembly: AssemblyProduct("ST_59dfa5ba43f3469c98bb340dfe7b3e72")> 
+<Assembly: AssemblyCopyright("Copyright @  2019")> 
+<Assembly: AssemblyTrademark("")> 
+<Assembly: CLSCompliant(True)> 
+
+<Assembly: ComVisible(False)> 
+
+'The following GUID is for the ID of the typelib if this project is exposed to COM
+<Assembly: Guid("beb26878-c19a-453a-aa5e-45b9049c46a9")> 
+
+' Version information for an assembly consists of the following four values:
+'
+'      Major Version
+'      Minor Version 
+'      Build Number
+'      Revision
+'
+' You can specify all the values or you can default the Build and Revision Numbers 
+' by using the '*' as shown below:
+' <Assembly: AssemblyVersion("1.0.*")>
+
+<Assembly: AssemblyVersion("1.0.0.0")> 
+<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.Designer.vb"
+                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
+' <autogenerated>
+'     This code was generated by a tool.
+'
+'     Changes to this file may cause incorrect behavior and will be lost if
+'     the code is regenerated.
+' </autogenerated>
+'------------------------------------------------------------------------------
+
+Option Strict Off
+Option Explicit On
+
+
+
+Partial Friend NotInheritable Class MySettings
+    Inherits System.Configuration.ApplicationSettingsBase
+
+    Private Shared m_Value As MySettings
+
+    Private Shared m_SyncObject As Object = New Object
+
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Public Shared ReadOnly Property Value() As MySettings
+        Get
+            If (MySettings.m_Value Is Nothing) Then
+                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
+                If (MySettings.m_Value Is Nothing) Then
+                    Try
+                        MySettings.m_Value = New MySettings
+                    Finally
+                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
+                    End Try
+                End If
+            End If
+            Return MySettings.m_Value
+        End Get
+    End Property
+End Class]]></ProjectItem>
+              <ProjectItem
+                Name="Project"
+                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:Language>msBuild</msb:Language>
+		<msb:CodeName>ST_33a1c02acc474d3a8e2d05d13f7f1666</msb:CodeName>
+		<msb:DisplayName>ST_33a1c02acc474d3a8e2d05d13f7f1666</msb:DisplayName>
+		<msb:ProjectId>{214D04AC-05BD-4214-9272-9C0BE323C171}</msb:ProjectId>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:Project Include="ST_33a1c02acc474d3a8e2d05d13f7f1666.vbproj"/>
+		<msb:File Include="My Project\AssemblyInfo.vb"/>
+		<msb:File Include="My Project\Resources.resx"/>
+		<msb:File Include="ScriptMain.vb"/>
+		<msb:File Include="My Project\Resources.Designer.vb"/>
+		<msb:File Include="My Project\Settings.settings"/>
+		<msb:File Include="My Project\Settings.Designer.vb"/>
+	</msb:ItemGroup>
+</c:Project>]]></ProjectItem>
               <ProjectItem
                 Name="My Project\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -7187,16 +7196,16 @@ End Class]]></ProjectItem>
                 Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
 <c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
 	<msb:PropertyGroup>
-		<msb:Language>msBuild</msb:Language>
 		<msb:CodeName>ST_59dfa5ba43f3469c98bb340dfe7b3e72</msb:CodeName>
+		<msb:Language>msBuild</msb:Language>
 		<msb:DisplayName>ST_59dfa5ba43f3469c98bb340dfe7b3e72</msb:DisplayName>
 		<msb:ProjectId>{CEFF8F07-06FC-4DA6-8736-5DAE474B3A58}</msb:ProjectId>
 	</msb:PropertyGroup>
 	<msb:ItemGroup>
 		<msb:Project Include="ST_59dfa5ba43f3469c98bb340dfe7b3e72.vbproj"/>
 		<msb:File Include="My Project\AssemblyInfo.vb"/>
-		<msb:File Include="ScriptMain.vb"/>
 		<msb:File Include="My Project\Resources.resx"/>
+		<msb:File Include="ScriptMain.vb"/>
 		<msb:File Include="My Project\Resources.Designer.vb"/>
 		<msb:File Include="My Project\Settings.settings"/>
 		<msb:File Include="My Project\Settings.Designer.vb"/>
@@ -7616,7 +7625,7 @@ End Namespace]]></ProjectItem>
               <BinaryItem
                 Name="ST_59dfa5ba43f3469c98bb340dfe7b3e72.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAIjxaV8AAAAAAAAAAOAAIiALAVAAABoAAAAIAAAAAAAAqjgA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAAn7KmAAAAAAAAAAAOAAIiALAVAAABoAAAAIAAAAAAAAqjgA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAFg4AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -7713,7 +7722,7 @@ Y2Nlc3MAZ2V0X0R0cwBTY3JpcHRSZXN1bHRzAEV4aXN0cwBtX1N5bmNPYmplY3QATXlQcm9qZWN0
 AEV4aXQAc2V0X1Rhc2tSZXN1bHQAbV9Db250ZXh0AFNUXzU5ZGZhNWJhNDNmMzQ2OWM5OGJiMzQw
 ZGZlN2IzZTcyLk15AGdldF9Bc3NlbWJseQBDcmVhdGVEaXJlY3RvcnkAAAAxTQB5AC4AUgBlAHMA
 bwB1AHIAYwBlAHMALgBNAHkAUgBlAHMAbwB1AHIAYwBlAHMAACFTAG4AbwB3AFMAUQBMAEMAbwBu
-AGYAaQBnAEQAaQByAAAAAAC+y2Mn0ja9RrlUD57jhP+yAAQgAQEIAyAAAQUgAQEREQQgAQEOBCAB
+AGYAaQBnAEQAaQByAAAAAAAUkBfa+smXS5+bvS3i/8EuAAQgAQEIAyAAAQUgAQEREQQgAQEOBCAB
 AQIFIAIBDg4FIAEBEUUHIAQBDg4ODgYVEiQBEgwGFRIkARIIBhUSJAESZQYVEiQBEiAEIAATAAcA
 ARJtEYCZBSAAEoCdByACAQ4SgJ0EAAEcHAQAAQEcAwcBDgUgABKAqQUgABKArQYgARKAsRwDIAAc
 AyAADgQAAQIOBQACAQ4CBgABEoC5DgQgAQIcAyAACAQHAR4AAh4ABRABAB4ABAoBHgAEBwETAAYV
@@ -8722,9 +8731,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Id="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Export FS File to csv"
           TopLeft="46,391" />
         <NodeLayout
-          Size="288,42"
+          Size="293,42"
           Id="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)"
-          TopLeft="425,390" />
+          TopLeft="425,388" />
         <NodeLayout
           Size="311,42"
           Id="Package\Sequence Container - Upload Raw Data to Snowflake\Execute Process Task - add FileDate to New Data"
@@ -8851,26 +8860,26 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="355.958874458875,32.18759018759"
+              EndConnector="358.458874458875,30.18759018759"
               Start="0,0"
-              End="355.958874458875,24.68759018759">
+              End="358.458874458875,22.68759018759">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,12.093795093795" />
+                    End="0,11.093795093795" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,12.093795093795"
-                    Point2="0,16.093795093795"
-                    Point3="4,16.093795093795" />
+                    Point1="0,11.093795093795"
+                    Point2="0,15.093795093795"
+                    Point3="4,15.093795093795" />
                   <mssgle:LineSegment
-                    End="351.958874458875,16.093795093795" />
+                    End="354.458874458875,15.093795093795" />
                   <mssgle:CubicBezierSegment
-                    Point1="351.958874458875,16.093795093795"
-                    Point2="355.958874458875,16.093795093795"
-                    Point3="355.958874458875,20.093795093795" />
+                    Point1="354.458874458875,15.093795093795"
+                    Point2="358.458874458875,15.093795093795"
+                    Point3="358.458874458875,19.093795093795" />
                   <mssgle:LineSegment
-                    End="355.958874458875,24.68759018759" />
+                    End="358.458874458875,22.68759018759" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8881,30 +8890,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container - Upload Raw Data to Snowflake.PrecedenceConstraints[Constraint 5]"
-          TopLeft="569,432">
+          TopLeft="571.5,430">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-361.5,32.75"
+              EndConnector="-364,34.75"
               Start="0,0"
-              End="-361.5,25.25">
+              End="-364,27.25">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,12.375" />
+                    End="0,13.375" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,12.375"
-                    Point2="0,16.375"
-                    Point3="-4,16.375" />
+                    Point1="0,13.375"
+                    Point2="0,17.375"
+                    Point3="-4,17.375" />
                   <mssgle:LineSegment
-                    End="-357.5,16.375" />
+                    End="-360,17.375" />
                   <mssgle:CubicBezierSegment
-                    Point1="-357.5,16.375"
-                    Point2="-361.5,16.375"
-                    Point3="-361.5,20.375" />
+                    Point1="-360,17.375"
+                    Point2="-364,17.375"
+                    Point3="-364,21.375" />
                   <mssgle:LineSegment
-                    End="-361.5,25.25" />
+                    End="-364,27.25" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9138,26 +9147,26 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="142,42"
+          Size="149,42"
           Id="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source"
           TopLeft="228,39" />
-        <NodeLayout
-          Size="218,42"
-          Id="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination"
-          TopLeft="192,281" />
         <NodeLayout
           Size="249,42"
           Id="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Add RecordType ID for Faculty Staff"
           TopLeft="189,159" />
+        <NodeLayout
+          Size="218,42"
+          Id="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\Devart Salesforce Destination"
+          TopLeft="192,281" />
         <EdgeLayout
           Id="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA).Paths[ODBC Source Output]"
-          TopLeft="299,81">
+          TopLeft="302.5,81">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="14.5,78"
+              EndConnector="11,78"
               Start="0,0"
-              End="14.5,70.5">
+              End="11,70.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -9168,13 +9177,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                     Point2="0,39"
                     Point3="4,39" />
                   <mssgle:LineSegment
-                    End="10.5,39" />
+                    End="7,39" />
                   <mssgle:CubicBezierSegment
-                    Point1="10.5,39"
-                    Point2="14.5,39"
-                    Point3="14.5,43" />
+                    Point1="7,39"
+                    Point2="11,39"
+                    Point3="11,43" />
                   <mssgle:LineSegment
-                    End="14.5,70.5" />
+                    End="11,70.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9234,5 +9243,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container - Upload Raw Data to Snowflake\Data Flow Task - Load Delta to Interim (QA)\ODBC Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
