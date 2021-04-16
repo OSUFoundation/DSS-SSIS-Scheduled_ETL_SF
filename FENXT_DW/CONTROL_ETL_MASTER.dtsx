@@ -13,8 +13,8 @@
   DTS:ObjectName="CONTROL_ETL_MASTER"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="397"
-  DTS:VersionGUID="{01A3BF49-352C-4C51-8603-60985BB770C8}">
+  DTS:VersionBuild="405"
+  DTS:VersionGUID="{02EAA751-5177-44A5-8247-6D88B0232966}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1273,22 +1273,6 @@ Partial Public Class ScriptMain
 
 End Class]]></ProjectItem>
               <ProjectItem
-                Name="Project"
-                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
-	<msb:PropertyGroup>
-		<msb:NoContent>Reference;Import;Folder</msb:NoContent>
-		<msb:ProjectId>{75BB5C5B-B550-4E82-BAB0-C559227E3F88}</msb:ProjectId>
-		<msb:CodeName>ScriptTask_a80b7266d711461faf9a24f8b6754eb3</msb:CodeName>
-		<msb:Language>msBuild</msb:Language>
-		<msb:DisplayName>ScriptTask_a80b7266d711461faf9a24f8b6754eb3</msb:DisplayName>
-	</msb:PropertyGroup>
-	<msb:ItemGroup>
-		<msb:File Include="ScriptMain.vb"/>
-		<msb:Project Include="ScriptTask_a80b7266d711461faf9a24f8b6754eb3.vbproj"/>
-	</msb:ItemGroup>
-</c:Project>]]></ProjectItem>
-              <ProjectItem
                 Name="ScriptTask_a80b7266d711461faf9a24f8b6754eb3.vbproj"
                 Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -1374,6 +1358,22 @@ End Class]]></ProjectItem>
     <OptionStrict>On</OptionStrict>
   </PropertyGroup>
 </Project>]]></ProjectItem>
+              <ProjectItem
+                Name="Project"
+                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:NoContent>Reference;Import;Folder</msb:NoContent>
+		<msb:ProjectId>{75BB5C5B-B550-4E82-BAB0-C559227E3F88}</msb:ProjectId>
+		<msb:CodeName>ScriptTask_a80b7266d711461faf9a24f8b6754eb3</msb:CodeName>
+		<msb:Language>msBuild</msb:Language>
+		<msb:DisplayName>ScriptTask_a80b7266d711461faf9a24f8b6754eb3</msb:DisplayName>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:File Include="ScriptMain.vb"/>
+		<msb:Project Include="ScriptTask_a80b7266d711461faf9a24f8b6754eb3.vbproj"/>
+	</msb:ItemGroup>
+</c:Project>]]></ProjectItem>
               <BinaryItem
                 Name="ScriptTask_a80b7266d711461faf9a24f8b6754eb3.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
@@ -2679,7 +2679,7 @@ NULL AS AnnotationText</property>
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Default Project.Outputs[OLE DB Source Output].ExternalColumns[ProjectDescription]"
-                          length="10"
+                          length="255"
                           lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Default Project.Outputs[OLE DB Source Output].Columns[ProjectDescription]"
                           name="ProjectDescription"
                           truncationRowDisposition="FailComponent" />
@@ -3042,6 +3042,107 @@ NULL AS AnnotationText</property>
                   </outputs>
                 </component>
                 <component
+                  refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Derived Column 1"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1.Inputs[Derived Column Input].Columns[ProjectDescription]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="255"
+                          cachedName="ProjectDescription"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectDescription]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[REPLACE](#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectDescription]},"\"","\\\"")</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">REPLACE(ProjectDescription,"\"","\\\"")</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1.Inputs[Derived Column Input].Columns[AnnotationText]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="255"
+                          cachedName="AnnotationText"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[AnnotationText]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[REPLACE](#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[AnnotationText]},"\"","\\\"")</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">REPLACE(AnnotationText,"\"","\\\"")</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1.Inputs[Derived Column Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
                   refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects"
                   componentClassID="Microsoft.FlatFileDestination"
                   contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -3081,21 +3182,21 @@ NULL AS AnnotationText</property>
                           cachedDataType="i4"
                           cachedName="ProjectSystemID"
                           externalMetadataColumnId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].ExternalColumns[ProjectSystemID]"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectSystemID]" />
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectSystemID]" />
                         <inputColumn
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].Columns[ProjectDescription]"
                           cachedCodepage="1252"
                           cachedDataType="str"
-                          cachedLength="60"
+                          cachedLength="255"
                           cachedName="ProjectDescription"
                           externalMetadataColumnId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].ExternalColumns[ProjectDescription]"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectDescription]" />
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectDescription]" />
                         <inputColumn
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].Columns[ProjectStatusID]"
                           cachedDataType="i4"
                           cachedName="ProjectStatusID"
                           externalMetadataColumnId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].ExternalColumns[ProjectStatusID]"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectStatusID]" />
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectStatusID]" />
                         <inputColumn
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].Columns[ProjectStatusDescription]"
                           cachedCodepage="1252"
@@ -3103,13 +3204,13 @@ NULL AS AnnotationText</property>
                           cachedLength="60"
                           cachedName="ProjectStatusDescription"
                           externalMetadataColumnId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].ExternalColumns[ProjectStatusDescription]"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectStatusDescription]" />
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectStatusDescription]" />
                         <inputColumn
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].Columns[ProjectTypeID]"
                           cachedDataType="i4"
                           cachedName="ProjectTypeID"
                           externalMetadataColumnId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].ExternalColumns[ProjectTypeID]"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectTypeID]" />
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectTypeID]" />
                         <inputColumn
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].Columns[ProjectTypeDescription]"
                           cachedCodepage="1252"
@@ -3117,19 +3218,19 @@ NULL AS AnnotationText</property>
                           cachedLength="60"
                           cachedName="ProjectTypeDescription"
                           externalMetadataColumnId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].ExternalColumns[ProjectTypeDescription]"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectTypeDescription]" />
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectTypeDescription]" />
                         <inputColumn
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].Columns[ProjectStartDate]"
                           cachedDataType="dbTimeStamp"
                           cachedName="ProjectStartDate"
                           externalMetadataColumnId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].ExternalColumns[ProjectStartDate]"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectStartDate]" />
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectStartDate]" />
                         <inputColumn
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].Columns[ProjectEndDate]"
                           cachedDataType="dbTimeStamp"
                           cachedName="ProjectEndDate"
                           externalMetadataColumnId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].ExternalColumns[ProjectEndDate]"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectEndDate]" />
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectEndDate]" />
                         <inputColumn
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].Columns[ProjectActive]"
                           cachedCodepage="1252"
@@ -3137,25 +3238,26 @@ NULL AS AnnotationText</property>
                           cachedLength="47"
                           cachedName="ProjectActive"
                           externalMetadataColumnId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].ExternalColumns[ProjectActive]"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectActive]" />
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectActive]" />
                         <inputColumn
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].Columns[PREVENTPOSTDATE]"
                           cachedDataType="dbTimeStamp"
                           cachedName="PREVENTPOSTDATE"
                           externalMetadataColumnId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].ExternalColumns[PREVENTPOSTDATE]"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[PREVENTPOSTDATE]" />
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[PREVENTPOSTDATE]" />
                         <inputColumn
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].Columns[DATEADDED]"
                           cachedDataType="dbTimeStamp"
                           cachedName="DATEADDED"
+                          cachedSortKeyPosition="1"
                           externalMetadataColumnId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].ExternalColumns[DATEADDED]"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[DATEADDED]" />
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[DATEADDED]" />
                         <inputColumn
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].Columns[DATECHANGED]"
                           cachedDataType="dbTimeStamp"
                           cachedName="DATECHANGED"
                           externalMetadataColumnId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].ExternalColumns[DATECHANGED]"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[DATECHANGED]" />
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[DATECHANGED]" />
                         <inputColumn
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].Columns[AnnotationText]"
                           cachedCodepage="1252"
@@ -3163,15 +3265,16 @@ NULL AS AnnotationText</property>
                           cachedLength="255"
                           cachedName="AnnotationText"
                           externalMetadataColumnId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].ExternalColumns[AnnotationText]"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[AnnotationText]" />
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[AnnotationText]" />
                         <inputColumn
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].Columns[ProjectID]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="12"
                           cachedName="ProjectID"
+                          cachedSortKeyPosition="2"
                           externalMetadataColumnId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].ExternalColumns[ProjectID]"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectID]" />
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectID]" />
                         <inputColumn
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].Columns[ImportID]"
                           cachedCodepage="1252"
@@ -3179,13 +3282,13 @@ NULL AS AnnotationText</property>
                           cachedLength="50"
                           cachedName="ImportID"
                           externalMetadataColumnId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].ExternalColumns[ImportID]"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ImportID]" />
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ImportID]" />
                         <inputColumn
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].Columns[ProjectDimID]"
                           cachedDataType="i4"
                           cachedName="ProjectDimID"
                           externalMetadataColumnId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input].ExternalColumns[ProjectDimID]"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column.Outputs[Derived Column Output].Columns[ProjectDimID]" />
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectDimID]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -3272,6 +3375,538 @@ NULL AS AnnotationText</property>
                   </inputs>
                 </component>
                 <component
+                  refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID"
+                  componentClassID="Microsoft.Sort"
+                  contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+                  name="Sort by Date Added and ProjectID"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                      name="EliminateDuplicates">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the maximum number of threads to use for sorting."
+                      expressionType="Notify"
+                      name="MaximumThreads">-1</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Inputs[Sort Input]"
+                      name="Sort Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Inputs[Sort Input].Columns[ProjectSystemID]"
+                          cachedDataType="i4"
+                          cachedName="ProjectSystemID"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectSystemID]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Inputs[Sort Input].Columns[ProjectDescription]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="255"
+                          cachedName="ProjectDescription"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectDescription]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Inputs[Sort Input].Columns[ProjectStatusID]"
+                          cachedDataType="i4"
+                          cachedName="ProjectStatusID"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectStatusID]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Inputs[Sort Input].Columns[ProjectStatusDescription]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="60"
+                          cachedName="ProjectStatusDescription"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectStatusDescription]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Inputs[Sort Input].Columns[ProjectTypeID]"
+                          cachedDataType="i4"
+                          cachedName="ProjectTypeID"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectTypeID]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Inputs[Sort Input].Columns[ProjectTypeDescription]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="60"
+                          cachedName="ProjectTypeDescription"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectTypeDescription]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Inputs[Sort Input].Columns[ProjectStartDate]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="ProjectStartDate"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectStartDate]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Inputs[Sort Input].Columns[ProjectEndDate]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="ProjectEndDate"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectEndDate]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Inputs[Sort Input].Columns[ProjectActive]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="47"
+                          cachedName="ProjectActive"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectActive]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Inputs[Sort Input].Columns[PREVENTPOSTDATE]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="PREVENTPOSTDATE"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[PREVENTPOSTDATE]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Inputs[Sort Input].Columns[DATEADDED]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="DATEADDED"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[DATEADDED]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">1</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Inputs[Sort Input].Columns[DATECHANGED]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="DATECHANGED"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[DATECHANGED]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Inputs[Sort Input].Columns[AnnotationText]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="255"
+                          cachedName="AnnotationText"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[AnnotationText]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Inputs[Sort Input].Columns[ProjectID]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="12"
+                          cachedName="ProjectID"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectID]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">2</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Inputs[Sort Input].Columns[ImportID]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="ImportID"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ImportID]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Inputs[Sort Input].Columns[ProjectDimID]"
+                          cachedDataType="i4"
+                          cachedName="ProjectDimID"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column.Outputs[Derived Column Output].Columns[ProjectDimID]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output]"
+                      isSorted="true"
+                      name="Sort Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectSystemID]"
+                          dataType="i4"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectSystemID]"
+                          name="ProjectSystemID">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectSystemID]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectDescription]"
+                          codePage="1252"
+                          dataType="str"
+                          length="255"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectDescription]"
+                          name="ProjectDescription">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectDescription]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectStatusID]"
+                          dataType="i4"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectStatusID]"
+                          name="ProjectStatusID">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectStatusID]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectStatusDescription]"
+                          codePage="1252"
+                          dataType="str"
+                          length="60"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectStatusDescription]"
+                          name="ProjectStatusDescription">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectStatusDescription]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectTypeID]"
+                          dataType="i4"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectTypeID]"
+                          name="ProjectTypeID">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectTypeID]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectTypeDescription]"
+                          codePage="1252"
+                          dataType="str"
+                          length="60"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectTypeDescription]"
+                          name="ProjectTypeDescription">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectTypeDescription]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectStartDate]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectStartDate]"
+                          name="ProjectStartDate">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectStartDate]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectEndDate]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectEndDate]"
+                          name="ProjectEndDate">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectEndDate]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectActive]"
+                          codePage="1252"
+                          dataType="str"
+                          length="47"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectActive]"
+                          name="ProjectActive">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectActive]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[PREVENTPOSTDATE]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[PREVENTPOSTDATE]"
+                          name="PREVENTPOSTDATE">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[PREVENTPOSTDATE]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[DATEADDED]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[DATEADDED]"
+                          name="DATEADDED"
+                          sortKeyPosition="1">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[DATEADDED]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[DATECHANGED]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[DATECHANGED]"
+                          name="DATECHANGED">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[DATECHANGED]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[AnnotationText]"
+                          codePage="1252"
+                          dataType="str"
+                          length="255"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[AnnotationText]"
+                          name="AnnotationText">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[AnnotationText]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectID]"
+                          codePage="1252"
+                          dataType="str"
+                          length="12"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectID]"
+                          name="ProjectID"
+                          sortKeyPosition="2">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectID]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ImportID]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ImportID]"
+                          name="ImportID">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ImportID]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectDimID]"
+                          dataType="i4"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output].Columns[ProjectDimID]"
+                          name="ProjectDimID">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column.Outputs[Derived Column Output].Columns[ProjectDimID]}</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
                   refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Source FE Projects"
                   componentClassID="Microsoft.OLEDBSource"
                   contactInfo="OLE DB Source;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
@@ -3299,7 +3934,7 @@ NULL AS AnnotationText</property>
                       UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT 
 	P.GL7PROJECTSID ProjectSystemID, 
 	P.PROJECTID AS ProjectID, 
-	P.DESCRIPTION ProjectDescription, 
+	P.DESCRIPTION AS ProjectDescription, 
 	P.STATUS ProjectStatusID, 
 	(SELECT DESCRIPTION FROM TABLEENTRIES WHERE TABLEENTRIESID = P.Status) ProjectStatusDescription, 
 	P.TYPE ProjectTypeID, 
@@ -3314,7 +3949,7 @@ NULL AS AnnotationText</property>
 	P.PREVENTPOSTDATE,
 	P.DATEADDED, 
 	P.DATECHANGED, 
-	CONVERT(Varchar(255), P.ANNOTATIONTEXT) AnnotationText
+	CONVERT(Varchar(255), P.ANNOTATIONTEXT) AS AnnotationText
 	
 , P.IMPORTID AS ImportID
 
@@ -3373,7 +4008,7 @@ FROM dbo.GL7PROJECTS P
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Source FE Projects.Outputs[OLE DB Source Output].ExternalColumns[ProjectDescription]"
-                          length="60"
+                          length="255"
                           lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Source FE Projects.Outputs[OLE DB Source Output].Columns[ProjectDescription]"
                           name="ProjectDescription"
                           truncationRowDisposition="FailComponent" />
@@ -3723,21 +4358,6 @@ FROM dbo.GL7PROJECTS P
                           </properties>
                         </inputColumn>
                         <inputColumn
-                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Inputs[Union All Input 2].Columns[ProjectDescription]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="60"
-                          cachedName="ProjectDescription"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Source FE Projects.Outputs[OLE DB Source Output].Columns[ProjectDescription]">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Output column lineage ID"
-                              name="OutputColumnLineageID">#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectDescription]}</property>
-                          </properties>
-                        </inputColumn>
-                        <inputColumn
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Inputs[Union All Input 2].Columns[ProjectStatusID]"
                           cachedDataType="i4"
                           cachedName="ProjectStatusID"
@@ -3918,6 +4538,21 @@ FROM dbo.GL7PROJECTS P
                               name="OutputColumnLineageID">#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ImportID]}</property>
                           </properties>
                         </inputColumn>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Inputs[Union All Input 2].Columns[ProjectDescription]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="255"
+                          cachedName="ProjectDescription"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Source FE Projects.Outputs[OLE DB Source Output].Columns[ProjectDescription]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectDescription]}</property>
+                          </properties>
+                        </inputColumn>
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -3952,21 +4587,6 @@ FROM dbo.GL7PROJECTS P
                               dataType="System.Int32"
                               description="Output column lineage ID"
                               name="OutputColumnLineageID">#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectID]}</property>
-                          </properties>
-                        </inputColumn>
-                        <inputColumn
-                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Inputs[Union All Input 3].Columns[ProjectDescription]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="10"
-                          cachedName="ProjectDescription"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Default Project.Outputs[OLE DB Source Output].Columns[ProjectDescription]">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Output column lineage ID"
-                              name="OutputColumnLineageID">#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectDescription]}</property>
                           </properties>
                         </inputColumn>
                         <inputColumn
@@ -4066,6 +4686,21 @@ FROM dbo.GL7PROJECTS P
                               name="OutputColumnLineageID">#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectActive]}</property>
                           </properties>
                         </inputColumn>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Inputs[Union All Input 3].Columns[ProjectDescription]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="255"
+                          cachedName="ProjectDescription"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Default Project.Outputs[OLE DB Source Output].Columns[ProjectDescription]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectDescription]}</property>
+                          </properties>
+                        </inputColumn>
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -4087,13 +4722,6 @@ FROM dbo.GL7PROJECTS P
                           dataType="i4"
                           lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectSystemID]"
                           name="ProjectSystemID" />
-                        <outputColumn
-                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectDescription]"
-                          codePage="1252"
-                          dataType="str"
-                          length="60"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectDescription]"
-                          name="ProjectDescription" />
                         <outputColumn
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectStatusID]"
                           dataType="i4"
@@ -4171,6 +4799,13 @@ FROM dbo.GL7PROJECTS P
                           length="50"
                           lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ImportID]"
                           name="ImportID" />
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectDescription]"
+                          codePage="1252"
+                          dataType="str"
+                          length="255"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectDescription]"
+                          name="ProjectDescription" />
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
@@ -4180,9 +4815,14 @@ FROM dbo.GL7PROJECTS P
               <paths>
                 <path
                   refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim.Paths[Derived Column Output]"
-                  endId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input]"
+                  endId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1.Inputs[Derived Column Input]"
                   name="Derived Column Output"
                   startId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim.Paths[Derived Column Output1]"
+                  endId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Inputs[Sort Input]"
+                  name="Derived Column Output"
+                  startId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim.Paths[OLE DB Source Output]"
                   endId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Inputs[Union All Input 3]"
@@ -4193,6 +4833,11 @@ FROM dbo.GL7PROJECTS P
                   endId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Inputs[Union All Input 2]"
                   name="OLE DB Source Output"
                   startId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Source FE Projects.Outputs[OLE DB Source Output]" />
+                <path
+                  refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim.Paths[Sort Output]"
+                  endId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects.Inputs[Flat File Destination Input]"
+                  name="Sort Output"
+                  startId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output]" />
                 <path
                   refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim.Paths[Union All Output 1]"
                   endId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column.Inputs[Derived Column Input]"
@@ -5811,7 +6456,7 @@ FROM
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="128" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="128" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="234,44"
           Id="Package\ETL Pre-Processing\Begin Load - sets load context and generates control ID"
@@ -5833,7 +6478,7 @@ FROM
           TopLeft="264.867924528302,39.9811320754717">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="36.0754716981132,0.18867924528297"
               Start="0,0"
               End="28.5754716981132,0.18867924528297">
@@ -5859,7 +6504,7 @@ FROM
           TopLeft="436.301886792453,40.1698113207547">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="37.6226415094341,0.943396226415075"
               Start="0,0"
               End="30.1226415094341,0.943396226415075">
@@ -5900,7 +6545,7 @@ FROM
           TopLeft="107.584905660377,79.7924528301886">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0,43.3962264150944"
               Start="0,0"
               End="0,35.8962264150944">
@@ -5924,6 +6569,69 @@ FROM
           Size="209,240"
           Id="Package\FE Budget Info"
           TopLeft="841.443396226415,806.877358490566" />
+        <NodeLayout
+          Size="175,44"
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes"
+          TopLeft="44,147" />
+        <NodeLayout
+          Size="170,44"
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim"
+          TopLeft="45,53" />
+        <NodeLayout
+          Size="172,44"
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes"
+          TopLeft="47,240" />
+        <EdgeLayout
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW.PrecedenceConstraints[Constraint]"
+          TopLeft="130.75,97">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50"
+              Start="0,0"
+              End="0,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW.PrecedenceConstraints[Constraint 1]"
+          TopLeft="132.25,191">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49"
+              Start="0,0"
+              End="0,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="1155,430"
+          Size="1155,473"
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW"
+          TopLeft="155,28" />
         <NodeLayout
           Size="162,44"
           Id="Package\Populate Dimensions\Account Dim"
@@ -5989,7 +6697,7 @@ FROM
           TopLeft="152.830188679245,469.415094339623">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="20.7547169811321,22.566037735849"
               Start="0,0"
               End="20.7547169811321,15.066037735849">
@@ -6023,7 +6731,7 @@ FROM
           TopLeft="171.453687821612,325">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0,31.9393939393941"
               Start="0,0"
               End="0,24.4393939393941">
@@ -6045,7 +6753,7 @@ FROM
           TopLeft="173.584905660377,258.433962264151">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0,22.5660377358491"
               Start="0,0"
               End="0,15.0660377358491">
@@ -6067,7 +6775,7 @@ FROM
           TopLeft="152.830188679245,191.943396226415">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="20.7547169811321,22.5660377358491"
               Start="0,0"
               End="20.7547169811321,15.0660377358491">
@@ -6093,7 +6801,7 @@ FROM
           TopLeft="167.037735849057,939.735849056604">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0,25.0754716981131"
               Start="0,0"
               End="0,17.5754716981131">
@@ -6115,7 +6823,7 @@ FROM
           TopLeft="171.453687821612,398.939393939394">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0,26.5511720983419"
               Start="0,0"
               End="0,19.0511720983419">
@@ -6137,7 +6845,7 @@ FROM
           TopLeft="173.584905660377,535.905660377358">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0,22.5660377358491"
               Start="0,0"
               End="0,15.0660377358491">
@@ -6159,7 +6867,7 @@ FROM
           TopLeft="173.584905660377,602.396226415094">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0,22.5660377358491"
               Start="0,0"
               End="0,15.0660377358491">
@@ -6181,7 +6889,7 @@ FROM
           TopLeft="152.830188679245,668.88679245283">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="20.7547169811321,22.5660377358491"
               Start="0,0"
               End="20.7547169811321,15.0660377358491">
@@ -6215,7 +6923,7 @@ FROM
           TopLeft="152.830188679245,735.377358490566">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="20.7547169811321,22.5660377358491"
               Start="0,0"
               End="20.7547169811321,15.0660377358491">
@@ -6249,7 +6957,7 @@ FROM
           TopLeft="173.452830188679,52.2452830188679">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0,24.8867924528302"
               Start="0,0"
               End="0,17.3867924528302">
@@ -6271,7 +6979,7 @@ FROM
           TopLeft="152.830188679245,801.867924528302">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="20.7547169811321,22.566037735849"
               Start="0,0"
               End="20.7547169811321,15.066037735849">
@@ -6305,7 +7013,7 @@ FROM
           TopLeft="173.452830188679,868.433962264151">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="-9.09433962264171,27.3018867924529"
               Start="0,0"
               End="-9.09433962264171,19.8018867924529">
@@ -6339,7 +7047,7 @@ FROM
           TopLeft="173.452830188679,121.132075471698">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0,26.8867924528299"
               Start="0,0"
               End="0,19.3867924528299">
@@ -6403,7 +7111,7 @@ FROM
           TopLeft="261.25,55.1132075471698">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0,43.9245283018868"
               Start="0,0"
               End="0,36.4245283018868">
@@ -6425,7 +7133,7 @@ FROM
           TopLeft="260.5,141.037735849057">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0,43.4716981132074"
               Start="0,0"
               End="0,35.9716981132074">
@@ -6447,7 +7155,7 @@ FROM
           TopLeft="263.5,226.509433962264">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0,40.490566037736"
               Start="0,0"
               End="0,32.990566037736">
@@ -6469,7 +7177,7 @@ FROM
           TopLeft="261,309">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0,48"
               Start="0,0"
               End="0,40.5">
@@ -6491,7 +7199,7 @@ FROM
           TopLeft="259,399">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0,60"
               Start="0,0"
               End="0,52.5">
@@ -6540,7 +7248,7 @@ FROM
           TopLeft="124.679245283019,80.811320754717">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0,34.188679245283"
               Start="0,0"
               End="0,26.688679245283">
@@ -6562,7 +7270,7 @@ FROM
           TopLeft="124.679245283019,158.924528301887">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0.0377358490566166,30.4528301886793"
               Start="0,0"
               End="0.0377358490566166,22.9528301886793">
@@ -6588,7 +7296,7 @@ FROM
           TopLeft="83.2075471698113,233.301886792453">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="41.4716981132076,37.9245283018868"
               Start="0,0"
               End="41.4716981132076,30.4245283018868">
@@ -6614,7 +7322,7 @@ FROM
           TopLeft="124.679245283019,315.150943396226">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0,34.2641509433962"
               Start="0,0"
               End="0,26.7641509433962">
@@ -6643,7 +7351,7 @@ FROM
           TopLeft="370.5,1378.78301886792">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="28.754716981132,-450.264150943397"
               Start="0,0"
               End="21.254716981132,-450.264150943397">
@@ -6677,7 +7385,7 @@ FROM
           TopLeft="474.094339622642,784.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="-267.594339622642,40.283018867925"
               Start="0,0"
               End="-267.594339622642,32.783018867925">
@@ -6711,7 +7419,7 @@ FROM
           TopLeft="677.254716981132,1238.87735849057">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="164.188679245283,-312"
               Start="0,0"
               End="156.688679245283,-312">
@@ -6745,7 +7453,7 @@ FROM
           TopLeft="945.943396226415,1046.87735849057">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="153.481132075472,33.6603773584911"
               Start="0,0"
               End="153.481132075472,26.1603773584911">
@@ -6779,7 +7487,7 @@ FROM
           TopLeft="538.122641509434,981.424528301887">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0,16.4528301886792"
               Start="0,0"
               End="0,8.95283018867917">
@@ -6796,243 +7504,56 @@ FROM
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="170,44"
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim"
-          TopLeft="45,53" />
-        <NodeLayout
-          Size="175,44"
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes"
-          TopLeft="44,147" />
-        <EdgeLayout
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW.PrecedenceConstraints[Constraint]"
-          TopLeft="130.75,97">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,50"
-              Start="0,0"
-              End="0,42.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,42.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="172,44"
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes"
-          TopLeft="47,240" />
-        <EdgeLayout
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW.PrecedenceConstraints[Constraint 1]"
-          TopLeft="132.25,191">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,49"
-              Start="0,0"
-              End="0,41.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,41.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="1155,430"
-          Size="1155,473"
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW"
-          TopLeft="155,28" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="214,42"
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects"
-          TopLeft="201,311" />
-        <NodeLayout
-          Size="211,42"
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default"
-          TopLeft="210,107.5" />
-        <NodeLayout
-          Size="151,42"
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Default Project"
-          TopLeft="240,5.5" />
-        <NodeLayout
-          Size="174,42"
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Source FE Projects"
-          TopLeft="5.5,5.5" />
-        <NodeLayout
-          Size="158,42"
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column"
-          TopLeft="234,192" />
-        <EdgeLayout
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim.Paths[OLE DB Source Output]"
-          TopLeft="315.5,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="33.8333333333333,60"
-              Start="0,0"
-              End="33.8333333333333,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.7290686735654" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.7290686735654"
-                    Point2="0,35.7290686735654"
-                    Point3="4,35.7290686735654" />
-                  <mssgle:LineSegment
-                    End="29.8333333333333,35.7290686735654" />
-                  <mssgle:CubicBezierSegment
-                    Point1="29.8333333333333,35.7290686735654"
-                    Point2="33.8333333333333,35.7290686735654"
-                    Point3="33.8333333333333,39.7290686735654" />
-                  <mssgle:LineSegment
-                    End="33.8333333333333,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim.Paths[Derived Column Output]"
-          TopLeft="310.5,234">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,77"
-              Start="0,0"
-              End="0,69.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,69.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim.Paths[Union All Output 1]"
-          TopLeft="314.25,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,42.5"
-              Start="0,0"
-              End="0,35">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim.Paths[OLE DB Source Output1]"
-          TopLeft="92.5,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="189.166666666667,60"
-              Start="0,0"
-              End="189.166666666667,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.7290686735654" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.7290686735654"
-                    Point2="0,35.7290686735654"
-                    Point3="4,35.7290686735654" />
-                  <mssgle:LineSegment
-                    End="185.166666666667,35.7290686735654" />
-                  <mssgle:CubicBezierSegment
-                    Point1="185.166666666667,35.7290686735654"
-                    Point2="189.166666666667,35.7290686735654"
-                    Point3="189.166666666667,39.7290686735654" />
-                  <mssgle:LineSegment
-                    End="189.166666666667,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
     design-time-name="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="250,42"
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Export to csv_DIM_ProjectAttribute"
-          TopLeft="41,250" />
+          Size="215,42"
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Source FE ProjectAttributes"
+          TopLeft="27,5.5" />
         <NodeLayout
           Size="229,42"
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Lookup Project Dimension Key"
           TopLeft="22,113.5" />
         <NodeLayout
-          Size="215,42"
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Source FE ProjectAttributes"
-          TopLeft="27,5.5" />
+          Size="250,42"
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Export to csv_DIM_ProjectAttribute"
+          TopLeft="41,250" />
+        <EdgeLayout
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes.Paths[OLE DB Source Output]"
+          TopLeft="135.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,66"
+              Start="0,0"
+              End="0,58.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,58.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes.Paths[Lookup Match Output]"
           TopLeft="136.5,155.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="29.5,94.5"
               Start="0,0"
               End="29.5,87">
@@ -7063,20 +7584,202 @@ FROM
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="211,42"
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default"
+          TopLeft="210,107.5" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column"
+          TopLeft="234,192" />
+        <NodeLayout
+          Size="174,42"
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Source FE Projects"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Default Project"
+          TopLeft="240,5.5" />
+        <NodeLayout
+          Size="214,42"
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects"
+          TopLeft="217,458" />
         <EdgeLayout
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes.Paths[OLE DB Source Output]"
-          TopLeft="135.5,47.5">
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim.Paths[OLE DB Source Output1]"
+          TopLeft="92.5,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,66"
+              StartConnector="{assembly:Null}"
+              EndConnector="189.166666666667,60"
               Start="0,0"
-              End="0,58.5">
+              End="189.166666666667,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,58.5" />
+                    End="0,31.7290686735654" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.7290686735654"
+                    Point2="0,35.7290686735654"
+                    Point3="4,35.7290686735654" />
+                  <mssgle:LineSegment
+                    End="185.166666666667,35.7290686735654" />
+                  <mssgle:CubicBezierSegment
+                    Point1="185.166666666667,35.7290686735654"
+                    Point2="189.166666666667,35.7290686735654"
+                    Point3="189.166666666667,39.7290686735654" />
+                  <mssgle:LineSegment
+                    End="189.166666666667,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim.Paths[OLE DB Source Output]"
+          TopLeft="315.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="33.8333333333333,60"
+              Start="0,0"
+              End="33.8333333333333,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.7290686735654" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.7290686735654"
+                    Point2="0,35.7290686735654"
+                    Point3="4,35.7290686735654" />
+                  <mssgle:LineSegment
+                    End="29.8333333333333,35.7290686735654" />
+                  <mssgle:CubicBezierSegment
+                    Point1="29.8333333333333,35.7290686735654"
+                    Point2="33.8333333333333,35.7290686735654"
+                    Point3="33.8333333333333,39.7290686735654" />
+                  <mssgle:LineSegment
+                    End="33.8333333333333,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="244,42"
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID"
+          TopLeft="204,384" />
+        <EdgeLayout
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim.Paths[Sort Output]"
+          TopLeft="325,426">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32"
+              Start="0,0"
+              End="0,24.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1"
+          TopLeft="230,283" />
+        <EdgeLayout
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim.Paths[Derived Column Output]"
+          TopLeft="313.25,234">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49"
+              Start="0,0"
+              End="0,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim.Paths[Derived Column Output1]"
+          TopLeft="313.5,325">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12.5,59"
+              Start="0,0"
+              End="12.5,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.5"
+                    Point2="0,29.5"
+                    Point3="4,29.5" />
+                  <mssgle:LineSegment
+                    End="8.5,29.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8.5,29.5"
+                    Point2="12.5,29.5"
+                    Point3="12.5,33.5" />
+                  <mssgle:LineSegment
+                    End="12.5,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim.Paths[Union All Output 1]"
+          TopLeft="314.25,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42.5"
+              Start="0,0"
+              End="0,35">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7088,11 +7791,23 @@ FROM
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Source FE Projects">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="197,42"
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Source FE ProjectNotes"
+          TopLeft="36,5.5" />
         <NodeLayout
           Size="232,42"
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Export to csv_DIM_ProjectNote"
@@ -7101,16 +7816,36 @@ FROM
           Size="229,42"
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Lookup Project Dimension Key"
           TopLeft="24,162" />
-        <NodeLayout
-          Size="197,42"
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Source FE ProjectNotes"
-          TopLeft="36,5.5" />
+        <EdgeLayout
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes.Paths[OLE DB Source Output]"
+          TopLeft="136.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,114.5"
+              Start="0,0"
+              End="0,107">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,107" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes.Paths[Lookup Match Output]"
           TopLeft="141.75,204">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0,103"
               Start="0,0"
               End="0,95.5">
@@ -7127,28 +7862,6 @@ FROM
             <mssgm:EdgeLabel
               BoundingBox="-48.19138671875,41.9453125,96.3827734375,11.609375"
               RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes.Paths[OLE DB Source Output]"
-          TopLeft="136.5,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,114.5"
-              Start="0,0"
-              End="0,107">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,107" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
