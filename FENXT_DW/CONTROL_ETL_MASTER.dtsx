@@ -13,8 +13,8 @@
   DTS:ObjectName="CONTROL_ETL_MASTER"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="405"
-  DTS:VersionGUID="{02EAA751-5177-44A5-8247-6D88B0232966}">
+  DTS:VersionBuild="417"
+  DTS:VersionGUID="{00D10013-BC90-4084-B606-1B95F409FC8E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -32,7 +32,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="E:\BI\Scheduled_ETL_SF\FENXT_DW\Data Files\DIM_ProjectAttribute.csv">
+          DTS:ConnectionString="\\ftp1.osuf.org\Fivetran\Upload\FE_NXT\DIM_ProjectAttribute.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -40,7 +40,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="CodeTablesID"
-              DTS:DTSID="{D4F750D0-7E21-4469-8AB0-DA8297919B17}"
+              DTS:DTSID="{24A2CE47-9CA5-4AA7-B9B0-9191DA7DAA17}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -49,7 +49,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AttributeName"
-              DTS:DTSID="{A5173BFC-938C-4092-983E-B09B5E4DE2ED}"
+              DTS:DTSID="{6E93D158-91F2-4DBD-946F-774B91520F38}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="TableEntriesID"
-              DTS:DTSID="{E7ECF164-9F24-4920-AC45-BA2E4648CD4E}"
+              DTS:DTSID="{EC96A135-1020-4881-851E-69B7FF8F4EC3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AttributeValue"
-              DTS:DTSID="{DB97AE37-5875-4CBA-8720-1C384474F7D8}"
+              DTS:DTSID="{705A891B-25FB-4F63-B2A7-2298BD962E30}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -74,7 +74,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="Sequence"
-              DTS:DTSID="{9FC8D59F-F27D-4B62-85E6-7D3AA0536ECD}"
+              DTS:DTSID="{AB362949-9514-4680-B930-BDFA6B84FF57}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -83,7 +83,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Comments"
-              DTS:DTSID="{28931054-3D70-434A-AE89-2ED6EF1D3189}"
+              DTS:DTSID="{CB004AF7-8FE5-4700-B6A5-BD8FE462C5E4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -91,7 +91,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="AttributeDate"
-              DTS:DTSID="{057570B0-766E-4BC4-98D2-678E2FCB88FB}"
+              DTS:DTSID="{0FAE3123-8127-4B2D-A478-3B448C8E5592}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -100,7 +100,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="RecordType"
-              DTS:DTSID="{2BA6E33D-CF44-45D2-9A39-A2D4A1F457F7}"
+              DTS:DTSID="{7644BD53-10D7-4D38-8214-BC86DEEE61D6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -109,7 +109,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="TypeOfData"
-              DTS:DTSID="{97F27472-CA17-4FF5-AAFB-5B1C368DBC3E}"
+              DTS:DTSID="{86ACA853-AAA4-4BB4-A0BE-A923203169C2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -118,7 +118,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Required"
-              DTS:DTSID="{B69BCB95-F8B2-41B7-BE2A-4D6C14CC0AB1}"
+              DTS:DTSID="{863092C0-1B18-4A2B-A784-D0AE8E041E6C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -127,7 +127,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="MustBeUnique"
-              DTS:DTSID="{A7A331FA-91C8-44D7-852B-84CAE78BB437}"
+              DTS:DTSID="{9E1A3F3B-3DE5-4C28-9BBD-D0D5CEA7CDE1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -135,7 +135,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ProjectSystemID"
-              DTS:DTSID="{F9D50DD9-8950-49EA-AC89-4241F17F889C}"
+              DTS:DTSID="{2296397B-8EE8-483F-B26C-8ABF61D98B0E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -143,7 +143,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="AttributeSystemID"
-              DTS:DTSID="{7660AE80-AC92-44AA-A024-BC4B721C0322}"
+              DTS:DTSID="{265A968E-E429-49BE-BB9A-A8015AC3BA7A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -151,7 +151,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="AttributeTypeSystemID"
-              DTS:DTSID="{6734AC56-1DE1-4CFF-ABE4-EB67574C3377}"
+              DTS:DTSID="{CAE216F0-7B30-42B2-811B-276A283644BD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -160,7 +160,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ImportID"
-              DTS:DTSID="{85D087B9-CB87-45D4-B232-96638A8034BA}"
+              DTS:DTSID="{2EA5F5D2-EFAA-4E72-B6F9-78F31F72C7D5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -168,7 +168,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="DATEADDED"
-              DTS:DTSID="{E97F7263-B3C2-46CD-AD0E-EDE1A238606A}"
+              DTS:DTSID="{9D8934CC-0120-4423-9B11-A9DEF8CF3A5C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -176,7 +176,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="DATECHANGED"
-              DTS:DTSID="{24522837-482A-443A-8B60-437341B25D5D}"
+              DTS:DTSID="{FD3CEFE9-87B6-4D52-9A3B-67654D5635C8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -184,7 +184,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ProjectDimID"
-              DTS:DTSID="{1BE276CD-0297-4BD9-9A31-65C19F544D87}"
+              DTS:DTSID="{D947F9CF-8D8D-4BF2-A383-73809FF0AFFD}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -204,7 +204,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="E:\BI\Scheduled_ETL_SF\FENXT_DW\Data Files\DIM_ProjectNote.txt">
+          DTS:ConnectionString="\\ftp1.osuf.org\Fivetran\Upload\FE_NXT\DIM_ProjectNote.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -212,7 +212,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="Sequence"
-              DTS:DTSID="{EFBFD323-B76A-487F-948F-D02A19C6C31D}"
+              DTS:DTSID="{4662393F-F8A3-478E-B74E-5D4D06CAD977}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -220,7 +220,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ProjectSystemID"
-              DTS:DTSID="{5DC30F44-A1A7-4498-BD6F-81B062A4A0E8}"
+              DTS:DTSID="{07D9B8FD-54A4-4C72-8D92-A5665ABE2056}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -229,7 +229,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ImportID"
-              DTS:DTSID="{B4E6BFC4-EDA5-42A7-9838-0668F12DA9F4}"
+              DTS:DTSID="{BFD199BF-3130-4A0B-BA4E-32B285165843}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -237,7 +237,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="NotesID"
-              DTS:DTSID="{4C126053-B75D-4DEC-A983-5C91F6BF887A}"
+              DTS:DTSID="{BDE1879D-D208-41BC-9413-67D89ADFBA6A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -246,7 +246,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Description"
-              DTS:DTSID="{47994B0D-B9F4-45FB-A754-A832F8CF7881}"
+              DTS:DTSID="{ECB163D7-B34B-4B23-A661-3109EBA85F54}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -255,7 +255,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Title"
-              DTS:DTSID="{D5ACB74B-B064-43E0-A134-5687F734C35C}"
+              DTS:DTSID="{3440336F-B6B3-4268-850E-547D42AF343E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -264,7 +264,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Author"
-              DTS:DTSID="{BAD94FDC-056F-473F-B5E8-50C037ECE74F}"
+              DTS:DTSID="{66BC141B-8655-4729-8AA9-90BBE6A4F3BC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -272,7 +272,7 @@
               DTS:DataType="302"
               DTS:TextQualified="True"
               DTS:ObjectName="ActualNotes"
-              DTS:DTSID="{9AD874A1-5462-4577-BB26-76AB76D54B7B}"
+              DTS:DTSID="{F4F2F716-8FC4-479F-B3D9-847A1C305672}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -281,7 +281,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="LastChangedBy"
-              DTS:DTSID="{3AE21D09-2694-4FF8-ACF0-7487F1D75503}"
+              DTS:DTSID="{DDDD4C5E-4506-48E1-9949-90E714B8C1C3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -289,7 +289,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="LastChangedByID"
-              DTS:DTSID="{068035A2-BA8B-4180-968B-2B2AA4A41460}"
+              DTS:DTSID="{222F568F-4F7D-414D-8B56-B09FBEF7C208}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -297,7 +297,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="DateChanged"
-              DTS:DTSID="{A765168A-BFAA-4485-8BCC-3546076A8079}"
+              DTS:DTSID="{F5C965DE-C013-4147-8131-04B148C82D7F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -306,7 +306,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="NotepadType"
-              DTS:DTSID="{B2F3CBB9-D183-45B5-9918-61D3648E3862}"
+              DTS:DTSID="{F290F667-C4D1-4754-91AD-75A983B68B95}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -314,7 +314,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="NoteDate"
-              DTS:DTSID="{259C45DE-E74E-4865-83FA-13AD15507545}"
+              DTS:DTSID="{06A145AD-1FCB-4397-B8B5-3B8D5709445B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -322,7 +322,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ProjectDimID"
-              DTS:DTSID="{2E786DCD-07AE-4769-8DE7-888330AD435F}"
+              DTS:DTSID="{64915882-7386-458C-B753-938C7AD7D7A6}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -998,8 +998,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="ExportDirectory">
       <DTS:VariableValue
-        DTS:DataType="8"
-        xml:space="preserve"></DTS:VariableValue>
+        DTS:DataType="8">\\ftp1.osuf.org\Fivetran\Upload\FE_NXT\</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1273,6 +1272,22 @@ Partial Public Class ScriptMain
 
 End Class]]></ProjectItem>
               <ProjectItem
+                Name="Project"
+                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:NoContent>Reference;Import;Folder</msb:NoContent>
+		<msb:ProjectId>{75BB5C5B-B550-4E82-BAB0-C559227E3F88}</msb:ProjectId>
+		<msb:CodeName>ScriptTask_a80b7266d711461faf9a24f8b6754eb3</msb:CodeName>
+		<msb:Language>msBuild</msb:Language>
+		<msb:DisplayName>ScriptTask_a80b7266d711461faf9a24f8b6754eb3</msb:DisplayName>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:File Include="ScriptMain.vb"/>
+		<msb:Project Include="ScriptTask_a80b7266d711461faf9a24f8b6754eb3.vbproj"/>
+	</msb:ItemGroup>
+</c:Project>]]></ProjectItem>
+              <ProjectItem
                 Name="ScriptTask_a80b7266d711461faf9a24f8b6754eb3.vbproj"
                 Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -1358,22 +1373,6 @@ End Class]]></ProjectItem>
     <OptionStrict>On</OptionStrict>
   </PropertyGroup>
 </Project>]]></ProjectItem>
-              <ProjectItem
-                Name="Project"
-                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
-	<msb:PropertyGroup>
-		<msb:NoContent>Reference;Import;Folder</msb:NoContent>
-		<msb:ProjectId>{75BB5C5B-B550-4E82-BAB0-C559227E3F88}</msb:ProjectId>
-		<msb:CodeName>ScriptTask_a80b7266d711461faf9a24f8b6754eb3</msb:CodeName>
-		<msb:Language>msBuild</msb:Language>
-		<msb:DisplayName>ScriptTask_a80b7266d711461faf9a24f8b6754eb3</msb:DisplayName>
-	</msb:PropertyGroup>
-	<msb:ItemGroup>
-		<msb:File Include="ScriptMain.vb"/>
-		<msb:Project Include="ScriptTask_a80b7266d711461faf9a24f8b6754eb3.vbproj"/>
-	</msb:ItemGroup>
-</c:Project>]]></ProjectItem>
               <BinaryItem
                 Name="ScriptTask_a80b7266d711461faf9a24f8b6754eb3.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
@@ -1621,6 +1620,107 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
               engineThreads="5"
               version="1">
               <components>
+                <component
+                  refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Add dblQuote Escape Char"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Add dblQuote Escape Char"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Add dblQuote Escape Char.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Add dblQuote Escape Char.Inputs[Derived Column Input].Columns[AttributeValue]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="255"
+                          cachedName="AttributeValue"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Source FE ProjectAttributes.Outputs[OLE DB Source Output].Columns[AttributeValue]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[REPLACE](#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Source FE ProjectAttributes.Outputs[OLE DB Source Output].Columns[AttributeValue]},"\"","\\\"")</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">REPLACE(AttributeValue,"\"","\\\"")</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Add dblQuote Escape Char.Inputs[Derived Column Input].Columns[Comments]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Comments"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Source FE ProjectAttributes.Outputs[OLE DB Source Output].Columns[Comments]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[REPLACE](#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Source FE ProjectAttributes.Outputs[OLE DB Source Output].Columns[Comments]},"\"","\\\"")</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">REPLACE(Comments,"\"","\\\"")</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Add dblQuote Escape Char.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Add dblQuote Escape Char.Inputs[Derived Column Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Add dblQuote Escape Char.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Add dblQuote Escape Char.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Add dblQuote Escape Char.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Add dblQuote Escape Char.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Add dblQuote Escape Char.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Add dblQuote Escape Char.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
                 <component
                   refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Export to csv_DIM_ProjectAttribute"
                   componentClassID="Microsoft.FlatFileDestination"
@@ -2546,8 +2646,13 @@ ON PA.TABLEENTRIESID = TE.TABLEENTRIESID
               </components>
               <paths>
                 <path
-                  refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes.Paths[Lookup Match Output]"
+                  refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes.Paths[Derived Column Output]"
                   endId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Export to csv_DIM_ProjectAttribute.Inputs[Flat File Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Add dblQuote Escape Char.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes.Paths[Lookup Match Output]"
+                  endId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Add dblQuote Escape Char.Inputs[Derived Column Input]"
                   name="Lookup Match Output"
                   startId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Lookup Project Dimension Key.Outputs[Lookup Match Output]" />
                 <path
@@ -2576,6 +2681,187 @@ ON PA.TABLEENTRIESID = TE.TABLEENTRIESID
               engineThreads="5"
               version="1">
               <components>
+                <component
+                  refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add dblQuote Escape Char"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Add dblQuote Escape Char"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add dblQuote Escape Char.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add dblQuote Escape Char.Inputs[Derived Column Input].Columns[ProjectDescription]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="255"
+                          cachedName="ProjectDescription"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectDescription]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[REPLACE](#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectDescription]},"\"","\\\"")</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">REPLACE(ProjectDescription,"\"","\\\"")</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add dblQuote Escape Char.Inputs[Derived Column Input].Columns[AnnotationText]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="255"
+                          cachedName="AnnotationText"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[AnnotationText]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[REPLACE](#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[AnnotationText]},"\"","\\\"")</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">REPLACE(AnnotationText,"\"","\\\"")</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add dblQuote Escape Char.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add dblQuote Escape Char.Inputs[Derived Column Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add dblQuote Escape Char.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add dblQuote Escape Char.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add dblQuote Escape Char.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add dblQuote Escape Char.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add dblQuote Escape Char.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add dblQuote Escape Char.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add Project Dim ID"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Add Project Dim ID"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add Project Dim ID.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add Project Dim ID.Inputs[Derived Column Input].Columns[ProjectSystemID]"
+                          cachedDataType="i4"
+                          cachedName="ProjectSystemID"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectSystemID]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add Project Dim ID.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add Project Dim ID.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add Project Dim ID.Outputs[Derived Column Output].Columns[ProjectDimID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add Project Dim ID.Outputs[Derived Column Output].Columns[ProjectDimID]"
+                          name="ProjectDimID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectSystemID]}</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">ProjectSystemID</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add Project Dim ID.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add Project Dim ID.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add Project Dim ID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add Project Dim ID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add Project Dim ID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add Project Dim ID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
                 <component
                   refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Default Project"
                   componentClassID="Microsoft.OLEDBSource"
@@ -2954,187 +3240,6 @@ NULL AS AnnotationText</property>
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Default Project.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                           dataType="i4"
                           lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Default Project.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                          name="ErrorColumn"
-                          specialFlags="2" />
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                  </outputs>
-                </component>
-                <component
-                  refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column"
-                  componentClassID="Microsoft.DerivedColumn"
-                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-                  name="Derived Column"
-                  usesDispositions="true">
-                  <inputs>
-                    <input
-                      refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column.Inputs[Derived Column Input]"
-                      description="Input to the Derived Column Transformation"
-                      name="Derived Column Input">
-                      <inputColumns>
-                        <inputColumn
-                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column.Inputs[Derived Column Input].Columns[ProjectSystemID]"
-                          cachedDataType="i4"
-                          cachedName="ProjectSystemID"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectSystemID]" />
-                      </inputColumns>
-                      <externalMetadataColumns />
-                    </input>
-                  </inputs>
-                  <outputs>
-                    <output
-                      refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column.Outputs[Derived Column Output]"
-                      description="Default Output of the Derived Column Transformation"
-                      exclusionGroup="1"
-                      name="Derived Column Output"
-                      synchronousInputId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column.Inputs[Derived Column Input]">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column.Outputs[Derived Column Output].Columns[ProjectDimID]"
-                          dataType="i4"
-                          errorOrTruncationOperation="Computation"
-                          errorRowDisposition="FailComponent"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column.Outputs[Derived Column Output].Columns[ProjectDimID]"
-                          name="ProjectDimID"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.String"
-                              description="Derived Column Expression"
-                              name="Expression">#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectSystemID]}</property>
-                            <property
-                              containsID="true"
-                              dataType="System.String"
-                              description="Derived Column Friendly Expression"
-                              expressionType="Notify"
-                              name="FriendlyExpression">ProjectSystemID</property>
-                          </properties>
-                        </outputColumn>
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                    <output
-                      refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column.Outputs[Derived Column Error Output]"
-                      description="Error Output of the Derived Column Transformation"
-                      exclusionGroup="1"
-                      isErrorOut="true"
-                      name="Derived Column Error Output"
-                      synchronousInputId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column.Inputs[Derived Column Input]">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                          dataType="i4"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                          name="ErrorCode"
-                          specialFlags="1" />
-                        <outputColumn
-                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                          dataType="i4"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                          name="ErrorColumn"
-                          specialFlags="2" />
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                  </outputs>
-                </component>
-                <component
-                  refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1"
-                  componentClassID="Microsoft.DerivedColumn"
-                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-                  name="Derived Column 1"
-                  usesDispositions="true">
-                  <inputs>
-                    <input
-                      refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1.Inputs[Derived Column Input]"
-                      description="Input to the Derived Column Transformation"
-                      name="Derived Column Input">
-                      <inputColumns>
-                        <inputColumn
-                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1.Inputs[Derived Column Input].Columns[ProjectDescription]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="255"
-                          cachedName="ProjectDescription"
-                          errorOrTruncationOperation="Computation"
-                          errorRowDisposition="FailComponent"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectDescription]"
-                          truncationRowDisposition="FailComponent"
-                          usageType="readWrite">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.String"
-                              description="Derived Column Expression"
-                              name="Expression">[REPLACE](#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[ProjectDescription]},"\"","\\\"")</property>
-                            <property
-                              containsID="true"
-                              dataType="System.String"
-                              description="Derived Column Friendly Expression"
-                              expressionType="Notify"
-                              name="FriendlyExpression">REPLACE(ProjectDescription,"\"","\\\"")</property>
-                          </properties>
-                        </inputColumn>
-                        <inputColumn
-                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1.Inputs[Derived Column Input].Columns[AnnotationText]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="255"
-                          cachedName="AnnotationText"
-                          errorOrTruncationOperation="Computation"
-                          errorRowDisposition="FailComponent"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[AnnotationText]"
-                          truncationRowDisposition="FailComponent"
-                          usageType="readWrite">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.String"
-                              description="Derived Column Expression"
-                              name="Expression">[REPLACE](#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1].Columns[AnnotationText]},"\"","\\\"")</property>
-                            <property
-                              containsID="true"
-                              dataType="System.String"
-                              description="Derived Column Friendly Expression"
-                              expressionType="Notify"
-                              name="FriendlyExpression">REPLACE(AnnotationText,"\"","\\\"")</property>
-                          </properties>
-                        </inputColumn>
-                      </inputColumns>
-                      <externalMetadataColumns />
-                    </input>
-                  </inputs>
-                  <outputs>
-                    <output
-                      refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1.Outputs[Derived Column Output]"
-                      description="Default Output of the Derived Column Transformation"
-                      exclusionGroup="1"
-                      name="Derived Column Output"
-                      synchronousInputId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1.Inputs[Derived Column Input]">
-                      <externalMetadataColumns />
-                    </output>
-                    <output
-                      refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1.Outputs[Derived Column Error Output]"
-                      description="Error Output of the Derived Column Transformation"
-                      exclusionGroup="1"
-                      isErrorOut="true"
-                      name="Derived Column Error Output"
-                      synchronousInputId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1.Inputs[Derived Column Input]">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                          dataType="i4"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                          name="ErrorCode"
-                          specialFlags="1" />
-                        <outputColumn
-                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                          dataType="i4"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -3655,7 +3760,7 @@ NULL AS AnnotationText</property>
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Inputs[Sort Input].Columns[ProjectDimID]"
                           cachedDataType="i4"
                           cachedName="ProjectDimID"
-                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column.Outputs[Derived Column Output].Columns[ProjectDimID]">
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add Project Dim ID.Outputs[Derived Column Output].Columns[ProjectDimID]">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -3898,7 +4003,7 @@ NULL AS AnnotationText</property>
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column.Outputs[Derived Column Output].Columns[ProjectDimID]}</property>
+                              name="SortColumnId">#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add Project Dim ID.Outputs[Derived Column Output].Columns[ProjectDimID]}</property>
                           </properties>
                         </outputColumn>
                       </outputColumns>
@@ -4815,14 +4920,14 @@ FROM dbo.GL7PROJECTS P
               <paths>
                 <path
                   refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim.Paths[Derived Column Output]"
-                  endId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1.Inputs[Derived Column Input]"
+                  endId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add dblQuote Escape Char.Inputs[Derived Column Input]"
                   name="Derived Column Output"
-                  startId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column.Outputs[Derived Column Output]" />
+                  startId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add Project Dim ID.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim.Paths[Derived Column Output1]"
                   endId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Inputs[Sort Input]"
                   name="Derived Column Output"
-                  startId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1.Outputs[Derived Column Output]" />
+                  startId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add dblQuote Escape Char.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim.Paths[OLE DB Source Output]"
                   endId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Inputs[Union All Input 3]"
@@ -4840,7 +4945,7 @@ FROM dbo.GL7PROJECTS P
                   startId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID.Outputs[Sort Output]" />
                 <path
                   refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim.Paths[Union All Output 1]"
-                  endId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column.Inputs[Derived Column Input]"
+                  endId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add Project Dim ID.Inputs[Derived Column Input]"
                   name="Union All Output 1"
                   startId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default.Outputs[Union All Output 1]" />
               </paths>
@@ -4864,6 +4969,132 @@ FROM dbo.GL7PROJECTS P
               engineThreads="5"
               version="1">
               <components>
+                <component
+                  refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Add dblQuote Escape Char"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Add dblQuote Escape Char"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Add dblQuote Escape Char.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Add dblQuote Escape Char.Inputs[Derived Column Input].Columns[Description]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="300"
+                          cachedName="Description"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[Description]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[REPLACE](#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[Description]},"\"","\\\"")</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">REPLACE(Description,"\"","\\\"")</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Add dblQuote Escape Char.Inputs[Derived Column Input].Columns[Title]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="300"
+                          cachedName="Title"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[Title]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[REPLACE](#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[Title]},"\"","\\\"")</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">REPLACE(Title,"\"","\\\"")</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Add dblQuote Escape Char.Inputs[Derived Column Input].Columns[ActualNotes]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="8000"
+                          cachedName="ActualNotes"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[ActualNotes]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[REPLACE](#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[ActualNotes]},"\"","\\\"")</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">REPLACE(ActualNotes,"\"","\\\"")</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Add dblQuote Escape Char.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Add dblQuote Escape Char.Inputs[Derived Column Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Add dblQuote Escape Char.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Add dblQuote Escape Char.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Add dblQuote Escape Char.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Add dblQuote Escape Char.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Add dblQuote Escape Char.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Add dblQuote Escape Char.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
                 <component
                   refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Export to csv_DIM_ProjectNote"
                   componentClassID="Microsoft.FlatFileDestination"
@@ -4929,7 +5160,7 @@ FROM dbo.GL7PROJECTS P
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].Columns[Description]"
                           cachedCodepage="1252"
                           cachedDataType="str"
-                          cachedLength="255"
+                          cachedLength="300"
                           cachedName="Description"
                           externalMetadataColumnId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[Description]"
                           lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[Description]" />
@@ -4937,7 +5168,7 @@ FROM dbo.GL7PROJECTS P
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].Columns[Title]"
                           cachedCodepage="1252"
                           cachedDataType="str"
-                          cachedLength="50"
+                          cachedLength="300"
                           cachedName="Title"
                           externalMetadataColumnId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[Title]"
                           lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[Title]" />
@@ -4952,7 +5183,8 @@ FROM dbo.GL7PROJECTS P
                         <inputColumn
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].Columns[ActualNotes]"
                           cachedCodepage="1252"
-                          cachedDataType="text"
+                          cachedDataType="str"
+                          cachedLength="8000"
                           cachedName="ActualNotes"
                           externalMetadataColumnId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input].ExternalColumns[ActualNotes]"
                           lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[ActualNotes]" />
@@ -5273,7 +5505,7 @@ SELECT
 , Description
 , Title
 , Author
-, ActualNotes 
+, Convert(varchar(7950), ActualNotes, 1252) AS ActualNotes   /*output is 8000 chars.  saving 50 spaces for adding escape characters*/
 , NotepadDate AS NoteDate
 , Sequence
 
@@ -5365,7 +5597,7 @@ FROM
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[Description]"
-                          length="255"
+                          length="300"
                           lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[Description]"
                           name="Description"
                           truncationRowDisposition="FailComponent" />
@@ -5376,7 +5608,7 @@ FROM
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[Title]"
-                          length="50"
+                          length="300"
                           lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[Title]"
                           name="Title"
                           truncationRowDisposition="FailComponent" />
@@ -5394,10 +5626,11 @@ FROM
                         <outputColumn
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[ActualNotes]"
                           codePage="1252"
-                          dataType="text"
+                          dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[ActualNotes]"
+                          length="8000"
                           lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].Columns[ActualNotes]"
                           name="ActualNotes"
                           truncationRowDisposition="FailComponent" />
@@ -5492,7 +5725,8 @@ FROM
                         <externalMetadataColumn
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[ActualNotes]"
                           codePage="1252"
-                          dataType="text"
+                          dataType="str"
+                          length="7950"
                           name="ActualNotes" />
                         <externalMetadataColumn
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Output].ExternalColumns[LastChangedBy]"
@@ -5566,7 +5800,8 @@ FROM
                         <outputColumn
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[ActualNotes]"
                           codePage="1252"
-                          dataType="text"
+                          dataType="str"
+                          length="7950"
                           lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Source FE ProjectNotes.Outputs[OLE DB Source Error Output].Columns[ActualNotes]"
                           name="ActualNotes" />
                         <outputColumn
@@ -5623,8 +5858,13 @@ FROM
               </components>
               <paths>
                 <path
-                  refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes.Paths[Lookup Match Output]"
+                  refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes.Paths[Derived Column Output]"
                   endId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Export to csv_DIM_ProjectNote.Inputs[Flat File Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Add dblQuote Escape Char.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes.Paths[Lookup Match Output]"
+                  endId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Add dblQuote Escape Char.Inputs[Derived Column Input]"
                   name="Lookup Match Output"
                   startId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Lookup Project Dimension Key.Outputs[Lookup Match Output]" />
                 <path
@@ -6572,7 +6812,7 @@ FROM
         <NodeLayout
           Size="175,44"
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes"
-          TopLeft="44,147" />
+          TopLeft="46,148" />
         <NodeLayout
           Size="170,44"
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim"
@@ -6583,18 +6823,18 @@ FROM
           TopLeft="47,240" />
         <EdgeLayout
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW.PrecedenceConstraints[Constraint]"
-          TopLeft="130.75,97">
+          TopLeft="131.75,97">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,50"
+              EndConnector="0,51"
               Start="0,0"
-              End="0,42.5">
+              End="0,43.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,42.5" />
+                    End="0,43.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6605,18 +6845,18 @@ FROM
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW.PrecedenceConstraints[Constraint 1]"
-          TopLeft="132.25,191">
+          TopLeft="133.25,192">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,49"
+              EndConnector="0,48"
               Start="0,0"
-              End="0,41.5">
+              End="0,40.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.5" />
+                    End="0,40.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7523,7 +7763,7 @@ FROM
         <NodeLayout
           Size="250,42"
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Export to csv_DIM_ProjectAttribute"
-          TopLeft="41,250" />
+          TopLeft="32,322" />
         <EdgeLayout
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes.Paths[OLE DB Source Output]"
           TopLeft="135.5,47.5">
@@ -7543,45 +7783,69 @@ FROM
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="213,42"
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes\Add dblQuote Escape Char"
+          TopLeft="35,210" />
         <EdgeLayout
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes.Paths[Lookup Match Output]"
-          TopLeft="136.5,155.5">
+          TopLeft="139,155.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="29.5,94.5"
+              EndConnector="0,54.5"
               Start="0,0"
-              End="29.5,87">
+              End="0,47">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,43.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,43.25"
-                    Point2="0,47.25"
-                    Point3="4,47.25" />
-                  <mssgle:LineSegment
-                    End="25.5,47.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="25.5,47.25"
-                    Point2="29.5,47.25"
-                    Point3="29.5,51.25" />
-                  <mssgle:LineSegment
-                    End="29.5,87" />
+                    End="0,47" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-33.44138671875,52.25,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,17.6953125,96.3827734375,11.609375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectAttributes.Paths[Derived Column Output]"
+          TopLeft="141.5,252">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="15.5,70"
+              Start="0,0"
+              End="15.5,62.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31"
+                    Point2="0,35"
+                    Point3="4,35" />
+                  <mssgle:LineSegment
+                    End="11.5,35" />
+                  <mssgle:CubicBezierSegment
+                    Point1="11.5,35"
+                    Point2="15.5,35"
+                    Point3="15.5,39" />
+                  <mssgle:LineSegment
+                    End="15.5,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7593,25 +7857,77 @@ FROM
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="214,42"
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects"
+          TopLeft="217,458" />
+        <NodeLayout
           Size="211,42"
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Union Projects with Default"
           TopLeft="210,107.5" />
-        <NodeLayout
-          Size="158,42"
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column"
-          TopLeft="234,192" />
         <NodeLayout
           Size="174,42"
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Source FE Projects"
           TopLeft="5.5,5.5" />
         <NodeLayout
+          Size="172,42"
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add Project Dim ID"
+          TopLeft="234,192" />
+        <NodeLayout
           Size="151,42"
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Default Project"
           TopLeft="240,5.5" />
         <NodeLayout
-          Size="214,42"
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Export to csv_DIM_Projects"
-          TopLeft="217,458" />
+          Size="213,42"
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Add dblQuote Escape Char"
+          TopLeft="207,281" />
+        <NodeLayout
+          Size="244,42"
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID"
+          TopLeft="199,370" />
+        <EdgeLayout
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim.Paths[Union All Output 1]"
+          TopLeft="317.75,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42.5"
+              Start="0,0"
+              End="0,35">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim.Paths[Sort Output]"
+          TopLeft="322.5,412">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim.Paths[OLE DB Source Output1]"
           TopLeft="92.5,47.5">
@@ -7680,84 +7996,20 @@ FROM
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="244,42"
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Sort by Date Added and ProjectID"
-          TopLeft="204,384" />
-        <EdgeLayout
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim.Paths[Sort Output]"
-          TopLeft="325,426">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32"
-              Start="0,0"
-              End="0,24.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="167,42"
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim\Derived Column 1"
-          TopLeft="230,283" />
-        <EdgeLayout
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim.Paths[Derived Column Output]"
-          TopLeft="313.25,234">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,49"
-              Start="0,0"
-              End="0,41.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,41.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim.Paths[Derived Column Output1]"
-          TopLeft="313.5,325">
+          TopLeft="317.25,323">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="12.5,59"
+              EndConnector="0,47"
               Start="0,0"
-              End="12.5,51.5">
+              End="0,39.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.5"
-                    Point2="0,29.5"
-                    Point3="4,29.5" />
-                  <mssgle:LineSegment
-                    End="8.5,29.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="8.5,29.5"
-                    Point2="12.5,29.5"
-                    Point3="12.5,33.5" />
-                  <mssgle:LineSegment
-                    End="12.5,51.5" />
+                    End="0,39.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7767,19 +8019,19 @@ FROM
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim.Paths[Union All Output 1]"
-          TopLeft="314.25,149.5">
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectDim.Paths[Derived Column Output]"
+          TopLeft="316.75,234">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,42.5"
+              EndConnector="0,47"
               Start="0,0"
-              End="0,35">
+              End="0,39.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,35" />
+                    End="0,39.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7811,61 +8063,93 @@ FROM
         <NodeLayout
           Size="232,42"
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Export to csv_DIM_ProjectNote"
-          TopLeft="29,307" />
+          TopLeft="22,342" />
         <NodeLayout
           Size="229,42"
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Lookup Project Dimension Key"
-          TopLeft="24,162" />
+          TopLeft="22,102" />
         <EdgeLayout
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes.Paths[OLE DB Source Output]"
-          TopLeft="136.5,47.5">
+          TopLeft="135.5,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,114.5"
+              EndConnector="0,54.5"
               Start="0,0"
-              End="0,107">
+              End="0,47">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,107" />
+                    End="0,47" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="213,42"
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Add dblQuote Escape Char"
+          TopLeft="31,224" />
+        <EdgeLayout
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes.Paths[Lookup Match Output]"
+          TopLeft="137,144">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,80"
+              Start="0,0"
+              End="0,72.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,72.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="-48.19138671875,30.4453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes.Paths[Lookup Match Output]"
-          TopLeft="141.75,204">
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes.Paths[Derived Column Output]"
+          TopLeft="137.75,266">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,103"
+              EndConnector="0,76"
               Start="0,0"
-              End="0,95.5">
+              End="0,68.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,95.5" />
+                    End="0,68.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,41.9453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load ProjectNotes\Source FE ProjectNotes">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
