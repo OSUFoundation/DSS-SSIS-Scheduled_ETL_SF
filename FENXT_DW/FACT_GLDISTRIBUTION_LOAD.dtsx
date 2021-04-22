@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="3/14/2007"
@@ -8,13 +8,13 @@
   DTS:DTSID="{D55D4DC0-F28F-458B-B1DF-10A86617BEE3}"
   DTS:EnableConfig="True"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="13.0.4001.0"
+  DTS:LastModifiedProductVersion="15.0.2000.157"
   DTS:LocaleID="1033"
   DTS:ObjectName="FACT_GLDISTRIBUTION_LOAD"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="313"
-  DTS:VersionGUID="{E9D11A8C-79AC-4E33-A4CF-2D2CD446BABA}">
+  DTS:VersionBuild="314"
+  DTS:VersionGUID="{CB102952-1334-4DD4-9A47-1C563E7D539C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1029,7 +1029,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT 
   td.gl7transactionsid AS TransactionSystemID
 	
 -- Accounts
@@ -1871,7 +1871,7 @@ FROM
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT  AccountDimID,
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT  AccountDimID,
 	AccountSystemID, AccountCode, AccountNumber, AccountDescription, AccountCategorySystemID, AccountCategoryDescription, FundID, FundDescription, FundSystemID, SourceID, ETLControlID
   FROM DIM_Account</property>
                     <property
@@ -2169,7 +2169,7 @@ FROM
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT
 ClassDimID,
 ClassSystemID,
 ClassName,
@@ -2348,7 +2348,7 @@ DIM_Class</property>
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT SourceTypeDimID,
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT SourceTypeDimID,
 	SourceTypeSystemID, 
 	SourceType, 
 	SourceTypeGroup
@@ -2541,7 +2541,7 @@ DIM_Class</property>
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT JournalDimID,
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT JournalDimID,
 	JournalSystemID, SourceID, ETLControlID
   FROM DIM_Journal</property>
                     <property
@@ -2715,7 +2715,7 @@ DIM_Class</property>
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT  ProjectDimID,
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT  ProjectDimID,
 	ProjectSystemID, ProjectID, ProjectDescription, 
 	SourceID, 			
 	ETLControlID
@@ -2923,7 +2923,7 @@ FROM DIM_Project</property>
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT TransactionCodeDimID,
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT TransactionCodeDimID,
 	TransactionCodeSystemID, 
 	SourceID, 		
 	ETLControlID
@@ -3100,7 +3100,7 @@ FROM DIM_TransactionCode</property>
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT TransactionCodeDimID,
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT TransactionCodeDimID,
 	TransactionCodeSystemID, 
 	SourceID, 		
 	ETLControlID
@@ -3261,7 +3261,7 @@ FROM DIM_TransactionCode</property>
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT TransactionCodeDimID,
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT TransactionCodeDimID,
 	TransactionCodeSystemID, 
 	SourceID, 			
 	ETLControlID
@@ -3438,7 +3438,7 @@ FROM DIM_TransactionCode</property>
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT TransactionCodeDimID,
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT TransactionCodeDimID,
 	TransactionCodeSystemID, 
 	SourceID, 			
 	ETLControlID
@@ -3615,7 +3615,7 @@ FROM DIM_TransactionCode</property>
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT TransactionCodeDimID,
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT TransactionCodeDimID,
 	TransactionCodeSystemID, 
 	SourceID, 			
 	ETLControlID
@@ -3777,740 +3777,6 @@ FROM DIM_TransactionCode</property>
                     </output>
                   </outputs>
                 </component>
-                <component
-                  refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table"
-                  componentClassID="Microsoft.OLEDBDestination"
-                  contactInfo="OLE DB Destination;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-                  description="OLE DB Destination"
-                  name="Populate DW FACT_GLTransactionDistirbution Table"
-                  usesDispositions="true"
-                  version="4">
-                  <properties>
-                    <property
-                      dataType="System.Int32"
-                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                      name="CommandTimeout">0</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the name of the database object used to open a rowset."
-                      name="OpenRowset">[dbo].[FACT_GLTransactionDistribution]</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the variable that contains the name of the database object used to open a rowset."
-                      name="OpenRowsetVariable"></property>
-                    <property
-                      dataType="System.String"
-                      description="The SQL command to be executed."
-                      name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the column code page to use when code page information is unavailable from the data source."
-                      name="DefaultCodePage">1252</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Forces the use of the DefaultCodePage property value when describing character data."
-                      name="AlwaysUseDefaultCodePage">false</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the mode used to access the database."
-                      name="AccessMode"
-                      typeConverter="AccessMode">3</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                      name="FastLoadKeepIdentity">false</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destinaton. Applies only if fast load is turned on."
-                      name="FastLoadKeepNulls">false</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                      name="FastLoadMaxInsertCommitSize">0</property>
-                  </properties>
-                  <connections>
-                    <connection
-                      refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[ETL_DB_CONN_DW]"
-                      connectionManagerRefId="Package.ConnectionManagers[ETL_DB_CONN_DW]"
-                      description="The OLE DB runtime connection used to access the database."
-                      name="OleDbConnection" />
-                  </connections>
-                  <inputs>
-                    <input
-                      refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input]"
-                      errorOrTruncationOperation="Insert"
-                      errorRowDisposition="FailComponent"
-                      hasSideEffects="true"
-                      name="OLE DB Destination Input">
-                      <inputColumns>
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[TransactionSystemID]"
-                          cachedDataType="i4"
-                          cachedName="TransactionSystemID"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[TransactionSystemID]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[TransactionSystemID]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[PostStatusDimID]"
-                          cachedDataType="i2"
-                          cachedName="PostStatusDimID"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[PostStatusDimID]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[PostStatusDimID]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[PostDate]"
-                          cachedDataType="dbTimeStamp"
-                          cachedName="PostDate"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[PostDate]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[PostDate]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[FiscalPeriodsSystemID]"
-                          cachedDataType="i4"
-                          cachedName="FiscalPeriodsSystemID"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[FiscalPeriodsSystemID]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[FiscalPeriodsSystemID]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[TransactionTypeDimID]"
-                          cachedDataType="i2"
-                          cachedName="TransactionTypeDimID"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[TransactionTypeDimID]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[TransactionTypeDimID]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[TransactionNumber]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="18"
-                          cachedName="TransactionNumber"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[TransactionNumber]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[TransactionNumber]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[Amount]"
-                          cachedDataType="numeric"
-                          cachedName="Amount"
-                          cachedPrecision="19"
-                          cachedScale="4"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[Amount]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[Amount]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[NaturalAmount]"
-                          cachedDataType="numeric"
-                          cachedName="NaturalAmount"
-                          cachedPrecision="19"
-                          cachedScale="4"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[NaturalAmount]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[NaturalAmount]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[PostStatus]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="19"
-                          cachedName="PostStatus"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[PostStatus]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[PostStatus]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[BatchNumber]"
-                          cachedDataType="i4"
-                          cachedName="BatchNumber"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[BatchNumber]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[BatchNumber]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[BatchDescription]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="60"
-                          cachedName="BatchDescription"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[BatchDescription]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[BatchDescription]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[BatchStatus]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="16"
-                          cachedName="BatchStatus"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[BatchStatus]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[BatchStatus]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[TransactionDateChanged]"
-                          cachedDataType="dbTimeStamp"
-                          cachedName="TransactionDateChanged"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[TransactionDateChanged]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[TransactionDateChanged]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[TransactionDateAdded]"
-                          cachedDataType="dbTimeStamp"
-                          cachedName="TransactionDateAdded"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[TransactionDateAdded]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[TransactionDateAdded]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[SourceRecordsID]"
-                          cachedDataType="i4"
-                          cachedName="SourceRecordsID"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[SourceRecordsID]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[SourceRecordsID]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[SourceNumber]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="20"
-                          cachedName="SourceNumber"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[SourceNumber]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[SourceNumber]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[ProjectPeriodSequence]"
-                          cachedDataType="i4"
-                          cachedName="ProjectPeriodSequence"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[ProjectPeriodSequence]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[ProjectPeriodSequence]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[PostDateDimID]"
-                          cachedDataType="i4"
-                          cachedName="PostDateDimID"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[PostDateDimID]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[PostDateDimID]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[JournalReference]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="100"
-                          cachedName="JournalReference"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[JournalReference]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[JournalReference]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[ETLControlID]"
-                          cachedDataType="i4"
-                          cachedName="ETLControlID"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[ETLControlID]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Add ETLControlID, SourceID.Outputs[Derived Column Output].Columns[ETLControlID]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[ProjectDimID]"
-                          cachedDataType="i4"
-                          cachedName="ProjectDimID"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[ProjectDimID]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup Project Dimension Key.Outputs[Lookup Match Output].Columns[ProjectDimID]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[ProjectID]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="12"
-                          cachedName="ProjectID"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[ProjectID]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup Project Dimension Key.Outputs[Lookup Match Output].Columns[ProjectID]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[ProjectDescription]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="60"
-                          cachedName="ProjectDescription"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[ProjectDescription]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup Project Dimension Key.Outputs[Lookup Match Output].Columns[ProjectDescription]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[AccountDimID]"
-                          cachedDataType="i4"
-                          cachedName="AccountDimID"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[AccountDimID]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup Account Dimension Key.Outputs[Lookup Match Output].Columns[AccountDimID]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[AccountCode]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="30"
-                          cachedName="AccountCode"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[AccountCode]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup Account Dimension Key.Outputs[Lookup Match Output].Columns[AccountCode]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[AccountNumber]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="30"
-                          cachedName="AccountNumber"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[AccountNumber]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup Account Dimension Key.Outputs[Lookup Match Output].Columns[AccountNumber]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[FundID]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="10"
-                          cachedName="FundID"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[FundID]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup Account Dimension Key.Outputs[Lookup Match Output].Columns[FundID]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[FundDescription]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="60"
-                          cachedName="FundDescription"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[FundDescription]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup Account Dimension Key.Outputs[Lookup Match Output].Columns[FundDescription]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[SourceTypeName]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="SourceTypeName"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[SourceTypeName]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup GLSourceType.Outputs[Lookup Match Output].Columns[SourceTypeName]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[SourceTypeGroup]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="25"
-                          cachedName="SourceTypeGroup"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[SourceTypeGroup]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup GLSourceType.Outputs[Lookup Match Output].Columns[SourceTypeGroup]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[TransactionCode1DimID]"
-                          cachedDataType="i4"
-                          cachedName="TransactionCode1DimID"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[TransactionCode1DimID]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup TCode 1 Dimension Key.Outputs[Lookup Match Output].Columns[TransactionCode1DimID]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[TransactionCode2DimID]"
-                          cachedDataType="i4"
-                          cachedName="TransactionCode2DimID"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[TransactionCode2DimID]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup TCode 2 Dimension Key.Outputs[Lookup Match Output].Columns[TransactionCode2DimID]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[TransactionCode3DimID]"
-                          cachedDataType="i4"
-                          cachedName="TransactionCode3DimID"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[TransactionCode3DimID]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup TCode 3 Dimension Key.Outputs[Lookup Match Output].Columns[TransactionCode3DimID]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[TransactionCode4DimID]"
-                          cachedDataType="i4"
-                          cachedName="TransactionCode4DimID"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[TransactionCode4DimID]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup TCode 4 Dimension Key.Outputs[Lookup Match Output].Columns[TransactionCode4DimID]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[TransactionCode5DimID]"
-                          cachedDataType="i4"
-                          cachedName="TransactionCode5DimID"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[TransactionCode5DimID]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup TCode 5 Dimension Key.Outputs[Lookup Match Output].Columns[TransactionCode5DimID]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[AccountCategoryDescription]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="10"
-                          cachedName="AccountCategoryDescription"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[AccountCategory]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup Account Dimension Key.Outputs[Lookup Match Output].Columns[AccountCategoryDescription]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[TransactionTypeName]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="6"
-                          cachedName="TransactionTypeName"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[TransactionType]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[TransactionTypeName]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[JournalTypeName]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="60"
-                          cachedName="JournalTypeName"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[Journal]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[JournalTypeName]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[NewSurrogateKey]"
-                          cachedDataType="i4"
-                          cachedName="NewSurrogateKey"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[TransactionDistributionFactID]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Generate Surrogate Fact Key.Outputs[Output 0].Columns[NewSurrogateKey]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[SourceID]"
-                          cachedDataType="i4"
-                          cachedName="SourceID"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[SourceID]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Add ETLControlID, SourceID.Outputs[Derived Column Output].Columns[SourceID]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[ProjectSystemID]"
-                          cachedDataType="i4"
-                          cachedName="ProjectSystemID"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[ProjectSystemID]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[ProjectSystemID]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[JournalDimID]"
-                          cachedDataType="i4"
-                          cachedName="JournalDimID"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[JournalDimID]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup Journal Dimension Key.Outputs[Lookup Match Output].Columns[JournalDimID]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[AccountDescription]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="60"
-                          cachedName="AccountDescription"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[AccountDescription]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup Account Dimension Key.Outputs[Lookup Match Output].Columns[AccountDescription]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[ClassSystemID]"
-                          cachedDataType="i4"
-                          cachedName="ClassSystemID"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[ClassSystemID]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[ClassSystemID]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[AccountSystemID]"
-                          cachedDataType="i4"
-                          cachedName="AccountSystemID"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[AccountSystemID]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[AccountSystemID]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[ClassDimID]"
-                          cachedDataType="i4"
-                          cachedName="ClassDimID"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[ClassDimID]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup Class Dimension Key.Outputs[Lookup Match Output].Columns[ClassDimID]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[ClassName]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="60"
-                          cachedName="ClassName"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[ClassDescription]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup Class Dimension Key.Outputs[Lookup Match Output].Columns[ClassName]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[SourceTypeDimID]"
-                          cachedDataType="i4"
-                          cachedName="SourceTypeDimID"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[GLSourceTypeDimID]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup GLSourceType.Outputs[Lookup Match Output].Columns[SourceTypeDimID]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[AccountCategorySystemID]"
-                          cachedDataType="i2"
-                          cachedName="AccountCategorySystemID"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[AccountCategorySystemID]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup Account Dimension Key.Outputs[Lookup Match Output].Columns[AccountCategorySystemID]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[JournalShort]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="6"
-                          cachedName="JournalShort"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[JournalShort]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[JournalShort]" />
-                        <inputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].Columns[HistJour]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="5"
-                          cachedName="HistJour"
-                          externalMetadataColumnId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[HistJour]"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[HistJour]" />
-                      </inputColumns>
-                      <externalMetadataColumns
-                        isUsed="True">
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[TransactionDistributionFactID]"
-                          dataType="i4"
-                          name="TransactionDistributionFactID" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[AccountDimID]"
-                          dataType="i4"
-                          name="AccountDimID" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[AccountSystemID]"
-                          dataType="i4"
-                          name="AccountSystemID" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[AccountCode]"
-                          codePage="1252"
-                          dataType="str"
-                          length="30"
-                          name="AccountCode" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[AccountNumber]"
-                          codePage="1252"
-                          dataType="str"
-                          length="30"
-                          name="AccountNumber" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[AccountCategory]"
-                          codePage="1252"
-                          dataType="str"
-                          length="20"
-                          name="AccountCategory" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[ProjectDimID]"
-                          dataType="i4"
-                          name="ProjectDimID" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[ProjectSystemID]"
-                          dataType="i4"
-                          name="ProjectSystemID" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[ProjectID]"
-                          codePage="1252"
-                          dataType="str"
-                          length="12"
-                          name="ProjectID" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[ProjectDescription]"
-                          codePage="1252"
-                          dataType="str"
-                          length="60"
-                          name="ProjectDescription" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[FundID]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
-                          name="FundID" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[FundDescription]"
-                          codePage="1252"
-                          dataType="str"
-                          length="60"
-                          name="FundDescription" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[PostDateDimID]"
-                          dataType="i4"
-                          name="PostDateDimID" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[PostDate]"
-                          dataType="dbTimeStamp"
-                          name="PostDate" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[PostStatusDimID]"
-                          dataType="i2"
-                          name="PostStatusDimID" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[TransactionTypeDimID]"
-                          dataType="i2"
-                          name="TransactionTypeDimID" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[TransactionType]"
-                          codePage="1252"
-                          dataType="str"
-                          length="7"
-                          name="TransactionType" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[TransactionCode1DimID]"
-                          dataType="i4"
-                          name="TransactionCode1DimID" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[TransactionCode2DimID]"
-                          dataType="i4"
-                          name="TransactionCode2DimID" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[TransactionCode3DimID]"
-                          dataType="i4"
-                          name="TransactionCode3DimID" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[TransactionCode4DimID]"
-                          dataType="i4"
-                          name="TransactionCode4DimID" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[TransactionCode5DimID]"
-                          dataType="i4"
-                          name="TransactionCode5DimID" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[Amount]"
-                          dataType="cy"
-                          name="Amount" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[NaturalAmount]"
-                          dataType="cy"
-                          name="NaturalAmount" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[TransactionNumber]"
-                          codePage="1252"
-                          dataType="str"
-                          length="18"
-                          name="TransactionNumber" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[TransactionSystemID]"
-                          dataType="i4"
-                          name="TransactionSystemID" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[FiscalPeriodsSystemID]"
-                          dataType="i4"
-                          name="FiscalPeriodsSystemID" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[PostStatus]"
-                          codePage="1252"
-                          dataType="str"
-                          length="20"
-                          name="PostStatus" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[Journal]"
-                          codePage="1252"
-                          dataType="str"
-                          length="60"
-                          name="Journal" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[JournalReference]"
-                          codePage="1252"
-                          dataType="str"
-                          length="100"
-                          name="JournalReference" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[BatchNumber]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
-                          name="BatchNumber" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[BatchDescription]"
-                          codePage="1252"
-                          dataType="str"
-                          length="100"
-                          name="BatchDescription" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[BatchStatus]"
-                          codePage="1252"
-                          dataType="str"
-                          length="20"
-                          name="BatchStatus" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[SourceRecordsID]"
-                          dataType="i4"
-                          name="SourceRecordsID" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[SourceNumber]"
-                          codePage="1252"
-                          dataType="str"
-                          length="20"
-                          name="SourceNumber" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[SourceType]"
-                          dataType="i4"
-                          name="SourceType" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[SourceTypeName]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
-                          name="SourceTypeName" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[SourceTypeGroup]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
-                          name="SourceTypeGroup" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[TransactionDateAdded]"
-                          dataType="dbTimeStamp"
-                          name="TransactionDateAdded" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[TransactionDateChanged]"
-                          dataType="dbTimeStamp"
-                          name="TransactionDateChanged" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[ProjectPeriodSequence]"
-                          dataType="i4"
-                          name="ProjectPeriodSequence" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[ETLControlID]"
-                          dataType="i4"
-                          name="ETLControlID" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[SourceID]"
-                          dataType="i4"
-                          name="SourceID" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[JournalDimID]"
-                          dataType="i4"
-                          name="JournalDimID" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[AccountDescription]"
-                          codePage="1252"
-                          dataType="str"
-                          length="60"
-                          name="AccountDescription" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[GLSourceTypeDimID]"
-                          dataType="i4"
-                          name="GLSourceTypeDimID" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[ClassDimID]"
-                          dataType="i4"
-                          name="ClassDimID" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[ClassSystemID]"
-                          dataType="i4"
-                          name="ClassSystemID" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[ClassDescription]"
-                          codePage="1252"
-                          dataType="str"
-                          length="60"
-                          name="ClassDescription" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[AccountCategorySystemID]"
-                          dataType="i4"
-                          name="AccountCategorySystemID" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[Notes]"
-                          codePage="1252"
-                          dataType="text"
-                          name="Notes" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
-                          codePage="1252"
-                          dataType="str"
-                          length="100"
-                          name="Name" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[ADCCode]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
-                          name="ADCCode" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[BAIndex]"
-                          codePage="1252"
-                          dataType="str"
-                          length="200"
-                          name="BAIndex" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[PostedOnDate]"
-                          dataType="dbTimeStamp"
-                          name="PostedOnDate" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[JournalShort]"
-                          codePage="1252"
-                          dataType="str"
-                          length="6"
-                          name="JournalShort" />
-                        <externalMetadataColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input].ExternalColumns[HistJour]"
-                          codePage="1252"
-                          dataType="str"
-                          length="5"
-                          name="HistJour" />
-                      </externalMetadataColumns>
-                    </input>
-                  </inputs>
-                  <outputs>
-                    <output
-                      refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Outputs[OLE DB Destination Error Output]"
-                      exclusionGroup="1"
-                      isErrorOut="true"
-                      name="OLE DB Destination Error Output"
-                      synchronousInputId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input]">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                          dataType="i4"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                          name="ErrorCode"
-                          specialFlags="1" />
-                        <outputColumn
-                          refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                          dataType="i4"
-                          lineageId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                          name="ErrorColumn"
-                          specialFlags="2" />
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                  </outputs>
-                </component>
               </components>
               <paths>
                 <path
@@ -4573,11 +3839,6 @@ FROM DIM_TransactionCode</property>
                   endId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Add ETLControlID, SourceID.Inputs[Derived Column Input]"
                   name="OLE DB Source Output"
                   startId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output]" />
-                <path
-                  refId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact.Paths[Output 0]"
-                  endId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table.Inputs[OLE DB Destination Input]"
-                  name="Output 0"
-                  startId="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Generate Surrogate Fact Key.Outputs[Output 0]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -4798,7 +4059,7 @@ FROM DIM_TransactionCode</property>
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -5605,7 +4866,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select TransactionSystemID, TransactionDistributionFactID from [dbo].[FACT_GLTransactionDistribution]</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select TransactionSystemID, TransactionDistributionFactID from [dbo].[FACT_GLTransactionDistribution]</property>
                     <property
                       dataType="System.String"
                       description="Specifies a SQL statement that uses parameters to generate the lookup table."
@@ -5786,7 +5047,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT     PA.ATTRIBUTESID AS AttributeSystemID, PA.ATTRIBUTETYPESID AS AttributeTypeSystemID, AT.CODETABLESID AS CodeTablesID, 
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT     PA.ATTRIBUTESID AS AttributeSystemID, PA.ATTRIBUTETYPESID AS AttributeTypeSystemID, AT.CODETABLESID AS CodeTablesID, 
                       AT.DESCRIPTION AS AttributeName, PA.TABLEENTRIESID AS TableEntriesID, 
                       CASE [AT].TYPEOFDATA WHEN 1 THEN PA.TEXT WHEN 2 THEN CAST(PA.NUM AS VARCHAR(50)) WHEN 3 THEN CONVERT(Varchar(50), PA.[DATETIME], 
                       101) WHEN 4 THEN CAST(PA.[CURRENCY] AS VARCHAR(50)) WHEN 5 THEN CAST(PA.[BOOLEAN] AS VARCHAR(50)) 
@@ -6445,16 +5706,8 @@ FROM         GL7TRANSACTIONATTRIBUTES AS PA INNER JOIN
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="270,44"
-          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup Class Dimension Key"
-          TopLeft="5.5,307.235849056604" />
-        <NodeLayout
-          Size="270,44"
-          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup TCode 2 Dimension Key"
-          TopLeft="5.5,608.971698113208" />
-        <NodeLayout
-          Size="270,44"
-          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table"
-          TopLeft="5.5,986.405660377359" />
+          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Generate Surrogate Fact Key"
+          TopLeft="5.5,910.707547169811" />
         <NodeLayout
           Size="270,44"
           Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup Account Dimension Key"
@@ -6465,8 +5718,8 @@ FROM         GL7TRANSACTIONATTRIBUTES AS PA INNER JOIN
           TopLeft="5.5,382.669811320755" />
         <NodeLayout
           Size="270,44"
-          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup TCode 4 Dimension Key"
-          TopLeft="5.5,759.83962264151" />
+          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source"
+          TopLeft="5.5,5.5" />
         <NodeLayout
           Size="270,44"
           Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup TCode 3 Dimension Key"
@@ -6477,12 +5730,8 @@ FROM         GL7TRANSACTIONATTRIBUTES AS PA INNER JOIN
           TopLeft="5.5,458.103773584906" />
         <NodeLayout
           Size="270,44"
-          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Generate Surrogate Fact Key"
-          TopLeft="5.5,910.707547169811" />
-        <NodeLayout
-          Size="270,44"
-          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source"
-          TopLeft="5.5,5.5" />
+          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup TCode 4 Dimension Key"
+          TopLeft="5.5,759.83962264151" />
         <NodeLayout
           Size="270,44"
           Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup Project Dimension Key"
@@ -6493,34 +5742,20 @@ FROM         GL7TRANSACTIONATTRIBUTES AS PA INNER JOIN
           TopLeft="5.5,533.537735849057" />
         <NodeLayout
           Size="270,44"
+          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup TCode 5 Dimension Key"
+          TopLeft="5.5,835.27358490566" />
+        <NodeLayout
+          Size="270,44"
+          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup Class Dimension Key"
+          TopLeft="5.5,307.235849056604" />
+        <NodeLayout
+          Size="270,44"
           Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Add ETLControlID, SourceID"
           TopLeft="5.5,80.933962264151" />
         <NodeLayout
           Size="270,44"
-          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup TCode 5 Dimension Key"
-          TopLeft="5.5,835.27358490566" />
-        <EdgeLayout
-          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact.Paths[Output 0]"
-          TopLeft="140.254716981132,954.632075471698">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31.7735849056604"
-              Start="0,0"
-              End="0,24.2735849056604">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.2735849056604" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Lookup TCode 2 Dimension Key"
+          TopLeft="5.5,608.971698113208" />
         <EdgeLayout
           Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact.Paths[OLE DB Source Output]"
           TopLeft="140.254716981132,49.4245283018868">
@@ -6544,128 +5779,8 @@ FROM         GL7TRANSACTIONATTRIBUTES AS PA INNER JOIN
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact.Paths[Lookup Output3]"
-          TopLeft="140.254716981132,803.764150943396">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31.5094339622642"
-              Start="0,0"
-              End="0,24.0094339622642">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.0094339622642" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,6.20002948113208,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact.Paths[Lookup Output4]"
-          TopLeft="140.254716981132,879.198113207547">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31.5094339622642"
-              Start="0,0"
-              End="0,24.0094339622642">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.0094339622642" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,6.20002948113208,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact.Paths[Lookup Output2]"
-          TopLeft="140.254716981132,728.330188679245">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31.5094339622642"
-              Start="0,0"
-              End="0,24.0094339622642">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.0094339622642" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,6.20002948113208,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact.Paths[Lookup Output]"
-          TopLeft="140.254716981132,577.462264150943">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31.5094339622642"
-              Start="0,0"
-              End="0,24.0094339622642">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.0094339622642" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,6.20002948113208,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact.Paths[Lookup Output1]"
-          TopLeft="140.254716981132,652.896226415094">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31.5094339622642"
-              Start="0,0"
-              End="0,24.0094339622642">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.0094339622642" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,6.20002948113208,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact.Paths[Lookup Output8]"
-          TopLeft="140.254716981132,502.028301886793">
+          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact.Paths[Lookup Output9]"
+          TopLeft="140.254716981132,275.72641509434">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6688,8 +5803,8 @@ FROM         GL7TRANSACTIONATTRIBUTES AS PA INNER JOIN
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact.Paths[Lookup Output9]"
-          TopLeft="140.254716981132,275.72641509434">
+          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact.Paths[Lookup Output8]"
+          TopLeft="140.254716981132,502.028301886793">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6736,6 +5851,30 @@ FROM         GL7TRANSACTIONATTRIBUTES AS PA INNER JOIN
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact.Paths[Lookup Output6]"
+          TopLeft="140.254716981132,200.292452830189">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.5094339622642"
+              Start="0,0"
+              End="0,24.0094339622642">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.0094339622642" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,6.20002948113211,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact.Paths[Lookup Output5]"
           TopLeft="140.254716981132,351.160377358491">
           <EdgeLayout.Curve>
@@ -6760,8 +5899,8 @@ FROM         GL7TRANSACTIONATTRIBUTES AS PA INNER JOIN
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact.Paths[Lookup Output6]"
-          TopLeft="140.254716981132,200.292452830189">
+          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact.Paths[Lookup Output4]"
+          TopLeft="140.254716981132,879.198113207547">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6779,7 +5918,103 @@ FROM         GL7TRANSACTIONATTRIBUTES AS PA INNER JOIN
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,6.20002948113211,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,6.20002948113208,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact.Paths[Lookup Output3]"
+          TopLeft="140.254716981132,803.764150943396">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.5094339622642"
+              Start="0,0"
+              End="0,24.0094339622642">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.0094339622642" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,6.20002948113208,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact.Paths[Lookup Output2]"
+          TopLeft="140.254716981132,728.330188679245">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.5094339622642"
+              Start="0,0"
+              End="0,24.0094339622642">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.0094339622642" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,6.20002948113208,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact.Paths[Lookup Output1]"
+          TopLeft="140.254716981132,652.896226415094">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.5094339622642"
+              Start="0,0"
+              End="0,24.0094339622642">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.0094339622642" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,6.20002948113208,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact.Paths[Lookup Output]"
+          TopLeft="140.254716981132,577.462264150943">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.5094339622642"
+              Start="0,0"
+              End="0,24.0094339622642">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.0094339622642" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,6.20002948113208,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -6808,19 +6043,6 @@ FROM         GL7TRANSACTIONATTRIBUTES AS PA INNER JOIN
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Populate DW FACT_GLTransactionDistirbution Table">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Load GL Transaction Distribution Fact\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source">
     <Properties>
