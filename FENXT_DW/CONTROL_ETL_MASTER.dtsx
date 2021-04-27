@@ -13,8 +13,8 @@
   DTS:ObjectName="CONTROL_ETL_MASTER"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="456"
-  DTS:VersionGUID="{5E8ED152-7427-4DBD-B694-9CFA66545D54}">
+  DTS:VersionBuild="460"
+  DTS:VersionGUID="{55EDED17-BE40-4E65-82F1-CABC0B412706}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2570,426 +2570,6 @@
     </DTS:SelectedLogProviders>
   </DTS:LoggingOptions>
   <DTS:Executables>
-    <DTS:Executable
-      DTS:refId="Package\ETL Pre-Processing"
-      DTS:CreationName="STOCK:SEQUENCE"
-      DTS:Description="Sequence Container"
-      DTS:Disabled="True"
-      DTS:DTSID="{05F4164F-E113-416B-9854-D1141748F970}"
-      DTS:ExecutableType="STOCK:SEQUENCE"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="ETL Pre-Processing">
-      <DTS:Variables />
-      <DTS:LoggingOptions
-        DTS:FilterKind="0" />
-      <DTS:Executables>
-        <DTS:Executable
-          DTS:refId="Package\ETL Pre-Processing\Begin Load - sets load context and generates control ID"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Execute SQL Task"
-          DTS:DTSID="{84E79CA2-8EF3-4812-AAEB-0C6894A989BD}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Begin Load - sets load context and generates control ID"
-          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
-          <DTS:Variables />
-          <DTS:LoggingOptions
-            DTS:FilterKind="0" />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{e9abd28f-42c3-4e17-936b-53239796b081}"
-              SQLTask:SqlStatementSource="exec p_CTL_BeginLoad" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\ETL Pre-Processing\Drop Indexes"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Execute SQL Task"
-          DTS:DTSID="{8EF3B076-A310-4A94-B1DF-59EE9FD342EA}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Drop Indexes"
-          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
-          <DTS:Variables />
-          <DTS:LoggingOptions
-            DTS:FilterKind="0" />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{e9abd28f-42c3-4e17-936b-53239796b081}"
-              SQLTask:SqlStatementSource="EXEC dbo.BBBI_IndexHistory 'DROP'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\ETL Pre-Processing\Set ETL Run Variables"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Sets data window open and close datetime variables as well as the ETL Control ID"
-          DTS:DTSID="{f5751ab7-9f2c-4ff2-b31b-f2e747b9a11a}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Set ETL Run Variables"
-          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
-          <DTS:Variables />
-          <DTS:LoggingOptions
-            DTS:FilterKind="0" />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{e9abd28f-42c3-4e17-936b-53239796b081}"
-              SQLTask:SqlStatementSource="SELECT&#xA; &#xA;MAX(DataWindowOpen) DataWindowOpen,&#xA;MAX(DataWindowClose) DataWindowClose,&#xA;MAX(LoadStatusID) ETLControlID,&#xA;1 SourceID,&#xA;Convert(Bit, 1) AS TruncateTables&#xA;&#xA;FROM CTL_LoadStatus&#xA;"
-              SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
-              <SQLTask:ResultBinding
-                SQLTask:ResultName="DataWindowOpen"
-                SQLTask:DtsVariableName="User::DataWindowOpen" />
-              <SQLTask:ResultBinding
-                SQLTask:ResultName="DataWindowClose"
-                SQLTask:DtsVariableName="User::DataWindowClose" />
-              <SQLTask:ResultBinding
-                SQLTask:ResultName="ETLControlID"
-                SQLTask:DtsVariableName="User::ETLControlID" />
-              <SQLTask:ResultBinding
-                SQLTask:ResultName="SourceID"
-                SQLTask:DtsVariableName="User::SourceID" />
-              <SQLTask:ResultBinding
-                SQLTask:ResultName="TruncateTables"
-                SQLTask:DtsVariableName="User::TruncateTables" />
-            </SQLTask:SqlTaskData>
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\ETL Pre-Processing\Update Package Connections"
-          DTS:CreationName="Microsoft.ScriptTask"
-          DTS:Description="Script Task"
-          DTS:DTSID="{5C77DA4A-C096-4078-BAB0-A8441515B8A1}"
-          DTS:ExecutableType="Microsoft.ScriptTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Update Package Connections"
-          DTS:ThreadHint="0">
-          <DTS:Variables />
-          <DTS:LoggingOptions
-            DTS:FilterKind="0" />
-          <DTS:ObjectData>
-            <ScriptProject
-              Name="ScriptTask_a80b7266d711461faf9a24f8b6754eb3"
-              VSTAMajorVersion="14"
-              VSTAMinorVersion="0"
-              Language="VisualBasic"
-              ReadOnlyVariables="ETLDeploymentFolder">
-              <ProjectItem
-                Name="ScriptMain.vb"
-                Encoding="UTF8"><![CDATA[' Microsoft SQL Server Integration Services Script Task
-' Write scripts using Microsoft Visual Basic
-' The ScriptMain class is the entry point of the Script Task.
-
-Imports System
-Imports System.Data
-Imports System.Math
-Imports Microsoft.SqlServer.Dts.Runtime
-
-<Microsoft.SqlServer.Dts.Tasks.ScriptTask.SSISScriptTaskEntryPointAttribute> _
-<System.CLSCompliantAttribute(False)> _
-Partial Public Class ScriptMain
-	Inherits Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTARTScriptObjectModelBase
-
-	Enum ScriptResults
-		Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success
-		Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
-	End Enum
-
-    Public Sub Main()
-
-        ' grab all connection managers in the package
-        Dim connections As Microsoft.SqlServer.Dts.Runtime.Connections = Dts.Connections
-        Dim connection As Microsoft.SqlServer.Dts.Runtime.ConnectionManager
-
-        Dim prop As Microsoft.SqlServer.Dts.Runtime.DtsProperty
-        Dim etlDeploymentFolder As String = Dts.Variables("ETLDeploymentFolder").Value.ToString()
-        Dim fullFilePath As String
-        Dim fileName As String
-
-        If Not etlDeploymentFolder.EndsWith("\") Then
-            etlDeploymentFolder = etlDeploymentFolder.Trim() + "\"
-        End If
-
-        For Each connection In connections
-            If UCase(connection.CreationName) = "FILE" Then ' only set the value if this is a FILE connection mgr
-
-                prop = connection.Properties("ConnectionString")
-                fullFilePath = CStr(prop.GetValue(connection))
-                fileName = fullFilePath.Substring(fullFilePath.LastIndexOf("\") + 1, fullFilePath.Length - fullFilePath.LastIndexOf("\") - 1)
-
-                prop.SetValue(connection, etlDeploymentFolder & fileName)
-
-            End If
-        Next
-
-        Dts.TaskResult = ScriptResults.Success
-    End Sub
-
-
-End Class]]></ProjectItem>
-              <ProjectItem
-                Name="Project"
-                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
-	<msb:PropertyGroup>
-		<msb:NoContent>Reference;Import;Folder</msb:NoContent>
-		<msb:ProjectId>{75BB5C5B-B550-4E82-BAB0-C559227E3F88}</msb:ProjectId>
-		<msb:CodeName>ScriptTask_a80b7266d711461faf9a24f8b6754eb3</msb:CodeName>
-		<msb:Language>msBuild</msb:Language>
-		<msb:DisplayName>ScriptTask_a80b7266d711461faf9a24f8b6754eb3</msb:DisplayName>
-	</msb:PropertyGroup>
-	<msb:ItemGroup>
-		<msb:File Include="ScriptMain.vb"/>
-		<msb:Project Include="ScriptTask_a80b7266d711461faf9a24f8b6754eb3.vbproj"/>
-	</msb:ItemGroup>
-</c:Project>]]></ProjectItem>
-              <ProjectItem
-                Name="ScriptTask_a80b7266d711461faf9a24f8b6754eb3.vbproj"
-                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{c4d72bd4-a0b9-4818-ace1-5a17419a79d0}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>My Project</AppDesignerFolder>
-    <RootNamespace>ScriptTask_a80b7266d711461faf9a24f8b6754eb3</RootNamespace>
-    <AssemblyName>ScriptTask_a80b7266d711461faf9a24f8b6754eb3</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>.\bin\Debug\</OutputPath>
-    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
-    <DefineDebug>true</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <DebugSymbols>false</DebugSymbols>
-    <Optimize>true</Optimize>
-    <OutputPath>.\bin\Release\</OutputPath>
-    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
-    <DefineDebug>false</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-  </ItemGroup>
-  <ItemGroup>
-    <Import Include="Microsoft.VisualBasic" />
-    <Import Include="System" />
-    <Import Include="System.Collections" />
-    <Import Include="System.Data" />
-    <Import Include="System.Diagnostics" />
-    <Import Include="System.Windows.Forms" />
-  </ItemGroup>
-  <ItemGroup>
-    <AppDesigner Include="My Project\" />
-  </ItemGroup>
-  <!-- Include the build rules for a VB project.-->
-  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
-  <ProjectExtensions>
-    <VisualStudio>
-      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
-        <ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
-        <Host Name="ScriptTask" IconIndex=""></Host>
-        <ProjectClient>
-          <HostIdentifier>SSIS_ST130</HostIdentifier>
-        </ProjectClient>
-      </FlavorProperties>
-    </VisualStudio>
-  </ProjectExtensions>
-  <ItemGroup>
-    <Compile Include="ScriptMain.vb" />
-  </ItemGroup>
-  <PropertyGroup>
-    <OptionCompare>Binary</OptionCompare>
-  </PropertyGroup>
-  <PropertyGroup>
-    <OptionExplicit>On</OptionExplicit>
-  </PropertyGroup>
-  <PropertyGroup>
-    <OptionStrict>On</OptionStrict>
-  </PropertyGroup>
-</Project>]]></ProjectItem>
-              <BinaryItem
-                Name="ScriptTask_a80b7266d711461faf9a24f8b6754eb3.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAPE/G1kAAAAAAAAAAOAAIiALAVAAABYAAAAGAAAAAAAAsjQA
-AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAEAAAAAAAAAACAAAAAAgAAAAAAAAMAQIUAABAA
-ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAGA0AABPAAAAAEAAADADAAAAAAAAAAAAAAAAAAAA
-AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAuBQAAAAgAAAAFgAAAAIA
-AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAADADAAAAQAAAAAQAAAAYAAAAAAAAAAAAAAAAAABAAABA
-LnJlbG9jAAAMAAAAAGAAAAACAAAAHAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAACU
-NAAAAAAAAEgAAAACAAUAUCIAABASAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKA8AAAoqHgIoEAAACiqmcxEAAAqAAQAABHMSAAAKgAIA
-AARzEwAACoADAAAEcxQAAAqABAAABCoufgEAAARvFQAACioufgIAAARvFgAACioufgMAAARvFwAA
-CioufgQAAARvGAAACioeAigZAAAKKgAAEzAGANoAAAABAAARAigaAAAKbxsAAAoCKBoAAApvHAAA
-CnIBAABwbx0AAApvHgAACm8fAAAKCwdyKQAAcG8gAAAKLREHbyEAAApyKQAAcCgiAAAKC28jAAAK
-EwQrchEEbyQAAAoKBm8lAAAKKCYAAApyLQAAcBYoJwAACi1SBm8oAAAKcjcAAHBvKQAACiUGbyoA
-AAooKwAACgwICHIpAABwbywAAAoX1ghvLQAACghyKQAAcG8sAAAK2hfaby4AAAoNBgcJKCIAAApv
-LwAAChEEbzAAAAothQIoGgAAChZvMQAACio2AgMoMgAACigzAAAKKh4CKDQAAAoqLtAGAAACKDUA
-AAoqHgIoHwAACioTMAEAFAAAAAIAABECjAUAABstCCgBAAArCisCAgoGKiID/hUFAAAbKh4CKDcA
-AAoqAAAAEzACACgAAAADAAARAns4AAAKbzkAAAoKBowIAAAbLRIoAgAAKwoCezgAAAoGbzoAAAoG
-KkoCKDcAAAoCczsAAAp9OAAACioAQlNKQgEAAQAAAAAADAAAAHY0LjAuMzAzMTkAAAAABQBsAAAA
-gAYAACN+AADsBgAAyAcAACNTdHJpbmdzAAAAALQOAABcAAAAI1VTABAPAAAQAAAAI0dVSUQAAAAg
-DwAA8AIAACNCbG9iAAAAAAAAAAIAAAFXHaIJCQ4AAAD6ATMAFgAAAQAAACkAAAAIAAAACAAAABIA
-AAADAAAAOwAAAAIAAAAqAAAAAwAAAAIAAAAFAAAABQAAAAgAAAABAAAABQAAAAMAAAADAAAAAgAA
-AAAARgQBAAAAAAAGAKECigYGAPkCigYGAOQBywUPAKoGAAAGAFUCWAMKAM0BSgUKAKMBMAQKAPgB
-MAQOAI0BGgYOAHoF3gUGAG4CywUOACUCYwYOAD0CuQAGAE0HfwQOAGYFGgYOAIYCuQAGAGQBfwQG
-ABECRAYOAAEA9AMKALgBkAQSANcCywMGAMECfwQSAHEBywMGAJMDfwQWADgFQQEWAIMFQQEGAIsE
-fwQSAB4EywMWAAMHQQEWANoGQQEWAAMBQQEGAIIDfwQOAOQGuQAOAB4HYwYWAMgGQQEWALsHQQEO
-APMGYwYWAJgFQQEGAA8HigYGAAwBfwQGALQFfwQAAAAAVwAAAAAAAQABAAAAAADIBIwHJQABAAEA
-AAAAAHgFjAcpAAEAAgAAARAAVAeMBzkAAQADAAEAAACtBCsAXQAFAAgABQEAAAwGAAA5AAUACgAF
-AQAAEAAAADkABQARAAIBAAA4BwAAbQAGABMAMQABBToBMQDYBEIBMQDsBEoBMQAaBVIBIQCCB/gA
-BgaoAFoBVoAoB10BVoBpAV0BUCAAAAAABhi+BQYAAQBYIAAAAAAGGL4FBgABAGAgAAAAABEYxAVh
-AQEAiiAAAAAAEwhrBWUBAQCWIAAAAAATCLgEagEBAKIgAAAAABMIYgVvAQEAriAAAAAAEwj8BXQB
-AQC6IAAAAAAGGL4FBgABAMQgAAAAAAYAswQGAAEAqiEAAAAAxgLsBswAAQC4IQAAAADGAvcAswAC
-AMAhAAAAAIMAYQF5AQIAzCEAAAAAxgKAA3IAAgDUIQAAAAARAJUAfgECAPQhAAAAAAEAgQCGAQMA
-/SEAAAAABhi+BQYABAAIIgAAAAADCN4ASgAEADwiAAAAAAYYvgUGAAQAAAABANYEAAABAO4AAAAB
-AO4ACQC+BQEAEQC+BQYAGQC+BQoAKQC+BRAAMQC+BRUAQQC+BRsAWQC+BQYAYQC+BQYAaQC+BQYA
-gQC+BSEAkQC+BSkAoQC+BRAAqQC+BQYAsQC+BSkASQC+BQYAUQC+BQYADAC+BQYAFAC+BQYAHAC+
-BQYAJAC+BQYADADeAEoAFADeAEoAHADeAEoAJADeAEoAuQC+BQYAuQAwB1kA4QD/Bl4A4QDWBmMA
-8QB2BGgA+QAXA24AcQCAA3IAAQGjA3YAAQGGBHIAAQFGB3sA6QCmBYEA0QBtB4YAyQAwAXIACQGd
-AYsAEQFyA5AAyQC5BpcAGQF2BJ0AIQE6A6QAKQGAA6kAAQFMA64AAQGYA7MAAQGJA7cAIQFDA70A
-MQF5B8MA4QBeBwEAOQErA8cAcQDsBswAcQD3ALMAiQAeAdEASQHPAOEAcQC+BQYANACCB/gAPAAX
-A0oAPAAhAw8BPAC+BQYACAAcADABCAAgADUBKQBjAKoCLgALAKcBLgATALABLgAbAM8BLgAjANgB
-QAA7ADUBQAAzACACQwArACkCQwAzACACSQBjALsCYwArACkCYwAzACACaQBjAM8CgAA7ADUBgwBD
-ADUBgwBLADUBgwArACkCiQBjANwCoAA7ADUBowBrADUBowBzAEICwAA7ADUBwwAzACACwwBTAEgC
-4AA7ADUB4wAzACAC4wBbAEICQAEzACACQAE7ADUBYAEzACACYAE7ADUBgAEzACACgAE7ADUBoAEz
-ACACoAE7ADUBwAE7ADUB4AE7ADUBAAI7ADUBAAIzACACIAI7ADUBQAI7ADUBQAIzACACTwDZAOwA
-BAABAAcABQAAAHoFjgEAAMoEkwEAAGYFmAEAAA4GnQEAAOIAogECAAQAAwACAAUABQACAAYABwAC
-AAcACQACABEACwAuADUAPABDAN4A8QAAAQcBBIAAAAAAAAAAAAAAAAAAAAAAKwAAAAQAAAAAAAAA
-AAAAABUBsAAAAAAABAAAAAAAAAAAAAAAFQF/BAAAAAAKAAAAAAAAAAAAAAAeAbkAAAAAAA0AAAAA
-AAAAAAAAACcBrAMAAAAADQAAAAAAAAAAAAAAJwFgAAAAAAAGAAQABwAEAAgABQAAABAADgB/AAAA
-EAAdAH8AAAAAAB8AfwBtAOcAbQAKAQAAAAAAQ29udGV4dFZhbHVlYDEAVGhyZWFkU2FmZU9iamVj
-dFByb3ZpZGVyYDEAU2NyaXB0VGFza19hODBiNzI2NmQ3MTE0NjFmYWY5YTI0ZjhiNjc1NGViMwA8
-TW9kdWxlPgBNaWNyb3NvZnQuU3FsU2VydmVyLk1hbmFnZWREVFMAVABEaXNwb3NlX19JbnN0YW5j
-ZV9fAENyZWF0ZV9fSW5zdGFuY2VfXwB2YWx1ZV9fAG1zY29ybGliAE1pY3Jvc29mdC5WaXN1YWxC
-YXNpYwBDcmVhdGVJbnN0YW5jZQBnZXRfR2V0SW5zdGFuY2UAaW5zdGFuY2UAR2V0SGFzaENvZGUA
-VmFyaWFibGUAUnVudGltZVR5cGVIYW5kbGUAR2V0VHlwZUZyb21IYW5kbGUAZ2V0X0NyZWF0aW9u
-TmFtZQBNaWNyb3NvZnQuU3FsU2VydmVyLkR0cy5SdW50aW1lAEdldFR5cGUARmFpbHVyZQBWU1RB
-UlRTY3JpcHRPYmplY3RNb2RlbEJhc2UAQXBwbGljYXRpb25CYXNlAFVDYXNlAEVkaXRvckJyb3dz
-YWJsZVN0YXRlAEhlbHBLZXl3b3JkQXR0cmlidXRlAEdlbmVyYXRlZENvZGVBdHRyaWJ1dGUARGVi
-dWdnYWJsZUF0dHJpYnV0ZQBFZGl0b3JCcm93c2FibGVBdHRyaWJ1dGUAQ29tVmlzaWJsZUF0dHJp
-YnV0ZQBTdGFuZGFyZE1vZHVsZUF0dHJpYnV0ZQBIaWRlTW9kdWxlTmFtZUF0dHJpYnV0ZQBUYXJn
-ZXRGcmFtZXdvcmtBdHRyaWJ1dGUARGVidWdnZXJIaWRkZW5BdHRyaWJ1dGUATXlHcm91cENvbGxl
-Y3Rpb25BdHRyaWJ1dGUAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0dHJpYnV0ZQBDTFNDb21wbGlh
-bnRBdHRyaWJ1dGUAU1NJU1NjcmlwdFRhc2tFbnRyeVBvaW50QXR0cmlidXRlAFJ1bnRpbWVDb21w
-YXRpYmlsaXR5QXR0cmlidXRlAGdldF9WYWx1ZQBzZXRfVmFsdWUAR2V0T2JqZWN0VmFsdWUAR2V0
-VmFsdWUAU2V0VmFsdWUATGFzdEluZGV4T2YAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBDb21w
-YXJlU3RyaW5nAFRvU3RyaW5nAFN1YnN0cmluZwBNYXRoAGdldF9MZW5ndGgARW5kc1dpdGgATWlj
-cm9zb2Z0LlNxbFNlcnZlci5TY3JpcHRUYXNrAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlRhc2tz
-LlNjcmlwdFRhc2sATWljcm9zb2Z0LlZpc3VhbEJhc2ljLk15U2VydmljZXMuSW50ZXJuYWwAU2Ny
-aXB0T2JqZWN0TW9kZWwAU3lzdGVtLkNvbXBvbmVudE1vZGVsAFNjcmlwdFRhc2tfYTgwYjcyNjZk
-NzExNDYxZmFmOWEyNGY4YjY3NTRlYjMuZGxsAGdldF9JdGVtAFN5c3RlbQBUcmltAEVudW0AU3lz
-dGVtLkNvbXBvbmVudE1vZGVsLkRlc2lnbgBTY3JpcHRNYWluAGdldF9BcHBsaWNhdGlvbgBNeUFw
-cGxpY2F0aW9uAG8AbV9BcHBPYmplY3RQcm92aWRlcgBtX1VzZXJPYmplY3RQcm92aWRlcgBtX0Nv
-bXB1dGVyT2JqZWN0UHJvdmlkZXIAbV9NeVdlYlNlcnZpY2VzT2JqZWN0UHJvdmlkZXIAQ29ubmVj
-dGlvbk1hbmFnZXIAU3lzdGVtLkNvZGVEb20uQ29tcGlsZXIAZ2V0X1VzZXIAZ2V0X0NvbXB1dGVy
-AE15Q29tcHV0ZXIAQ29ubmVjdGlvbkVudW1lcmF0b3IARHRzRW51bWVyYXRvcgBHZXRFbnVtZXJh
-dG9yAEFjdGl2YXRvcgAuY3RvcgAuY2N0b3IAU3lzdGVtLkRpYWdub3N0aWNzAE1pY3Jvc29mdC5W
-aXN1YWxCYXNpYy5EZXZpY2VzAGdldF9XZWJTZXJ2aWNlcwBNeVdlYlNlcnZpY2VzAE1pY3Jvc29m
-dC5WaXN1YWxCYXNpYy5BcHBsaWNhdGlvblNlcnZpY2VzAFN5c3RlbS5SdW50aW1lLkludGVyb3BT
-ZXJ2aWNlcwBNaWNyb3NvZnQuVmlzdWFsQmFzaWMuQ29tcGlsZXJTZXJ2aWNlcwBTeXN0ZW0uUnVu
-dGltZS5Db21waWxlclNlcnZpY2VzAERlYnVnZ2luZ01vZGVzAGdldF9Qcm9wZXJ0aWVzAER0c1By
-b3BlcnRpZXMAZ2V0X1ZhcmlhYmxlcwBTdHJpbmdzAEVxdWFscwBDb252ZXJzaW9ucwBnZXRfQ29u
-bmVjdGlvbnMAUnVudGltZUhlbHBlcnMAT3BlcmF0b3JzAFN1Y2Nlc3MAZ2V0X0R0cwBTY3JpcHRS
-ZXN1bHRzAENvbmNhdABPYmplY3QATXlQcm9qZWN0AHNldF9UYXNrUmVzdWx0AGdldF9DdXJyZW50
-AE1vdmVOZXh0AG1fQ29udGV4dABTY3JpcHRUYXNrX2E4MGI3MjY2ZDcxMTQ2MWZhZjlhMjRmOGI2
-NzU0ZWIzLk15AER0c1Byb3BlcnR5AAAAJ0UAVABMAEQAZQBwAGwAbwB5AG0AZQBuAHQARgBvAGwA
-ZABlAHIAAANcAAAJRgBJAEwARQAAIUMAbwBuAG4AZQBjAHQAaQBvAG4AUwB0AHIAaQBuAGcAAAAA
-AL4ElRDFPa5KkshYGkTEOOoABCABAQgDIAABBSABARERBCABAQ4FIAIBDg4FIAEBER0HIAQBDg4O
-DgQgAQECBhUSHAESDAYVEhwBEggGFRIcARI9BhUSHAESGAQgABMACQcFEmUODg4SaQQgABJxBCAA
-EnUEIAASeQUgARJ9HAMgABwDIAAOBCABAg4FAAIODg4EIAASaQQgABJlBAABDg4GAAMIDg4CBSAA
-EoCNBiABEoCRHAQgARwcBAABDhwEIAEIDgMgAAgFIAIOCAgFIAIBHBwDIAACBAABHBwEIAECHAcA
-ARJFEYChBAcBHgACHgAFEAEAHgAECgEeAAQHARMABhUSHAETAAcGFRJNARMABhUSTQETAAITAAQK
-ARMABSABARMACLd6XFYZNOCJCLA/X38R1Qo6CImEXc2AgMyRBAAAAAAEAQAAAAcGFRIcARIMBwYV
-EhwBEggHBhUSHAESPQcGFRIcARIYAgYIAwYRIAMAAAEEAAASDAQAABIIBAAAEj0EAAASGAQgABJF
-BxABAR4AHgAHMAEBARAeAAQIABIMBAgAEggECAASPQQIABIYBCgAEwAIAQAIAAAAAAAeAQABAFQC
-FldyYXBOb25FeGNlcHRpb25UaHJvd3MBCAEAAgAAAAAARwEAGi5ORVRGcmFtZXdvcmssVmVyc2lv
-bj12NC4wAQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRAuTkVUIEZyYW1ld29yayA0CAEAAQAAAAAA
-GAEACk15VGVtcGxhdGUIMTEuMC4wLjAAAAUBAAAAAGEBADRTeXN0ZW0uV2ViLlNlcnZpY2VzLlBy
-b3RvY29scy5Tb2FwSHR0cENsaWVudFByb3RvY29sEkNyZWF0ZV9fSW5zdGFuY2VfXxNEaXNwb3Nl
-X19JbnN0YW5jZV9fAAAAEAEAC015LkNvbXB1dGVyAAATAQAOTXkuQXBwbGljYXRpb24AAAwBAAdN
-eS5Vc2VyAAATAQAOTXkuV2ViU2VydmljZXMAAIg0AAAAAAAAAAAAAKI0AAAAIAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAACUNAAAAAAAAAAAAAAAAF9Db3JEbGxNYWluAG1zY29yZWUuZGxsAAAAAAD/JQAg
-ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAABABAAAAAYAACAAAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAAAABI
-AAAAWEAAANQCAAAAAAAAAAAAANQCNAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBPAAAA
-AAC9BO/+AAABAAAAAAAAAAAAAAAAAAAAAAA/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAARAAA
-AAEAVgBhAHIARgBpAGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMAbABhAHQAaQBvAG4A
-AAAAAAAAsAQ0AgAAAQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAAAQAgAAAQAwADAAMAAw
-ADAANABiADAAAAAsAAIAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAAAAAAIAAAADAA
-CAABAEYAaQBsAGUAVgBlAHIAcwBpAG8AbgAAAAAAMAAuADAALgAwAC4AMAAAAIAAMAABAEkAbgB0
-AGUAcgBuAGEAbABOAGEAbQBlAAAAUwBjAHIAaQBwAHQAVABhAHMAawBfAGEAOAAwAGIANwAyADYA
-NgBkADcAMQAxADQANgAxAGYAYQBmADkAYQAyADQAZgA4AGIANgA3ADUANABlAGIAMwAuAGQAbABs
-AAAAKAACAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAIAAAAIgAMAABAE8AcgBpAGcA
-aQBuAGEAbABGAGkAbABlAG4AYQBtAGUAAABTAGMAcgBpAHAAdABUAGEAcwBrAF8AYQA4ADAAYgA3
-ADIANgA2AGQANwAxADEANAA2ADEAZgBhAGYAOQBhADIANABmADgAYgA2ADcANQA0AGUAYgAzAC4A
-ZABsAGwAAAA0AAgAAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBvAG4AAAAwAC4AMAAuADAALgAw
-AAAAOAAIAAEAQQBzAHMAZQBtAGIAbAB5ACAAVgBlAHIAcwBpAG8AbgAAADAALgAwAC4AMAAuADAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAAtDQAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
-            </ScriptProject>
-          </DTS:ObjectData>
-        </DTS:Executable>
-      </DTS:Executables>
-      <DTS:PrecedenceConstraints>
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\ETL Pre-Processing.PrecedenceConstraints[Constraint]"
-          DTS:CreationName=""
-          DTS:DTSID="{F578FD97-0ABE-446A-A6B9-BD163AC2B5F1}"
-          DTS:From="Package\ETL Pre-Processing\Begin Load - sets load context and generates control ID"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Constraint"
-          DTS:To="Package\ETL Pre-Processing\Set ETL Run Variables" />
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\ETL Pre-Processing.PrecedenceConstraints[Constraint 1]"
-          DTS:CreationName=""
-          DTS:DTSID="{A99E9476-2D3D-4B42-97C2-4D80596851B5}"
-          DTS:From="Package\ETL Pre-Processing\Set ETL Run Variables"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Constraint 1"
-          DTS:To="Package\ETL Pre-Processing\Drop Indexes" />
-      </DTS:PrecedenceConstraints>
-    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\FE Budget Info"
       DTS:CreationName="STOCK:SEQUENCE"
@@ -9003,7 +8583,7 @@ NULL AS ParentID,
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load GL Transaction Distribution Fact\Add dblQuote Escape Char.Inputs[Derived Column Input].Columns[HistJour]"
                           cachedCodepage="1252"
                           cachedDataType="str"
-                          cachedLength="5"
+                          cachedLength="10"
                           cachedName="HistJour"
                           errorOrTruncationOperation="Computation"
                           errorRowDisposition="FailComponent"
@@ -9671,7 +9251,7 @@ NULL AS ParentID,
                           refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load GL Transaction Distribution Fact\Flat File Destination.Inputs[Flat File Destination Input].Columns[HistJour]"
                           cachedCodepage="1252"
                           cachedDataType="str"
-                          cachedLength="5"
+                          cachedLength="10"
                           cachedName="HistJour"
                           externalMetadataColumnId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load GL Transaction Distribution Fact\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[HistJour]"
                           lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[HistJour]" />
@@ -10069,7 +9649,7 @@ WHERE Not (LEFT(A.AccountNumber, 2) = '10' AND CAST(RIGHT(RTrim(A.AccountNumber)
 
         AND CASE WHEN MONTH(t.POSTDATE) &lt; 7 THEN YEAR(t.POSTDATE)
                            ELSE YEAR(t.POSTDATE)+1
-                  END &lt;= 2015
+                  END &lt;= 2017
 
 
 Order by  td.gl7transactionsid ASC</property>
@@ -10434,7 +10014,7 @@ Order by  td.gl7transactionsid ASC</property>
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].ExternalColumns[HistJour]"
-                          length="5"
+                          length="10"
                           lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[HistJour]"
                           name="HistJour"
                           truncationRowDisposition="FailComponent" />
@@ -32980,81 +32560,6 @@ WHERE t.SOURCETYPE NOT IN(268,276,278,295,297,304,316,317,318,336,337,772,920,93
         DTS:FilterKind="0" />
       <DTS:Executables>
         <DTS:Executable
-          DTS:refId="Package\Populate Dimensions\Account Dim"
-          DTS:CreationName="Microsoft.ExecutePackageTask"
-          DTS:Description="Execute Package Task"
-          DTS:Disabled="True"
-          DTS:DTSID="{47948bc0-b677-4b69-81f7-b7f7110bfcb3}"
-          DTS:ExecutableType="Microsoft.ExecutePackageTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Account Dim"
-          DTS:TaskContact="Executes DTS packages;Microsoft Corporation; Microsoft SQL Server v9; (C) 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-          <DTS:Variables />
-          <DTS:LoggingOptions
-            DTS:FilterKind="0" />
-          <DTS:ObjectData>
-            <ExecutePackageTask>
-              <Connection>{0717FFC1-0605-454C-A78C-936DE87C2E09}</Connection>
-            </ExecutePackageTask>
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Populate Dimensions\Add Back Dimension Indexes"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Execute SQL Task"
-          DTS:Disabled="True"
-          DTS:DTSID="{1c2b5242-ddc9-4365-9e17-c96c0a417cf2}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Add Back Dimension Indexes"
-          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
-          <DTS:Variables />
-          <DTS:LoggingOptions
-            DTS:FilterKind="0" />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{e9abd28f-42c3-4e17-936b-53239796b081}"
-              SQLTask:SqlStatementSource="EXEC dbo.BBBI_IndexHistory 'ADD', 'DIM_'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Populate Dimensions\Class Dim"
-          DTS:CreationName="Microsoft.ExecutePackageTask"
-          DTS:Description="Execute Package Task"
-          DTS:Disabled="True"
-          DTS:DTSID="{86a5c46a-b6fe-480f-ba04-2c98b4f23ee1}"
-          DTS:ExecutableType="Microsoft.ExecutePackageTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Class Dim"
-          DTS:TaskContact="Executes DTS packages;Microsoft Corporation; Microsoft SQL Server v9; (C) 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-          <DTS:Variables />
-          <DTS:LoggingOptions
-            DTS:FilterKind="0" />
-          <DTS:ObjectData>
-            <ExecutePackageTask>
-              <Connection>{DCCAC7B9-5158-475B-910B-88F0E8EF1E1E}</Connection>
-            </ExecutePackageTask>
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Populate Dimensions\Execute Package Task - ProjectNotes"
-          DTS:CreationName="Microsoft.ExecutePackageTask"
-          DTS:Description="Execute Package Task"
-          DTS:Disabled="True"
-          DTS:DTSID="{87AC971B-6E06-479C-843B-30D1A16B1A21}"
-          DTS:ExecutableType="Microsoft.ExecutePackageTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Execute Package Task - ProjectNotes"
-          DTS:TaskContact="Executes DTS packages;Microsoft Corporation; Microsoft SQL Server v9; (C) 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <ExecutePackageTask>
-              <Connection>{D1D77B98-C85D-421E-8CD4-A6118C73D717}</Connection>
-            </ExecutePackageTask>
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
           DTS:refId="Package\Populate Dimensions\GL Source Types Dim"
           DTS:CreationName="Microsoft.ExecutePackageTask"
           DTS:Description="Execute Package Task"
@@ -33070,61 +32575,6 @@ WHERE t.SOURCETYPE NOT IN(268,276,278,295,297,304,316,317,318,336,337,772,920,93
           <DTS:ObjectData>
             <ExecutePackageTask>
               <Connection>{CBBE3467-A987-410F-9422-13061D856493}</Connection>
-            </ExecutePackageTask>
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Populate Dimensions\GLAccount Dim"
-          DTS:CreationName="Microsoft.ExecutePackageTask"
-          DTS:Description="Execute Package Task"
-          DTS:Disabled="True"
-          DTS:DTSID="{104A5DC9-D592-402E-831E-214910B4BB89}"
-          DTS:ExecutableType="Microsoft.ExecutePackageTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="GLAccount Dim"
-          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <ExecutePackageTask>
-              <Connection>{805075D1-55FF-4B54-B53A-8EF9DC5B59D0}</Connection>
-            </ExecutePackageTask>
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Populate Dimensions\Journal Dim"
-          DTS:CreationName="Microsoft.ExecutePackageTask"
-          DTS:Description="Execute Package Task"
-          DTS:Disabled="True"
-          DTS:DTSID="{1f1fb13a-f86e-4e09-b75e-37f41a8882c4}"
-          DTS:ExecutableType="Microsoft.ExecutePackageTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Journal Dim"
-          DTS:TaskContact="Executes DTS packages;Microsoft Corporation; Microsoft SQL Server v9; (C) 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-          <DTS:Variables />
-          <DTS:LoggingOptions
-            DTS:FilterKind="0" />
-          <DTS:ObjectData>
-            <ExecutePackageTask>
-              <Connection>{3622C54A-E64D-4DEA-AA93-6658A57587C5}</Connection>
-            </ExecutePackageTask>
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Populate Dimensions\Project Dim"
-          DTS:CreationName="Microsoft.ExecutePackageTask"
-          DTS:Description="Execute Package Task"
-          DTS:Disabled="True"
-          DTS:DTSID="{48df08be-eb40-4a45-84b2-969f3b28b38c}"
-          DTS:ExecutableType="Microsoft.ExecutePackageTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Project Dim"
-          DTS:TaskContact="Executes DTS packages;Microsoft Corporation; Microsoft SQL Server v9; (C) 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-          <DTS:Variables />
-          <DTS:LoggingOptions
-            DTS:FilterKind="0" />
-          <DTS:ObjectData>
-            <ExecutePackageTask>
-              <Connection>{951DA3EE-B88C-4898-B7E9-766F1D1315E3}</Connection>
             </ExecutePackageTask>
           </DTS:ObjectData>
         </DTS:Executable>
@@ -33205,25 +32655,6 @@ WHERE t.SOURCETYPE NOT IN(268,276,278,295,297,304,316,317,318,336,337,772,920,93
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Populate Dimensions\Update Account Segments"
-          DTS:CreationName="Microsoft.ExecutePackageTask"
-          DTS:Description="Execute Package Task"
-          DTS:Disabled="True"
-          DTS:DTSID="{35ffe50c-f91d-4a5d-a794-4b760f70e01b}"
-          DTS:ExecutableType="Microsoft.ExecutePackageTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Update Account Segments"
-          DTS:TaskContact="Executes DTS packages;Microsoft Corporation; Microsoft SQL Server v9; (C) 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-          <DTS:Variables />
-          <DTS:LoggingOptions
-            DTS:FilterKind="0" />
-          <DTS:ObjectData>
-            <ExecutePackageTask>
-              <Connection>{E0279567-7C5A-4216-8432-AB5A5F3BBEE3}</Connection>
-            </ExecutePackageTask>
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
           DTS:refId="Package\Populate Dimensions\VCO Dim"
           DTS:CreationName="Microsoft.ExecutePackageTask"
           DTS:Description="Execute Package Task"
@@ -33264,70 +32695,6 @@ WHERE t.SOURCETYPE NOT IN(268,276,278,295,297,304,316,317,318,336,337,772,920,93
       </DTS:Executables>
       <DTS:PrecedenceConstraints>
         <DTS:PrecedenceConstraint
-          DTS:refId="Package\Populate Dimensions.PrecedenceConstraints[Constraint]"
-          DTS:CreationName=""
-          DTS:DTSID="{913c8277-c154-4474-be40-a2baab3229b7}"
-          DTS:From="Package\Populate Dimensions\Update Account Segments"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Constraint"
-          DTS:To="Package\Populate Dimensions\Project Dim" />
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\Populate Dimensions.PrecedenceConstraints[Constraint 1]"
-          DTS:CreationName=""
-          DTS:DTSID="{AF5BEEE6-C38F-4B5E-96F4-BC34EB564613}"
-          DTS:From="Package\Populate Dimensions\Account Dim"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Constraint 1"
-          DTS:To="Package\Populate Dimensions\GLAccount Dim" />
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\Populate Dimensions.PrecedenceConstraints[Constraint 10]"
-          DTS:CreationName=""
-          DTS:DTSID="{FD49F2F7-086F-4754-B141-2D66EC323E52}"
-          DTS:From="Package\Populate Dimensions\Class Dim"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Constraint 10"
-          DTS:To="Package\Populate Dimensions\Account Dim" />
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\Populate Dimensions.PrecedenceConstraints[Constraint 11]"
-          DTS:CreationName=""
-          DTS:DTSID="{BE1FB447-ED47-4020-B3DF-5DE90E1BFB1B}"
-          DTS:From="Package\Populate Dimensions\GL Source Types Dim"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Constraint 11"
-          DTS:To="Package\Populate Dimensions\Class Dim" />
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\Populate Dimensions.PrecedenceConstraints[Constraint 12]"
-          DTS:CreationName=""
-          DTS:DTSID="{0C1B9799-47F5-4AA8-A874-62F0AE93A8B3}"
-          DTS:From="Package\Populate Dimensions\Execute Package Task - ProjectNotes"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Constraint 12"
-          DTS:To="Package\Populate Dimensions\Add Back Dimension Indexes" />
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\Populate Dimensions.PrecedenceConstraints[Constraint 13]"
-          DTS:CreationName=""
-          DTS:DTSID="{C4943345-BAE8-4E5F-AF9F-261388623BC2}"
-          DTS:From="Package\Populate Dimensions\GLAccount Dim"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Constraint 13"
-          DTS:To="Package\Populate Dimensions\Update Account Segments" />
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\Populate Dimensions.PrecedenceConstraints[Constraint 2]"
-          DTS:CreationName=""
-          DTS:DTSID="{22388409-1354-4a68-b959-a578a56aa693}"
-          DTS:From="Package\Populate Dimensions\Project Dim"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Constraint 2"
-          DTS:To="Package\Populate Dimensions\Journal Dim" />
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\Populate Dimensions.PrecedenceConstraints[Constraint 3]"
-          DTS:CreationName=""
-          DTS:DTSID="{5060c52d-2885-4d8e-bf93-c72550adac69}"
-          DTS:From="Package\Populate Dimensions\Journal Dim"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Constraint 3"
-          DTS:To="Package\Populate Dimensions\VCO Dim" />
-        <DTS:PrecedenceConstraint
           DTS:refId="Package\Populate Dimensions.PrecedenceConstraints[Constraint 4]"
           DTS:CreationName=""
           DTS:DTSID="{7885ea0c-9b62-4f5c-94fb-330be40d3e97}"
@@ -33359,14 +32726,6 @@ WHERE t.SOURCETYPE NOT IN(268,276,278,295,297,304,316,317,318,336,337,772,920,93
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 7"
           DTS:To="Package\Populate Dimensions\Scenario Dim" />
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\Populate Dimensions.PrecedenceConstraints[Constraint 8]"
-          DTS:CreationName=""
-          DTS:DTSID="{43787E98-256D-41EC-8E68-02258A985755}"
-          DTS:From="Package\Populate Dimensions\Scenario Dim"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Constraint 8"
-          DTS:To="Package\Populate Dimensions\Execute Package Task - ProjectNotes" />
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Populate Dimensions.PrecedenceConstraints[Constraint 9]"
           DTS:CreationName=""
@@ -33724,14 +33083,6 @@ WHERE t.SOURCETYPE NOT IN(268,276,278,295,297,304,316,317,318,336,337,772,920,93
       DTS:ObjectName="Constraint"
       DTS:To="Package\Populate Facts" />
     <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
-      DTS:CreationName=""
-      DTS:DTSID="{4E999F8F-AA8E-47F1-B2E7-813DF4C71C7E}"
-      DTS:From="Package\ETL Pre-Processing"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint 1"
-      DTS:To="Package\Populate Dimensions" />
-    <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
       DTS:DTSID="{4B9062F1-5B78-47EC-8874-DCD903C0D64C}"
@@ -33768,81 +33119,6 @@ WHERE t.SOURCETYPE NOT IN(268,276,278,295,297,304,316,317,318,336,337,772,920,93
     <LayoutInfo>
       <GraphLayout
         Capacity="128" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="234,44"
-          Id="Package\ETL Pre-Processing\Begin Load - sets load context and generates control ID"
-          TopLeft="30.7547169811321,18.0188679245283" />
-        <NodeLayout
-          Size="135,44"
-          Id="Package\ETL Pre-Processing\Drop Indexes"
-          TopLeft="473.924528301887,19.1509433962264" />
-        <NodeLayout
-          Size="135,44"
-          Id="Package\ETL Pre-Processing\Set ETL Run Variables"
-          TopLeft="300.943396226415,18.2075471698113" />
-        <NodeLayout
-          Size="167,44"
-          Id="Package\ETL Pre-Processing\Update Package Connections"
-          TopLeft="639.849056603774,21.0754716981132" />
-        <EdgeLayout
-          Id="Package\ETL Pre-Processing.PrecedenceConstraints[Constraint]"
-          TopLeft="264.867924528302,39.9811320754717">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="36.0754716981132,0.18867924528297"
-              Start="0,0"
-              End="28.5754716981132,0.18867924528297">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="18.0377358490566,0" />
-                  <mssgle:LineSegment
-                    End="18.0377358490566,0.18867924528297" />
-                  <mssgle:LineSegment
-                    End="28.5754716981132,0.18867924528297" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\ETL Pre-Processing.PrecedenceConstraints[Constraint 1]"
-          TopLeft="436.301886792453,40.1698113207547">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="37.6226415094341,0.943396226415075"
-              Start="0,0"
-              End="30.1226415094341,0.943396226415075">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="18.8301886792453,0" />
-                  <mssgle:LineSegment
-                    End="18.8301886792453,0.943396226415075" />
-                  <mssgle:LineSegment
-                    End="30.1226415094341,0.943396226415075" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43.283018867924525"
-          IsExpanded="True"
-          PanelSize="861,94"
-          Size="861,137"
-          Id="Package\ETL Pre-Processing"
-          TopLeft="43.5943396226417,647.5" />
         <NodeLayout
           Size="155,44"
           Id="Package\FE Budget Info\Account Budget Fact"
@@ -33897,7 +33173,7 @@ WHERE t.SOURCETYPE NOT IN(268,276,278,295,297,304,316,317,318,336,337,772,920,93
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load DIM Journal"
           TopLeft="265,146" />
         <NodeLayout
-          Size="203,44"
+          Size="264,42"
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load GL Transaction Distribution Fact"
           TopLeft="545,47" />
         <NodeLayout
@@ -34222,7 +33498,7 @@ WHERE t.SOURCETYPE NOT IN(268,276,278,295,297,304,316,317,318,336,337,772,920,93
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW.PrecedenceConstraints[Constraint 7]"
-          TopLeft="454,71">
+          TopLeft="454,70.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -34244,30 +33520,30 @@ WHERE t.SOURCETYPE NOT IN(268,276,278,295,297,304,316,317,318,336,337,772,920,93
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW.PrecedenceConstraints[Constraint 8]"
-          TopLeft="646.5,91">
+          TopLeft="677,89">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-10,43"
+              EndConnector="-40.5,45"
               Start="0,0"
-              End="-10,35.5">
+              End="-40.5,37.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.5" />
+                    End="0,18.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17.5"
-                    Point2="0,21.5"
-                    Point3="-4,21.5" />
+                    Point1="0,18.5"
+                    Point2="0,22.5"
+                    Point3="-4,22.5" />
                   <mssgle:LineSegment
-                    End="-6,21.5" />
+                    End="-36.5,22.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-6,21.5"
-                    Point2="-10,21.5"
-                    Point3="-10,25.5" />
+                    Point1="-36.5,22.5"
+                    Point2="-40.5,22.5"
+                    Point3="-40.5,26.5" />
                   <mssgle:LineSegment
-                    End="-10,35.5" />
+                    End="-40.5,37.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -34319,36 +33595,8 @@ WHERE t.SOURCETYPE NOT IN(268,276,278,295,297,304,316,317,318,336,337,772,920,93
           TopLeft="155,28" />
         <NodeLayout
           Size="162,44"
-          Id="Package\Populate Dimensions\Account Dim"
-          TopLeft="92.4528301886794,281" />
-        <NodeLayout
-          Size="162,44"
-          Id="Package\Populate Dimensions\Add Back Dimension Indexes"
-          TopLeft="88.7169811320755,964.811320754717" />
-        <NodeLayout
-          Size="162,44"
-          Id="Package\Populate Dimensions\Class Dim"
-          TopLeft="92.4528301886794,214.509433962264" />
-        <NodeLayout
-          Size="162,44"
-          Id="Package\Populate Dimensions\Execute Package Task - ProjectNotes"
-          TopLeft="83.3584905660377,895.735849056604" />
-        <NodeLayout
-          Size="162,44"
           Id="Package\Populate Dimensions\GL Source Types Dim"
           TopLeft="92.4528301886794,148.018867924528" />
-        <NodeLayout
-          Size="156,42"
-          Id="Package\Populate Dimensions\GLAccount Dim"
-          TopLeft="91.4545454545454,356.939393939394" />
-        <NodeLayout
-          Size="162,44"
-          Id="Package\Populate Dimensions\Journal Dim"
-          TopLeft="92.4528301886794,558.471698113208" />
-        <NodeLayout
-          Size="162,44"
-          Id="Package\Populate Dimensions\Project Dim"
-          TopLeft="92.4528301886794,491.981132075472" />
         <NodeLayout
           Size="162,44"
           Id="Package\Populate Dimensions\Scenario Dim"
@@ -34367,208 +33615,12 @@ WHERE t.SOURCETYPE NOT IN(268,276,278,295,297,304,316,317,318,336,337,772,920,93
           TopLeft="92.4528301886794,691.452830188679" />
         <NodeLayout
           Size="162,44"
-          Id="Package\Populate Dimensions\Update Account Segments"
-          TopLeft="92.4528301886794,425.490566037736" />
-        <NodeLayout
-          Size="162,44"
           Id="Package\Populate Dimensions\VCO Dim"
           TopLeft="92.4528301886794,624.962264150943" />
         <NodeLayout
           Size="162,44"
           Id="Package\Populate Dimensions\Vendor Dim"
           TopLeft="92.4528301886794,757.943396226415" />
-        <EdgeLayout
-          Id="Package\Populate Dimensions.PrecedenceConstraints[Constraint]"
-          TopLeft="152.830188679245,469.415094339623">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="20.7547169811321,22.566037735849"
-              Start="0,0"
-              End="20.7547169811321,15.066037735849">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,12.9433962264151" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.9433962264151"
-                    Point2="0,16.9433962264151"
-                    Point3="4,16.9433962264151" />
-                  <mssgle:LineSegment
-                    End="16.7547169811321,16.9433962264151" />
-                  <mssgle:CubicBezierSegment
-                    Point1="16.7547169811321,16.9433962264151"
-                    Point2="20.7547169811321,16.9433962264151"
-                    Point3="20.7547169811321,20.9433962264151" />
-                  <mssgle:LineSegment
-                    End="20.7547169811321,15.066037735849" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Populate Dimensions.PrecedenceConstraints[Constraint 1]"
-          TopLeft="171.453687821612,325">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31.9393939393941"
-              Start="0,0"
-              End="0,24.4393939393941">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.4393939393941" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Populate Dimensions.PrecedenceConstraints[Constraint 10]"
-          TopLeft="173.584905660377,258.433962264151">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,22.5660377358491"
-              Start="0,0"
-              End="0,15.0660377358491">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.0660377358491" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Populate Dimensions.PrecedenceConstraints[Constraint 11]"
-          TopLeft="152.830188679245,191.943396226415">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="20.7547169811321,22.5660377358491"
-              Start="0,0"
-              End="20.7547169811321,15.0660377358491">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.9433962264151" />
-                  <mssgle:LineSegment
-                    End="20.7547169811321,16.9433962264151" />
-                  <mssgle:LineSegment
-                    End="20.7547169811321,15.0660377358491" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Populate Dimensions.PrecedenceConstraints[Constraint 12]"
-          TopLeft="167.037735849057,939.735849056604">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,25.0754716981131"
-              Start="0,0"
-              End="0,17.5754716981131">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.5754716981131" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Populate Dimensions.PrecedenceConstraints[Constraint 13]"
-          TopLeft="171.453687821612,398.939393939394">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,26.5511720983419"
-              Start="0,0"
-              End="0,19.0511720983419">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.0511720983419" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Populate Dimensions.PrecedenceConstraints[Constraint 2]"
-          TopLeft="173.584905660377,535.905660377358">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,22.5660377358491"
-              Start="0,0"
-              End="0,15.0660377358491">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.0660377358491" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Populate Dimensions.PrecedenceConstraints[Constraint 3]"
-          TopLeft="173.584905660377,602.396226415094">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,22.5660377358491"
-              Start="0,0"
-              End="0,15.0660377358491">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.0660377358491" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Populate Dimensions.PrecedenceConstraints[Constraint 4]"
           TopLeft="152.830188679245,668.88679245283">
@@ -34685,40 +33737,6 @@ WHERE t.SOURCETYPE NOT IN(268,276,278,295,297,304,316,317,318,336,337,772,920,93
                     Point3="20.7547169811321,20.9056603773583" />
                   <mssgle:LineSegment
                     End="20.7547169811321,15.066037735849" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Populate Dimensions.PrecedenceConstraints[Constraint 8]"
-          TopLeft="173.452830188679,868.433962264151">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-9.09433962264171,27.3018867924529"
-              Start="0,0"
-              End="-9.09433962264171,19.8018867924529">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,9.65094339622647" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,9.65094339622647"
-                    Point2="0,13.6509433962265"
-                    Point3="-4,13.6509433962265" />
-                  <mssgle:LineSegment
-                    End="-5.09433962264171,13.6509433962265" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-5.09433962264171,13.6509433962265"
-                    Point2="-9.09433962264171,13.6509433962265"
-                    Point3="-9.09433962264171,17.6509433962265" />
-                  <mssgle:LineSegment
-                    End="-9.09433962264171,19.8018867924529" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -35057,40 +34075,6 @@ WHERE t.SOURCETYPE NOT IN(268,276,278,295,297,304,316,317,318,336,337,772,920,93
                     Point3="21.0765560615918,-450.264150943397" />
                   <mssgle:LineSegment
                     End="21.254716981132,-450.264150943397" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="474.094339622642,784.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-267.594339622642,40.283018867925"
-              Start="0,0"
-              End="-267.594339622642,32.783018867925">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.1415094339625" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.1415094339625"
-                    Point2="0,20.1415094339625"
-                    Point3="-4,20.1415094339625" />
-                  <mssgle:LineSegment
-                    End="-263.594339622642,20.1415094339625" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-263.594339622642,20.1415094339625"
-                    Point2="-267.594339622642,20.1415094339625"
-                    Point3="-267.594339622642,24.1415094339625" />
-                  <mssgle:LineSegment
-                    End="-267.594339622642,32.783018867925" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -35801,21 +34785,21 @@ WHERE t.SOURCETYPE NOT IN(268,276,278,295,297,304,316,317,318,336,337,772,920,93
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="158,42"
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load GL Transaction Distribution Fact\Derived Column"
-          TopLeft="72,98" />
-        <NodeLayout
           Size="176,42"
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load GL Transaction Distribution Fact\Flat File Destination"
           TopLeft="51,285" />
         <NodeLayout
-          Size="270,44"
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source"
-          TopLeft="19,5.5" />
+          Size="158,42"
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load GL Transaction Distribution Fact\Derived Column"
+          TopLeft="72,98" />
         <NodeLayout
           Size="213,42"
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load GL Transaction Distribution Fact\Add dblQuote Escape Char"
           TopLeft="43,194" />
+        <NodeLayout
+          Size="270,44"
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source"
+          TopLeft="19,5.5" />
         <EdgeLayout
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load GL Transaction Distribution Fact.Paths[OLE DB Source Output]"
           TopLeft="152.5,49.5">
@@ -35830,28 +34814,6 @@ WHERE t.SOURCETYPE NOT IN(268,276,278,295,297,304,316,317,318,336,337,772,920,93
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,41" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load GL Transaction Distribution Fact.Paths[Derived Column Output]"
-          TopLeft="150.25,140">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,54"
-              Start="0,0"
-              End="0,46.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,46.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -35894,6 +34856,28 @@ WHERE t.SOURCETYPE NOT IN(268,276,278,295,297,304,316,317,318,336,337,772,920,93
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load GL Transaction Distribution Fact.Paths[Derived Column Output]"
+          TopLeft="150.25,140">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54"
+              Start="0,0"
+              End="0,46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -35909,7 +34893,7 @@ WHERE t.SOURCETYPE NOT IN(268,276,278,295,297,304,316,317,318,336,337,772,920,93
     design-time-name="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load GL Transaction Distribution Fact 1">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="167,42"
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load GL Transaction Distribution Fact 1\Derived Column 1"
@@ -35949,7 +34933,9 @@ WHERE t.SOURCETYPE NOT IN(268,276,278,295,297,304,316,317,318,336,337,772,920,93
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -35971,7 +34957,9 @@ WHERE t.SOURCETYPE NOT IN(268,276,278,295,297,304,316,317,318,336,337,772,920,93
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -35993,7 +34981,9 @@ WHERE t.SOURCETYPE NOT IN(268,276,278,295,297,304,316,317,318,336,337,772,920,93
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -36015,7 +35005,9 @@ WHERE t.SOURCETYPE NOT IN(268,276,278,295,297,304,316,317,318,336,337,772,920,93
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -36928,7 +35920,9 @@ WHERE t.SOURCETYPE NOT IN(268,276,278,295,297,304,316,317,318,336,337,772,920,93
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -36950,7 +35944,9 @@ WHERE t.SOURCETYPE NOT IN(268,276,278,295,297,304,316,317,318,336,337,772,920,93
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -37008,7 +36004,9 @@ WHERE t.SOURCETYPE NOT IN(268,276,278,295,297,304,316,317,318,336,337,772,920,93
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

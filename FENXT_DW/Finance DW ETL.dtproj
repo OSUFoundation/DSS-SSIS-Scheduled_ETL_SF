@@ -19,26 +19,6 @@
           <References />
         </DtsPackage>
         <DtsPackage FormatVersion="8">
-          <Name>DIM_ACCOUNT_LOAD.dtsx</Name>
-          <FullPath>DIM_ACCOUNT_LOAD.dtsx</FullPath>
-          <References />
-        </DtsPackage>
-        <DtsPackage FormatVersion="8">
-          <Name>DIM_ACCOUNT_SEG_LOAD.dtsx</Name>
-          <FullPath>DIM_ACCOUNT_SEG_LOAD.dtsx</FullPath>
-          <References />
-        </DtsPackage>
-        <DtsPackage FormatVersion="8">
-          <Name>DIM_CLASS_LOAD.dtsx</Name>
-          <FullPath>DIM_CLASS_LOAD.dtsx</FullPath>
-          <References />
-        </DtsPackage>
-        <DtsPackage FormatVersion="8">
-          <Name>DIM_GLACCOUNTS_LOAD.dtsx</Name>
-          <FullPath>DIM_GLACCOUNTS_LOAD.dtsx</FullPath>
-          <References />
-        </DtsPackage>
-        <DtsPackage FormatVersion="8">
           <Name>DIM_GLSOURCETYPE_LOAD.dtsx</Name>
           <FullPath>DIM_GLSOURCETYPE_LOAD.dtsx</FullPath>
           <References />
@@ -46,26 +26,6 @@
         <DtsPackage FormatVersion="8">
           <Name>DIM_JOURNAL_LOAD.dtsx</Name>
           <FullPath>DIM_JOURNAL_LOAD.dtsx</FullPath>
-          <References />
-        </DtsPackage>
-        <DtsPackage FormatVersion="8">
-          <Name>DIM_PROJECT_LOAD.dtsx</Name>
-          <FullPath>DIM_PROJECT_LOAD.dtsx</FullPath>
-          <References />
-        </DtsPackage>
-        <DtsPackage FormatVersion="8">
-          <Name>DIM_PROJECTNotes_LOAD.dtsx</Name>
-          <FullPath>DIM_PROJECTNotes_LOAD.dtsx</FullPath>
-          <References />
-        </DtsPackage>
-        <DtsPackage FormatVersion="8">
-          <Name>DIM_SCENARIO_LOAD.dtsx</Name>
-          <FullPath>DIM_SCENARIO_LOAD.dtsx</FullPath>
-          <References />
-        </DtsPackage>
-        <DtsPackage FormatVersion="8">
-          <Name>DIM_SOURCE_LOAD.dtsx</Name>
-          <FullPath>DIM_SOURCE_LOAD.dtsx</FullPath>
           <References />
         </DtsPackage>
         <DtsPackage FormatVersion="8">
