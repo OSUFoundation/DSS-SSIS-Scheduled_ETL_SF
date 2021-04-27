@@ -13,8 +13,8 @@
   DTS:ObjectName="CONTROL_ETL_MASTER"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="460"
-  DTS:VersionGUID="{55EDED17-BE40-4E65-82F1-CABC0B412706}">
+  DTS:VersionBuild="462"
+  DTS:VersionGUID="{9A67E324-0897-4D76-A938-04C5742B1E94}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -8545,13 +8545,13 @@ NULL AS ParentID,
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Expression"
-                              name="Expression">[REPLACE](#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[BatchDescription]},"\"","\\\"")</property>
+                              name="Expression">[REPLACE]([REPLACE](#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[BatchDescription]},"\\","\\\\"),"\"","\\\"")</property>
                             <property
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Friendly Expression"
                               expressionType="Notify"
-                              name="FriendlyExpression">REPLACE(BatchDescription,"\"","\\\"")</property>
+                              name="FriendlyExpression">REPLACE(REPLACE(BatchDescription,"\\","\\\\"),"\"","\\\"")</property>
                           </properties>
                         </inputColumn>
                         <inputColumn
@@ -8570,13 +8570,13 @@ NULL AS ParentID,
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Expression"
-                              name="Expression">[REPLACE](#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[JournalReference]},"\"","\\\"")</property>
+                              name="Expression">[REPLACE]([REPLACE](#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[JournalReference]},"\\","\\\\"),"\"","\\\"")</property>
                             <property
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Friendly Expression"
                               expressionType="Notify"
-                              name="FriendlyExpression">REPLACE(JournalReference,"\"","\\\"")</property>
+                              name="FriendlyExpression">REPLACE(REPLACE(JournalReference,"\\","\\\\"),"\"","\\\"")</property>
                           </properties>
                         </inputColumn>
                         <inputColumn
@@ -8595,13 +8595,38 @@ NULL AS ParentID,
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Expression"
-                              name="Expression">[REPLACE](#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[HistJour]},"\"","\\\"")</property>
+                              name="Expression">[REPLACE]([REPLACE](#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[HistJour]},"\\","\\\\"),"\"","\\\"")</property>
                             <property
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Friendly Expression"
                               expressionType="Notify"
-                              name="FriendlyExpression">REPLACE(HistJour,"\"","\\\"")</property>
+                              name="FriendlyExpression">REPLACE(REPLACE(HistJour,"\\","\\\\"),"\"","\\\"")</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load GL Transaction Distribution Fact\Add dblQuote Escape Char.Inputs[Derived Column Input].Columns[SourceNumber]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="20"
+                          cachedName="SourceNumber"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Flatfile Export of FE NXT Data for FENXT_DW\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[SourceNumber]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[REPLACE]([REPLACE](#{Package\Flatfile Export of FE NXT Data for FENXT_DW\Load GL Transaction Distribution Fact\Load Transaction Distributions from FE source.Outputs[OLE DB Source Output].Columns[SourceNumber]},"\\","\\\\"),"\"","\\\"")</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">REPLACE(REPLACE(SourceNumber,"\\","\\\\"),"\"","\\\"")</property>
                           </properties>
                         </inputColumn>
                       </inputColumns>
