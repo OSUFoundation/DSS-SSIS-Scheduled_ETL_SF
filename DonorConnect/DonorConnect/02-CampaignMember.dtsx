@@ -1,0 +1,2388 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/7/2021 8:44:14 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ETL2"
+  DTS:CreatorName="FOUNDATION\dfai"
+  DTS:DTSID="{73481B22-A7C0-4F10-B623-61E3691D241E}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.166"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="02-CampaignMember"
+  DTS:PackageType="5"
+  DTS:VersionBuild="69"
+  DTS:VersionGUID="{04580E58-C5CC-40C0-ABFD-0B87824AC5DC}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Devart Salesforce Connection Manager]"
+      DTS:CreationName="DevartSalesforce"
+      DTS:DTSID="{3a709264-125f-4911-8f2c-46d0be2c7409}"
+      DTS:ObjectName="Devart Salesforce Connection Manager">
+      <DTS:ObjectData>
+        <SalesforceConnectionManager
+          ConnectByProxy="False">
+          <ConnectionString>User Id=dfair@osugiving.com.qa;Host=test.salesforce.com;Refresh Metadata=True;Cache All=False;Batch Size=2000</ConnectionString>
+          <Password
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOuinSlsnMEiFkNB94NYrWwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADyEOOsGVu4tb53NDdGH9W1AAAAAASAAACgAAAAEAAAABb+59sbD/9rvaASjBDFjs8YAAAAPi1sIrIE88V8g9iEqF24mqHNFs4YsNpMFAAAAGLgt4joJqxbsnjFbSqBNXGF/B9K</Password>
+          <SecurityToken
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOuinSlsnMEiFkNB94NYrWwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAC52k/EqULvcg3B7zwqM4LMAAAAAASAAACgAAAAEAAAAFJluk/9a8uzEMQo8a7xeTk4AAAAQ017t1YnJkvQ1EMnorvMDZg9cGYy+/3SfJ/+04banjGY/NPH0nFf5UTqtt198mFRFrOWM/DmIP8UAAAArSI7LNzbDROKLvb+d0CjJBrf8dg</SecurityToken>
+        </SalesforceConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Devart Salesforce Connection Manager 1]"
+      DTS:CreationName="DevartSalesforce"
+      DTS:DTSID="{B5A89FC9-BEBC-4D1B-BD81-98E99DBF5A4B}"
+      DTS:ObjectName="Devart Salesforce Connection Manager 1">
+      <DTS:ObjectData>
+        <SalesforceConnectionManager
+          ConnectByProxy="False">
+          <ConnectionString>User Id=ssisapi@osugiving.com.qa;Host=test.salesforce.com;Refresh Metadata=True</ConnectionString>
+          <Password
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOuinSlsnMEiFkNB94NYrWwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAx47zbBKJ9Gn2SW8Y0u1xiAAAAAASAAACgAAAAEAAAAJ3BNjwcuXFQGKZg6iVQBlEwAAAAu0j24gYNsxGxSySrz3bB4nLubWQ8Udcg48+T1A6XIPb+LuyjVI87kcAlnpF04sDQFAAAAKpOgMc0309hz62gp04ZvRJH89X4</Password>
+          <SecurityToken
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOuinSlsnMEiFkNB94NYrWwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACbC0PlAOQV/1D1ynnM85ROAAAAAASAAACgAAAAEAAAAGWelWlrX848gZ18E6wzIxw4AAAAywu41GeHJe8e4YnPZpeN7O4nQg4U8o+0gwyDBdNH69IiEBdO5fSxREHTEfxoc3lhKTDahn6pOvwUAAAA0CqEKIATm6J4THduW0jJJDnXX0A</SecurityToken>
+        </SalesforceConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C1E39CFC-2485-4BF9-98A4-847632E73CB7}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\temp\Test.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Appeal_Date"
+              DTS:DTSID="{A5D4A008-CC86-47C7-AA2C-66E44B72E413}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Call_Result"
+              DTS:DTSID="{592EB365-C16F-43FA-AF2C-49EF8DF75E3A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Call_Status"
+              DTS:DTSID="{90F9B7F8-E4AB-451A-8C46-CCDCA06680F3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="18"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CampaignId"
+              DTS:DTSID="{E3C9CD06-EE3E-4F34-957C-F6D3CEC63608}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="40"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="City"
+              DTS:DTSID="{844A0F0F-AEF5-4260-9834-68BB342AC47C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CompanyOrAccount"
+              DTS:DTSID="{BF67F69E-151E-4288-BACE-680A0CB1D162}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Constituent_Date_of_Last_Gift"
+              DTS:DTSID="{49970DF2-C90E-4825-9CAB-F29EA0A650A6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Constituent_Lifetime_Cash"
+              DTS:DTSID="{F6E83390-5D8D-4FF4-8321-F286878EEB3F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Constituent_Lifetime_Fundraising"
+              DTS:DTSID="{42998AF5-FC21-40C9-8C3B-913251D4AC8E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="18"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ContactId"
+              DTS:DTSID="{275403B0-AB4B-4328-B846-0066198FDE7C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="80"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{303BDAB7-B1B4-43D0-8008-32777132BA80}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="18"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Cowboy_Caller"
+              DTS:DTSID="{94E75A4C-6DC2-4F7A-8CD6-8263B36D51AA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Description"
+              DTS:DTSID="{9837EE02-27DF-4A1F-9ABF-A1795DDB1A8D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DoNotCall"
+              DTS:DTSID="{76DD86AA-1369-4D51-9AE6-3F17F5820821}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Donor_Type"
+              DTS:DTSID="{2C45B6B7-C5D3-449A-BB2E-1DCCCBF57A7E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="80"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Email"
+              DTS:DTSID="{8CBA08E7-E54B-4F8B-959F-F30B59594458}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="40"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Fax"
+              DTS:DTSID="{E14D5958-468B-4E51-B687-C1828BFD78CE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="40"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FirstName"
+              DTS:DTSID="{F2560C21-18F1-4F04-8BD7-DD0F37684B37}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FirstRespondedDate"
+              DTS:DTSID="{A30D7305-BE75-4CC8-B57B-8931F4BE16E2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HasOptedOutOfEmail"
+              DTS:DTSID="{C3ABA565-E365-40CB-AB12-FB68634130A1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HasOptedOutOfFax"
+              DTS:DTSID="{EE1CF3D7-950B-4129-93A7-6AEF1F697C2D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HasResponded"
+              DTS:DTSID="{17561F4B-F7A5-47F9-86CC-C315CAC6469C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="18"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Id"
+              DTS:DTSID="{D6278E5B-BC27-4A54-BB94-1700ED80D8DF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IsDeleted"
+              DTS:DTSID="{AC21F97E-B050-4256-920C-9B8973FE436C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="80"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LastName"
+              DTS:DTSID="{6A0D2658-3F6C-425A-8258-1C96AAE928B0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="18"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LeadId"
+              DTS:DTSID="{7D57184E-77D8-4B9A-9F56-F40137AFA915}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="18"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LeadOrContactId"
+              DTS:DTSID="{D7775F73-8EBE-4F7B-806B-803F661FC375}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="18"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LeadOrContactOwnerId"
+              DTS:DTSID="{3AF1B186-3CFD-4A97-9007-E37F40E26C93}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LeadSource"
+              DTS:DTSID="{D10F17DE-7BBA-4601-BEDF-DF04E94F26F0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Membership_Status"
+              DTS:DTSID="{1422AC9F-70CA-4F2E-BB03-E895938C7EA6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="40"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MobilePhone"
+              DTS:DTSID="{07E23672-FA89-40F3-8B56-EEEA9A4397BA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Name"
+              DTS:DTSID="{D3D68822-1E57-49A4-AADB-000249CF0A54}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="40"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Phone"
+              DTS:DTSID="{42FEE6B7-0DF9-4258-8804-E1189B0A6AC4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PostalCode"
+              DTS:DTSID="{7AF911AF-E99A-4A7A-8CC3-18B1C9B7FCE9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Salutation"
+              DTS:DTSID="{2DD5C9DF-F7F0-4008-A464-49AE3B3317C5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Segment"
+              DTS:DTSID="{492F4EA5-4297-4077-AF96-90E7BD2D821B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="80"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State"
+              DTS:DTSID="{2AE80D66-8C1F-4E25-8EE8-6B55629B57DB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Status"
+              DTS:DTSID="{83E43CA7-7909-483D-9866-F20DA97E514F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Street"
+              DTS:DTSID="{A8F6547F-0181-498C-AE69-7D5FB3E637CF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Title"
+              DTS:DTSID="{DD4F38C9-9C97-43A2-97EB-B16760755D9D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="40"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Type"
+              DTS:DTSID="{99BC4E50-8F86-40D7-9A9B-DAABD40B499C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="et4ae5__Activity"
+              DTS:DTSID="{C86038DB-4980-485F-98B7-7E46DDC45D0E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="evt__Invitation_Code"
+              DTS:DTSID="{A84A2022-5AB1-4ECA-978F-CEBEACA7AFB1}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[OSUF_INTERFACES_FACULTY_STAFF.OSUF_SSIS]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{D413B2D9-96EE-4895-B53D-91795839EB5C}"
+      DTS:ObjectName="OSUF_INTERFACES_FACULTY_STAFF.OSUF_SSIS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=OSUF_SSIS;Dsn=OSUF_INTERFACES_FACULTY_STAFF;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Campaign Member"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{25690a61-7790-42d4-b37d-007403806661}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Campaign Member"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Campaign Member\Devart Salesforce Destination"
+              componentClassID="Microsoft.ManagedComponentHost"
+              description="Loads or modifies data into an object of the Salesforce.com(or Database.com) cloud database."
+              name="Devart Salesforce Destination"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Null"
+                  name="DesignObject"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.String"
+                  description="The name of the Salesforce Object to load or update data."
+                  name="Salesforce Object"
+                  typeConverter="Devart.SSIS.Salesforce.Design.DestinationSelectStatementsListConverter, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">CampaignMember</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of rows to be sent as a batch to the server."
+                  name="BatchSize">5000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the max size of local buffer."
+                  name="BufferSize">10485760</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies destination action type."
+                  name="Action"
+                  typeConverter="Devart.SSIS.Salesforce.DestinationAction, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies external identifier field."
+                  expressionType="Notify"
+                  name="ExternalId"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.Boolean"
+                  description="Cached id in the local storage."
+                  name="CacheId">false</property>
+                <property
+                  dataType="System.Null"
+                  description="The unique column in the source table that should be associate to the Salesforce ID."
+                  name="SourceKey"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether multiple batches associated with a bulk load operation are processed by Salesforce in parallel or one at a time. The default is true."
+                  name="ParallelBatchProcessing">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the ID of a specific assignment rule to run for the Case or Lead."
+                  name="Assignment Rule Id" />
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Devart.SSIS.Salesforce.SalesforceDestination, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Campaign Member\Devart Salesforce Destination.Connections[Devart Salesforce]"
+                  connectionManagerID="Package.ConnectionManagers[Devart Salesforce Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Devart Salesforce Connection Manager 1]"
+                  description="Devart Salesforce Connection Manager"
+                  name="Devart Salesforce" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input]"
+                  errorOrTruncationOperation="Insert operation"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="input">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Redirect only error rows to error output."
+                      name="RedirectErrorsOnly">false</property>
+                  </properties>
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].Columns[CONTACTID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="18"
+                      cachedName="CONTACTID"
+                      externalMetadataColumnId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[ContactId]"
+                      lineageId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output].Columns[CONTACTID]" />
+                    <inputColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].Columns[SEGMENT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="256"
+                      cachedName="SEGMENT"
+                      externalMetadataColumnId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Segment]"
+                      lineageId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output].Columns[SEGMENT]" />
+                    <inputColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].Columns[DONOR_TYPE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="13"
+                      cachedName="DONOR_TYPE"
+                      externalMetadataColumnId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Donor_Type]"
+                      lineageId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output].Columns[DONOR_TYPE]" />
+                    <inputColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].Columns[CALL_RESULT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="256"
+                      cachedName="CALL_RESULT"
+                      externalMetadataColumnId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Call_Result]"
+                      lineageId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output].Columns[CALL_RESULT]" />
+                    <inputColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].Columns[APPEAL_DATE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="259"
+                      cachedName="APPEAL_DATE"
+                      externalMetadataColumnId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Appeal_Date]"
+                      lineageId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output].Columns[APPEAL_DATE]" />
+                    <inputColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].Columns[CampaignID]"
+                      cachedDataType="wstr"
+                      cachedLength="18"
+                      cachedName="CampaignID"
+                      externalMetadataColumnId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[CampaignId]"
+                      lineageId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output].Columns[CampaignID]" />
+                    <inputColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].Columns[CALL_STATUS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="16"
+                      cachedName="CALL_STATUS"
+                      externalMetadataColumnId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Call_Status]"
+                      lineageId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output].Columns[CALL_STATUS]" />
+                    <inputColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].Columns[COWBOY_CALLER]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="18"
+                      cachedName="COWBOY_CALLER"
+                      externalMetadataColumnId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Cowboy_Caller]"
+                      lineageId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output].Columns[COWBOY_CALLER]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Id]"
+                      dataType="wstr"
+                      length="18"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[IsDeleted]"
+                      dataType="bool"
+                      name="IsDeleted" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[CampaignId]"
+                      dataType="wstr"
+                      length="18"
+                      name="CampaignId">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">Campaign</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[LeadId]"
+                      dataType="wstr"
+                      length="18"
+                      name="LeadId">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">Lead</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[ContactId]"
+                      dataType="wstr"
+                      length="18"
+                      name="ContactId">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">Contact</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Status]"
+                      dataType="wstr"
+                      length="255"
+                      name="Status" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[HasResponded]"
+                      dataType="bool"
+                      name="HasResponded" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[FirstRespondedDate]"
+                      dataType="dbDate"
+                      name="FirstRespondedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Salutation]"
+                      dataType="wstr"
+                      length="255"
+                      name="Salutation" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[FirstName]"
+                      dataType="wstr"
+                      length="40"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[LastName]"
+                      dataType="wstr"
+                      length="80"
+                      name="LastName" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Title]"
+                      dataType="wstr"
+                      length="128"
+                      name="Title" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Street]"
+                      dataType="wstr"
+                      length="255"
+                      name="Street" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[City]"
+                      dataType="wstr"
+                      length="40"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[State]"
+                      dataType="wstr"
+                      length="80"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[PostalCode]"
+                      dataType="wstr"
+                      length="20"
+                      name="PostalCode" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="80"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Email]"
+                      dataType="wstr"
+                      length="80"
+                      name="Email" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Phone]"
+                      dataType="wstr"
+                      length="40"
+                      name="Phone" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Fax]"
+                      dataType="wstr"
+                      length="40"
+                      name="Fax" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[MobilePhone]"
+                      dataType="wstr"
+                      length="40"
+                      name="MobilePhone" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Description]"
+                      dataType="nText"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[DoNotCall]"
+                      dataType="bool"
+                      name="DoNotCall" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[HasOptedOutOfEmail]"
+                      dataType="bool"
+                      name="HasOptedOutOfEmail" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[HasOptedOutOfFax]"
+                      dataType="bool"
+                      name="HasOptedOutOfFax" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[LeadSource]"
+                      dataType="wstr"
+                      length="255"
+                      name="LeadSource" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[CompanyOrAccount]"
+                      dataType="wstr"
+                      length="255"
+                      name="CompanyOrAccount" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Type]"
+                      dataType="wstr"
+                      length="40"
+                      name="Type" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[LeadOrContactId]"
+                      dataType="wstr"
+                      length="18"
+                      name="LeadOrContactId" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[LeadOrContactOwnerId]"
+                      dataType="wstr"
+                      length="18"
+                      name="LeadOrContactOwnerId">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">Group</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Constituent_Date_of_Last_Gift]"
+                      dataType="dbDate"
+                      name="Constituent_Date_of_Last_Gift" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Constituent_Lifetime_Cash]"
+                      dataType="r8"
+                      name="Constituent_Lifetime_Cash" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Constituent_Lifetime_Fundraising]"
+                      dataType="r8"
+                      name="Constituent_Lifetime_Fundraising" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Donor_Type]"
+                      dataType="wstr"
+                      length="255"
+                      name="Donor_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Segment]"
+                      dataType="wstr"
+                      length="255"
+                      name="Segment" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Membership_Status]"
+                      dataType="wstr"
+                      length="255"
+                      name="Membership_Status" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[evt__Invitation_Code]"
+                      dataType="wstr"
+                      length="255"
+                      name="evt__Invitation_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[et4ae5__Activity]"
+                      dataType="wstr"
+                      length="255"
+                      name="et4ae5__Activity" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Appeal_Date]"
+                      dataType="dbTimeStamp"
+                      name="Appeal_Date" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Call_Result]"
+                      dataType="wstr"
+                      length="255"
+                      name="Call_Result" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Call_Status]"
+                      dataType="wstr"
+                      length="255"
+                      name="Call_Status" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input].ExternalColumns[Cowboy_Caller]"
+                      dataType="wstr"
+                      length="18"
+                      name="Cowboy_Caller">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">Contact</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Campaign Member\Devart Salesforce Destination.Outputs[Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Error Output"
+                  synchronousInputId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Outputs[Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Campaign Member\Devart Salesforce Destination.Outputs[Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Outputs[Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Campaign Member\Devart Salesforce Destination.Outputs[Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Outputs[Error Output].Columns[Id]"
+                      dataType="wstr"
+                      length="18"
+                      lineageId="Package\Campaign Member\Devart Salesforce Destination.Outputs[Error Output].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Outputs[Error Output].Columns[ErrorDescription]"
+                      dataType="wstr"
+                      length="1024"
+                      lineageId="Package\Campaign Member\Devart Salesforce Destination.Outputs[Error Output].Columns[ErrorDescription]"
+                      name="ErrorDescription" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Campaign Member\Devart Salesforce Destination.Outputs[RecordId Output]"
+                  exclusionGroup="1"
+                  name="RecordId Output"
+                  synchronousInputId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Campaign Member\Devart Salesforce Destination.Outputs[RecordId Output].Columns[Id]"
+                      dataType="wstr"
+                      length="18"
+                      lineageId="Package\Campaign Member\Devart Salesforce Destination.Outputs[RecordId Output].Columns[Id]"
+                      name="Id" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Campaign Member\Devart Salesforce Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              description="Extracts data from the Salesforce.com (or Database.com) cloud database."
+              name="Devart Salesforce Source">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement used by the component to extract data from Salesforce.com."
+                  name="SelectStatement"
+                  UITypeEditor="Devart.SSIS.Salesforce.Design.SourceSelectStmtEditor, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">SELECT DISTINCT
+	ID
+	,ucinn_ascendv2__Motivation_Code
+FROM Campaign
+</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Including the deleted records in the result."
+                  name="IncludeDeleted">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows to be retrieved as a batch. The maximum is 2000. Default value is 500."
+                  name="BatchSize">500</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Devart.SSIS.Salesforce.SalesforceSource, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Campaign Member\Devart Salesforce Source.Connections[Devart Salesforce]"
+                  connectionManagerID="Package.ConnectionManagers[Devart Salesforce Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Devart Salesforce Connection Manager 1]"
+                  description="Devart Salesforce Connection Manager"
+                  name="Devart Salesforce" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Campaign Member\Devart Salesforce Source.Outputs[Source Output]"
+                  name="Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Campaign Member\Devart Salesforce Source.Outputs[Source Output].Columns[ID]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Campaign Member\Devart Salesforce Source.Outputs[Source Output].ExternalColumns[ID]"
+                      length="18"
+                      lineageId="Package\Campaign Member\Devart Salesforce Source.Outputs[Source Output].Columns[ID]"
+                      name="ID" />
+                    <outputColumn
+                      refId="Package\Campaign Member\Devart Salesforce Source.Outputs[Source Output].Columns[ucinn_ascendv2__Motivation_Code]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Campaign Member\Devart Salesforce Source.Outputs[Source Output].ExternalColumns[ucinn_ascendv2__Motivation_Code]"
+                      length="20"
+                      lineageId="Package\Campaign Member\Devart Salesforce Source.Outputs[Source Output].Columns[ucinn_ascendv2__Motivation_Code]"
+                      name="ucinn_ascendv2__Motivation_Code" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Source.Outputs[Source Output].ExternalColumns[ID]"
+                      dataType="wstr"
+                      length="18"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\Devart Salesforce Source.Outputs[Source Output].ExternalColumns[ucinn_ascendv2__Motivation_Code]"
+                      dataType="wstr"
+                      length="20"
+                      name="ucinn_ascendv2__Motivation_Code" />
+                  </externalMetadataColumns>
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Campaign Member\Merge Join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Campaign Member\Merge Join.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Campaign Member\Merge Join.Inputs[Merge Join Left Input].Columns[UCINN_ASCENDV2__MOTIVATION_CODE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="UCINN_ASCENDV2__MOTIVATION_CODE"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Campaign Member\Sort.Outputs[Sort Output].Columns[UCINN_ASCENDV2__MOTIVATION_CODE]" />
+                    <inputColumn
+                      refId="Package\Campaign Member\Merge Join.Inputs[Merge Join Left Input].Columns[CONTACTID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="18"
+                      cachedName="CONTACTID"
+                      lineageId="Package\Campaign Member\Sort.Outputs[Sort Output].Columns[CONTACTID]" />
+                    <inputColumn
+                      refId="Package\Campaign Member\Merge Join.Inputs[Merge Join Left Input].Columns[SEGMENT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="256"
+                      cachedName="SEGMENT"
+                      lineageId="Package\Campaign Member\Sort.Outputs[Sort Output].Columns[SEGMENT]" />
+                    <inputColumn
+                      refId="Package\Campaign Member\Merge Join.Inputs[Merge Join Left Input].Columns[DONOR_TYPE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="13"
+                      cachedName="DONOR_TYPE"
+                      lineageId="Package\Campaign Member\Sort.Outputs[Sort Output].Columns[DONOR_TYPE]" />
+                    <inputColumn
+                      refId="Package\Campaign Member\Merge Join.Inputs[Merge Join Left Input].Columns[CALL_RESULT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="256"
+                      cachedName="CALL_RESULT"
+                      lineageId="Package\Campaign Member\Sort.Outputs[Sort Output].Columns[CALL_RESULT]" />
+                    <inputColumn
+                      refId="Package\Campaign Member\Merge Join.Inputs[Merge Join Left Input].Columns[APPEAL_DATE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="259"
+                      cachedName="APPEAL_DATE"
+                      lineageId="Package\Campaign Member\Sort.Outputs[Sort Output].Columns[APPEAL_DATE]" />
+                    <inputColumn
+                      refId="Package\Campaign Member\Merge Join.Inputs[Merge Join Left Input].Columns[CALL_STATUS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="16"
+                      cachedName="CALL_STATUS"
+                      lineageId="Package\Campaign Member\Sort.Outputs[Sort Output].Columns[CALL_STATUS]" />
+                    <inputColumn
+                      refId="Package\Campaign Member\Merge Join.Inputs[Merge Join Left Input].Columns[PROSPECT_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="256"
+                      cachedName="PROSPECT_ID"
+                      lineageId="Package\Campaign Member\Sort.Outputs[Sort Output].Columns[PROSPECT_ID]" />
+                    <inputColumn
+                      refId="Package\Campaign Member\Merge Join.Inputs[Merge Join Left Input].Columns[COWBOY_CALLER]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="18"
+                      cachedName="COWBOY_CALLER"
+                      lineageId="Package\Campaign Member\Sort.Outputs[Sort Output].Columns[COWBOY_CALLER]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Campaign Member\Merge Join.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Campaign Member\Merge Join.Inputs[Merge Join Right Input].Columns[ucinn_ascendv2__Motivation_Code]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="ucinn_ascendv2__Motivation_Code"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Campaign Member\Sort 1.Outputs[Sort Output].Columns[ucinn_ascendv2__Motivation_Code]" />
+                    <inputColumn
+                      refId="Package\Campaign Member\Merge Join.Inputs[Merge Join Right Input].Columns[ID]"
+                      cachedDataType="wstr"
+                      cachedLength="18"
+                      cachedName="ID"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\Campaign Member\Sort 1.Outputs[Sort Output].Columns[ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output]"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output].Columns[CONTACTID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="18"
+                      lineageId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output].Columns[CONTACTID]"
+                      name="CONTACTID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Campaign Member\Merge Join.Inputs[Merge Join Left Input].Columns[CONTACTID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output].Columns[SEGMENT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="256"
+                      lineageId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output].Columns[SEGMENT]"
+                      name="SEGMENT">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Campaign Member\Merge Join.Inputs[Merge Join Left Input].Columns[SEGMENT]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output].Columns[DONOR_TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="13"
+                      lineageId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output].Columns[DONOR_TYPE]"
+                      name="DONOR_TYPE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Campaign Member\Merge Join.Inputs[Merge Join Left Input].Columns[DONOR_TYPE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output].Columns[CALL_RESULT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="256"
+                      lineageId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output].Columns[CALL_RESULT]"
+                      name="CALL_RESULT">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Campaign Member\Merge Join.Inputs[Merge Join Left Input].Columns[CALL_RESULT]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output].Columns[APPEAL_DATE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="259"
+                      lineageId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output].Columns[APPEAL_DATE]"
+                      name="APPEAL_DATE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Campaign Member\Merge Join.Inputs[Merge Join Left Input].Columns[APPEAL_DATE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output].Columns[CampaignID]"
+                      dataType="wstr"
+                      length="18"
+                      lineageId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output].Columns[CampaignID]"
+                      name="CampaignID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Campaign Member\Merge Join.Inputs[Merge Join Right Input].Columns[ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output].Columns[CALL_STATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      lineageId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output].Columns[CALL_STATUS]"
+                      name="CALL_STATUS">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Campaign Member\Merge Join.Inputs[Merge Join Left Input].Columns[CALL_STATUS]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output].Columns[PROSPECT_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="256"
+                      lineageId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output].Columns[PROSPECT_ID]"
+                      name="PROSPECT_ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Campaign Member\Merge Join.Inputs[Merge Join Left Input].Columns[PROSPECT_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output].Columns[COWBOY_CALLER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="18"
+                      lineageId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output].Columns[COWBOY_CALLER]"
+                      name="COWBOY_CALLER">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Campaign Member\Merge Join.Inputs[Merge Join Left Input].Columns[COWBOY_CALLER]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Campaign Member\ODBC Source"
+              componentClassID="Attunity.SSISODBCSrc"
+              description="ODBC Source"
+              name="ODBC Source"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT
+    c.ID                                    AS ContactId   
+    ,cd.Prospect_ID
+    ,CAST
+        (
+            CONCAT
+              (
+                  'P' 
+                  ,CASE
+                      WHEN MONTH(CAST(CONCAT(cd.Date_Time, ':00') AS DATE)) BETWEEN 7 AND 12 THEN (YEAR(CAST(CONCAT(cd.Date_Time, ':00') AS DATE)) % 100) + 1
+                      ELSE YEAR(CAST(CONCAT(cd.Date_Time, ':00') AS DATE)) % 100   //YEAR(GetDate())
+                      END
+                  ,'All'
+              )                                                   
+        AS VARCHAR(20))                     AS ucinn_ascendv2__Motivation_Code
+    
+    ,CASE
+        WHEN cd.Complete_Y_Or_N_ = 'Y' THEN 'Calls Completed'
+        ELSE 'Calls Incomplete'
+        END                                 AS Call_Status
+    ,cd.Segment_Name                           AS Segment
+    //,Donor_Type                              AS Donor_Type
+    ,'1 Year Lapsed'                        AS Donor_Type
+    ,cd.Call_Result                            AS Call_Result
+    ,CONCAT(cd.Date_Time, ':00')               AS Appeal_Date
+    ,CASE WHEN Prospect_ID = '191'
+        THEN '' 
+        ELSE '0038A00000TvYYSQA3'                             END AS Cowboy_Caller
+  
+FROM
+    "CALL_CENTER"."WB_DC"."CALL_DETAILS" cd
+        INNER JOIN "ASCEND_QA_FIVETRAN"."ASCEND_QA"."CONTACT" c ON cd.Prospect_ID = c.UCINN_ASCENDV_2_DONOR_ID_C
+        //INNER JOIN "ASCEND_QA_FIVETRAN"."ASCEND_QA"."CONTACT" cc ON '00000359' = c.UCINN_ASCENDV_2_DONOR_ID_C
+WHERE
+    cd.Ascend_Load_Date IS NULL</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines how the component exposes CHAR columns. If False, CHAR columns are exposed as (multi-)byte strings (DT_STR), if True, CHAR columns are exposed as wide strings (DT_WSTR)"
+                  expressionType="Notify"
+                  name="ExposeCharColumnsAsUnicode">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for fetching data."
+                  expressionType="Notify"
+                  name="FetchMethod">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The mode used to access the database."
+                  expressionType="Notify"
+                  name="AccessMode"
+                  typeConverter="AccessMode">1</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Campaign Member\ODBC Source.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[OSUF_INTERFACES_FACULTY_STAFF.OSUF_SSIS]"
+                  connectionManagerRefId="Package.ConnectionManagers[OSUF_INTERFACES_FACULTY_STAFF.OSUF_SSIS]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output]"
+                  errorRowDisposition="FailComponent"
+                  name="ODBC Source Output"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[CONTACTID]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[CONTACTID]"
+                      length="18"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[CONTACTID]"
+                      name="CONTACTID" />
+                    <outputColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[PROSPECT_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PROSPECT_ID]"
+                      length="256"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[PROSPECT_ID]"
+                      name="PROSPECT_ID" />
+                    <outputColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__MOTIVATION_CODE]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[UCINN_ASCENDV2__MOTIVATION_CODE]"
+                      length="20"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__MOTIVATION_CODE]"
+                      name="UCINN_ASCENDV2__MOTIVATION_CODE" />
+                    <outputColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[CALL_STATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[CALL_STATUS]"
+                      length="16"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[CALL_STATUS]"
+                      name="CALL_STATUS" />
+                    <outputColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[SEGMENT]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[SEGMENT]"
+                      length="256"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[SEGMENT]"
+                      name="SEGMENT" />
+                    <outputColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[DONOR_TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[DONOR_TYPE]"
+                      length="13"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[DONOR_TYPE]"
+                      name="DONOR_TYPE" />
+                    <outputColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[CALL_RESULT]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[CALL_RESULT]"
+                      length="256"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[CALL_RESULT]"
+                      name="CALL_RESULT" />
+                    <outputColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[APPEAL_DATE]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[APPEAL_DATE]"
+                      length="259"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[APPEAL_DATE]"
+                      name="APPEAL_DATE" />
+                    <outputColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[COWBOY_CALLER]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[COWBOY_CALLER]"
+                      length="18"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[COWBOY_CALLER]"
+                      name="COWBOY_CALLER" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[CONTACTID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="18"
+                      name="CONTACTID" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PROSPECT_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="256"
+                      name="PROSPECT_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[UCINN_ASCENDV2__MOTIVATION_CODE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="UCINN_ASCENDV2__MOTIVATION_CODE" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[CALL_STATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="CALL_STATUS" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[SEGMENT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="256"
+                      name="SEGMENT" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[DONOR_TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="13"
+                      name="DONOR_TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[CALL_RESULT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="256"
+                      name="CALL_RESULT" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[APPEAL_DATE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="259"
+                      name="APPEAL_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[COWBOY_CALLER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="18"
+                      name="COWBOY_CALLER" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Error Output]"
+                  isErrorOut="true"
+                  name="ODBC Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Error Output].Columns[CONTACTID]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[CONTACTID]"
+                      length="18"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Error Output].Columns[CONTACTID]"
+                      name="CONTACTID" />
+                    <outputColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Error Output].Columns[PROSPECT_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[PROSPECT_ID]"
+                      length="256"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Error Output].Columns[PROSPECT_ID]"
+                      name="PROSPECT_ID" />
+                    <outputColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Error Output].Columns[UCINN_ASCENDV2__MOTIVATION_CODE]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[UCINN_ASCENDV2__MOTIVATION_CODE]"
+                      length="20"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Error Output].Columns[UCINN_ASCENDV2__MOTIVATION_CODE]"
+                      name="UCINN_ASCENDV2__MOTIVATION_CODE" />
+                    <outputColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Error Output].Columns[CALL_STATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[CALL_STATUS]"
+                      length="16"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Error Output].Columns[CALL_STATUS]"
+                      name="CALL_STATUS" />
+                    <outputColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Error Output].Columns[SEGMENT]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[SEGMENT]"
+                      length="256"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Error Output].Columns[SEGMENT]"
+                      name="SEGMENT" />
+                    <outputColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Error Output].Columns[DONOR_TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[DONOR_TYPE]"
+                      length="13"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Error Output].Columns[DONOR_TYPE]"
+                      name="DONOR_TYPE" />
+                    <outputColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Error Output].Columns[CALL_RESULT]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[CALL_RESULT]"
+                      length="256"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Error Output].Columns[CALL_RESULT]"
+                      name="CALL_RESULT" />
+                    <outputColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Error Output].Columns[APPEAL_DATE]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[APPEAL_DATE]"
+                      length="259"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Error Output].Columns[APPEAL_DATE]"
+                      name="APPEAL_DATE" />
+                    <outputColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Error Output].Columns[COWBOY_CALLER]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[COWBOY_CALLER]"
+                      length="18"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Error Output].Columns[COWBOY_CALLER]"
+                      name="COWBOY_CALLER" />
+                    <outputColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Campaign Member\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Campaign Member\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Campaign Member\Sort.Inputs[Sort Input].Columns[CONTACTID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="18"
+                      cachedName="CONTACTID"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[CONTACTID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Campaign Member\Sort.Inputs[Sort Input].Columns[UCINN_ASCENDV2__MOTIVATION_CODE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="UCINN_ASCENDV2__MOTIVATION_CODE"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__MOTIVATION_CODE]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Campaign Member\Sort.Inputs[Sort Input].Columns[SEGMENT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="256"
+                      cachedName="SEGMENT"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[SEGMENT]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Campaign Member\Sort.Inputs[Sort Input].Columns[DONOR_TYPE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="13"
+                      cachedName="DONOR_TYPE"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[DONOR_TYPE]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Campaign Member\Sort.Inputs[Sort Input].Columns[CALL_RESULT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="256"
+                      cachedName="CALL_RESULT"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[CALL_RESULT]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Campaign Member\Sort.Inputs[Sort Input].Columns[APPEAL_DATE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="259"
+                      cachedName="APPEAL_DATE"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[APPEAL_DATE]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Campaign Member\Sort.Inputs[Sort Input].Columns[CALL_STATUS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="16"
+                      cachedName="CALL_STATUS"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[CALL_STATUS]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Campaign Member\Sort.Inputs[Sort Input].Columns[PROSPECT_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="256"
+                      cachedName="PROSPECT_ID"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[PROSPECT_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Campaign Member\Sort.Inputs[Sort Input].Columns[COWBOY_CALLER]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="18"
+                      cachedName="COWBOY_CALLER"
+                      lineageId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[COWBOY_CALLER]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Campaign Member\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Campaign Member\Sort.Outputs[Sort Output].Columns[CONTACTID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="18"
+                      lineageId="Package\Campaign Member\Sort.Outputs[Sort Output].Columns[CONTACTID]"
+                      name="CONTACTID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[CONTACTID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Campaign Member\Sort.Outputs[Sort Output].Columns[UCINN_ASCENDV2__MOTIVATION_CODE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Campaign Member\Sort.Outputs[Sort Output].Columns[UCINN_ASCENDV2__MOTIVATION_CODE]"
+                      name="UCINN_ASCENDV2__MOTIVATION_CODE"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__MOTIVATION_CODE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Campaign Member\Sort.Outputs[Sort Output].Columns[SEGMENT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="256"
+                      lineageId="Package\Campaign Member\Sort.Outputs[Sort Output].Columns[SEGMENT]"
+                      name="SEGMENT">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[SEGMENT]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Campaign Member\Sort.Outputs[Sort Output].Columns[DONOR_TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="13"
+                      lineageId="Package\Campaign Member\Sort.Outputs[Sort Output].Columns[DONOR_TYPE]"
+                      name="DONOR_TYPE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[DONOR_TYPE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Campaign Member\Sort.Outputs[Sort Output].Columns[CALL_RESULT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="256"
+                      lineageId="Package\Campaign Member\Sort.Outputs[Sort Output].Columns[CALL_RESULT]"
+                      name="CALL_RESULT">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[CALL_RESULT]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Campaign Member\Sort.Outputs[Sort Output].Columns[APPEAL_DATE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="259"
+                      lineageId="Package\Campaign Member\Sort.Outputs[Sort Output].Columns[APPEAL_DATE]"
+                      name="APPEAL_DATE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[APPEAL_DATE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Campaign Member\Sort.Outputs[Sort Output].Columns[CALL_STATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      lineageId="Package\Campaign Member\Sort.Outputs[Sort Output].Columns[CALL_STATUS]"
+                      name="CALL_STATUS">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[CALL_STATUS]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Campaign Member\Sort.Outputs[Sort Output].Columns[PROSPECT_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="256"
+                      lineageId="Package\Campaign Member\Sort.Outputs[Sort Output].Columns[PROSPECT_ID]"
+                      name="PROSPECT_ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[PROSPECT_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Campaign Member\Sort.Outputs[Sort Output].Columns[COWBOY_CALLER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="18"
+                      lineageId="Package\Campaign Member\Sort.Outputs[Sort Output].Columns[COWBOY_CALLER]"
+                      name="COWBOY_CALLER">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output].Columns[COWBOY_CALLER]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Campaign Member\Sort 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Campaign Member\Sort 1.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Campaign Member\Sort 1.Inputs[Sort Input].Columns[ucinn_ascendv2__Motivation_Code]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="ucinn_ascendv2__Motivation_Code"
+                      lineageId="Package\Campaign Member\Devart Salesforce Source.Outputs[Source Output].Columns[ucinn_ascendv2__Motivation_Code]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Campaign Member\Sort 1.Inputs[Sort Input].Columns[ID]"
+                      cachedDataType="wstr"
+                      cachedLength="18"
+                      cachedName="ID"
+                      lineageId="Package\Campaign Member\Devart Salesforce Source.Outputs[Source Output].Columns[ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Campaign Member\Sort 1.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Campaign Member\Sort 1.Outputs[Sort Output].Columns[ucinn_ascendv2__Motivation_Code]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Campaign Member\Sort 1.Outputs[Sort Output].Columns[ucinn_ascendv2__Motivation_Code]"
+                      name="ucinn_ascendv2__Motivation_Code"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Campaign Member\Devart Salesforce Source.Outputs[Source Output].Columns[ucinn_ascendv2__Motivation_Code]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Campaign Member\Sort 1.Outputs[Sort Output].Columns[ID]"
+                      dataType="wstr"
+                      length="18"
+                      lineageId="Package\Campaign Member\Sort 1.Outputs[Sort Output].Columns[ID]"
+                      name="ID"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Campaign Member\Devart Salesforce Source.Outputs[Source Output].Columns[ID]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Campaign Member.Paths[Merge Join Output]"
+              endId="Package\Campaign Member\Devart Salesforce Destination.Inputs[input]"
+              name="Merge Join Output"
+              startId="Package\Campaign Member\Merge Join.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Campaign Member.Paths[ODBC Source Output]"
+              endId="Package\Campaign Member\Sort.Inputs[Sort Input]"
+              name="ODBC Source Output"
+              startId="Package\Campaign Member\ODBC Source.Outputs[ODBC Source Output]" />
+            <path
+              refId="Package\Campaign Member.Paths[Sort Output]"
+              endId="Package\Campaign Member\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Campaign Member\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\Campaign Member.Paths[Sort Output1]"
+              endId="Package\Campaign Member\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Campaign Member\Sort 1.Outputs[Sort Output]" />
+            <path
+              refId="Package\Campaign Member.Paths[Source Output]"
+              endId="Package\Campaign Member\Sort 1.Inputs[Sort Input]"
+              name="Source Output"
+              startId="Package\Campaign Member\Devart Salesforce Source.Outputs[Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Ascend_Load_Date in warehouse table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DelayValidation="True"
+      DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{251876b0-55f1-4f66-a580-0222ccf6418c}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Ascend_Load_Date in warehouse table"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{D413B2D9-96EE-4895-B53D-91795839EB5C}"
+          SQLTask:SqlStatementSource="UPDATE &quot;CALL_CENTER&quot;.&quot;WB_DC&quot;.&quot;CALL_DETAILS&quot;&#xA;SET ASCEND_LOAD_DATE = GetDate()&#xA;WHERE&#xA;    ASCEND_LOAD_DATE IS NULL" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{16B85A84-ED4B-4CA7-B8F3-9CFD693DB9A2}"
+      DTS:From="Package\Campaign Member"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Update Ascend_Load_Date in warehouse table" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Campaign Member"
+          TopLeft="390,145" />
+        <NodeLayout
+          Size="309,42"
+          Id="Package\Update Ascend_Load_Date in warehouse table"
+          TopLeft="327,246" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="478.75,187">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59"
+              Start="0,0"
+              End="0,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Campaign Member">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="204,42"
+          Id="Package\Campaign Member\Devart Salesforce Source"
+          TopLeft="453,54" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Campaign Member\Merge Join"
+          TopLeft="343,265" />
+        <NodeLayout
+          Size="99,42"
+          Id="Package\Campaign Member\Sort"
+          TopLeft="192,160" />
+        <NodeLayout
+          Size="108,42"
+          Id="Package\Campaign Member\Sort 1"
+          TopLeft="504,157" />
+        <EdgeLayout
+          Id="Package\Campaign Member.Paths[Source Output]"
+          TopLeft="556.5,96">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61"
+              Start="0,0"
+              End="0,53.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Campaign Member.Paths[Sort Output1]"
+          TopLeft="558,199">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-127.666666666667,66"
+              Start="0,0"
+              End="-127.666666666667,58.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.1292719167905" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35.1292719167905"
+                    Point2="0,39.1292719167905"
+                    Point3="-4,39.1292719167905" />
+                  <mssgle:LineSegment
+                    End="-123.666666666667,39.1292719167905" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-123.666666666667,39.1292719167905"
+                    Point2="-127.666666666667,39.1292719167905"
+                    Point3="-127.666666666667,43.1292719167905" />
+                  <mssgle:LineSegment
+                    End="-127.666666666667,58.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Campaign Member.Paths[Sort Output]"
+          TopLeft="241.5,202">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="147.166666666667,63"
+              Start="0,0"
+              End="147.166666666667,55.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.3506686478455" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.3506686478455"
+                    Point2="0,37.3506686478455"
+                    Point3="4,37.3506686478455" />
+                  <mssgle:LineSegment
+                    End="143.166666666667,37.3506686478455" />
+                  <mssgle:CubicBezierSegment
+                    Point1="143.166666666667,37.3506686478455"
+                    Point2="147.166666666667,37.3506686478455"
+                    Point3="147.166666666667,41.3506686478455" />
+                  <mssgle:LineSegment
+                    End="147.166666666667,55.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="224,42"
+          Id="Package\Campaign Member\Devart Salesforce Destination"
+          TopLeft="296,354" />
+        <EdgeLayout
+          Id="Package\Campaign Member.Paths[Merge Join Output]"
+          TopLeft="408.75,307">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47"
+              Start="0,0"
+              End="0,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="149,42"
+          Id="Package\Campaign Member\ODBC Source"
+          TopLeft="163,54" />
+        <EdgeLayout
+          Id="Package\Campaign Member.Paths[ODBC Source Output]"
+          TopLeft="239.5,96">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,64"
+              Start="0,0"
+              End="0,56.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Campaign Member\ODBC Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

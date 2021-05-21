@@ -1,0 +1,1211 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/12/2021 2:22:08 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ETL2"
+  DTS:CreatorName="FOUNDATION\dfai"
+  DTS:DTSID="{48CB741A-7D48-44F6-815A-5446B89387B3}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.166"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="03-ContactReport"
+  DTS:PackageType="5"
+  DTS:VersionBuild="25"
+  DTS:VersionGUID="{5CAADFEE-1BDA-4AE7-8A92-995FDB2413E3}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Devart Salesforce Connection Manager 1]"
+      DTS:CreationName="DevartSalesforce"
+      DTS:DTSID="{B5A89FC9-BEBC-4D1B-BD81-98E99DBF5A4B}"
+      DTS:ObjectName="Devart Salesforce Connection Manager 1">
+      <DTS:ObjectData>
+        <SalesforceConnectionManager
+          ConnectByProxy="False">
+          <ConnectionString>User Id=ssisapi@osugiving.com.qa;Host=test.salesforce.com;Refresh Metadata=True</ConnectionString>
+          <Password
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOuinSlsnMEiFkNB94NYrWwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAdqRLt7wDntiUGB5fsj1HVAAAAAASAAACgAAAAEAAAAG1n+UoR0SR4EUdjbolmQXYwAAAAr1yufzUG33PuGMYTwpTWWI9T95oLeCijhMs6gIjDz8qgpkq4DDgpFoxG2CLtPi00FAAAAAJivBctrJ3EIKYVwXM+jtdCcIXR</Password>
+          <SecurityToken
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOuinSlsnMEiFkNB94NYrWwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAA//wi2qPIMHHLzjkvyGDWjAAAAAASAAACgAAAAEAAAAG54+DyNEfEe48hcdZPo61w4AAAACL3YRdofHXuzWLwQWKrGpftexDQX2yuFXHrncC7Vu8iUMI/mYBjTqCsYNf3mAqDXLgkVu/NkTbMUAAAAOZkgRU1iOTma2neQHR/UXaA+23k</SecurityToken>
+        </SalesforceConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[OSUF_INTERFACES_FACULTY_STAFF.OSUF_SSIS]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{6EE07E48-7CBE-40B0-8781-1A35A09E9FF5}"
+      DTS:ObjectName="OSUF_INTERFACES_FACULTY_STAFF.OSUF_SSIS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=OSUF_SSIS;Dsn=OSUF_INTERFACES_FACULTY_STAFF;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Contact Report"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{70223358-4EED-42BB-BE5A-388669BB9348}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Contact Report"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Contact Report\Devart Salesforce Destination - Contact Report"
+              componentClassID="Microsoft.ManagedComponentHost"
+              description="Loads or modifies data into an object of the Salesforce.com(or Database.com) cloud database."
+              name="Devart Salesforce Destination - Contact Report"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Null"
+                  name="DesignObject"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.String"
+                  description="The name of the Salesforce Object to load or update data."
+                  name="Salesforce Object"
+                  typeConverter="Devart.SSIS.Salesforce.Design.DestinationSelectStatementsListConverter, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">ucinn_ascendv2__Contact_Report</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of rows to be sent as a batch to the server."
+                  name="BatchSize">5000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the max size of local buffer."
+                  name="BufferSize">10485760</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies destination action type."
+                  name="Action"
+                  typeConverter="Devart.SSIS.Salesforce.DestinationAction, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies external identifier field."
+                  expressionType="Notify"
+                  name="ExternalId"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.Boolean"
+                  description="Cached id in the local storage."
+                  name="CacheId">false</property>
+                <property
+                  dataType="System.Null"
+                  description="The unique column in the source table that should be associate to the Salesforce ID."
+                  name="SourceKey"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether multiple batches associated with a bulk load operation are processed by Salesforce in parallel or one at a time. The default is true."
+                  name="ParallelBatchProcessing">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the ID of a specific assignment rule to run for the Case or Lead."
+                  name="Assignment Rule Id" />
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Devart.SSIS.Salesforce.SalesforceDestination, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Connections[Devart Salesforce]"
+                  connectionManagerID="Package.ConnectionManagers[Devart Salesforce Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Devart Salesforce Connection Manager 1]"
+                  description="Devart Salesforce Connection Manager"
+                  name="Devart Salesforce" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input]"
+                  errorOrTruncationOperation="Insert operation"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="input">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Redirect only error rows to error output."
+                      name="RedirectErrorsOnly">false</property>
+                  </properties>
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].Columns[UCINN_ASCENDV2__CONTACT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="18"
+                      cachedName="UCINN_ASCENDV2__CONTACT"
+                      externalMetadataColumnId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Contact]"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__CONTACT]" />
+                    <inputColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].Columns[UCINN_ASCENDV2__DATE]"
+                      cachedDataType="dbDate"
+                      cachedName="UCINN_ASCENDV2__DATE"
+                      externalMetadataColumnId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Date]"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__DATE]" />
+                    <inputColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].Columns[UCINN_ASCENDV2__CONTACT_REPORT_BODY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="UCINN_ASCENDV2__CONTACT_REPORT_BODY"
+                      externalMetadataColumnId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Contact_Report_Body]"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__CONTACT_REPORT_BODY]" />
+                    <inputColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].Columns[UCINN_ASCENDV2__OUTCOME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="256"
+                      cachedName="UCINN_ASCENDV2__OUTCOME"
+                      externalMetadataColumnId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Outcome]"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__OUTCOME]" />
+                    <inputColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].Columns[COWBOY_CALLER]"
+                      cachedDataType="numeric"
+                      cachedName="COWBOY_CALLER"
+                      cachedPrecision="1"
+                      externalMetadataColumnId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[Cowboy_Caller]"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[COWBOY_CALLER]" />
+                    <inputColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].Columns[UCINN_ASCENDV2__STATUS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedName="UCINN_ASCENDV2__STATUS"
+                      externalMetadataColumnId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Status]"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__STATUS]" />
+                    <inputColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].Columns[UCINN_ASCENDV2__CONTACT_METHOD]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="UCINN_ASCENDV2__CONTACT_METHOD"
+                      externalMetadataColumnId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Contact_Method]"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__CONTACT_METHOD]" />
+                    <inputColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].Columns[TYPE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="TYPE"
+                      externalMetadataColumnId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[Type]"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[TYPE]" />
+                    <inputColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].Columns[UCINN_ASCENDV2__DESCRIPTION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="14"
+                      cachedName="UCINN_ASCENDV2__DESCRIPTION"
+                      externalMetadataColumnId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Description]"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__DESCRIPTION]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[Id]"
+                      dataType="wstr"
+                      length="18"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[OwnerId]"
+                      dataType="wstr"
+                      length="18"
+                      name="OwnerId">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">Group</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[IsDeleted]"
+                      dataType="bool"
+                      name="IsDeleted" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="80"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[RecordTypeId]"
+                      dataType="wstr"
+                      length="18"
+                      name="RecordTypeId">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">RecordType</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[LastActivityDate]"
+                      dataType="dbDate"
+                      name="LastActivityDate" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[LastViewedDate]"
+                      dataType="dbTimeStamp"
+                      name="LastViewedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[LastReferencedDate]"
+                      dataType="dbTimeStamp"
+                      name="LastReferencedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Account]"
+                      dataType="wstr"
+                      length="18"
+                      name="ucinn_ascendv2__Account">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">Account</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Approval_Incomplete_Comments]"
+                      dataType="wstr"
+                      length="2000"
+                      name="ucinn_ascendv2__Approval_Incomplete_Comments" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Contact_Method]"
+                      dataType="wstr"
+                      length="255"
+                      name="ucinn_ascendv2__Contact_Method" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Contact_Report_Body]"
+                      dataType="nText"
+                      name="ucinn_ascendv2__Contact_Report_Body" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Contact_Report_Name_Auto_Number]"
+                      dataType="wstr"
+                      length="30"
+                      name="ucinn_ascendv2__Contact_Report_Name_Auto_Number" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Contact]"
+                      dataType="wstr"
+                      length="18"
+                      name="ucinn_ascendv2__Contact">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">Contact</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Date_Time]"
+                      dataType="dbTime"
+                      name="ucinn_ascendv2__Date_Time" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Date]"
+                      dataType="dbDate"
+                      name="ucinn_ascendv2__Date" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Date_and_Time]"
+                      dataType="dbTimeStamp"
+                      name="ucinn_ascendv2__Date_and_Time" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Description]"
+                      dataType="wstr"
+                      length="3000"
+                      name="ucinn_ascendv2__Description" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Fundraiser_Unit]"
+                      dataType="wstr"
+                      length="255"
+                      name="ucinn_ascendv2__Fundraiser_Unit" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Fundraiser_is_User_Logged_In_Formula]"
+                      dataType="bool"
+                      name="ucinn_ascendv2__Fundraiser_is_User_Logged_In_Formula" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Is_Confidential_Parent_Formula]"
+                      dataType="bool"
+                      name="ucinn_ascendv2__Is_Confidential_Parent_Formula" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Is_Confidential]"
+                      dataType="bool"
+                      name="ucinn_ascendv2__Is_Confidential" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Is_Substantive_Contact]"
+                      dataType="bool"
+                      name="ucinn_ascendv2__Is_Substantive_Contact" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Is_Visit_Formula]"
+                      dataType="bool"
+                      name="ucinn_ascendv2__Is_Visit_Formula" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Location]"
+                      dataType="wstr"
+                      length="255"
+                      name="ucinn_ascendv2__Location" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Outcome]"
+                      dataType="wstr"
+                      length="255"
+                      name="ucinn_ascendv2__Outcome" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Proposal]"
+                      dataType="wstr"
+                      length="18"
+                      name="ucinn_ascendv2__Proposal">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">Opportunity</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Responsible_Persons_ID]"
+                      dataType="nText"
+                      name="ucinn_ascendv2__Responsible_Persons_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Responsible_Persons]"
+                      dataType="nText"
+                      name="ucinn_ascendv2__Responsible_Persons" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Status]"
+                      dataType="wstr"
+                      length="255"
+                      name="ucinn_ascendv2__Status" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Substantive_Contact]"
+                      dataType="wstr"
+                      length="255"
+                      name="ucinn_ascendv2__Substantive_Contact" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[ucinn_ascendv2__Time]"
+                      dataType="dbTime"
+                      name="ucinn_ascendv2__Time" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[Is_Discovery]"
+                      dataType="bool"
+                      name="Is_Discovery" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[Next_Steps]"
+                      dataType="wstr"
+                      length="255"
+                      name="Next_Steps" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[Academic_Org_Contact_Report_Relation]"
+                      dataType="wstr"
+                      length="18"
+                      name="Academic_Org_Contact_Report_Relation">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">Academic_Org_Contact_Report_Relation</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[Strategy]"
+                      dataType="wstr"
+                      length="18"
+                      name="Strategy">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Strategy</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[Task]"
+                      dataType="wstr"
+                      length="18"
+                      name="Task">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">agf__ADM_Task</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[Type]"
+                      dataType="wstr"
+                      length="255"
+                      name="Type" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[Academic_Organization]"
+                      dataType="wstr"
+                      length="18"
+                      name="Academic_Organization">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Academic_Organization</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[Department]"
+                      dataType="wstr"
+                      length="18"
+                      name="Department">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Academic_Organization</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[Institution]"
+                      dataType="wstr"
+                      length="18"
+                      name="Institution">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Academic_Organization</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[OSUAA_Contact_Report]"
+                      dataType="bool"
+                      name="OSUAA_Contact_Report" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[Related_College_Unit_F]"
+                      dataType="wstr"
+                      length="1300"
+                      name="Related_College_Unit_F" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[Cowboy_Caller]"
+                      dataType="bool"
+                      name="Cowboy_Caller" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[Donor_Type]"
+                      dataType="wstr"
+                      length="255"
+                      name="Donor_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[Calling_Segment]"
+                      dataType="wstr"
+                      length="255"
+                      name="Calling_Segment" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input].ExternalColumns[External_System_ID]"
+                      dataType="wstr"
+                      length="255"
+                      name="External_System_ID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Outputs[Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Error Output"
+                  synchronousInputId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Outputs[Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Outputs[Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Outputs[Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Outputs[Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Outputs[Error Output].Columns[Id]"
+                      dataType="wstr"
+                      length="18"
+                      lineageId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Outputs[Error Output].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Outputs[Error Output].Columns[ErrorDescription]"
+                      dataType="wstr"
+                      length="1024"
+                      lineageId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Outputs[Error Output].Columns[ErrorDescription]"
+                      name="ErrorDescription" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Outputs[RecordId Output]"
+                  exclusionGroup="1"
+                  name="RecordId Output"
+                  synchronousInputId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Outputs[RecordId Output].Columns[Id]"
+                      dataType="wstr"
+                      length="18"
+                      lineageId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Outputs[RecordId Output].Columns[Id]"
+                      name="Id" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Contact Report\ODBC Source"
+              componentClassID="Attunity.SSISODBCSrc"
+              description="ODBC Source"
+              name="ODBC Source"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT
+    sc.ID_Number
+    ,c.ID                                       AS ucinn_ascendv2__Contact
+    ,CAST(sc.Call_Date AS DATE)                 AS ucinn_ascendv2__Date
+    ,sc.Caller_Comment                          AS ucinn_ascendv2__Contact_Report_Body
+    ,cd.Call_Result                             AS ucinn_ascendv2__Outcome
+    ,1                                          AS Cowboy_Caller
+    ,'Completed'                                AS ucinn_ascendv2__Status
+    ,'Phone Call'                               AS ucinn_ascendv2__Contact_Method
+    ,'Solicitation'                             AS Type
+    ,'Cowboy Callers'                           AS ucinn_ascendv2__Description
+    
+FROM
+    "ASCEND_QA_FIVETRAN"."ASCEND_QA"."CONTACT" c
+        INNER JOIN "CALL_CENTER"."WB_DC"."SCHOOL_COMMENTS" sc ON c.UCINN_ASCENDV_2_DONOR_ID_C = sc.ID_Number 
+        INNER JOIN   
+           (         
+                SELECT
+                    Prospect_ID                             
+                    ,Date_Time
+                    ,Call_Result                                
+                    ,ROW_NUMBER() OVER(PARTITION BY Prospect_ID ORDER BY CAST(CONCAT(Date_Time, ':00') AS DATETIME) DESC)    AS LastContact
+                FROM
+                    "CALL_CENTER"."WB_DC"."CALL_DETAILS"
+                QUALIFY 
+                    LastContact = 1
+              ) cd ON CAST(sc.ID_Number AS VARCHAR(100)) = CAST(cd.Prospect_ID AS VARCHAR(100)) AND CAST(sc.Call_Date AS DATE) = CAST(CONCAT(cd.Date_Time, ':00') AS DATE)
+
+
+WHERE
+    sc.Ascend_Load_Date IS NULL
+    AND cd.LastContact = 1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines how the component exposes CHAR columns. If False, CHAR columns are exposed as (multi-)byte strings (DT_STR), if True, CHAR columns are exposed as wide strings (DT_WSTR)"
+                  expressionType="Notify"
+                  name="ExposeCharColumnsAsUnicode">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for fetching data."
+                  expressionType="Notify"
+                  name="FetchMethod">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The mode used to access the database."
+                  expressionType="Notify"
+                  name="AccessMode"
+                  typeConverter="AccessMode">1</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Contact Report\ODBC Source.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[OSUF_INTERFACES_FACULTY_STAFF.OSUF_SSIS]"
+                  connectionManagerRefId="Package.ConnectionManagers[OSUF_INTERFACES_FACULTY_STAFF.OSUF_SSIS]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output]"
+                  errorRowDisposition="FailComponent"
+                  name="ODBC Source Output"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[ID_NUMBER]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[ID_NUMBER]"
+                      length="256"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[ID_NUMBER]"
+                      name="ID_NUMBER" />
+                    <outputColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__CONTACT]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[UCINN_ASCENDV2__CONTACT]"
+                      length="18"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__CONTACT]"
+                      name="UCINN_ASCENDV2__CONTACT" />
+                    <outputColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__DATE]"
+                      dataType="dbDate"
+                      externalMetadataColumnId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[UCINN_ASCENDV2__DATE]"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__DATE]"
+                      name="UCINN_ASCENDV2__DATE" />
+                    <outputColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__CONTACT_REPORT_BODY]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[UCINN_ASCENDV2__CONTACT_REPORT_BODY]"
+                      length="512"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__CONTACT_REPORT_BODY]"
+                      name="UCINN_ASCENDV2__CONTACT_REPORT_BODY" />
+                    <outputColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__OUTCOME]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[UCINN_ASCENDV2__OUTCOME]"
+                      length="256"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__OUTCOME]"
+                      name="UCINN_ASCENDV2__OUTCOME" />
+                    <outputColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[COWBOY_CALLER]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[COWBOY_CALLER]"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[COWBOY_CALLER]"
+                      name="COWBOY_CALLER"
+                      precision="1" />
+                    <outputColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__STATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[UCINN_ASCENDV2__STATUS]"
+                      length="9"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__STATUS]"
+                      name="UCINN_ASCENDV2__STATUS" />
+                    <outputColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__CONTACT_METHOD]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[UCINN_ASCENDV2__CONTACT_METHOD]"
+                      length="10"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__CONTACT_METHOD]"
+                      name="UCINN_ASCENDV2__CONTACT_METHOD" />
+                    <outputColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[TYPE]"
+                      length="12"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[TYPE]"
+                      name="TYPE" />
+                    <outputColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__DESCRIPTION]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[UCINN_ASCENDV2__DESCRIPTION]"
+                      length="14"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__DESCRIPTION]"
+                      name="UCINN_ASCENDV2__DESCRIPTION" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[ID_NUMBER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="256"
+                      name="ID_NUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[UCINN_ASCENDV2__CONTACT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="18"
+                      name="UCINN_ASCENDV2__CONTACT" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[UCINN_ASCENDV2__DATE]"
+                      dataType="dbDate"
+                      name="UCINN_ASCENDV2__DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[UCINN_ASCENDV2__CONTACT_REPORT_BODY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="UCINN_ASCENDV2__CONTACT_REPORT_BODY" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[UCINN_ASCENDV2__OUTCOME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="256"
+                      name="UCINN_ASCENDV2__OUTCOME" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[COWBOY_CALLER]"
+                      dataType="numeric"
+                      name="COWBOY_CALLER"
+                      precision="1" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[UCINN_ASCENDV2__STATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      name="UCINN_ASCENDV2__STATUS" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[UCINN_ASCENDV2__CONTACT_METHOD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="UCINN_ASCENDV2__CONTACT_METHOD" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="12"
+                      name="TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[UCINN_ASCENDV2__DESCRIPTION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="14"
+                      name="UCINN_ASCENDV2__DESCRIPTION" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Error Output]"
+                  isErrorOut="true"
+                  name="ODBC Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Error Output].Columns[ID_NUMBER]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[ID_NUMBER]"
+                      length="256"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Error Output].Columns[ID_NUMBER]"
+                      name="ID_NUMBER" />
+                    <outputColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Error Output].Columns[UCINN_ASCENDV2__CONTACT]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[UCINN_ASCENDV2__CONTACT]"
+                      length="18"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Error Output].Columns[UCINN_ASCENDV2__CONTACT]"
+                      name="UCINN_ASCENDV2__CONTACT" />
+                    <outputColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Error Output].Columns[UCINN_ASCENDV2__DATE]"
+                      dataType="dbDate"
+                      externalMetadataColumnId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[UCINN_ASCENDV2__DATE]"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Error Output].Columns[UCINN_ASCENDV2__DATE]"
+                      name="UCINN_ASCENDV2__DATE" />
+                    <outputColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Error Output].Columns[UCINN_ASCENDV2__CONTACT_REPORT_BODY]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[UCINN_ASCENDV2__CONTACT_REPORT_BODY]"
+                      length="512"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Error Output].Columns[UCINN_ASCENDV2__CONTACT_REPORT_BODY]"
+                      name="UCINN_ASCENDV2__CONTACT_REPORT_BODY" />
+                    <outputColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Error Output].Columns[UCINN_ASCENDV2__OUTCOME]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[UCINN_ASCENDV2__OUTCOME]"
+                      length="256"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Error Output].Columns[UCINN_ASCENDV2__OUTCOME]"
+                      name="UCINN_ASCENDV2__OUTCOME" />
+                    <outputColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Error Output].Columns[COWBOY_CALLER]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[COWBOY_CALLER]"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Error Output].Columns[COWBOY_CALLER]"
+                      name="COWBOY_CALLER"
+                      precision="1" />
+                    <outputColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Error Output].Columns[UCINN_ASCENDV2__STATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[UCINN_ASCENDV2__STATUS]"
+                      length="9"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Error Output].Columns[UCINN_ASCENDV2__STATUS]"
+                      name="UCINN_ASCENDV2__STATUS" />
+                    <outputColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Error Output].Columns[UCINN_ASCENDV2__CONTACT_METHOD]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[UCINN_ASCENDV2__CONTACT_METHOD]"
+                      length="10"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Error Output].Columns[UCINN_ASCENDV2__CONTACT_METHOD]"
+                      name="UCINN_ASCENDV2__CONTACT_METHOD" />
+                    <outputColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Error Output].Columns[TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[TYPE]"
+                      length="12"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Error Output].Columns[TYPE]"
+                      name="TYPE" />
+                    <outputColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Error Output].Columns[UCINN_ASCENDV2__DESCRIPTION]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[UCINN_ASCENDV2__DESCRIPTION]"
+                      length="14"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Error Output].Columns[UCINN_ASCENDV2__DESCRIPTION]"
+                      name="UCINN_ASCENDV2__DESCRIPTION" />
+                    <outputColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Contact Report.Paths[ODBC Source Output]"
+              endId="Package\Contact Report\Devart Salesforce Destination - Contact Report.Inputs[input]"
+              name="ODBC Source Output"
+              startId="Package\Contact Report\ODBC Source.Outputs[ODBC Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Ascend_Load_Date in warehouse table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DelayValidation="True"
+      DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{b158822b-8269-4467-8385-a939bbfead22}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Ascend_Load_Date in warehouse table"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6EE07E48-7CBE-40B0-8781-1A35A09E9FF5}"
+          SQLTask:SqlStatementSource="UPDATE &quot;CALL_CENTER&quot;.&quot;WB_DC&quot;.&quot;SCHOOL_COMMENTS&quot;&#xA;SET ASCEND_LOAD_DATE = GetDate()&#xA;WHERE&#xA;    ASCEND_LOAD_DATE IS NULL" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{C1D60E1A-EF7F-4914-8FF5-FFCDBFD8DF06}"
+      DTS:From="Package\Contact Report"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Update Ascend_Load_Date in warehouse table" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Contact Report"
+          TopLeft="377,111" />
+        <NodeLayout
+          Size="309,42"
+          Id="Package\Update Ascend_Load_Date in warehouse table"
+          TopLeft="306,209" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="457,153">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,56"
+              Start="0,0"
+              End="0,48.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Contact Report">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="308,42"
+          Id="Package\Contact Report\Devart Salesforce Destination - Contact Report"
+          TopLeft="222,230" />
+        <NodeLayout
+          Size="149,42"
+          Id="Package\Contact Report\ODBC Source"
+          TopLeft="296,108" />
+        <EdgeLayout
+          Id="Package\Contact Report.Paths[ODBC Source Output]"
+          TopLeft="373.25,150">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,80"
+              Start="0,0"
+              End="0,72.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,72.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Contact Report\ODBC Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
