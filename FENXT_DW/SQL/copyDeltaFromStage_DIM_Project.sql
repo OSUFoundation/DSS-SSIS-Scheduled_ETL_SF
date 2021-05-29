@@ -9,23 +9,25 @@ CREATE OR REPLACE TABLE "DIM_PROJECT"
     "ProjectTypeDescription" varchar(256),                 
     "ProjectStartDate" TIMESTAMP_NTZ(9),                     
     "ProjectEndDate" TIMESTAMP_NTZ(9),                       
-    "ProjectActive" varchar(256),                    
+    "ProjectActive" varchar(256), 
+    "PreventPostDate" TIMESTAMP_NTZ(9),
 	"DateAdded" TIMESTAMP_NTZ(9),
     "DateChanged" TIMESTAMP_NTZ(9),        
     "AnnotationText" varchar(256),                     
     "ProjectID" varchar(256),             
-    "ImportID" varchar(256)                       
+    "ImportID" varchar(256),
+    "UpdatedStatus" varchar(256)
     
-);                                                
+);                                              
 
 
 
-COPY INTO "DIM_PROJECT" FROM '@STAGE/DIM_ProjectDelta.csv.gz'
+COPY INTO "DIM_PROJECT" FROM '@BB_DELTA_STAGE/DIM_ProjectDelta.csv.gz'
 FORCE = TRUE
 PURGE = TRUE
-FILE_FORMAT = (FORMAT_NAME = 'CSV_DBLQT_SKIP3');
+FILE_FORMAT = (FORMAT_NAME = 'CSV_DBLQT');
 
 
 //Delete all files from STAGE
-REMOVE '@STAGE';
+REMOVE '@BB_DELTA_STAGE';
 
