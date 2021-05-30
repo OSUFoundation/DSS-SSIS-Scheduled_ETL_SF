@@ -13,8 +13,8 @@
   DTS:ObjectName="CONTROL_ETL_MASTER"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="578"
-  DTS:VersionGUID="{7C536B02-3735-40C7-97D8-F273D94CE3E8}">
+  DTS:VersionBuild="581"
+  DTS:VersionGUID="{ED771658-3410-4087-8D4D-A6DB7132146C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2000,7 +2000,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="SnowSQLConfigDir">
       <DTS:VariableValue
-        DTS:DataType="8">C:\temp\DWISI\snowsql\</DTS:VariableValue>
+        DTS:DataType="8">C:\temp\DWFESYNC\snowsql\</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -19510,7 +19510,7 @@ UNION Select -1,'No Source','No Source'</property>
           DTS:ExecutableType="Microsoft.ScriptTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Create SnowSQL config file"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <ScriptProject
@@ -20116,7 +20116,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           DTS:ExecutableType="Microsoft.ScriptTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Create SnowSQL config file folder"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <ScriptProject
@@ -20721,7 +20721,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           DTS:LocaleID="-1"
           DTS:ObjectName="Execute SQL Task - Populate Varable SFPassword"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -20773,12 +20773,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           DTS:LocaleID="-1"
           DTS:ObjectName="DIM_Project - Apply Delta to Warehouse Table"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
               Executable="C:\Program Files\Snowflake SnowSQL\snowsql.exe"
-              Arguments=" --config &quot;C:\temp\DWISI\snowsql\config.txt&quot; -c SF  -f &quot;E:\BI\Scheduled_ETL_SF\FENXT_DW\SQL\DIM_Project_ApplyDelta.sql&quot;" />
+              Arguments=" --config &quot;C:\temp\DWFESYNC\snowsql\config.txt&quot; -c SF  -f &quot;E:\BI\Scheduled_ETL_SF\FENXT_DW\SQL\DIM_Project_ApplyDelta.sql&quot;" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -20790,12 +20790,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           DTS:LocaleID="-1"
           DTS:ObjectName="DIM_Project - Copy Delta From Stage to Table"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
               Executable="C:\Program Files\Snowflake SnowSQL\snowsql.exe"
-              Arguments=" --config &quot;C:\temp\DWISI\snowsql\config.txt&quot; -c SF  -f &quot;E:\BI\Scheduled_ETL_SF\FENXT_DW\SQL\DIM_Project_copyDeltaFromStage.sql&quot;" />
+              Arguments=" --config &quot;C:\temp\DWFESYNC\snowsql\config.txt&quot; -c SF  -f &quot;E:\BI\Scheduled_ETL_SF\FENXT_DW\SQL\DIM_Project_copyDeltaFromStage.sql&quot;" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -28403,12 +28403,12 @@ From dbo.DIM_Project</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="DIM_Project - Upload Delta to Snowflake Stage"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
               Executable="C:\Program Files\Snowflake SnowSQL\snowsql.exe"
-              Arguments="--config &quot;C:\temp\DWISI\snowsql\config.txt&quot; -c SF  -f &quot;E:\BI\Scheduled_ETL_SF\FENXT_DW\SQL\DIM_Project_putDeltaOnStage.sql&quot;" />
+              Arguments="--config &quot;C:\temp\DWFESYNC\snowsql\config.txt&quot; -c SF  -f &quot;E:\BI\Scheduled_ETL_SF\FENXT_DW\SQL\DIM_Project_putDeltaOnStage.sql&quot;" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -28458,12 +28458,12 @@ From dbo.DIM_Project</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="DIM_ProjectAttribute - Apply Delta to Warehouse Table"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
               Executable="C:\Program Files\Snowflake SnowSQL\snowsql.exe"
-              Arguments=" --config &quot;C:\temp\DWISI\snowsql\config.txt&quot; -c SF  -f &quot;E:\BI\Scheduled_ETL_SF\FENXT_DW\SQL\DIM_ProjectAttribute_ApplyDelta.sql&quot;" />
+              Arguments=" --config &quot;C:\temp\DWFESYNC\snowsql\config.txt&quot; -c SF  -f &quot;E:\BI\Scheduled_ETL_SF\FENXT_DW\SQL\DIM_ProjectAttribute_ApplyDelta.sql&quot;" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -28475,12 +28475,12 @@ From dbo.DIM_Project</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="DIM_ProjectAttribute - Copy Delta From Stage to Table"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
               Executable="C:\Program Files\Snowflake SnowSQL\snowsql.exe"
-              Arguments=" --config &quot;C:\temp\DWISI\snowsql\config.txt&quot; -c SF  -f &quot;E:\BI\Scheduled_ETL_SF\FENXT_DW\SQL\DIM_ProjectAttribute_copyDeltaFromStage.sql&quot;" />
+              Arguments=" --config &quot;C:\temp\DWFESYNC\snowsql\config.txt&quot; -c SF  -f &quot;E:\BI\Scheduled_ETL_SF\FENXT_DW\SQL\DIM_ProjectAttribute_copyDeltaFromStage.sql&quot;" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -36314,12 +36314,12 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="DIM_ProjectAttribute - Upload Delta to Snowflake Stage"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
               Executable="C:\Program Files\Snowflake SnowSQL\snowsql.exe"
-              Arguments="--config &quot;C:\temp\DWISI\snowsql\config.txt&quot; -c SF  -f &quot;E:\BI\Scheduled_ETL_SF\FENXT_DW\SQL\DIM_ProjectAttribute_putDeltaOnStage.sql&quot;" />
+              Arguments="--config &quot;C:\temp\DWFESYNC\snowsql\config.txt&quot; -c SF  -f &quot;E:\BI\Scheduled_ETL_SF\FENXT_DW\SQL\DIM_ProjectAttribute_putDeltaOnStage.sql&quot;" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -36369,12 +36369,12 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="DIM_Account - Apply Delta to Warehouse Table"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
               Executable="C:\Program Files\Snowflake SnowSQL\snowsql.exe"
-              Arguments=" --config &quot;C:\temp\DWISI\snowsql\config.txt&quot; -c SF  -f &quot;E:\BI\Scheduled_ETL_SF\FENXT_DW\SQL\DIM_Account_ApplyDelta.sql&quot;" />
+              Arguments=" --config &quot;C:\temp\DWFESYNC\snowsql\config.txt&quot; -c SF  -f &quot;E:\BI\Scheduled_ETL_SF\FENXT_DW\SQL\DIM_Account_ApplyDelta.sql&quot;" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -36386,12 +36386,12 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="DIM_Account - Copy Delta From Stage to Table"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
               Executable="C:\Program Files\Snowflake SnowSQL\snowsql.exe"
-              Arguments=" --config &quot;C:\temp\DWISI\snowsql\config.txt&quot; -c SF  -f &quot;E:\BI\Scheduled_ETL_SF\FENXT_DW\SQL\DIM_Account_copyDeltaFromStage.sql&quot;" />
+              Arguments=" --config &quot;C:\temp\DWFESYNC\snowsql\config.txt&quot; -c SF  -f &quot;E:\BI\Scheduled_ETL_SF\FENXT_DW\SQL\DIM_Account_copyDeltaFromStage.sql&quot;" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -48509,12 +48509,12 @@ From "FENXT_DW"."BB"."DIM_Account";</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="DIM_Account - Upload Delta to Snowflake Stage"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecuteProcessData
               Executable="C:\Program Files\Snowflake SnowSQL\snowsql.exe"
-              Arguments="--config &quot;C:\temp\DWISI\snowsql\config.txt&quot; -c SF  -f &quot;E:\BI\Scheduled_ETL_SF\FENXT_DW\SQL\DIM_Account_putDeltaOnStage.sql&quot;" />
+              Arguments="--config &quot;C:\temp\DWFESYNC\snowsql\config.txt&quot; -c SF  -f &quot;E:\BI\Scheduled_ETL_SF\FENXT_DW\SQL\DIM_Account_putDeltaOnStage.sql&quot;" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -48571,6 +48571,14 @@ From "FENXT_DW"."BB"."DIM_Account";</property>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
       DTS:To="Package\Sync_DIM_Account" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{78AAE74B-5824-4A01-B281-917E85FDD2A2}"
+      DTS:From="Package\Sync_DIM_Account"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Clean Up - Delete Snowflake Config File and Directory" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -49276,6 +49284,40 @@ From "FENXT_DW"."BB"."DIM_Account";</property>
                     Point3="18.5000000000002,34.7777777777778" />
                   <mssgle:LineSegment
                     End="18.5000000000002,54.0555555555557" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="476.666666666667,1431.22222222222">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-33.6666666666667,67.9444444444448"
+              Start="0,0"
+              End="-26.1666666666667,67.9444444444448">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-12.8333333333334,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-12.8333333333334,0"
+                    Point2="-16.8333333333334,0"
+                    Point3="-16.8333333333334,4" />
+                  <mssgle:LineSegment
+                    End="-16.8333333333334,63.9444444444448" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-16.8333333333334,63.9444444444448"
+                    Point2="-16.8333333333334,67.9444444444448"
+                    Point3="-20.8333333333334,67.9444444444448" />
+                  <mssgle:LineSegment
+                    End="-26.1666666666667,67.9444444444448" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

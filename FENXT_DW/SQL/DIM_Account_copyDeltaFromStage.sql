@@ -27,12 +27,13 @@ DateChanged TIMESTAMP_NTZ(9),
 ContraAccount varchar(256),
 ControlAccount varchar(256),
 CashAccount varchar(256),
-AnnotationText varchar(256)
+AnnotationText varchar(256),
+UpdatedStatus varchar(256)
 );                                              
 
 
 
-COPY INTO "DIM_PROJECT" FROM '@BB_DELTA_STAGE/DIM_AccountDelta.csv.gz'
+COPY INTO "DIM_Account" FROM '@BB_DELTA_STAGE/DIM_AccountDelta.csv.gz'
 FORCE = TRUE
 PURGE = TRUE
 FILE_FORMAT = (FORMAT_NAME = 'CSV_DBLQT');
