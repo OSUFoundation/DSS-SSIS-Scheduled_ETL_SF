@@ -13,8 +13,8 @@
   DTS:ObjectName="CONTROL_ETL_MASTER"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="562"
-  DTS:VersionGUID="{1AD49120-E460-4A6E-80AE-4707715B4335}">
+  DTS:VersionBuild="576"
+  DTS:VersionGUID="{6703FAE2-C54E-4B81-A261-71B9CF55DB73}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1758,6 +1758,7 @@
           DTS:Format="Delimited"
           DTS:LocaleID="1033"
           DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
@@ -1768,36 +1769,32 @@
               DTS:ColumnDelimiter="_x002C_"
               DTS:DataType="131"
               DTS:DataPrecision="38"
-              DTS:TextQualified="True"
               DTS:ObjectName="ProjectAttributeDimID"
-              DTS:DTSID="{543A4A69-9E1B-4A53-A51F-73E30EA69BB2}"
+              DTS:DTSID="{986F3108-B3EF-440E-99F4-BDD18D0A3EEC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
               DTS:DataType="131"
               DTS:DataPrecision="38"
-              DTS:TextQualified="True"
               DTS:ObjectName="ProjectAttributeSystemID"
-              DTS:DTSID="{18EA2B16-1BC6-43EC-B7C1-029D7D017505}"
+              DTS:DTSID="{CE06B35F-A4F6-49B5-A42E-3D15B4D5D2EB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
               DTS:DataType="131"
               DTS:DataPrecision="38"
-              DTS:TextQualified="True"
               DTS:ObjectName="ProjectDimID"
-              DTS:DTSID="{03C81559-D0FF-4463-A78C-0D53737599D2}"
+              DTS:DTSID="{4DDAD3DB-DD1B-4523-9C2A-805FCB2F7FC4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
               DTS:DataType="131"
               DTS:DataPrecision="38"
-              DTS:TextQualified="True"
               DTS:ObjectName="ProjectSystemID"
-              DTS:DTSID="{12112DC6-1201-4635-A90A-A5F396369B4F}"
+              DTS:DTSID="{4901C93F-877B-40BC-808A-61A22D22B092}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1806,7 +1803,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AttributeCategory"
-              DTS:DTSID="{49E20B0E-E21E-4A22-84A4-60BB08BEA1B4}"
+              DTS:DTSID="{9FABCE74-E32B-4232-904D-FE603AA717D0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1815,42 +1812,30 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AttributeDescription"
-              DTS:DTSID="{97B066D4-B8AF-4A10-A454-61E1F8E1EB39}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="6"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="AttributeDescriptionShort"
-              DTS:DTSID="{23F88CA0-E13E-4100-B86C-25286FF2608A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="38"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Sequence"
-              DTS:DTSID="{40B9A3CA-9A0F-4417-85DC-9E8309C57291}"
+              DTS:DTSID="{794BC700-DAF4-4B98-B0B8-A1E56C3FE58A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="256"
               DTS:DataType="129"
-              DTS:TextQualified="True"
               DTS:ObjectName="Comments"
-              DTS:DTSID="{7A724B75-CDEB-4357-B0C6-6A7F9C250C93}"
+              DTS:DTSID="{091A2723-0563-4C26-B21F-0EAFADF39FC1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
               DTS:DataType="135"
-              DTS:TextQualified="True"
               DTS:ObjectName="AttributeDate"
-              DTS:DTSID="{C7BDC2E4-A179-40D2-865C-44285CC5D4BA}"
+              DTS:DTSID="{23067209-C54E-40CA-A47B-0633D0131C35}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:ObjectName="Sequence"
+              DTS:DTSID="{08FE8C3E-DB48-43D2-8E73-617BC6630581}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1859,7 +1844,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="TypeOfData"
-              DTS:DTSID="{5FFD329E-F5E5-4007-9478-4507661B5A6A}"
+              DTS:DTSID="{ABE30DC5-5D85-4201-84DB-FF630C7F6297}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1868,7 +1853,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Required"
-              DTS:DTSID="{B29F2D5F-43B1-47DF-BB5A-5D726C0766F3}"
+              DTS:DTSID="{34B760F8-1796-424C-B946-C28C235312E9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1877,23 +1862,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="MustBeUnique"
-              DTS:DTSID="{318B1FE8-E2F9-4107-ABFF-D1187796F348}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ETLControlID"
-              DTS:DTSID="{346E5B53-9659-459B-BB53-72DEC89D31EF}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="SourceID"
-              DTS:DTSID="{BC0EF2D2-ABC6-4B89-A983-18EAB8C54201}"
+              DTS:DTSID="{D6FDD618-5855-4F70-B0F5-323B417FD35C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1902,23 +1871,21 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ImportID"
-              DTS:DTSID="{8D8E9E91-E025-4AA0-84B3-6D703E49076C}"
+              DTS:DTSID="{B8645586-1906-4250-89B1-852F28430E8C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
               DTS:DataType="135"
-              DTS:TextQualified="True"
               DTS:ObjectName="DateAdded"
-              DTS:DTSID="{9049DBD5-B461-4115-A4A7-016B0A103001}"
+              DTS:DTSID="{32FB983D-A5E4-4A9E-8AA0-B269B1D51E57}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
               DTS:DataType="135"
-              DTS:TextQualified="True"
               DTS:ObjectName="DateChanged"
-              DTS:DTSID="{190576F3-D231-4191-AC52-1D385A3FFA0E}"
+              DTS:DTSID="{B831DBB3-F9A8-4F5A-9BAC-C3BBE0E0FFA2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1927,7 +1894,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="UpdatedStatus"
-              DTS:DTSID="{6D0BAC89-F120-45E4-B87B-2639A0DF12D9}"
+              DTS:DTSID="{6AECCA2D-3387-43ED-B638-ABDB9587E6DF}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -23121,113 +23088,6 @@ UNION Select -1,'No Source','No Source'</property>
                 Name="ST_228f7500aafd459c868a5bde6e82ed7a.vbproj"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{09e5daa4-750f-4c55-80f8-029fe3204374}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>My Project</AppDesignerFolder><RootNamespace>ST_e7b0c7ca59e54170856a99374faf9dc2</RootNamespace><AssemblyName>ST_228f7500aafd459c868a5bde6e82ed7a</AssemblyName><TargetFrameworkVersion>v4.5</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineDebug>true</DefineDebug><DefineTrace>true</DefineTrace><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineDebug>false</DefineDebug><DefineTrace>true</DefineTrace><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.ManagedDTS, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.ScriptTask, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /></ItemGroup><ItemGroup><Import Include="Microsoft.VisualBasic" /><Import Include="System" /><Import Include="System.Collections" /><Import Include="System.Data" /><Import Include="System.Diagnostics" /><Import Include="System.Windows.Forms" /></ItemGroup><ItemGroup><AppDesigner Include="My Project\" /><Compile Include="My Project\AssemblyInfo.vb"><SubType>Code</SubType></Compile><EmbeddedResource Include="My Project\Resources.resx"><Generator>VbMyResourcesResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.vb</LastGenOutput><CustomToolNamespace>My.Resources</CustomToolNamespace></EmbeddedResource><Compile Include="My Project\Resources.Designer.vb"><AutoGen>True</AutoGen><DesignTime>True</DesignTime><DependentUpon>Resources.resx</DependentUpon><SubType>Code</SubType></Compile><None Include="My Project\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.vb</LastGenOutput></None><Compile Include="My Project\Settings.Designer.vb"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon><SubType>Code</SubType></Compile><Compile Include="ScriptMain.vb"><SubType>Code</SubType></Compile></ItemGroup><!-- Include the build rules for a VB project.--><Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" /><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" /><Host Name="ScriptTask" IconIndex=""></Host><ProjectClient><HostIdentifier>SSIS_ST130</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></ProjectItem>
               <ProjectItem
-                Name="My Project\AssemblyInfo.vb"
-                Encoding="UTF8"><![CDATA[Imports System
-Imports System.Reflection
-Imports System.Runtime.InteropServices
-
-' General Information about an assembly is controlled through the following 
-' set of attributes. Change these attribute values to modify the information
-' associated with an assembly.
-
-' Review the values of the assembly attributes
-
-<Assembly: AssemblyTitle("ST_e7b0c7ca59e54170856a99374faf9dc2")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("ST_e7b0c7ca59e54170856a99374faf9dc2")> 
-<Assembly: AssemblyCopyright("Copyright @  2021")> 
-<Assembly: AssemblyTrademark("")> 
-<Assembly: CLSCompliant(True)> 
-
-<Assembly: ComVisible(False)> 
-
-'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("a7a44013-9c43-43fe-ac7d-fea8ade993f4")> 
-
-' Version information for an assembly consists of the following four values:
-'
-'      Major Version
-'      Minor Version 
-'      Build Number
-'      Revision
-'
-' You can specify all the values or you can default the Build and Revision Numbers 
-' by using the '*' as shown below:
-' <Assembly: AssemblyVersion("1.0.*")>
-
-<Assembly: AssemblyVersion("1.0.0.0")> 
-<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\Settings.Designer.vb"
-                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
-' <autogenerated>
-'     This code was generated by a tool.
-'
-'     Changes to this file may cause incorrect behavior and will be lost if
-'     the code is regenerated.
-' </autogenerated>
-'------------------------------------------------------------------------------
-
-Option Strict Off
-Option Explicit On
-
-
-
-Partial Friend NotInheritable Class MySettings
-    Inherits System.Configuration.ApplicationSettingsBase
-
-    Private Shared m_Value As MySettings
-
-    Private Shared m_SyncObject As Object = New Object
-
-    <System.Diagnostics.DebuggerNonUserCode()> _
-    Public Shared ReadOnly Property Value() As MySettings
-        Get
-            If (MySettings.m_Value Is Nothing) Then
-                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
-                If (MySettings.m_Value Is Nothing) Then
-                    Try
-                        MySettings.m_Value = New MySettings
-                    Finally
-                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
-                    End Try
-                End If
-            End If
-            Return MySettings.m_Value
-        End Get
-    End Property
-End Class]]></ProjectItem>
-              <ProjectItem
-                Name="Project"
-                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
-	<msb:PropertyGroup>
-		<msb:CodeName>ST_e7b0c7ca59e54170856a99374faf9dc2</msb:CodeName>
-		<msb:Language>msBuild</msb:Language>
-		<msb:DisplayName>ST_e7b0c7ca59e54170856a99374faf9dc2</msb:DisplayName>
-		<msb:ProjectId>{C915865D-BC6F-4391-8884-1DE37B202DC1}</msb:ProjectId>
-	</msb:PropertyGroup>
-	<msb:ItemGroup>
-		<msb:Project Include="ST_228f7500aafd459c868a5bde6e82ed7a.vbproj"/>
-		<msb:File Include="My Project\AssemblyInfo.vb"/>
-		<msb:File Include="My Project\Resources.resx"/>
-		<msb:File Include="ScriptMain.vb"/>
-		<msb:File Include="My Project\Resources.Designer.vb"/>
-		<msb:File Include="My Project\Settings.settings"/>
-		<msb:File Include="My Project\Settings.Designer.vb"/>
-	</msb:ItemGroup>
-</c:Project>]]></ProjectItem>
-              <ProjectItem
                 Name="ScriptMain.vb"
                 Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
 'The Script Task allows you to perform virtually any operation that can be accomplished in
@@ -23349,6 +23209,113 @@ Partial Public Class ScriptMain
 #End Region
 
 End Class]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\AssemblyInfo.vb"
+                Encoding="UTF8"><![CDATA[Imports System
+Imports System.Reflection
+Imports System.Runtime.InteropServices
+
+' General Information about an assembly is controlled through the following 
+' set of attributes. Change these attribute values to modify the information
+' associated with an assembly.
+
+' Review the values of the assembly attributes
+
+<Assembly: AssemblyTitle("ST_e7b0c7ca59e54170856a99374faf9dc2")> 
+<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyCompany("")> 
+<Assembly: AssemblyProduct("ST_e7b0c7ca59e54170856a99374faf9dc2")> 
+<Assembly: AssemblyCopyright("Copyright @  2021")> 
+<Assembly: AssemblyTrademark("")> 
+<Assembly: CLSCompliant(True)> 
+
+<Assembly: ComVisible(False)> 
+
+'The following GUID is for the ID of the typelib if this project is exposed to COM
+<Assembly: Guid("a7a44013-9c43-43fe-ac7d-fea8ade993f4")> 
+
+' Version information for an assembly consists of the following four values:
+'
+'      Major Version
+'      Minor Version 
+'      Build Number
+'      Revision
+'
+' You can specify all the values or you can default the Build and Revision Numbers 
+' by using the '*' as shown below:
+' <Assembly: AssemblyVersion("1.0.*")>
+
+<Assembly: AssemblyVersion("1.0.0.0")> 
+<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.Designer.vb"
+                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
+' <autogenerated>
+'     This code was generated by a tool.
+'
+'     Changes to this file may cause incorrect behavior and will be lost if
+'     the code is regenerated.
+' </autogenerated>
+'------------------------------------------------------------------------------
+
+Option Strict Off
+Option Explicit On
+
+
+
+Partial Friend NotInheritable Class MySettings
+    Inherits System.Configuration.ApplicationSettingsBase
+
+    Private Shared m_Value As MySettings
+
+    Private Shared m_SyncObject As Object = New Object
+
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Public Shared ReadOnly Property Value() As MySettings
+        Get
+            If (MySettings.m_Value Is Nothing) Then
+                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
+                If (MySettings.m_Value Is Nothing) Then
+                    Try
+                        MySettings.m_Value = New MySettings
+                    Finally
+                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
+                    End Try
+                End If
+            End If
+            Return MySettings.m_Value
+        End Get
+    End Property
+End Class]]></ProjectItem>
+              <ProjectItem
+                Name="Project"
+                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:CodeName>ST_e7b0c7ca59e54170856a99374faf9dc2</msb:CodeName>
+		<msb:Language>msBuild</msb:Language>
+		<msb:DisplayName>ST_e7b0c7ca59e54170856a99374faf9dc2</msb:DisplayName>
+		<msb:ProjectId>{C915865D-BC6F-4391-8884-1DE37B202DC1}</msb:ProjectId>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:Project Include="ST_228f7500aafd459c868a5bde6e82ed7a.vbproj"/>
+		<msb:File Include="My Project\AssemblyInfo.vb"/>
+		<msb:File Include="My Project\Resources.resx"/>
+		<msb:File Include="ScriptMain.vb"/>
+		<msb:File Include="My Project\Resources.Designer.vb"/>
+		<msb:File Include="My Project\Settings.settings"/>
+		<msb:File Include="My Project\Settings.Designer.vb"/>
+	</msb:ItemGroup>
+</c:Project>]]></ProjectItem>
               <ProjectItem
                 Name="My Project\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -23727,113 +23694,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                 Name="ST_578b0945267f4469b44795278ddb6bfd.vbproj"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{f4ab2b02-560a-4893-9235-8db24cf29306}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>My Project</AppDesignerFolder><RootNamespace>ST_0c197f166e5c4e3baf67b1eb4ddd116b</RootNamespace><AssemblyName>ST_578b0945267f4469b44795278ddb6bfd</AssemblyName><TargetFrameworkVersion>v4.5</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineDebug>true</DefineDebug><DefineTrace>true</DefineTrace><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineDebug>false</DefineDebug><DefineTrace>true</DefineTrace><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.ManagedDTS, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.ScriptTask, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /></ItemGroup><ItemGroup><Import Include="Microsoft.VisualBasic" /><Import Include="System" /><Import Include="System.Collections" /><Import Include="System.Data" /><Import Include="System.Diagnostics" /><Import Include="System.Windows.Forms" /></ItemGroup><ItemGroup><AppDesigner Include="My Project\" /><Compile Include="My Project\AssemblyInfo.vb"><SubType>Code</SubType></Compile><EmbeddedResource Include="My Project\Resources.resx"><Generator>VbMyResourcesResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.vb</LastGenOutput><CustomToolNamespace>My.Resources</CustomToolNamespace></EmbeddedResource><Compile Include="My Project\Resources.Designer.vb"><AutoGen>True</AutoGen><DesignTime>True</DesignTime><DependentUpon>Resources.resx</DependentUpon><SubType>Code</SubType></Compile><None Include="My Project\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.vb</LastGenOutput></None><Compile Include="My Project\Settings.Designer.vb"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon><SubType>Code</SubType></Compile><Compile Include="ScriptMain.vb"><SubType>Code</SubType></Compile></ItemGroup><!-- Include the build rules for a VB project.--><Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" /><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" /><Host Name="ScriptTask" IconIndex=""></Host><ProjectClient><HostIdentifier>SSIS_ST130</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></ProjectItem>
               <ProjectItem
-                Name="My Project\AssemblyInfo.vb"
-                Encoding="UTF8"><![CDATA[Imports System
-Imports System.Reflection
-Imports System.Runtime.InteropServices
-
-' General Information about an assembly is controlled through the following 
-' set of attributes. Change these attribute values to modify the information
-' associated with an assembly.
-
-' Review the values of the assembly attributes
-
-<Assembly: AssemblyTitle("ST_0c197f166e5c4e3baf67b1eb4ddd116b")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("ST_0c197f166e5c4e3baf67b1eb4ddd116b")> 
-<Assembly: AssemblyCopyright("Copyright @  2021")> 
-<Assembly: AssemblyTrademark("")> 
-<Assembly: CLSCompliant(True)> 
-
-<Assembly: ComVisible(False)> 
-
-'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("0172c197-2c5a-4b33-99f2-01f5c9062254")> 
-
-' Version information for an assembly consists of the following four values:
-'
-'      Major Version
-'      Minor Version 
-'      Build Number
-'      Revision
-'
-' You can specify all the values or you can default the Build and Revision Numbers 
-' by using the '*' as shown below:
-' <Assembly: AssemblyVersion("1.0.*")>
-
-<Assembly: AssemblyVersion("1.0.0.0")> 
-<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\Settings.Designer.vb"
-                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
-' <autogenerated>
-'     This code was generated by a tool.
-'
-'     Changes to this file may cause incorrect behavior and will be lost if
-'     the code is regenerated.
-' </autogenerated>
-'------------------------------------------------------------------------------
-
-Option Strict Off
-Option Explicit On
-
-
-
-Partial Friend NotInheritable Class MySettings
-    Inherits System.Configuration.ApplicationSettingsBase
-
-    Private Shared m_Value As MySettings
-
-    Private Shared m_SyncObject As Object = New Object
-
-    <System.Diagnostics.DebuggerNonUserCode()> _
-    Public Shared ReadOnly Property Value() As MySettings
-        Get
-            If (MySettings.m_Value Is Nothing) Then
-                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
-                If (MySettings.m_Value Is Nothing) Then
-                    Try
-                        MySettings.m_Value = New MySettings
-                    Finally
-                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
-                    End Try
-                End If
-            End If
-            Return MySettings.m_Value
-        End Get
-    End Property
-End Class]]></ProjectItem>
-              <ProjectItem
-                Name="Project"
-                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
-	<msb:PropertyGroup>
-		<msb:Language>msBuild</msb:Language>
-		<msb:CodeName>ST_0c197f166e5c4e3baf67b1eb4ddd116b</msb:CodeName>
-		<msb:DisplayName>ST_0c197f166e5c4e3baf67b1eb4ddd116b</msb:DisplayName>
-		<msb:ProjectId>{7198820A-9692-4235-87CE-2A970474A164}</msb:ProjectId>
-	</msb:PropertyGroup>
-	<msb:ItemGroup>
-		<msb:Project Include="ST_578b0945267f4469b44795278ddb6bfd.vbproj"/>
-		<msb:File Include="My Project\AssemblyInfo.vb"/>
-		<msb:File Include="ScriptMain.vb"/>
-		<msb:File Include="My Project\Resources.resx"/>
-		<msb:File Include="My Project\Resources.Designer.vb"/>
-		<msb:File Include="My Project\Settings.settings"/>
-		<msb:File Include="My Project\Settings.Designer.vb"/>
-	</msb:ItemGroup>
-</c:Project>]]></ProjectItem>
-              <ProjectItem
                 Name="ScriptMain.vb"
                 Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
 'The Script Task allows you to perform virtually any operation that can be accomplished in
@@ -23962,6 +23822,113 @@ Partial Public Class ScriptMain
 #End Region
 
 End Class]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\AssemblyInfo.vb"
+                Encoding="UTF8"><![CDATA[Imports System
+Imports System.Reflection
+Imports System.Runtime.InteropServices
+
+' General Information about an assembly is controlled through the following 
+' set of attributes. Change these attribute values to modify the information
+' associated with an assembly.
+
+' Review the values of the assembly attributes
+
+<Assembly: AssemblyTitle("ST_0c197f166e5c4e3baf67b1eb4ddd116b")> 
+<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyCompany("")> 
+<Assembly: AssemblyProduct("ST_0c197f166e5c4e3baf67b1eb4ddd116b")> 
+<Assembly: AssemblyCopyright("Copyright @  2021")> 
+<Assembly: AssemblyTrademark("")> 
+<Assembly: CLSCompliant(True)> 
+
+<Assembly: ComVisible(False)> 
+
+'The following GUID is for the ID of the typelib if this project is exposed to COM
+<Assembly: Guid("0172c197-2c5a-4b33-99f2-01f5c9062254")> 
+
+' Version information for an assembly consists of the following four values:
+'
+'      Major Version
+'      Minor Version 
+'      Build Number
+'      Revision
+'
+' You can specify all the values or you can default the Build and Revision Numbers 
+' by using the '*' as shown below:
+' <Assembly: AssemblyVersion("1.0.*")>
+
+<Assembly: AssemblyVersion("1.0.0.0")> 
+<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.Designer.vb"
+                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
+' <autogenerated>
+'     This code was generated by a tool.
+'
+'     Changes to this file may cause incorrect behavior and will be lost if
+'     the code is regenerated.
+' </autogenerated>
+'------------------------------------------------------------------------------
+
+Option Strict Off
+Option Explicit On
+
+
+
+Partial Friend NotInheritable Class MySettings
+    Inherits System.Configuration.ApplicationSettingsBase
+
+    Private Shared m_Value As MySettings
+
+    Private Shared m_SyncObject As Object = New Object
+
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Public Shared ReadOnly Property Value() As MySettings
+        Get
+            If (MySettings.m_Value Is Nothing) Then
+                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
+                If (MySettings.m_Value Is Nothing) Then
+                    Try
+                        MySettings.m_Value = New MySettings
+                    Finally
+                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
+                    End Try
+                End If
+            End If
+            Return MySettings.m_Value
+        End Get
+    End Property
+End Class]]></ProjectItem>
+              <ProjectItem
+                Name="Project"
+                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:Language>msBuild</msb:Language>
+		<msb:CodeName>ST_0c197f166e5c4e3baf67b1eb4ddd116b</msb:CodeName>
+		<msb:DisplayName>ST_0c197f166e5c4e3baf67b1eb4ddd116b</msb:DisplayName>
+		<msb:ProjectId>{7198820A-9692-4235-87CE-2A970474A164}</msb:ProjectId>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:Project Include="ST_578b0945267f4469b44795278ddb6bfd.vbproj"/>
+		<msb:File Include="My Project\AssemblyInfo.vb"/>
+		<msb:File Include="ScriptMain.vb"/>
+		<msb:File Include="My Project\Resources.resx"/>
+		<msb:File Include="My Project\Resources.Designer.vb"/>
+		<msb:File Include="My Project\Settings.settings"/>
+		<msb:File Include="My Project\Settings.Designer.vb"/>
+	</msb:ItemGroup>
+</c:Project>]]></ProjectItem>
               <ProjectItem
                 Name="My Project\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -24356,7 +24323,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       DTS:refId="Package\Sync DIM_Project"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Sequence Container"
-      DTS:Disabled="True"
       DTS:DTSID="{7060B455-2DC4-44A8-B17F-93DFCF85FC06}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
@@ -32458,14 +32424,6 @@ From dbo.DIM_Project</property>
                           externalMetadataColumnId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Export to csv_DIM_ProjectAttributeDelta.Inputs[Flat File Destination Input].ExternalColumns[AttributeDescription]"
                           lineageId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge All Delta Records.Outputs[Merge Output 1].Columns[AttributeDescription]" />
                         <inputColumn
-                          refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Export to csv_DIM_ProjectAttributeDelta.Inputs[Flat File Destination Input].Columns[AttributeDescriptionShort]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="6"
-                          cachedName="AttributeDescriptionShort"
-                          externalMetadataColumnId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Export to csv_DIM_ProjectAttributeDelta.Inputs[Flat File Destination Input].ExternalColumns[AttributeDescriptionShort]"
-                          lineageId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge All Delta Records.Outputs[Merge Output 1].Columns[AttributeDescriptionShort]" />
-                        <inputColumn
                           refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Export to csv_DIM_ProjectAttributeDelta.Inputs[Flat File Destination Input].Columns[Sequence]"
                           cachedDataType="numeric"
                           cachedName="Sequence"
@@ -32510,18 +32468,6 @@ From dbo.DIM_Project</property>
                           cachedName="MustBeUnique"
                           externalMetadataColumnId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Export to csv_DIM_ProjectAttributeDelta.Inputs[Flat File Destination Input].ExternalColumns[MustBeUnique]"
                           lineageId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge All Delta Records.Outputs[Merge Output 1].Columns[MustBeUnique]" />
-                        <inputColumn
-                          refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Export to csv_DIM_ProjectAttributeDelta.Inputs[Flat File Destination Input].Columns[ETLControlID]"
-                          cachedDataType="i4"
-                          cachedName="ETLControlID"
-                          externalMetadataColumnId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Export to csv_DIM_ProjectAttributeDelta.Inputs[Flat File Destination Input].ExternalColumns[ETLControlID]"
-                          lineageId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge All Delta Records.Outputs[Merge Output 1].Columns[ETLControlID]" />
-                        <inputColumn
-                          refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Export to csv_DIM_ProjectAttributeDelta.Inputs[Flat File Destination Input].Columns[SourceID]"
-                          cachedDataType="i4"
-                          cachedName="SourceID"
-                          externalMetadataColumnId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Export to csv_DIM_ProjectAttributeDelta.Inputs[Flat File Destination Input].ExternalColumns[SourceID]"
-                          lineageId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge All Delta Records.Outputs[Merge Output 1].Columns[SourceID]" />
                         <inputColumn
                           refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Export to csv_DIM_ProjectAttributeDelta.Inputs[Flat File Destination Input].Columns[ImportID]"
                           cachedCodepage="1252"
@@ -32586,12 +32532,6 @@ From dbo.DIM_Project</property>
                           length="256"
                           name="AttributeDescription" />
                         <externalMetadataColumn
-                          refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Export to csv_DIM_ProjectAttributeDelta.Inputs[Flat File Destination Input].ExternalColumns[AttributeDescriptionShort]"
-                          codePage="1252"
-                          dataType="str"
-                          length="6"
-                          name="AttributeDescriptionShort" />
-                        <externalMetadataColumn
                           refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Export to csv_DIM_ProjectAttributeDelta.Inputs[Flat File Destination Input].ExternalColumns[Sequence]"
                           dataType="numeric"
                           name="Sequence"
@@ -32625,14 +32565,6 @@ From dbo.DIM_Project</property>
                           length="256"
                           name="MustBeUnique" />
                         <externalMetadataColumn
-                          refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Export to csv_DIM_ProjectAttributeDelta.Inputs[Flat File Destination Input].ExternalColumns[ETLControlID]"
-                          dataType="i4"
-                          name="ETLControlID" />
-                        <externalMetadataColumn
-                          refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Export to csv_DIM_ProjectAttributeDelta.Inputs[Flat File Destination Input].ExternalColumns[SourceID]"
-                          dataType="i4"
-                          name="SourceID" />
-                        <externalMetadataColumn
                           refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Export to csv_DIM_ProjectAttributeDelta.Inputs[Flat File Destination Input].ExternalColumns[ImportID]"
                           codePage="1252"
                           dataType="str"
@@ -32657,6 +32589,97 @@ From dbo.DIM_Project</property>
                   </inputs>
                 </component>
                 <component
+                  refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Get Modified Records"
+                  componentClassID="Microsoft.ConditionalSplit"
+                  contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+                  name="Get Modified Records"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Get Modified Records.Inputs[Conditional Split Input]"
+                      description="Input to the Conditional Split Transformation"
+                      name="Conditional Split Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Get Modified Records.Inputs[Conditional Split Input].Columns[UpdatedStatus]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="15"
+                          cachedName="UpdatedStatus"
+                          lineageId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Add UpdatedStatus Column.Outputs[Derived Column Output].Columns[UpdatedStatus]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Get Modified Records.Outputs[ModifiedRecords]"
+                      description="Output 1 of the Conditional Split Transformation"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      exclusionGroup="1"
+                      name="ModifiedRecords"
+                      synchronousInputId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Get Modified Records.Inputs[Conditional Split Input]"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                          name="Expression">#{Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Add UpdatedStatus Column.Outputs[Derived Column Output].Columns[UpdatedStatus]} == "Modified"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Specifies the friendly version of the expression. This expression version uses column names."
+                          expressionType="Notify"
+                          name="FriendlyExpression">UpdatedStatus == "Modified"</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                          name="EvaluationOrder">0</property>
+                      </properties>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Get Modified Records.Outputs[Conditional Split Default Output]"
+                      description="Default Output of the Conditional Split Transformation"
+                      exclusionGroup="1"
+                      name="Conditional Split Default Output"
+                      synchronousInputId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Get Modified Records.Inputs[Conditional Split Input]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          name="IsDefaultOut">true</property>
+                      </properties>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Get Modified Records.Outputs[Conditional Split Error Output]"
+                      description="Error Output of the Conditional Split Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Conditional Split Error Output"
+                      synchronousInputId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Get Modified Records.Inputs[Conditional Split Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Get Modified Records.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Get Modified Records.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Get Modified Records.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Get Modified Records.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
                   refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Identify Modified Records"
                   componentClassID="Microsoft.ManagedComponentHost"
                   contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;10"
@@ -32673,17 +32696,77 @@ From dbo.DIM_Project</property>
                       <arrayElements
                         arrayElementCount="30">
                         <arrayElement
-                          dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
+                          dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
                         <arrayElement
                           dataType="System.String"><![CDATA[UTF8]]></arrayElement>
                         <arrayElement
-                          dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></arrayElement>
+                          dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services component wrapper
+*  This module defines the base class for your component
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+public class UserComponent: ScriptComponent
+{
+    public Connections Connections;
+    public Variables Variables;
+    public UserComponent()
+    {
+        Connections = new Connections(this);
+        Variables = new Variables(this);
+    }
+
+    public override void ProcessInput(int InputID, string InputName, PipelineBuffer Buffer, OutputNameMap OutputMap)
+    {
+
+        if (InputName.Equals(@"Input 0", StringComparison.Ordinal))
+        {
+            Input0_ProcessInput(new Input0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap));
+        }
+
+    }
+
+    public virtual void Input0_ProcessInput(Input0Buffer Buffer)
+    {
+        while (Buffer.NextRow())
+        {
+            Input0_ProcessInputRow(Buffer);
+        }
+    }
+
+    public virtual void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+    }
+
+}
+
+public class Connections
+{
+    ScriptComponent ParentComponent;
+
+    public Connections(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+
+public class Variables
+{
+    ScriptComponent ParentComponent;
+
+    public Variables(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+]]></arrayElement>
                         <arrayElement
                           dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
                         <arrayElement
@@ -32824,6 +32907,7 @@ using System;
 using System.Data;
 using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
 using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+using System.Windows.Forms;
 #endregion
 
 /// <summary>
@@ -32931,7 +33015,6 @@ public class ScriptMain : UserComponent
          * Add your code here
          */
 
-
         if (   (Row.sfPROJECTATTRIBUTEDIMID_IsNull && Row.ProjectAttributeDimID_IsNull || Row.sfPROJECTATTRIBUTEDIMID == Row.ProjectAttributeDimID)
             && (Row.sfPROJECTATTRIBUTESYSTEMID_IsNull && Row.ProjectAttributeSystemID_IsNull || Row.sfPROJECTATTRIBUTESYSTEMID == Row.ProjectAttributeSystemID)
             && (Row.sfPROJECTDIMID_IsNull && Row.ProjectDimID_IsNull || Row.sfPROJECTDIMID == Row.ProjectDimID)
@@ -32955,704 +33038,25 @@ public class ScriptMain : UserComponent
         {
             Row.UpdatedStatus = "Modified";
         }
-    }
+        /*
+        if (Row.UpdatedStatus == "Modified")
+        {
+            if (Row.sfPROJECTATTRIBUTEDIMID != Row.ProjectAttributeDimID) { MessageBox.Show("AttributeDimID", "Unmatching Value"); }
+            if (Row.sfPROJECTATTRIBUTESYSTEMID != Row.ProjectAttributeSystemID) { MessageBox.Show("ProjectAttributeSystemID", "Unmatching Value"); }
+            if (Row.sfPROJECTDIMID != Row.ProjectDimID) { MessageBox.Show("ProjectDimID", "Unmatching Value"); }
+            if (Row.sfPROJECTSYSTEMID != Row.ProjectSystemID) { MessageBox.Show("ProjectSystemID", "Unmatching Value"); }
+            if (Row.sfATTRIBUTECATEGORY != Row.AttributeCategory) { MessageBox.Show("AttributeCategory", "Unmatching Value"); }
+            if (Row.sfATTRIBUTEDESCRIPTION != Row.AttributeDescription) { MessageBox.Show("AttributeDescription", "Unmatching Value"); }
+            if (Row.sfCOMMENTS != Row.Comments) { MessageBox.Show("Comments", "Unmatching Value"); }
+            if (Row.sfATTRIBUTEDATE != Row.AttributeDate) { MessageBox.Show("AttributeDate", "Unmatching Value"); }
 
-}
-]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
-*  Microsoft SQL Server Integration Services buffer wrappers
-*  This module defines classes for accessing data flow buffers
-*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
-
-
-
-using System;
-using System.Data;
-using Microsoft.SqlServer.Dts.Pipeline;
-using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
-
-public class Input0Buffer: ScriptBuffer
-
-{
-    public Input0Buffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
-        : base(Buffer, BufferColumnIndexes, OutputMap)
-    {
-    }
-
-    public Int32 ProjectAttributeDimID
-    {
-        get
-        {
-            return Buffer.GetInt32(BufferColumnIndexes[0]);
         }
-    }
-    public bool ProjectAttributeDimID_IsNull
-    {
-        get
-        {
-            return IsNull(0);
-        }
-    }
-
-    public Decimal ProjectAttributeSystemID
-    {
-        get
-        {
-            return Buffer.GetDecimal(BufferColumnIndexes[1]);
-        }
-    }
-    public bool ProjectAttributeSystemID_IsNull
-    {
-        get
-        {
-            return IsNull(1);
-        }
-    }
-
-    public Int32 ProjectDimID
-    {
-        get
-        {
-            return Buffer.GetInt32(BufferColumnIndexes[2]);
-        }
-    }
-    public bool ProjectDimID_IsNull
-    {
-        get
-        {
-            return IsNull(2);
-        }
-    }
-
-    public Int32 ProjectSystemID
-    {
-        get
-        {
-            return Buffer.GetInt32(BufferColumnIndexes[3]);
-        }
-    }
-    public bool ProjectSystemID_IsNull
-    {
-        get
-        {
-            return IsNull(3);
-        }
-    }
-
-    public String AttributeCategory
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[4]);
-        }
-    }
-    public bool AttributeCategory_IsNull
-    {
-        get
-        {
-            return IsNull(4);
-        }
-    }
-
-    public String AttributeDescription
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[5]);
-        }
-    }
-    public bool AttributeDescription_IsNull
-    {
-        get
-        {
-            return IsNull(5);
-        }
-    }
-
-    public String AttributeDescriptionShort
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[6]);
-        }
-    }
-    public bool AttributeDescriptionShort_IsNull
-    {
-        get
-        {
-            return IsNull(6);
-        }
-    }
-
-    public Int16 Sequence
-    {
-        get
-        {
-            return Buffer.GetInt16(BufferColumnIndexes[7]);
-        }
-    }
-    public bool Sequence_IsNull
-    {
-        get
-        {
-            return IsNull(7);
-        }
-    }
-
-    public String Comments
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[8]);
-        }
-    }
-    public bool Comments_IsNull
-    {
-        get
-        {
-            return IsNull(8);
-        }
-    }
-
-    public DateTime AttributeDate
-    {
-        get
-        {
-            return Buffer.GetDateTime(BufferColumnIndexes[9]);
-        }
-    }
-    public bool AttributeDate_IsNull
-    {
-        get
-        {
-            return IsNull(9);
-        }
-    }
-
-    public String TypeOfData
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[10]);
-        }
-    }
-    public bool TypeOfData_IsNull
-    {
-        get
-        {
-            return IsNull(10);
-        }
-    }
-
-    public String Required
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[11]);
-        }
-    }
-    public bool Required_IsNull
-    {
-        get
-        {
-            return IsNull(11);
-        }
-    }
-
-    public String MustBeUnique
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[12]);
-        }
-    }
-    public bool MustBeUnique_IsNull
-    {
-        get
-        {
-            return IsNull(12);
-        }
-    }
-
-    public Int32 ETLControlID
-    {
-        get
-        {
-            return Buffer.GetInt32(BufferColumnIndexes[13]);
-        }
-    }
-    public bool ETLControlID_IsNull
-    {
-        get
-        {
-            return IsNull(13);
-        }
-    }
-
-    public Int32 SourceID
-    {
-        get
-        {
-            return Buffer.GetInt32(BufferColumnIndexes[14]);
-        }
-    }
-    public bool SourceID_IsNull
-    {
-        get
-        {
-            return IsNull(14);
-        }
-    }
-
-    public String ImportID
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[15]);
-        }
-    }
-    public bool ImportID_IsNull
-    {
-        get
-        {
-            return IsNull(15);
-        }
-    }
-
-    public DateTime DateAdded
-    {
-        get
-        {
-            return Buffer.GetDateTime(BufferColumnIndexes[16]);
-        }
-    }
-    public bool DateAdded_IsNull
-    {
-        get
-        {
-            return IsNull(16);
-        }
-    }
-
-    public DateTime DateChanged
-    {
-        get
-        {
-            return Buffer.GetDateTime(BufferColumnIndexes[17]);
-        }
-    }
-    public bool DateChanged_IsNull
-    {
-        get
-        {
-            return IsNull(17);
-        }
-    }
-
-    public Decimal sfPROJECTATTRIBUTEDIMID
-    {
-        get
-        {
-            return Buffer.GetDecimal(BufferColumnIndexes[18]);
-        }
-    }
-    public bool sfPROJECTATTRIBUTEDIMID_IsNull
-    {
-        get
-        {
-            return IsNull(18);
-        }
-    }
-
-    public Decimal sfPROJECTATTRIBUTESYSTEMID
-    {
-        get
-        {
-            return Buffer.GetDecimal(BufferColumnIndexes[19]);
-        }
-    }
-    public bool sfPROJECTATTRIBUTESYSTEMID_IsNull
-    {
-        get
-        {
-            return IsNull(19);
-        }
-    }
-
-    public Decimal sfPROJECTDIMID
-    {
-        get
-        {
-            return Buffer.GetDecimal(BufferColumnIndexes[20]);
-        }
-    }
-    public bool sfPROJECTDIMID_IsNull
-    {
-        get
-        {
-            return IsNull(20);
-        }
-    }
-
-    public Decimal sfPROJECTSYSTEMID
-    {
-        get
-        {
-            return Buffer.GetDecimal(BufferColumnIndexes[21]);
-        }
-    }
-    public bool sfPROJECTSYSTEMID_IsNull
-    {
-        get
-        {
-            return IsNull(21);
-        }
-    }
-
-    public String sfATTRIBUTECATEGORY
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[22]);
-        }
-    }
-    public bool sfATTRIBUTECATEGORY_IsNull
-    {
-        get
-        {
-            return IsNull(22);
-        }
-    }
-
-    public String sfATTRIBUTEDESCRIPTION
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[23]);
-        }
-    }
-    public bool sfATTRIBUTEDESCRIPTION_IsNull
-    {
-        get
-        {
-            return IsNull(23);
-        }
-    }
-
-    public String sfCOMMENTS
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[24]);
-        }
-    }
-    public bool sfCOMMENTS_IsNull
-    {
-        get
-        {
-            return IsNull(24);
-        }
-    }
-
-    public DateTime sfATTRIBUTEDATE
-    {
-        get
-        {
-            return Buffer.GetDateTime(BufferColumnIndexes[25]);
-        }
-    }
-    public bool sfATTRIBUTEDATE_IsNull
-    {
-        get
-        {
-            return IsNull(25);
-        }
-    }
-
-    public Decimal sfSEQUENCE
-    {
-        get
-        {
-            return Buffer.GetDecimal(BufferColumnIndexes[26]);
-        }
-    }
-    public bool sfSEQUENCE_IsNull
-    {
-        get
-        {
-            return IsNull(26);
-        }
-    }
-
-    public String sfTYPEOFDATA
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[27]);
-        }
-    }
-    public bool sfTYPEOFDATA_IsNull
-    {
-        get
-        {
-            return IsNull(27);
-        }
-    }
-
-    public String sfREQUIRED
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[28]);
-        }
-    }
-    public bool sfREQUIRED_IsNull
-    {
-        get
-        {
-            return IsNull(28);
-        }
-    }
-
-    public String sfMUSTBEUNIQUE
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[29]);
-        }
-    }
-    public bool sfMUSTBEUNIQUE_IsNull
-    {
-        get
-        {
-            return IsNull(29);
-        }
-    }
-
-    public String sfIMPORTID
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[30]);
-        }
-    }
-    public bool sfIMPORTID_IsNull
-    {
-        get
-        {
-            return IsNull(30);
-        }
-    }
-
-    public DateTime sfDATEADDED
-    {
-        get
-        {
-            return Buffer.GetDateTime(BufferColumnIndexes[31]);
-        }
-    }
-    public bool sfDATEADDED_IsNull
-    {
-        get
-        {
-            return IsNull(31);
-        }
-    }
-
-    public DateTime sfDATECHANGED
-    {
-        get
-        {
-            return Buffer.GetDateTime(BufferColumnIndexes[32]);
-        }
-    }
-    public bool sfDATECHANGED_IsNull
-    {
-        get
-        {
-            return IsNull(32);
-        }
-    }
-
-    public String UpdatedStatus
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[33]);
-        }
-        set
-        {
-            this[33] = value;
-        }
-    }
-    public bool UpdatedStatus_IsNull
-    {
-        get
-        {
-            return IsNull(33);
-        }
-        set
-        {
-            if (value)
-            {
-                SetNull(33);
-            }
-            else
-            {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
-            }
-        }
-    }
-
-    new public bool NextRow()
-    {
-        return base.NextRow();
-    }
-
-    new public bool EndOfRowset()
-    {
-        return base.EndOfRowset();
-    }
-
-}
-]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_99ccf92df2844cba8756ec3313e4d700.Properties.Settings.get_Default():SC_99ccf92df2844cba8756ec3313e4d700.Properties.Sett" +
-    "ings")]
-
-namespace SC_99ccf92df2844cba8756ec3313e4d700.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
+        */
     }
 }
 ]]></arrayElement>
                         <arrayElement
-                          dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
-*  Microsoft SQL Server Integration Services component wrapper
-*  This module defines the base class for your component
-*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
-
-using System;
-using System.Data;
-using Microsoft.SqlServer.Dts.Pipeline;
-using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
-using Microsoft.SqlServer.Dts.Runtime.Wrapper;
-
-public class UserComponent: ScriptComponent
-{
-    public Connections Connections;
-    public Variables Variables;
-    public UserComponent()
-    {
-        Connections = new Connections(this);
-        Variables = new Variables(this);
-    }
-
-    public override void ProcessInput(int InputID, string InputName, PipelineBuffer Buffer, OutputNameMap OutputMap)
-    {
-
-        if (InputName.Equals(@"Input 0", StringComparison.Ordinal))
-        {
-            Input0_ProcessInput(new Input0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap));
-        }
-
-    }
-
-    public virtual void Input0_ProcessInput(Input0Buffer Buffer)
-    {
-        while (Buffer.NextRow())
-        {
-            Input0_ProcessInputRow(Buffer);
-        }
-    }
-
-    public virtual void Input0_ProcessInputRow(Input0Buffer Row)
-    {
-    }
-
-}
-
-public class Connections
-{
-    ScriptComponent ParentComponent;
-
-    public Connections(ScriptComponent Component)
-    {
-        ParentComponent = Component;
-    }
-
-}
-
-public class Variables
-{
-    ScriptComponent ParentComponent;
-
-    public Variables(ScriptComponent Component)
-    {
-        ParentComponent = Component;
-    }
-
-}
-]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[Project]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
-	<msb:PropertyGroup>
-		<msb:Language>msBuild</msb:Language>
-		<msb:CodeName>SC_99ccf92df2844cba8756ec3313e4d700</msb:CodeName>
-		<msb:DisplayName>SC_99ccf92df2844cba8756ec3313e4d700</msb:DisplayName>
-		<msb:ProjectId>{37559CB7-8229-45A4-81C7-96D22F0E1B35}</msb:ProjectId>
-	</msb:PropertyGroup>
-	<msb:ItemGroup>
-		<msb:Project Include="SC_99ccf92df2844cba8756ec3313e4d700.csproj"/>
-		<msb:File Include="Properties\Settings.settings"/>
-		<msb:File Include="Properties\AssemblyInfo.cs"/>
-		<msb:File Include="Properties\Resources.resx"/>
-		<msb:File Include="Properties\Resources.Designer.cs"/>
-		<msb:File Include="BufferWrapper.cs"/>
-		<msb:File Include="main.cs"/>
-		<msb:File Include="Properties\Settings.Designer.cs"/>
-		<msb:File Include="ComponentWrapper.cs"/>
-	</msb:ItemGroup>
-</c:Project>]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[SC_99ccf92df2844cba8756ec3313e4d700.csproj]]></arrayElement>
+                          dataType="System.String"><![CDATA[SC_176b33118ff2487bba0643a17e61ab90.csproj]]></arrayElement>
                         <arrayElement
                           dataType="System.String"><![CDATA[UTF8]]></arrayElement>
                         <arrayElement
@@ -33664,11 +33068,11 @@ public class Variables
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{f7c32e16-ec87-4e38-a4a4-2f07269ae8b0}</ProjectGuid>
+    <ProjectGuid>{0184193a-9331-48b7-b085-a1292f26ba2b}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SC_99ccf92df2844cba8756ec3313e4d700</RootNamespace>
-    <AssemblyName>SC_99ccf92df2844cba8756ec3313e4d700</AssemblyName>
+    <RootNamespace>SC_176b33118ff2487bba0643a17e61ab90</RootNamespace>
+    <AssemblyName>SC_176b33118ff2487bba0643a17e61ab90</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
@@ -33734,7 +33138,7 @@ public class Variables
     <VisualStudio>
       <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
         <ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
-        <Host Name="ScriptComponent" GeneratedNamespace="SC_99ccf92df2844cba8756ec3313e4d700" IconIndex="0"></Host>
+        <Host Name="ScriptComponent" GeneratedNamespace="SC_176b33118ff2487bba0643a17e61ab90" IconIndex="0"></Host>
         <ProjectClient>
           <HostIdentifier>SSIS_SC130</HostIdentifier>
         </ProjectClient>
@@ -33742,6 +33146,581 @@ public class Variables
     </VisualStudio>
   </ProjectExtensions>
 </Project>]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_176b33118ff2487bba0643a17e61ab90.Properties.Settings.get_Default():SC_176b33118ff2487bba0643a17e61ab90.Properties.Sett" +
+    "ings")]
+
+namespace SC_176b33118ff2487bba0643a17e61ab90.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services buffer wrappers
+*  This module defines classes for accessing data flow buffers
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+
+public class Input0Buffer: ScriptBuffer
+
+{
+    public Input0Buffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
+        : base(Buffer, BufferColumnIndexes, OutputMap)
+    {
+    }
+
+    public Decimal ProjectAttributeDimID
+    {
+        get
+        {
+            return Buffer.GetDecimal(BufferColumnIndexes[0]);
+        }
+    }
+    public bool ProjectAttributeDimID_IsNull
+    {
+        get
+        {
+            return IsNull(0);
+        }
+    }
+
+    public Decimal ProjectAttributeSystemID
+    {
+        get
+        {
+            return Buffer.GetDecimal(BufferColumnIndexes[1]);
+        }
+    }
+    public bool ProjectAttributeSystemID_IsNull
+    {
+        get
+        {
+            return IsNull(1);
+        }
+    }
+
+    public Decimal ProjectDimID
+    {
+        get
+        {
+            return Buffer.GetDecimal(BufferColumnIndexes[2]);
+        }
+    }
+    public bool ProjectDimID_IsNull
+    {
+        get
+        {
+            return IsNull(2);
+        }
+    }
+
+    public Decimal ProjectSystemID
+    {
+        get
+        {
+            return Buffer.GetDecimal(BufferColumnIndexes[3]);
+        }
+    }
+    public bool ProjectSystemID_IsNull
+    {
+        get
+        {
+            return IsNull(3);
+        }
+    }
+
+    public String AttributeCategory
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[4]);
+        }
+    }
+    public bool AttributeCategory_IsNull
+    {
+        get
+        {
+            return IsNull(4);
+        }
+    }
+
+    public String AttributeDescription
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[5]);
+        }
+    }
+    public bool AttributeDescription_IsNull
+    {
+        get
+        {
+            return IsNull(5);
+        }
+    }
+
+    public Decimal Sequence
+    {
+        get
+        {
+            return Buffer.GetDecimal(BufferColumnIndexes[6]);
+        }
+    }
+    public bool Sequence_IsNull
+    {
+        get
+        {
+            return IsNull(6);
+        }
+    }
+
+    public String Comments
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[7]);
+        }
+    }
+    public bool Comments_IsNull
+    {
+        get
+        {
+            return IsNull(7);
+        }
+    }
+
+    public DateTime AttributeDate
+    {
+        get
+        {
+            return Buffer.GetDateTime(BufferColumnIndexes[8]);
+        }
+    }
+    public bool AttributeDate_IsNull
+    {
+        get
+        {
+            return IsNull(8);
+        }
+    }
+
+    public String TypeOfData
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[9]);
+        }
+    }
+    public bool TypeOfData_IsNull
+    {
+        get
+        {
+            return IsNull(9);
+        }
+    }
+
+    public String Required
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[10]);
+        }
+    }
+    public bool Required_IsNull
+    {
+        get
+        {
+            return IsNull(10);
+        }
+    }
+
+    public String MustBeUnique
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[11]);
+        }
+    }
+    public bool MustBeUnique_IsNull
+    {
+        get
+        {
+            return IsNull(11);
+        }
+    }
+
+    public String ImportID
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[12]);
+        }
+    }
+    public bool ImportID_IsNull
+    {
+        get
+        {
+            return IsNull(12);
+        }
+    }
+
+    public DateTime DateAdded
+    {
+        get
+        {
+            return Buffer.GetDateTime(BufferColumnIndexes[13]);
+        }
+    }
+    public bool DateAdded_IsNull
+    {
+        get
+        {
+            return IsNull(13);
+        }
+    }
+
+    public DateTime DateChanged
+    {
+        get
+        {
+            return Buffer.GetDateTime(BufferColumnIndexes[14]);
+        }
+    }
+    public bool DateChanged_IsNull
+    {
+        get
+        {
+            return IsNull(14);
+        }
+    }
+
+    public Decimal sfPROJECTATTRIBUTEDIMID
+    {
+        get
+        {
+            return Buffer.GetDecimal(BufferColumnIndexes[15]);
+        }
+    }
+    public bool sfPROJECTATTRIBUTEDIMID_IsNull
+    {
+        get
+        {
+            return IsNull(15);
+        }
+    }
+
+    public Decimal sfPROJECTATTRIBUTESYSTEMID
+    {
+        get
+        {
+            return Buffer.GetDecimal(BufferColumnIndexes[16]);
+        }
+    }
+    public bool sfPROJECTATTRIBUTESYSTEMID_IsNull
+    {
+        get
+        {
+            return IsNull(16);
+        }
+    }
+
+    public Decimal sfPROJECTDIMID
+    {
+        get
+        {
+            return Buffer.GetDecimal(BufferColumnIndexes[17]);
+        }
+    }
+    public bool sfPROJECTDIMID_IsNull
+    {
+        get
+        {
+            return IsNull(17);
+        }
+    }
+
+    public Decimal sfPROJECTSYSTEMID
+    {
+        get
+        {
+            return Buffer.GetDecimal(BufferColumnIndexes[18]);
+        }
+    }
+    public bool sfPROJECTSYSTEMID_IsNull
+    {
+        get
+        {
+            return IsNull(18);
+        }
+    }
+
+    public String sfATTRIBUTECATEGORY
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[19]);
+        }
+    }
+    public bool sfATTRIBUTECATEGORY_IsNull
+    {
+        get
+        {
+            return IsNull(19);
+        }
+    }
+
+    public String sfATTRIBUTEDESCRIPTION
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[20]);
+        }
+    }
+    public bool sfATTRIBUTEDESCRIPTION_IsNull
+    {
+        get
+        {
+            return IsNull(20);
+        }
+    }
+
+    public String sfCOMMENTS
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[21]);
+        }
+    }
+    public bool sfCOMMENTS_IsNull
+    {
+        get
+        {
+            return IsNull(21);
+        }
+    }
+
+    public DateTime sfATTRIBUTEDATE
+    {
+        get
+        {
+            return Buffer.GetDateTime(BufferColumnIndexes[22]);
+        }
+    }
+    public bool sfATTRIBUTEDATE_IsNull
+    {
+        get
+        {
+            return IsNull(22);
+        }
+    }
+
+    public Decimal sfSEQUENCE
+    {
+        get
+        {
+            return Buffer.GetDecimal(BufferColumnIndexes[23]);
+        }
+    }
+    public bool sfSEQUENCE_IsNull
+    {
+        get
+        {
+            return IsNull(23);
+        }
+    }
+
+    public String sfTYPEOFDATA
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[24]);
+        }
+    }
+    public bool sfTYPEOFDATA_IsNull
+    {
+        get
+        {
+            return IsNull(24);
+        }
+    }
+
+    public String sfREQUIRED
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[25]);
+        }
+    }
+    public bool sfREQUIRED_IsNull
+    {
+        get
+        {
+            return IsNull(25);
+        }
+    }
+
+    public String sfMUSTBEUNIQUE
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[26]);
+        }
+    }
+    public bool sfMUSTBEUNIQUE_IsNull
+    {
+        get
+        {
+            return IsNull(26);
+        }
+    }
+
+    public String sfIMPORTID
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[27]);
+        }
+    }
+    public bool sfIMPORTID_IsNull
+    {
+        get
+        {
+            return IsNull(27);
+        }
+    }
+
+    public DateTime sfDATEADDED
+    {
+        get
+        {
+            return Buffer.GetDateTime(BufferColumnIndexes[28]);
+        }
+    }
+    public bool sfDATEADDED_IsNull
+    {
+        get
+        {
+            return IsNull(28);
+        }
+    }
+
+    public DateTime sfDATECHANGED
+    {
+        get
+        {
+            return Buffer.GetDateTime(BufferColumnIndexes[29]);
+        }
+    }
+    public bool sfDATECHANGED_IsNull
+    {
+        get
+        {
+            return IsNull(29);
+        }
+    }
+
+    public String UpdatedStatus
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[30]);
+        }
+        set
+        {
+            this[30] = value;
+        }
+    }
+    public bool UpdatedStatus_IsNull
+    {
+        get
+        {
+            return IsNull(30);
+        }
+        set
+        {
+            if (value)
+            {
+                SetNull(30);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    new public bool NextRow()
+    {
+        return base.NextRow();
+    }
+
+    new public bool EndOfRowset()
+    {
+        return base.EndOfRowset();
+    }
+
+}
+]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[Project]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:CodeName>SC_176b33118ff2487bba0643a17e61ab90</msb:CodeName>
+		<msb:Language>msBuild</msb:Language>
+		<msb:DisplayName>SC_176b33118ff2487bba0643a17e61ab90</msb:DisplayName>
+		<msb:ProjectId>{029ED1F7-459B-4E2F-B7CA-E5FB522D60A1}</msb:ProjectId>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:Project Include="SC_176b33118ff2487bba0643a17e61ab90.csproj"/>
+		<msb:File Include="Properties\AssemblyInfo.cs"/>
+		<msb:File Include="Properties\Settings.settings"/>
+		<msb:File Include="Properties\Resources.resx"/>
+		<msb:File Include="Properties\Resources.Designer.cs"/>
+		<msb:File Include="Properties\Settings.Designer.cs"/>
+		<msb:File Include="main.cs"/>
+		<msb:File Include="BufferWrapper.cs"/>
+		<msb:File Include="ComponentWrapper.cs"/>
+	</msb:ItemGroup>
+</c:Project>]]></arrayElement>
                         <arrayElement
                           dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
                         <arrayElement
@@ -33755,11 +33734,11 @@ using System.Runtime.CompilerServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 //
-[assembly: AssemblyTitle("SC_99ccf92df2844cba8756ec3313e4d700")]
+[assembly: AssemblyTitle("SC_176b33118ff2487bba0643a17e61ab90")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SC_99ccf92df2844cba8756ec3313e4d700")]
+[assembly: AssemblyProduct("SC_176b33118ff2487bba0643a17e61ab90")]
 [assembly: AssemblyCopyright("Copyright @  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -33777,6 +33756,18 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyVersion("1.0.0.0")]
 ]]></arrayElement>
                         <arrayElement
+                          dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></arrayElement>
+                        <arrayElement
                           dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
                         <arrayElement
                           dataType="System.String"><![CDATA[UTF8]]></arrayElement>
@@ -33790,14 +33781,14 @@ using System.Runtime.CompilerServices;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_99ccf92df2844cba8756ec3313e4d700.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_176b33118ff2487bba0643a17e61ab90.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
     "rceManager")]
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_99ccf92df2844cba8756ec3313e4d700.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_176b33118ff2487bba0643a17e61ab90.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
     "fo")]
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_99ccf92df2844cba8756ec3313e4d700.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_176b33118ff2487bba0643a17e61ab90.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
     "):Void")]
 
-namespace SC_99ccf92df2844cba8756ec3313e4d700.Properties {
+namespace SC_176b33118ff2487bba0643a17e61ab90.Properties {
     
     
     /// <summary>
@@ -33825,7 +33816,7 @@ namespace SC_99ccf92df2844cba8756ec3313e4d700.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if ((resourceMan == null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_99ccf92df2844cba8756ec3313e4d700.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_176b33118ff2487bba0643a17e61ab90.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -33859,207 +33850,198 @@ namespace SC_99ccf92df2844cba8756ec3313e4d700.Properties {
                       <arrayElements
                         arrayElementCount="2">
                         <arrayElement
-                          dataType="System.String"><![CDATA[SC_99ccf92df2844cba8756ec3313e4d700.dll]]></arrayElement>
+                          dataType="System.String"><![CDATA[SC_176b33118ff2487bba0643a17e61ab90.dll]]></arrayElement>
                         <arrayElement
                           dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAL2+s2AAAAAAAAAAAOAAIiALATAAACYAAAAIAAAAAAAAjkUA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAHDos2AAAAAAAAAAAOAAIiALATAAACQAAAAIAAAAAAAAlkMA
 AAAgAAAAYAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACgAAAAAgAAAAAAAAMAYIUAABAA
-ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAADxFAABPAAAAAGAAAEgEAAAAAAAAAAAAAAAAAAAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAERDAABPAAAAAGAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAIAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAlCUAAAAgAAAAJgAAAAIA
-AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAYAAAAAYAAAAoAAAAAAAAAAAAAAAAAABAAABA
-LnJlbG9jAAAMAAAAAIAAAAACAAAALgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAABw
-RQAAAAAAAEgAAAACAAUAECgAAHQcAAABAAAAAAAAAIREAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioTMAIAWgIAAAAAAAADbysAAAYs
-CANvBwAABi0bA28qAAAGA28GAAAGKBIAAAooEwAACjkjAgAAA28tAAAGLAgDbwkAAAYtFgNvLAAA
-BgNvCAAABigTAAAKOf0BAAADby8AAAYsCANvCwAABi0bA28uAAAGA28KAAAGKBIAAAooEwAACjnS
-AQAAA28xAAAGLAgDbw0AAAYtGwNvMAAABgNvDAAABigSAAAKKBMAAAo5pwEAAANvMwAABiwIA28P
-AAAGLRYDbzIAAAYDbw4AAAYoFAAACjmBAQAAA281AAAGLAgDbxEAAAYtFgNvNAAABgNvEAAABigU
-AAAKOVsBAAADbzcAAAYsCANvFwAABi0WA282AAAGA28WAAAGKBQAAAo5NQEAAANvOQAABiwIA28Z
-AAAGLRYDbzgAAAYDbxgAAAYoFQAACjkPAQAAA287AAAGLAgDbxUAAAYtGwNvOgAABgNvFAAABigW
-AAAKKBMAAAo55AAAAANvPQAABiwIA28bAAAGLRYDbzwAAAYDbxoAAAYoFAAACjm+AAAAA28/AAAG
-LAgDbx0AAAYtFgNvPgAABgNvHAAABigUAAAKOZgAAAADb0EAAAYsCANvHwAABi0TA29AAAAGA28e
-AAAGKBQAAAosdQNvQwAABiwIA28lAAAGLRMDb0IAAAYDbyQAAAYoFAAACixSA29FAAAGLAgDbycA
-AAYtEwNvRAAABgNvJgAABigVAAAKLC8Db0cAAAYsCANvKQAABi0TA29GAAAGA28oAAAGKBUAAAos
-DANyAQAAcG9JAAAGKgNyEwAAcG9JAAAGKh4CKE4AAAYqKgIDBAUoFwAACipSAnsYAAAKAnsZAAAK
-FpRvGgAACioiAhYoGwAACipSAnsYAAAKAnsZAAAKF5RvHAAACioiAhcoGwAACipSAnsYAAAKAnsZ
-AAAKGJRvGgAACioiAhgoGwAACipSAnsYAAAKAnsZAAAKGZRvGgAACioiAhkoGwAACipSAnsYAAAK
-AnsZAAAKGpRvHQAACioiAhooGwAACipSAnsYAAAKAnsZAAAKG5RvHQAACioiAhsoGwAACipSAnsY
-AAAKAnsZAAAKHJRvHQAACioiAhwoGwAACipSAnsYAAAKAnsZAAAKHZRvHgAACioiAh0oGwAACipS
-AnsYAAAKAnsZAAAKHpRvHQAACioiAh4oGwAACipWAnsYAAAKAnsZAAAKHwmUbx8AAAoqJgIfCSgb
-AAAKKlYCexgAAAoCexkAAAofCpRvHQAACiomAh8KKBsAAAoqVgJ7GAAACgJ7GQAACh8LlG8dAAAK
-KiYCHwsoGwAACipWAnsYAAAKAnsZAAAKHwyUbx0AAAoqJgIfDCgbAAAKKlYCexgAAAoCexkAAAof
-DZRvGgAACiomAh8NKBsAAAoqVgJ7GAAACgJ7GQAACh8OlG8aAAAKKiYCHw4oGwAACipWAnsYAAAK
-AnsZAAAKHw+Ubx0AAAoqJgIfDygbAAAKKlYCexgAAAoCexkAAAofEJRvHwAACiomAh8QKBsAAAoq
-VgJ7GAAACgJ7GQAACh8RlG8fAAAKKiYCHxEoGwAACipWAnsYAAAKAnsZAAAKHxKUbxwAAAoqJgIf
-EigbAAAKKlYCexgAAAoCexkAAAofE5RvHAAACiomAh8TKBsAAAoqVgJ7GAAACgJ7GQAACh8UlG8c
-AAAKKiYCHxQoGwAACipWAnsYAAAKAnsZAAAKHxWUbxwAAAoqJgIfFSgbAAAKKlYCexgAAAoCexkA
-AAofFpRvHQAACiomAh8WKBsAAAoqVgJ7GAAACgJ7GQAACh8XlG8dAAAKKiYCHxcoGwAACipWAnsY
-AAAKAnsZAAAKHxiUbx0AAAoqJgIfGCgbAAAKKlYCexgAAAoCexkAAAofGZRvHwAACiomAh8ZKBsA
-AAoqVgJ7GAAACgJ7GQAACh8alG8cAAAKKiYCHxooGwAACipWAnsYAAAKAnsZAAAKHxuUbx0AAAoq
-JgIfGygbAAAKKlYCexgAAAoCexkAAAofHJRvHQAACiomAh8cKBsAAAoqVgJ7GAAACgJ7GQAACh8d
-lG8dAAAKKiYCHx0oGwAACipWAnsYAAAKAnsZAAAKHx6Ubx0AAAoqJgIfHigbAAAKKlYCexgAAAoC
-exkAAAofH5RvHwAACiomAh8fKBsAAAoqVgJ7GAAACgJ7GQAACh8glG8fAAAKKiYCHyAoGwAACipW
-AnsYAAAKAnsZAAAKHyGUbx0AAAoqKgIfIQMoIAAACiomAh8hKBsAAAoqXgMsCQIfISghAAAKKnIl
-AABwcyIAAAp6HgIoIwAACioeAigkAAAKKn4CKCUAAAoCAnNSAAAGfQEAAAQCAnNTAAAGfQIAAAQq
-kgRywgAAcBpvJgAACiwVAgUCAygnAAAKDgRzBQAABm9QAAAGKkorBwIDb1EAAAYDb0wAAAYt8SoG
-KjoCKCgAAAoCA30DAAAEKjoCKCgAAAoCA30EAAAEKh4CKCgAAAoqrn4FAAAELR5y0gAAcNAHAAAC
-KCkAAApvKgAACnMrAAAKgAUAAAR+BQAABCoafgYAAAQqHgKABgAABCoafgcAAAQqHgIoLAAACiou
-c1kAAAaABwAABCpCU0pCAQABAAAAAAAMAAAAdjQuMC4zMDMxOQAAAAAFAGwAAABQDAAAI34AALwM
-AABkDAAAI1N0cmluZ3MAAAAAIBkAAEQBAAAjVVMAZBoAABAAAAAjR1VJRAAAAHQaAAAAAgAAI0Js
-b2IAAAAAAAAAAgAAAVcVoAEJAQAAAPoBMwAWAAABAAAAIQAAAAgAAAAHAAAAWgAAAA8AAAAsAAAA
-EAAAAAMAAABHAAAASgAAAAEAAAAEAAAAAQAAAAAANAUBAAAAAAAGAA8EHQoGAKMEHQoGAFsDCgoP
-AJEKAAAGAIgDRgkGAPIDRgkGANMDRgkGAIoERgkGAC8ERgkGAEgERgkGAJ8DRgkGALoD7wQKAGME
-lgIKANwJlgIOAM0JlgIKAKgJlgIGABYF/ggGAI0C/ggKAJQLlgIGAEsL/ggGAD4DCgoGAO0JPQoG
-AJwJMQkSAA4DHgUSAG8DHgUSAOQCHAkGACMDHQoGAAwF/ggGAFgJ/ggGAIsJ/ggGALcC/ggGAFwC
-/ggGADcMRgkAAAAANwAAAAAAAQABAAEAEAARCQAAEAABAAEAAQAQAMAJAAA5AAEABQABABAAdgsA
-AE0AAQBOAAEAEAAOCwAAUQADAFIAAQAQAM8KAABRAAQAUwAAABAARAqgClEABQBUAAABEAD+CqAK
-aQAHAFgABgAOC64ABgDPCrIAAQCEC7YAAQCEC7YAEQAFCboAEQDUAr4AEQA/AsIAUCAAAAAAxgDB
-BAYAAQBYIAAAAADGAMwEBgABAGAgAAAAAMYAFAzGAAEAxiIAAAAAhhj9CQYAAgDOIgAAAACGGP0J
-PQACANkiAAAAAIYIRAHMAAUA7iIAAAAAhgi7BnUABQD3IgAAAACGCBMB0AAFAAwjAAAAAIYIfAZ1
-AAUAFSMAAAAAhgheAcwABQAqIwAAAACGCNwGdQAFADMjAAAAAIYIMAHMAAUASCMAAAAAhgigBnUA
-BQBRIwAAAACGCEAM1QAFAGYjAAAAAIYI0Ah1AAUAbyMAAAAAhghyCdUABQCEIwAAAACGCEUIdQAF
-AI0jAAAAAIYIwQvVAAUAoiMAAAAAhgirCHUABQCrIwAAAACGCE8C2QAFAMAjAAAAAIYIAAh1AAUA
-ySMAAAAAhggaC9UABQDeIwAAAACGCGUIdQAFAOcjAAAAAIYI/ALdAAUA/SMAAAAAhggUCHUABQAH
-JAAAAACGCPwB1QAFAB0kAAAAAIYIqgd1AAUAJyQAAAAAhggyAtUABQA9JAAAAACGCOwHdQAFAEck
-AAAAAIYI3gTVAAUAXSQAAAAAhggtCHUABQBnJAAAAACGCAIBzAAFAH0kAAAAAIYIZAZ1AAUAhyQA
-AAAAhgj1AMwABQCdJAAAAACGCFAGdQAFAKckAAAAAIYIbwHVAAUAvSQAAAAAhgj0BnUABQDHJAAA
-AACGCBQC3QAFAN0kAAAAAIYIwAd1AAUA5yQAAAAAhggiAt0ABQD9JAAAAACGCNUHdQAFAAclAAAA
-AIYItwDQAAUAHSUAAAAAhgj9BXUABQAnJQAAAACGCIIA0AAFAD0lAAAAAIYIugV1AAUARyUAAAAA
-hgjTANAABQBdJQAAAACGCCAGdQAFAGclAAAAAIYIoQDQAAUAfSUAAAAAhgjgBXUABQCHJQAAAACG
-COQB1QAFAJ0lAAAAAIYIiwd1AAUApyUAAAAAhgi6AdUABQC9JQAAAACGCFMHdQAFAMclAAAAAIYI
-1QHVAAUA3SUAAAAAhgh1B3UABQDnJQAAAACGCJMB3QAFAP0lAAAAAIYIHgd1AAUAByYAAAAAhgiE
-AdAABQAdJgAAAACGCAgHdQAFACcmAAAAAIYIQADVAAUAPSYAAAAAhghcBXUABQBHJgAAAACGCHMA
-1QAFAF0mAAAAAIYIpAV1AAUAZyYAAAAAhginAdUABQB9JgAAAACGCDkHdQAFAIcmAAAAAIYI5gDV
-AAUAnSYAAAAAhgg6BnUABQCnJgAAAACGCFEA3QAFAL0mAAAAAIYIdAV1AAUAxyYAAAAAhghhAN0A
-BQDdJgAAAACGCIsFdQAFAOcmAAAAAIYIJwvVAAUA/SYAAAAAhgg5CxAABQAIJwAAAACGCHkIdQAG
-ABInAAAAAIYIkgjiAAYAKicAAAAAhgArDHUABwAyJwAAAACGAFILdQAHADonAAAAAIYY/QkGAAcA
-WicAAAAAxgAHDOcABwB/JwAAAADGAQAMxgALAJInAAAAAMYBFAzGAAwAlCcAAAAAhhj9CfEADQCj
-JwAAAACGGP0J8QAOALInAAAAAIMY/QkGAA8AuicAAAAAkwjpCfcADwDmJwAAAACTCLwC/AAPAO0n
-AAAAAJMIyAIBAQ8A9ScAAAAAlghqCwcBEAD8JwAAAACGGP0JBgAQAAQoAAAAAJEYAwoMARAAAAAB
-AC8MAAABAOIJAAACANkKAAADALYJAAABANgEAAABANgEAAABAHwBAAACAIACAAADAOIJAAAEALYJ
-AAABAOIJAAABAC8MAAABAJoLAAABAJoLAAABANgECQD9CQEAEQD9CQYAGQD9CQoAKQD9CRAAMQD9
-CRAAOQD9CRAAQQD9CRAASQD9CRAAUQD9CRAAWQD9CRAAYQD9CRAAaQD9CQYAqQD9CQYAyQD9CRUA
-2QD9CQYAmQDBBAYAmQDMBAYAiQBeCxsAiQBWDCEA4QBWDCkAkQBWDC8AiQBeCzcAcQD9CT0AcQDi
-CUcAcQDZCksAeQAlAE8AcQDmCFQAeQATBVkAeQAJBV8AeQAuAGQAeQCKAmkAcQD1CG8AcQDtCAEA
-6QD9CRAAcQArDHUAcQBSC3UAmQD9CQYA4QAHC3kAmQDtCoAAoQD9CQYA+QBuAoYA+QAzDI4AsQD9
-CZQA0QD9CQYALgALADkBLgATAEIBLgAbAGEBLgAjAGoBLgArAJMBLgAzAJMBLgA7AJMBLgBDAGoB
-LgBLAJkBLgBTAJMBLgBbALABQwBjAPoB4QB7APoB4wBrAPoBqQhzAGEByQhzAGEBAwABAAcARQAI
-AEcAAABIARABAAC/BhQBAAAXARgBAACABhQBAABiARABAADgBhQBAAA0ARABAACkBhQBAABEDB0B
-AADUCBQBAAB2CR0BAABJCBQBAADFCx0BAACvCBQBAABTAiEBAAAECBQBAAAeCx0BAABpCBQBAAAA
-AyUBAAAYCBQBAAAAAh0BAACuBxQBAAA2Ah0BAADwBxQBAADiBB0BAAAxCBQBAAAGARABAABoBhQB
-AAD5ABABAABUBhQBAABzAR0BAAD4BhQBAAAYAiUBAADEBxQBAAAmAiUBAADZBxQBAAC7ABgBAAAB
-BhQBAACGABgBAAC+BRQBAADXABgBAAAkBhQBAAClABgBAADkBRQBAADoAR0BAACPBxQBAAC+AR0B
-AABXBxQBAADZAR0BAAB5BxQBAACXASUBAAAiBxQBAACIARgBAAAMBxQBAABEAB0BAABgBRQBAAB3
-AB0BAACoBRQBAACrAR0BAAA9BxQBAADqAB0BAAA+BhQBAABVACUBAAB4BRQBAABlACUBAACPBRQB
-AAA9Cx0BAACWCBQBAADtCSoBAADcAi8BAABuCzQBAgAGAAMAAgAHAAUAAgAIAAcAAgAJAAkAAgAK
-AAsAAgALAA0AAgAMAA8AAgANABEAAgAOABMAAgAPABUAAgAQABcAAgARABkAAgASABsAAgATAB0A
-AgAUAB8AAgAVACEAAgAWACMAAgAXACUAAgAYACcAAgAZACkAAgAaACsAAgAbAC0AAgAcAC8AAgAd
-ADEAAgAeADMAAgAfADUAAgAgADcAAgAhADkAAgAiADsAAgAjAD0AAgAkAD8AAgAlAEEAAgAmAEMA
-AgAnAEUAAgAoAEcAAgApAEkAAgAqAEsAAgArAE0AAgAsAE8AAgAtAFEAAgAuAFMAAgAvAFUAAgAw
-AFcAAgAxAFkAAgAyAFsAAgAzAF0AAgA0AF8AAgA1AGEAAgA2AGMAAgA3AGUAAgA4AGcAAgA5AGkA
-AgA6AGsAAgA7AG0AAgA8AG8AAgA9AHEAAgA+AHMAAgA/AHUAAgBAAHcAAgBBAHkAAgBCAHsAAgBD
-AH0AAgBEAH8AAgBFAIEAAgBGAIMAAgBHAIUAAgBIAIcAAQBJAIcAAgBKAIkAAQBLAIkAAgBVAIsA
-AgBWAI0AAQBXAI0AAgBYAI8ABIAAAAEAAAAAAAAAAAAAAAAAAQAAAAQAAAAAAAAAAAAAAJwACwIA
-AAAADQAAAAAAAAAAAAAApQCkCwAAAAANAAAAAAAAAAAAAAClAN8LAAAAAAQAAAAAAAAAAAAAAJwA
-/ggAAAAAAAAAAAEAAABOCgAAAAAAAABTQ185OWNjZjkyZGYyODQ0Y2JhODc1NmVjMzMxM2U0ZDcw
-MABHZXRJbnQzMgBHZXRJbnQxNgA8TW9kdWxlPgBnZXRfc2ZUWVBFT0ZEQVRBAGdldF9zZkRBVEVB
-RERFRABnZXRfc2ZEQVRFQ0hBTkdFRABnZXRfc2ZSRVFVSVJFRABnZXRfc2ZQUk9KRUNUQVRUUklC
-VVRFU1lTVEVNSUQAZ2V0X3NmUFJPSkVDVFNZU1RFTUlEAGdldF9zZlBST0pFQ1RBVFRSSUJVVEVE
-SU1JRABnZXRfc2ZQUk9KRUNURElNSUQAZ2V0X3NmSU1QT1JUSUQAZ2V0X1NvdXJjZUlEAGdldF9F
-VExDb250cm9sSUQAZ2V0X1Byb2plY3RBdHRyaWJ1dGVTeXN0ZW1JRABnZXRfUHJvamVjdFN5c3Rl
-bUlEAGdldF9Qcm9qZWN0QXR0cmlidXRlRGltSUQAZ2V0X1Byb2plY3REaW1JRABnZXRfSW1wb3J0
-SUQASW5wdXRJRABnZXRfc2ZTRVFVRU5DRQBnZXRfc2ZBVFRSSUJVVEVEQVRFAGdldF9zZk1VU1RC
-RVVOSVFVRQBnZXRfc2ZBVFRSSUJVVEVERVNDUklQVElPTgBnZXRfc2ZDT01NRU5UUwBnZXRfc2ZB
-VFRSSUJVVEVDQVRFR09SWQBnZXRfVHlwZU9mRGF0YQBtc2NvcmxpYgBnZXRfRGF0ZUFkZGVkAGdl
-dF9EYXRlQ2hhbmdlZABnZXRfUmVxdWlyZWQAZGVmYXVsdEluc3RhbmNlAGdldF9TZXF1ZW5jZQBS
-dW50aW1lVHlwZUhhbmRsZQBHZXRUeXBlRnJvbUhhbmRsZQBJbnB1dE5hbWUAR2V0RGF0ZVRpbWUA
-TWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuUGlwZWxpbmUAVHlwZQBnZXRfQ3VsdHVyZQBzZXRfQ3Vs
-dHVyZQByZXNvdXJjZUN1bHR1cmUAQXBwbGljYXRpb25TZXR0aW5nc0Jhc2UAZ2V0X0F0dHJpYnV0
-ZURhdGUARWRpdG9yQnJvd3NhYmxlU3RhdGUAQ29tcGlsZXJHZW5lcmF0ZWRBdHRyaWJ1dGUARGVi
-dWdnZXJOb25Vc2VyQ29kZUF0dHJpYnV0ZQBEZWJ1Z2dhYmxlQXR0cmlidXRlAEVkaXRvckJyb3dz
-YWJsZUF0dHJpYnV0ZQBBc3NlbWJseVRpdGxlQXR0cmlidXRlAEFzc2VtYmx5VHJhZGVtYXJrQXR0
-cmlidXRlAFRhcmdldEZyYW1ld29ya0F0dHJpYnV0ZQBBc3NlbWJseUNvbmZpZ3VyYXRpb25BdHRy
-aWJ1dGUAQXNzZW1ibHlEZXNjcmlwdGlvbkF0dHJpYnV0ZQBDb21waWxhdGlvblJlbGF4YXRpb25z
-QXR0cmlidXRlAEFzc2VtYmx5UHJvZHVjdEF0dHJpYnV0ZQBBc3NlbWJseUNvcHlyaWdodEF0dHJp
-YnV0ZQBTU0lTU2NyaXB0Q29tcG9uZW50RW50cnlQb2ludEF0dHJpYnV0ZQBBc3NlbWJseUNvbXBh
-bnlBdHRyaWJ1dGUAUnVudGltZUNvbXBhdGliaWxpdHlBdHRyaWJ1dGUAUHJlRXhlY3V0ZQBQb3N0
-RXhlY3V0ZQB2YWx1ZQBnZXRfTXVzdEJlVW5pcXVlAFN5c3RlbS5SdW50aW1lLlZlcnNpb25pbmcA
-R2V0U3RyaW5nAEdldERlY2ltYWwAU3lzdGVtLkNvbXBvbmVudE1vZGVsAFNDXzk5Y2NmOTJkZjI4
-NDRjYmE4NzU2ZWMzMzEzZTRkNzAwLmRsbABnZXRfc2ZUWVBFT0ZEQVRBX0lzTnVsbABnZXRfc2ZE
-QVRFQURERURfSXNOdWxsAGdldF9zZkRBVEVDSEFOR0VEX0lzTnVsbABnZXRfc2ZSRVFVSVJFRF9J
-c051bGwAZ2V0X3NmUFJPSkVDVEFUVFJJQlVURVNZU1RFTUlEX0lzTnVsbABnZXRfc2ZQUk9KRUNU
-U1lTVEVNSURfSXNOdWxsAGdldF9zZlBST0pFQ1RBVFRSSUJVVEVESU1JRF9Jc051bGwAZ2V0X3Nm
-UFJPSkVDVERJTUlEX0lzTnVsbABnZXRfc2ZJTVBPUlRJRF9Jc051bGwAZ2V0X1NvdXJjZUlEX0lz
-TnVsbABnZXRfRVRMQ29udHJvbElEX0lzTnVsbABnZXRfUHJvamVjdEF0dHJpYnV0ZVN5c3RlbUlE
-X0lzTnVsbABnZXRfUHJvamVjdFN5c3RlbUlEX0lzTnVsbABnZXRfUHJvamVjdEF0dHJpYnV0ZURp
-bUlEX0lzTnVsbABnZXRfUHJvamVjdERpbUlEX0lzTnVsbABnZXRfSW1wb3J0SURfSXNOdWxsAGdl
-dF9zZlNFUVVFTkNFX0lzTnVsbABnZXRfc2ZBVFRSSUJVVEVEQVRFX0lzTnVsbABnZXRfc2ZNVVNU
-QkVVTklRVUVfSXNOdWxsAGdldF9zZkFUVFJJQlVURURFU0NSSVBUSU9OX0lzTnVsbABnZXRfc2ZD
-T01NRU5UU19Jc051bGwAZ2V0X3NmQVRUUklCVVRFQ0FURUdPUllfSXNOdWxsAGdldF9UeXBlT2ZE
-YXRhX0lzTnVsbABnZXRfRGF0ZUFkZGVkX0lzTnVsbABnZXRfRGF0ZUNoYW5nZWRfSXNOdWxsAGdl
-dF9SZXF1aXJlZF9Jc051bGwAZ2V0X1NlcXVlbmNlX0lzTnVsbABnZXRfQXR0cmlidXRlRGF0ZV9J
-c051bGwAZ2V0X011c3RCZVVuaXF1ZV9Jc051bGwAZ2V0X0F0dHJpYnV0ZURlc2NyaXB0aW9uX0lz
-TnVsbABnZXRfQ29tbWVudHNfSXNOdWxsAGdldF9VcGRhdGVkU3RhdHVzX0lzTnVsbABzZXRfVXBk
-YXRlZFN0YXR1c19Jc051bGwAZ2V0X0F0dHJpYnV0ZURlc2NyaXB0aW9uU2hvcnRfSXNOdWxsAGdl
-dF9BdHRyaWJ1dGVDYXRlZ29yeV9Jc051bGwAU2V0TnVsbABzZXRfSXRlbQBTeXN0ZW0AcmVzb3Vy
-Y2VNYW4AU2NyaXB0TWFpbgBTeXN0ZW0uQ29uZmlndXJhdGlvbgBTeXN0ZW0uR2xvYmFsaXphdGlv
-bgBTeXN0ZW0uUmVmbGVjdGlvbgBJbnZhbGlkT3BlcmF0aW9uRXhjZXB0aW9uAGdldF9BdHRyaWJ1
-dGVEZXNjcmlwdGlvbgBTdHJpbmdDb21wYXJpc29uAEN1bHR1cmVJbmZvAE91dHB1dE5hbWVNYXAA
-T3V0cHV0TWFwAElucHV0MEJ1ZmZlcgBQaXBlbGluZUJ1ZmZlcgBTY3JpcHRCdWZmZXIAZ2V0X1Jl
-c291cmNlTWFuYWdlcgAuY3RvcgAuY2N0b3IAU3lzdGVtLkRpYWdub3N0aWNzAFN5c3RlbS5SdW50
-aW1lLkNvbXBpbGVyU2VydmljZXMAU3lzdGVtLlJlc291cmNlcwBTQ185OWNjZjkyZGYyODQ0Y2Jh
-ODc1NmVjMzMxM2U0ZDcwMC5Qcm9wZXJ0aWVzLlJlc291cmNlcy5yZXNvdXJjZXMARGVidWdnaW5n
-TW9kZXMAU0NfOTljY2Y5MmRmMjg0NGNiYTg3NTZlYzMzMTNlNGQ3MDAuUHJvcGVydGllcwBWYXJp
-YWJsZXMAQnVmZmVyQ29sdW1uSW5kZXhlcwBHZXRDb2x1bW5JbmRleGVzAFNldHRpbmdzAEVxdWFs
-cwBDb25uZWN0aW9ucwBnZXRfQ29tbWVudHMAZ2V0X1VwZGF0ZWRTdGF0dXMAc2V0X1VwZGF0ZWRT
-dGF0dXMAT2JqZWN0AEVuZE9mUm93c2V0AG9wX0ltcGxpY2l0AGdldF9EZWZhdWx0AFVzZXJDb21w
-b25lbnQAUGFyZW50Q29tcG9uZW50AFNjcmlwdENvbXBvbmVudABNaWNyb3NvZnQuU3FsU2VydmVy
-LlR4U2NyaXB0AGdldF9BdHRyaWJ1dGVEZXNjcmlwdGlvblNob3J0AE1pY3Jvc29mdC5TcWxTZXJ2
-ZXIuUGlwZWxpbmVIb3N0AElucHV0MF9Qcm9jZXNzSW5wdXQASW5wdXQwX1Byb2Nlc3NJbnB1dFJv
-dwBOZXh0Um93AGdldF9Bc3NlbWJseQBnZXRfQXR0cmlidXRlQ2F0ZWdvcnkAb3BfRXF1YWxpdHkA
-AAAAEU4AbwBDAGgAYQBuAGcAZQAAEU0AbwBkAGkAZgBpAGUAZAAAgJtJAHMATgB1AGwAbAAgAHAA
-cgBvAHAAZQByAHQAeQAgAGMAYQBuAG4AbwB0ACAAYgBlACAAcwBlAHQAIAB0AG8AIABGAGEAbABz
-AGUALgAgAEEAcwBzAGkAZwBuACAAYQAgAHYAYQBsAHUAZQAgAHQAbwAgAHQAaABlACAAYwBvAGwA
-dQBtAG4AIABpAG4AcwB0AGUAYQBkAC4AAA9JAG4AcAB1AHQAIAAwAABxUwBDAF8AOQA5AGMAYwBm
-ADkAMgBkAGYAMgA4ADQANABjAGIAYQA4ADcANQA2AGUAYwAzADMAMQAzAGUANABkADcAMAAwAC4A
-UAByAG8AcABlAHIAdABpAGUAcwAuAFIAZQBzAG8AdQByAGMAZQBzAABmZpCL1hviToQQ+HJfKTdu
-AAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARFhBQABEUUIBwACAhFFEUUFAAICDg4HAAICEUkRSQUA
-ARFFBgkgAwESPR0IEkEDBhI9AwYdCAQgAQgIBCABAggFIAERRQgEIAEOCAQgAQYIBSABEUkIBSAC
-AQgcAyAAAgYgAgIOEXkFIAEdCAgHAAESfRGAgQUgABKAhQcgAgEOEoCFCLd6XFYZNOCJCImEXc2A
-gMyRAwYSFAMGEhgDBhJNAwYSWQMGEl0DBhIgBSABARIMAyAACAQgABFFAyAADgMgAAYEIAARSQQg
-AQECCSAEAQgOEj0SQQUgAQESTQQAABJZBAAAEl0FAAEBEl0EAAASIAMAAAEDKAAIAygAAgQoABFF
-AygADgMoAAYEKAARSQQIABJZBAgAEl0ECAASIAgBAAgAAAAAAB4BAAEAVAIWV3JhcE5vbkV4Y2Vw
-dGlvblRocm93cwEIAQACAAAAAAAoAQAjU0NfOTljY2Y5MmRmMjg0NGNiYTg3NTZlYzMzMTNlNGQ3
-MDAAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAyMQAASQEAGi5ORVRGcmFtZXdvcmssVmVyc2lv
-bj12NC41AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVUIEZyYW1ld29yayA0LjUEAQAAAAC0
-AAAAzsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGli
-LCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVj
-NTYxOTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAAAAAAAAAAA
-AFBBRFBBRFC0AAAAZEUAAAAAAAAAAAAAfkUAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHBFAAAA
-AAAAAAAAAAAAX0NvckRsbE1haW4AbXNjb3JlZS5kbGwAAAAAAP8lACAAEAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAnCMAAAAgAAAAJAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAYAAAAAYAAAAmAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAIAAAAACAAAALAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAB4
+QwAAAAAAAEgAAAACAAUAnCcAAPAaAAABAAAAAAAAAIxCAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioTMAIARgIAAAAAAAADbyUAAAYs
+CANvBwAABi0WA28kAAAGA28GAAAGKBIAAAo5FAIAAANvJwAABiwIA28JAAAGLRYDbyYAAAYDbwgA
+AAYoEgAACjnuAQAAA28pAAAGLAgDbwsAAAYtFgNvKAAABgNvCgAABigSAAAKOcgBAAADbysAAAYs
+CANvDQAABi0WA28qAAAGA28MAAAGKBIAAAo5ogEAAANvLQAABiwIA28PAAAGLRYDbywAAAYDbw4A
+AAYoEwAACjl8AQAAA28vAAAGLAgDbxEAAAYtFgNvLgAABgNvEAAABigTAAAKOVYBAAADbzEAAAYs
+CANvFQAABi0WA28wAAAGA28UAAAGKBMAAAo5MAEAAANvMwAABiwIA28XAAAGLRYDbzIAAAYDbxYA
+AAYoFAAACjkKAQAAA281AAAGLAgDbxMAAAYtFgNvNAAABgNvEgAABigSAAAKOeQAAAADbzcAAAYs
+CANvGQAABi0WA282AAAGA28YAAAGKBMAAAo5vgAAAANvOQAABiwIA28bAAAGLRYDbzgAAAYDbxoA
+AAYoEwAACjmYAAAAA287AAAGLAgDbx0AAAYtEwNvOgAABgNvHAAABigTAAAKLHUDbz0AAAYsCANv
+HwAABi0TA288AAAGA28eAAAGKBMAAAosUgNvPwAABiwIA28hAAAGLRMDbz4AAAYDbyAAAAYoFAAA
+CiwvA29BAAAGLAgDbyMAAAYtEwNvQAAABgNvIgAABigUAAAKLAwDcgEAAHBvQwAABioDchMAAHBv
+QwAABioeAihIAAAGKioCAwQFKBUAAAoqUgJ7FgAACgJ7FwAAChaUbxgAAAoqIgIWKBkAAAoqUgJ7
+FgAACgJ7FwAACheUbxgAAAoqIgIXKBkAAAoqUgJ7FgAACgJ7FwAAChiUbxgAAAoqIgIYKBkAAAoq
+UgJ7FgAACgJ7FwAAChmUbxgAAAoqIgIZKBkAAAoqUgJ7FgAACgJ7FwAAChqUbxoAAAoqIgIaKBkA
+AAoqUgJ7FgAACgJ7FwAAChuUbxoAAAoqIgIbKBkAAAoqUgJ7FgAACgJ7FwAAChyUbxgAAAoqIgIc
+KBkAAAoqUgJ7FgAACgJ7FwAACh2UbxoAAAoqIgIdKBkAAAoqUgJ7FgAACgJ7FwAACh6UbxsAAAoq
+IgIeKBkAAAoqVgJ7FgAACgJ7FwAACh8JlG8aAAAKKiYCHwkoGQAACipWAnsWAAAKAnsXAAAKHwqU
+bxoAAAoqJgIfCigZAAAKKlYCexYAAAoCexcAAAofC5RvGgAACiomAh8LKBkAAAoqVgJ7FgAACgJ7
+FwAACh8MlG8aAAAKKiYCHwwoGQAACipWAnsWAAAKAnsXAAAKHw2UbxsAAAoqJgIfDSgZAAAKKlYC
+exYAAAoCexcAAAofDpRvGwAACiomAh8OKBkAAAoqVgJ7FgAACgJ7FwAACh8PlG8YAAAKKiYCHw8o
+GQAACipWAnsWAAAKAnsXAAAKHxCUbxgAAAoqJgIfECgZAAAKKlYCexYAAAoCexcAAAofEZRvGAAA
+CiomAh8RKBkAAAoqVgJ7FgAACgJ7FwAACh8SlG8YAAAKKiYCHxIoGQAACipWAnsWAAAKAnsXAAAK
+HxOUbxoAAAoqJgIfEygZAAAKKlYCexYAAAoCexcAAAofFJRvGgAACiomAh8UKBkAAAoqVgJ7FgAA
+CgJ7FwAACh8VlG8aAAAKKiYCHxUoGQAACipWAnsWAAAKAnsXAAAKHxaUbxsAAAoqJgIfFigZAAAK
+KlYCexYAAAoCexcAAAofF5RvGAAACiomAh8XKBkAAAoqVgJ7FgAACgJ7FwAACh8YlG8aAAAKKiYC
+HxgoGQAACipWAnsWAAAKAnsXAAAKHxmUbxoAAAoqJgIfGSgZAAAKKlYCexYAAAoCexcAAAofGpRv
+GgAACiomAh8aKBkAAAoqVgJ7FgAACgJ7FwAACh8blG8aAAAKKiYCHxsoGQAACipWAnsWAAAKAnsX
+AAAKHxyUbxsAAAoqJgIfHCgZAAAKKlYCexYAAAoCexcAAAofHZRvGwAACiomAh8dKBkAAAoqVgJ7
+FgAACgJ7FwAACh8elG8aAAAKKioCHx4DKBwAAAoqJgIfHigZAAAKKl4DLAkCHx4oHQAACipyJQAA
+cHMeAAAKeh4CKB8AAAoqHgIoIAAACip+AighAAAKAgJzTAAABn0BAAAEAgJzTQAABn0CAAAEKpIE
+csIAAHAabyIAAAosFQIFAgMoIwAACg4EcwUAAAZvSgAABipKKwcCA29LAAAGA29GAAAGLfEqBio6
+AigkAAAKAgN9AwAABCo6AigkAAAKAgN9BAAABCoeAigkAAAKKq5+BQAABC0ectIAAHDQBwAAAigl
+AAAKbyYAAApzJwAACoAFAAAEfgUAAAQqGn4GAAAEKh4CgAYAAAQqGn4HAAAEKh4CKCgAAAoqLnNT
+AAAGgAcAAAQqQlNKQgEAAQAAAAAADAAAAHY0LjAuMzAzMTkAAAAABQBsAAAAnAsAACN+AAAIDAAA
+uAsAACNTdHJpbmdzAAAAAMAXAABEAQAAI1VTAAQZAAAQAAAAI0dVSUQAAAAUGQAA3AEAACNCbG9i
+AAAAAAAAAAIAAAFXFaABCQEAAAD6ATMAFgAAAQAAACEAAAAIAAAABwAAAFQAAAAPAAAAKAAAABAA
+AAADAAAAQQAAAEQAAAABAAAABAAAAAEAAAAAAAQFAQAAAAAABgDfA5wJBgBzBJwJBgArA4kJDwAQ
+CgAABgBYA8UIBgDCA8UIBgCjA8UIBgBaBMUIBgD/A8UIBgAYBMUIBgBvA8UIBgCKA78ECgAzBGYC
+CgBbCWYCDgBMCWYCCgAnCWYCBgDmBH0IBgBdAn0ICgAHC2YCBgDKCn0IBgAOA4kJBgBsCbwJBgAb
+CbAIEgDeAu4EEgA/A+4EEgC0ApsIBgDzApwJBgDcBH0IBgDXCH0IBgAKCX0IBgCHAn0IBgAsAn0I
+BgCMC8UIAAAAACUAAAAAAAEAAQABABAAkAgAABAAAQABAAEAEAA/CQAAOQABAAUAAQAQAOkKAABN
+AAEASAABABAAjQoAAFEAAwBMAAEAEABOCgAAUQAEAE0AAAAQAMMJHwpRAAUATgAAARAAfQofCmkA
+BwBSAAYAjQqYAAYATgqcAAEA9wqgAAEA9wqgABEAhAikABEApAKoABEADwKsAFAgAAAAAMYAkQQG
+AAEAWCAAAAAAxgCcBAYAAQBgIAAAAADGAGkLsAABALIiAAAAAIYYfAkGAAIAuiIAAAAAhhh8CTEA
+AgDFIgAAAACGCBQBtgAFANoiAAAAAIYIXwZfAAUA4yIAAAAAhgjjALYABQD4IgAAAACGCCAGXwAF
+AAEjAAAAAIYILgG2AAUAFiMAAAAAhgiABl8ABQAfIwAAAACGCAABtgAFADQjAAAAAIYIRAZfAAUA
+PSMAAAAAhgiVC7sABQBSIwAAAACGCE8IXwAFAFsjAAAAAIYI8Qi7AAUAcCMAAAAAhgjpB18ABQB5
+IwAAAACGCB8CtgAFAI4jAAAAAIYIpAdfAAUAlyMAAAAAhgiZCrsABQCsIwAAAACGCAkIXwAFALUj
+AAAAAIYIzAK/AAUAyiMAAAAAhgi4B18ABQDTIwAAAACGCMwBuwAFAOkjAAAAAIYITgdfAAUA8yMA
+AAAAhggCArsABQAJJAAAAACGCJAHXwAFABMkAAAAAIYIrgS7AAUAKSQAAAAAhgjRB18ABQAzJAAA
+AACGCD8BuwAFAEkkAAAAAIYImAZfAAUAUyQAAAAAhgjkAb8ABQBpJAAAAACGCGQHXwAFAHMkAAAA
+AIYI8gG/AAUAiSQAAAAAhgh5B18ABQCTJAAAAACGCKUAtgAFAKkkAAAAAIYIzQVfAAUAsyQAAAAA
+hghwALYABQDJJAAAAACGCIoFXwAFANMkAAAAAIYIwQC2AAUA6SQAAAAAhgjwBV8ABQDzJAAAAACG
+CI8AtgAFAAklAAAAAIYIsAVfAAUAEyUAAAAAhgi0AbsABQApJQAAAACGCC8HXwAFADMlAAAAAIYI
+igG7AAUASSUAAAAAhgj3Bl8ABQBTJQAAAACGCKUBuwAFAGklAAAAAIYIGQdfAAUAcyUAAAAAhghj
+Ab8ABQCJJQAAAACGCMIGXwAFAJMlAAAAAIYIVAG2AAUAqSUAAAAAhgisBl8ABQCzJQAAAACGCC4A
+uwAFAMklAAAAAIYILAVfAAUA0yUAAAAAhghhALsABQDpJQAAAACGCHQFXwAFAPMlAAAAAIYIdwG7
+AAUACSYAAAAAhgjdBl8ABQATJgAAAACGCNQAuwAFACkmAAAAAIYICgZfAAUAMyYAAAAAhgg/AL8A
+BQBJJgAAAACGCEQFXwAFAFMmAAAAAIYITwC/AAUAaSYAAAAAhghbBV8ABQBzJgAAAACGCKYKuwAF
+AIkmAAAAAIYIuAoQAAUAlCYAAAAAhggdCF8ABgCeJgAAAACGCDYIxAAGALYmAAAAAIYAgAtfAAcA
+viYAAAAAhgDRCl8ABwDGJgAAAACGGHwJBgAHAOYmAAAAAMYAXAvJAAcACycAAAAAxgFVC7AACwAe
+JwAAAADGAWkLsAAMACAnAAAAAIYYfAnTAA0ALycAAAAAhhh8CdMADgA+JwAAAACDGHwJBgAPAEYn
+AAAAAJMIaAnZAA8AcicAAAAAkwiMAt4ADwB5JwAAAACTCJgC4wAPAIEnAAAAAJYI3QrpABAAiCcA
+AAAAhhh8CQYAEACQJwAAAACRGIIJ7gAQAAAAAQCECwAAAQBhCQAAAgBYCgAAAwA1CQAAAQCoBAAA
+AQCoBAAAAQBMAQAAAgBQAgAAAwBhCQAABAA1CQAAAQBhCQAAAQCECwAAAQANCwAAAQANCwAAAQCo
+BAkAfAkBABEAfAkGABkAfAkKACkAfAkQADEAfAkQADkAfAkQAEEAfAkQAEkAfAkQAFEAfAkQAFkA
+fAkQAGEAfAkQAGkAfAkGAKkAfAkGAMkAfAkVANkAfAkGAJkAkQQGAJkAnAQGAIkAqwsbAOEAqwsj
+AJEAqwspAHEAfAkxAHEAYQk7AHEAWAo/AHkA4wRDAHEAZQhJAHkA2QROAHkAWgJTAHEAdAhZAHEA
+bAgBAOkAfAkQAHEAgAtfAHEA0QpfAJkAfAkGAOEAhgpjAJkAbApqAKEAfAkGAPkAPgJwAPkAiAt4
+ALEAfAl+ANEAfAkGAC4ACwATAS4AEwAcAS4AGwA7AS4AIwBEAS4AKwBtAS4AMwBtAS4AOwBtAS4A
+QwBEAS4ASwBzAS4AUwBtAS4AWwCKAUMAYwDUAeEAewDUAeMAawDUAekHcwA7AQkIcwA7AQMAAQAH
+AD8ACABBAAAAGAHyAAAAYwb3AAAA5wDyAAAAJAb3AAAAMgHyAAAAhAb3AAAABAHyAAAASAb3AAAA
+mQv7AAAAUwj3AAAA9Qj7AAAA7Qf3AAAAIwLyAAAAqAf3AAAAnQr7AAAADQj3AAAA0AL/AAAAvAf3
+AAAA0AH7AAAAUgf3AAAABgL7AAAAlAf3AAAAsgT7AAAA1Qf3AAAAQwH7AAAAnAb3AAAA6AH/AAAA
+aAf3AAAA9gH/AAAAfQf3AAAAqQDyAAAA0QX3AAAAdADyAAAAjgX3AAAAxQDyAAAA9AX3AAAAkwDy
+AAAAtAX3AAAAuAH7AAAAMwf3AAAAjgH7AAAA+wb3AAAAqQH7AAAAHQf3AAAAZwH/AAAAxgb3AAAA
+WAHyAAAAsAb3AAAAMgD7AAAAMAX3AAAAZQD7AAAAeAX3AAAAewH7AAAA4Qb3AAAA2AD7AAAADgb3
+AAAAQwD/AAAASAX3AAAAUwD/AAAAXwX3AAAAvAr7AAAAOgj3AAAAbAkEAQAArAIJAQAA4QoOAQIA
+BgADAAIABwAFAAIACAAHAAIACQAJAAIACgALAAIACwANAAIADAAPAAIADQARAAIADgATAAIADwAV
+AAIAEAAXAAIAEQAZAAIAEgAbAAIAEwAdAAIAFAAfAAIAFQAhAAIAFgAjAAIAFwAlAAIAGAAnAAIA
+GQApAAIAGgArAAIAGwAtAAIAHAAvAAIAHQAxAAIAHgAzAAIAHwA1AAIAIAA3AAIAIQA5AAIAIgA7
+AAIAIwA9AAIAJAA/AAIAJQBBAAIAJgBDAAIAJwBFAAIAKABHAAIAKQBJAAIAKgBLAAIAKwBNAAIA
+LABPAAIALQBRAAIALgBTAAIALwBVAAIAMABXAAIAMQBZAAIAMgBbAAIAMwBdAAIANABfAAIANQBh
+AAIANgBjAAIANwBlAAIAOABnAAIAOQBpAAIAOgBrAAIAOwBtAAIAPABvAAIAPQBxAAIAPgBzAAIA
+PwB1AAIAQAB3AAIAQQB5AAIAQgB7AAEAQwB7AAIARAB9AAEARQB9AAIATwB/AAIAUACBAAEAUQCB
+AAIAUgCDAASAAAABAAAAAAAAAAAAAAAAAAEAAAAEAAAAAAAAAAAAAACGANsBAAAAAA0AAAAAAAAA
+AAAAAI8AFwsAAAAADQAAAAAAAAAAAAAAjwA0CwAAAAAEAAAAAAAAAAAAAACGAH0IAAAAAAAAAAAB
+AAAAzQkAAAAAAAAAU0NfMTc2YjMzMTE4ZmYyNDg3YmJhMDY0M2ExN2U2MWFiOTAAPE1vZHVsZT4A
+Z2V0X3NmVFlQRU9GREFUQQBnZXRfc2ZEQVRFQURERUQAZ2V0X3NmREFURUNIQU5HRUQAZ2V0X3Nm
+UkVRVUlSRUQAZ2V0X3NmUFJPSkVDVEFUVFJJQlVURVNZU1RFTUlEAGdldF9zZlBST0pFQ1RTWVNU
+RU1JRABnZXRfc2ZQUk9KRUNUQVRUUklCVVRFRElNSUQAZ2V0X3NmUFJPSkVDVERJTUlEAGdldF9z
+ZklNUE9SVElEAGdldF9Qcm9qZWN0QXR0cmlidXRlU3lzdGVtSUQAZ2V0X1Byb2plY3RTeXN0ZW1J
+RABnZXRfUHJvamVjdEF0dHJpYnV0ZURpbUlEAGdldF9Qcm9qZWN0RGltSUQAZ2V0X0ltcG9ydElE
+AElucHV0SUQAZ2V0X3NmU0VRVUVOQ0UAZ2V0X3NmQVRUUklCVVRFREFURQBnZXRfc2ZNVVNUQkVV
+TklRVUUAZ2V0X3NmQVRUUklCVVRFREVTQ1JJUFRJT04AZ2V0X3NmQ09NTUVOVFMAZ2V0X3NmQVRU
+UklCVVRFQ0FURUdPUlkAZ2V0X1R5cGVPZkRhdGEAbXNjb3JsaWIAZ2V0X0RhdGVBZGRlZABnZXRf
+RGF0ZUNoYW5nZWQAZ2V0X1JlcXVpcmVkAGRlZmF1bHRJbnN0YW5jZQBnZXRfU2VxdWVuY2UAUnVu
+dGltZVR5cGVIYW5kbGUAR2V0VHlwZUZyb21IYW5kbGUASW5wdXROYW1lAEdldERhdGVUaW1lAE1p
+Y3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlBpcGVsaW5lAFR5cGUAZ2V0X0N1bHR1cmUAc2V0X0N1bHR1
+cmUAcmVzb3VyY2VDdWx0dXJlAEFwcGxpY2F0aW9uU2V0dGluZ3NCYXNlAGdldF9BdHRyaWJ1dGVE
+YXRlAEVkaXRvckJyb3dzYWJsZVN0YXRlAENvbXBpbGVyR2VuZXJhdGVkQXR0cmlidXRlAERlYnVn
+Z2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUARGVidWdnYWJsZUF0dHJpYnV0ZQBFZGl0b3JCcm93c2Fi
+bGVBdHRyaWJ1dGUAQXNzZW1ibHlUaXRsZUF0dHJpYnV0ZQBBc3NlbWJseVRyYWRlbWFya0F0dHJp
+YnV0ZQBUYXJnZXRGcmFtZXdvcmtBdHRyaWJ1dGUAQXNzZW1ibHlDb25maWd1cmF0aW9uQXR0cmli
+dXRlAEFzc2VtYmx5RGVzY3JpcHRpb25BdHRyaWJ1dGUAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0
+dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRyaWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRBdHRyaWJ1
+dGUAU1NJU1NjcmlwdENvbXBvbmVudEVudHJ5UG9pbnRBdHRyaWJ1dGUAQXNzZW1ibHlDb21wYW55
+QXR0cmlidXRlAFJ1bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAFByZUV4ZWN1dGUAUG9zdEV4
+ZWN1dGUAdmFsdWUAZ2V0X011c3RCZVVuaXF1ZQBTeXN0ZW0uUnVudGltZS5WZXJzaW9uaW5nAEdl
+dFN0cmluZwBHZXREZWNpbWFsAFN5c3RlbS5Db21wb25lbnRNb2RlbABTQ18xNzZiMzMxMThmZjI0
+ODdiYmEwNjQzYTE3ZTYxYWI5MC5kbGwAZ2V0X3NmVFlQRU9GREFUQV9Jc051bGwAZ2V0X3NmREFU
+RUFEREVEX0lzTnVsbABnZXRfc2ZEQVRFQ0hBTkdFRF9Jc051bGwAZ2V0X3NmUkVRVUlSRURfSXNO
+dWxsAGdldF9zZlBST0pFQ1RBVFRSSUJVVEVTWVNURU1JRF9Jc051bGwAZ2V0X3NmUFJPSkVDVFNZ
+U1RFTUlEX0lzTnVsbABnZXRfc2ZQUk9KRUNUQVRUUklCVVRFRElNSURfSXNOdWxsAGdldF9zZlBS
+T0pFQ1RESU1JRF9Jc051bGwAZ2V0X3NmSU1QT1JUSURfSXNOdWxsAGdldF9Qcm9qZWN0QXR0cmli
+dXRlU3lzdGVtSURfSXNOdWxsAGdldF9Qcm9qZWN0U3lzdGVtSURfSXNOdWxsAGdldF9Qcm9qZWN0
+QXR0cmlidXRlRGltSURfSXNOdWxsAGdldF9Qcm9qZWN0RGltSURfSXNOdWxsAGdldF9JbXBvcnRJ
+RF9Jc051bGwAZ2V0X3NmU0VRVUVOQ0VfSXNOdWxsAGdldF9zZkFUVFJJQlVURURBVEVfSXNOdWxs
+AGdldF9zZk1VU1RCRVVOSVFVRV9Jc051bGwAZ2V0X3NmQVRUUklCVVRFREVTQ1JJUFRJT05fSXNO
+dWxsAGdldF9zZkNPTU1FTlRTX0lzTnVsbABnZXRfc2ZBVFRSSUJVVEVDQVRFR09SWV9Jc051bGwA
+Z2V0X1R5cGVPZkRhdGFfSXNOdWxsAGdldF9EYXRlQWRkZWRfSXNOdWxsAGdldF9EYXRlQ2hhbmdl
+ZF9Jc051bGwAZ2V0X1JlcXVpcmVkX0lzTnVsbABnZXRfU2VxdWVuY2VfSXNOdWxsAGdldF9BdHRy
+aWJ1dGVEYXRlX0lzTnVsbABnZXRfTXVzdEJlVW5pcXVlX0lzTnVsbABnZXRfQXR0cmlidXRlRGVz
+Y3JpcHRpb25fSXNOdWxsAGdldF9Db21tZW50c19Jc051bGwAZ2V0X1VwZGF0ZWRTdGF0dXNfSXNO
+dWxsAHNldF9VcGRhdGVkU3RhdHVzX0lzTnVsbABnZXRfQXR0cmlidXRlQ2F0ZWdvcnlfSXNOdWxs
+AFNldE51bGwAc2V0X0l0ZW0AU3lzdGVtAHJlc291cmNlTWFuAFNjcmlwdE1haW4AU3lzdGVtLkNv
+bmZpZ3VyYXRpb24AU3lzdGVtLkdsb2JhbGl6YXRpb24AU3lzdGVtLlJlZmxlY3Rpb24ASW52YWxp
+ZE9wZXJhdGlvbkV4Y2VwdGlvbgBnZXRfQXR0cmlidXRlRGVzY3JpcHRpb24AU3RyaW5nQ29tcGFy
+aXNvbgBDdWx0dXJlSW5mbwBPdXRwdXROYW1lTWFwAE91dHB1dE1hcABJbnB1dDBCdWZmZXIAUGlw
+ZWxpbmVCdWZmZXIAU2NyaXB0QnVmZmVyAGdldF9SZXNvdXJjZU1hbmFnZXIALmN0b3IALmNjdG9y
+AFN5c3RlbS5EaWFnbm9zdGljcwBTeXN0ZW0uUnVudGltZS5Db21waWxlclNlcnZpY2VzAFN5c3Rl
+bS5SZXNvdXJjZXMAU0NfMTc2YjMzMTE4ZmYyNDg3YmJhMDY0M2ExN2U2MWFiOTAuUHJvcGVydGll
+cy5SZXNvdXJjZXMucmVzb3VyY2VzAERlYnVnZ2luZ01vZGVzAFNDXzE3NmIzMzExOGZmMjQ4N2Ji
+YTA2NDNhMTdlNjFhYjkwLlByb3BlcnRpZXMAVmFyaWFibGVzAEJ1ZmZlckNvbHVtbkluZGV4ZXMA
+R2V0Q29sdW1uSW5kZXhlcwBTZXR0aW5ncwBFcXVhbHMAQ29ubmVjdGlvbnMAZ2V0X0NvbW1lbnRz
+AGdldF9VcGRhdGVkU3RhdHVzAHNldF9VcGRhdGVkU3RhdHVzAE9iamVjdABFbmRPZlJvd3NldABn
+ZXRfRGVmYXVsdABVc2VyQ29tcG9uZW50AFBhcmVudENvbXBvbmVudABTY3JpcHRDb21wb25lbnQA
+TWljcm9zb2Z0LlNxbFNlcnZlci5UeFNjcmlwdABNaWNyb3NvZnQuU3FsU2VydmVyLlBpcGVsaW5l
+SG9zdABJbnB1dDBfUHJvY2Vzc0lucHV0AElucHV0MF9Qcm9jZXNzSW5wdXRSb3cATmV4dFJvdwBn
+ZXRfQXNzZW1ibHkAZ2V0X0F0dHJpYnV0ZUNhdGVnb3J5AG9wX0VxdWFsaXR5AAAAEU4AbwBDAGgA
+YQBuAGcAZQAAEU0AbwBkAGkAZgBpAGUAZAAAgJtJAHMATgB1AGwAbAAgAHAAcgBvAHAAZQByAHQA
+eQAgAGMAYQBuAG4AbwB0ACAAYgBlACAAcwBlAHQAIAB0AG8AIABGAGEAbABzAGUALgAgAEEAcwBz
+AGkAZwBuACAAYQAgAHYAYQBsAHUAZQAgAHQAbwAgAHQAaABlACAAYwBvAGwAdQBtAG4AIABpAG4A
+cwB0AGUAYQBkAC4AAA9JAG4AcAB1AHQAIAAwAABxUwBDAF8AMQA3ADYAYgAzADMAMQAxADgAZgBm
+ADIANAA4ADcAYgBiAGEAMAA2ADQAMwBhADEANwBlADYAMQBhAGIAOQAwAC4AUAByAG8AcABlAHIA
+dABpAGUAcwAuAFIAZQBzAG8AdQByAGMAZQBzAAAwobzOvIcnT7Ylb+JJqakJAAQgAQEIAyAAAQUg
+AQEREQQgAQEOBSABARFhBwACAhFFEUUFAAICDg4HAAICEUkRSQkgAwESPR0IEkEDBhI9AwYdCAUg
+ARFFCAQgAQIIBCABDggFIAERSQgFIAIBCBwDIAACBiACAg4ReQUgAR0ICAcAARJ9EYCBBSAAEoCF
+ByACAQ4SgIUIt3pcVhk04IkIiYRdzYCAzJEDBhIUAwYSGAMGEk0DBhJZAwYSXQMGEiAFIAEBEgwE
+IAARRQMgAA4EIAARSQQgAQECCSAEAQgOEj0SQQUgAQESTQQAABJZBAAAEl0FAAEBEl0EAAASIAMA
+AAEEKAARRQMoAAIDKAAOBCgAEUkECAASWQQIABJdBAgAEiAIAQAIAAAAAAAeAQABAFQCFldyYXBO
+b25FeGNlcHRpb25UaHJvd3MBCAEAAgAAAAAAKAEAI1NDXzE3NmIzMzExOGZmMjQ4N2JiYTA2NDNh
+MTdlNjFhYjkwAAAFAQAAAAAWAQARQ29weXJpZ2h0IEAgIDIwMjEAAEkBABouTkVURnJhbWV3b3Jr
+LFZlcnNpb249djQuNQEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC41
+BAEAAAAAAAC0AAAAzsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIs
+IG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9r
+ZW49Yjc3YTVjNTYxOTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIA
+AAAAAAAAAAAAAFBBRFBBRFC0AAAAbEMAAAAAAAAAAAAAhkMAAAAgAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAHhDAAAAAAAAAAAAAAAAX0NvckRsbE1haW4AbXNjb3JlZS5kbGwAAAAAAP8lACAAEAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAQAAAA
-GAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAASAAAAFhgAADs
-AwAAAAAAAAAAAADsAzQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAAAAAAvQTv/gAA
-AQAAAAEAAAAAAAAAAQAAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQAAAABAFYAYQBy
-AEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBuAAAAAAAAALAE
-TAMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAKAMAAAEAMAAwADAAMAAwADQAYgAw
-AAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAAYQBuAHkATgBhAG0A
-ZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAAAABTAEMAXwA5
-ADkAYwBjAGYAOQAyAGQAZgAyADgANAA0AGMAYgBhADgANwA1ADYAZQBjADMAMwAxADMAZQA0AGQA
-NwAwADAAAAAwAAgAAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4AMAAuADAAAABw
-ACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAQwBfADkAOQBjAGMAZgA5ADIAZABmADIA
-OAA0ADQAYwBiAGEAOAA3ADUANgBlAGMAMwAzADEAMwBlADQAZAA3ADAAMAAuAGQAbABsAAAASAAS
-AAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAQwBvAHAAeQByAGkAZwBoAHQAIABAACAA
-IAAyADAAMgAxAAAAKgABAAEATABlAGcAYQBsAFQAcgBhAGQAZQBtAGEAcgBrAHMAAAAAAAAAAAB4
-ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBlAAAAUwBDAF8AOQA5AGMAYwBmADkA
-MgBkAGYAMgA4ADQANABjAGIAYQA4ADcANQA2AGUAYwAzADMAMQAzAGUANABkADcAMAAwAC4AZABs
-AGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMAQwBfADkAOQBjAGMAZgA5ADIA
-ZABmADIAOAA0ADQAYwBiAGEAOAA3ADUANgBlAGMAMwAzADEAMwBlADQAZAA3ADAAMAAAADQACAAB
-AFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAA4AAgAAQBBAHMA
-cwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAEAAA
+ABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAEgAAABYYAAA
+7AMAAAAAAAAAAAAA7AM0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8AAAAAAL0E7/4A
+AAEAAAABAAAAAAAAAAEAAAAAAD8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABEAAAAAQBWAGEA
+cgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8AbgAAAAAAAACw
+BEwDAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAACgDAAABADAAMAAwADAAMAA0AGIA
+MAAAABoAAQABAEMAbwBtAG0AZQBuAHQAcwAAAAAAAAAiAAEAAQBDAG8AbQBwAGEAbgB5AE4AYQBt
+AGUAAAAAAAAAAABwACQAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAAAAAAUwBDAF8A
+MQA3ADYAYgAzADMAMQAxADgAZgBmADIANAA4ADcAYgBiAGEAMAA2ADQAMwBhADEANwBlADYAMQBh
+AGIAOQAwAAAAMAAIAAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAuADAALgAwAAAA
+cAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABTAEMAXwAxADcANgBiADMAMwAxADEAOABm
+AGYAMgA0ADgANwBiAGIAYQAwADYANAAzAGEAMQA3AGUANgAxAGEAYgA5ADAALgBkAGwAbAAAAEgA
+EgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAAAEMAbwBwAHkAcgBpAGcAaAB0ACAAQAAg
+ACAAMgAwADIAMQAAACoAAQABAEwAZQBnAGEAbABUAHIAYQBkAGUAbQBhAHIAawBzAAAAAAAAAAAA
+eAAoAAEATwByAGkAZwBpAG4AYQBsAEYAaQBsAGUAbgBhAG0AZQAAAFMAQwBfADEANwA2AGIAMwAz
+ADEAMQA4AGYAZgAyADQAOAA3AGIAYgBhADAANgA0ADMAYQAxADcAZQA2ADEAYQBiADkAMAAuAGQA
+bABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABOAGEAbQBlAAAAAABTAEMAXwAxADcANgBiADMAMwAx
+ADEAOABmAGYAMgA0ADgANwBiAGIAYQAwADYANAAzAGEAMQA3AGUANgAxAGEAYgA5ADAAAAA0AAgA
+AQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAAOAAIAAEAQQBz
+AHMAZQBtAGIAbAB5ACAAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -34067,7 +34049,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAMAAAAkDUAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAADAAAAJgzAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -34076,14 +34058,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       </arrayElements>
                     </property>
                     <property
                       dataType="System.String"
                       description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
                       name="VSTAProjectName"
-                      typeConverter="NOTBROWSABLE">SC_99ccf92df2844cba8756ec3313e4d700</property>
+                      typeConverter="NOTBROWSABLE">SC_176b33118ff2487bba0643a17e61ab90</property>
                     <property
                       dataType="System.String"
                       description="Specifies the programming language used by the script."
@@ -34112,12 +34094,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       dataType="System.String"
                       description="Checksum to match component metedata against compiled codes."
                       name="MetadataChecksum"
-                      typeConverter="NOTBROWSABLE">2b12d915ac54f3ca21cea9162c8d5e83</property>
+                      typeConverter="NOTBROWSABLE">889f631c49203829635c9fe31bfa0493</property>
                     <property
                       dataType="System.String"
                       description="Checksum to match component metedata against compiled codes."
                       name="MetadataShaChecksum"
-                      typeConverter="NOTBROWSABLE">0bcdca0413206891e1df35fca968fa78aff00085</property>
+                      typeConverter="NOTBROWSABLE">2c86fb70a66312e3bd330c1893391841b612d8f9</property>
                     <property
                       dataType="System.String"
                       name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
@@ -34168,13 +34150,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           cachedName="AttributeDescription"
                           lineageId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Left Join Source to Warehouse.Outputs[Merge Join Output].Columns[AttributeDescription]" />
                         <inputColumn
-                          refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Identify Modified Records.Inputs[Input 0].Columns[AttributeDescriptionShort]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="6"
-                          cachedName="AttributeDescriptionShort"
-                          lineageId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Left Join Source to Warehouse.Outputs[Merge Join Output].Columns[AttributeDescriptionShort]" />
-                        <inputColumn
                           refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Identify Modified Records.Inputs[Input 0].Columns[Sequence]"
                           cachedDataType="numeric"
                           cachedName="Sequence"
@@ -34213,16 +34188,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           cachedLength="3"
                           cachedName="MustBeUnique"
                           lineageId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Left Join Source to Warehouse.Outputs[Merge Join Output].Columns[MustBeUnique]" />
-                        <inputColumn
-                          refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Identify Modified Records.Inputs[Input 0].Columns[ETLControlID]"
-                          cachedDataType="i4"
-                          cachedName="ETLControlID"
-                          lineageId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Left Join Source to Warehouse.Outputs[Merge Join Output].Columns[ETLControlID]" />
-                        <inputColumn
-                          refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Identify Modified Records.Inputs[Input 0].Columns[SourceID]"
-                          cachedDataType="i4"
-                          cachedName="SourceID"
-                          lineageId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Left Join Source to Warehouse.Outputs[Merge Join Output].Columns[SourceID]" />
                         <inputColumn
                           refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Identify Modified Records.Inputs[Input 0].Columns[ImportID]"
                           cachedCodepage="1252"
@@ -35573,21 +35538,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           </properties>
                         </inputColumn>
                         <inputColumn
-                          refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge All Delta Records.Inputs[Merge Input 1].Columns[AttributeDescriptionShort]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="6"
-                          cachedName="AttributeDescriptionShort"
-                          lineageId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge New and Modified Records.Outputs[Merge Output 1].Columns[AttributeDescriptionShort]">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Output column lineage ID"
-                              name="OutputColumnLineageID">#{Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge All Delta Records.Outputs[Merge Output 1].Columns[AttributeDescriptionShort]}</property>
-                          </properties>
-                        </inputColumn>
-                        <inputColumn
                           refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge All Delta Records.Inputs[Merge Input 1].Columns[Sequence]"
                           cachedDataType="numeric"
                           cachedName="Sequence"
@@ -35672,32 +35622,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                               dataType="System.Int32"
                               description="Output column lineage ID"
                               name="OutputColumnLineageID">#{Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge All Delta Records.Outputs[Merge Output 1].Columns[MustBeUnique]}</property>
-                          </properties>
-                        </inputColumn>
-                        <inputColumn
-                          refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge All Delta Records.Inputs[Merge Input 1].Columns[ETLControlID]"
-                          cachedDataType="i4"
-                          cachedName="ETLControlID"
-                          lineageId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge New and Modified Records.Outputs[Merge Output 1].Columns[ETLControlID]">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Output column lineage ID"
-                              name="OutputColumnLineageID">#{Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge All Delta Records.Outputs[Merge Output 1].Columns[ETLControlID]}</property>
-                          </properties>
-                        </inputColumn>
-                        <inputColumn
-                          refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge All Delta Records.Inputs[Merge Input 1].Columns[SourceID]"
-                          cachedDataType="i4"
-                          cachedName="SourceID"
-                          lineageId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge New and Modified Records.Outputs[Merge Output 1].Columns[SourceID]">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Output column lineage ID"
-                              name="OutputColumnLineageID">#{Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge All Delta Records.Outputs[Merge Output 1].Columns[SourceID]}</property>
                           </properties>
                         </inputColumn>
                         <inputColumn
@@ -36043,13 +35967,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           lineageId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge All Delta Records.Outputs[Merge Output 1].Columns[AttributeDescription]"
                           name="AttributeDescription" />
                         <outputColumn
-                          refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge All Delta Records.Outputs[Merge Output 1].Columns[AttributeDescriptionShort]"
-                          codePage="1252"
-                          dataType="str"
-                          length="6"
-                          lineageId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge All Delta Records.Outputs[Merge Output 1].Columns[AttributeDescriptionShort]"
-                          name="AttributeDescriptionShort" />
-                        <outputColumn
                           refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge All Delta Records.Outputs[Merge Output 1].Columns[Sequence]"
                           dataType="numeric"
                           lineageId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge All Delta Records.Outputs[Merge Output 1].Columns[Sequence]"
@@ -36088,16 +36005,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           length="256"
                           lineageId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge All Delta Records.Outputs[Merge Output 1].Columns[MustBeUnique]"
                           name="MustBeUnique" />
-                        <outputColumn
-                          refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge All Delta Records.Outputs[Merge Output 1].Columns[ETLControlID]"
-                          dataType="i4"
-                          lineageId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge All Delta Records.Outputs[Merge Output 1].Columns[ETLControlID]"
-                          name="ETLControlID" />
-                        <outputColumn
-                          refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge All Delta Records.Outputs[Merge Output 1].Columns[SourceID]"
-                          dataType="i4"
-                          lineageId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge All Delta Records.Outputs[Merge Output 1].Columns[SourceID]"
-                          name="SourceID" />
                         <outputColumn
                           refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge All Delta Records.Outputs[Merge Output 1].Columns[ImportID]"
                           codePage="1252"
@@ -39850,12 +39757,12 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
                   name="DeletedRecords"
                   startId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Split Deleted Records.Outputs[DeletedRecords]" />
                 <path
-                  refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Derived Column Output4]"
+                  refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Derived Column Output]"
                   endId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Export to csv_DIM_ProjectAttributeDelta.Inputs[Flat File Destination Input]"
                   name="Derived Column Output"
                   startId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Add DblQt Escapte Character.Outputs[Derived Column Output]" />
                 <path
-                  refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Derived Column Output3]"
+                  refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Derived Column Output1]"
                   endId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge New and Modified Records.Inputs[Merge Input 2]"
                   name="Derived Column Output"
                   startId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Set UpdatedStatus to New.Outputs[Derived Column Output]" />
@@ -39865,12 +39772,12 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
                   name="Derived Column Output"
                   startId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Set UpdatedStatus to Deleted.Outputs[Derived Column Output]" />
                 <path
-                  refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Derived Column Output]"
+                  refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Derived Column Output3]"
                   endId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Split New and Existing Records.Inputs[Conditional Split Input]"
                   name="Derived Column Output"
                   startId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Add UpdatedStatus Column.Outputs[Derived Column Output]" />
                 <path
-                  refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Derived Column Output1]"
+                  refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Derived Column Output4]"
                   endId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Split Deleted Records.Inputs[Conditional Split Input]"
                   name="Derived Column Output"
                   startId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Add UpdatedStatus Column 1.Outputs[Derived Column Output]" />
@@ -39900,6 +39807,11 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
                   name="Merge Output 1"
                   startId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge All Delta Records.Outputs[Merge Output 1]" />
                 <path
+                  refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[ModifiedRecords]"
+                  endId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge New and Modified Records.Inputs[Merge Input 1]"
+                  name="ModifiedRecords"
+                  startId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Get Modified Records.Outputs[ModifiedRecords]" />
+                <path
                   refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Multicast Output 1]"
                   endId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Left Join Source to Warehouse.Inputs[Merge Join Right Input]"
                   name="Multicast Output 1"
@@ -39910,12 +39822,12 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
                   name="Multicast Output 1"
                   startId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Multicast Source.Outputs[Multicast Output 1]" />
                 <path
-                  refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Multicast Output 21]"
+                  refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Multicast Output 2]"
                   endId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Left Join Warehouse to Source.Inputs[Merge Join Left Input]"
                   name="Multicast Output 2"
                   startId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Multicast Warehouse.Outputs[Multicast Output 2]" />
                 <path
-                  refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Multicast Output 2]"
+                  refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Multicast Output 21]"
                   endId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Left Join Source to Warehouse.Inputs[Merge Join Left Input]"
                   name="Multicast Output 2"
                   startId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Multicast Source.Outputs[Multicast Output 2]" />
@@ -39936,16 +39848,16 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
                   startId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\OLE DB Source.Outputs[OLE DB Source Output]" />
                 <path
                   refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Output 0]"
-                  endId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge New and Modified Records.Inputs[Merge Input 1]"
+                  endId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Get Modified Records.Inputs[Conditional Split Input]"
                   name="Output 0"
                   startId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Identify Modified Records.Outputs[Output 0]" />
                 <path
-                  refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Sort Output1]"
+                  refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Sort Output]"
                   endId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Multicast Warehouse.Inputs[Multicast Input 1]"
                   name="Sort Output"
                   startId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Sort Warehouse by ProjectAttributeSystemID.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Sort Output]"
+                  refId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Sort Output1]"
                   endId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Multicast Source.Inputs[Multicast Input 1]"
                   name="Sort Output"
                   startId="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Sort Source by ProjectAttributeSystemID.Outputs[Sort Output]" />
@@ -40052,7 +39964,7 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
           PanelSize="391,164"
           Size="391,207"
           Id="Package\Clean Up - Delete Snowflake Config File and Directory"
-          TopLeft="522,849" />
+          TopLeft="52,1395.66666666667" />
         <NodeLayout
           Size="193,42"
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW 1\Load AccountAttributes"
@@ -40347,7 +40259,7 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
           PanelSize="1155,371"
           Size="1155,414"
           Id="Package\Flatfile Export of FE NXT Data for FENXT_DW 1"
-          TopLeft="23.5357142857099,1142.53571428571" />
+          TopLeft="1216.86904761904,405.869047619043" />
         <NodeLayout
           Size="235,42"
           Id="Package\Initialize - Create Snowflake Config Directory and File\Create SnowSQL config file"
@@ -40512,40 +40424,6 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
           Size="495,365"
           Id="Package\Sync DIM_Project"
           TopLeft="483,386" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="275,404">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="455.5,-18"
-              Start="0,0"
-              End="455.5,-25.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-36.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-36.5"
-                    Point2="0,-40.5"
-                    Point3="4,-40.5" />
-                  <mssgle:LineSegment
-                    End="451.5,-40.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="451.5,-40.5"
-                    Point2="455.5,-40.5"
-                    Point3="455.5,-36.5" />
-                  <mssgle:LineSegment
-                    End="455.5,-25.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
           Size="348,42"
           Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Apply Delta to Warehouse Table"
@@ -40553,7 +40431,7 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
         <NodeLayout
           Size="347,42"
           Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Copy Delta From Stage to Table"
-          TopLeft="58,153" />
+          TopLeft="57,153" />
         <NodeLayout
           Size="257,42"
           Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File"
@@ -40598,7 +40476,7 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sync DIM_ProjectAttribute.PrecedenceConstraints[Constraint 1]"
-          TopLeft="232,116">
+          TopLeft="231.5,116">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -40620,7 +40498,7 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sync DIM_ProjectAttribute.PrecedenceConstraints[Constraint 2]"
-          TopLeft="232.75,195">
+          TopLeft="232.25,195">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -40646,21 +40524,67 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
           PanelSize="495,322"
           Size="495,365"
           Id="Package\Sync DIM_ProjectAttribute"
-          TopLeft="1065,389" />
+          TopLeft="471.666666666667,805.666666666667" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="978,570">
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="275,404">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="87,0"
+              EndConnector="455.5,-18"
               Start="0,0"
-              End="79.5,0">
+              End="455.5,-25.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="79.5,0" />
+                    End="0,-36.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-36.5"
+                    Point2="0,-40.5"
+                    Point3="4,-40.5" />
+                  <mssgle:LineSegment
+                    End="451.5,-40.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="451.5,-40.5"
+                    Point2="455.5,-40.5"
+                    Point3="455.5,-36.5" />
+                  <mssgle:LineSegment
+                    End="455.5,-25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="730.5,751">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-11.3333333333335,54.6666666666666"
+              Start="0,0"
+              End="-11.3333333333335,47.1666666666666">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.3333333333333"
+                    Point2="0,27.3333333333333"
+                    Point3="-4,27.3333333333333" />
+                  <mssgle:LineSegment
+                    End="-7.33333333333348,27.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-7.33333333333348,27.3333333333333"
+                    Point2="-11.3333333333335,27.3333333333333"
+                    Point3="-11.3333333333335,31.3333333333333" />
+                  <mssgle:LineSegment
+                    End="-11.3333333333335,47.1666666666666" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -40671,30 +40595,30 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="1312.5,754">
+          TopLeft="719.166666666667,1170.66666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-595,95"
+              EndConnector="-471.666666666667,225"
               Start="0,0"
-              End="-595,87.5">
+              End="-471.666666666667,217.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,43.5" />
+                    End="0,108.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,43.5"
-                    Point2="0,47.5"
-                    Point3="-4,47.5" />
+                    Point1="0,108.5"
+                    Point2="0,112.5"
+                    Point3="-4,112.5" />
                   <mssgle:LineSegment
-                    End="-591,47.5" />
+                    End="-467.666666666667,112.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-591,47.5"
-                    Point2="-595,47.5"
-                    Point3="-595,51.5" />
+                    Point1="-467.666666666667,112.5"
+                    Point2="-471.666666666667,112.5"
+                    Point3="-471.666666666667,116.5" />
                   <mssgle:LineSegment
-                    End="-595,87.5" />
+                    End="-471.666666666667,217.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -42990,43 +42914,115 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="232,42"
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Snowflake Warehouse Projects"
-          TopLeft="606.333333333333,113.666666666667" />
+          Size="277,42"
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Sort Source by ProjectAttributeSystemID"
+          TopLeft="231,206" />
         <NodeLayout
-          Size="157,42"
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\OLE DB Source"
-          TopLeft="219,112" />
+          Size="276,42"
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Export to csv_DIM_ProjectAttributeDelta"
+          TopLeft="420,951" />
         <NodeLayout
           Size="299,42"
           Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Sort Warehouse by ProjectAttributeSystemID"
-          TopLeft="621,213" />
+          TopLeft="702,213" />
+        <NodeLayout
+          Size="232,42"
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Snowflake Warehouse Projects"
+          TopLeft="687.333333333333,113.666666666667" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Identify Modified Records"
+          TopLeft="0,595" />
+        <NodeLayout
+          Size="224,42"
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Set UpdatedStatus to Deleted"
+          TopLeft="743,690" />
+        <NodeLayout
+          Size="224,42"
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Add UpdatedStatus Column 1"
+          TopLeft="760,535" />
+        <NodeLayout
+          Size="230,42"
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Left Join Source to Warehouse"
+          TopLeft="308,446" />
+        <NodeLayout
+          Size="208,42"
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Set UpdatedStatus to New"
+          TopLeft="342,684" />
+        <NodeLayout
+          Size="245,42"
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge New and Modified Records"
+          TopLeft="323,853" />
+        <NodeLayout
+          Size="230,42"
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Left Join Warehouse to Source"
+          TopLeft="753,454" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\OLE DB Source"
+          TopLeft="300,112" />
+        <NodeLayout
+          Size="215,42"
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Add UpdatedStatus Column"
+          TopLeft="308,521" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Multicast Warehouse"
+          TopLeft="784,286" />
+        <NodeLayout
+          Size="287,42"
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Sort Deleted Records by Source SystemID"
+          TopLeft="728,785" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Multicast Source"
+          TopLeft="292,287" />
+        <NodeLayout
+          Size="198,42"
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge All Delta Records"
+          TopLeft="789,867" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Get Modified Records"
+          TopLeft="45,687" />
+        <NodeLayout
+          Size="224,42"
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Add DblQt Escapte Character"
+          TopLeft="778,948" />
+        <NodeLayout
+          Size="232,42"
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Split New and Existing Records"
+          TopLeft="312,597" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Split Deleted Records"
+          TopLeft="773,607" />
         <EdgeLayout
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[ODBC Source Output]"
-          TopLeft="722.333333333333,155.666666666667">
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Output 0]"
+          TopLeft="101.5,637">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="48.166666666667,57.333333333333"
+              EndConnector="36,50"
               Start="0,0"
-              End="48.166666666667,49.833333333333">
+              End="36,42.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.6666666666665" />
+                    End="0,21" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,24.6666666666665"
-                    Point2="0,28.6666666666665"
-                    Point3="4,28.6666666666665" />
+                    Point1="0,21"
+                    Point2="0,25"
+                    Point3="4,25" />
                   <mssgle:LineSegment
-                    End="44.166666666667,28.6666666666665" />
+                    End="32,25" />
                   <mssgle:CubicBezierSegment
-                    Point1="44.166666666667,28.6666666666665"
-                    Point2="48.166666666667,28.6666666666665"
-                    Point3="48.166666666667,32.6666666666665" />
+                    Point1="32,25"
+                    Point2="36,25"
+                    Point3="36,29" />
                   <mssgle:LineSegment
-                    End="48.166666666667,49.833333333333" />
+                    End="36,42.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -43035,13 +43031,9 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="277,42"
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Sort Source by ProjectAttributeSystemID"
-          TopLeft="150,206" />
         <EdgeLayout
           Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[OLE DB Source Output]"
-          TopLeft="297.5,154">
+          TopLeft="378.5,154">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -43073,24 +43065,32 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="160,42"
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Multicast Source"
-          TopLeft="211,287" />
         <EdgeLayout
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Sort Output]"
-          TopLeft="289.75,248">
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[ODBC Source Output]"
+          TopLeft="803.333333333333,155.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,39"
+              EndConnector="48.166666666667,57.333333333333"
               Start="0,0"
-              End="0,31.5">
+              End="48.166666666667,49.833333333333">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5" />
+                    End="0,24.6666666666665" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.6666666666665"
+                    Point2="0,28.6666666666665"
+                    Point3="4,28.6666666666665" />
+                  <mssgle:LineSegment
+                    End="44.166666666667,28.6666666666665" />
+                  <mssgle:CubicBezierSegment
+                    Point1="44.166666666667,28.6666666666665"
+                    Point2="48.166666666667,28.6666666666665"
+                    Point3="48.166666666667,32.6666666666665" />
+                  <mssgle:LineSegment
+                    End="48.166666666667,49.833333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -43099,227 +43099,9 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="182,42"
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Multicast Warehouse"
-          TopLeft="703,286" />
-        <EdgeLayout
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Sort Output1]"
-          TopLeft="770.5,255">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="23.5,31"
-              Start="0,0"
-              End="23.5,23.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,11.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11.5"
-                    Point2="0,15.5"
-                    Point3="4,15.5" />
-                  <mssgle:LineSegment
-                    End="19.5,15.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="19.5,15.5"
-                    Point2="23.5,15.5"
-                    Point3="23.5,19.5" />
-                  <mssgle:LineSegment
-                    End="23.5,23.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="230,42"
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Left Join Source to Warehouse"
-          TopLeft="227,446" />
-        <EdgeLayout
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Multicast Output 2]"
-          TopLeft="291,329">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="14,117"
-              Start="0,0"
-              End="14,109.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,65.7150259067357" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,65.7150259067357"
-                    Point2="0,69.7150259067357"
-                    Point3="4,69.7150259067357" />
-                  <mssgle:LineSegment
-                    End="10,69.7150259067357" />
-                  <mssgle:CubicBezierSegment
-                    Point1="10,69.7150259067357"
-                    Point2="14,69.7150259067357"
-                    Point3="14,73.7150259067357" />
-                  <mssgle:LineSegment
-                    End="14,109.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Multicast Output 1]"
-          TopLeft="794,328">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-415,118"
-              Start="0,0"
-              End="-415,110.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,66.3108808290155" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,66.3108808290155"
-                    Point2="0,70.3108808290155"
-                    Point3="-4,70.3108808290155" />
-                  <mssgle:LineSegment
-                    End="-411,70.3108808290155" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-411,70.3108808290155"
-                    Point2="-415,70.3108808290155"
-                    Point3="-415,74.3108808290155" />
-                  <mssgle:LineSegment
-                    End="-415,110.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="215,42"
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Add UpdatedStatus Column"
-          TopLeft="227,521" />
-        <EdgeLayout
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Merge Join Output]"
-          TopLeft="338.25,488">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,33"
-              Start="0,0"
-              End="0,25.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="232,42"
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Split New and Existing Records"
-          TopLeft="231,597" />
-        <EdgeLayout
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Derived Column Output]"
-          TopLeft="334.5,563">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="12.5,34"
-              Start="0,0"
-              End="12.5,26.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13"
-                    Point2="0,17"
-                    Point3="4,17" />
-                  <mssgle:LineSegment
-                    End="8.5,17" />
-                  <mssgle:CubicBezierSegment
-                    Point1="8.5,17"
-                    Point2="12.5,17"
-                    Point3="12.5,21" />
-                  <mssgle:LineSegment
-                    End="12.5,26.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="203,42"
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Identify Modified Records"
-          TopLeft="12,598" />
-        <EdgeLayout
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[ExistingRecords]"
-          TopLeft="309.666666666667,597">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-196.166666666667,1"
-              Start="0,0"
-              End="-196.166666666667,-6.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-18.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-18.5"
-                    Point2="0,-22.5"
-                    Point3="-4,-22.5" />
-                  <mssgle:LineSegment
-                    End="-192.166666666667,-22.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-192.166666666667,-22.5"
-                    Point2="-196.166666666667,-22.5"
-                    Point3="-196.166666666667,-18.5" />
-                  <mssgle:LineSegment
-                    End="-196.166666666667,-6.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-133.195911458333,-17.5,70.22515625,11.6630859375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="208,42"
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Set UpdatedStatus to New"
-          TopLeft="261,684" />
         <EdgeLayout
           Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[NewRecords]"
-          TopLeft="347,639">
+          TopLeft="428,639">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -43353,13 +43135,43 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="230,42"
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Left Join Warehouse to Source"
-          TopLeft="672,454" />
         <EdgeLayout
           Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Multicast Output 21]"
-          TopLeft="823,328">
+          TopLeft="372,329">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="14,117"
+              Start="0,0"
+              End="14,109.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,65.7150259067357" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,65.7150259067357"
+                    Point2="0,69.7150259067357"
+                    Point3="4,69.7150259067357" />
+                  <mssgle:LineSegment
+                    End="10,69.7150259067357" />
+                  <mssgle:CubicBezierSegment
+                    Point1="10,69.7150259067357"
+                    Point2="14,69.7150259067357"
+                    Point3="14,73.7150259067357" />
+                  <mssgle:LineSegment
+                    End="14,109.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Multicast Output 2]"
+          TopLeft="904,328">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -43393,7 +43205,7 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Multicast Output 11]"
-          TopLeft="316.333333333333,329">
+          TopLeft="397.333333333333,329">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -43425,13 +43237,79 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="224,42"
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Add UpdatedStatus Column 1"
-          TopLeft="679,535" />
         <EdgeLayout
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Merge Join Output1]"
-          TopLeft="789,496">
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Multicast Output 1]"
+          TopLeft="875,328">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-415,118"
+              Start="0,0"
+              End="-415,110.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,66.3108808290155" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,66.3108808290155"
+                    Point2="0,70.3108808290155"
+                    Point3="-4,70.3108808290155" />
+                  <mssgle:LineSegment
+                    End="-411,70.3108808290155" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-411,70.3108808290155"
+                    Point2="-415,70.3108808290155"
+                    Point3="-415,74.3108808290155" />
+                  <mssgle:LineSegment
+                    End="-415,110.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[ModifiedRecords]"
+          TopLeft="137.5,729">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="268.5,124"
+              Start="0,0"
+              End="268.5,116.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,69.9172749391727" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,69.9172749391727"
+                    Point2="0,73.9172749391727"
+                    Point3="4,73.9172749391727" />
+                  <mssgle:LineSegment
+                    End="264.5,73.9172749391727" />
+                  <mssgle:CubicBezierSegment
+                    Point1="264.5,73.9172749391727"
+                    Point2="268.5,73.9172749391727"
+                    Point3="268.5,77.9172749391727" />
+                  <mssgle:LineSegment
+                    End="268.5,116.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="97.552421875,78.9172749391727,73.39515625,9.7978515625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Merge Output 11]"
+          TopLeft="889,909">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -43451,13 +43329,111 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="185,42"
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Split Deleted Records"
-          TopLeft="692,607" />
         <EdgeLayout
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Derived Column Output1]"
-          TopLeft="787.75,577">
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Merge Output 1]"
+          TopLeft="568,874">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="221,14"
+              Start="0,0"
+              End="213.5,14">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="106.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="106.5,0"
+                    Point2="110.5,0"
+                    Point3="110.5,4" />
+                  <mssgle:LineSegment
+                    End="110.5,10" />
+                  <mssgle:CubicBezierSegment
+                    Point1="110.5,10"
+                    Point2="110.5,14"
+                    Point3="114.5,14" />
+                  <mssgle:LineSegment
+                    End="213.5,14" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Merge Join Output1]"
+          TopLeft="870,496">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39"
+              Start="0,0"
+              End="0,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Merge Join Output]"
+          TopLeft="419.25,488">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33"
+              Start="0,0"
+              End="0,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[ExistingRecords]"
+          TopLeft="312,617">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-109,0"
+              Start="0,0"
+              End="-101.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-101.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-85.862578125,5,70.22515625,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Derived Column Output4]"
+          TopLeft="868.75,577">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -43477,13 +43453,121 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="224,42"
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Set UpdatedStatus to Deleted"
-          TopLeft="662,690" />
+        <EdgeLayout
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Derived Column Output3]"
+          TopLeft="415.5,563">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12.5,34"
+              Start="0,0"
+              End="12.5,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13"
+                    Point2="0,17"
+                    Point3="4,17" />
+                  <mssgle:LineSegment
+                    End="8.5,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8.5,17"
+                    Point2="12.5,17"
+                    Point3="12.5,21" />
+                  <mssgle:LineSegment
+                    End="12.5,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Derived Column Output2]"
+          TopLeft="855,732">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="16.5,53"
+              Start="0,0"
+              End="16.5,45.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.5"
+                    Point2="0,26.5"
+                    Point3="4,26.5" />
+                  <mssgle:LineSegment
+                    End="12.5,26.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="12.5,26.5"
+                    Point2="16.5,26.5"
+                    Point3="16.5,30.5" />
+                  <mssgle:LineSegment
+                    End="16.5,45.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Derived Column Output1]"
+          TopLeft="445.75,726">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,127"
+              Start="0,0"
+              End="0,119.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,119.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Derived Column Output]"
+          TopLeft="778,970.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-82,0"
+              Start="0,0"
+              End="-74.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-74.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[DeletedRecords]"
-          TopLeft="784.5,649">
+          TopLeft="865.5,649">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -43517,168 +43601,32 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="287,42"
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Sort Deleted Records by Source SystemID"
-          TopLeft="647,785" />
-        <EdgeLayout
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Derived Column Output2]"
-          TopLeft="774,732">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="16.5,53"
-              Start="0,0"
-              End="16.5,45.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.5"
-                    Point2="0,26.5"
-                    Point3="4,26.5" />
-                  <mssgle:LineSegment
-                    End="12.5,26.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="12.5,26.5"
-                    Point2="16.5,26.5"
-                    Point3="16.5,30.5" />
-                  <mssgle:LineSegment
-                    End="16.5,45.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="245,42"
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge New and Modified Records"
-          TopLeft="208,793" />
-        <EdgeLayout
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Output 0]"
-          TopLeft="113.5,640">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="177.5,153"
-              Start="0,0"
-              End="177.5,145.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,87.2043795620438" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,87.2043795620438"
-                    Point2="0,91.2043795620438"
-                    Point3="4,91.2043795620438" />
-                  <mssgle:LineSegment
-                    End="173.5,91.2043795620438" />
-                  <mssgle:CubicBezierSegment
-                    Point1="173.5,91.2043795620438"
-                    Point2="177.5,91.2043795620438"
-                    Point3="177.5,95.2043795620438" />
-                  <mssgle:LineSegment
-                    End="177.5,145.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Derived Column Output3]"
-          TopLeft="367.5,726">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,67"
-              Start="0,0"
-              End="0,59.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,59.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="198,42"
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Merge All Delta Records"
-          TopLeft="709,868" />
-        <EdgeLayout
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Merge Output 1]"
-          TopLeft="330.5,835">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="445.833333333333,33"
-              Start="0,0"
-              End="445.833333333333,25.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.6412825651303" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,15.6412825651303"
-                    Point2="0,19.6412825651303"
-                    Point3="4,19.6412825651303" />
-                  <mssgle:LineSegment
-                    End="441.833333333333,19.6412825651303" />
-                  <mssgle:CubicBezierSegment
-                    Point1="441.833333333333,19.6412825651303"
-                    Point2="445.833333333333,19.6412825651303"
-                    Point3="445.833333333333,23.6412825651303" />
-                  <mssgle:LineSegment
-                    End="445.833333333333,25.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Sort Output2]"
-          TopLeft="790.5,827">
+          TopLeft="871.5,827">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="49.1666666666666,41"
+              EndConnector="16.5,40"
               Start="0,0"
-              End="49.1666666666666,33.5">
+              End="16.5,32.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.4028056112224" />
+                    End="0,16" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20.4028056112224"
-                    Point2="0,24.4028056112224"
-                    Point3="4,24.4028056112224" />
+                    Point1="0,16"
+                    Point2="0,20"
+                    Point3="4,20" />
                   <mssgle:LineSegment
-                    End="45.1666666666666,24.4028056112224" />
+                    End="12.5,20" />
                   <mssgle:CubicBezierSegment
-                    Point1="45.1666666666666,24.4028056112224"
-                    Point2="49.1666666666666,24.4028056112224"
-                    Point3="49.1666666666666,28.4028056112224" />
+                    Point1="12.5,20"
+                    Point2="16.5,20"
+                    Point3="16.5,24" />
                   <mssgle:LineSegment
-                    End="49.1666666666666,33.5" />
+                    End="16.5,32.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -43687,24 +43635,20 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="224,42"
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Add DblQt Escapte Character"
-          TopLeft="697,948" />
         <EdgeLayout
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Merge Output 11]"
-          TopLeft="808.5,910">
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Sort Output1]"
+          TopLeft="370.75,248">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,38"
+              EndConnector="0,39"
               Start="0,0"
-              End="0,30.5">
+              End="0,31.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.5" />
+                    End="0,31.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -43713,24 +43657,32 @@ FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE";</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="276,42"
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File\Export to csv_DIM_ProjectAttributeDelta"
-          TopLeft="339,951" />
         <EdgeLayout
-          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Derived Column Output4]"
-          TopLeft="697,970.5">
+          Id="Package\Sync DIM_ProjectAttribute\DIM_ProjectAttribute - Get Delta File.Paths[Sort Output]"
+          TopLeft="851.5,255">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-82,0"
+              EndConnector="23.5,31"
               Start="0,0"
-              End="-74.5,0">
+              End="23.5,23.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-74.5,0" />
+                    End="0,11.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.5"
+                    Point2="0,15.5"
+                    Point3="4,15.5" />
+                  <mssgle:LineSegment
+                    End="19.5,15.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="19.5,15.5"
+                    Point2="23.5,15.5"
+                    Point3="23.5,19.5" />
+                  <mssgle:LineSegment
+                    End="23.5,23.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

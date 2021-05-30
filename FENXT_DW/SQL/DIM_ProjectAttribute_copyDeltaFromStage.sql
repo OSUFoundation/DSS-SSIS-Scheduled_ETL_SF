@@ -14,8 +14,8 @@ CREATE OR REPLACE TABLE "DIM_PROJECTATTRIBUTE"
   MustBeUnique varchar(256),
   ImportID varchar(256),
   DateAdded TIMESTAMP_NTZ(9),
-  DateChanged TIMESTAMP_NTZ(9)
-    
+  DateChanged TIMESTAMP_NTZ(9),
+  UpdatedStatus varchar(256)  
 );                                              
 
 

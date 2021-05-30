@@ -1,5 +1,5 @@
 DELETE FROM "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE"
-WHERE "ProjectAttributeDimID" IN(SELECT "ProjectAttributeDimID" From "FENXT_DW"."BB_DELTA"."DIM_PROJECTATTRIBUTE");
+WHERE ProjectAttributeDimID IN(SELECT ProjectAttributeDimID From "FENXT_DW"."BB_DELTA"."DIM_PROJECTATTRIBUTE");
 
 Insert Into "FENXT_DW"."BB"."DIM_PROJECTATTRIBUTE"
 Select 
@@ -19,5 +19,5 @@ Select
 , DATEADDED
 , DATECHANGED
 From "FENXT_DW"."BB_DELTA"."DIM_PROJECTATTRIBUTE"
-WHERE "UpdatedStatus" In('New','Modified');
+WHERE UpdatedStatus In('New','Modified');
 
