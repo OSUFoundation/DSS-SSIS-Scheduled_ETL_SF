@@ -50,7 +50,7 @@ CREATE OR REPLACE TABLE "FACT_GLTransactionDistribution"
 	ClassDescription varchar(256),
 	ETLControlID numeric(38,0),
 	SourceID numeric(38,0),
-	Notes varchar,
+	Notes varchar(8000),
 	Name varchar(256),
 	ADCCode varchar(256),
 	BAIndex varchar(256),
