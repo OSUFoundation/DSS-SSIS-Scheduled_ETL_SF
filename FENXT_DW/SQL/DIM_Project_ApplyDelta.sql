@@ -1,7 +1,7 @@
-DELETE FROM "FENXT_DW"."BB"."DIM_PROJECT"
-WHERE "ProjectDimID" IN(SELECT "ProjectDimID" From "FENXT_DW"."BB_DELTA"."DIM_PROJECT");
+DELETE FROM "FENXT_DW"."BB"."DIM_Project"
+WHERE ProjectDimID IN(SELECT "ProjectDimID" From "FENXT_DW"."BB_DELTA"."DIM_PROJECT");
 
-Insert Into "FENXT_DW"."BB"."DIM_PROJECT"
+Insert Into "FENXT_DW"."BB"."DIM_Project"
 Select 
   "ProjectDimID"
 , "ProjectSystemID"
