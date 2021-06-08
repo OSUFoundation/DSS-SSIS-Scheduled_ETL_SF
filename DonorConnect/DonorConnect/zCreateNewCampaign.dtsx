@@ -1,0 +1,2860 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/6/2021 9:27:47 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ETL2"
+  DTS:CreatorName="FOUNDATION\dfai"
+  DTS:DTSID="{1A271864-C804-42F0-A5DB-48BC3F8AAE9D}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.166"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="99"
+  DTS:VersionGUID="{1C46A649-D3B6-4F13-A741-D0DFDC0D6758}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Campaign]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C8A178AF-3600-4594-A77B-27D43D286707}"
+      DTS:ObjectName="Campaign">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\temp\C1.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ActualCost"
+              DTS:DTSID="{AE69868D-D571-4996-94AC-48B6345279A8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AmountAllOpportunities"
+              DTS:DTSID="{70ED8410-B8B2-495F-AFF1-113A474B392D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AmountWonOpportunities"
+              DTS:DTSID="{5587B3D8-953E-4D75-B39E-091A26ED2346}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Appeal_Name"
+              DTS:DTSID="{087E4C75-FC0B-43E1-9CB8-1598059358D7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BudgetedCost"
+              DTS:DTSID="{417DD72D-15BD-4507-9A17-6D36919E6784}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="18"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CampaignMemberRecordTypeId"
+              DTS:DTSID="{DC991D35-7E38-4F94-AB70-64A60BB26533}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1300"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Channel"
+              DTS:DTSID="{092A36B0-59EC-4A5E-992C-03EFE52987B7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="18"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="College_Unit"
+              DTS:DTSID="{A0E70894-96F4-4692-A19E-2D318052654E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Description"
+              DTS:DTSID="{9DECD566-CF39-4B05-9632-666B6647A338}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EndDate"
+              DTS:DTSID="{F27CA2F4-FC0C-4B7D-9618-0AFEDC3E6B15}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Event"
+              DTS:DTSID="{7AD4677B-FD72-466E-B3C2-41F1B2311BE4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ExpectedResponse"
+              DTS:DTSID="{139F8935-7A5D-4E36-A9D2-D329393CF991}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ExpectedRevenue"
+              DTS:DTSID="{61667593-5FAF-4729-8D0F-D2E4EFB6AEF6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="External_System_ID"
+              DTS:DTSID="{B8C50106-4051-40FC-AEC6-1F3A8086FE98}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HierarchyActualCost"
+              DTS:DTSID="{6D9F113A-2ABC-414C-836F-5AB29910748D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HierarchyAmountAllOpportunities"
+              DTS:DTSID="{D4C777FD-AF69-4557-A2D7-5C1E482C1FC3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HierarchyAmountWonOpportunities"
+              DTS:DTSID="{55B8935A-D7C8-4BA1-87D9-1D7340F1967F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HierarchyBudgetedCost"
+              DTS:DTSID="{79FE9C51-2E2B-48AC-AA6C-10739C57D9D1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HierarchyExpectedRevenue"
+              DTS:DTSID="{4417BBB6-5494-4B63-8067-E6BC158D5984}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HierarchyNumberOfContacts"
+              DTS:DTSID="{F6AED48C-504C-4AB0-A778-B3434DC965E8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HierarchyNumberOfConvertedLeads"
+              DTS:DTSID="{35B379E3-8FDE-4983-B76A-D263173C2FCC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HierarchyNumberOfLeads"
+              DTS:DTSID="{7EDE611B-D5A9-4C6C-965E-24F2EE0D3CD9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HierarchyNumberOfOpportunities"
+              DTS:DTSID="{BAAF22C1-E6B5-471B-B760-8A3F364EFD91}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HierarchyNumberOfResponses"
+              DTS:DTSID="{A43DC8D8-B878-4615-8620-45F961F9FB06}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HierarchyNumberOfWonOpportunities"
+              DTS:DTSID="{A6B96DD4-77DA-40E4-AB98-604D81DDCE59}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HierarchyNumberSent"
+              DTS:DTSID="{E0BD501B-282B-4030-B540-B51DCEF2A109}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="18"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Id"
+              DTS:DTSID="{C5C357D4-A38B-4BB2-94F4-2265BDFD0163}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="18"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Internal_Department"
+              DTS:DTSID="{A520EF6C-8455-4E07-862C-1F1A097E5F15}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IsActive"
+              DTS:DTSID="{1042DB2B-6B17-456A-9D7C-AA652445EE3A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IsDeleted"
+              DTS:DTSID="{83B8028D-9DAC-4817-AD26-01AC164D4EF5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LastActivityDate"
+              DTS:DTSID="{F0D528A9-7CE9-4DC6-9ABF-51FAD7DB909D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LastReferencedDate"
+              DTS:DTSID="{F66E9CB4-BD85-4683-9BFB-0FCE6A89B576}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LastViewedDate"
+              DTS:DTSID="{ACD772D9-4399-4909-A2DB-AF48F3D9A462}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Marketing_Interests"
+              DTS:DTSID="{84E271E0-64CC-400B-8B5A-8822B15322CA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="80"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Name"
+              DTS:DTSID="{1DB19EAF-50C0-4B62-8616-3A638F1BF526}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NumberOfContacts"
+              DTS:DTSID="{C059C6DE-D5CC-4A47-8147-AC2702D5CE84}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NumberOfConvertedLeads"
+              DTS:DTSID="{4FA1699D-E5FB-4E5E-8E25-CA4E7C2BC0C4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NumberOfLeads"
+              DTS:DTSID="{DD12EEFB-220C-43F8-931D-3A4B268257F9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NumberOfOpportunities"
+              DTS:DTSID="{EA5A73CE-EECA-4AC4-AE37-5B259C4359C5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NumberOfResponses"
+              DTS:DTSID="{A595E518-3308-4B92-B2B0-1415F1819050}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NumberOfWonOpportunities"
+              DTS:DTSID="{0D54EA4F-1A49-42E7-A4D6-95E45739706C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NumberSent"
+              DTS:DTSID="{8B741A19-235C-4A18-A0A6-560D8EEC49C6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="18"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Originating_Partner"
+              DTS:DTSID="{8AD06B3D-4408-4FD0-B740-82CEBBC77120}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="18"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OwnerId"
+              DTS:DTSID="{6189BDBC-98C7-4E1E-80DD-9D4269AAB10C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="18"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ParentId"
+              DTS:DTSID="{B749EEB0-45DF-456B-8460-F7BF1FC554F2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="18"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Passion_Interest"
+              DTS:DTSID="{490C5FE8-2022-400E-8C8B-8FDA289E35D7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="18"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="RecordTypeId"
+              DTS:DTSID="{C5AB8B6F-2957-480B-AFE7-497D71CA8AFE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1300"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Record_Type_Text"
+              DTS:DTSID="{102F03B2-9804-4F92-AC26-FF21991552B4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StartDate"
+              DTS:DTSID="{F8FD1111-B709-4330-BFBF-2007441E361B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Status"
+              DTS:DTSID="{FB7EC772-1501-4D79-99E0-F78F3D2E617C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Type"
+              DTS:DTSID="{8CCB01BB-A682-4837-A61F-3AC52BDF498E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ucinn_ascendv2__Motivation_Code"
+              DTS:DTSID="{7AA15599-714A-4301-A24B-417EA0450C27}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Devart Salesforce Connection Manager]"
+      DTS:CreationName="DevartSalesforce"
+      DTS:DTSID="{3a709264-125f-4911-8f2c-46d0be2c7409}"
+      DTS:ObjectName="Devart Salesforce Connection Manager">
+      <DTS:ObjectData>
+        <SalesforceConnectionManager
+          ConnectByProxy="False">
+          <ConnectionString>User Id=dfair@osugiving.com.qa;Host=test.salesforce.com;Refresh Metadata=True;Cache All=False;Batch Size=2000</ConnectionString>
+          <Password
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOuinSlsnMEiFkNB94NYrWwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACJ1ZcJVYBGg0hpMKDzDh4rAAAAAASAAACgAAAAEAAAAIEVfx66FxjMGcoxdNEElN8YAAAAOrvy4BRZHs/QzjBwwesnMKd/kN4GbtxqFAAAABknDIWKauRfkMCijO4vrMxYKkQL</Password>
+          <SecurityToken
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOuinSlsnMEiFkNB94NYrWwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABI4Lw9LYlqfDO5JUnBAQuGAAAAAASAAACgAAAAEAAAAP16tNlc5baeVSGtmgy7NI44AAAAKR+Ycq6vgsSwxCugxtuc9v6pNylCn46h8tfl6P1cUlccEFGwd0V/nSU/dh4gT/fOKuLnj8746O4UAAAAZZhzEI/lJxDn4eLMyLOV/1wOTaM</SecurityToken>
+        </SalesforceConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Devart Salesforce Connection Manager 1]"
+      DTS:CreationName="DevartSalesforce"
+      DTS:DTSID="{B5A89FC9-BEBC-4D1B-BD81-98E99DBF5A4B}"
+      DTS:ObjectName="Devart Salesforce Connection Manager 1">
+      <DTS:ObjectData>
+        <SalesforceConnectionManager
+          ConnectByProxy="False">
+          <ConnectionString>User Id=ssisapi@osugiving.com.qa;Host=test.salesforce.com;Refresh Metadata=True</ConnectionString>
+          <Password
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOuinSlsnMEiFkNB94NYrWwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACTRZeGq+/VyufHbjdp++FhAAAAAASAAACgAAAAEAAAACpA3N1V1MvzuTO213QpyWAwAAAA5CkYtPLnxL0aT83trQhiWpcesAU2uMCf7UIUSU/ZfavZhjsekhjAKaVY1juXr1HfFAAAAMchiy0aXg/06LnIhRLH1xHK/yjU</Password>
+          <SecurityToken
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOuinSlsnMEiFkNB94NYrWwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADeMzKhLg5aQSCLI1sxcR0TAAAAAASAAACgAAAAEAAAAHMLBCwJ+eH1PVvxdDsczCk4AAAA7kX5+mAR7fECYQsSNj2NvKvmFgwNAE+mCRuzfYyM8XeUAjyq+5YQXfMEsD2nwEvSAgoOVKB1kWAUAAAAJOL9uD3KKmiE9pJw8zzvJQR5aQ8</SecurityToken>
+        </SalesforceConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[OSUF_INTERFACES_FACULTY_STAFF.OSUF_SSIS]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{D413B2D9-96EE-4895-B53D-91795839EB5C}"
+      DTS:ObjectName="OSUF_INTERFACES_FACULTY_STAFF.OSUF_SSIS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=OSUF_SSIS;Dsn=OSUF_INTERFACES_FACULTY_STAFF;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{15319B99-B427-407A-B86E-262C10FF5171}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="AddCampaign">
+      <DTS:VariableValue
+        DTS:DataType="17">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6909C574-8287-4030-AD27-0097BA19166D}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Campaign">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{5167DF01-FECA-4386-806C-94134F6D7064}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RowCount">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Create New Campaign"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{26BA3955-EC56-48C5-8E15-C55049503504}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Create New Campaign"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Create New Campaign\Add new campaign to Campaign Object"
+              componentClassID="Microsoft.ManagedComponentHost"
+              description="Loads or modifies data into an object of the Salesforce.com(or Database.com) cloud database."
+              name="Add new campaign to Campaign Object"
+              usesDispositions="true"
+              validateExternalMetadata="False"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Null"
+                  name="DesignObject"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.String"
+                  description="The name of the Salesforce Object to load or update data."
+                  name="Salesforce Object"
+                  typeConverter="Devart.SSIS.Salesforce.Design.DestinationSelectStatementsListConverter, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">Campaign</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of rows to be sent as a batch to the server."
+                  name="BatchSize">5000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the max size of local buffer."
+                  name="BufferSize">10485760</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies destination action type."
+                  name="Action"
+                  typeConverter="Devart.SSIS.Salesforce.DestinationAction, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies external identifier field."
+                  expressionType="Notify"
+                  name="ExternalId"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.Boolean"
+                  description="Cached id in the local storage."
+                  name="CacheId">false</property>
+                <property
+                  dataType="System.Null"
+                  description="The unique column in the source table that should be associate to the Salesforce ID."
+                  name="SourceKey"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether multiple batches associated with a bulk load operation are processed by Salesforce in parallel or one at a time. The default is true."
+                  name="ParallelBatchProcessing">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the ID of a specific assignment rule to run for the Case or Lead."
+                  name="Assignment Rule Id" />
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Devart.SSIS.Salesforce.SalesforceDestination, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Create New Campaign\Add new campaign to Campaign Object.Connections[Devart Salesforce]"
+                  connectionManagerID="Package.ConnectionManagers[Devart Salesforce Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Devart Salesforce Connection Manager]"
+                  description="Devart Salesforce Connection Manager"
+                  name="Devart Salesforce" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input]"
+                  errorOrTruncationOperation="Insert operation"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="input">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Redirect only error rows to error output."
+                      name="RedirectErrorsOnly">false</property>
+                  </properties>
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].Columns[APPEAL_NAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="APPEAL_NAME"
+                      externalMetadataColumnId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[Appeal_Name]"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[APPEAL_NAME]" />
+                    <inputColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].Columns[UCINN_ASCENDV2__MOTIVATION_CODE]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="UCINN_ASCENDV2__MOTIVATION_CODE"
+                      externalMetadataColumnId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[ucinn_ascendv2__Motivation_Code]"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__MOTIVATION_CODE]" />
+                    <inputColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].Columns[ORIGINATING_PARTNER]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="36"
+                      cachedName="ORIGINATING_PARTNER"
+                      externalMetadataColumnId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[Originating_Partner]"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[ORIGINATING_PARTNER]" />
+                    <inputColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].Columns[STATUS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="STATUS"
+                      externalMetadataColumnId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[Status]"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[STATUS]" />
+                    <inputColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].Columns[TYPE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="TYPE"
+                      externalMetadataColumnId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[Type]"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[TYPE]" />
+                    <inputColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].Columns[ISACTIVE]"
+                      cachedDataType="numeric"
+                      cachedName="ISACTIVE"
+                      cachedPrecision="1"
+                      externalMetadataColumnId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[IsActive]"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[ISACTIVE]" />
+                    <inputColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].Columns[DESCRIPTION]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="DESCRIPTION"
+                      externalMetadataColumnId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[Description]"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[DESCRIPTION]" />
+                    <inputColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].Columns[STARTDATE]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="STARTDATE"
+                      externalMetadataColumnId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[StartDate]"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[STARTDATE]" />
+                    <inputColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].Columns[ENDDATE]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="ENDDATE"
+                      externalMetadataColumnId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[EndDate]"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[ENDDATE]" />
+                    <inputColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].Columns[NAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="NAME"
+                      externalMetadataColumnId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[Name]"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[NAME]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[Id]"
+                      dataType="wstr"
+                      length="18"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[IsDeleted]"
+                      dataType="bool"
+                      name="IsDeleted" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="80"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[ParentId]"
+                      dataType="wstr"
+                      length="18"
+                      name="ParentId">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">Campaign</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">Campaign</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">Campaign</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">Campaign</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">Campaign</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">Campaign</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">Campaign</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[Type]"
+                      dataType="wstr"
+                      length="255"
+                      name="Type" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[RecordTypeId]"
+                      dataType="wstr"
+                      length="18"
+                      name="RecordTypeId">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">RecordType</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">RecordType</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">RecordType</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">RecordType</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">RecordType</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">RecordType</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">RecordType</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[Status]"
+                      dataType="wstr"
+                      length="255"
+                      name="Status" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[StartDate]"
+                      dataType="dbTimeStamp"
+                      name="StartDate" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[EndDate]"
+                      dataType="dbTimeStamp"
+                      name="EndDate" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[ExpectedRevenue]"
+                      dataType="r8"
+                      name="ExpectedRevenue" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[BudgetedCost]"
+                      dataType="r8"
+                      name="BudgetedCost" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[ActualCost]"
+                      dataType="r8"
+                      name="ActualCost" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[ExpectedResponse]"
+                      dataType="r8"
+                      name="ExpectedResponse" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[NumberSent]"
+                      dataType="r8"
+                      name="NumberSent" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[IsActive]"
+                      dataType="bool"
+                      name="IsActive" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[Description]"
+                      dataType="nText"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[NumberOfLeads]"
+                      dataType="i4"
+                      name="NumberOfLeads" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[NumberOfConvertedLeads]"
+                      dataType="i4"
+                      name="NumberOfConvertedLeads" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[NumberOfContacts]"
+                      dataType="i4"
+                      name="NumberOfContacts" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[NumberOfResponses]"
+                      dataType="i4"
+                      name="NumberOfResponses" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[NumberOfOpportunities]"
+                      dataType="i4"
+                      name="NumberOfOpportunities" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[NumberOfWonOpportunities]"
+                      dataType="i4"
+                      name="NumberOfWonOpportunities" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[AmountAllOpportunities]"
+                      dataType="r8"
+                      name="AmountAllOpportunities" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[AmountWonOpportunities]"
+                      dataType="r8"
+                      name="AmountWonOpportunities" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[HierarchyNumberOfLeads]"
+                      dataType="i4"
+                      name="HierarchyNumberOfLeads" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[HierarchyNumberOfConvertedLeads]"
+                      dataType="i4"
+                      name="HierarchyNumberOfConvertedLeads" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[HierarchyNumberOfContacts]"
+                      dataType="i4"
+                      name="HierarchyNumberOfContacts" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[HierarchyNumberOfResponses]"
+                      dataType="i4"
+                      name="HierarchyNumberOfResponses" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[HierarchyNumberOfOpportunities]"
+                      dataType="i4"
+                      name="HierarchyNumberOfOpportunities" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[HierarchyNumberOfWonOpportunities]"
+                      dataType="i4"
+                      name="HierarchyNumberOfWonOpportunities" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[HierarchyAmountAllOpportunities]"
+                      dataType="r8"
+                      name="HierarchyAmountAllOpportunities" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[HierarchyAmountWonOpportunities]"
+                      dataType="r8"
+                      name="HierarchyAmountWonOpportunities" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[HierarchyNumberSent]"
+                      dataType="r8"
+                      name="HierarchyNumberSent" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[HierarchyExpectedRevenue]"
+                      dataType="r8"
+                      name="HierarchyExpectedRevenue" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[HierarchyBudgetedCost]"
+                      dataType="r8"
+                      name="HierarchyBudgetedCost" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[HierarchyActualCost]"
+                      dataType="r8"
+                      name="HierarchyActualCost" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[OwnerId]"
+                      dataType="wstr"
+                      length="18"
+                      name="OwnerId">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">User</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">User</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">User</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">User</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">User</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">User</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">User</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[LastActivityDate]"
+                      dataType="dbTimeStamp"
+                      name="LastActivityDate" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[LastViewedDate]"
+                      dataType="dbTimeStamp"
+                      name="LastViewedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[LastReferencedDate]"
+                      dataType="dbTimeStamp"
+                      name="LastReferencedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[CampaignMemberRecordTypeId]"
+                      dataType="wstr"
+                      length="18"
+                      name="CampaignMemberRecordTypeId">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">RecordType</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">RecordType</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">RecordType</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">RecordType</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">RecordType</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">RecordType</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">RecordType</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[ucinn_ascendv2__Motivation_Code]"
+                      dataType="wstr"
+                      length="20"
+                      name="ucinn_ascendv2__Motivation_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[Marketing_Interests]"
+                      dataType="wstr"
+                      length="255"
+                      name="Marketing_Interests" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[Channel]"
+                      dataType="wstr"
+                      length="1300"
+                      name="Channel" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[College_Unit]"
+                      dataType="wstr"
+                      length="18"
+                      name="College_Unit">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Academic_Organization</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Academic_Organization</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Academic_Organization</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Academic_Organization</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Academic_Organization</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Academic_Organization</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Academic_Organization</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[Event]"
+                      dataType="bool"
+                      name="Event" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[Internal_Department]"
+                      dataType="wstr"
+                      length="18"
+                      name="Internal_Department">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Academic_Organization</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Academic_Organization</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Academic_Organization</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Academic_Organization</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Academic_Organization</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Academic_Organization</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Academic_Organization</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[Originating_Partner]"
+                      dataType="wstr"
+                      length="18"
+                      name="Originating_Partner">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Academic_Organization</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Academic_Organization</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Academic_Organization</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Academic_Organization</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Academic_Organization</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Academic_Organization</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Academic_Organization</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[Passion_Interest]"
+                      dataType="wstr"
+                      length="18"
+                      name="Passion_Interest">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Foundation_Funding_Interests</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Foundation_Funding_Interests</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Foundation_Funding_Interests</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Foundation_Funding_Interests</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Foundation_Funding_Interests</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Foundation_Funding_Interests</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                          name="RelationshipUpdateMode"
+                          typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies external identifier field."
+                          name="ExternalId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.Null"
+                          description="Cached id in the local storage."
+                          name="CachedId"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Name of Referenced Object"
+                          name="ReferencedObject">ucinn_ascendv2__Foundation_Funding_Interests</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[Appeal_Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Appeal_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[External_System_ID]"
+                      dataType="wstr"
+                      length="255"
+                      name="External_System_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input].ExternalColumns[Record_Type_Text]"
+                      dataType="wstr"
+                      length="1300"
+                      name="Record_Type_Text" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Create New Campaign\Add new campaign to Campaign Object.Outputs[Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Error Output"
+                  synchronousInputId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Outputs[Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Create New Campaign\Add new campaign to Campaign Object.Outputs[Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Outputs[Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Create New Campaign\Add new campaign to Campaign Object.Outputs[Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Outputs[Error Output].Columns[Id]"
+                      dataType="wstr"
+                      length="18"
+                      lineageId="Package\Create New Campaign\Add new campaign to Campaign Object.Outputs[Error Output].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Outputs[Error Output].Columns[ErrorDescription]"
+                      dataType="wstr"
+                      length="1024"
+                      lineageId="Package\Create New Campaign\Add new campaign to Campaign Object.Outputs[Error Output].Columns[ErrorDescription]"
+                      name="ErrorDescription" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Create New Campaign\Add new campaign to Campaign Object.Outputs[RecordId Output]"
+                  exclusionGroup="1"
+                  name="RecordId Output"
+                  synchronousInputId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Create New Campaign\Add new campaign to Campaign Object.Outputs[RecordId Output].Columns[Id]"
+                      dataType="wstr"
+                      length="18"
+                      lineageId="Package\Create New Campaign\Add new campaign to Campaign Object.Outputs[RecordId Output].Columns[Id]"
+                      name="Id" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Create New Campaign\Get New Campaign data"
+              componentClassID="Attunity.SSISODBCSrc"
+              description="ODBC Source"
+              name="Get New Campaign data"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT DISTINCT
+    //cd.Prospect_ID                              AS DonorID
+    'AG' AS Name
+    ,CONCAT
+        (
+            'Annual Giving Campaign '
+            ,CASE
+                WHEN MONTH(GetDate()) BETWEEN 7 AND 12 THEN YEAR(GetDate()) + 1
+                ELSE YEAR(GetDate())
+                END
+        )                                       AS Appeal_Name
+    ,CONCAT
+        (
+            'AG' 
+            ,CASE
+                WHEN MONTH(GetDate()) BETWEEN 7 AND 12 THEN YEAR(GetDate()) + 1
+                ELSE YEAR(GetDate())
+                END
+        )                                       AS ucinn_ascendv2__Motivation_Code        
+    //,'Oklahoma State University Foundation'     AS Originating_Partner
+    ,'a208A000000nQirQAE'                       AS Originating_Partner
+    ,'In Progress'                              AS Status
+    ,'Appeal Campaign'                          AS Type
+    ,1                                          AS IsActive
+    ,CONCAT
+        (
+            'Annual Giving Campaign for Fiscal Year '
+            ,CASE
+                WHEN MONTH(GetDate()) BETWEEN 7 AND 12 THEN YEAR(GetDate()) + 1
+                ELSE YEAR(GetDate())
+                END
+        )                                       AS Description
+    
+    ,CONCAT
+        (
+            '7/1/' 
+            ,CASE
+                WHEN MONTH(GetDate()) BETWEEN 7 AND 12 THEN YEAR(GetDate())
+                ELSE YEAR(GetDate()) - 1
+                END
+        )                                       AS StartDate
+    ,CONCAT
+        (
+            '6/30/' 
+            ,CASE
+                WHEN MONTH(GetDate()) BETWEEN 7 AND 12 THEN YEAR(GetDate()) + 1
+                ELSE YEAR(GetDate())
+                END
+        )                                       AS EndDate</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines how the component exposes CHAR columns. If False, CHAR columns are exposed as (multi-)byte strings (DT_STR), if True, CHAR columns are exposed as wide strings (DT_WSTR)"
+                  expressionType="Notify"
+                  name="ExposeCharColumnsAsUnicode">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for fetching data."
+                  expressionType="Notify"
+                  name="FetchMethod">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The mode used to access the database."
+                  expressionType="Notify"
+                  name="AccessMode"
+                  typeConverter="AccessMode">1</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Create New Campaign\Get New Campaign data.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[OSUF_INTERFACES_FACULTY_STAFF.OSUF_SSIS]"
+                  connectionManagerRefId="Package.ConnectionManagers[OSUF_INTERFACES_FACULTY_STAFF.OSUF_SSIS]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output]"
+                  errorRowDisposition="FailComponent"
+                  name="ODBC Source Output"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[NAME]"
+                      codePage="1252"
+                      dataType="text"
+                      externalMetadataColumnId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[NAME]"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[NAME]"
+                      name="NAME" />
+                    <outputColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[APPEAL_NAME]"
+                      codePage="1252"
+                      dataType="text"
+                      externalMetadataColumnId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[APPEAL_NAME]"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[APPEAL_NAME]"
+                      name="APPEAL_NAME" />
+                    <outputColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__MOTIVATION_CODE]"
+                      codePage="1252"
+                      dataType="text"
+                      externalMetadataColumnId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[UCINN_ASCENDV2__MOTIVATION_CODE]"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[UCINN_ASCENDV2__MOTIVATION_CODE]"
+                      name="UCINN_ASCENDV2__MOTIVATION_CODE" />
+                    <outputColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[ORIGINATING_PARTNER]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[ORIGINATING_PARTNER]"
+                      length="36"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[ORIGINATING_PARTNER]"
+                      name="ORIGINATING_PARTNER" />
+                    <outputColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[STATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[STATUS]"
+                      length="11"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[STATUS]"
+                      name="STATUS" />
+                    <outputColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[TYPE]"
+                      length="15"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[TYPE]"
+                      name="TYPE" />
+                    <outputColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[ISACTIVE]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[ISACTIVE]"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[ISACTIVE]"
+                      name="ISACTIVE"
+                      precision="1" />
+                    <outputColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[DESCRIPTION]"
+                      codePage="1252"
+                      dataType="text"
+                      externalMetadataColumnId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[DESCRIPTION]"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[DESCRIPTION]"
+                      name="DESCRIPTION" />
+                    <outputColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[STARTDATE]"
+                      codePage="1252"
+                      dataType="text"
+                      externalMetadataColumnId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[STARTDATE]"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[STARTDATE]"
+                      name="STARTDATE" />
+                    <outputColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[ENDDATE]"
+                      codePage="1252"
+                      dataType="text"
+                      externalMetadataColumnId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[ENDDATE]"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].Columns[ENDDATE]"
+                      name="ENDDATE" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[APPEAL_NAME]"
+                      codePage="1252"
+                      dataType="text"
+                      name="APPEAL_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[UCINN_ASCENDV2__MOTIVATION_CODE]"
+                      codePage="1252"
+                      dataType="text"
+                      name="UCINN_ASCENDV2__MOTIVATION_CODE" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[ORIGINATING_PARTNER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="18"
+                      name="ORIGINATING_PARTNER" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[STATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="11"
+                      name="STATUS" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[ISACTIVE]"
+                      dataType="numeric"
+                      name="ISACTIVE"
+                      precision="1" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[DESCRIPTION]"
+                      codePage="1252"
+                      dataType="text"
+                      name="DESCRIPTION" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[STARTDATE]"
+                      codePage="1252"
+                      dataType="text"
+                      name="STARTDATE" />
+                    <externalMetadataColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[ENDDATE]"
+                      codePage="1252"
+                      dataType="text"
+                      name="ENDDATE" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Error Output]"
+                  isErrorOut="true"
+                  name="ODBC Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Error Output].Columns[NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[NAME]"
+                      length="2"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Error Output].Columns[NAME]"
+                      name="NAME" />
+                    <outputColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Error Output].Columns[APPEAL_NAME]"
+                      codePage="1252"
+                      dataType="text"
+                      externalMetadataColumnId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[APPEAL_NAME]"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Error Output].Columns[APPEAL_NAME]"
+                      name="APPEAL_NAME" />
+                    <outputColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Error Output].Columns[UCINN_ASCENDV2__MOTIVATION_CODE]"
+                      codePage="1252"
+                      dataType="text"
+                      externalMetadataColumnId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[UCINN_ASCENDV2__MOTIVATION_CODE]"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Error Output].Columns[UCINN_ASCENDV2__MOTIVATION_CODE]"
+                      name="UCINN_ASCENDV2__MOTIVATION_CODE" />
+                    <outputColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Error Output].Columns[ORIGINATING_PARTNER]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[ORIGINATING_PARTNER]"
+                      length="18"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Error Output].Columns[ORIGINATING_PARTNER]"
+                      name="ORIGINATING_PARTNER" />
+                    <outputColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Error Output].Columns[STATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[STATUS]"
+                      length="11"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Error Output].Columns[STATUS]"
+                      name="STATUS" />
+                    <outputColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Error Output].Columns[TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      externalMetadataColumnId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[TYPE]"
+                      length="15"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Error Output].Columns[TYPE]"
+                      name="TYPE" />
+                    <outputColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Error Output].Columns[ISACTIVE]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[ISACTIVE]"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Error Output].Columns[ISACTIVE]"
+                      name="ISACTIVE"
+                      precision="1" />
+                    <outputColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Error Output].Columns[DESCRIPTION]"
+                      codePage="1252"
+                      dataType="text"
+                      externalMetadataColumnId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[DESCRIPTION]"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Error Output].Columns[DESCRIPTION]"
+                      name="DESCRIPTION" />
+                    <outputColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Error Output].Columns[STARTDATE]"
+                      codePage="1252"
+                      dataType="text"
+                      externalMetadataColumnId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[STARTDATE]"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Error Output].Columns[STARTDATE]"
+                      name="STARTDATE" />
+                    <outputColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Error Output].Columns[ENDDATE]"
+                      codePage="1252"
+                      dataType="text"
+                      externalMetadataColumnId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output].ExternalColumns[ENDDATE]"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Error Output].Columns[ENDDATE]"
+                      name="ENDDATE" />
+                    <outputColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Create New Campaign.Paths[ODBC Source Output]"
+              endId="Package\Create New Campaign\Add new campaign to Campaign Object.Inputs[input]"
+              name="ODBC Source Output"
+              startId="Package\Create New Campaign\Get New Campaign data.Outputs[ODBC Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Populate variable AddCampaign"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{37505AB5-CF31-4AB3-84CA-0410645792E4}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Populate variable AddCampaign"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{D413B2D9-96EE-4895-B53D-91795839EB5C}"
+          SQLTask:SqlStatementSource="SELECT &#xA;    CASE&#xA;        WHEN        MONTH(GetDate()) = 5&#xA;                AND DAY(GetDate()) BETWEEN 1 AND 7 THEN 1 ELSE 0 END AS Result"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="1"
+            SQLTask:DtsVariableName="User::AddCampaign" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Populate variable Campaign"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{D3C71E50-281E-44AD-B6DB-569EB799A5DD}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Populate variable Campaign"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{D413B2D9-96EE-4895-B53D-91795839EB5C}"
+          SQLTask:SqlStatementSource="SELECT DISTINCT&#xA;    CONCAT&#xA;        (&#xA;            'AG' &#xA;            ,CASE&#xA;                WHEN MONTH(GetDate()) BETWEEN 7 AND 12 THEN YEAR(GetDate()) + 1&#xA;                ELSE YEAR(GetDate())&#xA;                END&#xA;        )                                       AS ucinn_ascendv2__Motivation_Code  "
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="1"
+            SQLTask:DtsVariableName="User::Campaign" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Populate variable RowCount"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{DB6F5E1A-20C4-4F59-8C11-40CB99DB4B50}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Populate variable RowCount"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Populate variable RowCount\Devart Salesforce Source - Campaign Object"
+              componentClassID="Microsoft.ManagedComponentHost"
+              description="Extracts data from the Salesforce.com (or Database.com) cloud database."
+              name="Devart Salesforce Source - Campaign Object">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement used by the component to extract data from Salesforce.com."
+                  name="SelectStatement"
+                  UITypeEditor="Devart.SSIS.Salesforce.Design.SourceSelectStmtEditor, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">SELECT
+	ucinn_ascendv2__Motivation_Code
+FROM Campaign
+WHERE ucinn_ascendv2__Motivation_Code = '&lt;@User::Campaign&gt;'
+		
+</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Including the deleted records in the result."
+                  name="IncludeDeleted">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows to be retrieved as a batch. The maximum is 2000. Default value is 500."
+                  name="BatchSize">500</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Devart.SSIS.Salesforce.SalesforceSource, Devart.SSIS.Salesforce.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populate variable RowCount\Devart Salesforce Source - Campaign Object.Connections[Devart Salesforce]"
+                  connectionManagerID="Package.ConnectionManagers[Devart Salesforce Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Devart Salesforce Connection Manager 1]"
+                  description="Devart Salesforce Connection Manager"
+                  name="Devart Salesforce" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Populate variable RowCount\Devart Salesforce Source - Campaign Object.Outputs[Source Output]"
+                  name="Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populate variable RowCount\Devart Salesforce Source - Campaign Object.Outputs[Source Output].Columns[ucinn_ascendv2__Motivation_Code]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Populate variable RowCount\Devart Salesforce Source - Campaign Object.Outputs[Source Output].ExternalColumns[ucinn_ascendv2__Motivation_Code]"
+                      length="20"
+                      lineageId="Package\Populate variable RowCount\Devart Salesforce Source - Campaign Object.Outputs[Source Output].Columns[ucinn_ascendv2__Motivation_Code]"
+                      name="ucinn_ascendv2__Motivation_Code" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populate variable RowCount\Devart Salesforce Source - Campaign Object.Outputs[Source Output].ExternalColumns[ucinn_ascendv2__Motivation_Code]"
+                      dataType="wstr"
+                      length="20"
+                      name="ucinn_ascendv2__Motivation_Code" />
+                  </externalMetadataColumns>
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populate variable RowCount\Row Count"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="Row Count">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::RowCount</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Populate variable RowCount\Row Count.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populate variable RowCount\Row Count.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\Populate variable RowCount\Row Count.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Populate variable RowCount.Paths[Source Output]"
+              endId="Package\Populate variable RowCount\Row Count.Inputs[Row Count Input 1]"
+              name="Source Output"
+              startId="Package\Populate variable RowCount\Devart Salesforce Source - Campaign Object.Outputs[Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{88139FF8-86B3-4C40-869B-C09FFC103BE4}"
+      DTS:EvalOp="3"
+      DTS:Expression="@[User::AddCampaign] == 1"
+      DTS:From="Package\Populate variable AddCampaign"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Populate variable Campaign" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{DD2A351D-3E78-45AB-95AA-2DD5B42AFCDC}"
+      DTS:From="Package\Populate variable Campaign"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Populate variable RowCount" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{94409748-5715-49A7-A7E1-AA29F71E9B5A}"
+      DTS:EvalOp="3"
+      DTS:Expression="@[User::RowCount] == 0"
+      DTS:From="Package\Populate variable RowCount"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Create New Campaign" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Create New Campaign"
+          TopLeft="80,283" />
+        <NodeLayout
+          Size="218,42"
+          Id="Package\Populate variable RowCount"
+          TopLeft="72.5,205.5" />
+        <NodeLayout
+          Size="237,42"
+          Id="Package\Populate variable AddCampaign"
+          TopLeft="62,29" />
+        <NodeLayout
+          Size="217,42"
+          Id="Package\Populate variable Campaign"
+          TopLeft="67,122" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="178,71">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51"
+              Start="0,0"
+              End="0,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,13.75,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="178.5,164">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.5"
+              Start="0,0"
+              End="0,34">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="178.25,247.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35.5"
+              Start="0,0"
+              End="0,28">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,6,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="AddCampaign variable is a boolean value to indicate if the current date is bewteen 7/1 and 7/7&#xD;&#xA;--If the value is 1, go to the next step"
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="530,60"
+          Id="fa7d607c-cbd1-4ce7-b9b8-b2dc32d6a19a"
+          TopLeft="348,20" />
+        <AnnotationLayout
+          Text="Campaign variable is be the value of the Motivation Code for the campaign that will be added if it does not exist in ascend "
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="679,40"
+          Id="3a93ba6b-7d5a-42b5-a358-0a7ab63e51fd"
+          TopLeft="342,127" />
+        <AnnotationLayout
+          Text="Query the Campaign object in ascend for the Motivation Code (Campaign variable) and populate the RowCount variable.&#xD;&#xA;--If RowCount is 0, go to next step"
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="667,60"
+          Id="b4037012-7b2a-4012-b05f-5cdbcc656496"
+          TopLeft="365,204" />
+        <AnnotationLayout
+          Text="Create the new Campaignin ascend"
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="216,60"
+          Id="90c697b1-96c1-4c3d-bafd-2d192626b3b5"
+          TopLeft="339,280" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Create New Campaign">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="199,42"
+          Id="Package\Create New Campaign\Get New Campaign data"
+          TopLeft="332.5,119.5" />
+        <NodeLayout
+          Size="272,42"
+          Id="Package\Create New Campaign\Add new campaign to Campaign Object"
+          TopLeft="303,215" />
+        <EdgeLayout
+          Id="Package\Create New Campaign.Paths[ODBC Source Output]"
+          TopLeft="435.5,161.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53.5"
+              Start="0,0"
+              End="0,46">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Create New Campaign\Get New Campaign data">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Populate variable RowCount">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="299,42"
+          Id="Package\Populate variable RowCount\Devart Salesforce Source - Campaign Object"
+          TopLeft="269.5,205.5" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Populate variable RowCount\Row Count"
+          TopLeft="345,325" />
+        <EdgeLayout
+          Id="Package\Populate variable RowCount.Paths[Source Output]"
+          TopLeft="415.25,247.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,77.5"
+              Start="0,0"
+              End="0,70">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,70" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
