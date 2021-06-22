@@ -8,6 +8,7 @@ CREATE OR REPLACE TABLE "FENXT_DW"."BB"."DIM_Journal"
 	,TableSequence 		NUMBER(38,0)
 	,ETLControlID 		NUMBER(38,0)
 	,SourceID 			NUMBER(38,0)
+	,DateUpdated  		TIMESTAMP_NTZ(9)
 );
 
 COPY INTO "FENXT_DW"."BB"."DIM_Journal" FROM '@BB_DELTA_STAGE/DIM_JournalAll.csv.gz'

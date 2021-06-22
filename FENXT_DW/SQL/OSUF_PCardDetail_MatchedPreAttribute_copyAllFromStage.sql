@@ -5,6 +5,7 @@ CREATE OR REPLACE TABLE "FENXT_DW"."BB"."OSUF_PCardDetail_MatchedPreAttribute"
 	,MerchantName  NUMBER(38,0)
 	,MerchantCode  NUMBER(38,0)
 	,MerchantType  NUMBER(38,0)
+	,DateUpdated  TIMESTAMP_NTZ(9)
 );                                              
 
 

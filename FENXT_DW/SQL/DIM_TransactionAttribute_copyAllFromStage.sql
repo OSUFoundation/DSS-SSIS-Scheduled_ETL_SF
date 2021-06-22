@@ -14,6 +14,7 @@ CREATE OR REPLACE TABLE "FENXT_DW"."BB"."DIM_TransactionAttribute"
 	,MustBeUnique 					VARCHAR(256)
 	,ETLControlID 					NUMBER(38,0)
 	,SourceID 						NUMBER(38,0)	
+	,DateUpdated  					TIMESTAMP_NTZ(9)
 );                                              
 
 

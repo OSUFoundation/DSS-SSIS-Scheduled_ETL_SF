@@ -3,6 +3,7 @@ CREATE OR REPLACE TABLE "FENXT_DW"."BB"."DIM_PostStatus"
 	PostStatusDimID 		NUMBER(38,0)
 	,PostStatusSystemID 	NUMBER(38,0)
 	,PostStatus 			VARCHAR(256)
+	,DateUpdated  			TIMESTAMP_NTZ(9)
 );
 
 COPY INTO "FENXT_DW"."BB"."DIM_PostStatus" FROM '@BB_DELTA_STAGE/DIM_PostStatusAll.csv.gz'

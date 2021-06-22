@@ -23,6 +23,7 @@ CREATE OR REPLACE TABLE "FENXT_DW"."BB"."DIM_Project"
 	,ParentProjectSystemID  NUMBER(38,0)
 	,ParentProjectDimID  NUMBER(38,0)
 	,ImportID  VARCHAR(256)
+	,DateUpdated  TIMESTAMP_NTZ(9)
 );                                              
 
 

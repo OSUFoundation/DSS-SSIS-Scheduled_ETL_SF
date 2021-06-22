@@ -14,6 +14,7 @@ CREATE OR REPLACE TABLE "FENXT_DW"."BB"."DIM_ProjectNote"
 	,LastChangedByID  NUMBER(38,0)
 	,DateChanged  TIMESTAMP_NTZ(9)
 	,ImportID  VARCHAR(256)
+	,DateUpdated  TIMESTAMP_NTZ(9)
 );                                              
 
 

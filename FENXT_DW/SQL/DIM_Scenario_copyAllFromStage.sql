@@ -12,6 +12,7 @@ CREATE OR REPLACE TABLE "FENXT_DW"."BB"."DIM_Scenario"
 	,DateChanged 			TIMESTAMP_NTZ(9)
 	,ETLControlID 			NUMBER(38,0)
 	,SourceID 				NUMBER(38,0)
+	,DateUpdated  			TIMESTAMP_NTZ(9)
 );
 
 COPY INTO "FENXT_DW"."BB"."DIM_Scenario" FROM '@BB_DELTA_STAGE/DIM_ScenarioAll.csv.gz'

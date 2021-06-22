@@ -29,7 +29,8 @@ CREATE OR REPLACE TABLE "FENXT_DW"."BB"."DIM_Account"
 	,CashAccount 				VARCHAR(256)
 	,AnnotationText 			STRING
 	,ETLControlID 				NUMBER(38,0)
-	,SourceID 					NUMBER(38,0)	
+	,SourceID 					NUMBER(38,0)
+	,DateUpdated				TIMESTAMP_NTZ(9)
 );
 
 COPY INTO "FENXT_DW"."BB"."DIM_Account" FROM '@BB_DELTA_STAGE/DIM_AccountAll.csv.gz'
@@ -37,7 +38,9 @@ FORCE = TRUE
 PURGE = TRUE
 FILE_FORMAT = (FORMAT_NAME = 'CSV_DBLQT');
 
-
 //Delete all files from STAGE
-REMOVE '@BB_DELTA_STAGE';
+REMOVE '@BB_DIM_Account';
+
+
+
 

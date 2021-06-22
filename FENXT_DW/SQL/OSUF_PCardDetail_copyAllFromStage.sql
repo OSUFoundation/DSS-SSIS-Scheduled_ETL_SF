@@ -12,6 +12,7 @@ CREATE OR REPLACE TABLE "FENXT_DW"."BB"."OSUF_PCardDetail"
 	,Status  VARCHAR(256)
 	,YN  VARCHAR(256)
 	,FileName  VARCHAR(256)
+	,DateUpdated  TIMESTAMP_NTZ(9)
 );                                              
 
 

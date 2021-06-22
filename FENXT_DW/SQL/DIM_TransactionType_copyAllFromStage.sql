@@ -3,6 +3,7 @@ CREATE OR REPLACE TABLE "FENXT_DW"."BB"."DIM_TransactionType"
 	TransactionTypeDimID NUMBER(38,0)
 	,TransactionTypeSystemID NUMBER(38,0)
 	,TransactionType VARCHAR(256)	
+	,DateUpdated  TIMESTAMP_NTZ(9)
 	
 );
 

@@ -20,6 +20,7 @@ CREATE OR REPLACE TABLE "FENXT_DW"."BB"."DIM_ProjectAttribute"
 	,ImportID  VARCHAR(256)
 	,DateAdded  TIMESTAMP_NTZ(9)
 	,DateChanged  TIMESTAMP_NTZ(9)
+	,DateUpdated  TIMESTAMP_NTZ(9)
 );                                              
 
 
