@@ -11,28 +11,11 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Master Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{7E0385C4-F316-4176-94C9-EE641ED8678C}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{C9CCB3CA-8865-41BD-892D-265790263F45}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Devart Salesforce Connection Manager]"
-      DTS:CreationName="DevartSalesforce"
-      DTS:DTSID="{B1B87715-CBC7-4E08-962B-4C168FCE5DB2}"
-      DTS:ObjectName="Devart Salesforce Connection Manager">
-      <DTS:ObjectData>
-        <SalesforceConnectionManager>
-          <ConnectionString>Host=cs45.salesforce.com;User Id=krobertson@osugiving.com.qa</ConnectionString>
-          <Password
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAYQbtItHBJEGq3d78nc9zcgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACTwdF3aA0MZzATDYcO525iAAAAAASAAACgAAAAEAAAAD4m7LEG7Zqo/x5rE/NKH3IoAAAAq0qgtZyhXPgRgzoF11lbJj71etO6oolKGSpWwYdK3hsFlaHX/anMZhQAAAD01qIW9CmHxXqB87QvTQPyRkTKDA</Password>
-          <SecurityToken
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAYQbtItHBJEGq3d78nc9zcgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAGAMOeqd9dykOLUz3VfPMqAAAAAASAAACgAAAAEAAAAKi4PwbQagV1LFDN3ltMIBQ4AAAA4fBZoxtFGuWv5nKl5/Hcr4AlVYo+XDaNEM5cR6byk38PoEUfXDXleoGGYBcR5UY5VAFQx7DGO0wUAAAAG694NK83DjSHjmv9iPkTdyVvwYY</SecurityToken>
-        </SalesforceConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"

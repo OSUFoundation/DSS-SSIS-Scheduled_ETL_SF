@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Lockbox"
   DTS:PackageType="5"
-  DTS:VersionBuild="90"
-  DTS:VersionGUID="{F5829E39-2C11-43C4-A07E-D2D8346BB39B}">
+  DTS:VersionBuild="100"
+  DTS:VersionGUID="{3AD55704-D312-47A8-A625-2622B38F40AC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -26,10 +26,10 @@
           <ConnectionString>User Id=ssisapi@osugiving.com.qa;Host=cs45.salesforce.com</ConnectionString>
           <Password
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAYQbtItHBJEGq3d78nc9zcgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACUTyBiMWyLVMKq7F6gZJWyAAAAAASAAACgAAAAEAAAAGrM/XKvQjniuIBruHrpLLMwAAAAqiBwuE0WKESHOH166FFcVaJY8F7pBEfby2nG/PCs8lwYIfsMRQwHejCmFPzbhfXhFAAAALojsW3a/pJpePsjxL4xVGqgD3Hd</Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAimoJxQarGEK11a/NIGiZdQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAk0JXSHz3kjhRkvyuYGQRFAAAAAASAAACgAAAAEAAAANb85wZ/bCIXrI5nIy3xGFowAAAApE2Wi1TYcV5E2VDwgoVqtEEfIVEIVQf8WG3Zri2BvFuj4xOJgLL7X4mEwadoB0Z5FAAAAB9hoxJiVkJVYjy7pU1sdkh8T7LP</Password>
           <SecurityToken
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAYQbtItHBJEGq3d78nc9zcgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACKd1cWqjl869GWviWFKHvkAAAAAASAAACgAAAAEAAAAEtVvniXEhRVPb5EzqSaAh84AAAA2bf9yCP6nRDqpl8w2OulUS9qpXzwehAwv9wyq28SEaKsPBhysALbbz5AeTjg3+W6cBtPXM0a/AgUAAAAUbD5eCD2Ifnaztt1egCCq8aZMHk</SecurityToken>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAimoJxQarGEK11a/NIGiZdQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABQFnQ07R6oVXoogBg75sT8AAAAAASAAACgAAAAEAAAAAZkbwWLkXdgb/LhgGUj32A4AAAAuc4g1XQd0XjJyHlaDN/Xgv2nu+8Auu7K300qViiU5p3Wm+5FgFVipCyx2aI774omdBi3axH+u50UAAAAGJ7OK1uV5nyzteZbRAsbssEg6wU</SecurityToken>
         </SalesforceConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -24041,6 +24041,29 @@
                                   name="FriendlyExpression">"0126g000000MrlGAAS"</property>
                               </properties>
                             </outputColumn>
+                            <outputColumn
+                              refId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Create Appeal Record\Derived Column.Outputs[Derived Column Output].Columns[AppealParent]"
+                              dataType="wstr"
+                              errorOrTruncationOperation="Computation"
+                              errorRowDisposition="FailComponent"
+                              length="18"
+                              lineageId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Create Appeal Record\Derived Column.Outputs[Derived Column Output].Columns[AppealParent]"
+                              name="AppealParent"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.String"
+                                  description="Derived Column Expression"
+                                  name="Expression">!(#{Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Create Appeal Record\Flat File Source - Allegiance File.Outputs[Flat File Source Output].Columns[SourceCode]} == "") ? "" : "7018A000000NDfMQAW"</property>
+                                <property
+                                  containsID="true"
+                                  dataType="System.String"
+                                  description="Derived Column Friendly Expression"
+                                  expressionType="Notify"
+                                  name="FriendlyExpression">!(SourceCode == "") ? "" : "7018A000000NDfMQAW"</property>
+                              </properties>
+                            </outputColumn>
                           </outputColumns>
                           <externalMetadataColumns />
                         </output>
@@ -24224,6 +24247,13 @@
                               cachedName="AppealRecordType"
                               externalMetadataColumnId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Create Appeal Record\Devart Salesforce Destination.Inputs[input].ExternalColumns[RecordTypeId]"
                               lineageId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Create Appeal Record\Sort.Outputs[Sort Output].Columns[AppealRecordType]" />
+                            <inputColumn
+                              refId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Create Appeal Record\Devart Salesforce Destination.Inputs[input].Columns[AppealParent]"
+                              cachedDataType="wstr"
+                              cachedLength="18"
+                              cachedName="AppealParent"
+                              externalMetadataColumnId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Create Appeal Record\Devart Salesforce Destination.Inputs[input].ExternalColumns[ParentId]"
+                              lineageId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Create Appeal Record\Sort.Outputs[Sort Output].Columns[AppealParent]" />
                           </inputColumns>
                           <externalMetadataColumns
                             isUsed="True">
@@ -26584,6 +26614,23 @@
                                   name="NewSortKeyPosition">0</property>
                               </properties>
                             </inputColumn>
+                            <inputColumn
+                              refId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Create Appeal Record\Sort.Inputs[Sort Input].Columns[AppealParent]"
+                              cachedDataType="wstr"
+                              cachedLength="18"
+                              cachedName="AppealParent"
+                              lineageId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Create Appeal Record\Derived Column.Outputs[Derived Column Output].Columns[AppealParent]">
+                              <properties>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Specifies the comparison options for character data."
+                                  name="NewComparisonFlags">0</property>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Specifies the sort order of the column."
+                                  name="NewSortKeyPosition">0</property>
+                              </properties>
+                            </inputColumn>
                           </inputColumns>
                           <externalMetadataColumns />
                         </input>
@@ -26747,6 +26794,20 @@
                                   name="SortColumnId">#{Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Create Appeal Record\Derived Column.Outputs[Derived Column Output].Columns[AppealRecordType]}</property>
                               </properties>
                             </outputColumn>
+                            <outputColumn
+                              refId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Create Appeal Record\Sort.Outputs[Sort Output].Columns[AppealParent]"
+                              dataType="wstr"
+                              length="18"
+                              lineageId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Create Appeal Record\Sort.Outputs[Sort Output].Columns[AppealParent]"
+                              name="AppealParent">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Specifies the lineage identifier of the input column that is associated with this output column."
+                                  name="SortColumnId">#{Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Create Appeal Record\Derived Column.Outputs[Derived Column Output].Columns[AppealParent]}</property>
+                              </properties>
+                            </outputColumn>
                           </outputColumns>
                           <externalMetadataColumns />
                         </output>
@@ -26831,6 +26892,13 @@
                               cachedLength="50"
                               cachedName="SourceCode"
                               lineageId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Flat File Source - KOSU Membership.Outputs[Flat File Source Output].Columns[SourceCode]" />
+                            <inputColumn
+                              refId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Derived Column - Prepare Columns for Ascend.Inputs[Derived Column Input].Columns[MemberID]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="MemberID"
+                              lineageId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Flat File Source - KOSU Membership.Outputs[Flat File Source Output].Columns[MemberID]" />
                           </inputColumns>
                           <externalMetadataColumns />
                         </input>
@@ -27027,6 +27095,52 @@
                                   name="FriendlyExpression">"Pledge"</property>
                               </properties>
                             </outputColumn>
+                            <outputColumn
+                              refId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Derived Column - Prepare Columns for Ascend.Outputs[Derived Column Output].Columns[RelatedSystemIDType]"
+                              dataType="wstr"
+                              errorOrTruncationOperation="Computation"
+                              errorRowDisposition="FailComponent"
+                              length="18"
+                              lineageId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Derived Column - Prepare Columns for Ascend.Outputs[Derived Column Output].Columns[RelatedSystemIDType]"
+                              name="RelatedSystemIDType"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.String"
+                                  description="Derived Column Expression"
+                                  name="Expression">"KOSU Allegiance ID"</property>
+                                <property
+                                  containsID="true"
+                                  dataType="System.String"
+                                  description="Derived Column Friendly Expression"
+                                  expressionType="Notify"
+                                  name="FriendlyExpression">"KOSU Allegiance ID"</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Derived Column - Prepare Columns for Ascend.Outputs[Derived Column Output].Columns[RelatedSystemID]"
+                              dataType="wstr"
+                              errorOrTruncationOperation="Computation"
+                              errorRowDisposition="FailComponent"
+                              length="50"
+                              lineageId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Derived Column - Prepare Columns for Ascend.Outputs[Derived Column Output].Columns[RelatedSystemID]"
+                              name="RelatedSystemID"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.String"
+                                  description="Derived Column Expression"
+                                  name="Expression">#{Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Flat File Source - KOSU Membership.Outputs[Flat File Source Output].Columns[MemberID]}</property>
+                                <property
+                                  containsID="true"
+                                  dataType="System.String"
+                                  description="Derived Column Friendly Expression"
+                                  expressionType="Notify"
+                                  name="FriendlyExpression">MemberID</property>
+                              </properties>
+                            </outputColumn>
                           </outputColumns>
                           <externalMetadataColumns />
                         </output>
@@ -27172,10 +27286,9 @@
                               lineageId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Derived Column - Prepare Columns for Ascend.Outputs[Derived Column Output].Columns[ExternalSystemID]" />
                             <inputColumn
                               refId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Devart Salesforce Destination.Inputs[input].Columns[GiftAmount]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="50"
+                              cachedDataType="decimal"
                               cachedName="GiftAmount"
+                              cachedScale="2"
                               externalMetadataColumnId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Devart Salesforce Destination.Inputs[input].ExternalColumns[ucinn_ascendv2__Payment_Amount_1_1]"
                               lineageId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Flat File Source - KOSU Membership.Outputs[Flat File Source Output].Columns[GiftAmount]" />
                             <inputColumn
@@ -27214,6 +27327,20 @@
                               cachedName="PostMarkDate"
                               externalMetadataColumnId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Devart Salesforce Destination.Inputs[input].ExternalColumns[ucinn_ascendv2__Transaction_Date]"
                               lineageId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Flat File Source - KOSU Membership.Outputs[Flat File Source Output].Columns[PostMarkDate]" />
+                            <inputColumn
+                              refId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Devart Salesforce Destination.Inputs[input].Columns[RelatedSystemIDType]"
+                              cachedDataType="wstr"
+                              cachedLength="18"
+                              cachedName="RelatedSystemIDType"
+                              externalMetadataColumnId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Devart Salesforce Destination.Inputs[input].ExternalColumns[Related_External_System_Type]"
+                              lineageId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Derived Column - Prepare Columns for Ascend.Outputs[Derived Column Output].Columns[RelatedSystemIDType]" />
+                            <inputColumn
+                              refId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Devart Salesforce Destination.Inputs[input].Columns[RelatedSystemID]"
+                              cachedDataType="wstr"
+                              cachedLength="50"
+                              cachedName="RelatedSystemID"
+                              externalMetadataColumnId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Devart Salesforce Destination.Inputs[input].ExternalColumns[Related_External_System_ID]"
+                              lineageId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Derived Column - Prepare Columns for Ascend.Outputs[Derived Column Output].Columns[RelatedSystemID]" />
                           </inputColumns>
                           <externalMetadataColumns
                             isUsed="True">
@@ -27228,6 +27355,25 @@
                               length="18"
                               name="OwnerId">
                               <properties>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">Group</property>
                                 <property
                                   dataType="System.Int32"
                                   description="Determines the way to insert related objects - use an external id field or use cached IDs."
@@ -27283,6 +27429,25 @@
                                   dataType="System.String"
                                   description="Name of Referenced Object"
                                   name="ReferencedObject">RecordType</property>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">RecordType</property>
                               </properties>
                             </externalMetadataColumn>
                             <externalMetadataColumn
@@ -27299,6 +27464,25 @@
                               length="18"
                               name="ucinn_ascendv2__Account">
                               <properties>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">Account</property>
                                 <property
                                   dataType="System.Int32"
                                   description="Determines the way to insert related objects - use an external id field or use cached IDs."
@@ -27365,6 +27549,25 @@
                                   dataType="System.String"
                                   description="Name of Referenced Object"
                                   name="ReferencedObject">Opportunity</property>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">Opportunity</property>
                               </properties>
                             </externalMetadataColumn>
                             <externalMetadataColumn
@@ -27373,6 +27576,25 @@
                               length="18"
                               name="ucinn_ascendv2__Adjusted_Payment_1_1">
                               <properties>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">ucinn_ascendv2__Payment</property>
                                 <property
                                   dataType="System.Int32"
                                   description="Determines the way to insert related objects - use an external id field or use cached IDs."
@@ -27419,6 +27641,25 @@
                                   dataType="System.String"
                                   description="Name of Referenced Object"
                                   name="ReferencedObject">ucinn_ascendv2__Payment</property>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">ucinn_ascendv2__Payment</property>
                               </properties>
                             </externalMetadataColumn>
                             <externalMetadataColumn
@@ -27427,6 +27668,25 @@
                               length="18"
                               name="ucinn_ascendv2__Adjusted_Payment_2_1">
                               <properties>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">ucinn_ascendv2__Payment</property>
                                 <property
                                   dataType="System.Int32"
                                   description="Determines the way to insert related objects - use an external id field or use cached IDs."
@@ -27473,6 +27733,25 @@
                                   dataType="System.String"
                                   description="Name of Referenced Object"
                                   name="ReferencedObject">ucinn_ascendv2__Payment</property>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">ucinn_ascendv2__Payment</property>
                               </properties>
                             </externalMetadataColumn>
                             <externalMetadataColumn
@@ -27481,6 +27760,25 @@
                               length="18"
                               name="ucinn_ascendv2__Adjusted_Payment_3_1">
                               <properties>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">ucinn_ascendv2__Payment</property>
                                 <property
                                   dataType="System.Int32"
                                   description="Determines the way to insert related objects - use an external id field or use cached IDs."
@@ -27527,6 +27825,25 @@
                                   dataType="System.String"
                                   description="Name of Referenced Object"
                                   name="ReferencedObject">ucinn_ascendv2__Payment</property>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">ucinn_ascendv2__Payment</property>
                               </properties>
                             </externalMetadataColumn>
                             <externalMetadataColumn
@@ -27535,6 +27852,25 @@
                               length="18"
                               name="ucinn_ascendv2__Adjusted_Payment_4_1">
                               <properties>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">ucinn_ascendv2__Payment</property>
                                 <property
                                   dataType="System.Int32"
                                   description="Determines the way to insert related objects - use an external id field or use cached IDs."
@@ -27581,6 +27917,25 @@
                                   dataType="System.String"
                                   description="Name of Referenced Object"
                                   name="ReferencedObject">ucinn_ascendv2__Payment</property>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">ucinn_ascendv2__Payment</property>
                               </properties>
                             </externalMetadataColumn>
                             <externalMetadataColumn
@@ -27608,6 +27963,25 @@
                                   dataType="System.String"
                                   description="Name of Referenced Object"
                                   name="ReferencedObject">ucinn_ascendv2__Payment</property>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">ucinn_ascendv2__Payment</property>
                               </properties>
                             </externalMetadataColumn>
                             <externalMetadataColumn
@@ -27616,6 +27990,25 @@
                               length="18"
                               name="ucinn_ascendv2__Adjusted_Payment_5_2">
                               <properties>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">ucinn_ascendv2__Payment</property>
                                 <property
                                   dataType="System.Int32"
                                   description="Determines the way to insert related objects - use an external id field or use cached IDs."
@@ -27712,6 +28105,25 @@
                                   dataType="System.String"
                                   description="Name of Referenced Object"
                                   name="ReferencedObject">ucinn_ascendv2__Review_Transaction_v2</property>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">ucinn_ascendv2__Review_Transaction_v2</property>
                               </properties>
                             </externalMetadataColumn>
                             <externalMetadataColumn
@@ -27759,6 +28171,25 @@
                               length="18"
                               name="ucinn_ascendv2__Campaign">
                               <properties>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">Campaign</property>
                                 <property
                                   dataType="System.Int32"
                                   description="Determines the way to insert related objects - use an external id field or use cached IDs."
@@ -27842,6 +28273,25 @@
                                   dataType="System.String"
                                   description="Name of Referenced Object"
                                   name="ReferencedObject">Contact</property>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">Contact</property>
                               </properties>
                             </externalMetadataColumn>
                             <externalMetadataColumn
@@ -27899,6 +28349,25 @@
                                   dataType="System.String"
                                   description="Name of Referenced Object"
                                   name="ReferencedObject">ucinn_ascendv2__Designation</property>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">ucinn_ascendv2__Designation</property>
                               </properties>
                             </externalMetadataColumn>
                             <externalMetadataColumn
@@ -27907,6 +28376,25 @@
                               length="18"
                               name="ucinn_ascendv2__Designation_2">
                               <properties>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">ucinn_ascendv2__Designation</property>
                                 <property
                                   dataType="System.Int32"
                                   description="Determines the way to insert related objects - use an external id field or use cached IDs."
@@ -27953,6 +28441,25 @@
                                   dataType="System.String"
                                   description="Name of Referenced Object"
                                   name="ReferencedObject">ucinn_ascendv2__Designation</property>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">ucinn_ascendv2__Designation</property>
                               </properties>
                             </externalMetadataColumn>
                             <externalMetadataColumn
@@ -27980,6 +28487,25 @@
                                   dataType="System.String"
                                   description="Name of Referenced Object"
                                   name="ReferencedObject">ucinn_ascendv2__Designation</property>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">ucinn_ascendv2__Designation</property>
                               </properties>
                             </externalMetadataColumn>
                             <externalMetadataColumn
@@ -27988,6 +28514,25 @@
                               length="18"
                               name="ucinn_ascendv2__Designation_5">
                               <properties>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">ucinn_ascendv2__Designation</property>
                                 <property
                                   dataType="System.Int32"
                                   description="Determines the way to insert related objects - use an external id field or use cached IDs."
@@ -28164,6 +28709,25 @@
                                   dataType="System.String"
                                   description="Name of Referenced Object"
                                   name="ReferencedObject">Account</property>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">Account</property>
                               </properties>
                             </externalMetadataColumn>
                             <externalMetadataColumn
@@ -28191,6 +28755,25 @@
                                   dataType="System.String"
                                   description="Name of Referenced Object"
                                   name="ReferencedObject">Account</property>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">Account</property>
                               </properties>
                             </externalMetadataColumn>
                             <externalMetadataColumn
@@ -28199,6 +28782,25 @@
                               length="18"
                               name="ucinn_ascendv2__Hard_and_Soft_Credit_Account_2_1">
                               <properties>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">Account</property>
                                 <property
                                   dataType="System.Int32"
                                   description="Determines the way to insert related objects - use an external id field or use cached IDs."
@@ -28257,6 +28859,25 @@
                                   dataType="System.String"
                                   description="Name of Referenced Object"
                                   name="ReferencedObject">Contact</property>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">Contact</property>
                               </properties>
                             </externalMetadataColumn>
                             <externalMetadataColumn
@@ -28284,6 +28905,25 @@
                                   dataType="System.String"
                                   description="Name of Referenced Object"
                                   name="ReferencedObject">Contact</property>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">Contact</property>
                               </properties>
                             </externalMetadataColumn>
                             <externalMetadataColumn
@@ -28292,6 +28932,25 @@
                               length="18"
                               name="ucinn_ascendv2__Hard_and_Soft_Credit_Contact_2_1">
                               <properties>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">Contact</property>
                                 <property
                                   dataType="System.Int32"
                                   description="Determines the way to insert related objects - use an external id field or use cached IDs."
@@ -28373,6 +29032,25 @@
                                   dataType="System.String"
                                   description="Name of Referenced Object"
                                   name="ReferencedObject">Contact</property>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">Contact</property>
                               </properties>
                             </externalMetadataColumn>
                             <externalMetadataColumn
@@ -28381,6 +29059,25 @@
                               length="18"
                               name="ucinn_ascendv2__In_Memory_Honor_Contact_2">
                               <properties>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">Contact</property>
                                 <property
                                   dataType="System.Int32"
                                   description="Determines the way to insert related objects - use an external id field or use cached IDs."
@@ -28602,6 +29299,25 @@
                                   dataType="System.String"
                                   description="Name of Referenced Object"
                                   name="ReferencedObject">ucinn_ascendv2__Interim</property>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">ucinn_ascendv2__Interim</property>
                               </properties>
                             </externalMetadataColumn>
                             <externalMetadataColumn
@@ -28734,6 +29450,25 @@
                                   dataType="System.String"
                                   description="Name of Referenced Object"
                                   name="ReferencedObject">Contact</property>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">Contact</property>
                               </properties>
                             </externalMetadataColumn>
                             <externalMetadataColumn
@@ -28742,6 +29477,25 @@
                               length="18"
                               name="ucinn_ascendv2__Notify_Contact_2">
                               <properties>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">Contact</property>
                                 <property
                                   dataType="System.Int32"
                                   description="Determines the way to insert related objects - use an external id field or use cached IDs."
@@ -28858,6 +29612,25 @@
                               length="18"
                               name="ucinn_ascendv2__Opportunity">
                               <properties>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">Opportunity</property>
                                 <property
                                   dataType="System.Int32"
                                   description="Determines the way to insert related objects - use an external id field or use cached IDs."
@@ -29053,6 +29826,25 @@
                                   dataType="System.String"
                                   description="Name of Referenced Object"
                                   name="ReferencedObject">ucinn_ascendv2__Session</property>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">ucinn_ascendv2__Session</property>
                               </properties>
                             </externalMetadataColumn>
                             <externalMetadataColumn
@@ -29085,6 +29877,25 @@
                                   dataType="System.String"
                                   description="Name of Referenced Object"
                                   name="ReferencedObject">Contact</property>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">Contact</property>
                               </properties>
                             </externalMetadataColumn>
                             <externalMetadataColumn
@@ -29093,6 +29904,25 @@
                               length="18"
                               name="ucinn_ascendv2__Source_Payment">
                               <properties>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">ucinn_ascendv2__Payment</property>
                                 <property
                                   dataType="System.Int32"
                                   description="Determines the way to insert related objects - use an external id field or use cached IDs."
@@ -29376,6 +30206,25 @@
                                   dataType="System.String"
                                   description="Name of Referenced Object"
                                   name="ReferencedObject">Account</property>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">Account</property>
                               </properties>
                             </externalMetadataColumn>
                             <externalMetadataColumn
@@ -29394,6 +30243,25 @@
                               length="18"
                               name="ucinn_ascendv2__Hard_and_Soft_Credit_Account_1_3">
                               <properties>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">Account</property>
                                 <property
                                   dataType="System.Int32"
                                   description="Determines the way to insert related objects - use an external id field or use cached IDs."
@@ -29444,6 +30312,25 @@
                                   dataType="System.String"
                                   description="Name of Referenced Object"
                                   name="ReferencedObject">Contact</property>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">Contact</property>
                               </properties>
                             </externalMetadataColumn>
                             <externalMetadataColumn
@@ -29475,6 +30362,25 @@
                               length="18"
                               name="ucinn_ascendv2__Summary_Review_Transaction">
                               <properties>
+                                <property
+                                  dataType="System.Int32"
+                                  description="Determines the way to insert related objects - use an external id field or use cached IDs."
+                                  name="RelationshipUpdateMode"
+                                  typeConverter="Devart.SSIS.Salesforce.RelationshipUpdateType, Devart.SSIS.Salesforce.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">0</property>
+                                <property
+                                  dataType="System.Null"
+                                  description="Specifies external identifier field."
+                                  name="ExternalId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.Null"
+                                  description="Cached id in the local storage."
+                                  name="CachedId"
+                                  typeConverter="NOTBROWSABLE" />
+                                <property
+                                  dataType="System.String"
+                                  description="Name of Referenced Object"
+                                  name="ReferencedObject">ucinn_ascendv2__Review_Transaction_v2</property>
                                 <property
                                   dataType="System.Int32"
                                   description="Determines the way to insert related objects - use an external id field or use cached IDs."
@@ -29547,6 +30453,11 @@
                               length="255"
                               name="Anonymous_Level" />
                             <externalMetadataColumn
+                              refId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Devart Salesforce Destination.Inputs[input].ExternalColumns[Related_External_System_ID]"
+                              dataType="wstr"
+                              length="255"
+                              name="Related_External_System_ID" />
+                            <externalMetadataColumn
                               refId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Devart Salesforce Destination.Inputs[input].ExternalColumns[External_Notes]"
                               dataType="wstr"
                               length="255"
@@ -29556,6 +30467,11 @@
                               dataType="wstr"
                               length="255"
                               name="External_Source" />
+                            <externalMetadataColumn
+                              refId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Devart Salesforce Destination.Inputs[input].ExternalColumns[Related_External_System_Type]"
+                              dataType="wstr"
+                              length="255"
+                              name="Related_External_System_Type" />
                             <externalMetadataColumn
                               refId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Devart Salesforce Destination.Inputs[input].ExternalColumns[Internal_Notes]"
                               dataType="wstr"
@@ -30259,14 +31175,13 @@
                             </outputColumn>
                             <outputColumn
                               refId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Flat File Source - KOSU Membership.Outputs[Flat File Source Output].Columns[GiftAmount]"
-                              codePage="1252"
-                              dataType="str"
+                              dataType="decimal"
                               errorOrTruncationOperation="Conversion"
                               errorRowDisposition="FailComponent"
                               externalMetadataColumnId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Flat File Source - KOSU Membership.Outputs[Flat File Source Output].ExternalColumns[GiftAmount]"
-                              length="50"
                               lineageId="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Flat File Source - KOSU Membership.Outputs[Flat File Source Output].Columns[GiftAmount]"
                               name="GiftAmount"
+                              scale="2"
                               truncationRowDisposition="FailComponent">
                               <properties>
                                 <property
@@ -31211,8 +32126,8 @@
           <DTS:ForEachVariableMappings>
             <DTS:ForEachVariableMapping
               DTS:CreationName=""
-              DTS:DTSID="{1B387E6D-F699-42E3-A3A2-AB54D203CC8B}"
-              DTS:ObjectName="{1B387E6D-F699-42E3-A3A2-AB54D203CC8B}"
+              DTS:DTSID="{BD5BD407-4E21-49C3-81D3-4930CA409D7C}"
+              DTS:ObjectName="{BD5BD407-4E21-49C3-81D3-4930CA409D7C}"
               DTS:ValueIndex="0"
               DTS:VariableName="User::CurrentDataFile" />
           </DTS:ForEachVariableMappings>
@@ -32517,18 +33432,18 @@
         <NodeLayout
           Size="199,42"
           Id="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Create Appeal Record\Devart Salesforce Lookup"
-          TopLeft="160.5,341.5" />
-        <NodeLayout
-          Size="155,42"
-          Id="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Create Appeal Record\Conditional Split"
-          TopLeft="186,272" />
+          TopLeft="159.5,341.5" />
         <NodeLayout
           Size="218,42"
           Id="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Create Appeal Record\Devart Salesforce Destination"
           TopLeft="163,408" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Create Appeal Record\Conditional Split"
+          TopLeft="186,272" />
         <EdgeLayout
           Id="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Create Appeal Record.Paths[Valid Appeal]"
-          TopLeft="261.75,314">
+          TopLeft="261.25,314">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -32574,13 +33489,13 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Create Appeal Record.Paths[Lookup No Match Output]"
-          TopLeft="260,383.5">
+          TopLeft="259,383.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="12,24.5"
+              EndConnector="13,24.5"
               Start="0,0"
-              End="12,17">
+              End="13,17">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -32591,20 +33506,20 @@
                     Point2="0,12.25"
                     Point3="4,12.25" />
                   <mssgle:LineSegment
-                    End="8,12.25" />
+                    End="9,12.25" />
                   <mssgle:CubicBezierSegment
-                    Point1="8,12.25"
-                    Point2="12,12.25"
-                    Point3="12,16.25" />
+                    Point1="9,12.25"
+                    Point2="13,12.25"
+                    Point3="13,16.25" />
                   <mssgle:LineSegment
-                    End="12,17" />
+                    End="13,17" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-58.6750390625,17.25,129.350078125,16"
+              BoundingBox="-49.30638671875,17.25,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -32671,19 +33586,19 @@
     design-time-name="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="249,42"
           Id="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Flat File Source - KOSU Membership"
           TopLeft="300,53" />
         <NodeLayout
-          Size="218,42"
-          Id="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Devart Salesforce Destination"
-          TopLeft="328,283" />
-        <NodeLayout
           Size="297,42"
           Id="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Derived Column - Prepare Columns for Ascend"
           TopLeft="276,173" />
+        <NodeLayout
+          Size="218,42"
+          Id="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend\Devart Salesforce Destination"
+          TopLeft="325,283" />
         <EdgeLayout
           Id="Package\Foreach Loop Container - KOSU Files\Foreach Loop Container - Read Data File\Data Flow Task - Load to Ascend.Paths[Flat File Source Output]"
           TopLeft="424.5,95">
@@ -32712,9 +33627,9 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="12.5,68"
+              EndConnector="9.5,68"
               Start="0,0"
-              End="12.5,60.5">
+              End="9.5,60.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -32725,21 +33640,19 @@
                     Point2="0,34"
                     Point3="4,34" />
                   <mssgle:LineSegment
-                    End="8.5,34" />
+                    End="5.5,34" />
                   <mssgle:CubicBezierSegment
-                    Point1="8.5,34"
-                    Point2="12.5,34"
-                    Point3="12.5,38" />
+                    Point1="5.5,34"
+                    Point2="9.5,34"
+                    Point3="9.5,38" />
                   <mssgle:LineSegment
-                    End="12.5,60.5" />
+                    End="9.5,60.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-1.75,39,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
