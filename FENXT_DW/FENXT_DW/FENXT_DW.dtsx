@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="FENXT_DW"
   DTS:PackageType="5"
-  DTS:VersionBuild="42"
-  DTS:VersionGUID="{CDD09793-2E5D-4896-AD4C-0E4945FDD435}">
+  DTS:VersionBuild="66"
+  DTS:VersionGUID="{5B26AB5D-DB37-434C-BDCE-750528C7E406}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -4110,10 +4110,10 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[TableVerify]"
+      DTS:refId="Package.ConnectionManagers[_VerifyTableData]"
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{3F6CDB34-4B25-4A29-ABB3-2AC3FFA0154C}"
-      DTS:ObjectName="TableVerify">
+      DTS:ObjectName="_VerifyTableData">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -4123,32 +4123,43 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="E:\BI\Scheduled_ETL_SF\FENXT_DW\DataFiles\_TableVerify.csv">
+          DTS:ConnectionString="E:\BI\Scheduled_ETL_SF\FENXT_DW\DataFiles\_VerifyTableData.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="14"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="TABLENAME"
-              DTS:DTSID="{9F4FCF15-315F-4955-8A29-3FD6BBFE3E85}"
+              DTS:ObjectName="TableName"
+              DTS:DTSID="{DC326748-2C6E-47BA-B26F-8D03E7419467}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="133"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="MAXDATE"
-              DTS:DTSID="{F23064F5-77B9-4FC5-8AA2-DF327B5EEBB0}"
+              DTS:ObjectName="RecordCount"
+              DTS:DTSID="{93B6E50A-D47E-4976-9338-E4DB5C7D4857}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MaxDateUpdated"
+              DTS:DTSID="{37142117-2173-4F4F-BECE-09B1C3E7A466}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:DataType="133"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="MINDATE"
-              DTS:DTSID="{51A6E797-F1E1-4388-8B7E-6A4B2F051321}"
+              DTS:ObjectName="MinDateUpdated"
+              DTS:DTSID="{FC54AB14-AB8E-42CF-B9C8-E4507A3B50F7}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -4156,6 +4167,26 @@
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{D6BEEF0C-5F49-4D0E-9F49-558A0C375247}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="BCCList">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{AB890239-C7BC-4FB5-9FDD-180299FD609E}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="CCList">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
       DTS:DTSID="{6D0404B9-80CA-46ED-8265-EF66E2F25F89}"
@@ -4177,10 +4208,56 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
+      DTS:DTSID="{C37A276C-4FCF-49DB-89C7-0A389608E2CC}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SVC_SQL_PW">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{5B165A80-396A-4209-85BD-FCC5F7A0F6E3}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="TableVerify_IsEmpty">
+      <DTS:VariableValue
+        DTS:DataType="11">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8726E214-55F5-4AE0-AD7B-1BBE1F30E800}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="TableVerify_NonDataRows">
+      <DTS:VariableValue
+        DTS:DataType="3">1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E16D73D3-2C4D-407A-B5D1-AE879DBA600D}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="TableVerify_RecordCount">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{EC1170A9-927E-46E1-AA8C-EF368D5945D3}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ToList">
+      <DTS:VariableValue
+        DTS:DataType="8">dfair@osugiving.com</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
       DTS:DTSID="{73917E0B-ED6B-462C-B86A-8C13B206BDD6}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
-      DTS:ObjectName="VerifyTable">
+      DTS:ObjectName="zVerifyTable">
       <DTS:VariableValue
         DTS:DataSubType="ManagedSerializable"
         DTS:DataType="13">
@@ -4198,7 +4275,7 @@
       DTS:DTSID="{668F88F8-003C-49C6-8DDC-8D364A66EF82}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
-      DTS:ObjectName="VerifyTable_MaxDate">
+      DTS:ObjectName="zVerifyTable_MaxDate">
       <DTS:VariableValue
         DTS:DataType="8"
         xml:space="preserve"></DTS:VariableValue>
@@ -4208,7 +4285,7 @@
       DTS:DTSID="{0F5D2DA2-3CEA-4804-A157-8430E57B75A7}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
-      DTS:ObjectName="VerifyTable_MinDate">
+      DTS:ObjectName="zVerifyTable_MinDate">
       <DTS:VariableValue
         DTS:DataType="8"
         xml:space="preserve"></DTS:VariableValue>
@@ -4218,7 +4295,7 @@
       DTS:DTSID="{6C18DA3B-0ADD-4F46-82F8-F10D7397AC3D}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
-      DTS:ObjectName="VerifyTable_TableName">
+      DTS:ObjectName="zVerifyTable_TableName">
       <DTS:VariableValue
         DTS:DataType="8"
         xml:space="preserve"></DTS:VariableValue>
@@ -4290,6 +4367,78 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyVersion("1.0.0.0")> 
 <Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
+              <ProjectItem
+                Name="ST_2921b9c837e647d588dbe9b6daf9981c.vbproj"
+                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{57A75D8D-6672-4A03-ADD0-5CF31EF77178}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>My Project</AppDesignerFolder><RootNamespace>ST_59dfa5ba43f3469c98bb340dfe7b3e72</RootNamespace><AssemblyName>ST_2921b9c837e647d588dbe9b6daf9981c</AssemblyName><TargetFrameworkVersion>v4.7</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch><TargetFrameworkProfile></TargetFrameworkProfile></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineDebug>true</DefineDebug><DefineTrace>true</DefineTrace><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineDebug>false</DefineDebug><DefineTrace>true</DefineTrace><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.ManagedDTS, Version=15.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.ScriptTask, Version=15.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" /></ItemGroup><ItemGroup><Import Include="Microsoft.VisualBasic" /><Import Include="System" /><Import Include="System.Collections" /><Import Include="System.Data" /><Import Include="System.Diagnostics" /><Import Include="System.Windows.Forms" /></ItemGroup><ItemGroup><AppDesigner Include="My Project\" /><Compile Include="My Project\AssemblyInfo.vb"><SubType>Code</SubType></Compile><EmbeddedResource Include="My Project\Resources.resx"><Generator>VbMyResourcesResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.vb</LastGenOutput><CustomToolNamespace>My.Resources</CustomToolNamespace></EmbeddedResource><Compile Include="My Project\Resources.Designer.vb"><AutoGen>True</AutoGen><DesignTime>True</DesignTime><DependentUpon>Resources.resx</DependentUpon><SubType>Code</SubType></Compile><None Include="My Project\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.vb</LastGenOutput></None><Compile Include="My Project\Settings.Designer.vb"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon><SubType>Code</SubType></Compile><Compile Include="ScriptMain.vb"><SubType>Code</SubType></Compile></ItemGroup><!-- Include the build rules for a VB project.--><Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" /><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" /><Host Name="ScriptTask" /><ProjectClient><HostIdentifier>SSIS_ST150</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.Designer.vb"
+                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
+' <autogenerated>
+'     This code was generated by a tool.
+'
+'     Changes to this file may cause incorrect behavior and will be lost if
+'     the code is regenerated.
+' </autogenerated>
+'------------------------------------------------------------------------------
+
+Option Strict Off
+Option Explicit On
+
+
+
+Partial Friend NotInheritable Class MySettings
+    Inherits System.Configuration.ApplicationSettingsBase
+
+    Private Shared m_Value As MySettings
+
+    Private Shared m_SyncObject As Object = New Object
+
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Public Shared ReadOnly Property Value() As MySettings
+        Get
+            If (MySettings.m_Value Is Nothing) Then
+                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
+                If (MySettings.m_Value Is Nothing) Then
+                    Try
+                        MySettings.m_Value = New MySettings
+                    Finally
+                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
+                    End Try
+                End If
+            End If
+            Return MySettings.m_Value
+        End Get
+    End Property
+End Class]]></ProjectItem>
+              <ProjectItem
+                Name="Project"
+                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:CodeName>ST_0ce74bfc287443f098bad984a30dedb6</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
+    <msb:DisplayName>ST_0ce74bfc287443f098bad984a30dedb6</msb:DisplayName>
+    <msb:ProjectId>{FB6DEA11-84B9-42A9-AE7B-3EEC780BEDCA}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="ST_2921b9c837e647d588dbe9b6daf9981c.vbproj" />
+    <msb:File Include="My Project\AssemblyInfo.vb" />
+    <msb:File Include="ScriptMain.vb" />
+    <msb:File Include="My Project\Resources.resx" />
+    <msb:File Include="My Project\Resources.Designer.vb" />
+    <msb:File Include="My Project\Settings.settings" />
+    <msb:File Include="My Project\Settings.Designer.vb" />
+  </msb:ItemGroup>
+</c:Project>]]></ProjectItem>
               <ProjectItem
                 Name="ScriptMain.vb"
                 Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
@@ -4406,78 +4555,6 @@ Partial Public Class ScriptMain
 #End Region
 
 End Class]]></ProjectItem>
-              <ProjectItem
-                Name="ST_2921b9c837e647d588dbe9b6daf9981c.vbproj"
-                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{57A75D8D-6672-4A03-ADD0-5CF31EF77178}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>My Project</AppDesignerFolder><RootNamespace>ST_59dfa5ba43f3469c98bb340dfe7b3e72</RootNamespace><AssemblyName>ST_2921b9c837e647d588dbe9b6daf9981c</AssemblyName><TargetFrameworkVersion>v4.7</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch><TargetFrameworkProfile></TargetFrameworkProfile></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineDebug>true</DefineDebug><DefineTrace>true</DefineTrace><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineDebug>false</DefineDebug><DefineTrace>true</DefineTrace><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.ManagedDTS, Version=15.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.ScriptTask, Version=15.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" /></ItemGroup><ItemGroup><Import Include="Microsoft.VisualBasic" /><Import Include="System" /><Import Include="System.Collections" /><Import Include="System.Data" /><Import Include="System.Diagnostics" /><Import Include="System.Windows.Forms" /></ItemGroup><ItemGroup><AppDesigner Include="My Project\" /><Compile Include="My Project\AssemblyInfo.vb"><SubType>Code</SubType></Compile><EmbeddedResource Include="My Project\Resources.resx"><Generator>VbMyResourcesResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.vb</LastGenOutput><CustomToolNamespace>My.Resources</CustomToolNamespace></EmbeddedResource><Compile Include="My Project\Resources.Designer.vb"><AutoGen>True</AutoGen><DesignTime>True</DesignTime><DependentUpon>Resources.resx</DependentUpon><SubType>Code</SubType></Compile><None Include="My Project\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.vb</LastGenOutput></None><Compile Include="My Project\Settings.Designer.vb"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon><SubType>Code</SubType></Compile><Compile Include="ScriptMain.vb"><SubType>Code</SubType></Compile></ItemGroup><!-- Include the build rules for a VB project.--><Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" /><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" /><Host Name="ScriptTask" /><ProjectClient><HostIdentifier>SSIS_ST150</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\Settings.Designer.vb"
-                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
-' <autogenerated>
-'     This code was generated by a tool.
-'
-'     Changes to this file may cause incorrect behavior and will be lost if
-'     the code is regenerated.
-' </autogenerated>
-'------------------------------------------------------------------------------
-
-Option Strict Off
-Option Explicit On
-
-
-
-Partial Friend NotInheritable Class MySettings
-    Inherits System.Configuration.ApplicationSettingsBase
-
-    Private Shared m_Value As MySettings
-
-    Private Shared m_SyncObject As Object = New Object
-
-    <System.Diagnostics.DebuggerNonUserCode()> _
-    Public Shared ReadOnly Property Value() As MySettings
-        Get
-            If (MySettings.m_Value Is Nothing) Then
-                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
-                If (MySettings.m_Value Is Nothing) Then
-                    Try
-                        MySettings.m_Value = New MySettings
-                    Finally
-                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
-                    End Try
-                End If
-            End If
-            Return MySettings.m_Value
-        End Get
-    End Property
-End Class]]></ProjectItem>
-              <ProjectItem
-                Name="Project"
-                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
-  <msb:PropertyGroup>
-    <msb:CodeName>ST_0ce74bfc287443f098bad984a30dedb6</msb:CodeName>
-    <msb:Language>msBuild</msb:Language>
-    <msb:DisplayName>ST_0ce74bfc287443f098bad984a30dedb6</msb:DisplayName>
-    <msb:ProjectId>{FB6DEA11-84B9-42A9-AE7B-3EEC780BEDCA}</msb:ProjectId>
-  </msb:PropertyGroup>
-  <msb:ItemGroup>
-    <msb:Project Include="ST_2921b9c837e647d588dbe9b6daf9981c.vbproj" />
-    <msb:File Include="My Project\AssemblyInfo.vb" />
-    <msb:File Include="ScriptMain.vb" />
-    <msb:File Include="My Project\Resources.resx" />
-    <msb:File Include="My Project\Resources.Designer.vb" />
-    <msb:File Include="My Project\Settings.settings" />
-    <msb:File Include="My Project\Settings.Designer.vb" />
-  </msb:ItemGroup>
-</c:Project>]]></ProjectItem>
               <ProjectItem
                 Name="My Project\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -4824,335 +4901,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </ScriptProject>
-          </DTS:ObjectData>
-        </DTS:Executable>
-      </DTS:Executables>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Data Verification"
-      DTS:CreationName="STOCK:SEQUENCE"
-      DTS:Description="Sequence Container"
-      DTS:DTSID="{101AF403-EE55-4EC0-9B0D-38B788CC1280}"
-      DTS:ExecutableType="STOCK:SEQUENCE"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Data Verification">
-      <DTS:Variables />
-      <DTS:Executables>
-        <DTS:Executable
-          DTS:refId="Package\Data Verification\Get Table Data"
-          DTS:CreationName="Microsoft.Pipeline"
-          DTS:Description="Data Flow Task"
-          DTS:DTSID="{C8084F65-C832-476D-A801-986B657E41AF}"
-          DTS:ExecutableType="Microsoft.Pipeline"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Get Table Data"
-          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <pipeline
-              version="1">
-              <components>
-                <component
-                  refId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables"
-                  componentClassID="Microsoft.SSISODBCSrc"
-                  contactInfo="ODBC Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-                  description="ODBC Source"
-                  name="Snowflake Warehouse - Get results from all tables"
-                  usesDispositions="true"
-                  version="1">
-                  <properties>
-                    <property
-                      dataType="System.String"
-                      description="The name of the table to be fetched."
-                      expressionType="Notify"
-                      name="TableName"></property>
-                    <property
-                      dataType="System.String"
-                      description="The SQL command to be executed."
-                      expressionType="Notify"
-                      name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT 
-    'DIM_Account'               AS TableName 
-    ,MAX(Date(DateUpdated))     AS MaxDate
-    ,MIN(Date(DateUpdated))     AS MinDate
-FROM 
-    "FENXT_DW"."BB"."DIM_Account"
-HAVING
-    MaxDate IS NULL
-    OR MinDate IS NULL
-    OR MaxDate &lt;&gt; MinDate
-    OR MaxDate &lt; Date(GetDate())
-    
-UNION    
-
-SELECT 
-    'DIM_PostStatus'            AS TableName 
-    ,MAX(Date(DateUpdated))     AS MaxDate
-    ,MIN(Date(DateUpdated))     AS MinDate
-FROM 
-    "FENXT_DW"."BB"."DIM_PostStatus"
-HAVING
-    MaxDate IS NULL
-    OR MinDate IS NULL
-    OR MaxDate &lt;&gt; MinDate
-    OR MaxDate &lt; Date(GetDate())
-    
-UNION    
-
-SELECT 
-    'DIM_Class'                 AS TableName 
-    ,MAX(Date(DateUpdated))     AS MaxDate
-    ,MIN(Date(DateUpdated))     AS MinDate
-FROM 
-    "FENXT_DW"."BB"."DIM_Class"
-HAVING
-    MaxDate IS NULL
-    OR MinDate IS NULL
-    OR MaxDate &lt;&gt; MinDate
-    OR MaxDate &lt; Date(GetDate())
- 
-UNION
-
-SELECT 
-    'DIM_Scenario'              AS TableName 
-    ,MAX(Date(DateUpdated))     AS MaxDate
-    ,MIN(Date(DateUpdated))     AS MinDate
-FROM 
-    "FENXT_DW"."BB"."DIM_Scenario"
-HAVING
-    MaxDate IS NULL
-    OR MinDate IS NULL
-    OR MaxDate &lt;&gt; MinDate
-    OR MaxDate = Date(GetDate())</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specify the number of rows fetched per batch."
-                      expressionType="Notify"
-                      name="BatchSize">1000</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Determines the chunk size allocation for LOB columns"
-                      expressionType="Notify"
-                      name="LobChunkSize">32768</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Determines how the component exposes CHAR columns. If False, CHAR columns are exposed as (multi-)byte strings (DT_STR), if True, CHAR columns are exposed as wide strings (DT_WSTR)"
-                      expressionType="Notify"
-                      name="ExposeCharColumnsAsUnicode">false</property>
-                    <property
-                      dataType="System.Int32"
-                      description="The number of seconds to wait for an SQL statement to execute before returning to the application."
-                      expressionType="Notify"
-                      name="StatementTimeout">0</property>
-                    <property
-                      dataType="System.Int32"
-                      description="The code page to use when code page information is unavailable from the data source."
-                      expressionType="Notify"
-                      name="DefaultCodePage">1252</property>
-                    <property
-                      dataType="System.Int32"
-                      description="The method used for fetching data."
-                      expressionType="Notify"
-                      name="FetchMethod">1</property>
-                    <property
-                      dataType="System.Int32"
-                      description="The ODBC C data type for binding numeric data."
-                      expressionType="Notify"
-                      name="BindNumericAs">0</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
-                      expressionType="Notify"
-                      name="BindCharColumnsAs">0</property>
-                    <property
-                      dataType="System.Int32"
-                      description="The mode used to access the database."
-                      expressionType="Notify"
-                      name="AccessMode"
-                      typeConverter="AccessMode">1</property>
-                  </properties>
-                  <connections>
-                    <connection
-                      refId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Connections[ODBCConnection]"
-                      connectionManagerID="Package.ConnectionManagers[SNOWFLAKE.OSUF_SSIS]"
-                      connectionManagerRefId="Package.ConnectionManagers[SNOWFLAKE.OSUF_SSIS]"
-                      description="The ODBC runtime connection used to access the database."
-                      name="ODBCConnection" />
-                  </connections>
-                  <outputs>
-                    <output
-                      refId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output]"
-                      errorRowDisposition="FailComponent"
-                      name="ODBC Source Output"
-                      truncationRowDisposition="FailComponent">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].Columns[TABLENAME]"
-                          codePage="1252"
-                          dataType="str"
-                          externalMetadataColumnId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].ExternalColumns[TABLENAME]"
-                          length="14"
-                          lineageId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].Columns[TABLENAME]"
-                          name="TABLENAME" />
-                        <outputColumn
-                          refId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].Columns[MAXDATE]"
-                          dataType="dbDate"
-                          externalMetadataColumnId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].ExternalColumns[MAXDATE]"
-                          lineageId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].Columns[MAXDATE]"
-                          name="MAXDATE" />
-                        <outputColumn
-                          refId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].Columns[MINDATE]"
-                          dataType="dbDate"
-                          externalMetadataColumnId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].ExternalColumns[MINDATE]"
-                          lineageId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].Columns[MINDATE]"
-                          name="MINDATE" />
-                      </outputColumns>
-                      <externalMetadataColumns
-                        isUsed="True">
-                        <externalMetadataColumn
-                          refId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].ExternalColumns[TABLENAME]"
-                          codePage="1252"
-                          dataType="str"
-                          length="14"
-                          name="TABLENAME" />
-                        <externalMetadataColumn
-                          refId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].ExternalColumns[MAXDATE]"
-                          dataType="dbDate"
-                          name="MAXDATE" />
-                        <externalMetadataColumn
-                          refId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].ExternalColumns[MINDATE]"
-                          dataType="dbDate"
-                          name="MINDATE" />
-                      </externalMetadataColumns>
-                    </output>
-                    <output
-                      refId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Error Output]"
-                      isErrorOut="true"
-                      name="ODBC Source Error Output">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Error Output].Columns[TABLENAME]"
-                          codePage="1252"
-                          dataType="str"
-                          externalMetadataColumnId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].ExternalColumns[TABLENAME]"
-                          length="14"
-                          lineageId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Error Output].Columns[TABLENAME]"
-                          name="TABLENAME" />
-                        <outputColumn
-                          refId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Error Output].Columns[MAXDATE]"
-                          dataType="dbDate"
-                          externalMetadataColumnId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].ExternalColumns[MAXDATE]"
-                          lineageId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Error Output].Columns[MAXDATE]"
-                          name="MAXDATE" />
-                        <outputColumn
-                          refId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Error Output].Columns[MINDATE]"
-                          dataType="dbDate"
-                          externalMetadataColumnId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].ExternalColumns[MINDATE]"
-                          lineageId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Error Output].Columns[MINDATE]"
-                          name="MINDATE" />
-                        <outputColumn
-                          refId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
-                          dataType="i4"
-                          lineageId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
-                          name="ErrorCode"
-                          specialFlags="1" />
-                        <outputColumn
-                          refId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
-                          dataType="i4"
-                          lineageId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
-                          name="ErrorColumn"
-                          specialFlags="2" />
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                  </outputs>
-                </component>
-                <component
-                  refId="Package\Data Verification\Get Table Data\TableVerify"
-                  componentClassID="Microsoft.FlatFileDestination"
-                  contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-                  description="Flat File Destination"
-                  localeId="1033"
-                  name="TableVerify"
-                  version="1">
-                  <properties>
-                    <property
-                      dataType="System.Boolean"
-                      description="Specifies whether the data will overwrite or append to the destination file."
-                      name="Overwrite">true</property>
-                    <property
-                      dataType="System.Null"
-                      description="Specifies the text to write to the destination file before any data is written."
-                      expressionType="Notify"
-                      name="Header" />
-                    <property
-                      dataType="System.Boolean"
-                      description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
-                      name="EscapeQualifier">false</property>
-                  </properties>
-                  <connections>
-                    <connection
-                      refId="Package\Data Verification\Get Table Data\TableVerify.Connections[FlatFileConnection]"
-                      connectionManagerID="Package.ConnectionManagers[TableVerify]"
-                      connectionManagerRefId="Package.ConnectionManagers[TableVerify]"
-                      name="FlatFileConnection" />
-                  </connections>
-                  <inputs>
-                    <input
-                      refId="Package\Data Verification\Get Table Data\TableVerify.Inputs[Flat File Destination Input]"
-                      hasSideEffects="true"
-                      name="Flat File Destination Input">
-                      <inputColumns>
-                        <inputColumn
-                          refId="Package\Data Verification\Get Table Data\TableVerify.Inputs[Flat File Destination Input].Columns[TABLENAME]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="14"
-                          cachedName="TABLENAME"
-                          externalMetadataColumnId="Package\Data Verification\Get Table Data\TableVerify.Inputs[Flat File Destination Input].ExternalColumns[TABLENAME]"
-                          lineageId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].Columns[TABLENAME]" />
-                        <inputColumn
-                          refId="Package\Data Verification\Get Table Data\TableVerify.Inputs[Flat File Destination Input].Columns[MAXDATE]"
-                          cachedDataType="dbDate"
-                          cachedName="MAXDATE"
-                          externalMetadataColumnId="Package\Data Verification\Get Table Data\TableVerify.Inputs[Flat File Destination Input].ExternalColumns[MAXDATE]"
-                          lineageId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].Columns[MAXDATE]" />
-                        <inputColumn
-                          refId="Package\Data Verification\Get Table Data\TableVerify.Inputs[Flat File Destination Input].Columns[MINDATE]"
-                          cachedDataType="dbDate"
-                          cachedName="MINDATE"
-                          externalMetadataColumnId="Package\Data Verification\Get Table Data\TableVerify.Inputs[Flat File Destination Input].ExternalColumns[MINDATE]"
-                          lineageId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].Columns[MINDATE]" />
-                      </inputColumns>
-                      <externalMetadataColumns
-                        isUsed="True">
-                        <externalMetadataColumn
-                          refId="Package\Data Verification\Get Table Data\TableVerify.Inputs[Flat File Destination Input].ExternalColumns[TABLENAME]"
-                          codePage="1252"
-                          dataType="str"
-                          length="14"
-                          name="TABLENAME" />
-                        <externalMetadataColumn
-                          refId="Package\Data Verification\Get Table Data\TableVerify.Inputs[Flat File Destination Input].ExternalColumns[MAXDATE]"
-                          dataType="dbDate"
-                          name="MAXDATE" />
-                        <externalMetadataColumn
-                          refId="Package\Data Verification\Get Table Data\TableVerify.Inputs[Flat File Destination Input].ExternalColumns[MINDATE]"
-                          dataType="dbDate"
-                          name="MINDATE" />
-                      </externalMetadataColumns>
-                    </input>
-                  </inputs>
-                </component>
-              </components>
-              <paths>
-                <path
-                  refId="Package\Data Verification\Get Table Data.Paths[ODBC Source Output]"
-                  endId="Package\Data Verification\Get Table Data\TableVerify.Inputs[Flat File Destination Input]"
-                  name="ODBC Source Output"
-                  startId="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output]" />
-              </paths>
-            </pipeline>
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -31512,44 +31260,6 @@ FROM
                 Name="ST_9ac0d77f586a4e0daf2ef85c7fb8056b.vbproj"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{09e5daa4-750f-4c55-80f8-029fe3204374}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>My Project</AppDesignerFolder><RootNamespace>ST_e7b0c7ca59e54170856a99374faf9dc2</RootNamespace><AssemblyName>ST_9ac0d77f586a4e0daf2ef85c7fb8056b</AssemblyName><TargetFrameworkVersion>v4.7</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch><TargetFrameworkProfile></TargetFrameworkProfile></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineDebug>true</DefineDebug><DefineTrace>true</DefineTrace><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineDebug>false</DefineDebug><DefineTrace>true</DefineTrace><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.ManagedDTS, Version=15.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.ScriptTask, Version=15.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" /></ItemGroup><ItemGroup><Import Include="Microsoft.VisualBasic" /><Import Include="System" /><Import Include="System.Collections" /><Import Include="System.Data" /><Import Include="System.Diagnostics" /><Import Include="System.Windows.Forms" /></ItemGroup><ItemGroup><AppDesigner Include="My Project\" /><Compile Include="My Project\AssemblyInfo.vb"><SubType>Code</SubType></Compile><EmbeddedResource Include="My Project\Resources.resx"><Generator>VbMyResourcesResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.vb</LastGenOutput><CustomToolNamespace>My.Resources</CustomToolNamespace></EmbeddedResource><Compile Include="My Project\Resources.Designer.vb"><AutoGen>True</AutoGen><DesignTime>True</DesignTime><DependentUpon>Resources.resx</DependentUpon><SubType>Code</SubType></Compile><None Include="My Project\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.vb</LastGenOutput></None><Compile Include="My Project\Settings.Designer.vb"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon><SubType>Code</SubType></Compile><Compile Include="ScriptMain.vb"><SubType>Code</SubType></Compile></ItemGroup><!-- Include the build rules for a VB project.--><Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" /><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" /><Host Name="ScriptTask" IconIndex=""></Host><ProjectClient><HostIdentifier>SSIS_ST150</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></ProjectItem>
               <ProjectItem
-                Name="My Project\AssemblyInfo.vb"
-                Encoding="UTF8"><![CDATA[Imports System
-Imports System.Reflection
-Imports System.Runtime.InteropServices
-
-' General Information about an assembly is controlled through the following 
-' set of attributes. Change these attribute values to modify the information
-' associated with an assembly.
-
-' Review the values of the assembly attributes
-
-<Assembly: AssemblyTitle("ST_e7b0c7ca59e54170856a99374faf9dc2")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("ST_e7b0c7ca59e54170856a99374faf9dc2")> 
-<Assembly: AssemblyCopyright("Copyright @  2021")> 
-<Assembly: AssemblyTrademark("")> 
-<Assembly: CLSCompliant(True)> 
-
-<Assembly: ComVisible(False)> 
-
-'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("a7a44013-9c43-43fe-ac7d-fea8ade993f4")> 
-
-' Version information for an assembly consists of the following four values:
-'
-'      Major Version
-'      Minor Version 
-'      Build Number
-'      Revision
-'
-' You can specify all the values or you can default the Build and Revision Numbers 
-' by using the '*' as shown below:
-' <Assembly: AssemblyVersion("1.0.*")>
-
-<Assembly: AssemblyVersion("1.0.0.0")> 
-<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
-              <ProjectItem
                 Name="ScriptMain.vb"
                 Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
 'The Script Task allows you to perform virtually any operation that can be accomplished in
@@ -31680,6 +31390,44 @@ End Class]]></ProjectItem>
   </Profiles>
   <Settings />
 </SettingsFile>]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\AssemblyInfo.vb"
+                Encoding="UTF8"><![CDATA[Imports System
+Imports System.Reflection
+Imports System.Runtime.InteropServices
+
+' General Information about an assembly is controlled through the following 
+' set of attributes. Change these attribute values to modify the information
+' associated with an assembly.
+
+' Review the values of the assembly attributes
+
+<Assembly: AssemblyTitle("ST_e7b0c7ca59e54170856a99374faf9dc2")> 
+<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyCompany("")> 
+<Assembly: AssemblyProduct("ST_e7b0c7ca59e54170856a99374faf9dc2")> 
+<Assembly: AssemblyCopyright("Copyright @  2021")> 
+<Assembly: AssemblyTrademark("")> 
+<Assembly: CLSCompliant(True)> 
+
+<Assembly: ComVisible(False)> 
+
+'The following GUID is for the ID of the typelib if this project is exposed to COM
+<Assembly: Guid("a7a44013-9c43-43fe-ac7d-fea8ade993f4")> 
+
+' Version information for an assembly consists of the following four values:
+'
+'      Major Version
+'      Minor Version 
+'      Build Number
+'      Revision
+'
+' You can specify all the values or you can default the Build and Revision Numbers 
+' by using the '*' as shown below:
+' <Assembly: AssemblyVersion("1.0.*")>
+
+<Assembly: AssemblyVersion("1.0.0.0")> 
+<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
               <ProjectItem
                 Name="My Project\Settings.Designer.vb"
                 Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
@@ -32153,78 +31901,6 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyVersion("1.0.0.0")> 
 <Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
               <ProjectItem
-                Name="My Project\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
-              <ProjectItem
-                Name="Project"
-                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
-  <msb:PropertyGroup>
-    <msb:CodeName>ST_578b0945267f4469b44795278ddb6bfd</msb:CodeName>
-    <msb:Language>msBuild</msb:Language>
-    <msb:DisplayName>ST_578b0945267f4469b44795278ddb6bfd</msb:DisplayName>
-    <msb:ProjectId>{6528105E-0125-4D7D-B987-4BB72E1CA10E}</msb:ProjectId>
-  </msb:PropertyGroup>
-  <msb:ItemGroup>
-    <msb:Project Include="ST_0e425315c1084456a008e52d34f65e28.vbproj" />
-    <msb:File Include="My Project\AssemblyInfo.vb" />
-    <msb:File Include="ScriptMain.vb" />
-    <msb:File Include="My Project\Resources.resx" />
-    <msb:File Include="My Project\Resources.Designer.vb" />
-    <msb:File Include="My Project\Settings.settings" />
-    <msb:File Include="My Project\Settings.Designer.vb" />
-  </msb:ItemGroup>
-</c:Project>]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\Settings.Designer.vb"
-                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
-' <autogenerated>
-'     This code was generated by a tool.
-'
-'     Changes to this file may cause incorrect behavior and will be lost if
-'     the code is regenerated.
-' </autogenerated>
-'------------------------------------------------------------------------------
-
-Option Strict Off
-Option Explicit On
-
-
-
-Partial Friend NotInheritable Class MySettings
-    Inherits System.Configuration.ApplicationSettingsBase
-
-    Private Shared m_Value As MySettings
-
-    Private Shared m_SyncObject As Object = New Object
-
-    <System.Diagnostics.DebuggerNonUserCode()> _
-    Public Shared ReadOnly Property Value() As MySettings
-        Get
-            If (MySettings.m_Value Is Nothing) Then
-                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
-                If (MySettings.m_Value Is Nothing) Then
-                    Try
-                        MySettings.m_Value = New MySettings
-                    Finally
-                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
-                    End Try
-                End If
-            End If
-            Return MySettings.m_Value
-        End Get
-    End Property
-End Class]]></ProjectItem>
-              <ProjectItem
-                Name="ST_0e425315c1084456a008e52d34f65e28.vbproj"
-                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{f4ab2b02-560a-4893-9235-8db24cf29306}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>My Project</AppDesignerFolder><RootNamespace>ST_0c197f166e5c4e3baf67b1eb4ddd116b</RootNamespace><AssemblyName>ST_0e425315c1084456a008e52d34f65e28</AssemblyName><TargetFrameworkVersion>v4.7</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch><TargetFrameworkProfile></TargetFrameworkProfile></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineDebug>true</DefineDebug><DefineTrace>true</DefineTrace><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineDebug>false</DefineDebug><DefineTrace>true</DefineTrace><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.ManagedDTS, Version=15.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.ScriptTask, Version=15.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" /></ItemGroup><ItemGroup><Import Include="Microsoft.VisualBasic" /><Import Include="System" /><Import Include="System.Collections" /><Import Include="System.Data" /><Import Include="System.Diagnostics" /><Import Include="System.Windows.Forms" /></ItemGroup><ItemGroup><AppDesigner Include="My Project\" /><Compile Include="My Project\AssemblyInfo.vb"><SubType>Code</SubType></Compile><EmbeddedResource Include="My Project\Resources.resx"><Generator>VbMyResourcesResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.vb</LastGenOutput><CustomToolNamespace>My.Resources</CustomToolNamespace></EmbeddedResource><Compile Include="My Project\Resources.Designer.vb"><AutoGen>True</AutoGen><DesignTime>True</DesignTime><DependentUpon>Resources.resx</DependentUpon><SubType>Code</SubType></Compile><None Include="My Project\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.vb</LastGenOutput></None><Compile Include="My Project\Settings.Designer.vb"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon><SubType>Code</SubType></Compile><Compile Include="ScriptMain.vb"><SubType>Code</SubType></Compile></ItemGroup><!-- Include the build rules for a VB project.--><Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" /><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" /><Host Name="ScriptTask" IconIndex=""></Host><ProjectClient><HostIdentifier>SSIS_ST150</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></ProjectItem>
-              <ProjectItem
                 Name="ScriptMain.vb"
                 Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
 'The Script Task allows you to perform virtually any operation that can be accomplished in
@@ -32353,6 +32029,78 @@ Partial Public Class ScriptMain
 #End Region
 
 End Class]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.Designer.vb"
+                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
+' <autogenerated>
+'     This code was generated by a tool.
+'
+'     Changes to this file may cause incorrect behavior and will be lost if
+'     the code is regenerated.
+' </autogenerated>
+'------------------------------------------------------------------------------
+
+Option Strict Off
+Option Explicit On
+
+
+
+Partial Friend NotInheritable Class MySettings
+    Inherits System.Configuration.ApplicationSettingsBase
+
+    Private Shared m_Value As MySettings
+
+    Private Shared m_SyncObject As Object = New Object
+
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Public Shared ReadOnly Property Value() As MySettings
+        Get
+            If (MySettings.m_Value Is Nothing) Then
+                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
+                If (MySettings.m_Value Is Nothing) Then
+                    Try
+                        MySettings.m_Value = New MySettings
+                    Finally
+                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
+                    End Try
+                End If
+            End If
+            Return MySettings.m_Value
+        End Get
+    End Property
+End Class]]></ProjectItem>
+              <ProjectItem
+                Name="ST_0e425315c1084456a008e52d34f65e28.vbproj"
+                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{f4ab2b02-560a-4893-9235-8db24cf29306}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>My Project</AppDesignerFolder><RootNamespace>ST_0c197f166e5c4e3baf67b1eb4ddd116b</RootNamespace><AssemblyName>ST_0e425315c1084456a008e52d34f65e28</AssemblyName><TargetFrameworkVersion>v4.7</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch><TargetFrameworkProfile></TargetFrameworkProfile></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineDebug>true</DefineDebug><DefineTrace>true</DefineTrace><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineDebug>false</DefineDebug><DefineTrace>true</DefineTrace><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.ManagedDTS, Version=15.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.ScriptTask, Version=15.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" /></ItemGroup><ItemGroup><Import Include="Microsoft.VisualBasic" /><Import Include="System" /><Import Include="System.Collections" /><Import Include="System.Data" /><Import Include="System.Diagnostics" /><Import Include="System.Windows.Forms" /></ItemGroup><ItemGroup><AppDesigner Include="My Project\" /><Compile Include="My Project\AssemblyInfo.vb"><SubType>Code</SubType></Compile><EmbeddedResource Include="My Project\Resources.resx"><Generator>VbMyResourcesResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.vb</LastGenOutput><CustomToolNamespace>My.Resources</CustomToolNamespace></EmbeddedResource><Compile Include="My Project\Resources.Designer.vb"><AutoGen>True</AutoGen><DesignTime>True</DesignTime><DependentUpon>Resources.resx</DependentUpon><SubType>Code</SubType></Compile><None Include="My Project\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.vb</LastGenOutput></None><Compile Include="My Project\Settings.Designer.vb"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon><SubType>Code</SubType></Compile><Compile Include="ScriptMain.vb"><SubType>Code</SubType></Compile></ItemGroup><!-- Include the build rules for a VB project.--><Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" /><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" /><Host Name="ScriptTask" IconIndex=""></Host><ProjectClient><HostIdentifier>SSIS_ST150</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></ProjectItem>
+              <ProjectItem
+                Name="Project"
+                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:CodeName>ST_578b0945267f4469b44795278ddb6bfd</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
+    <msb:DisplayName>ST_578b0945267f4469b44795278ddb6bfd</msb:DisplayName>
+    <msb:ProjectId>{6528105E-0125-4D7D-B987-4BB72E1CA10E}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="ST_0e425315c1084456a008e52d34f65e28.vbproj" />
+    <msb:File Include="My Project\AssemblyInfo.vb" />
+    <msb:File Include="ScriptMain.vb" />
+    <msb:File Include="My Project\Resources.resx" />
+    <msb:File Include="My Project\Resources.Designer.vb" />
+    <msb:File Include="My Project\Settings.settings" />
+    <msb:File Include="My Project\Settings.Designer.vb" />
+  </msb:ItemGroup>
+</c:Project>]]></ProjectItem>
               <ProjectItem
                 Name="My Project\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -34756,6 +34504,1521 @@ FROM
           DTS:To="Package\OSUF_PCardDetail_MatchedPreAttribute\Copy All From Stage to Table" />
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Table Data Verification"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{8B0BC742-AC41-4B32-9123-13F88F8BEEA2}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Table Data Verification">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Table Data Verification\Email to create KACE ticket for any table data issues"
+          DTS:CreationName="Microsoft.ScriptTask"
+          DTS:Description="Script Task"
+          DTS:DTSID="{66C49C09-3882-4185-BAD6-87E8881B6F45}"
+          DTS:ExecutableType="Microsoft.ScriptTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Email to create KACE ticket for any table data issues"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ScriptProject
+              Name="ST_d73372182b4a4e1285d46501e12b1d31"
+              VSTAMajorVersion="15"
+              VSTAMinorVersion="0"
+              Language="VisualBasic"
+              ReadOnlyVariables="User::BCCList,User::CCList,User::SVC_SQL_PW,User::TableVerify_RecordCount,User::ToList">
+              <ProjectItem
+                Name="ST_d73372182b4a4e1285d46501e12b1d31.vbproj"
+                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ef893ce3-78bf-4402-a8e1-20211630accf}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>My Project</AppDesignerFolder>
+    <RootNamespace>ST_d73372182b4a4e1285d46501e12b1d31</RootNamespace>
+    <AssemblyName>ST_d73372182b4a4e1285d46501e12b1d31</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="My Project\" />
+    <Compile Include="My Project\AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ScriptMain.vb">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a VB project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
+        <Host Name="ScriptTask" IconIndex=""></Host>
+        <ProjectClient>
+          <HostIdentifier>SSIS_ST150</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\AssemblyInfo.vb"
+                Encoding="UTF8"><![CDATA[Imports System
+Imports System.Reflection
+Imports System.Runtime.InteropServices
+
+' General Information about an assembly is controlled through the following 
+' set of attributes. Change these attribute values to modify the information
+' associated with an assembly.
+
+' Review the values of the assembly attributes
+
+<Assembly: AssemblyTitle("ST_d73372182b4a4e1285d46501e12b1d31")> 
+<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyCompany("")> 
+<Assembly: AssemblyProduct("ST_d73372182b4a4e1285d46501e12b1d31")> 
+<Assembly: AssemblyCopyright("Copyright @  2021")> 
+<Assembly: AssemblyTrademark("")> 
+<Assembly: CLSCompliant(True)> 
+
+<Assembly: ComVisible(False)> 
+
+'The following GUID is for the ID of the typelib if this project is exposed to COM
+<Assembly: Guid("c30b61d3-0719-4099-b3ce-83cf47801be9")> 
+
+' Version information for an assembly consists of the following four values:
+'
+'      Major Version
+'      Minor Version 
+'      Build Number
+'      Revision
+'
+' You can specify all the values or you can default the Build and Revision Numbers 
+' by using the '*' as shown below:
+' <Assembly: AssemblyVersion("1.0.*")>
+
+<Assembly: AssemblyVersion("1.0.0.0")> 
+<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
+              <ProjectItem
+                Name="ScriptMain.vb"
+                Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
+'The Script Task allows you to perform virtually any operation that can be accomplished in
+'a .Net application within the context of an Integration Services control flow. 
+
+'Expand the other regions which have "Help" prefixes for examples of specific ways to use
+'Integration Services features within this script task.
+#End Region
+
+
+#Region "Imports"
+Imports System
+Imports System.Data
+Imports System.Math
+Imports Microsoft.SqlServer.Dts.Runtime
+Imports System.Net
+Imports System.Net.Mail
+Imports System.IO
+#End Region
+
+'ScriptMain is the entry point class of the script.  Do not change the name, attributes,
+'or parent of this class.
+<Microsoft.SqlServer.Dts.Tasks.ScriptTask.SSISScriptTaskEntryPointAttribute()>
+<System.CLSCompliantAttribute(False)>
+Partial Public Class ScriptMain
+    Inherits Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTARTScriptObjectModelBase
+
+#Region "Help:  Using Integration Services variables and parameters in a script"
+    'To use a variable in this script, first ensure that the variable has been added to 
+    'either the list contained in the ReadOnlyVariables property or the list contained in 
+    'the ReadWriteVariables property of this script task, according to whether or not your
+    'code needs to write to the variable.  To add the variable, save this script, close this instance of
+    'Visual Studio, and update the ReadOnlyVariables and 
+    'ReadWriteVariables properties in the Script Transformation Editor window.
+    'To use a parameter in this script, follow the same steps. Parameters are always read-only.
+
+    'Example of reading from a variable:
+    ' startTime = Dts.Variables("System::StartTime").Value
+
+    'Example of writing to a variable:
+    ' Dts.Variables("User::myStringVariable").Value = "new value"
+
+    'Example of reading from a package parameter:
+    ' batchId = Dts.Variables("$Package::batchId").Value
+
+    'Example of reading from a project parameter:
+    ' batchId = Dts.Variables("$Project::batchId").Value
+
+    'Example of reading from a sensitive project parameter:
+    ' batchId = Dts.Variables("$Project::batchId").GetSensitiveValue()
+#End Region
+
+#Region "Help:  Firing Integration Services events from a script"
+    'This script task can fire events for logging purposes.
+
+    'Example of firing an error event:
+    ' Dts.Events.FireError(18, "Process Values", "Bad value", "", 0)
+
+    'Example of firing an information event:
+    ' Dts.Events.FireInformation(3, "Process Values", "Processing has started", "", 0, fireAgain)
+
+    'Example of firing a warning event:
+    ' Dts.Events.FireWarning(14, "Process Values", "No values received for input", "", 0)
+#End Region
+
+#Region "Help:  Using Integration Services connection managers in a script"
+    'Some types of connection managers can be used in this script task.  See the topic 
+    '"Working with Connection Managers Programatically" for details.
+
+    'Example of using an ADO.Net connection manager:
+    ' Dim rawConnection As Object = Dts.Connections("Sales DB").AcquireConnection(Dts.Transaction)
+    ' Dim myADONETConnection As SqlConnection = CType(rawConnection, SqlConnection)
+    ' <Use the connection in some code here, then release the connection>
+    ' Dts.Connections("Sales DB").ReleaseConnection(rawConnection)
+
+    'Example of using a File connection manager
+    ' Dim rawConnection As Object = Dts.Connections("Prices.zip").AcquireConnection(Dts.Transaction)
+    ' Dim filePath As String = CType(rawConnection, String)
+    ' <Use the connection in some code here, then release the connection>
+    ' Dts.Connections("Prices.zip").ReleaseConnection(rawConnection)
+#End Region
+
+    'This method is called when this script task executes in the control flow.
+    'Before returning from this method, set the value of Dts.TaskResult to indicate success or failure.
+    'To open Help, press F1.
+
+    Public Sub Main()
+        '
+        ' Add your code here
+        '
+
+        Dim FileName As String = "E:\BI\Scheduled_ETL_SF\FENXT_DW\DataFiles\_VerifyTableData.csv"
+        Dim NumberOfRecords As Integer = CType(Dts.Variables("TableVerify_RecordCount").Value, Integer)
+
+        If NumberOfRecords > 0 Then
+
+            '--------------Message Body and Subject Code----------------------------
+            Dim messagebody As String
+            Dim messageSubject As String = "FE NXT - Possible Table Data Issue"
+
+            messagebody = ""
+            messagebody = messagebody & "Attached is a list of possible table data issues for the FE NXT data transfer to Snowflake."
+
+
+            '--------------Email Account Password------------------------------------------
+            Dim EmailPW As String = Dts.Variables("SVC_SQL_PW").Value.ToString
+
+
+            '--------------Email List Code------------------------------------------
+
+            'Email Lists
+            Dim ToList As String = Dts.Variables("ToList").Value.ToString
+            Dim CCList As String = Dts.Variables("CCList").Value.ToString
+            Dim BCCList As String = Dts.Variables("BCCList").Value.ToString
+
+            Dim mailMessage As MailMessage
+            mailMessage = New MailMessage("SSIS@osugiving.com", ToList)
+
+            'CC List
+            If CCList.ToString.IndexOf("@") > 0 Then
+                Dim CCListArry As String() = CCList.Split(New Char() {","c})
+                Dim CC As String
+                For Each CC In CCListArry
+                    mailMessage.CC.Add(CC.ToString.Trim)
+                Next
+            End If
+
+            'BCC List
+            If BCCList.ToString.IndexOf("@") > 0 Then
+                Dim BCCListArry As String() = BCCList.Split(New Char() {","c})
+                Dim BCC As String
+                For Each BCC In BCCListArry
+                    mailMessage.Bcc.Add(BCC.ToString.Trim)
+                Next
+            End If
+            '--------------Email List Code------------------------------------------	
+
+
+            '--------------Mail Message Configuration-------------------------------		
+            mailMessage.Attachments.Add(New Attachment(FileName))
+            mailMessage.IsBodyHtml = True
+            mailMessage.Body = messagebody.ToString
+            mailMessage.Subject = messageSubject.ToString
+
+            '--------------SMTP Client Configuration--------------------------------
+            Dim smtpClient As SmtpClient
+            smtpClient = New SmtpClient("smtp.office365.com")
+            smtpClient.Credentials = New NetworkCredential("SSIS@osuf.org", EmailPW)
+            smtpClient.Port = 587
+            smtpClient.EnableSsl = True
+            smtpClient.Send(mailMessage)
+
+
+            '--------------Closing out the objects----------------------------------
+            smtpClient.Dispose()
+            mailMessage.Dispose()
+        End If
+
+
+        '--------------File Cleanup---------------------------------------------
+        'If File.Exists(FileName) = True Then
+        'File.Delete(FileName)
+        'End If
+
+        Dts.TaskResult = ScriptResults.Success
+    End Sub
+
+#Region "ScriptResults declaration"
+    'This enum provides a convenient shorthand within the scope of this class for setting the
+    'result of the script.
+
+    'This code was generated automatically.
+    Enum ScriptResults
+        Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success
+        Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
+    End Enum
+
+#End Region
+
+End Class]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.Designer.vb"
+                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
+' <autogenerated>
+'     This code was generated by a tool.
+'
+'     Changes to this file may cause incorrect behavior and will be lost if
+'     the code is regenerated.
+' </autogenerated>
+'------------------------------------------------------------------------------
+
+Option Strict Off
+Option Explicit On
+
+
+
+Partial Friend NotInheritable Class MySettings
+    Inherits System.Configuration.ApplicationSettingsBase
+
+    Private Shared m_Value As MySettings
+
+    Private Shared m_SyncObject As Object = New Object
+
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Public Shared ReadOnly Property Value() As MySettings
+        Get
+            If (MySettings.m_Value Is Nothing) Then
+                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
+                If (MySettings.m_Value Is Nothing) Then
+                    Try
+                        MySettings.m_Value = New MySettings
+                    Finally
+                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
+                    End Try
+                End If
+            End If
+            Return MySettings.m_Value
+        End Get
+    End Property
+End Class]]></ProjectItem>
+              <ProjectItem
+                Name="Project"
+                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:CodeName>ST_d73372182b4a4e1285d46501e12b1d31</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
+    <msb:DisplayName>ST_d73372182b4a4e1285d46501e12b1d31</msb:DisplayName>
+    <msb:ProjectId>{0962C532-244E-432B-AF95-E6DD2311BF01}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="ST_d73372182b4a4e1285d46501e12b1d31.vbproj" />
+    <msb:File Include="ScriptMain.vb" />
+    <msb:File Include="My Project\Resources.resx" />
+    <msb:File Include="My Project\AssemblyInfo.vb" />
+    <msb:File Include="My Project\Resources.Designer.vb" />
+    <msb:File Include="My Project\Settings.settings" />
+    <msb:File Include="My Project\Settings.Designer.vb" />
+  </msb:ItemGroup>
+</c:Project>]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Resources.resx"
+                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Resources.Designer.vb"
+                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
+' <autogenerated>
+'     This code was generated by a tool.
+'
+'     Changes to this file may cause incorrect behavior and will be lost if
+'     the code is regenerated.
+' </autogenerated>
+'------------------------------------------------------------------------------
+
+Option Strict Off
+Option Explicit On
+
+
+Namespace My.Resources
+    
+    '''<summary>
+    '''   A strongly-typed resource class, for looking up localized strings, etc.
+    '''</summary>
+    'This class was auto-generated by the Strongly Typed Resource Builder
+    'class via a tool like ResGen or Visual Studio.NET.
+    'To add or remove a member, edit your .ResX file then rerun ResGen
+    'with the /str option, or rebuild your VS project.
+    Class MyResources
+        
+        Private Shared _resMgr As System.Resources.ResourceManager
+        
+        Private Shared _resCulture As System.Globalization.CultureInfo
+        
+        Friend Sub New()
+            MyBase.New
+        End Sub
+        
+        '''<summary>
+        '''   Returns the cached ResourceManager instance used by this class.
+        '''</summary>
+        <System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)>  _
+        Public Shared ReadOnly Property ResourceManager() As System.Resources.ResourceManager
+            Get
+                If (_resMgr Is Nothing) Then
+                    Dim temp As System.Resources.ResourceManager = New System.Resources.ResourceManager("My.Resources.MyResources", GetType(MyResources).Assembly)
+                    _resMgr = temp
+                End If
+                Return _resMgr
+            End Get
+        End Property
+        
+        '''<summary>
+        '''   Overrides the current thread's CurrentUICulture property for all
+        '''   resource lookups using this strongly typed resource class.
+        '''</summary>
+        <System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)>  _
+        Public Shared Property Culture() As System.Globalization.CultureInfo
+            Get
+                Return _resCulture
+            End Get
+            Set
+                _resCulture = value
+            End Set
+        End Property
+    End Class
+End Namespace]]></ProjectItem>
+              <BinaryItem
+                Name="ST_d73372182b4a4e1285d46501e12b1d31.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAAU62mAAAAAAAAAAAOAAIiALAVAAACAAAAAIAAAAAAAAwj4A
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAHA+AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAyB4AAAAgAAAAIAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAiAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAKAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAACk
+PgAAAAAAAEgAAAACAAUAMCQAAIgZAAABAAAAAAAAALg9AAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBgAAAoqHgIoGQAACiqmcxoAAAqAAQAABHMbAAAKgAIA
+AARzHAAACoADAAAEcx0AAAqABAAABCoufgEAAARvHgAACioufgIAAARvHwAACioufgMAAARvIAAA
+CioufgQAAARvIQAACioeAigiAAAKKq5+BQAABC0ecgEAAHDQBQAAAigjAAAKbyQAAApzJQAACoAF
+AAAEfgUAAAQqGn4GAAAEKh4CgAYAAAQqQnMiAAAKKCYAAAqACAAABCoeAignAAAKKgAAGzABAD8A
+AAAAAAAAfgcAAAQtMn4IAAAEKCYAAAooKAAACn4HAAAELRxzDQAABoAHAAAE3hB+CAAABCgmAAAK
+KCkAAArcfgcAAAQqAAEQAAACAB0ADCkAEAAAAAAeAigqAAAKKhMwBQAKAgAAAQAAEXIzAABwCgIo
+KwAACm8sAAAKcrEAAHBvLQAACm8uAAAKKC8AAAoWPtIBAABy4QAAcAxyJwEAcAsHcikBAHAoMAAA
+CgsCKCsAAApvLAAACnLiAQBwby0AAApvLgAACm8xAAAKDQIoKwAACm8sAAAKcvgBAHBvLQAACm8u
+AAAKbzEAAAoTBAIoKwAACm8sAAAKcgYCAHBvLQAACm8uAAAKbzEAAAoTBQIoKwAACm8sAAAKchQC
+AHBvLQAACm8uAAAKbzEAAAoTBnIkAgBwEQRzMgAAChMHEQVvMwAACnJKAgBwbzQAAAoWMUYRBReN
+MAAAASUWHyydbzUAAAoTCRYTCislEQkRCpoTCBEHbzYAAAoRCG8zAAAKbzcAAApvOAAAChEKF9YT
+ChEKEQmOaTLTEQZvMwAACnJKAgBwbzQAAAoWMUYRBheNMAAAASUWHyydbzUAAAoTDBYTDSslEQwR
+DZoTCxEHbzkAAAoRC28zAAAKbzcAAApvOAAAChENF9YTDRENEQyOaTLTEQdvOgAACgZzOwAACm88
+AAAKEQcXbz0AAAoRBwdvMwAACm8+AAAKEQcIbzMAAApvPwAACnJOAgBwc0AAAAolcnQCAHAJc0EA
+AApvQgAACiUgSwIAAG9DAAAKJRdvRAAACiURB29FAAAKb0YAAAoRB29HAAAKAigrAAAKFm9IAAAK
+KjYCAygmAAAKKEkAAAoqHgIoSgAACiou0AgAAAIoIwAACioeAigxAAAKKhMwAQAUAAAAAgAAEQKM
+BgAAGy0IKAEAACsKKwICCgYqIgP+FQYAABsqAAAAEzACACgAAAADAAARAntMAAAKb00AAAoKBowJ
+AAAbLRIoAgAAKwoCe0wAAAoGb04AAAoGKkoCKCIAAAoCc08AAAp9TAAACioAQlNKQgEAAQAAAAAA
+DAAAAHY0LjAuMzAzMTkAAAAABQBsAAAAgAgAACN+AADsCAAAUAoAACNTdHJpbmdzAAAAADwTAACQ
+AgAAI1VTAMwVAAAQAAAAI0dVSUQAAADcFQAArAMAACNCbG9iAAAAAAAAAAIAAAFXHaIJCQ8AAAD6
+ATMAFgAAAQAAADgAAAAKAAAADAAAABkAAAAEAAAATwAAAAIAAAA3AAAAAwAAAAQAAAAIAAAACQAA
+AAkAAAABAAAABQAAAAEAAAADAAAAAwAAAAIAAAAAAJgFAQAAAAAABgCOA1gIBgAzBFgIBgBlApkH
+DwD+CAAABgCmAmcGBgBxA2cGBgAaBGcGBgCuA2cGBgDHA2cGBgDtAmcGBgDiA+YFBgCSAhIIBgAO
+AhIIBgA5A2cGBgAIA5UECgAxAjMHCgD5AXIFCgB5AnIFDgDJAegHDgBpB6wHBgAhA5kHDgC9AjEI
+DgDVAs0ABgCTCeYFDgBPB+gHDgBWA80ABgB8AeYFDgAlABcFCgAcAvcFBgAZB3gIBgCkBlIGCgDZ
+AT0GBgBIApkHEgD4A9wEEgCtAdwEBgC4BOYFCgAgAYgFBgDyBeYFBgA1AeYFBgBFCmcGBgBJCVgI
+BgCRB4QEEgBgBdwEFgARCVkBFgAsAVkBDgA9CTEIBgCxBOYFBgCwBuYFCgB5BogFCgCPBogFCgDg
+CYgFBgA0AEEFCgDVCYgFCgAFBbAJCgD0CbAJBgB6B+YFAAAAAFwAAAAAAAEAAQAAAAAALwYRCk0A
+AQABAAAAAABnBxEKUQABAAIAAAEQAKYJEQphAAEAAwAAAAAAugiJCGEABQAIAAABEAAbCQEAgQAH
+AAwAAQAAABQGAQCNAAkADwAFAQAA2gcAAGEACQARAAUBAABBAAAAYQAJABgAAgEAAGgJAACZAAoA
+GgAxAN4GQwExALUGSwExAMkGUwExAPcGWwERAHIHYwERAKEBZwERAFEEawERAI0JbwEhAAcKBwEG
+BrQAcgFWgFgJdQFWgIEBdQFQIAAAAAAGGIQHBgABAFggAAAAAAYYhAcGAAEAYCAAAAAAERiKB3kB
+AQCKIAAAAAATCFoHfQEBAJYgAAAAABMIHwaCAQEAoiAAAAAAEwhLB4cBAQCuIAAAAAATCMoHjAEB
+ALogAAAAAAMYhAcGAAEAwiAAAAAAFggVB5EBAQDuIAAAAAAWCIkBlgEBAPUgAAAAABYIlQGbAQEA
+/SAAAAAAERiKB3kBAgAOIQAAAAAGGIQHBgACABghAAAAABYIWQShAQIAdCEAAAAABhiEBwYAAgB8
+IQAAAAAGABoGBgACAJIjAAAAAMYCNgnfAAIAoCMAAAAAxgIUAeQAAwCoIwAAAACDAHkBpgEDALQj
+AAAAAMYCrwSmAAMAvCMAAAAAEQChAKsBAwDcIwAAAAABAI0AswEEALogAAAAAAYYhAcGAAUA6CMA
+AAAAAwj7AEoABQAcJAAAAAAGGIQHBgAFAAAAAQB2BAAAAQCuBgAAAQALAQAAAQALAQkAhAcBABEA
+hAcGABkAhAcKACkAhAcQADEAhAcQADkAhAcQAEEAhAcQAEkAhAcQAFEAhAcQAFkAhAcVAGEAhAcV
+AGkAhAcQAHEAhAcQAHkAhAcQAIEAhAcaAJEAhAcgAKkAhAcGALEAhAcGALkAhAcGANEAhAcmAOkA
+hAcQAAkBhAcGABEBhAcGAJkAhAcGAKEAhAcGAAwAhAcGABQAhAcGABwAhAcGACQAhAcGAAwA+wBK
+ABQA+wBKABwA+wBKACQA+wBKAMEAhAcGANkARwFPANkAQQpXAPEAhAddAEkBbQRlAAEBhAcGAFEB
+VAdqAFEBwQlqABkBhAcGABkBYAmEAFkBDQmKAGEB3QWQAGkBWQSXAHEBKQebAHkBhgmgAMEArwSm
+ACkBhAcaAHkBrwSmAHkBfASqAHkBuwmvACkBZQC2AHkB7QWmAIkB4wAQACkBxQC2ACkBdgm8AJkB
+hAcQACwA4wDLACkBwAUVACkBOAoQACkBmgkQAKkBhAcQALEBhAcaAKkBJgnRAKkB6wkBAKkBzwUV
+AKkB5wDYAKkB8QEGACkB8QEGAFkBxgkBAMEANgnfAMEAFAHkAMEB7ADwADwABwoHAUQAWQRKAEQA
+YwTLAEQAhAcGAAgALAA5AQgAMAA+ASkAqwBlAy4ACwDjAS4AEwDsAS4AGwALAi4AIwAUAi4AKwA9
+Ai4AMwA9Ai4AOwAUAi4AQwBDAi4ASwA9Ai4AUwBaAi4AWwA9Ai4AYwBgAi4AawCKAi4AcwCXAkAA
+iwA+AUAAgwDhAkMAewDqAkMAgwDhAkkAqwB2A2MAewDqAmMAgwDhAmkAqwCKA4AAiwA+AYMAkwA+
+AYMAmwA+AYMAewDqAokAqwCXA6AAiwA+AakAgwALAsAAiwA+AckAgwALAuAAiwA+AeMAuwA+AeMA
+UwA9AukAswA+AQMBgwDhAgMBowADAyMBgwDhAiMBWwA9AiACgwDhAiACiwA+AUACgwDhAkACiwA+
+AWACgwDhAmACiwA+AYACgwDhAoACiwA+AaACiwA+AcACiwA+AeACiwA+AeACgwDhAgADiwA+ASAD
+iwA+ASADgwDhAm8A6AD7AAQAAQAFAAUABgAHAAkACAAAAGkHuwEAADEGwAEAAE8HxQEAANwHygEA
+ABkHzwEAAKUB1AEAAHYE2QEAAP8A3gECAAQAAwACAAUABQACAAYABwACAAcACQACAAkACwACAAoA
+DQABAAsADQACAA4ADwACABgAEQAuADUAPABDAMIA7QAAAQ8BFgEEgAAAAQAAAAAAAAAAAAAAAAAB
+AAAABAAAAAAAAAAAAAAAHgG8AAAAAAAEAAAAAAAAAAAAAAAeAeYFAAAAAAoAAAAAAAAAAAAAACcB
+zQAAAAAADwAAAAAAAAAAAAAAMAG9BAAAAAAPAAAAAAAAAAAAAAAwAWwAAAAAAAAAAAABAAAAxggA
+AAgABAAJAAQACgAHAAAAEAASAIsAAAAQACsAiwAAAAAALQCLAJcA9gCXABkBAAAAAABTVF9kNzMz
+NzIxODJiNGE0ZTEyODVkNDY1MDFlMTJiMWQzMQBDb250ZXh0VmFsdWVgMQBDb2xsZWN0aW9uYDEA
+VGhyZWFkU2FmZU9iamVjdFByb3ZpZGVyYDEAPE1vZHVsZT4AZ2V0X0NDAE1pY3Jvc29mdC5TcWxT
+ZXJ2ZXIuTWFuYWdlZERUUwBUAERpc3Bvc2VfX0luc3RhbmNlX18AQ3JlYXRlX19JbnN0YW5jZV9f
+AHZhbHVlX18AbXNjb3JsaWIAZ2V0X0JjYwBNaWNyb3NvZnQuVmlzdWFsQmFzaWMAQWRkAFNlbmQA
+Q3JlYXRlSW5zdGFuY2UAZ2V0X0dldEluc3RhbmNlAGluc3RhbmNlAEdldEhhc2hDb2RlAE1haWxN
+ZXNzYWdlAFZhcmlhYmxlAFJ1bnRpbWVUeXBlSGFuZGxlAEdldFR5cGVGcm9tSGFuZGxlAE1pY3Jv
+c29mdC5TcWxTZXJ2ZXIuRHRzLlJ1bnRpbWUAR2V0VHlwZQBGYWlsdXJlAGdldF9DdWx0dXJlAHNl
+dF9DdWx0dXJlAF9yZXNDdWx0dXJlAFZTVEFSVFNjcmlwdE9iamVjdE1vZGVsQmFzZQBBcHBsaWNh
+dGlvbkJhc2UAQXBwbGljYXRpb25TZXR0aW5nc0Jhc2UARGlzcG9zZQBFZGl0b3JCcm93c2FibGVT
+dGF0ZQBHdWlkQXR0cmlidXRlAEhlbHBLZXl3b3JkQXR0cmlidXRlAEdlbmVyYXRlZENvZGVBdHRy
+aWJ1dGUARGVidWdnZXJOb25Vc2VyQ29kZUF0dHJpYnV0ZQBEZWJ1Z2dhYmxlQXR0cmlidXRlAEVk
+aXRvckJyb3dzYWJsZUF0dHJpYnV0ZQBDb21WaXNpYmxlQXR0cmlidXRlAEFzc2VtYmx5VGl0bGVB
+dHRyaWJ1dGUAU3RhbmRhcmRNb2R1bGVBdHRyaWJ1dGUASGlkZU1vZHVsZU5hbWVBdHRyaWJ1dGUA
+QXNzZW1ibHlUcmFkZW1hcmtBdHRyaWJ1dGUAVGFyZ2V0RnJhbWV3b3JrQXR0cmlidXRlAERlYnVn
+Z2VySGlkZGVuQXR0cmlidXRlAEFzc2VtYmx5RmlsZVZlcnNpb25BdHRyaWJ1dGUATXlHcm91cENv
+bGxlY3Rpb25BdHRyaWJ1dGUAQXNzZW1ibHlEZXNjcmlwdGlvbkF0dHJpYnV0ZQBDb21waWxhdGlv
+blJlbGF4YXRpb25zQXR0cmlidXRlAEFzc2VtYmx5UHJvZHVjdEF0dHJpYnV0ZQBBc3NlbWJseUNv
+cHlyaWdodEF0dHJpYnV0ZQBDTFNDb21wbGlhbnRBdHRyaWJ1dGUAU1NJU1NjcmlwdFRhc2tFbnRy
+eVBvaW50QXR0cmlidXRlAEFzc2VtYmx5Q29tcGFueUF0dHJpYnV0ZQBSdW50aW1lQ29tcGF0aWJp
+bGl0eUF0dHJpYnV0ZQBtX1ZhbHVlAGdldF9WYWx1ZQBzZXRfVmFsdWUAR2V0T2JqZWN0VmFsdWUA
+SW5kZXhPZgBTeXN0ZW0uVGhyZWFkaW5nAFN5c3RlbS5SdW50aW1lLlZlcnNpb25pbmcAVG9TdHJp
+bmcATWF0aABNaWNyb3NvZnQuU3FsU2VydmVyLlNjcmlwdFRhc2sATWljcm9zb2Z0LlNxbFNlcnZl
+ci5EdHMuVGFza3MuU2NyaXB0VGFzawBOZXR3b3JrQ3JlZGVudGlhbABNaWNyb3NvZnQuVmlzdWFs
+QmFzaWMuTXlTZXJ2aWNlcy5JbnRlcm5hbABTeXN0ZW0uQ29sbGVjdGlvbnMuT2JqZWN0TW9kZWwA
+U2NyaXB0T2JqZWN0TW9kZWwAU3lzdGVtLkNvbXBvbmVudE1vZGVsAFN5c3RlbS5OZXQuTWFpbABT
+VF9kNzMzNzIxODJiNGE0ZTEyODVkNDY1MDFlMTJiMWQzMS5kbGwAc2V0X0lzQm9keUh0bWwAc2V0
+X0VuYWJsZVNzbABnZXRfSXRlbQBTeXN0ZW0AVHJpbQBFbnVtAFN5c3RlbS5Db21wb25lbnRNb2Rl
+bC5EZXNpZ24AU2NyaXB0TWFpbgBnZXRfQXBwbGljYXRpb24ATXlBcHBsaWNhdGlvbgBTeXN0ZW0u
+Q29uZmlndXJhdGlvbgBTeXN0ZW0uR2xvYmFsaXphdGlvbgBTeXN0ZW0uUmVmbGVjdGlvbgBNYWls
+QWRkcmVzc0NvbGxlY3Rpb24AQXR0YWNobWVudENvbGxlY3Rpb24AQ3VsdHVyZUluZm8AQ2hhcgBt
+X0FwcE9iamVjdFByb3ZpZGVyAG1fVXNlck9iamVjdFByb3ZpZGVyAG1fQ29tcHV0ZXJPYmplY3RQ
+cm92aWRlcgBtX015V2ViU2VydmljZXNPYmplY3RQcm92aWRlcgBnZXRfUmVzb3VyY2VNYW5hZ2Vy
+AFRvSW50ZWdlcgBTeXN0ZW0uQ29kZURvbS5Db21waWxlcgBnZXRfVXNlcgBFbnRlcgBnZXRfQ29t
+cHV0ZXIATXlDb21wdXRlcgBfcmVzTWdyAEFjdGl2YXRvcgAuY3RvcgAuY2N0b3IATW9uaXRvcgBT
+eXN0ZW0uRGlhZ25vc3RpY3MATWljcm9zb2Z0LlZpc3VhbEJhc2ljLkRldmljZXMAZ2V0X1dlYlNl
+cnZpY2VzAE15V2ViU2VydmljZXMATWljcm9zb2Z0LlZpc3VhbEJhc2ljLkFwcGxpY2F0aW9uU2Vy
+dmljZXMAU3lzdGVtLlJ1bnRpbWUuSW50ZXJvcFNlcnZpY2VzAE1pY3Jvc29mdC5WaXN1YWxCYXNp
+Yy5Db21waWxlclNlcnZpY2VzAFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAU3lzdGVt
+LlJlc291cmNlcwBTVF9kNzMzNzIxODJiNGE0ZTEyODVkNDY1MDFlMTJiMWQzMS5NeS5SZXNvdXJj
+ZXMATXlSZXNvdXJjZXMAU1RfZDczMzcyMTgyYjRhNGUxMjg1ZDQ2NTAxZTEyYjFkMzEuUmVzb3Vy
+Y2VzLnJlc291cmNlcwBEZWJ1Z2dpbmdNb2RlcwBnZXRfVmFyaWFibGVzAE15U2V0dGluZ3MAc2V0
+X0NyZWRlbnRpYWxzAEVxdWFscwBDb252ZXJzaW9ucwBSdW50aW1lSGVscGVycwBTdWNjZXNzAGdl
+dF9EdHMAU2NyaXB0UmVzdWx0cwBnZXRfQXR0YWNobWVudHMAQ29uY2F0AG1fU3luY09iamVjdABz
+ZXRfU3ViamVjdABNeVByb2plY3QAU3lzdGVtLk5ldABTcGxpdABFeGl0AHNldF9UYXNrUmVzdWx0
+AFNtdHBDbGllbnQAQXR0YWNobWVudABzZXRfUG9ydABJQ3JlZGVudGlhbHNCeUhvc3QAbV9Db250
+ZXh0AFNUX2Q3MzM3MjE4MmI0YTRlMTI4NWQ0NjUwMWUxMmIxZDMxLk15AHNldF9Cb2R5AGdldF9B
+c3NlbWJseQAAAAAxTQB5AC4AUgBlAHMAbwB1AHIAYwBlAHMALgBNAHkAUgBlAHMAbwB1AHIAYwBl
+AHMAAH1FADoAXABCAEkAXABTAGMAaABlAGQAdQBsAGUAZABfAEUAVABMAF8AUwBGAFwARgBFAE4A
+WABUAF8ARABXAFwARABhAHQAYQBGAGkAbABlAHMAXABfAFYAZQByAGkAZgB5AFQAYQBiAGwAZQBE
+AGEAdABhAC4AYwBzAHYAAC9UAGEAYgBsAGUAVgBlAHIAaQBmAHkAXwBSAGUAYwBvAHIAZABDAG8A
+dQBuAHQAAEVGAEUAIABOAFgAVAAgAC0AIABQAG8AcwBzAGkAYgBsAGUAIABUAGEAYgBsAGUAIABE
+AGEAdABhACAASQBzAHMAdQBlAAEBAIC3QQB0AHQAYQBjAGgAZQBkACAAaQBzACAAYQAgAGwAaQBz
+AHQAIABvAGYAIABwAG8AcwBzAGkAYgBsAGUAIAB0AGEAYgBsAGUAIABkAGEAdABhACAAaQBzAHMA
+dQBlAHMAIABmAG8AcgAgAHQAaABlACAARgBFACAATgBYAFQAIABkAGEAdABhACAAdAByAGEAbgBz
+AGYAZQByACAAdABvACAAUwBuAG8AdwBmAGwAYQBrAGUALgAAFVMAVgBDAF8AUwBRAEwAXwBQAFcA
+AA1UAG8ATABpAHMAdAAADUMAQwBMAGkAcwB0AAAPQgBDAEMATABpAHMAdAAAJVMAUwBJAFMAQABv
+AHMAdQBnAGkAdgBpAG4AZwAuAGMAbwBtAAADQAAAJXMAbQB0AHAALgBvAGYAZgBpAGMAZQAzADYA
+NQAuAGMAbwBtAAAbUwBTAEkAUwBAAG8AcwB1AGYALgBvAHIAZwAAl2E2XrE9E0qek0Kcn/q4ZwAE
+IAEBCAMgAAEFIAEBEREEIAEBDgQgAQECBSACAQ4OBSABARFFByAEAQ4ODg4GFRIkARIMBhUSJAES
+CAYVEiQBEmUGFRIkARIgBCAAEwAHAAESbRGAnQUgABKAoQcgAgEOEoChBAABHBwEAAEBHBQHDg4O
+Dg4ODg4SgJUOHQ4IDh0OCAUgABKArQUgABKAsQYgARKAtRwDIAAcBAABCBwFAAIODg4DIAAOBCAB
+CA4GIAEdDh0DBSAAEoDFBSAAEoDJCBUSgNEBEoDNBSABARMABiABARKA3QYgAQESgJUEIAECHAMg
+AAgEBwEeAAIeAAUQAQAeAAQKAR4ABAcBEwAGFRIkARMABwYVEnEBEwAGFRJxARMAAhMABAoBEwAI
+t3pcVhk04IkIsD9ffxHVCjoIiYRdzYCAzJEEAAAAAAQBAAAABwYVEiQBEgwHBhUSJAESCAcGFRIk
+ARJlBwYVEiQBEiADBhJ5AwYSfQMGEhgCBhwCBggDBhEoAwAAAQQAABIMBAAAEggEAAASZQQAABIg
+BAAAEnkEAAASfQUAAQESfQQAABIYBCAAEm0HEAEBHgAeAAcwAQEBEB4ABAgAEgwECAASCAQIABJl
+BAgAEiAECAASeQQIABJ9BAgAEhgEKAATAAgBAAgAAAAAAB4BAAEAVAIWV3JhcE5vbkV4Y2VwdGlv
+blRocm93cwEIAQACAAAAAAAoAQAjU1RfZDczMzcyMTgyYjRhNGUxMjg1ZDQ2NTAxZTEyYjFkMzEA
+AAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAyMQAABQEAAQAAKQEAJGMzMGI2MWQzLTA3MTktNDA5
+OS1iM2NlLTgzY2Y0NzgwMWJlOQAADAEABzEuMC4wLjAAAEkBABouTkVURnJhbWV3b3JrLFZlcnNp
+b249djQuNwEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC43CAEAAQAA
+AAAAGAEACk15VGVtcGxhdGUIMTEuMC4wLjAAAGEBADRTeXN0ZW0uV2ViLlNlcnZpY2VzLlByb3Rv
+Y29scy5Tb2FwSHR0cENsaWVudFByb3RvY29sEkNyZWF0ZV9fSW5zdGFuY2VfXxNEaXNwb3NlX19J
+bnN0YW5jZV9fAAAAEAEAC015LkNvbXB1dGVyAAATAQAOTXkuQXBwbGljYXRpb24AAAwBAAdNeS5V
+c2VyAAATAQAOTXkuV2ViU2VydmljZXMAAAC0AAAAzsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJj
+ZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1
+dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1
+bnRpbWVSZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBBRFBBRFC0AAAAmD4AAAAAAAAAAAAAsj4AAAAg
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAKQ+AAAAAAAAAAAAAAAAX0NvckRsbE1haW4AbXNjb3JlZS5k
+bGwAAAAAAP8lACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAQ
+AAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAASAAAAFhA
+AADsAwAAAAAAAAAAAADsAzQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAAAAAAvQTv
+/gAAAQAAAAEAAAAAAAAAAQAAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQAAAABAFYA
+YQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBuAAAAAAAA
+ALAETAMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAKAMAAAEAMAAwADAAMAAwADQA
+YgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAAYQBuAHkATgBh
+AG0AZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAAAABTAFQA
+XwBkADcAMwAzADcAMgAxADgAMgBiADQAYQA0AGUAMQAyADgANQBkADQANgA1ADAAMQBlADEAMgBi
+ADEAZAAzADEAAAAwAAgAAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4AMAAuADAA
+AABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAVABfAGQANwAzADMANwAyADEAOAAy
+AGIANABhADQAZQAxADIAOAA1AGQANAA2ADUAMAAxAGUAMQAyAGIAMQBkADMAMQAuAGQAbABsAAAA
+SAASAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAQwBvAHAAeQByAGkAZwBoAHQAIABA
+ACAAIAAyADAAMgAxAAAAKgABAAEATABlAGcAYQBsAFQAcgBhAGQAZQBtAGEAcgBrAHMAAAAAAAAA
+AAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBlAAAAUwBUAF8AZAA3ADMAMwA3
+ADIAMQA4ADIAYgA0AGEANABlADEAMgA4ADUAZAA0ADYANQAwADEAZQAxADIAYgAxAGQAMwAxAC4A
+ZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMAVABfAGQANwAzADMANwAy
+ADEAOAAyAGIANABhADQAZQAxADIAOAA1AGQANAA2ADUAMAAxAGUAMQAyAGIAMQBkADMAMQAAADQA
+CAABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAA4AAgAAQBB
+AHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAAxD4AAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
+            </ScriptProject>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Table Data Verification\Get Email Account Password"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{941BF062-CE39-46E9-904F-5C895A5B5D49}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Get Email Account Password"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{E406B8F7-EAF4-4415-9737-7EE00C47E063}"
+              SQLTask:SqlStatementSource="EXEC [dbo].[EncryptedText] @Action = 'Retrieve', @Name = 'SVC_SSIS Service Account'"
+              SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="Result"
+                SQLTask:DtsVariableName="User::SVC_SQL_PW" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Table Data Verification\Get Table Data"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{89b2bb42-4e78-425f-8eb8-848789550280}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Get Table Data"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Table Data Verification\Get Table Data\Row Count - _VerifyTableData File"
+                  componentClassID="Microsoft.RowCount"
+                  contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+                  name="Row Count - _VerifyTableData File">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable to hold the row count."
+                      name="VariableName">User::TableVerify_RecordCount</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Table Data Verification\Get Table Data\Row Count - _VerifyTableData File.Inputs[Row Count Input 1]"
+                      hasSideEffects="true"
+                      name="Row Count Input 1">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Table Data Verification\Get Table Data\Row Count - _VerifyTableData File.Outputs[Row Count Output 1]"
+                      name="Row Count Output 1"
+                      synchronousInputId="Package\Table Data Verification\Get Table Data\Row Count - _VerifyTableData File.Inputs[Row Count Input 1]">
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables"
+                  componentClassID="Microsoft.SSISODBCSrc"
+                  contactInfo="ODBC Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="ODBC Source"
+                  name="Snowflake Warehouse - Get results from all tables"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The name of the table to be fetched."
+                      expressionType="Notify"
+                      name="TableName"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT
+    'DIM_Account'               AS TableName 
+    ,COUNT(*)                   AS RecordCount
+    ,MAX(Date(DateUpdated))     AS MaxDateUpdated
+    ,MIN(Date(DateUpdated))     AS MinDateUpdated    
+
+FROM
+    "FENXT_DW"."BB"."DIM_Account"    
+HAVING
+    MaxDateUpdated IS NULL
+    OR MinDateUpdated IS NULL
+    OR MaxDateUpdated &lt;&gt; MinDateUpdated
+    OR MaxDateUpdated &lt; Date(GetDate())
+    
+UNION
+
+SELECT
+    'DIM_AccountAttribute'      AS TableName 
+    ,COUNT(*)                   AS RecordCount
+    ,MAX(Date(DateUpdated))     AS MaxDateUpdated
+    ,MIN(Date(DateUpdated))     AS MinDateUpdated    
+FROM
+    "FENXT_DW"."BB"."DIM_AccountAttribute"
+HAVING
+    MaxDateUpdated IS NULL
+    OR MinDateUpdated IS NULL
+    OR MaxDateUpdated &lt;&gt; MinDateUpdated
+    OR MaxDateUpdated &lt; Date(GetDate())
+    
+UNION
+
+SELECT
+    'DIM_Class'                 AS TableName 
+    ,COUNT(*)                   AS RecordCount
+    ,MAX(Date(DateUpdated))     AS MaxDateUpdated
+    ,MIN(Date(DateUpdated))     AS MinDateUpdated    
+FROM
+    "FENXT_DW"."BB"."DIM_Class"
+HAVING
+    MaxDateUpdated IS NULL
+    OR MinDateUpdated IS NULL
+    OR MaxDateUpdated &lt;&gt; MinDateUpdated
+    OR MaxDateUpdated &lt; Date(GetDate())
+    
+UNION
+
+SELECT
+    'DIM_Date'                  AS TableName 
+    ,COUNT(*)                   AS RecordCount
+    ,MAX(Date(DateUpdated))     AS MaxDateUpdated
+    ,MIN(Date(DateUpdated))     AS MinDateUpdated    
+FROM
+    "FENXT_DW"."BB"."DIM_Date"
+HAVING
+    MaxDateUpdated IS NULL
+    OR MinDateUpdated IS NULL
+    OR MaxDateUpdated &lt;&gt; MinDateUpdated
+    OR MaxDateUpdated &lt; Date(GetDate())
+    
+UNION
+
+SELECT
+    'DIM_GL7FISCALPERIOD'       AS TableName 
+    ,COUNT(*)                   AS RecordCount
+    ,MAX(Date(DateUpdated))     AS MaxDateUpdated
+    ,MIN(Date(DateUpdated))     AS MinDateUpdated    
+FROM
+    "FENXT_DW"."BB"."DIM_GL7FISCALPERIOD"
+HAVING
+    MaxDateUpdated IS NULL
+    OR MinDateUpdated IS NULL
+    OR MaxDateUpdated &lt;&gt; MinDateUpdated
+    OR MaxDateUpdated &lt; Date(GetDate())
+    
+UNION
+
+SELECT
+    'DIM_GLAccounts'            AS TableName 
+    ,COUNT(*)                   AS RecordCount
+    ,MAX(Date(DateUpdated))     AS MaxDateUpdated
+    ,MIN(Date(DateUpdated))     AS MinDateUpdated    
+FROM
+    "FENXT_DW"."BB"."DIM_GLAccounts"
+HAVING
+    MaxDateUpdated IS NULL
+    OR MinDateUpdated IS NULL
+    OR MaxDateUpdated &lt;&gt; MinDateUpdated
+    OR MaxDateUpdated &lt; Date(GetDate())
+    
+UNION
+
+SELECT
+    'DIM_GLSourceType'          AS TableName 
+    ,COUNT(*)                   AS RecordCount
+    ,MAX(Date(DateUpdated))     AS MaxDateUpdated
+    ,MIN(Date(DateUpdated))     AS MinDateUpdated    
+FROM
+    "FENXT_DW"."BB"."DIM_GLSourceType"
+HAVING
+    MaxDateUpdated IS NULL
+    OR MinDateUpdated IS NULL
+    OR MaxDateUpdated &lt;&gt; MinDateUpdated
+    OR MaxDateUpdated &lt; Date(GetDate())
+    
+UNION
+
+SELECT
+    'DIM_Journal'               AS TableName 
+    ,COUNT(*)                   AS RecordCount
+    ,MAX(Date(DateUpdated))     AS MaxDateUpdated
+    ,MIN(Date(DateUpdated))     AS MinDateUpdated    
+FROM
+    "FENXT_DW"."BB"."DIM_Journal"
+HAVING
+    MaxDateUpdated IS NULL
+    OR MinDateUpdated IS NULL
+    OR MaxDateUpdated &lt;&gt; MinDateUpdated
+    OR MaxDateUpdated &lt; Date(GetDate())
+    
+UNION
+
+SELECT
+    'DIM_PostStatus'            AS TableName 
+    ,COUNT(*)                   AS RecordCount
+    ,MAX(Date(DateUpdated))     AS MaxDateUpdated
+    ,MIN(Date(DateUpdated))     AS MinDateUpdated    
+FROM
+    "FENXT_DW"."BB"."DIM_PostStatus"
+HAVING
+    MaxDateUpdated IS NULL
+    OR MinDateUpdated IS NULL
+    OR MaxDateUpdated &lt;&gt; MinDateUpdated
+    OR MaxDateUpdated &lt; Date(GetDate())
+    
+UNION
+
+SELECT
+    'DIM_Project'               AS TableName 
+    ,COUNT(*)                   AS RecordCount
+    ,MAX(Date(DateUpdated))     AS MaxDateUpdated
+    ,MIN(Date(DateUpdated))     AS MinDateUpdated    
+FROM
+    "FENXT_DW"."BB"."DIM_Project"
+HAVING
+    MaxDateUpdated IS NULL
+    OR MinDateUpdated IS NULL
+    OR MaxDateUpdated &lt;&gt; MinDateUpdated
+    OR MaxDateUpdated &lt; Date(GetDate())
+    
+UNION
+
+SELECT
+    'DIM_ProjectAttribute'      AS TableName 
+    ,COUNT(*)                   AS RecordCount
+    ,MAX(Date(DateUpdated))     AS MaxDateUpdated
+    ,MIN(Date(DateUpdated))     AS MinDateUpdated    
+FROM
+    "FENXT_DW"."BB"."DIM_ProjectAttribute"
+HAVING
+    MaxDateUpdated IS NULL
+    OR MinDateUpdated IS NULL
+    OR MaxDateUpdated &lt;&gt; MinDateUpdated
+    OR MaxDateUpdated &lt; Date(GetDate())
+    
+UNION
+
+SELECT
+    'DIM_ProjectNote'           AS TableName 
+    ,COUNT(*)                   AS RecordCount
+    ,MAX(Date(DateUpdated))     AS MaxDateUpdated
+    ,MIN(Date(DateUpdated))     AS MinDateUpdated    
+FROM
+    "FENXT_DW"."BB"."DIM_ProjectNote"
+HAVING
+    MaxDateUpdated IS NULL
+    OR MinDateUpdated IS NULL
+    OR MaxDateUpdated &lt;&gt; MinDateUpdated
+    OR MaxDateUpdated &lt; Date(GetDate())
+    
+UNION
+
+SELECT
+    'DIM_Scenario'              AS TableName 
+    ,COUNT(*)                   AS RecordCount
+    ,MAX(Date(DateUpdated))     AS MaxDateUpdated
+    ,MIN(Date(DateUpdated))     AS MinDateUpdated    
+FROM
+    "FENXT_DW"."BB"."DIM_Scenario"
+HAVING
+    MaxDateUpdated IS NULL
+    OR MinDateUpdated IS NULL
+    OR MaxDateUpdated &lt;&gt; MinDateUpdated
+    OR MaxDateUpdated &lt; Date(GetDate())
+    
+UNION
+
+SELECT
+    'DIM_TransactionAttribute'  AS TableName 
+    ,COUNT(*)                   AS RecordCount
+    ,MAX(Date(DateUpdated))     AS MaxDateUpdated
+    ,MIN(Date(DateUpdated))     AS MinDateUpdated    
+FROM
+    "FENXT_DW"."BB"."DIM_TransactionAttribute"
+HAVING
+    MaxDateUpdated IS NULL
+    OR MinDateUpdated IS NULL
+    OR MaxDateUpdated &lt;&gt; MinDateUpdated
+    OR MaxDateUpdated &lt; Date(GetDate())
+    
+UNION
+
+SELECT
+    'DIM_TransactionType'       AS TableName 
+    ,COUNT(*)                   AS RecordCount
+    ,MAX(Date(DateUpdated))     AS MaxDateUpdated
+    ,MIN(Date(DateUpdated))     AS MinDateUpdated    
+FROM
+    "FENXT_DW"."BB"."DIM_TransactionType"
+HAVING
+    MaxDateUpdated IS NULL
+    OR MinDateUpdated IS NULL
+    OR MaxDateUpdated &lt;&gt; MinDateUpdated
+    OR MaxDateUpdated &lt; Date(GetDate())
+    
+UNION
+
+SELECT
+    'DIM_Vendor'                AS TableName 
+    ,COUNT(*)                   AS RecordCount
+    ,MAX(Date(DateUpdated))     AS MaxDateUpdated
+    ,MIN(Date(DateUpdated))     AS MinDateUpdated    
+FROM
+    "FENXT_DW"."BB"."DIM_Vendor"
+HAVING
+    MaxDateUpdated IS NULL
+    OR MinDateUpdated IS NULL
+    OR MaxDateUpdated &lt;&gt; MinDateUpdated
+    OR MaxDateUpdated &lt; Date(GetDate())
+    
+UNION
+
+SELECT
+    'FACT_AccountBudget'        AS TableName 
+    ,COUNT(*)                   AS RecordCount
+    ,MAX(Date(DateUpdated))     AS MaxDateUpdated
+    ,MIN(Date(DateUpdated))     AS MinDateUpdated    
+FROM
+    "FENXT_DW"."BB"."FACT_AccountBudget"
+HAVING
+    MaxDateUpdated IS NULL
+    OR MinDateUpdated IS NULL
+    OR MaxDateUpdated &lt;&gt; MinDateUpdated
+    OR MaxDateUpdated &lt; Date(GetDate())
+    
+UNION
+
+SELECT
+    'FACT_GLTransactionDistribution'    AS TableName 
+    ,COUNT(*)                           AS RecordCount
+    ,MAX(Date(DateUpdated))             AS MaxDateUpdated
+    ,MIN(Date(DateUpdated))             AS MinDateUpdated    
+FROM
+    "FENXT_DW"."BB"."FACT_GLTransactionDistribution"
+HAVING
+    MaxDateUpdated IS NULL
+    OR MinDateUpdated IS NULL
+    OR MaxDateUpdated &lt;&gt; MinDateUpdated
+    OR MaxDateUpdated &lt; Date(GetDate())
+    
+UNION
+
+SELECT
+    'FACT_ProjectBudget'        AS TableName 
+    ,COUNT(*)                   AS RecordCount
+    ,MAX(Date(DateUpdated))     AS MaxDateUpdated
+    ,MIN(Date(DateUpdated))     AS MinDateUpdated    
+FROM
+    "FENXT_DW"."BB"."FACT_ProjectBudget"
+HAVING
+    MaxDateUpdated IS NULL
+    OR MinDateUpdated IS NULL
+    OR MaxDateUpdated &lt;&gt; MinDateUpdated
+    OR MaxDateUpdated &lt; Date(GetDate())
+    
+UNION
+
+SELECT
+    'OSUF_PCardDetail'          AS TableName 
+    ,COUNT(*)                   AS RecordCount
+    ,MAX(Date(DateUpdated))     AS MaxDateUpdated
+    ,MIN(Date(DateUpdated))     AS MinDateUpdated    
+FROM
+    "FENXT_DW"."BB"."OSUF_PCardDetail"
+HAVING
+    MaxDateUpdated IS NULL
+    OR MinDateUpdated IS NULL
+    OR MaxDateUpdated &lt;&gt; MinDateUpdated
+    OR MaxDateUpdated &lt; Date(GetDate())
+    
+UNION
+
+SELECT
+    'OSUF_PCardDetail_MatchedPreAttribute'  AS TableName 
+    ,COUNT(*)                               AS RecordCount
+    ,MAX(Date(DateUpdated))                 AS MaxDateUpdated
+    ,MIN(Date(DateUpdated))                 AS MinDateUpdated    
+FROM
+    "FENXT_DW"."BB"."OSUF_PCardDetail_MatchedPreAttribute"
+HAVING
+    MaxDateUpdated IS NULL
+    OR MinDateUpdated IS NULL
+    OR MaxDateUpdated &lt;&gt; MinDateUpdated
+    OR MaxDateUpdated &lt; Date(GetDate())</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the number of rows fetched per batch."
+                      expressionType="Notify"
+                      name="BatchSize">1000</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Determines the chunk size allocation for LOB columns"
+                      expressionType="Notify"
+                      name="LobChunkSize">32768</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines how the component exposes CHAR columns. If False, CHAR columns are exposed as (multi-)byte strings (DT_STR), if True, CHAR columns are exposed as wide strings (DT_WSTR)"
+                      expressionType="Notify"
+                      name="ExposeCharColumnsAsUnicode">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                      expressionType="Notify"
+                      name="StatementTimeout">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The code page to use when code page information is unavailable from the data source."
+                      expressionType="Notify"
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The method used for fetching data."
+                      expressionType="Notify"
+                      name="FetchMethod">1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The ODBC C data type for binding numeric data."
+                      expressionType="Notify"
+                      name="BindNumericAs">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                      expressionType="Notify"
+                      name="BindCharColumnsAs">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The mode used to access the database."
+                      expressionType="Notify"
+                      name="AccessMode"
+                      typeConverter="AccessMode">1</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Connections[ODBCConnection]"
+                      connectionManagerID="Package.ConnectionManagers[SNOWFLAKE.OSUF_SSIS]"
+                      connectionManagerRefId="Package.ConnectionManagers[SNOWFLAKE.OSUF_SSIS]"
+                      description="The ODBC runtime connection used to access the database."
+                      name="ODBCConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output]"
+                      errorRowDisposition="FailComponent"
+                      name="ODBC Source Output"
+                      truncationRowDisposition="FailComponent">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].Columns[TABLENAME]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].ExternalColumns[TABLENAME]"
+                          length="36"
+                          lineageId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].Columns[TABLENAME]"
+                          name="TABLENAME" />
+                        <outputColumn
+                          refId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].Columns[RECORDCOUNT]"
+                          dataType="numeric"
+                          externalMetadataColumnId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].ExternalColumns[RECORDCOUNT]"
+                          lineageId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].Columns[RECORDCOUNT]"
+                          name="RECORDCOUNT"
+                          precision="18" />
+                        <outputColumn
+                          refId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].Columns[MAXDATEUPDATED]"
+                          dataType="dbDate"
+                          externalMetadataColumnId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].ExternalColumns[MAXDATEUPDATED]"
+                          lineageId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].Columns[MAXDATEUPDATED]"
+                          name="MAXDATEUPDATED" />
+                        <outputColumn
+                          refId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].Columns[MINDATEUPDATED]"
+                          dataType="dbDate"
+                          externalMetadataColumnId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].ExternalColumns[MINDATEUPDATED]"
+                          lineageId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].Columns[MINDATEUPDATED]"
+                          name="MINDATEUPDATED" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].ExternalColumns[TABLENAME]"
+                          codePage="1252"
+                          dataType="str"
+                          length="36"
+                          name="TABLENAME" />
+                        <externalMetadataColumn
+                          refId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].ExternalColumns[RECORDCOUNT]"
+                          dataType="numeric"
+                          name="RECORDCOUNT"
+                          precision="18" />
+                        <externalMetadataColumn
+                          refId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].ExternalColumns[MAXDATEUPDATED]"
+                          dataType="dbDate"
+                          name="MAXDATEUPDATED" />
+                        <externalMetadataColumn
+                          refId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].ExternalColumns[MINDATEUPDATED]"
+                          dataType="dbDate"
+                          name="MINDATEUPDATED" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Error Output]"
+                      isErrorOut="true"
+                      name="ODBC Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Error Output].Columns[TABLENAME]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].ExternalColumns[TABLENAME]"
+                          length="36"
+                          lineageId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Error Output].Columns[TABLENAME]"
+                          name="TABLENAME" />
+                        <outputColumn
+                          refId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Error Output].Columns[RECORDCOUNT]"
+                          dataType="numeric"
+                          externalMetadataColumnId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].ExternalColumns[RECORDCOUNT]"
+                          lineageId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Error Output].Columns[RECORDCOUNT]"
+                          name="RECORDCOUNT"
+                          precision="18" />
+                        <outputColumn
+                          refId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Error Output].Columns[MAXDATEUPDATED]"
+                          dataType="dbDate"
+                          externalMetadataColumnId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].ExternalColumns[MAXDATEUPDATED]"
+                          lineageId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Error Output].Columns[MAXDATEUPDATED]"
+                          name="MAXDATEUPDATED" />
+                        <outputColumn
+                          refId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Error Output].Columns[MINDATEUPDATED]"
+                          dataType="dbDate"
+                          externalMetadataColumnId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].ExternalColumns[MINDATEUPDATED]"
+                          lineageId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Error Output].Columns[MINDATEUPDATED]"
+                          name="MINDATEUPDATED" />
+                        <outputColumn
+                          refId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Table Data Verification\Get Table Data\_VerifyTableData File"
+                  componentClassID="Microsoft.FlatFileDestination"
+                  contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Destination"
+                  localeId="1033"
+                  name="_VerifyTableData File"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether the data will overwrite or append to the destination file."
+                      name="Overwrite">true</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the text to write to the destination file before any data is written."
+                      expressionType="Notify"
+                      name="Header" />
+                    <property
+                      dataType="System.Boolean"
+                      description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                      name="EscapeQualifier">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Table Data Verification\Get Table Data\_VerifyTableData File.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[_VerifyTableData]"
+                      connectionManagerRefId="Package.ConnectionManagers[_VerifyTableData]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Table Data Verification\Get Table Data\_VerifyTableData File.Inputs[Flat File Destination Input]"
+                      hasSideEffects="true"
+                      name="Flat File Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Table Data Verification\Get Table Data\_VerifyTableData File.Inputs[Flat File Destination Input].Columns[TABLENAME]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="36"
+                          cachedName="TABLENAME"
+                          externalMetadataColumnId="Package\Table Data Verification\Get Table Data\_VerifyTableData File.Inputs[Flat File Destination Input].ExternalColumns[TableName]"
+                          lineageId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].Columns[TABLENAME]" />
+                        <inputColumn
+                          refId="Package\Table Data Verification\Get Table Data\_VerifyTableData File.Inputs[Flat File Destination Input].Columns[RECORDCOUNT]"
+                          cachedDataType="numeric"
+                          cachedName="RECORDCOUNT"
+                          cachedPrecision="18"
+                          externalMetadataColumnId="Package\Table Data Verification\Get Table Data\_VerifyTableData File.Inputs[Flat File Destination Input].ExternalColumns[RecordCount]"
+                          lineageId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].Columns[RECORDCOUNT]" />
+                        <inputColumn
+                          refId="Package\Table Data Verification\Get Table Data\_VerifyTableData File.Inputs[Flat File Destination Input].Columns[MAXDATEUPDATED]"
+                          cachedDataType="dbDate"
+                          cachedName="MAXDATEUPDATED"
+                          externalMetadataColumnId="Package\Table Data Verification\Get Table Data\_VerifyTableData File.Inputs[Flat File Destination Input].ExternalColumns[MaxDateUpdated]"
+                          lineageId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].Columns[MAXDATEUPDATED]" />
+                        <inputColumn
+                          refId="Package\Table Data Verification\Get Table Data\_VerifyTableData File.Inputs[Flat File Destination Input].Columns[MINDATEUPDATED]"
+                          cachedDataType="dbDate"
+                          cachedName="MINDATEUPDATED"
+                          externalMetadataColumnId="Package\Table Data Verification\Get Table Data\_VerifyTableData File.Inputs[Flat File Destination Input].ExternalColumns[MinDateUpdated]"
+                          lineageId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output].Columns[MINDATEUPDATED]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Table Data Verification\Get Table Data\_VerifyTableData File.Inputs[Flat File Destination Input].ExternalColumns[TableName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="TableName" />
+                        <externalMetadataColumn
+                          refId="Package\Table Data Verification\Get Table Data\_VerifyTableData File.Inputs[Flat File Destination Input].ExternalColumns[RecordCount]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="RecordCount" />
+                        <externalMetadataColumn
+                          refId="Package\Table Data Verification\Get Table Data\_VerifyTableData File.Inputs[Flat File Destination Input].ExternalColumns[MaxDateUpdated]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="MaxDateUpdated" />
+                        <externalMetadataColumn
+                          refId="Package\Table Data Verification\Get Table Data\_VerifyTableData File.Inputs[Flat File Destination Input].ExternalColumns[MinDateUpdated]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="MinDateUpdated" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Table Data Verification\Get Table Data.Paths[ODBC Source Output]"
+                  endId="Package\Table Data Verification\Get Table Data\Row Count - _VerifyTableData File.Inputs[Row Count Input 1]"
+                  name="ODBC Source Output"
+                  startId="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables.Outputs[ODBC Source Output]" />
+                <path
+                  refId="Package\Table Data Verification\Get Table Data.Paths[Row Count Output 1]"
+                  endId="Package\Table Data Verification\Get Table Data\_VerifyTableData File.Inputs[Flat File Destination Input]"
+                  name="Row Count Output 1"
+                  startId="Package\Table Data Verification\Get Table Data\Row Count - _VerifyTableData File.Outputs[Row Count Output 1]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Table Data Verification\Populate Variables for Email Lists"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{6B62601F-32A1-4A01-B38E-FD7A008205A3}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Populate Variables for Email Lists"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{06E3A663-3BE5-45FD-B6D0-429E1CE0B4F5}"
+              SQLTask:SqlStatementSource="SELECT &#xA;  COALESCE([ToList] , '') AS ToList&#xA;, COALESCE([CCList] , '') AS CCList&#xA;, COALESCE([BCCList], '') AS BCCList&#xA;&#xA;FROM &#xA;  [OSUF_Static_Data].dbo.OSUF_SSISEmailNotification&#xA;&#xA;WHERE &#xA;    EmailNotificationName = 'FENXT Snowflake Data'"
+              SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="ToList"
+                SQLTask:DtsVariableName="User::ToList" />
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="CCList"
+                SQLTask:DtsVariableName="User::CCList" />
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="BCCList"
+                SQLTask:DtsVariableName="User::BCCList" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Table Data Verification.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{A9FED510-2127-41CB-8D87-DEE6167EDEFE}"
+          DTS:From="Package\Table Data Verification\Get Email Account Password"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Table Data Verification\Populate Variables for Email Lists" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Table Data Verification.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{6F2B9B87-4817-4DB6-89A0-05003D1BF305}"
+          DTS:From="Package\Table Data Verification\Populate Variables for Email Lists"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Table Data Verification\Get Table Data" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Table Data Verification.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{431974CC-2D36-4FB1-B745-DB1678344BA5}"
+          DTS:From="Package\Table Data Verification\Get Table Data"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\Table Data Verification\Email to create KACE ticket for any table data issues" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
@@ -34873,16 +36136,16 @@ FROM
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 21]"
       DTS:CreationName=""
-      DTS:DTSID="{0642E75F-6E7A-4F79-9354-08FDC78D6E88}"
+      DTS:DTSID="{BD152A66-B0A2-4955-823F-236EABC0FFA1}"
       DTS:From="Package\FACT_ProjectBudget"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 21"
-      DTS:To="Package\Data Verification" />
+      DTS:To="Package\Table Data Verification" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 22]"
       DTS:CreationName=""
-      DTS:DTSID="{620191D4-6A02-4136-B3C4-8DD802DA9787}"
-      DTS:From="Package\Data Verification"
+      DTS:DTSID="{F461BB3D-A532-4ACE-9A8E-6BBA36A9CEC9}"
+      DTS:From="Package\Table Data Verification"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 22"
       DTS:To="Package\Clean Up - Delete Snowflake Config File and Directory" />
@@ -34958,14 +36221,14 @@ FROM
         <NodeLayout
           Size="249,42"
           Id="Package\Clean Up - Delete Snowflake Config File and Directory\Script Task - Delete snowsql folder"
-          TopLeft="60,60" />
+          TopLeft="59,36" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="391,199"
-          Size="391,242"
+          PanelSize="368,133"
+          Size="368,176"
           Id="Package\Clean Up - Delete Snowflake Config File and Directory"
-          TopLeft="130.234126984129,2242.89682539682" />
+          TopLeft="72.234126984129,2288.89682539682" />
         <NodeLayout
           Size="223,42"
           Id="Package\DIM_Account\Copy All From Stage to Table"
@@ -36162,7 +37425,7 @@ FROM
           PanelSize="258,259"
           Size="258,302"
           Id="Package\FACT_ProjectBudget"
-          TopLeft="969.345238095241,2215.39682539682" />
+          TopLeft="969.345238095241,2227.39682539682" />
         <NodeLayout
           Size="235,42"
           Id="Package\Initialize - Create Snowflake Config Directory and File\Create SnowSQL config file"
@@ -36352,17 +37615,6 @@ FROM
           Size="305,302"
           Id="Package\OSUF_PCardDetail_MatchedPreAttribute"
           TopLeft="621.17857142857,1448.78571428573" />
-        <NodeLayout
-          Size="153,42"
-          Id="Package\Data Verification\Get Table Data"
-          TopLeft="45,25" />
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="229,143"
-          Size="229,186"
-          Id="Package\Data Verification"
-          TopLeft="626,2271" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="299.928571428571,509.535714285714">
@@ -36655,14 +37907,14 @@ FROM
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,76.8888888888773"
+              EndConnector="0,88.88888888887"
               Start="0,0"
-              End="0,69.3888888888773">
+              End="0,81.38888888887">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,69.3888888888773" />
+                    End="0,81.38888888887" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -36832,20 +38084,109 @@ FROM
           Size="740,263"
           Id="a4a267e6-c4dc-473d-8acd-fb480f4e7eac"
           TopLeft="403.678571428571,43.4523809523813" />
+        <NodeLayout
+          Size="221,42"
+          Id="Package\Table Data Verification\Get Email Account Password"
+          TopLeft="66.5,23" />
+        <NodeLayout
+          Size="243,42"
+          Id="Package\Table Data Verification\Populate Variables for Email Lists"
+          TopLeft="55.5,98" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Table Data Verification\Get Table Data"
+          TopLeft="98.5,165" />
+        <NodeLayout
+          Size="336,42"
+          Id="Package\Table Data Verification\Email to create KACE ticket for any table data issues"
+          TopLeft="11.5,237" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 21]"
-          TopLeft="969.345238095241,2365.19841269841">
+          Id="Package\Table Data Verification.PrecedenceConstraints[Constraint]"
+          TopLeft="177,65">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-114.345238095241,0"
+              EndConnector="0,33"
               Start="0,0"
-              End="-106.845238095241,0">
+              End="0,25.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-106.845238095241,0" />
+                    End="0,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Table Data Verification.PrecedenceConstraints[Constraint 1]"
+          TopLeft="176,140">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,25"
+              Start="0,0"
+              End="0,17.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Table Data Verification.PrecedenceConstraints[Constraint 2]"
+          TopLeft="177.25,207">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30"
+              Start="0,0"
+              End="0,22.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="354,330"
+          Size="354,373"
+          Id="Package\Table Data Verification"
+          TopLeft="531,2195" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 21]"
+          TopLeft="969.345238095241,2379.94841269841">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-84.345238095241,0"
+              Start="0,0"
+              End="-76.845238095241,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-76.845238095241,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -36856,18 +38197,18 @@ FROM
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 22]"
-          TopLeft="626,2363.94841269841">
+          TopLeft="531,2379.19841269841">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-104.765873015871,0"
+              EndConnector="-90.765873015871,0"
               Start="0,0"
-              End="-97.265873015871,0">
+              End="-83.265873015871,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-97.265873015871,0" />
+                    End="-83.265873015871,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -39456,32 +40797,58 @@ FROM
     </LayoutInfo>
   </TaskHost>
   <TaskHost
-    design-time-name="Package\Data Verification\Get Table Data">
+    design-time-name="Package\Table Data Verification\Get Table Data">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="135,42"
-          Id="Package\Data Verification\Get Table Data\TableVerify"
-          TopLeft="440,180" />
+          Size="249,42"
+          Id="Package\Table Data Verification\Get Table Data\Row Count - _VerifyTableData File"
+          TopLeft="371,183" />
         <NodeLayout
-          Size="323,42"
-          Id="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables"
-          TopLeft="346.5,89.5" />
+          Size="185,42"
+          Id="Package\Table Data Verification\Get Table Data\_VerifyTableData File"
+          TopLeft="407,263" />
         <EdgeLayout
-          Id="Package\Data Verification\Get Table Data.Paths[ODBC Source Output]"
-          TopLeft="507.75,131.5">
+          Id="Package\Table Data Verification\Get Table Data.Paths[Row Count Output 1]"
+          TopLeft="497.5,225">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,48.5"
+              EndConnector="0,38"
               Start="0,0"
-              End="0,41">
+              End="0,30.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41" />
+                    End="0,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="323,42"
+          Id="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables"
+          TopLeft="340,81" />
+        <EdgeLayout
+          Id="Package\Table Data Verification\Get Table Data.Paths[ODBC Source Output]"
+          TopLeft="498.5,123">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -39494,7 +40861,7 @@ FROM
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables">
+    design-time-name="Package\Table Data Verification\Get Table Data\Snowflake Warehouse - Get results from all tables">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

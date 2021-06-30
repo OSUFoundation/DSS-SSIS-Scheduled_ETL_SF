@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">ETL2</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAH0O+gbVBOEmQ2KPwmuC9FgAAAAACAAAAAAADZgAAwAAAABAAAAAQl0tBDqPPJYDBkErje+3nAAAAAASAAACgAAAAEAAAAIooixbpdJXaWHOZhJglnmqIAAAAa+d7LBNNjhF48LAIlfqUZY623j5MI6Aaks5d/x+cdWk9uB0HZRcFpSbCFYR9oDg6b+lIc3WkmjmWoC7y3vljxUghpuRrK5/yZn/u9ve3mlV3clhqhFO8byCf7GGxg8y0DEUjRymz2pWk/WtdIqxOAcK+YihFCwVpqNVjumo/fR/vj54e004HphQAAACvFOPAltp4W9XVggRROUF58Aoqow==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAH0O+gbVBOEmQ2KPwmuC9FgAAAAACAAAAAAADZgAAwAAAABAAAAAZFoI4HN2sQR5dQwF4q68iAAAAAASAAACgAAAAEAAAADxU9ZIQRFctprxtAC4T2f6IAAAA5K1CL7bWY0NWQ0HY/gX7Cwk25wkxS2vzzFTU1F+bBA/TqwhLpusWujMpL9UumQRQEAb/WwTmaOKafgsMWBBLuBPa1lLATsiQbNvKP+/vX+WEjfb+mK4r/h8NQ3FHTtKM36ita709U6lz9cRmN6vKDsOEHVCL5qH22oMVvmSJS2CcVc3o9rI4tRQAAACwQzIelmRngVpm55x9iIgVIKeaPw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -43,10 +43,10 @@
                 <SSIS:Property SSIS:Name="Name">FENXT_DW</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">41</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">63</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{320555F5-AE1C-42D2-832C-956D159D7BD2}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{5CA7C4EF-7A1C-4477-B6A5-4D57CA4D7668}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -4659,7 +4659,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">E:\BI\Scheduled_ETL_SF\FENXT_DW\DataFiles\_TableVerify.csv</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">E:\BI\Scheduled_ETL_SF\FENXT_DW\DataFiles\_VerifyTableData.csv</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
